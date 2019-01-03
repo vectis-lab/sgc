@@ -12,3 +12,5 @@ connect.lock
 coverage/*
 npm-debug.log
 **/*.log
+1
+2
