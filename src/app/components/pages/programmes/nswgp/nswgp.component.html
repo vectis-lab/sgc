@@ -1,4 +1,4 @@
-<app-page-container>
+<app-page-container *ngIf="!onlyRenderCohort">
     <section *ngIf="initiative">
         <h1 class="title">{{ initiative.title }}</h1>
         <div class="title-description">
@@ -188,3 +188,26 @@
         </div>
     </section>
 </app-page-container>
+<div *ngIf="onlyRenderCohort">
+        <section *ngIf="initiative">
+            <h1 class="title">{{ initiative.title }}</h1>
+            <div class="title-description">
+                Supporting researchers as they undertake ground-breaking human genomic medicine
+                research
+            </div>
+            <div class="sub-title">2015 Cohorts</div>
+            <div class="cohorts">
+                <a *ngFor="let cohort of cohorts2015" href="initiatives/nswgp#{{ cohort.id }}-details">
+                    <app-cohort-card [cohortId]="cohort.id"></app-cohort-card>
+                </a>
+    
+            </div>
+    
+            <div class="sub-title">2016 Cohorts</div>
+            <div class="cohorts">
+                <a *ngFor="let cohort of cohorts2016" href="initiatives/nswgp#{{ cohort.id }}-details">
+                    <app-cohort-card [cohortId]="cohort.id"></app-cohort-card>
+                </a>
+            </div>
+        </section>
+</div>

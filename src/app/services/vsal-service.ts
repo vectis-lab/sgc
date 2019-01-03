@@ -47,6 +47,29 @@ export class VsalService {
         });
     }
 
+    getVariantsBySampleIds(query: Array<string>): Observable<VariantRequest> {
+        let urlParams = new HttpParams()
+            .append('sampleIds', JSON.stringify(query))
+            .append('limit', VSAL_VARIANT_LIMIT.toString())
+            .append('sortBy', 'start')
+            .append('descend', 'false')
+            .append('skip', '0')
+            .append('count', 'true')
+            .append('annot', 'true');
+
+        const headers = new HttpHeaders()
+            .append('Content-Type', 'application/json')
+            .append('Accept', '*/*');
+        return this.requests(urlParams, headers).reduce((acc: VariantRequest, x: VariantRequest, i: number) => {
+            acc.variants = acc.variants.concat(x.variants);
+            acc.error += x.error;
+            return acc;
+        }, new VariantRequest([])).map((v: VariantRequest) => {
+            v.variants.sort((a: Variant, b: Variant) => a.start - b.start);
+            return v;
+        });
+    }
+
     private requests(params: HttpParams, headers: HttpHeaders): Observable<VariantRequest> {
         params = params.append('count', 'true');
         return Observable.create((observer) => {

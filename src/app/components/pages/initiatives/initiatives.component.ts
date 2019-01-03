@@ -19,7 +19,8 @@ export class InitiativesComponent implements OnInit {
 
     constructor(public scrollService: ScrollService,
                 private initiativeService: InitiativeService,
-                private router: Router) {
+                private router: Router
+            ) {
     }
 
     ngOnInit(): void {

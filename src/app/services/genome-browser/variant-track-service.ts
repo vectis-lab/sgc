@@ -60,7 +60,7 @@ export class VariantTrackService implements TrackService {
             .data(this.data);
 
         this.trackLabel = tnt.track()
-            .label('MGRB Variants')
+            .label('Mitochondrial Variants')
             .height(20)
             .color('white')
             .display(tnt.track.feature.block())

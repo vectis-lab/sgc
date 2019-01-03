@@ -31,7 +31,7 @@ export class SearchBarService {
         this.autocompleteError = '';
         this.query = '';
         this.options = [
-            new SearchOption('Cohorts', '', ['MGRB'], 'MGRB'),
+            new SearchOption('Cohorts', '', ['Mitochondria'], 'Mitochondria'),
         ];
     }
 

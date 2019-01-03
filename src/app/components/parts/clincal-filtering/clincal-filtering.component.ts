@@ -9,7 +9,7 @@ export class ClinicalChart {
 
     constructor(public name: string,
                 public type: string,
-                public dim: crossfilter.Dimension,
+                public dim: any,
                 public min: number,
                 public max: number,
                 public xAxisLabel: string,
@@ -151,7 +151,7 @@ export class ClincalFilteringComponent implements AfterViewInit, OnDestroy {
                     '# Patients'
                 ),
 
-            ];
+            ]; 
 
             dc.dataCount('.dc-data-count')
                 .dimension(this.ndx)

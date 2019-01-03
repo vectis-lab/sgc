@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Initiative } from '../../../../model/initiative';
 import { Cohort } from '../../../../model/cohort';
 import { ActivatedRoute, Router, Params, NavigationEnd } from '@angular/router';
@@ -14,7 +14,7 @@ const PROGRAMME_ID = 'nswgp';
     styleUrls: ['./nswgp.component.css', '../programme.css']
 })
 export class NswgpComponent implements OnInit {
-
+    @Input() onlyRenderCohort: boolean;
     initiative: Initiative;
     otherInitiatives: Initiative[];
     cohorts: Cohort[];

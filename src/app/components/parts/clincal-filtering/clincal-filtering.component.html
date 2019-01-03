@@ -8,7 +8,7 @@
             <div class="actions">
                 <mat-icon (click)="resetFilters()" matTooltip="Reset" matTooltipPosition="above">refresh</mat-icon>
                 <mat-icon [matMenuTriggerFor]="menu" matTooltip="Add/Remove Filters" matTooltipPosition="above">toc</mat-icon>
-                <mat-menu #menu="matMenu">
+                <mat-menu #menu="matMenu" xPosition="after">
                     <div class="filter-option" *ngFor="let c of charts" (click)="$event.stopPropagation(); $event.stopImmediatePropagation()">
                         <span>{{c.name}}</span>
                         <mat-slide-toggle [(ngModel)]="c.enabled"></mat-slide-toggle>

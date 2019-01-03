@@ -1,0 +1,36 @@
+<div>
+  <div *ngIf="objectKeys(savedSearches).length > 0 && !denied">
+    <h2 id="applied-filter-header">Saved Search</h2>
+    <mat-form-field>
+        <mat-select placeholder="Saved Searches" [(ngModel)]="selectedSaveSearch">
+          <mat-option [value]="null"></mat-option>
+          <mat-option *ngFor="let savedSearch of objectKeys(savedSearches)" [value]="savedSearch">{{savedSearch}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button class="sidenav-button" mat-button (click)="applySavedSearches(selectedSaveSearch)" *ngIf="selectedSaveSearch">Apply</button>
+    <button class="sidenav-button" mat-button (click)="deleteSavedSearches(selectedSaveSearch)" *ngIf="selectedSaveSearch">Delete</button>
+  </div>
+  <mat-divider></mat-divider>
+  <h2 id="applied-filter-header" *ngIf="objectKeys(filters).length > 0">Applied Filters</h2>
+  <form novalidate (ngSubmit)="!saveNameFormControl.hasError('required') && saveSearches(); saveSearchForm.reset()" #saveSearchForm="ngForm" *ngIf="!denied">
+      <mat-form-field *ngIf="objectKeys(filters).length > 0">
+          <input name="saveName" [formControl]="saveNameFormControl" [errorStateMatcher]="matcher" matInput placeholder="Save filter as">
+          <mat-error *ngIf="saveNameFormControl.hasError('required')">
+            Please fill in a name
+          </mat-error>
+        </mat-form-field>
+        <button class="sidenav-button" type="submit" mat-button *ngIf="objectKeys(filters).length > 0">Save</button>
+  </form>
+  <mat-accordion *ngFor="let filter of objectKeys(filters)">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+              {{capitalizeCamelCase(filter)}}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list dense *ngFor="let appliedFilters of filters[filter]">
+          <mat-list-item><span class="applied-filter">{{appliedFilters}}</span></mat-list-item>
+          </mat-list>
+      </mat-expansion-panel>
+  </mat-accordion>
+</div>
