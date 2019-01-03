@@ -45,6 +45,6 @@ export class RegionService implements AutocompleteService<Region> {
     }
 
     protected parseQuery(query: string) {
-        return /^([\dxXyY]+)[:\-\.,\\/](\d+)[:\-\.,\\/](\d+)$/.exec(query);
+        return new RegExp(/^([\dxy]+|mt+)[:\-\.,\\/](\d+)[:\-\.,\\/](\d+)$/, "i").exec(query);
     }
 }
