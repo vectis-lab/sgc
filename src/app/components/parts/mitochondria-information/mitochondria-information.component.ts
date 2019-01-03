@@ -2,7 +2,7 @@ import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, V
 import { ClinapiService } from '../../../services/clinapi.service';
 import * as dc from 'dc';
 import * as crossfilter from 'crossfilter2';
-import difference from 'lodash.difference';
+import * as _ from 'lodash/array';
 import { ClinicalFilteringService } from '../../../services/clinical-filtering.service';
 import { Auth } from '../../../services/auth-service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -275,7 +275,7 @@ export class MitochondriaInformationComponent implements AfterViewInit, OnDestro
                             dimension.filter(null);
                         else
                             dimension.filterFunction(function (d) {
-                                if (difference(filters, d).length === 0) return true;
+                                if (_.difference(filters, d).length === 0) return true;
                                 return false; 
                             });
                         return filters;  
