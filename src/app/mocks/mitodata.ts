@@ -1,12 +1,12 @@
 export const FAKE_MITOCHONDRIA_DATA = [
       {
-        "sampleId": "e739a538-fece-4c44-a625-2a0cfc3c2a4e",
-        "gender": "male",
+        "Patient": "e739a538-fece-4c44-a625-2a0cfc3c2a4e",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "ophthalmoplegia",
           "peripheralNeuropathy",
@@ -20,13 +20,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 38
       },
       {
-        "sampleId": "4c940dd6-3369-44ea-ad9a-ea9d7767d7cc",
-        "gender": "male",
+        "Patient": "4c940dd6-3369-44ea-ad9a-ea9d7767d7cc",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "intellectualDisability",
@@ -41,13 +41,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 16
       },
       {
-        "sampleId": "2c7f831b-8af5-4748-9f38-58237fe25527",
-        "gender": "male",
+        "Patient": "2c7f831b-8af5-4748-9f38-58237fe25527",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intestinalPseudoObstruction",
           "motorDelay",
           "ophthalmoplegia",
@@ -64,13 +64,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 74
       },
       {
-        "sampleId": "0036fbe6-c1a4-4074-8d55-9c9aef64a848",
-        "gender": "male",
+        "Patient": "0036fbe6-c1a4-4074-8d55-9c9aef64a848",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -84,13 +84,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 49
       },
       {
-        "sampleId": "4d6a2486-a4e5-4225-8591-de762be8b555",
-        "gender": "female",
+        "Patient": "4d6a2486-a4e5-4225-8591-de762be8b555",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "sensorineuralHearingImpairment",
           "seizures",
@@ -103,13 +103,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 86
       },
       {
-        "sampleId": "6571276b-e8f4-4c8e-964d-57b3bc473a76",
-        "gender": "female",
+        "Patient": "6571276b-e8f4-4c8e-964d-57b3bc473a76",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "increasedMuscleFatiguability",
           "intestinalPseudoObstruction",
@@ -122,13 +122,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 2
       },
       {
-        "sampleId": "73d8e61e-407c-4c94-a537-925be7081ab6",
-        "gender": "male",
+        "Patient": "73d8e61e-407c-4c94-a537-925be7081ab6",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "truncalAtaxia",
           "motorDelay",
@@ -145,13 +145,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 38
       },
       {
-        "sampleId": "40665f39-4bbf-4a1b-88e3-596afa691a13",
-        "gender": "female",
+        "Patient": "40665f39-4bbf-4a1b-88e3-596afa691a13",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
@@ -165,13 +165,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 59
       },
       {
-        "sampleId": "150df0ac-5143-4684-981b-df053c050f4d",
-        "gender": "female",
+        "Patient": "150df0ac-5143-4684-981b-df053c050f4d",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "truncalAtaxia",
           "peripheralNeuropathy",
@@ -184,13 +184,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 13
       },
       {
-        "sampleId": "5af8d1a7-5d1e-4004-b32f-c3091f5ddb5a",
-        "gender": "female",
+        "Patient": "5af8d1a7-5d1e-4004-b32f-c3091f5ddb5a",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "muscleWeakness",
           "ptosis",
@@ -205,13 +205,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 59
       },
       {
-        "sampleId": "2a39fce1-d188-4016-af6d-ce6df23886a1",
-        "gender": "male",
+        "Patient": "2a39fce1-d188-4016-af6d-ce6df23886a1",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "sensorineuralHearingImpairment",
           "ophthalmoplegia",
@@ -225,13 +225,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 42
       },
       {
-        "sampleId": "fc88a075-7da8-4372-ab47-9d51b81a8311",
-        "gender": "female",
+        "Patient": "fc88a075-7da8-4372-ab47-9d51b81a8311",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "increasedMuscleFatiguability",
           "intestinalPseudoObstruction",
           "migraine",
@@ -245,13 +245,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 45
       },
       {
-        "sampleId": "68072084-7f7e-429e-86ad-30a5bb37a077",
-        "gender": "male",
+        "Patient": "68072084-7f7e-429e-86ad-30a5bb37a077",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "delayedSocialDevelopment",
@@ -265,13 +265,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 93
       },
       {
-        "sampleId": "e94664db-de85-412e-bd51-80803e45a6b7",
-        "gender": "male",
+        "Patient": "e94664db-de85-412e-bd51-80803e45a6b7",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "increasedMuscleFatiguability",
           "peripheralNeuropathy",
           "renalTubularAcidosis",
@@ -287,13 +287,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 33
       },
       {
-        "sampleId": "1396b918-8601-429e-b554-4f2791f5a652",
-        "gender": "male",
+        "Patient": "1396b918-8601-429e-b554-4f2791f5a652",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "seizures",
           "raggedRedMuscleFibers",
           "glaucoma"
@@ -304,13 +304,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 4
       },
       {
-        "sampleId": "a70c6617-8c8a-4856-961c-72463fe42705",
-        "gender": "male",
+        "Patient": "a70c6617-8c8a-4856-961c-72463fe42705",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "diabetesMellitus",
           "increasedMuscleFatiguability",
@@ -326,13 +326,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 81
       },
       {
-        "sampleId": "c95d665e-9cc2-4bf8-bef7-044d5c7220d9",
-        "gender": "female",
+        "Patient": "c95d665e-9cc2-4bf8-bef7-044d5c7220d9",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
@@ -352,13 +352,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 19
       },
       {
-        "sampleId": "70a88282-265e-4340-8737-41fdee8872d7",
-        "gender": "male",
+        "Patient": "70a88282-265e-4340-8737-41fdee8872d7",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "truncalAtaxia",
           "constipation",
@@ -370,13 +370,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 55
       },
       {
-        "sampleId": "3ff00c63-b6fd-4746-9457-86653b495c1b",
-        "gender": "female",
+        "Patient": "3ff00c63-b6fd-4746-9457-86653b495c1b",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "constipation",
           "apnea",
@@ -390,13 +390,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 14
       },
       {
-        "sampleId": "fa7f3651-824a-4949-a577-0832b37a6c81",
-        "gender": "female",
+        "Patient": "fa7f3651-824a-4949-a577-0832b37a6c81",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "corticalVisualImpairment",
           "glaucoma",
           "opticAtrophy"
@@ -407,13 +407,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 83
       },
       {
-        "sampleId": "b36eff43-86b4-4dd6-8605-ce38826a0c43",
-        "gender": "female",
+        "Patient": "b36eff43-86b4-4dd6-8605-ce38826a0c43",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "truncalAtaxia",
           "sensorineuralHearingImpairment",
@@ -427,13 +427,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 65
       },
       {
-        "sampleId": "76c92c28-ca7f-40bc-85a6-9307256af6fe",
-        "gender": "female",
+        "Patient": "76c92c28-ca7f-40bc-85a6-9307256af6fe",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "delayedSocialDevelopment",
           "increasedMuscleFatiguability",
@@ -446,13 +446,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 13
       },
       {
-        "sampleId": "b9841f16-b9c0-46ae-b689-8174e4a88734",
-        "gender": "female",
+        "Patient": "b9841f16-b9c0-46ae-b689-8174e4a88734",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "developmentalRegression",
           "renalTubularAcidosis",
@@ -465,13 +465,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 8
       },
       {
-        "sampleId": "ffbe319c-91ea-4828-b0a4-487d9e46a01e",
-        "gender": "male",
+        "Patient": "ffbe319c-91ea-4828-b0a4-487d9e46a01e",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "muscleWeakness",
           "ptosis",
           "migraine",
@@ -485,13 +485,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 71
       },
       {
-        "sampleId": "388a51d4-4eaa-4dc7-8d86-7003d67bb726",
-        "gender": "female",
+        "Patient": "388a51d4-4eaa-4dc7-8d86-7003d67bb726",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "sensorineuralHearingImpairment",
           "increasedMuscleFatiguability",
@@ -508,13 +508,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 42
       },
       {
-        "sampleId": "05120306-67ca-417a-9a9b-3325e14d2589",
-        "gender": "female",
+        "Patient": "05120306-67ca-417a-9a9b-3325e14d2589",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "truncalAtaxia",
           "constipation",
@@ -533,13 +533,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 30
       },
       {
-        "sampleId": "c3f245cb-c21e-4b7b-94b6-93ee14222fe0",
-        "gender": "male",
+        "Patient": "c3f245cb-c21e-4b7b-94b6-93ee14222fe0",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "increasedMuscleFatiguability",
@@ -555,13 +555,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 26
       },
       {
-        "sampleId": "08e84608-d2fd-4185-bcba-3342c13f6a44",
-        "gender": "male",
+        "Patient": "08e84608-d2fd-4185-bcba-3342c13f6a44",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy"
         ],
         "alanineInCerebralSpinalFluid": 22,
@@ -570,13 +570,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 23
       },
       {
-        "sampleId": "50ffcdad-c6e9-474b-96ae-f450affeb0e4",
-        "gender": "female",
+        "Patient": "50ffcdad-c6e9-474b-96ae-f450affeb0e4",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "migraine",
           "developmentalRegression",
@@ -591,13 +591,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 89
       },
       {
-        "sampleId": "05583601-abc0-4121-9207-51b60e97d90f",
-        "gender": "female",
+        "Patient": "05583601-abc0-4121-9207-51b60e97d90f",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "intestinalPseudoObstruction",
@@ -613,13 +613,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 13
       },
       {
-        "sampleId": "e6180cf1-74c6-4668-a522-c1b0c6bf7898",
-        "gender": "male",
+        "Patient": "e6180cf1-74c6-4668-a522-c1b0c6bf7898",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "increasedMuscleFatiguability",
@@ -640,13 +640,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 64
       },
       {
-        "sampleId": "a060b5b8-2b59-4047-b470-b597a3e2095a",
-        "gender": "female",
+        "Patient": "a060b5b8-2b59-4047-b470-b597a3e2095a",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intestinalPseudoObstruction",
           "apnea"
         ],
@@ -656,13 +656,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 0
       },
       {
-        "sampleId": "d0346fb6-f012-490d-a421-7009d55de772",
-        "gender": "female",
+        "Patient": "d0346fb6-f012-490d-a421-7009d55de772",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
@@ -681,13 +681,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 42
       },
       {
-        "sampleId": "af479ac2-5169-403e-98fd-4bc8af910007",
-        "gender": "male",
+        "Patient": "af479ac2-5169-403e-98fd-4bc8af910007",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "increasedMuscleFatiguability",
@@ -701,13 +701,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 83
       },
       {
-        "sampleId": "1b2ba802-0b03-4745-b903-d9d855dc999f",
-        "gender": "male",
+        "Patient": "1b2ba802-0b03-4745-b903-d9d855dc999f",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "delayedSocialDevelopment",
           "diabetesMellitus",
@@ -720,13 +720,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 53
       },
       {
-        "sampleId": "bde5f477-32e8-470f-ba61-61360838b2bb",
-        "gender": "female",
+        "Patient": "bde5f477-32e8-470f-ba61-61360838b2bb",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "delayedSocialDevelopment",
           "intestinalPseudoObstruction",
@@ -743,13 +743,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 44
       },
       {
-        "sampleId": "e7ed0240-c6a4-4211-ad95-9aecc4cc7d61",
-        "gender": "female",
+        "Patient": "e7ed0240-c6a4-4211-ad95-9aecc4cc7d61",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "migraine",
           "rhabdomyolysis",
           "raggedRedMuscleFibers",
@@ -763,13 +763,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 8
       },
       {
-        "sampleId": "acafee5c-3dc5-49b0-a869-4f4371d19cc7",
-        "gender": "female",
+        "Patient": "acafee5c-3dc5-49b0-a869-4f4371d19cc7",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "diabetesMellitus",
           "intestinalPseudoObstruction",
           "intellectualDisability",
@@ -782,13 +782,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 22
       },
       {
-        "sampleId": "1eadfec1-add6-4cb3-8d54-4eacbd667e71",
-        "gender": "female",
+        "Patient": "1eadfec1-add6-4cb3-8d54-4eacbd667e71",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "increasedMuscleFatiguability",
           "intestinalPseudoObstruction",
           "ptosis",
@@ -808,13 +808,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 59
       },
       {
-        "sampleId": "1118215e-8f80-4643-bc32-da912482c3e3",
-        "gender": "male",
+        "Patient": "1118215e-8f80-4643-bc32-da912482c3e3",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "intestinalPseudoObstruction",
           "renalTubularAcidosis",
           "cataract",
@@ -826,13 +826,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 51
       },
       {
-        "sampleId": "c5c0516f-e516-4bb1-be91-be7dd6112073",
-        "gender": "male",
+        "Patient": "c5c0516f-e516-4bb1-be91-be7dd6112073",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
@@ -848,13 +848,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 1
       },
       {
-        "sampleId": "61892da3-5ab2-447f-a3b7-872bfeda00af",
-        "gender": "male",
+        "Patient": "61892da3-5ab2-447f-a3b7-872bfeda00af",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -870,13 +870,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 27
       },
       {
-        "sampleId": "aaeba3a0-0bf2-49fb-a0a8-0d5b21e8b3b0",
-        "gender": "male",
+        "Patient": "aaeba3a0-0bf2-49fb-a0a8-0d5b21e8b3b0",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "motorDelay",
           "migraine",
@@ -889,13 +889,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 52
       },
       {
-        "sampleId": "4823d3d7-eb3d-49f9-aeb4-624794d71949",
-        "gender": "male",
+        "Patient": "4823d3d7-eb3d-49f9-aeb4-624794d71949",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "constipation",
           "delayedSocialDevelopment",
@@ -911,13 +911,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 57
       },
       {
-        "sampleId": "7cfffb7b-485c-499e-aaea-e0ae58ba0bec",
-        "gender": "male",
+        "Patient": "7cfffb7b-485c-499e-aaea-e0ae58ba0bec",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "diabetesMellitus",
           "intestinalPseudoObstruction",
@@ -932,13 +932,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 57
       },
       {
-        "sampleId": "73255c2e-607a-405c-bffa-a71095083dfa",
-        "gender": "male",
+        "Patient": "73255c2e-607a-405c-bffa-a71095083dfa",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "sensorineuralHearingImpairment",
           "delayedSocialDevelopment",
@@ -952,13 +952,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 42
       },
       {
-        "sampleId": "0fbcae41-6638-454c-be1e-2b5bd00530dd",
-        "gender": "female",
+        "Patient": "0fbcae41-6638-454c-be1e-2b5bd00530dd",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "motorDelay",
           "rhabdomyolysis",
@@ -972,13 +972,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 32
       },
       {
-        "sampleId": "269e220f-0679-4ada-8854-d1579165a0c9",
-        "gender": "female",
+        "Patient": "269e220f-0679-4ada-8854-d1579165a0c9",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "migraine",
           "muscularHypotonia",
           "cataract",
@@ -990,13 +990,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 8
       },
       {
-        "sampleId": "75333acf-744c-4848-8f69-9f47c233faff",
-        "gender": "male",
+        "Patient": "75333acf-744c-4848-8f69-9f47c233faff",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "constipation",
@@ -1012,13 +1012,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 92
       },
       {
-        "sampleId": "8a2043db-838e-4446-bf6b-628a747287b5",
-        "gender": "female",
+        "Patient": "8a2043db-838e-4446-bf6b-628a747287b5",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "leftVentricularNoncompactionCardiomyopathy",
           "delayedSocialDevelopment",
@@ -1036,13 +1036,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 90
       },
       {
-        "sampleId": "dc7477d0-1c8d-4cce-a433-707d9796b65f",
-        "gender": "male",
+        "Patient": "dc7477d0-1c8d-4cce-a433-707d9796b65f",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "intestinalPseudoObstruction",
           "intellectualDisability",
@@ -1058,13 +1058,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 42
       },
       {
-        "sampleId": "0bbde21c-430d-4dcc-9d53-40bf6b1f7a8b",
-        "gender": "female",
+        "Patient": "0bbde21c-430d-4dcc-9d53-40bf6b1f7a8b",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "migraine",
           "rhabdomyolysis",
@@ -1076,13 +1076,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 73
       },
       {
-        "sampleId": "48fe9ab2-ddfa-4486-ad81-d986029bb80a",
-        "gender": "male",
+        "Patient": "48fe9ab2-ddfa-4486-ad81-d986029bb80a",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "motorDelay",
           "ophthalmoplegia",
@@ -1100,13 +1100,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 28
       },
       {
-        "sampleId": "bfbe3f2d-f310-4d08-bdb0-1aef8d8be1da",
-        "gender": "male",
+        "Patient": "bfbe3f2d-f310-4d08-bdb0-1aef8d8be1da",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
@@ -1121,13 +1121,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 33
       },
       {
-        "sampleId": "4a95347f-65d0-4d1e-98c1-445ed3e53ba4",
-        "gender": "female",
+        "Patient": "4a95347f-65d0-4d1e-98c1-445ed3e53ba4",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "intestinalPseudoObstruction",
           "muscleWeakness",
@@ -1141,13 +1141,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 71
       },
       {
-        "sampleId": "237170e5-9922-4bf1-8c36-44e173601573",
-        "gender": "male",
+        "Patient": "237170e5-9922-4bf1-8c36-44e173601573",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "muscleWeakness",
           "corticalVisualImpairment",
@@ -1160,13 +1160,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 9
       },
       {
-        "sampleId": "b35704d7-43b4-49f6-bbeb-63623f13fdd8",
-        "gender": "male",
+        "Patient": "b35704d7-43b4-49f6-bbeb-63623f13fdd8",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "constipation",
           "intestinalPseudoObstruction",
@@ -1183,13 +1183,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 91
       },
       {
-        "sampleId": "46818efb-f9a4-42b5-99d4-e634ec78da1c",
-        "gender": "male",
+        "Patient": "46818efb-f9a4-42b5-99d4-e634ec78da1c",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "constipation",
           "sensorineuralHearingImpairment",
@@ -1210,13 +1210,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 49
       },
       {
-        "sampleId": "db759464-fb6f-4a1e-8c89-7b97e6eb5fec",
-        "gender": "female",
+        "Patient": "db759464-fb6f-4a1e-8c89-7b97e6eb5fec",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "constipation",
           "intestinalPseudoObstruction",
@@ -1231,13 +1231,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 38
       },
       {
-        "sampleId": "3fa3ee4f-52c3-4880-bc73-c3f07497a9a9",
-        "gender": "male",
+        "Patient": "3fa3ee4f-52c3-4880-bc73-c3f07497a9a9",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "sensorineuralHearingImpairment",
@@ -1255,13 +1255,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 0
       },
       {
-        "sampleId": "20cade02-1448-4383-8da5-50ad32d53dc2",
-        "gender": "female",
+        "Patient": "20cade02-1448-4383-8da5-50ad32d53dc2",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
           "delayedSocialDevelopment",
@@ -1277,13 +1277,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 27
       },
       {
-        "sampleId": "9ffdf290-703b-4735-9e45-6156fffc91ff",
-        "gender": "female",
+        "Patient": "9ffdf290-703b-4735-9e45-6156fffc91ff",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "truncalAtaxia",
           "sensorineuralHearingImpairment",
@@ -1300,13 +1300,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 92
       },
       {
-        "sampleId": "fb28b03c-b376-4d85-8a50-67aa6ba2ca1f",
-        "gender": "female",
+        "Patient": "fb28b03c-b376-4d85-8a50-67aa6ba2ca1f",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intellectualDisability",
           "ptosis",
           "apnea",
@@ -1320,13 +1320,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 70
       },
       {
-        "sampleId": "3a89a50d-6171-4e34-be88-6c7d7c5afa52",
-        "gender": "male",
+        "Patient": "3a89a50d-6171-4e34-be88-6c7d7c5afa52",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -1341,13 +1341,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 57
       },
       {
-        "sampleId": "94d31f20-6a14-4ac9-81e0-6807a88d551b",
-        "gender": "male",
+        "Patient": "94d31f20-6a14-4ac9-81e0-6807a88d551b",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "intellectualDisability",
@@ -1360,13 +1360,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 74
       },
       {
-        "sampleId": "d3740694-d3a5-44fd-8dcd-a940e6f7b075",
-        "gender": "male",
+        "Patient": "d3740694-d3a5-44fd-8dcd-a940e6f7b075",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "delayedSocialDevelopment",
           "diabetesMellitus",
@@ -1382,13 +1382,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 61
       },
       {
-        "sampleId": "0056081f-b8f5-4b61-a3d1-ae8807fcb900",
-        "gender": "male",
+        "Patient": "0056081f-b8f5-4b61-a3d1-ae8807fcb900",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "muscleWeakness",
           "ophthalmoplegia",
           "migraine",
@@ -1401,13 +1401,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 42
       },
       {
-        "sampleId": "5c5cc757-ec4a-44f8-a255-f67068c96cdd",
-        "gender": "male",
+        "Patient": "5c5cc757-ec4a-44f8-a255-f67068c96cdd",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "ophthalmoplegia",
           "seizures",
@@ -1421,13 +1421,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 85
       },
       {
-        "sampleId": "9ecd8250-41f5-4985-b610-ee0c4dd09408",
-        "gender": "male",
+        "Patient": "9ecd8250-41f5-4985-b610-ee0c4dd09408",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "motorDelay",
           "ophthalmoplegia",
@@ -1444,13 +1444,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 24
       },
       {
-        "sampleId": "894f3f00-12e2-4ff8-a0f3-680ffee27760",
-        "gender": "female",
+        "Patient": "894f3f00-12e2-4ff8-a0f3-680ffee27760",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "increasedMuscleFatiguability",
           "intestinalPseudoObstruction",
@@ -1465,13 +1465,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 63
       },
       {
-        "sampleId": "00132e0a-a39a-4eef-aac2-8ba6bb1d99a3",
-        "gender": "female",
+        "Patient": "00132e0a-a39a-4eef-aac2-8ba6bb1d99a3",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "sensorineuralHearingImpairment",
           "increasedMuscleFatiguability",
@@ -1486,13 +1486,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 61
       },
       {
-        "sampleId": "26221c89-bca4-481f-8bfc-6e0c8317c449",
-        "gender": "male",
+        "Patient": "26221c89-bca4-481f-8bfc-6e0c8317c449",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
           "seizures",
@@ -1504,13 +1504,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 71
       },
       {
-        "sampleId": "a97da3a7-951a-4cb4-86b9-956463c51939",
-        "gender": "male",
+        "Patient": "a97da3a7-951a-4cb4-86b9-956463c51939",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "diabetesMellitus",
           "spasticity"
@@ -1521,13 +1521,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 0
       },
       {
-        "sampleId": "b4728c8a-6c56-426c-bb43-7ba20b271da5",
-        "gender": "male",
+        "Patient": "b4728c8a-6c56-426c-bb43-7ba20b271da5",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "raggedRedMuscleFibers",
           "muscularHypotonia",
@@ -1540,13 +1540,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 7
       },
       {
-        "sampleId": "b64be5cb-545f-433e-bc36-a0a6e1621dde",
-        "gender": "male",
+        "Patient": "b64be5cb-545f-433e-bc36-a0a6e1621dde",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "diabetesMellitus",
           "ptosis",
@@ -1560,13 +1560,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 33
       },
       {
-        "sampleId": "a293b867-7f1a-4a6d-8085-4b15ca228a6c",
-        "gender": "male",
+        "Patient": "a293b867-7f1a-4a6d-8085-4b15ca228a6c",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "sensorineuralHearingImpairment",
           "muscleWeakness",
@@ -1582,13 +1582,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 43
       },
       {
-        "sampleId": "e7a072b6-513d-4e64-a6eb-0433f4660539",
-        "gender": "male",
+        "Patient": "e7a072b6-513d-4e64-a6eb-0433f4660539",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "delayedSocialDevelopment",
@@ -1603,13 +1603,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 77
       },
       {
-        "sampleId": "56bcc856-e737-4535-9c35-42f6bb8d247a",
-        "gender": "male",
+        "Patient": "56bcc856-e737-4535-9c35-42f6bb8d247a",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "constipation",
           "delayedSocialDevelopment",
@@ -1629,13 +1629,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 10
       },
       {
-        "sampleId": "a3a19615-2229-4211-9ed4-4c0079437c02",
-        "gender": "male",
+        "Patient": "a3a19615-2229-4211-9ed4-4c0079437c02",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "truncalAtaxia",
           "diabetesMellitus",
@@ -1652,13 +1652,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 31
       },
       {
-        "sampleId": "19ae51c4-738d-4d5d-908f-299ac468d7f3",
-        "gender": "female",
+        "Patient": "19ae51c4-738d-4d5d-908f-299ac468d7f3",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
           "intestinalPseudoObstruction",
@@ -1679,13 +1679,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 49
       },
       {
-        "sampleId": "9d6d6f04-1a6f-43b4-b726-d28277c80e93",
-        "gender": "male",
+        "Patient": "9d6d6f04-1a6f-43b4-b726-d28277c80e93",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "delayedSocialDevelopment",
           "intellectualDisability",
@@ -1702,13 +1702,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 63
       },
       {
-        "sampleId": "140f5f6f-0b91-45dd-a665-ad9b13639854",
-        "gender": "female",
+        "Patient": "140f5f6f-0b91-45dd-a665-ad9b13639854",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "seizures",
           "strokeLikeEpisode",
           "muscularHypotonia"
@@ -1719,13 +1719,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 7
       },
       {
-        "sampleId": "4cd8f0eb-0a9c-41b3-b7c1-4a9f55ab51d8",
-        "gender": "female",
+        "Patient": "4cd8f0eb-0a9c-41b3-b7c1-4a9f55ab51d8",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "muscleWeakness",
           "peripheralNeuropathy",
@@ -1738,13 +1738,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 78
       },
       {
-        "sampleId": "1988ff08-2159-4b77-8b55-85a53597d386",
-        "gender": "male",
+        "Patient": "1988ff08-2159-4b77-8b55-85a53597d386",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "diabetesMellitus",
           "muscleWeakness",
@@ -1758,13 +1758,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 75
       },
       {
-        "sampleId": "fff70664-4610-469f-98e7-ac7eb5087696",
-        "gender": "female",
+        "Patient": "fff70664-4610-469f-98e7-ac7eb5087696",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "hypertrophicCardiomyopathy",
           "diabetesMellitus",
@@ -1783,13 +1783,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 24
       },
       {
-        "sampleId": "6482f27b-5d12-4962-af5b-7bcae01003f2",
-        "gender": "female",
+        "Patient": "6482f27b-5d12-4962-af5b-7bcae01003f2",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "sensorineuralHearingImpairment",
           "intestinalPseudoObstruction",
@@ -1804,13 +1804,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 48
       },
       {
-        "sampleId": "5d7cc91c-28a5-47ab-a827-a1a7bc8b0679",
-        "gender": "male",
+        "Patient": "5d7cc91c-28a5-47ab-a827-a1a7bc8b0679",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "migraine",
           "seizures",
@@ -1825,13 +1825,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 12
       },
       {
-        "sampleId": "b87531bc-c214-427c-b4b0-bdc623d3aaf7",
-        "gender": "female",
+        "Patient": "b87531bc-c214-427c-b4b0-bdc623d3aaf7",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
           "delayedSocialDevelopment",
@@ -1848,13 +1848,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 75
       },
       {
-        "sampleId": "29df85d2-71f4-4047-afd7-413ad1d72d25",
-        "gender": "male",
+        "Patient": "29df85d2-71f4-4047-afd7-413ad1d72d25",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "intestinalPseudoObstruction",
           "motorDelay",
           "developmentalRegression",
@@ -1871,13 +1871,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 50
       },
       {
-        "sampleId": "91417749-78ca-4885-a261-bf2b72333d37",
-        "gender": "male",
+        "Patient": "91417749-78ca-4885-a261-bf2b72333d37",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "diabetesMellitus",
           "apnea",
           "corticalVisualImpairment",
@@ -1890,13 +1890,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 82
       },
       {
-        "sampleId": "ca1a572b-eb0f-48ae-81ad-75095df8fa7e",
-        "gender": "male",
+        "Patient": "ca1a572b-eb0f-48ae-81ad-75095df8fa7e",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "constipation",
           "increasedMuscleFatiguability",
@@ -1914,13 +1914,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 95
       },
       {
-        "sampleId": "fc2d4a58-0ff7-4c94-ac01-030aec8d0f89",
-        "gender": "female",
+        "Patient": "fc2d4a58-0ff7-4c94-ac01-030aec8d0f89",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "intellectualDisability",
           "ophthalmoplegia",
@@ -1937,13 +1937,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 74
       },
       {
-        "sampleId": "2bee2ded-36bb-43d8-b1d8-f0adb05ef24c",
-        "gender": "male",
+        "Patient": "2bee2ded-36bb-43d8-b1d8-f0adb05ef24c",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "delayedSocialDevelopment",
           "migraine",
@@ -1961,13 +1961,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 53
       },
       {
-        "sampleId": "8fffa55a-f359-401f-be10-7d90cb935679",
-        "gender": "male",
+        "Patient": "8fffa55a-f359-401f-be10-7d90cb935679",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "sensorineuralHearingImpairment",
           "diabetesMellitus",
@@ -1984,13 +1984,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 77
       },
       {
-        "sampleId": "d5a11169-ed56-4798-87c9-ebcddead16ff",
-        "gender": "male",
+        "Patient": "d5a11169-ed56-4798-87c9-ebcddead16ff",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "increasedMuscleFatiguability",
           "intestinalPseudoObstruction",
@@ -2005,13 +2005,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 29
       },
       {
-        "sampleId": "612d0f87-e9e2-4a6a-a336-9311e065c39e",
-        "gender": "female",
+        "Patient": "612d0f87-e9e2-4a6a-a336-9311e065c39e",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intestinalPseudoObstruction",
           "peripheralNeuropathy",
           "developmentalRegression",
@@ -2024,13 +2024,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 78
       },
       {
-        "sampleId": "581f5d88-cce9-4788-8032-294b29b6ddff",
-        "gender": "female",
+        "Patient": "581f5d88-cce9-4788-8032-294b29b6ddff",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -2048,13 +2048,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 68
       },
       {
-        "sampleId": "10c1777f-9e65-4980-97e4-815a5690e68c",
-        "gender": "female",
+        "Patient": "10c1777f-9e65-4980-97e4-815a5690e68c",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "truncalAtaxia",
           "intestinalPseudoObstruction",
@@ -2070,13 +2070,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 65
       },
       {
-        "sampleId": "9f8effb0-c2c8-48c3-ba49-24fcf65326ff",
-        "gender": "female",
+        "Patient": "9f8effb0-c2c8-48c3-ba49-24fcf65326ff",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "apnea",
           "delayedSpeechAndLanguageDevelopment",
@@ -2090,13 +2090,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 11
       },
       {
-        "sampleId": "10ba5f14-08f5-49f9-9b49-cd5ce1d46506",
-        "gender": "male",
+        "Patient": "10ba5f14-08f5-49f9-9b49-cd5ce1d46506",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "delayedSocialDevelopment",
           "intestinalPseudoObstruction",
@@ -2113,13 +2113,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 37
       },
       {
-        "sampleId": "7cebb280-ba9c-4963-bcf1-a43d9c878cc2",
-        "gender": "female",
+        "Patient": "7cebb280-ba9c-4963-bcf1-a43d9c878cc2",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "increasedMuscleFatiguability",
@@ -2134,13 +2134,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 72
       },
       {
-        "sampleId": "96160b51-9fe0-4057-a9f6-a285653babb6",
-        "gender": "male",
+        "Patient": "96160b51-9fe0-4057-a9f6-a285653babb6",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "constipation",
           "intellectualDisability",
@@ -2154,13 +2154,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 2
       },
       {
-        "sampleId": "3b2b1ca0-fb45-4f3f-8c68-5f794280a8f9",
-        "gender": "male",
+        "Patient": "3b2b1ca0-fb45-4f3f-8c68-5f794280a8f9",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "delayedSocialDevelopment",
@@ -2176,13 +2176,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 32
       },
       {
-        "sampleId": "44c5b735-6267-451d-97bd-4914ba00ba66",
-        "gender": "female",
+        "Patient": "44c5b735-6267-451d-97bd-4914ba00ba66",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "delayedSocialDevelopment",
           "increasedMuscleFatiguability",
@@ -2198,13 +2198,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 17
       },
       {
-        "sampleId": "25f24ef1-cfd8-4cf8-90e5-68673bd36def",
-        "gender": "female",
+        "Patient": "25f24ef1-cfd8-4cf8-90e5-68673bd36def",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "intellectualDisability",
           "muscleWeakness",
@@ -2218,13 +2218,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 63
       },
       {
-        "sampleId": "6cdb5a60-2dc2-437d-ab04-f7b8850b35e8",
-        "gender": "female",
+        "Patient": "6cdb5a60-2dc2-437d-ab04-f7b8850b35e8",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "motorDelay",
           "muscleWeakness",
           "ptosis",
@@ -2240,13 +2240,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 19
       },
       {
-        "sampleId": "63e5351a-fff5-47a2-9358-2fdb163251d2",
-        "gender": "male",
+        "Patient": "63e5351a-fff5-47a2-9358-2fdb163251d2",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
           "constipation",
@@ -2262,13 +2262,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 6
       },
       {
-        "sampleId": "b7a1a7e3-f8b9-4a39-a8f7-91475cf1150d",
-        "gender": "male",
+        "Patient": "b7a1a7e3-f8b9-4a39-a8f7-91475cf1150d",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "intestinalPseudoObstruction",
@@ -2280,13 +2280,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 28
       },
       {
-        "sampleId": "dccaa0c8-85b4-40b0-ab09-88bf0de7560c",
-        "gender": "female",
+        "Patient": "dccaa0c8-85b4-40b0-ab09-88bf0de7560c",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "increasedMuscleFatiguability",
           "motorDelay",
@@ -2301,13 +2301,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 4
       },
       {
-        "sampleId": "01e51c06-44c3-4e36-a38d-3f875e8750eb",
-        "gender": "female",
+        "Patient": "01e51c06-44c3-4e36-a38d-3f875e8750eb",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "intestinalPseudoObstruction",
           "muscleWeakness",
           "ptosis",
@@ -2322,13 +2322,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 49
       },
       {
-        "sampleId": "9d93b9f4-acf6-47cf-ae29-c00f36699ede",
-        "gender": "female",
+        "Patient": "9d93b9f4-acf6-47cf-ae29-c00f36699ede",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "intellectualDisability",
           "apnea",
@@ -2343,13 +2343,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 17
       },
       {
-        "sampleId": "f0d4f453-61a4-4088-a78c-2f9e6dc18da7",
-        "gender": "female",
+        "Patient": "f0d4f453-61a4-4088-a78c-2f9e6dc18da7",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "truncalAtaxia",
@@ -2362,13 +2362,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 67
       },
       {
-        "sampleId": "38d31a27-782f-4ec7-aca3-0bb9fce08afe",
-        "gender": "female",
+        "Patient": "38d31a27-782f-4ec7-aca3-0bb9fce08afe",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "delayedSocialDevelopment",
           "increasedMuscleFatiguability",
@@ -2382,13 +2382,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 65
       },
       {
-        "sampleId": "66561e9b-0823-45ac-ab10-3ed51303811d",
-        "gender": "female",
+        "Patient": "66561e9b-0823-45ac-ab10-3ed51303811d",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "constipation",
@@ -2402,13 +2402,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 19
       },
       {
-        "sampleId": "d3eebf7f-8d3f-4304-bbb2-1557f83aaa2e",
-        "gender": "male",
+        "Patient": "d3eebf7f-8d3f-4304-bbb2-1557f83aaa2e",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "sensorineuralHearingImpairment",
@@ -2425,13 +2425,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 51
       },
       {
-        "sampleId": "6bc35166-ce53-4475-bc4e-76dfb886503a",
-        "gender": "male",
+        "Patient": "6bc35166-ce53-4475-bc4e-76dfb886503a",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "diabetesMellitus",
           "muscleWeakness",
@@ -2451,13 +2451,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 75
       },
       {
-        "sampleId": "96173462-3c50-477d-a432-8f0e6d354faf",
-        "gender": "male",
+        "Patient": "96173462-3c50-477d-a432-8f0e6d354faf",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "intellectualDisability",
           "renalTubularAcidosis",
@@ -2474,13 +2474,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 7
       },
       {
-        "sampleId": "6260029d-6b1e-45f1-bbac-bc1c420ba8e1",
-        "gender": "female",
+        "Patient": "6260029d-6b1e-45f1-bbac-bc1c420ba8e1",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "motorDelay",
           "muscularHypotonia",
@@ -2494,13 +2494,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 1
       },
       {
-        "sampleId": "38fcc4ea-d6e8-404c-85a6-a415adb33505",
-        "gender": "male",
+        "Patient": "38fcc4ea-d6e8-404c-85a6-a415adb33505",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "sensorineuralHearingImpairment",
@@ -2516,13 +2516,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 69
       },
       {
-        "sampleId": "19d53d29-beb5-4f23-bb6e-41455116f35d",
-        "gender": "female",
+        "Patient": "19d53d29-beb5-4f23-bb6e-41455116f35d",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -2542,13 +2542,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 80
       },
       {
-        "sampleId": "820e7ae1-0d00-4804-a5ad-aa82c9ee4342",
-        "gender": "male",
+        "Patient": "820e7ae1-0d00-4804-a5ad-aa82c9ee4342",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "constipation",
           "increasedMuscleFatiguability",
@@ -2564,13 +2564,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 55
       },
       {
-        "sampleId": "0c6897b0-65e5-40bf-b079-374f52e7d1ea",
-        "gender": "female",
+        "Patient": "0c6897b0-65e5-40bf-b079-374f52e7d1ea",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "increasedMuscleFatiguability",
           "migraine",
@@ -2586,13 +2586,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 59
       },
       {
-        "sampleId": "48c49b98-a6f4-4b44-a484-1cd94b6232ba",
-        "gender": "female",
+        "Patient": "48c49b98-a6f4-4b44-a484-1cd94b6232ba",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "increasedMuscleFatiguability",
           "intellectualDisability",
@@ -2606,13 +2606,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 81
       },
       {
-        "sampleId": "8ca9ca8e-231c-426f-9707-9bd72c60c0ac",
-        "gender": "male",
+        "Patient": "8ca9ca8e-231c-426f-9707-9bd72c60c0ac",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "apnea",
           "strokeLikeEpisode",
           "cataract",
@@ -2625,13 +2625,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 56
       },
       {
-        "sampleId": "d028a5ee-be4c-4c06-a360-f11b8d8b17ce",
-        "gender": "male",
+        "Patient": "d028a5ee-be4c-4c06-a360-f11b8d8b17ce",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "rhabdomyolysis",
           "raggedRedMuscleFibers"
@@ -2642,13 +2642,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 17
       },
       {
-        "sampleId": "e068feb7-e8c9-4137-a58c-6325fcdde7e1",
-        "gender": "female",
+        "Patient": "e068feb7-e8c9-4137-a58c-6325fcdde7e1",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "muscleWeakness",
           "peripheralNeuropathy",
@@ -2664,13 +2664,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 75
       },
       {
-        "sampleId": "c65442f7-7ae6-4792-a90b-4c47cb655da3",
-        "gender": "male",
+        "Patient": "c65442f7-7ae6-4792-a90b-4c47cb655da3",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "ophthalmoplegia",
           "apnea",
@@ -2683,13 +2683,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 77
       },
       {
-        "sampleId": "4e8876ce-c89c-471e-bf69-b1bba2869e0d",
-        "gender": "female",
+        "Patient": "4e8876ce-c89c-471e-bf69-b1bba2869e0d",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "sensorineuralHearingImpairment",
           "intellectualDisability",
@@ -2703,13 +2703,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 30
       },
       {
-        "sampleId": "0b6dccb2-4193-4818-a736-a3ec214ad393",
-        "gender": "male",
+        "Patient": "0b6dccb2-4193-4818-a736-a3ec214ad393",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "delayedSocialDevelopment",
           "intestinalPseudoObstruction",
@@ -2722,13 +2722,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 98
       },
       {
-        "sampleId": "f5a03b6f-ee17-4af1-8edb-4e94ebe3e68f",
-        "gender": "male",
+        "Patient": "f5a03b6f-ee17-4af1-8edb-4e94ebe3e68f",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "peripheralNeuropathy",
@@ -2741,13 +2741,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 1
       },
       {
-        "sampleId": "f24b1876-1ec2-4e0a-9e92-6b497eb17344",
-        "gender": "male",
+        "Patient": "f24b1876-1ec2-4e0a-9e92-6b497eb17344",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "truncalAtaxia",
           "migraine",
@@ -2762,13 +2762,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 37
       },
       {
-        "sampleId": "a58e7f90-54b7-4f07-a4ce-9b8c0e0d8dab",
-        "gender": "female",
+        "Patient": "a58e7f90-54b7-4f07-a4ce-9b8c0e0d8dab",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "sensorineuralHearingImpairment",
           "diabetesMellitus",
@@ -2786,13 +2786,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 10
       },
       {
-        "sampleId": "45aaaf19-5502-46f3-bb81-55f155bc3958",
-        "gender": "male",
+        "Patient": "45aaaf19-5502-46f3-bb81-55f155bc3958",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "rhabdomyolysis",
           "raggedRedMuscleFibers",
@@ -2804,13 +2804,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 37
       },
       {
-        "sampleId": "2ab729ca-b4ba-4c5e-9efc-83cc0285962a",
-        "gender": "male",
+        "Patient": "2ab729ca-b4ba-4c5e-9efc-83cc0285962a",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "diabetesMellitus",
           "peripheralNeuropathy",
@@ -2823,13 +2823,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 63
       },
       {
-        "sampleId": "b547e095-8af5-4df5-a6e6-314ae1e2af29",
-        "gender": "female",
+        "Patient": "b547e095-8af5-4df5-a6e6-314ae1e2af29",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "delayedSocialDevelopment",
           "increasedMuscleFatiguability",
@@ -2846,13 +2846,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 64
       },
       {
-        "sampleId": "f360251c-6482-47d6-97ec-afb90183918f",
-        "gender": "female",
+        "Patient": "f360251c-6482-47d6-97ec-afb90183918f",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "constipation",
           "intellectualDisability",
@@ -2868,13 +2868,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 61
       },
       {
-        "sampleId": "74add20c-b6b8-45ef-82f7-fcf82849560e",
-        "gender": "female",
+        "Patient": "74add20c-b6b8-45ef-82f7-fcf82849560e",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -2891,13 +2891,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 52
       },
       {
-        "sampleId": "a2fc1a82-7d4c-4181-b3bb-d4314c51ba2f",
-        "gender": "male",
+        "Patient": "a2fc1a82-7d4c-4181-b3bb-d4314c51ba2f",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "constipation",
           "sensorineuralHearingImpairment",
@@ -2912,13 +2912,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 70
       },
       {
-        "sampleId": "13c0dfc4-a5fe-4d35-a2ff-17924699843d",
-        "gender": "female",
+        "Patient": "13c0dfc4-a5fe-4d35-a2ff-17924699843d",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "constipation",
           "diabetesMellitus",
@@ -2931,13 +2931,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 70
       },
       {
-        "sampleId": "3e6bcbb7-8dc9-4baf-b9c3-aee7439811d7",
-        "gender": "female",
+        "Patient": "3e6bcbb7-8dc9-4baf-b9c3-aee7439811d7",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "increasedMuscleFatiguability",
           "intellectualDisability",
@@ -2954,13 +2954,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 39
       },
       {
-        "sampleId": "91f969bb-a82f-41a2-979b-da1ec8c23977",
-        "gender": "female",
+        "Patient": "91f969bb-a82f-41a2-979b-da1ec8c23977",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "hypertrophicCardiomyopathy",
@@ -2978,13 +2978,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 6
       },
       {
-        "sampleId": "048e327f-a360-4516-b7a4-20a079320dec",
-        "gender": "female",
+        "Patient": "048e327f-a360-4516-b7a4-20a079320dec",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "ophthalmoplegia",
           "cataract"
@@ -2995,13 +2995,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 93
       },
       {
-        "sampleId": "12fcf4aa-ea65-4830-80d7-d7ed254baffa",
-        "gender": "female",
+        "Patient": "12fcf4aa-ea65-4830-80d7-d7ed254baffa",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "delayedSocialDevelopment",
@@ -3015,13 +3015,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 83
       },
       {
-        "sampleId": "9d85dfd9-023b-4de7-9d45-188fb1dec11f",
-        "gender": "female",
+        "Patient": "9d85dfd9-023b-4de7-9d45-188fb1dec11f",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "ptosis",
           "seizures",
@@ -3034,13 +3034,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 26
       },
       {
-        "sampleId": "c3bc8c13-4ffb-4d35-bd45-6bb64259a7b9",
-        "gender": "male",
+        "Patient": "c3bc8c13-4ffb-4d35-bd45-6bb64259a7b9",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "migraine",
           "peripheralNeuropathy",
           "developmentalRegression",
@@ -3054,13 +3054,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 27
       },
       {
-        "sampleId": "1e8c7da6-928b-484c-adfb-ea6df05d0b20",
-        "gender": "female",
+        "Patient": "1e8c7da6-928b-484c-adfb-ea6df05d0b20",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "delayedSocialDevelopment",
           "diabetesMellitus",
@@ -3076,13 +3076,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 63
       },
       {
-        "sampleId": "d9d61101-80a6-46d1-a0e1-ee183e303d5d",
-        "gender": "male",
+        "Patient": "d9d61101-80a6-46d1-a0e1-ee183e303d5d",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "intestinalPseudoObstruction",
           "intellectualDisability",
@@ -3096,13 +3096,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 88
       },
       {
-        "sampleId": "0aa4f4a5-dab0-47d5-994b-9b61d2e4bd74",
-        "gender": "male",
+        "Patient": "0aa4f4a5-dab0-47d5-994b-9b61d2e4bd74",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -3116,13 +3116,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 43
       },
       {
-        "sampleId": "d843525b-d272-48ad-b467-3ea4b0e2fb42",
-        "gender": "female",
+        "Patient": "d843525b-d272-48ad-b467-3ea4b0e2fb42",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "constipation",
           "delayedSpeechAndLanguageDevelopment",
@@ -3134,13 +3134,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 22
       },
       {
-        "sampleId": "1b1b7e6f-caf4-4742-a285-8a9595bebba8",
-        "gender": "female",
+        "Patient": "1b1b7e6f-caf4-4742-a285-8a9595bebba8",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "truncalAtaxia",
           "constipation",
@@ -3157,13 +3157,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 80
       },
       {
-        "sampleId": "87ed7758-2fd6-49ad-b04f-6806cd143f26",
-        "gender": "female",
+        "Patient": "87ed7758-2fd6-49ad-b04f-6806cd143f26",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "diabetesMellitus",
@@ -3185,13 +3185,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 32
       },
       {
-        "sampleId": "cd93ff62-074b-4dab-96c1-51e6196acf4b",
-        "gender": "male",
+        "Patient": "cd93ff62-074b-4dab-96c1-51e6196acf4b",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "truncalAtaxia",
           "muscleWeakness",
@@ -3209,13 +3209,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 20
       },
       {
-        "sampleId": "7f1ff4fd-fefe-42e8-9e77-a27187135be8",
-        "gender": "female",
+        "Patient": "7f1ff4fd-fefe-42e8-9e77-a27187135be8",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
           "increasedMuscleFatiguability",
@@ -3234,13 +3234,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 34
       },
       {
-        "sampleId": "a047c68e-7deb-4136-8063-2deacaa20661",
-        "gender": "female",
+        "Patient": "a047c68e-7deb-4136-8063-2deacaa20661",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "delayedSocialDevelopment",
           "increasedMuscleFatiguability",
@@ -3256,13 +3256,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 40
       },
       {
-        "sampleId": "4a6bfd80-7d8d-455d-a074-d0b97e728974",
-        "gender": "female",
+        "Patient": "4a6bfd80-7d8d-455d-a074-d0b97e728974",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "constipation",
           "increasedMuscleFatiguability",
@@ -3277,13 +3277,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 57
       },
       {
-        "sampleId": "a8c60616-ad6f-4feb-8eb5-3c8d806cd175",
-        "gender": "female",
+        "Patient": "a8c60616-ad6f-4feb-8eb5-3c8d806cd175",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "diabetesMellitus",
           "developmentalRegression",
@@ -3299,13 +3299,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 5
       },
       {
-        "sampleId": "2d5f44fd-c2d2-46b6-841d-34e47dc47ac7",
-        "gender": "male",
+        "Patient": "2d5f44fd-c2d2-46b6-841d-34e47dc47ac7",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "ophthalmoplegia",
           "ptosis",
           "migraine",
@@ -3319,13 +3319,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 84
       },
       {
-        "sampleId": "695acd37-378b-4704-a257-1022cbf1454f",
-        "gender": "female",
+        "Patient": "695acd37-378b-4704-a257-1022cbf1454f",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "ptosis",
           "developmentalRegression",
@@ -3338,13 +3338,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 22
       },
       {
-        "sampleId": "b67b7aeb-f34d-4502-9310-c272f29379dc",
-        "gender": "male",
+        "Patient": "b67b7aeb-f34d-4502-9310-c272f29379dc",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "delayedSocialDevelopment",
           "ophthalmoplegia",
@@ -3361,13 +3361,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 42
       },
       {
-        "sampleId": "6287c12a-fec0-4f23-b1ba-bb899d51bb9c",
-        "gender": "female",
+        "Patient": "6287c12a-fec0-4f23-b1ba-bb899d51bb9c",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "motorDelay",
           "peripheralNeuropathy",
@@ -3381,13 +3381,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 32
       },
       {
-        "sampleId": "81dc5e25-1eb6-4840-a4ef-2d69c741143b",
-        "gender": "female",
+        "Patient": "81dc5e25-1eb6-4840-a4ef-2d69c741143b",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "constipation",
@@ -3406,13 +3406,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 53
       },
       {
-        "sampleId": "e136f2b8-f509-4573-b6f4-9223df606d75",
-        "gender": "female",
+        "Patient": "e136f2b8-f509-4573-b6f4-9223df606d75",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
           "delayedSocialDevelopment",
@@ -3431,13 +3431,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 58
       },
       {
-        "sampleId": "2b16f2e6-8e4f-4909-b9c9-6d403838bac7",
-        "gender": "female",
+        "Patient": "2b16f2e6-8e4f-4909-b9c9-6d403838bac7",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "delayedSocialDevelopment",
           "increasedMuscleFatiguability",
@@ -3452,13 +3452,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 77
       },
       {
-        "sampleId": "bf4ae89c-1752-4952-a976-00a82c95f544",
-        "gender": "female",
+        "Patient": "bf4ae89c-1752-4952-a976-00a82c95f544",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "increasedMuscleFatiguability",
@@ -3472,13 +3472,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 34
       },
       {
-        "sampleId": "0c8c85c9-2b0e-4fd0-96e8-42f74afde87b",
-        "gender": "female",
+        "Patient": "0c8c85c9-2b0e-4fd0-96e8-42f74afde87b",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
@@ -3495,13 +3495,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 55
       },
       {
-        "sampleId": "62979c72-e96b-4310-8b77-8ed8b8ba2586",
-        "gender": "female",
+        "Patient": "62979c72-e96b-4310-8b77-8ed8b8ba2586",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "seizures",
           "raggedRedMuscleFibers",
@@ -3515,13 +3515,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 10
       },
       {
-        "sampleId": "beb2f196-029b-45d7-911f-7b2f9248663d",
-        "gender": "female",
+        "Patient": "beb2f196-029b-45d7-911f-7b2f9248663d",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "constipation",
           "delayedSocialDevelopment",
@@ -3539,13 +3539,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 83
       },
       {
-        "sampleId": "9b84ae4b-a3b8-4ce4-8226-46a8f1ddc352",
-        "gender": "male",
+        "Patient": "9b84ae4b-a3b8-4ce4-8226-46a8f1ddc352",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "intestinalPseudoObstruction",
           "motorDelay",
           "renalTubularAcidosis",
@@ -3557,13 +3557,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 21
       },
       {
-        "sampleId": "900a8bf5-6a6e-46fd-b47b-e8301100739c",
-        "gender": "male",
+        "Patient": "900a8bf5-6a6e-46fd-b47b-e8301100739c",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intellectualDisability",
           "ptosis",
           "peripheralNeuropathy",
@@ -3578,13 +3578,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 23
       },
       {
-        "sampleId": "7ef37682-192f-487d-92d9-4239ef348df1",
-        "gender": "male",
+        "Patient": "7ef37682-192f-487d-92d9-4239ef348df1",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "increasedMuscleFatiguability",
@@ -3601,13 +3601,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 8
       },
       {
-        "sampleId": "3b5c3b21-38e3-4671-9cfa-951391309c42",
-        "gender": "male",
+        "Patient": "3b5c3b21-38e3-4671-9cfa-951391309c42",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
           "delayedSocialDevelopment",
@@ -3625,13 +3625,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 8
       },
       {
-        "sampleId": "f2ef9449-e456-41f8-9851-7d4dbd904a67",
-        "gender": "male",
+        "Patient": "f2ef9449-e456-41f8-9851-7d4dbd904a67",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "increasedMuscleFatiguability",
           "migraine",
@@ -3646,13 +3646,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 92
       },
       {
-        "sampleId": "ca260b43-3efd-4440-bf27-fd7f46b21323",
-        "gender": "female",
+        "Patient": "ca260b43-3efd-4440-bf27-fd7f46b21323",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "constipation",
           "motorDelay",
@@ -3664,13 +3664,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 33
       },
       {
-        "sampleId": "d7678ac2-eff8-41cc-9ca4-1836489fddf7",
-        "gender": "male",
+        "Patient": "d7678ac2-eff8-41cc-9ca4-1836489fddf7",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
           "delayedSocialDevelopment",
@@ -3684,13 +3684,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 74
       },
       {
-        "sampleId": "e5799e23-b50a-4986-b22b-5c0467f49cb1",
-        "gender": "female",
+        "Patient": "e5799e23-b50a-4986-b22b-5c0467f49cb1",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "delayedSocialDevelopment",
           "intestinalPseudoObstruction",
@@ -3703,13 +3703,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 88
       },
       {
-        "sampleId": "8eb2ffef-b2da-4d21-9a97-15feb500fae2",
-        "gender": "male",
+        "Patient": "8eb2ffef-b2da-4d21-9a97-15feb500fae2",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "increasedMuscleFatiguability",
           "intestinalPseudoObstruction",
@@ -3729,13 +3729,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 55
       },
       {
-        "sampleId": "02824ebf-9c0a-45c9-b453-01d5ed5de04c",
-        "gender": "female",
+        "Patient": "02824ebf-9c0a-45c9-b453-01d5ed5de04c",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "sensorineuralHearingImpairment",
           "diabetesMellitus",
@@ -3753,13 +3753,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 28
       },
       {
-        "sampleId": "05eeb2b5-0a30-430c-8152-8dfc8b5643e3",
-        "gender": "female",
+        "Patient": "05eeb2b5-0a30-430c-8152-8dfc8b5643e3",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "constipation",
           "increasedMuscleFatiguability",
@@ -3775,13 +3775,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 72
       },
       {
-        "sampleId": "fb0d137b-da42-49ea-bd89-8e07f7149dc1",
-        "gender": "male",
+        "Patient": "fb0d137b-da42-49ea-bd89-8e07f7149dc1",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "migraine",
           "developmentalRegression",
@@ -3796,13 +3796,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 66
       },
       {
-        "sampleId": "3f2fbcbb-a8dd-4b42-b76e-400dd4ff606c",
-        "gender": "male",
+        "Patient": "3f2fbcbb-a8dd-4b42-b76e-400dd4ff606c",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "intestinalPseudoObstruction",
           "intellectualDisability",
@@ -3816,13 +3816,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 7
       },
       {
-        "sampleId": "8d99ffe7-cd6f-4b62-8893-193606355da7",
-        "gender": "female",
+        "Patient": "8d99ffe7-cd6f-4b62-8893-193606355da7",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "delayedSocialDevelopment",
           "intestinalPseudoObstruction",
@@ -3840,13 +3840,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 3
       },
       {
-        "sampleId": "358427c2-8c53-4162-8db1-08b1b964e6e7",
-        "gender": "male",
+        "Patient": "358427c2-8c53-4162-8db1-08b1b964e6e7",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "diabetesMellitus",
           "muscleWeakness",
@@ -3859,13 +3859,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 73
       },
       {
-        "sampleId": "79de1fd2-2c56-47dc-aedc-8951ea163915",
-        "gender": "male",
+        "Patient": "79de1fd2-2c56-47dc-aedc-8951ea163915",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "delayedSocialDevelopment",
           "diabetesMellitus",
@@ -3881,13 +3881,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 45
       },
       {
-        "sampleId": "390f851a-0fbb-4981-8036-a999dec5ad60",
-        "gender": "male",
+        "Patient": "390f851a-0fbb-4981-8036-a999dec5ad60",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "intellectualDisability",
@@ -3904,13 +3904,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 53
       },
       {
-        "sampleId": "06da74bb-7a47-4448-936e-88eb9df5fd52",
-        "gender": "male",
+        "Patient": "06da74bb-7a47-4448-936e-88eb9df5fd52",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "diabetesMellitus",
           "ptosis",
@@ -3924,13 +3924,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 62
       },
       {
-        "sampleId": "6be3d753-c98f-45e1-9fd9-a641f7d46a24",
-        "gender": "female",
+        "Patient": "6be3d753-c98f-45e1-9fd9-a641f7d46a24",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -3950,13 +3950,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 3
       },
       {
-        "sampleId": "d7df728b-852e-4b89-b9bd-616deae95bbf",
-        "gender": "female",
+        "Patient": "d7df728b-852e-4b89-b9bd-616deae95bbf",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "intestinalPseudoObstruction",
@@ -3972,13 +3972,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 95
       },
       {
-        "sampleId": "d1efa557-aa94-4b28-9e5b-74c044893053",
-        "gender": "male",
+        "Patient": "d1efa557-aa94-4b28-9e5b-74c044893053",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "truncalAtaxia",
           "delayedSocialDevelopment",
@@ -3994,13 +3994,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 9
       },
       {
-        "sampleId": "f656ee42-13e8-4bb1-8998-173a9cefd079",
-        "gender": "female",
+        "Patient": "f656ee42-13e8-4bb1-8998-173a9cefd079",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "constipation",
           "ptosis",
@@ -4012,13 +4012,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 48
       },
       {
-        "sampleId": "c6f90b71-ac6c-45bb-a36a-538bfa3351f3",
-        "gender": "male",
+        "Patient": "c6f90b71-ac6c-45bb-a36a-538bfa3351f3",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intestinalPseudoObstruction",
           "muscleWeakness",
           "ptosis",
@@ -4030,13 +4030,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 21
       },
       {
-        "sampleId": "80590043-58fc-402b-82a9-31901f08a44a",
-        "gender": "female",
+        "Patient": "80590043-58fc-402b-82a9-31901f08a44a",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "apnea",
@@ -4050,13 +4050,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 2
       },
       {
-        "sampleId": "72608bac-9962-40db-9842-82cd7724e402",
-        "gender": "female",
+        "Patient": "72608bac-9962-40db-9842-82cd7724e402",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "delayedSocialDevelopment",
           "delayedSpeechAndLanguageDevelopment",
@@ -4070,13 +4070,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 14
       },
       {
-        "sampleId": "bb24ad56-50bf-48c3-849e-de515acaa0f4",
-        "gender": "male",
+        "Patient": "bb24ad56-50bf-48c3-849e-de515acaa0f4",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "muscleWeakness",
           "ophthalmoplegia",
@@ -4090,13 +4090,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 37
       },
       {
-        "sampleId": "95fa8b41-aed1-4812-ac46-1b714e353a7e",
-        "gender": "male",
+        "Patient": "95fa8b41-aed1-4812-ac46-1b714e353a7e",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "constipation",
           "renalTubularAcidosis",
@@ -4109,13 +4109,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 26
       },
       {
-        "sampleId": "f37b503c-e93c-40ab-9c8f-a2af9b202fc6",
-        "gender": "female",
+        "Patient": "f37b503c-e93c-40ab-9c8f-a2af9b202fc6",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "ptosis",
           "renalTubularAcidosis",
@@ -4128,13 +4128,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 99
       },
       {
-        "sampleId": "3796dd34-a78d-4274-896f-7f7f344e64c4",
-        "gender": "female",
+        "Patient": "3796dd34-a78d-4274-896f-7f7f344e64c4",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "delayedSocialDevelopment",
           "intestinalPseudoObstruction",
@@ -4149,13 +4149,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 35
       },
       {
-        "sampleId": "277fd4ce-7bb7-455f-94bd-60e5c0c1030b",
-        "gender": "female",
+        "Patient": "277fd4ce-7bb7-455f-94bd-60e5c0c1030b",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "diabetesMellitus",
           "intestinalPseudoObstruction",
@@ -4172,13 +4172,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 14
       },
       {
-        "sampleId": "3736c38d-0bd3-4a2c-9480-7b5942999756",
-        "gender": "female",
+        "Patient": "3736c38d-0bd3-4a2c-9480-7b5942999756",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
           "ptosis",
@@ -4195,13 +4195,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 97
       },
       {
-        "sampleId": "649cefab-7394-4fbe-b02c-7a7c3a663f76",
-        "gender": "male",
+        "Patient": "649cefab-7394-4fbe-b02c-7a7c3a663f76",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "delayedSocialDevelopment",
           "increasedMuscleFatiguability",
@@ -4220,13 +4220,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 48
       },
       {
-        "sampleId": "897d1b8a-2d46-4abb-817d-9952d1f51d25",
-        "gender": "female",
+        "Patient": "897d1b8a-2d46-4abb-817d-9952d1f51d25",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "delayedSocialDevelopment",
           "intestinalPseudoObstruction",
@@ -4244,13 +4244,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 25
       },
       {
-        "sampleId": "b6ebe031-b02f-456e-8f1f-fdc07eea801c",
-        "gender": "male",
+        "Patient": "b6ebe031-b02f-456e-8f1f-fdc07eea801c",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "intellectualDisability",
           "muscleWeakness",
@@ -4267,13 +4267,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 76
       },
       {
-        "sampleId": "46d3a761-28c3-48cb-9731-f92956308d24",
-        "gender": "female",
+        "Patient": "46d3a761-28c3-48cb-9731-f92956308d24",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "sensorineuralHearingImpairment",
@@ -4289,13 +4289,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 91
       },
       {
-        "sampleId": "e47ddba6-ce64-4d49-9a44-2e138b8d2125",
-        "gender": "female",
+        "Patient": "e47ddba6-ce64-4d49-9a44-2e138b8d2125",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "constipation",
           "increasedMuscleFatiguability",
@@ -4312,13 +4312,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 31
       },
       {
-        "sampleId": "8712eff7-aa4f-4d44-b9f1-82dfa5669439",
-        "gender": "female",
+        "Patient": "8712eff7-aa4f-4d44-b9f1-82dfa5669439",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "dilatedCardiomyopathy",
           "hypertrophicCardiomyopathy",
@@ -4336,13 +4336,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 8
       },
       {
-        "sampleId": "a51ee513-e4b6-4034-97a6-cda3fa6644b7",
-        "gender": "female",
+        "Patient": "a51ee513-e4b6-4034-97a6-cda3fa6644b7",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "delayedSocialDevelopment",
           "diabetesMellitus",
@@ -4359,13 +4359,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 82
       },
       {
-        "sampleId": "66fd1ab5-87e6-485b-a3e1-a808790607eb",
-        "gender": "female",
+        "Patient": "66fd1ab5-87e6-485b-a3e1-a808790607eb",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "delayedSocialDevelopment",
           "increasedMuscleFatiguability",
@@ -4381,13 +4381,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 22
       },
       {
-        "sampleId": "f15cf70a-98fe-4cd4-8f4a-4f59906c2ada",
-        "gender": "female",
+        "Patient": "f15cf70a-98fe-4cd4-8f4a-4f59906c2ada",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -4401,13 +4401,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 88
       },
       {
-        "sampleId": "f0578c22-2288-4725-af89-3bd14d4992f0",
-        "gender": "female",
+        "Patient": "f0578c22-2288-4725-af89-3bd14d4992f0",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "muscleWeakness",
           "peripheralNeuropathy",
@@ -4420,13 +4420,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 83
       },
       {
-        "sampleId": "046e6baa-f085-42b7-b95d-efa116a747d5",
-        "gender": "female",
+        "Patient": "046e6baa-f085-42b7-b95d-efa116a747d5",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "dilatedCardiomyopathy",
           "constipation",
@@ -4441,13 +4441,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 48
       },
       {
-        "sampleId": "1d8d045b-7c8b-4228-bce3-853a19b8bbeb",
-        "gender": "male",
+        "Patient": "1d8d045b-7c8b-4228-bce3-853a19b8bbeb",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "constipation",
           "delayedSocialDevelopment",
@@ -4464,13 +4464,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 39
       },
       {
-        "sampleId": "9d0c5ef6-84e7-4a56-b550-cea87b4d9b2c",
-        "gender": "female",
+        "Patient": "9d0c5ef6-84e7-4a56-b550-cea87b4d9b2c",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "peripheralNeuropathy",
@@ -4485,13 +4485,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 57
       },
       {
-        "sampleId": "d05146c4-5659-4f89-8cef-63019688aad0",
-        "gender": "male",
+        "Patient": "d05146c4-5659-4f89-8cef-63019688aad0",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "developmentalRegression",
           "muscularHypotonia",
@@ -4503,13 +4503,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 93
       },
       {
-        "sampleId": "4feed4fb-64bf-4ad8-bdd5-4e5525d62d1c",
-        "gender": "female",
+        "Patient": "4feed4fb-64bf-4ad8-bdd5-4e5525d62d1c",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "sensorineuralHearingImpairment",
           "diabetesMellitus",
@@ -4524,13 +4524,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 24
       },
       {
-        "sampleId": "a06926d7-7398-41d0-a094-f372de46f04e",
-        "gender": "male",
+        "Patient": "a06926d7-7398-41d0-a094-f372de46f04e",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "delayedSocialDevelopment",
           "ophthalmoplegia",
@@ -4545,13 +4545,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 13
       },
       {
-        "sampleId": "df1a66e6-3097-477d-8462-76c2a465ee5b",
-        "gender": "female",
+        "Patient": "df1a66e6-3097-477d-8462-76c2a465ee5b",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "constipation",
           "delayedSocialDevelopment",
@@ -4569,13 +4569,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 58
       },
       {
-        "sampleId": "6f6f18a7-10a1-49db-a4d6-f8447e3f4440",
-        "gender": "male",
+        "Patient": "6f6f18a7-10a1-49db-a4d6-f8447e3f4440",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "sensorineuralHearingImpairment",
           "motorDelay",
@@ -4591,13 +4591,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 21
       },
       {
-        "sampleId": "a206c20e-b836-4f4d-9b38-7b2d47725af2",
-        "gender": "male",
+        "Patient": "a206c20e-b836-4f4d-9b38-7b2d47725af2",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "migraine",
           "seizures",
           "nystagmus"
@@ -4608,13 +4608,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 35
       },
       {
-        "sampleId": "18884660-8ff9-455c-9bc0-afef189fd2a8",
-        "gender": "male",
+        "Patient": "18884660-8ff9-455c-9bc0-afef189fd2a8",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "peripheralNeuropathy",
           "delayedSpeechAndLanguageDevelopment",
@@ -4628,13 +4628,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 53
       },
       {
-        "sampleId": "3a2e09a6-78b2-4059-bf99-cadb8ba3449a",
-        "gender": "male",
+        "Patient": "3a2e09a6-78b2-4059-bf99-cadb8ba3449a",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "sensorineuralHearingImpairment",
           "motorDelay",
@@ -4650,13 +4650,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 32
       },
       {
-        "sampleId": "fc0f3249-6654-4c2e-a7bc-6582e4df921c",
-        "gender": "female",
+        "Patient": "fc0f3249-6654-4c2e-a7bc-6582e4df921c",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "intestinalPseudoObstruction",
           "motorDelay",
@@ -4672,13 +4672,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 64
       },
       {
-        "sampleId": "70d3bde6-fe30-4618-b3b6-8897e4803655",
-        "gender": "female",
+        "Patient": "70d3bde6-fe30-4618-b3b6-8897e4803655",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "diabetesMellitus",
           "apnea",
@@ -4692,13 +4692,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 68
       },
       {
-        "sampleId": "8c333b76-3aee-4e7d-ae5a-263f1f4c2c44",
-        "gender": "male",
+        "Patient": "8c333b76-3aee-4e7d-ae5a-263f1f4c2c44",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "ophthalmoplegia"
         ],
@@ -4708,13 +4708,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 40
       },
       {
-        "sampleId": "bd5d62cb-ba3e-4700-a075-0b17fa2d8da9",
-        "gender": "female",
+        "Patient": "bd5d62cb-ba3e-4700-a075-0b17fa2d8da9",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "constipation",
           "diabetesMellitus",
@@ -4728,13 +4728,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 60
       },
       {
-        "sampleId": "fa68867b-a950-4240-b85e-4fd6a511c756",
-        "gender": "female",
+        "Patient": "fa68867b-a950-4240-b85e-4fd6a511c756",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "delayedSocialDevelopment",
           "diabetesMellitus",
@@ -4747,13 +4747,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 68
       },
       {
-        "sampleId": "98049d24-593d-4528-9661-923e7e65242c",
-        "gender": "male",
+        "Patient": "98049d24-593d-4528-9661-923e7e65242c",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "intestinalPseudoObstruction",
@@ -4769,13 +4769,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 51
       },
       {
-        "sampleId": "efad9bea-aeda-410e-8c34-d1418b53e379",
-        "gender": "female",
+        "Patient": "efad9bea-aeda-410e-8c34-d1418b53e379",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "diabetesMellitus",
           "opticAtrophy"
         ],
@@ -4785,13 +4785,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 4
       },
       {
-        "sampleId": "d7cc4b6e-a536-4e04-aa26-6745333320f0",
-        "gender": "male",
+        "Patient": "d7cc4b6e-a536-4e04-aa26-6745333320f0",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "intellectualDisability",
           "developmentalRegression",
@@ -4804,13 +4804,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 39
       },
       {
-        "sampleId": "d97e748a-e231-4a46-a500-2b76187e67e3",
-        "gender": "female",
+        "Patient": "d97e748a-e231-4a46-a500-2b76187e67e3",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "diabetesMellitus",
           "rhabdomyolysis",
           "muscularHypotonia",
@@ -4823,13 +4823,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 94
       },
       {
-        "sampleId": "0ed644f8-c0ee-4cfb-8e52-49b786e68229",
-        "gender": "female",
+        "Patient": "0ed644f8-c0ee-4cfb-8e52-49b786e68229",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "sensorineuralHearingImpairment",
           "increasedMuscleFatiguability",
@@ -4844,13 +4844,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 52
       },
       {
-        "sampleId": "5f91449f-81d8-42b0-8adc-f2efd96c4f86",
-        "gender": "male",
+        "Patient": "5f91449f-81d8-42b0-8adc-f2efd96c4f86",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "intellectualDisability",
@@ -4865,13 +4865,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 95
       },
       {
-        "sampleId": "566af226-8a4d-4da2-a821-f51e9a0d0a1e",
-        "gender": "male",
+        "Patient": "566af226-8a4d-4da2-a821-f51e9a0d0a1e",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "constipation",
           "renalTubularAcidosis",
@@ -4886,13 +4886,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 86
       },
       {
-        "sampleId": "ae64e32e-3193-4c98-9601-6cdc5f62adca",
-        "gender": "male",
+        "Patient": "ae64e32e-3193-4c98-9601-6cdc5f62adca",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "delayedSocialDevelopment",
           "diabetesMellitus",
@@ -4908,13 +4908,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 13
       },
       {
-        "sampleId": "c49cf436-44f9-4204-a5ea-b2acdf06dc2e",
-        "gender": "male",
+        "Patient": "c49cf436-44f9-4204-a5ea-b2acdf06dc2e",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "ophthalmoplegia",
           "developmentalRegression",
@@ -4927,13 +4927,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 96
       },
       {
-        "sampleId": "a2bb82f3-7d29-4ddb-b0c0-441107b5bcb7",
-        "gender": "male",
+        "Patient": "a2bb82f3-7d29-4ddb-b0c0-441107b5bcb7",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "renalTubularAcidosis",
           "cataract",
@@ -4946,13 +4946,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 96
       },
       {
-        "sampleId": "84d5ad7c-009c-41bb-890c-2af1b75e0ae1",
-        "gender": "female",
+        "Patient": "84d5ad7c-009c-41bb-890c-2af1b75e0ae1",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "muscleWeakness",
           "ophthalmoplegia",
@@ -4964,13 +4964,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 77
       },
       {
-        "sampleId": "83073d81-00cd-4459-83e7-805cf31bcf9b",
-        "gender": "male",
+        "Patient": "83073d81-00cd-4459-83e7-805cf31bcf9b",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
           "sensorineuralHearingImpairment",
@@ -4983,13 +4983,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 44
       },
       {
-        "sampleId": "17eaa270-6ad0-4771-ba86-71de6461b520",
-        "gender": "female",
+        "Patient": "17eaa270-6ad0-4771-ba86-71de6461b520",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "constipation",
@@ -5004,13 +5004,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 31
       },
       {
-        "sampleId": "25c58f4e-0907-4903-8787-2333616b3165",
-        "gender": "male",
+        "Patient": "25c58f4e-0907-4903-8787-2333616b3165",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "motorDelay",
           "seizures",
           "corticalVisualImpairment"
@@ -5021,13 +5021,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 2
       },
       {
-        "sampleId": "06326abb-6b59-4c58-8bee-5379898592ce",
-        "gender": "male",
+        "Patient": "06326abb-6b59-4c58-8bee-5379898592ce",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "sensorineuralHearingImpairment",
           "ophthalmoplegia",
@@ -5041,13 +5041,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 11
       },
       {
-        "sampleId": "e0a3f907-b489-42b4-80c0-8e2a7ae7d89c",
-        "gender": "female",
+        "Patient": "e0a3f907-b489-42b4-80c0-8e2a7ae7d89c",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
           "constipation",
@@ -5065,13 +5065,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 82
       },
       {
-        "sampleId": "74b018bc-9d04-43cb-a392-1d97a6a44a48",
-        "gender": "female",
+        "Patient": "74b018bc-9d04-43cb-a392-1d97a6a44a48",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "truncalAtaxia",
           "constipation",
@@ -5090,13 +5090,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 86
       },
       {
-        "sampleId": "473dcb30-5330-4406-8019-2e9bfec43055",
-        "gender": "female",
+        "Patient": "473dcb30-5330-4406-8019-2e9bfec43055",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "delayedSocialDevelopment",
           "motorDelay",
@@ -5110,13 +5110,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 88
       },
       {
-        "sampleId": "47d6945f-c8b3-4355-beff-ad60fddff76f",
-        "gender": "female",
+        "Patient": "47d6945f-c8b3-4355-beff-ad60fddff76f",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "sensorineuralHearingImpairment",
@@ -5132,13 +5132,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 5
       },
       {
-        "sampleId": "7f59a9cb-442a-4592-ae93-0e70dc6470d3",
-        "gender": "female",
+        "Patient": "7f59a9cb-442a-4592-ae93-0e70dc6470d3",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "constipation",
@@ -5154,13 +5154,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 21
       },
       {
-        "sampleId": "32eb7140-2ed5-486c-b3a8-a6ac1e9152f6",
-        "gender": "female",
+        "Patient": "32eb7140-2ed5-486c-b3a8-a6ac1e9152f6",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "truncalAtaxia",
           "ophthalmoplegia",
@@ -5179,13 +5179,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 52
       },
       {
-        "sampleId": "f7b8f37d-d01a-46c0-850d-b29443d52604",
-        "gender": "female",
+        "Patient": "f7b8f37d-d01a-46c0-850d-b29443d52604",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "delayedSocialDevelopment",
           "increasedMuscleFatiguability",
@@ -5205,13 +5205,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 70
       },
       {
-        "sampleId": "ff3d1789-1ef5-45f2-950b-3522f1be75bf",
-        "gender": "female",
+        "Patient": "ff3d1789-1ef5-45f2-950b-3522f1be75bf",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -5226,13 +5226,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 9
       },
       {
-        "sampleId": "88d7fd23-4ee7-4ea3-9896-0f6dae275b53",
-        "gender": "female",
+        "Patient": "88d7fd23-4ee7-4ea3-9896-0f6dae275b53",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "constipation",
           "ptosis",
@@ -5244,13 +5244,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 16
       },
       {
-        "sampleId": "2b7f22d7-e91a-45c1-8da7-a1511a71394e",
-        "gender": "female",
+        "Patient": "2b7f22d7-e91a-45c1-8da7-a1511a71394e",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "seizures",
           "delayedSpeechAndLanguageDevelopment",
@@ -5262,13 +5262,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 14
       },
       {
-        "sampleId": "8ebc5748-b2a7-412c-b9ed-c1220da65895",
-        "gender": "male",
+        "Patient": "8ebc5748-b2a7-412c-b9ed-c1220da65895",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "diabetesMellitus",
           "intellectualDisability",
           "rhabdomyolysis",
@@ -5281,13 +5281,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 63
       },
       {
-        "sampleId": "c51343d9-ee34-4666-92bb-2967862752e9",
-        "gender": "female",
+        "Patient": "c51343d9-ee34-4666-92bb-2967862752e9",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "intellectualDisability",
           "muscleWeakness",
@@ -5302,13 +5302,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 13
       },
       {
-        "sampleId": "5a081ca8-92a4-4a08-b2ef-eb41dd6d710d",
-        "gender": "male",
+        "Patient": "5a081ca8-92a4-4a08-b2ef-eb41dd6d710d",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "constipation",
@@ -5323,13 +5323,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 0
       },
       {
-        "sampleId": "ee7285e2-7d41-4a0f-8d60-4b82a21270ff",
-        "gender": "female",
+        "Patient": "ee7285e2-7d41-4a0f-8d60-4b82a21270ff",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -5342,13 +5342,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 66
       },
       {
-        "sampleId": "33f6038b-7d6a-4566-bdc4-7f0e16efc726",
-        "gender": "female",
+        "Patient": "33f6038b-7d6a-4566-bdc4-7f0e16efc726",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "intellectualDisability",
           "ophthalmoplegia",
@@ -5361,13 +5361,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 7
       },
       {
-        "sampleId": "3e40634d-b973-403f-9329-f065a5ae92f0",
-        "gender": "female",
+        "Patient": "3e40634d-b973-403f-9329-f065a5ae92f0",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "motorDelay",
           "ophthalmoplegia",
@@ -5380,13 +5380,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 72
       },
       {
-        "sampleId": "8b33c210-eaef-4f98-b9e9-9f56c8932ed5",
-        "gender": "male",
+        "Patient": "8b33c210-eaef-4f98-b9e9-9f56c8932ed5",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "intellectualDisability",
           "developmentalRegression",
@@ -5402,13 +5402,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 79
       },
       {
-        "sampleId": "ce84038a-6b04-478b-9b1d-e492e53ffc62",
-        "gender": "male",
+        "Patient": "ce84038a-6b04-478b-9b1d-e492e53ffc62",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "migraine",
           "peripheralNeuropathy",
@@ -5420,13 +5420,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 11
       },
       {
-        "sampleId": "ccb44408-de0e-4a94-9ffd-c37e0ea8989e",
-        "gender": "male",
+        "Patient": "ccb44408-de0e-4a94-9ffd-c37e0ea8989e",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
           "increasedMuscleFatiguability",
@@ -5441,13 +5441,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 73
       },
       {
-        "sampleId": "60d83b84-6851-4abc-b7f3-b7e7b3049a6c",
-        "gender": "male",
+        "Patient": "60d83b84-6851-4abc-b7f3-b7e7b3049a6c",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "increasedMuscleFatiguability",
           "intestinalPseudoObstruction",
@@ -5463,13 +5463,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 31
       },
       {
-        "sampleId": "0df2460c-cddb-4327-aba7-551221f942b7",
-        "gender": "male",
+        "Patient": "0df2460c-cddb-4327-aba7-551221f942b7",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "diabetesMellitus",
@@ -5485,13 +5485,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 24
       },
       {
-        "sampleId": "c50a9ae0-8507-4799-b1cd-1cd1ad7db264",
-        "gender": "female",
+        "Patient": "c50a9ae0-8507-4799-b1cd-1cd1ad7db264",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "delayedSocialDevelopment",
           "strokeLikeEpisode",
@@ -5503,13 +5503,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 88
       },
       {
-        "sampleId": "b49825b8-03fd-44d7-8ff7-c22c693e9ab0",
-        "gender": "female",
+        "Patient": "b49825b8-03fd-44d7-8ff7-c22c693e9ab0",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "diabetesMellitus",
           "migraine",
@@ -5523,13 +5523,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 64
       },
       {
-        "sampleId": "013c30e8-ed07-4707-8c13-5d8de0152528",
-        "gender": "male",
+        "Patient": "013c30e8-ed07-4707-8c13-5d8de0152528",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "diabetesMellitus",
           "intellectualDisability",
           "apnea",
@@ -5542,13 +5542,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 68
       },
       {
-        "sampleId": "44730a3c-f643-41ed-a9d1-31de78189c3d",
-        "gender": "female",
+        "Patient": "44730a3c-f643-41ed-a9d1-31de78189c3d",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "diabetesMellitus",
           "motorDelay",
@@ -5563,13 +5563,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 74
       },
       {
-        "sampleId": "2bd8f680-36b6-4fc3-8d93-cab1ea36b2f3",
-        "gender": "female",
+        "Patient": "2bd8f680-36b6-4fc3-8d93-cab1ea36b2f3",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "sensorineuralHearingImpairment",
           "renalTubularAcidosis",
@@ -5581,13 +5581,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 97
       },
       {
-        "sampleId": "2b0fa711-9cc2-4e75-b924-7917568c5b44",
-        "gender": "female",
+        "Patient": "2b0fa711-9cc2-4e75-b924-7917568c5b44",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
@@ -5602,13 +5602,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 79
       },
       {
-        "sampleId": "cc5a9d6f-dd92-4b9d-a576-5b940e65916f",
-        "gender": "female",
+        "Patient": "cc5a9d6f-dd92-4b9d-a576-5b940e65916f",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "motorDelay",
           "renalTubularAcidosis",
@@ -5620,13 +5620,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 99
       },
       {
-        "sampleId": "32ddc018-d9bd-4000-b2f7-a6ebf5791b0b",
-        "gender": "female",
+        "Patient": "32ddc018-d9bd-4000-b2f7-a6ebf5791b0b",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "intestinalPseudoObstruction",
           "ophthalmoplegia",
@@ -5639,13 +5639,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 27
       },
       {
-        "sampleId": "77abce36-fc10-48bf-94b8-7d4b724347d7",
-        "gender": "female",
+        "Patient": "77abce36-fc10-48bf-94b8-7d4b724347d7",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "diabetesMellitus",
           "intestinalPseudoObstruction",
@@ -5661,13 +5661,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 23
       },
       {
-        "sampleId": "134a2643-2b1f-461a-9258-829d2408d188",
-        "gender": "male",
+        "Patient": "134a2643-2b1f-461a-9258-829d2408d188",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "intellectualDisability",
           "developmentalRegression",
@@ -5685,13 +5685,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 8
       },
       {
-        "sampleId": "6c9be849-aa6b-4576-91e3-e8f30aa14891",
-        "gender": "male",
+        "Patient": "6c9be849-aa6b-4576-91e3-e8f30aa14891",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "ptosis",
           "rhabdomyolysis",
@@ -5703,13 +5703,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 95
       },
       {
-        "sampleId": "ca01a779-7f5c-4c36-a360-0ff154d244d7",
-        "gender": "female",
+        "Patient": "ca01a779-7f5c-4c36-a360-0ff154d244d7",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "sensorineuralHearingImpairment",
           "ophthalmoplegia",
@@ -5723,13 +5723,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 97
       },
       {
-        "sampleId": "3a020810-fecb-4c17-a6a1-ff7738f6b387",
-        "gender": "female",
+        "Patient": "3a020810-fecb-4c17-a6a1-ff7738f6b387",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
@@ -5741,13 +5741,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 7
       },
       {
-        "sampleId": "b72d3e5a-6893-4c9c-b3fd-f6888bf3f5fd",
-        "gender": "female",
+        "Patient": "b72d3e5a-6893-4c9c-b3fd-f6888bf3f5fd",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "muscleWeakness",
           "peripheralNeuropathy",
@@ -5761,13 +5761,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 99
       },
       {
-        "sampleId": "d0bd08b9-b94a-4bd7-99e4-f7255d9d4de3",
-        "gender": "female",
+        "Patient": "d0bd08b9-b94a-4bd7-99e4-f7255d9d4de3",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "increasedMuscleFatiguability",
@@ -5785,13 +5785,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 98
       },
       {
-        "sampleId": "e6c84bf6-050f-45d1-8ac7-a4600ab3dabd",
-        "gender": "female",
+        "Patient": "e6c84bf6-050f-45d1-8ac7-a4600ab3dabd",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "truncalAtaxia",
           "motorDelay",
@@ -5806,13 +5806,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 25
       },
       {
-        "sampleId": "6142485a-9c4f-44f9-b135-c8bfd670cebd",
-        "gender": "female",
+        "Patient": "6142485a-9c4f-44f9-b135-c8bfd670cebd",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "sensorineuralHearingImpairment",
@@ -5828,13 +5828,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 29
       },
       {
-        "sampleId": "bfe42353-354c-4217-a08f-16cd9b8cb70f",
-        "gender": "male",
+        "Patient": "bfe42353-354c-4217-a08f-16cd9b8cb70f",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "delayedSocialDevelopment",
           "increasedMuscleFatiguability",
@@ -5855,13 +5855,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 58
       },
       {
-        "sampleId": "d2b41774-e5fc-4312-a379-862587628b89",
-        "gender": "female",
+        "Patient": "d2b41774-e5fc-4312-a379-862587628b89",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "sensorineuralHearingImpairment",
           "diabetesMellitus",
@@ -5883,13 +5883,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 19
       },
       {
-        "sampleId": "f23c7ee4-fdf8-4e4e-89fa-b8776ba583f4",
-        "gender": "male",
+        "Patient": "f23c7ee4-fdf8-4e4e-89fa-b8776ba583f4",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "diabetesMellitus",
           "ophthalmoplegia",
@@ -5903,13 +5903,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 7
       },
       {
-        "sampleId": "bbb98b0a-0bc3-44be-9690-f9c6dcdb0577",
-        "gender": "female",
+        "Patient": "bbb98b0a-0bc3-44be-9690-f9c6dcdb0577",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "sensorineuralHearingImpairment",
           "ophthalmoplegia",
@@ -5921,13 +5921,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 88
       },
       {
-        "sampleId": "a94b3e76-3d0c-4216-ac33-9048cdc412d1",
-        "gender": "female",
+        "Patient": "a94b3e76-3d0c-4216-ac33-9048cdc412d1",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "increasedMuscleFatiguability",
           "ophthalmoplegia",
@@ -5942,13 +5942,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 26
       },
       {
-        "sampleId": "ec75b1da-5782-4a86-8dc8-f6292fcdbd30",
-        "gender": "male",
+        "Patient": "ec75b1da-5782-4a86-8dc8-f6292fcdbd30",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "ophthalmoplegia",
           "ptosis",
@@ -5962,13 +5962,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 38
       },
       {
-        "sampleId": "c08434fa-5e71-4c2f-aa7c-0c65b64087cf",
-        "gender": "male",
+        "Patient": "c08434fa-5e71-4c2f-aa7c-0c65b64087cf",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -5985,13 +5985,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 57
       },
       {
-        "sampleId": "ff40d7a1-234c-475f-bfc5-87c5d070a2fa",
-        "gender": "male",
+        "Patient": "ff40d7a1-234c-475f-bfc5-87c5d070a2fa",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "intestinalPseudoObstruction",
           "muscleWeakness",
@@ -6006,13 +6006,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 32
       },
       {
-        "sampleId": "2d5635fd-9b73-4677-985b-0174cd904670",
-        "gender": "male",
+        "Patient": "2d5635fd-9b73-4677-985b-0174cd904670",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "diabetesMellitus",
           "intellectualDisability",
@@ -6029,13 +6029,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 8
       },
       {
-        "sampleId": "00722889-6417-4f88-916f-87a1fbf51f49",
-        "gender": "male",
+        "Patient": "00722889-6417-4f88-916f-87a1fbf51f49",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "intellectualDisability",
           "motorDelay",
@@ -6051,13 +6051,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 96
       },
       {
-        "sampleId": "717cec4e-68a0-499a-ac45-ccf69ac26fce",
-        "gender": "male",
+        "Patient": "717cec4e-68a0-499a-ac45-ccf69ac26fce",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "intellectualDisability",
           "rhabdomyolysis",
@@ -6070,13 +6070,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 38
       },
       {
-        "sampleId": "2791d983-3c2d-4874-8a8d-6c6cbb69f509",
-        "gender": "female",
+        "Patient": "2791d983-3c2d-4874-8a8d-6c6cbb69f509",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "diabetesMellitus",
@@ -6093,13 +6093,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 19
       },
       {
-        "sampleId": "5693372a-9212-4e4a-a71a-7498db6f4c47",
-        "gender": "male",
+        "Patient": "5693372a-9212-4e4a-a71a-7498db6f4c47",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "intestinalPseudoObstruction",
           "cataract",
@@ -6112,13 +6112,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 90
       },
       {
-        "sampleId": "57c5bdcf-1f98-4e4b-bdb6-36dadb980270",
-        "gender": "male",
+        "Patient": "57c5bdcf-1f98-4e4b-bdb6-36dadb980270",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "muscleWeakness",
           "corticalVisualImpairment",
@@ -6130,13 +6130,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 37
       },
       {
-        "sampleId": "d005106c-974d-446d-9928-2d10e18f1448",
-        "gender": "male",
+        "Patient": "d005106c-974d-446d-9928-2d10e18f1448",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "intestinalPseudoObstruction",
           "rhabdomyolysis",
@@ -6151,13 +6151,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 98
       },
       {
-        "sampleId": "eb45c225-aeb1-4709-b854-afe47267061e",
-        "gender": "female",
+        "Patient": "eb45c225-aeb1-4709-b854-afe47267061e",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "diabetesMellitus",
@@ -6171,13 +6171,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 14
       },
       {
-        "sampleId": "0d094ac5-eaad-4ea0-aeb1-657881dddc09",
-        "gender": "female",
+        "Patient": "0d094ac5-eaad-4ea0-aeb1-657881dddc09",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "delayedSocialDevelopment",
           "diabetesMellitus",
@@ -6192,13 +6192,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 60
       },
       {
-        "sampleId": "4bca8ba4-028b-4c3e-95b9-493e99d129ce",
-        "gender": "female",
+        "Patient": "4bca8ba4-028b-4c3e-95b9-493e99d129ce",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "motorDelay",
           "ptosis",
@@ -6213,13 +6213,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 27
       },
       {
-        "sampleId": "db409547-e277-49cf-9231-e0db56eed182",
-        "gender": "male",
+        "Patient": "db409547-e277-49cf-9231-e0db56eed182",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "diabetesMellitus",
           "cataract",
@@ -6232,13 +6232,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 62
       },
       {
-        "sampleId": "10c4b691-6ddb-4c19-9ef0-7fb1593b7746",
-        "gender": "female",
+        "Patient": "10c4b691-6ddb-4c19-9ef0-7fb1593b7746",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "ptosis",
           "migraine",
           "apnea",
@@ -6250,13 +6250,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 37
       },
       {
-        "sampleId": "4fe46812-e340-469c-9c75-0361c149d66d",
-        "gender": "male",
+        "Patient": "4fe46812-e340-469c-9c75-0361c149d66d",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "muscleWeakness",
           "apnea",
@@ -6268,13 +6268,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 58
       },
       {
-        "sampleId": "55bdd6d2-e188-4864-9b53-5c4879e25cd7",
-        "gender": "male",
+        "Patient": "55bdd6d2-e188-4864-9b53-5c4879e25cd7",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "increasedMuscleFatiguability",
           "muscleWeakness",
@@ -6290,13 +6290,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 77
       },
       {
-        "sampleId": "25885970-3d72-4294-bb64-1907296db40d",
-        "gender": "male",
+        "Patient": "25885970-3d72-4294-bb64-1907296db40d",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "truncalAtaxia",
@@ -6311,13 +6311,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 86
       },
       {
-        "sampleId": "e84db17a-fff0-4886-a4cf-97738069aab6",
-        "gender": "female",
+        "Patient": "e84db17a-fff0-4886-a4cf-97738069aab6",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -6336,13 +6336,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 66
       },
       {
-        "sampleId": "c7b4432b-053c-4066-a46e-85a72b6c357a",
-        "gender": "female",
+        "Patient": "c7b4432b-053c-4066-a46e-85a72b6c357a",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "increasedMuscleFatiguability",
           "intellectualDisability",
           "motorDelay",
@@ -6358,13 +6358,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 11
       },
       {
-        "sampleId": "df4c63ec-e7b6-4a88-a959-3c3f633a5d2b",
-        "gender": "male",
+        "Patient": "df4c63ec-e7b6-4a88-a959-3c3f633a5d2b",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "increasedMuscleFatiguability",
           "motorDelay",
           "migraine",
@@ -6378,13 +6378,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 19
       },
       {
-        "sampleId": "2683d83d-4e29-47bc-adb6-a31167c3ef06",
-        "gender": "male",
+        "Patient": "2683d83d-4e29-47bc-adb6-a31167c3ef06",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "motorDelay",
           "muscleWeakness",
           "ophthalmoplegia",
@@ -6397,13 +6397,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 51
       },
       {
-        "sampleId": "42b541b8-ed87-4446-8eda-3420c10c5510",
-        "gender": "male",
+        "Patient": "42b541b8-ed87-4446-8eda-3420c10c5510",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
@@ -6422,13 +6422,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 60
       },
       {
-        "sampleId": "246e432e-bbc3-4d27-a2c8-33ca3624fea7",
-        "gender": "male",
+        "Patient": "246e432e-bbc3-4d27-a2c8-33ca3624fea7",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "diabetesMellitus",
           "renalTubularAcidosis",
@@ -6442,13 +6442,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 92
       },
       {
-        "sampleId": "8f34a29c-152d-477d-982f-5754a4dc5470",
-        "gender": "male",
+        "Patient": "8f34a29c-152d-477d-982f-5754a4dc5470",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "apnea",
@@ -6463,13 +6463,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 70
       },
       {
-        "sampleId": "7ce7b87a-cbb9-4950-a561-a0a1a4ef9d8a",
-        "gender": "male",
+        "Patient": "7ce7b87a-cbb9-4950-a561-a0a1a4ef9d8a",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "truncalAtaxia",
           "motorDelay",
@@ -6485,13 +6485,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 34
       },
       {
-        "sampleId": "b45a657a-ef3e-49cf-9948-8031db4ce16a",
-        "gender": "female",
+        "Patient": "b45a657a-ef3e-49cf-9948-8031db4ce16a",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "motorDelay",
           "developmentalRegression",
@@ -6506,13 +6506,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 9
       },
       {
-        "sampleId": "cd66c514-300e-4e33-a0d1-ace549c63e17",
-        "gender": "male",
+        "Patient": "cd66c514-300e-4e33-a0d1-ace549c63e17",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -6531,13 +6531,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 82
       },
       {
-        "sampleId": "58aac0b1-f969-4b79-9785-5ce131f0c71d",
-        "gender": "male",
+        "Patient": "58aac0b1-f969-4b79-9785-5ce131f0c71d",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "muscleWeakness",
           "ophthalmoplegia",
@@ -6553,13 +6553,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 23
       },
       {
-        "sampleId": "ae3d3fe8-a8f2-48d0-8ab2-e47af6761349",
-        "gender": "male",
+        "Patient": "ae3d3fe8-a8f2-48d0-8ab2-e47af6761349",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
           "intestinalPseudoObstruction",
@@ -6571,13 +6571,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 28
       },
       {
-        "sampleId": "fff7cf64-958d-4f28-b2c0-ab0c1b76ad99",
-        "gender": "female",
+        "Patient": "fff7cf64-958d-4f28-b2c0-ab0c1b76ad99",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "constipation",
           "increasedMuscleFatiguability",
@@ -6591,13 +6591,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 28
       },
       {
-        "sampleId": "22f5e8b6-f81d-415d-be78-e57911ce30cd",
-        "gender": "female",
+        "Patient": "22f5e8b6-f81d-415d-be78-e57911ce30cd",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "diabetesMellitus",
           "motorDelay",
@@ -6614,13 +6614,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 55
       },
       {
-        "sampleId": "a95cd81e-1a9e-4061-846d-adfff4f3224a",
-        "gender": "male",
+        "Patient": "a95cd81e-1a9e-4061-846d-adfff4f3224a",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "diabetesMellitus",
           "intestinalPseudoObstruction",
@@ -6634,13 +6634,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 17
       },
       {
-        "sampleId": "a41baced-a8ea-4c9c-8f63-979bf62f7635",
-        "gender": "female",
+        "Patient": "a41baced-a8ea-4c9c-8f63-979bf62f7635",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "dilatedCardiomyopathy",
           "intellectualDisability",
@@ -6655,13 +6655,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 70
       },
       {
-        "sampleId": "8df72176-3a40-4d19-80a3-9f0d4dc9d98b",
-        "gender": "male",
+        "Patient": "8df72176-3a40-4d19-80a3-9f0d4dc9d98b",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "increasedMuscleFatiguability",
           "ophthalmoplegia",
           "glaucoma"
@@ -6672,13 +6672,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 88
       },
       {
-        "sampleId": "b851bf11-25b2-4321-8f7c-96d533a9ae91",
-        "gender": "female",
+        "Patient": "b851bf11-25b2-4321-8f7c-96d533a9ae91",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "intestinalPseudoObstruction",
@@ -6692,13 +6692,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 30
       },
       {
-        "sampleId": "818de719-6f7b-454c-851e-9e0cb411fc66",
-        "gender": "female",
+        "Patient": "818de719-6f7b-454c-851e-9e0cb411fc66",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "increasedMuscleFatiguability",
@@ -6714,13 +6714,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 85
       },
       {
-        "sampleId": "c15867b2-9448-4622-bfef-7a04eb942cb2",
-        "gender": "male",
+        "Patient": "c15867b2-9448-4622-bfef-7a04eb942cb2",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "muscleWeakness",
           "migraine",
           "rhabdomyolysis",
@@ -6734,13 +6734,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 98
       },
       {
-        "sampleId": "55b8c4ee-4e55-422c-8795-0b8b22a8b254",
-        "gender": "female",
+        "Patient": "55b8c4ee-4e55-422c-8795-0b8b22a8b254",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "delayedSocialDevelopment",
           "peripheralNeuropathy",
@@ -6755,13 +6755,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 65
       },
       {
-        "sampleId": "95a4fd03-7563-4728-b7d8-307c572240de",
-        "gender": "female",
+        "Patient": "95a4fd03-7563-4728-b7d8-307c572240de",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "ptosis",
           "muscularHypotonia"
@@ -6772,13 +6772,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 44
       },
       {
-        "sampleId": "42da0ad3-fda0-4056-bde0-695face250b1",
-        "gender": "female",
+        "Patient": "42da0ad3-fda0-4056-bde0-695face250b1",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "constipation",
           "sensorineuralHearingImpairment",
@@ -6794,13 +6794,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 85
       },
       {
-        "sampleId": "7a7a886d-00e4-4e97-b905-35bfd92284f7",
-        "gender": "male",
+        "Patient": "7a7a886d-00e4-4e97-b905-35bfd92284f7",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -6814,13 +6814,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 83
       },
       {
-        "sampleId": "43cb7d8d-e1f0-4093-a067-a4cef8ccbcfd",
-        "gender": "male",
+        "Patient": "43cb7d8d-e1f0-4093-a067-a4cef8ccbcfd",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "intellectualDisability",
@@ -6836,13 +6836,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 43
       },
       {
-        "sampleId": "cb59cf30-5a28-4898-8a83-19a1ae3842c7",
-        "gender": "female",
+        "Patient": "cb59cf30-5a28-4898-8a83-19a1ae3842c7",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "delayedSocialDevelopment",
           "diabetesMellitus",
@@ -6855,13 +6855,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 50
       },
       {
-        "sampleId": "b1b055fe-28e4-4540-8545-20935865f502",
-        "gender": "female",
+        "Patient": "b1b055fe-28e4-4540-8545-20935865f502",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "constipation",
           "spasticity",
@@ -6873,13 +6873,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 29
       },
       {
-        "sampleId": "fdf15ab9-a04a-4f0a-99c7-de7bc4613b88",
-        "gender": "male",
+        "Patient": "fdf15ab9-a04a-4f0a-99c7-de7bc4613b88",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "sensorineuralHearingImpairment",
@@ -6895,13 +6895,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 59
       },
       {
-        "sampleId": "7f374b84-3b0f-4d5d-b50c-520f50e993db",
-        "gender": "male",
+        "Patient": "7f374b84-3b0f-4d5d-b50c-520f50e993db",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -6917,13 +6917,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 99
       },
       {
-        "sampleId": "77e58b01-265c-4249-8946-62f89beeb8a5",
-        "gender": "female",
+        "Patient": "77e58b01-265c-4249-8946-62f89beeb8a5",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -6941,13 +6941,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 64
       },
       {
-        "sampleId": "6004cd3f-abd2-4487-b2aa-2a17b289ab5d",
-        "gender": "male",
+        "Patient": "6004cd3f-abd2-4487-b2aa-2a17b289ab5d",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "hypertrophicCardiomyopathy",
           "delayedSocialDevelopment",
@@ -6965,13 +6965,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 27
       },
       {
-        "sampleId": "1f1d3b51-a205-4f1a-a822-a5c4e5c37808",
-        "gender": "male",
+        "Patient": "1f1d3b51-a205-4f1a-a822-a5c4e5c37808",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
@@ -6985,13 +6985,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 32
       },
       {
-        "sampleId": "f0e75e29-f50e-46bc-b1ba-8ff81be4bd63",
-        "gender": "male",
+        "Patient": "f0e75e29-f50e-46bc-b1ba-8ff81be4bd63",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "ophthalmoplegia",
@@ -7005,13 +7005,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 9
       },
       {
-        "sampleId": "033aee2b-8458-42eb-ba89-e48535788bde",
-        "gender": "male",
+        "Patient": "033aee2b-8458-42eb-ba89-e48535788bde",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "diabetesMellitus",
           "nystagmus"
         ],
@@ -7021,13 +7021,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 5
       },
       {
-        "sampleId": "a1c068c9-d868-4c3c-a035-4c85a0d6d649",
-        "gender": "male",
+        "Patient": "a1c068c9-d868-4c3c-a035-4c85a0d6d649",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "ptosis",
           "developmentalRegression",
@@ -7040,13 +7040,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 95
       },
       {
-        "sampleId": "52b3d0ca-6f3b-46c0-9b08-1f4e482e49cb",
-        "gender": "male",
+        "Patient": "52b3d0ca-6f3b-46c0-9b08-1f4e482e49cb",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "truncalAtaxia",
           "rhabdomyolysis"
@@ -7057,13 +7057,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 66
       },
       {
-        "sampleId": "95aaae84-2d46-4bb5-b665-45a4669242ba",
-        "gender": "female",
+        "Patient": "95aaae84-2d46-4bb5-b665-45a4669242ba",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
           "motorDelay",
@@ -7077,13 +7077,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 38
       },
       {
-        "sampleId": "99b33334-f0de-472a-9013-26354aa1e225",
-        "gender": "female",
+        "Patient": "99b33334-f0de-472a-9013-26354aa1e225",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "increasedMuscleFatiguability",
           "renalTubularAcidosis",
           "seizures",
@@ -7097,13 +7097,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 21
       },
       {
-        "sampleId": "9ef87b29-5901-49ec-b488-1b49f087143f",
-        "gender": "female",
+        "Patient": "9ef87b29-5901-49ec-b488-1b49f087143f",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "sensorineuralHearingImpairment",
@@ -7117,13 +7117,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 41
       },
       {
-        "sampleId": "76c6a2c2-102f-4d2c-8d2c-20a40bf73c91",
-        "gender": "male",
+        "Patient": "76c6a2c2-102f-4d2c-8d2c-20a40bf73c91",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "muscleWeakness",
           "peripheralNeuropathy",
@@ -7135,13 +7135,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 19
       },
       {
-        "sampleId": "38daf780-5ac2-4167-9910-519d6b7b4826",
-        "gender": "female",
+        "Patient": "38daf780-5ac2-4167-9910-519d6b7b4826",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -7161,13 +7161,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 13
       },
       {
-        "sampleId": "cbf7f646-628c-436e-9ba8-d9c60ccae653",
-        "gender": "female",
+        "Patient": "cbf7f646-628c-436e-9ba8-d9c60ccae653",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "intestinalPseudoObstruction",
           "motorDelay",
           "muscleWeakness",
@@ -7182,13 +7182,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 9
       },
       {
-        "sampleId": "5a7c0191-c039-4e28-a742-1059913cf0fc",
-        "gender": "male",
+        "Patient": "5a7c0191-c039-4e28-a742-1059913cf0fc",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intestinalPseudoObstruction",
           "intellectualDisability",
           "ptosis",
@@ -7203,13 +7203,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 93
       },
       {
-        "sampleId": "4c2812fd-373d-4bb7-9c43-0994afb12015",
-        "gender": "female",
+        "Patient": "4c2812fd-373d-4bb7-9c43-0994afb12015",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "delayedSocialDevelopment",
           "intestinalPseudoObstruction",
@@ -7223,13 +7223,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 30
       },
       {
-        "sampleId": "889d4146-29d9-45e0-8a59-405d7c9f3d00",
-        "gender": "female",
+        "Patient": "889d4146-29d9-45e0-8a59-405d7c9f3d00",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "increasedMuscleFatiguability",
           "ptosis",
           "seizures",
@@ -7241,13 +7241,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 54
       },
       {
-        "sampleId": "11a6a6eb-d959-47b4-a98c-cf81704f73d7",
-        "gender": "male",
+        "Patient": "11a6a6eb-d959-47b4-a98c-cf81704f73d7",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "truncalAtaxia",
           "diabetesMellitus",
@@ -7262,13 +7262,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 23
       },
       {
-        "sampleId": "44ccad24-3021-483e-a364-418ee96f62ac",
-        "gender": "male",
+        "Patient": "44ccad24-3021-483e-a364-418ee96f62ac",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "diabetesMellitus",
           "intestinalPseudoObstruction",
@@ -7284,13 +7284,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 94
       },
       {
-        "sampleId": "0f1feda5-acba-452b-bf04-36cc4ed78551",
-        "gender": "female",
+        "Patient": "0f1feda5-acba-452b-bf04-36cc4ed78551",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "sensorineuralHearingImpairment",
           "seizures",
@@ -7303,13 +7303,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 9
       },
       {
-        "sampleId": "7921c559-0eeb-4eb0-9127-1ddd2e0bb839",
-        "gender": "female",
+        "Patient": "7921c559-0eeb-4eb0-9127-1ddd2e0bb839",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "hypertrophicCardiomyopathy",
           "diabetesMellitus",
@@ -7323,13 +7323,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 51
       },
       {
-        "sampleId": "7bbfa9cc-87f3-40b2-a20a-b37b31905df7",
-        "gender": "female",
+        "Patient": "7bbfa9cc-87f3-40b2-a20a-b37b31905df7",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "delayedSocialDevelopment",
           "intestinalPseudoObstruction",
@@ -7347,13 +7347,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 11
       },
       {
-        "sampleId": "6a20dbfd-662b-4c1b-8b91-f9f437d58ea8",
-        "gender": "male",
+        "Patient": "6a20dbfd-662b-4c1b-8b91-f9f437d58ea8",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
@@ -7371,13 +7371,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 37
       },
       {
-        "sampleId": "e74c243e-e24d-4e8e-bcad-f5a5c7654fc4",
-        "gender": "female",
+        "Patient": "e74c243e-e24d-4e8e-bcad-f5a5c7654fc4",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "seizures",
           "muscularHypotonia",
@@ -7389,13 +7389,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 0
       },
       {
-        "sampleId": "e18cdbe0-5517-4d5c-b7bf-55f2066c579c",
-        "gender": "female",
+        "Patient": "e18cdbe0-5517-4d5c-b7bf-55f2066c579c",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "truncalAtaxia",
           "intellectualDisability",
@@ -7412,13 +7412,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 35
       },
       {
-        "sampleId": "3c325dce-8725-4c8c-a1f6-5222ca5363b1",
-        "gender": "male",
+        "Patient": "3c325dce-8725-4c8c-a1f6-5222ca5363b1",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "ptosis",
           "migraine",
@@ -7433,13 +7433,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 95
       },
       {
-        "sampleId": "76984939-bd93-4332-8c66-a7c91b8be400",
-        "gender": "female",
+        "Patient": "76984939-bd93-4332-8c66-a7c91b8be400",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "hypertrophicCardiomyopathy",
@@ -7458,13 +7458,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 67
       },
       {
-        "sampleId": "c26134a1-c7ba-42b6-a118-b25451ecc48d",
-        "gender": "male",
+        "Patient": "c26134a1-c7ba-42b6-a118-b25451ecc48d",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intellectualDisability",
           "apnea",
           "rhabdomyolysis",
@@ -7479,13 +7479,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 26
       },
       {
-        "sampleId": "86ae06c5-0577-4131-9410-d18cd7c8897c",
-        "gender": "female",
+        "Patient": "86ae06c5-0577-4131-9410-d18cd7c8897c",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "delayedSocialDevelopment",
           "diabetesMellitus",
@@ -7499,13 +7499,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 71
       },
       {
-        "sampleId": "9e97cb47-795b-464f-8925-864bc5ad037d",
-        "gender": "female",
+        "Patient": "9e97cb47-795b-464f-8925-864bc5ad037d",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "increasedMuscleFatiguability",
           "muscleWeakness",
@@ -7517,13 +7517,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 65
       },
       {
-        "sampleId": "e440fb9b-bf03-4835-abd5-2d298fb7aa0f",
-        "gender": "female",
+        "Patient": "e440fb9b-bf03-4835-abd5-2d298fb7aa0f",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "increasedMuscleFatiguability",
           "developmentalRegression",
           "rhabdomyolysis",
@@ -7537,13 +7537,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 94
       },
       {
-        "sampleId": "03542117-2910-48d7-9b57-d9cbd0c04da5",
-        "gender": "male",
+        "Patient": "03542117-2910-48d7-9b57-d9cbd0c04da5",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "intellectualDisability",
           "motorDelay",
@@ -7558,13 +7558,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 27
       },
       {
-        "sampleId": "34f44560-ec34-4964-8145-33c09accfc8c",
-        "gender": "male",
+        "Patient": "34f44560-ec34-4964-8145-33c09accfc8c",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "diabetesMellitus",
           "raggedRedMuscleFibers",
@@ -7577,13 +7577,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 54
       },
       {
-        "sampleId": "03c2e15f-0763-4170-990a-21f596b8d13b",
-        "gender": "male",
+        "Patient": "03c2e15f-0763-4170-990a-21f596b8d13b",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "constipation",
           "intellectualDisability",
@@ -7597,13 +7597,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 20
       },
       {
-        "sampleId": "7e0f8631-e060-48fd-b632-f7ebbf4be70e",
-        "gender": "female",
+        "Patient": "7e0f8631-e060-48fd-b632-f7ebbf4be70e",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "renalTubularAcidosis"
         ],
@@ -7613,13 +7613,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 2
       },
       {
-        "sampleId": "f8a7a2d5-9262-4cca-a07f-99a5299ab74f",
-        "gender": "female",
+        "Patient": "f8a7a2d5-9262-4cca-a07f-99a5299ab74f",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "developmentalRegression",
           "renalTubularAcidosis",
@@ -7633,13 +7633,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 8
       },
       {
-        "sampleId": "06581847-260f-4cc8-b7ad-6a96ff5d8d6f",
-        "gender": "female",
+        "Patient": "06581847-260f-4cc8-b7ad-6a96ff5d8d6f",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "truncalAtaxia",
           "intellectualDisability",
@@ -7651,13 +7651,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 42
       },
       {
-        "sampleId": "8a4bd4ef-bb03-4221-a587-7568ebd29110",
-        "gender": "female",
+        "Patient": "8a4bd4ef-bb03-4221-a587-7568ebd29110",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "increasedMuscleFatiguability",
           "renalTubularAcidosis"
@@ -7668,13 +7668,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 9
       },
       {
-        "sampleId": "b0d94733-b01a-4845-a6d5-1d6988146889",
-        "gender": "female",
+        "Patient": "b0d94733-b01a-4845-a6d5-1d6988146889",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "ophthalmoplegia",
           "renalTubularAcidosis",
@@ -7686,13 +7686,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 31
       },
       {
-        "sampleId": "5a886d6d-573b-47b3-bc41-953608caa3d0",
-        "gender": "male",
+        "Patient": "5a886d6d-573b-47b3-bc41-953608caa3d0",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "hypertrophicCardiomyopathy",
@@ -7713,13 +7713,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 54
       },
       {
-        "sampleId": "4f84ac1e-0d51-46bb-b8c3-54a90f5f38b5",
-        "gender": "male",
+        "Patient": "4f84ac1e-0d51-46bb-b8c3-54a90f5f38b5",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "increasedMuscleFatiguability",
           "intestinalPseudoObstruction",
@@ -7737,13 +7737,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 27
       },
       {
-        "sampleId": "fbf5307f-3556-42b9-984d-5074b49fa349",
-        "gender": "female",
+        "Patient": "fbf5307f-3556-42b9-984d-5074b49fa349",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "increasedMuscleFatiguability",
           "intestinalPseudoObstruction",
           "motorDelay",
@@ -7759,13 +7759,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 72
       },
       {
-        "sampleId": "30f7af1e-7d8b-47ff-aa08-40082a7962fc",
-        "gender": "female",
+        "Patient": "30f7af1e-7d8b-47ff-aa08-40082a7962fc",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "constipation",
           "intellectualDisability",
@@ -7786,13 +7786,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 34
       },
       {
-        "sampleId": "51f77973-d466-4176-8534-ed73296481ae",
-        "gender": "male",
+        "Patient": "51f77973-d466-4176-8534-ed73296481ae",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "ptosis",
@@ -7808,13 +7808,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 94
       },
       {
-        "sampleId": "8c262ac4-889a-442f-84d5-b2e509ae7c0a",
-        "gender": "male",
+        "Patient": "8c262ac4-889a-442f-84d5-b2e509ae7c0a",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "delayedSocialDevelopment",
           "apnea",
@@ -7829,13 +7829,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 99
       },
       {
-        "sampleId": "caca506b-0f09-40cc-b574-746b5eb4e20e",
-        "gender": "female",
+        "Patient": "caca506b-0f09-40cc-b574-746b5eb4e20e",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "sensorineuralHearingImpairment",
@@ -7852,13 +7852,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 88
       },
       {
-        "sampleId": "bb5b4f09-4482-417f-b8df-013ed7a477b3",
-        "gender": "female",
+        "Patient": "bb5b4f09-4482-417f-b8df-013ed7a477b3",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "dilatedCardiomyopathy",
           "truncalAtaxia",
@@ -7873,13 +7873,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 81
       },
       {
-        "sampleId": "30f48030-2394-4170-a02b-78e7ad7263c3",
-        "gender": "female",
+        "Patient": "30f48030-2394-4170-a02b-78e7ad7263c3",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "dilatedCardiomyopathy",
           "diabetesMellitus",
@@ -7894,13 +7894,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 29
       },
       {
-        "sampleId": "af177c06-0020-41c2-b7ee-886be1790f3d",
-        "gender": "female",
+        "Patient": "af177c06-0020-41c2-b7ee-886be1790f3d",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "sensorineuralHearingImpairment",
           "increasedMuscleFatiguability",
@@ -7917,13 +7917,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 90
       },
       {
-        "sampleId": "a0219032-9b2a-4d64-8869-fb9755fbffd6",
-        "gender": "male",
+        "Patient": "a0219032-9b2a-4d64-8869-fb9755fbffd6",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "delayedSocialDevelopment",
@@ -7937,13 +7937,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 87
       },
       {
-        "sampleId": "6c55935f-e168-4d2d-9416-b24bb8e22c97",
-        "gender": "female",
+        "Patient": "6c55935f-e168-4d2d-9416-b24bb8e22c97",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intellectualDisability",
           "ophthalmoplegia",
           "migraine",
@@ -7956,13 +7956,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 9
       },
       {
-        "sampleId": "c1c2fac7-79c9-49c6-8331-7248c83e8d84",
-        "gender": "male",
+        "Patient": "c1c2fac7-79c9-49c6-8331-7248c83e8d84",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "intestinalPseudoObstruction",
           "peripheralNeuropathy",
@@ -7976,13 +7976,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 62
       },
       {
-        "sampleId": "23dd9d41-9165-4f14-953f-c7889b7f27b2",
-        "gender": "female",
+        "Patient": "23dd9d41-9165-4f14-953f-c7889b7f27b2",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "intellectualDisability",
           "seizures",
@@ -7997,13 +7997,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 78
       },
       {
-        "sampleId": "11fbb4ab-6423-4f4e-a045-10f16287db0d",
-        "gender": "male",
+        "Patient": "11fbb4ab-6423-4f4e-a045-10f16287db0d",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "constipation",
           "diabetesMellitus",
@@ -8016,13 +8016,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 17
       },
       {
-        "sampleId": "02a5918b-4e2e-43e8-bbae-24a7f509fadd",
-        "gender": "male",
+        "Patient": "02a5918b-4e2e-43e8-bbae-24a7f509fadd",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "renalTubularAcidosis",
           "strokeLikeEpisode",
@@ -8035,13 +8035,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 99
       },
       {
-        "sampleId": "1dcfa9be-0257-4261-ab37-1c222d75d8d3",
-        "gender": "male",
+        "Patient": "1dcfa9be-0257-4261-ab37-1c222d75d8d3",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "diabetesMellitus",
           "migraine",
@@ -8057,13 +8057,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 17
       },
       {
-        "sampleId": "f2f257b4-61d3-40cd-b142-8afb03d4593f",
-        "gender": "female",
+        "Patient": "f2f257b4-61d3-40cd-b142-8afb03d4593f",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "ophthalmoplegia",
@@ -8075,13 +8075,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 78
       },
       {
-        "sampleId": "2e8f5a0d-e45e-4d20-9d9b-fedf4beb7564",
-        "gender": "male",
+        "Patient": "2e8f5a0d-e45e-4d20-9d9b-fedf4beb7564",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "intellectualDisability",
           "renalTubularAcidosis",
@@ -8094,13 +8094,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 35
       },
       {
-        "sampleId": "c21ad9c0-7b56-4ae2-a630-8a4d5b1041b7",
-        "gender": "male",
+        "Patient": "c21ad9c0-7b56-4ae2-a630-8a4d5b1041b7",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "glaucoma",
@@ -8112,13 +8112,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 40
       },
       {
-        "sampleId": "37432232-9a02-4953-bf29-28723e9e675a",
-        "gender": "female",
+        "Patient": "37432232-9a02-4953-bf29-28723e9e675a",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
@@ -8132,13 +8132,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 53
       },
       {
-        "sampleId": "4e8b0077-e506-4149-90a0-755db64d7b2e",
-        "gender": "male",
+        "Patient": "4e8b0077-e506-4149-90a0-755db64d7b2e",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "ophthalmoplegia",
           "rhabdomyolysis",
@@ -8152,13 +8152,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 27
       },
       {
-        "sampleId": "b232327a-4764-43fd-9929-3483a7ba7678",
-        "gender": "female",
+        "Patient": "b232327a-4764-43fd-9929-3483a7ba7678",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "delayedSocialDevelopment",
           "intellectualDisability",
@@ -8177,13 +8177,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 17
       },
       {
-        "sampleId": "89585b40-b985-41ab-a272-764010c7e5ec",
-        "gender": "male",
+        "Patient": "89585b40-b985-41ab-a272-764010c7e5ec",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -8203,13 +8203,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 59
       },
       {
-        "sampleId": "28c7dcff-676f-45c4-9e9e-6e5f68b4c5c2",
-        "gender": "female",
+        "Patient": "28c7dcff-676f-45c4-9e9e-6e5f68b4c5c2",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "ophthalmoplegia",
           "peripheralNeuropathy",
           "raggedRedMuscleFibers",
@@ -8222,13 +8222,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 25
       },
       {
-        "sampleId": "136baf03-c31a-42c4-adb5-cca4d5498f93",
-        "gender": "female",
+        "Patient": "136baf03-c31a-42c4-adb5-cca4d5498f93",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "delayedSocialDevelopment",
           "intellectualDisability",
@@ -8243,13 +8243,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 25
       },
       {
-        "sampleId": "f4fb0c02-de1c-4558-8f2d-09dd38b9085b",
-        "gender": "male",
+        "Patient": "f4fb0c02-de1c-4558-8f2d-09dd38b9085b",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
           "diabetesMellitus",
@@ -8267,13 +8267,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 15
       },
       {
-        "sampleId": "12aab79e-f469-4d1c-bb98-d0c5dc89c429",
-        "gender": "male",
+        "Patient": "12aab79e-f469-4d1c-bb98-d0c5dc89c429",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "ophthalmoplegia",
@@ -8290,13 +8290,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 26
       },
       {
-        "sampleId": "968dcd39-cee1-441a-95e8-6fc837221100",
-        "gender": "male",
+        "Patient": "968dcd39-cee1-441a-95e8-6fc837221100",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "motorDelay",
           "developmentalRegression",
           "seizures",
@@ -8308,13 +8308,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 43
       },
       {
-        "sampleId": "285db5c4-2c55-4be1-8212-55ca48fe25e8",
-        "gender": "male",
+        "Patient": "285db5c4-2c55-4be1-8212-55ca48fe25e8",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "truncalAtaxia",
           "increasedMuscleFatiguability",
@@ -8329,13 +8329,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 92
       },
       {
-        "sampleId": "dde774ab-84c4-435b-8a90-91c72b813cd1",
-        "gender": "male",
+        "Patient": "dde774ab-84c4-435b-8a90-91c72b813cd1",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "renalTubularAcidosis",
@@ -8349,13 +8349,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 22
       },
       {
-        "sampleId": "ec082518-8e91-41f1-945f-a1990e88eb6b",
-        "gender": "female",
+        "Patient": "ec082518-8e91-41f1-945f-a1990e88eb6b",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "peripheralNeuropathy",
           "seizures",
@@ -8369,13 +8369,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 8
       },
       {
-        "sampleId": "247e3997-8ca1-4b37-a336-9314cde5ebaa",
-        "gender": "male",
+        "Patient": "247e3997-8ca1-4b37-a336-9314cde5ebaa",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "intestinalPseudoObstruction",
@@ -8391,13 +8391,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 33
       },
       {
-        "sampleId": "35eeb498-2535-44c7-806e-6017ed3cfa41",
-        "gender": "male",
+        "Patient": "35eeb498-2535-44c7-806e-6017ed3cfa41",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "increasedMuscleFatiguability",
           "ptosis",
@@ -8411,13 +8411,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 22
       },
       {
-        "sampleId": "60e9f99f-295c-4f0a-b761-64ba89d40db0",
-        "gender": "female",
+        "Patient": "60e9f99f-295c-4f0a-b761-64ba89d40db0",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "hypertrophicCardiomyopathy",
           "ptosis",
@@ -8431,13 +8431,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 91
       },
       {
-        "sampleId": "14a76e7b-f8df-43f1-826e-f322dd875ed9",
-        "gender": "male",
+        "Patient": "14a76e7b-f8df-43f1-826e-f322dd875ed9",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "diabetesMellitus",
@@ -8454,13 +8454,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 18
       },
       {
-        "sampleId": "bbe9def8-473f-4eb5-a13f-4b61ffaea660",
-        "gender": "female",
+        "Patient": "bbe9def8-473f-4eb5-a13f-4b61ffaea660",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "truncalAtaxia",
           "delayedSocialDevelopment",
@@ -8477,13 +8477,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 48
       },
       {
-        "sampleId": "d2cb2a15-a7ac-4ab0-8c46-443b3c78cf54",
-        "gender": "male",
+        "Patient": "d2cb2a15-a7ac-4ab0-8c46-443b3c78cf54",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "motorDelay",
           "migraine",
@@ -8497,13 +8497,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 0
       },
       {
-        "sampleId": "3040a48a-5ef0-42ef-b3ff-41729aba1d86",
-        "gender": "male",
+        "Patient": "3040a48a-5ef0-42ef-b3ff-41729aba1d86",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "diabetesMellitus",
           "intestinalPseudoObstruction",
@@ -8517,13 +8517,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 24
       },
       {
-        "sampleId": "7b436765-4359-4fde-8613-30b65827efc4",
-        "gender": "female",
+        "Patient": "7b436765-4359-4fde-8613-30b65827efc4",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "increasedMuscleFatiguability"
         ],
         "alanineInCerebralSpinalFluid": 37,
@@ -8532,13 +8532,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 39
       },
       {
-        "sampleId": "092a8d42-8acf-47d1-8603-57a21113fe9e",
-        "gender": "female",
+        "Patient": "092a8d42-8acf-47d1-8603-57a21113fe9e",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "truncalAtaxia",
           "sensorineuralHearingImpairment",
@@ -8556,13 +8556,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 69
       },
       {
-        "sampleId": "cdf40576-a27d-4532-832a-1a402dffa91a",
-        "gender": "male",
+        "Patient": "cdf40576-a27d-4532-832a-1a402dffa91a",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "ophthalmoplegia",
           "delayedSpeechAndLanguageDevelopment",
           "corticalVisualImpairment"
@@ -8573,13 +8573,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 4
       },
       {
-        "sampleId": "22687b87-7202-4560-8f4c-fdff39716c8f",
-        "gender": "male",
+        "Patient": "22687b87-7202-4560-8f4c-fdff39716c8f",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intestinalPseudoObstruction",
           "apnea",
           "seizures",
@@ -8592,13 +8592,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 58
       },
       {
-        "sampleId": "bfa167c3-df9e-44c8-bcf0-f5a17698f2c2",
-        "gender": "female",
+        "Patient": "bfa167c3-df9e-44c8-bcf0-f5a17698f2c2",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "sensorineuralHearingImpairment",
           "migraine",
@@ -8613,13 +8613,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 84
       },
       {
-        "sampleId": "16679c9a-a3b2-4ede-bea8-6d2c2206a8eb",
-        "gender": "female",
+        "Patient": "16679c9a-a3b2-4ede-bea8-6d2c2206a8eb",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "delayedSpeechAndLanguageDevelopment",
           "cataract",
@@ -8631,13 +8631,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 74
       },
       {
-        "sampleId": "a897fbb6-e7bc-4615-bf2f-34c4aed8c94b",
-        "gender": "female",
+        "Patient": "a897fbb6-e7bc-4615-bf2f-34c4aed8c94b",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "diabetesMellitus",
           "increasedMuscleFatiguability",
           "motorDelay",
@@ -8651,13 +8651,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 91
       },
       {
-        "sampleId": "3fd4f12e-c0af-45d8-b31b-03ea60899446",
-        "gender": "male",
+        "Patient": "3fd4f12e-c0af-45d8-b31b-03ea60899446",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
           "constipation",
@@ -8673,13 +8673,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 60
       },
       {
-        "sampleId": "b6cb5543-c5cd-4cad-ab3c-9b7f710f59ad",
-        "gender": "male",
+        "Patient": "b6cb5543-c5cd-4cad-ab3c-9b7f710f59ad",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "increasedMuscleFatiguability",
           "intestinalPseudoObstruction",
@@ -8695,13 +8695,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 38
       },
       {
-        "sampleId": "f2349ff3-ca62-4379-894f-b3f4cbaa9a0a",
-        "gender": "male",
+        "Patient": "f2349ff3-ca62-4379-894f-b3f4cbaa9a0a",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "ophthalmoplegia",
           "developmentalRegression",
           "raggedRedMuscleFibers",
@@ -8718,13 +8718,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 67
       },
       {
-        "sampleId": "725a575d-15ac-437b-8229-3316f48c5bd7",
-        "gender": "male",
+        "Patient": "725a575d-15ac-437b-8229-3316f48c5bd7",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "developmentalRegression",
           "apnea"
         ],
@@ -8734,13 +8734,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 61
       },
       {
-        "sampleId": "5de1ca17-048f-4000-ba8b-e9dbe29930ac",
-        "gender": "male",
+        "Patient": "5de1ca17-048f-4000-ba8b-e9dbe29930ac",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "truncalAtaxia",
@@ -8759,13 +8759,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 45
       },
       {
-        "sampleId": "a735a4cb-3322-4d57-9a82-cab2333c8ccf",
-        "gender": "female",
+        "Patient": "a735a4cb-3322-4d57-9a82-cab2333c8ccf",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "sensorineuralHearingImpairment",
           "increasedMuscleFatiguability",
@@ -8778,13 +8778,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 74
       },
       {
-        "sampleId": "c6cb8430-9ffe-4f4e-9090-15e0ce2f7c34",
-        "gender": "female",
+        "Patient": "c6cb8430-9ffe-4f4e-9090-15e0ce2f7c34",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "delayedSocialDevelopment",
           "spasticity",
@@ -8796,13 +8796,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 50
       },
       {
-        "sampleId": "e48fa758-d295-4f75-b952-b0a0934638ef",
-        "gender": "male",
+        "Patient": "e48fa758-d295-4f75-b952-b0a0934638ef",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "constipation",
           "developmentalRegression",
@@ -8816,13 +8816,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 81
       },
       {
-        "sampleId": "8cd64ffd-62c4-40dc-84d2-c8b57b9d5fd4",
-        "gender": "female",
+        "Patient": "8cd64ffd-62c4-40dc-84d2-c8b57b9d5fd4",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
           "constipation",
@@ -8840,13 +8840,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 18
       },
       {
-        "sampleId": "8070cb48-aada-4160-ae24-d9f61c16a6b8",
-        "gender": "male",
+        "Patient": "8070cb48-aada-4160-ae24-d9f61c16a6b8",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "intellectualDisability",
           "motorDelay",
@@ -8858,13 +8858,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 48
       },
       {
-        "sampleId": "706fcfb5-dc3d-40d4-8868-944c0fc3939d",
-        "gender": "female",
+        "Patient": "706fcfb5-dc3d-40d4-8868-944c0fc3939d",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "intellectualDisability",
           "ptosis",
@@ -8879,13 +8879,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 44
       },
       {
-        "sampleId": "61fea525-e6d1-4c69-bae6-f5dcf065d1af",
-        "gender": "female",
+        "Patient": "61fea525-e6d1-4c69-bae6-f5dcf065d1af",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intestinalPseudoObstruction",
           "migraine"
         ],
@@ -8895,13 +8895,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 66
       },
       {
-        "sampleId": "ab8202e5-b4f1-4655-a2d2-c774dfc57a90",
-        "gender": "male",
+        "Patient": "ab8202e5-b4f1-4655-a2d2-c774dfc57a90",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "intellectualDisability",
           "developmentalRegression",
@@ -8918,13 +8918,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 83
       },
       {
-        "sampleId": "44aadf11-4c5c-40e4-b6a4-f2b22ecf10ce",
-        "gender": "male",
+        "Patient": "44aadf11-4c5c-40e4-b6a4-f2b22ecf10ce",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "intellectualDisability",
           "migraine",
@@ -8936,13 +8936,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 16
       },
       {
-        "sampleId": "2651dd06-1da1-40b5-8c66-575d1136b5ab",
-        "gender": "male",
+        "Patient": "2651dd06-1da1-40b5-8c66-575d1136b5ab",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "sensorineuralHearingImpairment",
           "rhabdomyolysis",
@@ -8957,13 +8957,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 64
       },
       {
-        "sampleId": "842b9e69-7a74-4fca-a089-4cd94a8597e5",
-        "gender": "male",
+        "Patient": "842b9e69-7a74-4fca-a089-4cd94a8597e5",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "ptosis",
           "renalTubularAcidosis",
           "apnea",
@@ -8976,13 +8976,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 46
       },
       {
-        "sampleId": "ca742b8e-99ad-4ff5-9d64-3fab3590535f",
-        "gender": "female",
+        "Patient": "ca742b8e-99ad-4ff5-9d64-3fab3590535f",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "delayedSocialDevelopment",
           "motorDelay",
@@ -8996,13 +8996,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 89
       },
       {
-        "sampleId": "dac38914-c8c5-4668-a60a-dea87e30f1de",
-        "gender": "female",
+        "Patient": "dac38914-c8c5-4668-a60a-dea87e30f1de",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
           "intellectualDisability",
@@ -9017,13 +9017,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 9
       },
       {
-        "sampleId": "7a97cdb9-2695-464b-9fa6-8fae4d94ded1",
-        "gender": "male",
+        "Patient": "7a97cdb9-2695-464b-9fa6-8fae4d94ded1",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "increasedMuscleFatiguability",
@@ -9037,13 +9037,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 4
       },
       {
-        "sampleId": "d6d2c25d-8ec3-43a4-9058-708305f4182c",
-        "gender": "female",
+        "Patient": "d6d2c25d-8ec3-43a4-9058-708305f4182c",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "intestinalPseudoObstruction",
           "raggedRedMuscleFibers",
@@ -9057,13 +9057,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 72
       },
       {
-        "sampleId": "d170575b-7d5a-4c07-87ec-55e54d20ecf4",
-        "gender": "female",
+        "Patient": "d170575b-7d5a-4c07-87ec-55e54d20ecf4",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "increasedMuscleFatiguability",
           "muscleWeakness",
           "delayedSpeechAndLanguageDevelopment"
@@ -9074,13 +9074,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 57
       },
       {
-        "sampleId": "0a509a76-d0e1-45ae-9de2-70771d0d5922",
-        "gender": "male",
+        "Patient": "0a509a76-d0e1-45ae-9de2-70771d0d5922",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "muscleWeakness",
           "ophthalmoplegia",
           "ptosis",
@@ -9096,13 +9096,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 31
       },
       {
-        "sampleId": "b6cad6e0-7772-428b-8931-a2468514ceb8",
-        "gender": "male",
+        "Patient": "b6cad6e0-7772-428b-8931-a2468514ceb8",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "increasedMuscleFatiguability",
           "ptosis",
@@ -9118,13 +9118,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 87
       },
       {
-        "sampleId": "22416595-dc23-404a-b3ee-b6584ac72498",
-        "gender": "male",
+        "Patient": "22416595-dc23-404a-b3ee-b6584ac72498",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "intellectualDisability",
@@ -9138,13 +9138,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 72
       },
       {
-        "sampleId": "4210e339-453f-47d9-bcab-2a8322bd33e9",
-        "gender": "female",
+        "Patient": "4210e339-453f-47d9-bcab-2a8322bd33e9",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "dilatedCardiomyopathy",
@@ -9163,13 +9163,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 41
       },
       {
-        "sampleId": "4d632566-88aa-41a0-bdff-d499829a59f5",
-        "gender": "male",
+        "Patient": "4d632566-88aa-41a0-bdff-d499829a59f5",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "motorDelay",
           "peripheralNeuropathy",
@@ -9185,13 +9185,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 24
       },
       {
-        "sampleId": "ebed6400-2c6e-4243-97f6-5291359673f1",
-        "gender": "female",
+        "Patient": "ebed6400-2c6e-4243-97f6-5291359673f1",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "diabetesMellitus",
           "migraine",
@@ -9205,13 +9205,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 17
       },
       {
-        "sampleId": "585c5c4c-50e0-4c1d-9fad-bb42112f6941",
-        "gender": "male",
+        "Patient": "585c5c4c-50e0-4c1d-9fad-bb42112f6941",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "diabetesMellitus",
           "increasedMuscleFatiguability",
@@ -9225,13 +9225,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 77
       },
       {
-        "sampleId": "2b48f531-6609-4bb6-9012-cb9ae56a2b9b",
-        "gender": "female",
+        "Patient": "2b48f531-6609-4bb6-9012-cb9ae56a2b9b",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "hypertrophicCardiomyopathy",
           "sensorineuralHearingImpairment",
@@ -9246,13 +9246,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 79
       },
       {
-        "sampleId": "c0575ab0-a190-4d1f-bbfd-7ea6cd4e4af0",
-        "gender": "female",
+        "Patient": "c0575ab0-a190-4d1f-bbfd-7ea6cd4e4af0",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "increasedMuscleFatiguability",
@@ -9266,13 +9266,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 76
       },
       {
-        "sampleId": "84ab8af9-c2df-4566-9c7d-3ec8ed0427f0",
-        "gender": "male",
+        "Patient": "84ab8af9-c2df-4566-9c7d-3ec8ed0427f0",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "delayedSocialDevelopment",
@@ -9287,13 +9287,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 95
       },
       {
-        "sampleId": "2cb6457a-9f81-4103-93a3-c24a287ecc87",
-        "gender": "female",
+        "Patient": "2cb6457a-9f81-4103-93a3-c24a287ecc87",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "muscleWeakness",
           "ophthalmoplegia",
@@ -9308,13 +9308,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 95
       },
       {
-        "sampleId": "3065b930-2392-43f1-8497-010b68c6baf0",
-        "gender": "female",
+        "Patient": "3065b930-2392-43f1-8497-010b68c6baf0",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
           "constipation",
@@ -9333,13 +9333,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 82
       },
       {
-        "sampleId": "631f3728-6ef7-47bb-936e-92c9114532cd",
-        "gender": "female",
+        "Patient": "631f3728-6ef7-47bb-936e-92c9114532cd",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "rodConeDystrophy"
         ],
@@ -9349,13 +9349,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 66
       },
       {
-        "sampleId": "2ec62150-d30f-4e9e-ab5b-5599453ffed8",
-        "gender": "female",
+        "Patient": "2ec62150-d30f-4e9e-ab5b-5599453ffed8",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "intellectualDisability",
@@ -9371,13 +9371,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 84
       },
       {
-        "sampleId": "a2bc38b4-988c-4630-b761-032ac871bb54",
-        "gender": "female",
+        "Patient": "a2bc38b4-988c-4630-b761-032ac871bb54",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "increasedMuscleFatiguability",
           "intellectualDisability",
@@ -9390,13 +9390,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 65
       },
       {
-        "sampleId": "ec16a525-fa11-4576-8e41-d6384c0028b1",
-        "gender": "male",
+        "Patient": "ec16a525-fa11-4576-8e41-d6384c0028b1",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
@@ -9414,13 +9414,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 94
       },
       {
-        "sampleId": "54d26a2b-a667-416b-b813-b86050aa805d",
-        "gender": "female",
+        "Patient": "54d26a2b-a667-416b-b813-b86050aa805d",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "intestinalPseudoObstruction",
@@ -9434,13 +9434,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 73
       },
       {
-        "sampleId": "824b13a9-59d6-4d46-a236-c871cd9753dd",
-        "gender": "male",
+        "Patient": "824b13a9-59d6-4d46-a236-c871cd9753dd",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
           "ptosis",
@@ -9454,13 +9454,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 36
       },
       {
-        "sampleId": "ffaa6f17-1b01-4717-a76d-efae29e519ba",
-        "gender": "female",
+        "Patient": "ffaa6f17-1b01-4717-a76d-efae29e519ba",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "ptosis",
           "peripheralNeuropathy",
           "delayedSpeechAndLanguageDevelopment",
@@ -9474,13 +9474,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 41
       },
       {
-        "sampleId": "36a33304-9400-4607-b9a3-fc8a57515a0a",
-        "gender": "female",
+        "Patient": "36a33304-9400-4607-b9a3-fc8a57515a0a",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intellectualDisability",
           "ophthalmoplegia",
           "seizures",
@@ -9496,13 +9496,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 43
       },
       {
-        "sampleId": "cf9f1b2f-20cb-491d-9e31-9ec0a814c46a",
-        "gender": "female",
+        "Patient": "cf9f1b2f-20cb-491d-9e31-9ec0a814c46a",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "renalTubularAcidosis",
@@ -9515,13 +9515,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 50
       },
       {
-        "sampleId": "c24cf058-b00e-44bf-a72a-239a8ea07d5e",
-        "gender": "male",
+        "Patient": "c24cf058-b00e-44bf-a72a-239a8ea07d5e",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "delayedSocialDevelopment",
           "increasedMuscleFatiguability",
@@ -9537,13 +9537,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 82
       },
       {
-        "sampleId": "c779e0df-440f-49e0-b63a-b01f1814cf6d",
-        "gender": "female",
+        "Patient": "c779e0df-440f-49e0-b63a-b01f1814cf6d",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "diabetesMellitus",
           "muscleWeakness",
@@ -9557,13 +9557,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 4
       },
       {
-        "sampleId": "c845992d-3222-4e76-af90-ba4371889275",
-        "gender": "female",
+        "Patient": "c845992d-3222-4e76-af90-ba4371889275",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "increasedMuscleFatiguability"
         ],
@@ -9573,13 +9573,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 45
       },
       {
-        "sampleId": "c52e3d70-6e15-4792-a04b-c158126e55b9",
-        "gender": "female",
+        "Patient": "c52e3d70-6e15-4792-a04b-c158126e55b9",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
           "constipation",
@@ -9600,13 +9600,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 48
       },
       {
-        "sampleId": "38a76de0-3531-40c0-86bd-53210e11623a",
-        "gender": "male",
+        "Patient": "38a76de0-3531-40c0-86bd-53210e11623a",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "constipation",
           "seizures",
@@ -9619,13 +9619,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 24
       },
       {
-        "sampleId": "b381ac94-9d95-4dbe-a513-c59e7e399890",
-        "gender": "female",
+        "Patient": "b381ac94-9d95-4dbe-a513-c59e7e399890",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intellectualDisability",
           "motorDelay",
           "muscleWeakness",
@@ -9638,13 +9638,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 53
       },
       {
-        "sampleId": "46e0a388-e236-498b-b6cd-8b385c1e270d",
-        "gender": "female",
+        "Patient": "46e0a388-e236-498b-b6cd-8b385c1e270d",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "intestinalPseudoObstruction",
           "muscleWeakness",
           "ophthalmoplegia",
@@ -9658,13 +9658,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 78
       },
       {
-        "sampleId": "b05bf14f-806a-4dcb-896d-349a2cc3b1cc",
-        "gender": "female",
+        "Patient": "b05bf14f-806a-4dcb-896d-349a2cc3b1cc",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "diabetesMellitus",
           "ophthalmoplegia",
@@ -9678,13 +9678,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 40
       },
       {
-        "sampleId": "0f431873-aba5-4eb4-b702-4029d5bca69f",
-        "gender": "male",
+        "Patient": "0f431873-aba5-4eb4-b702-4029d5bca69f",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "delayedSocialDevelopment",
@@ -9703,13 +9703,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 64
       },
       {
-        "sampleId": "63f3fdd9-5fcd-42e8-b894-180024a4959d",
-        "gender": "male",
+        "Patient": "63f3fdd9-5fcd-42e8-b894-180024a4959d",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "delayedSocialDevelopment",
           "increasedMuscleFatiguability",
@@ -9722,13 +9722,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 83
       },
       {
-        "sampleId": "1493fc1d-c190-422e-a733-9dfa630578ea",
-        "gender": "male",
+        "Patient": "1493fc1d-c190-422e-a733-9dfa630578ea",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "sensorineuralHearingImpairment",
           "delayedSocialDevelopment",
@@ -9743,13 +9743,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 87
       },
       {
-        "sampleId": "2f8f69e2-999f-482e-8c0d-2aef5efce3ae",
-        "gender": "male",
+        "Patient": "2f8f69e2-999f-482e-8c0d-2aef5efce3ae",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "diabetesMellitus",
           "intellectualDisability",
@@ -9767,13 +9767,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 17
       },
       {
-        "sampleId": "5696a92b-4ec7-4f49-9f7a-9ba88b1caf07",
-        "gender": "female",
+        "Patient": "5696a92b-4ec7-4f49-9f7a-9ba88b1caf07",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "dilatedCardiomyopathy",
@@ -9790,13 +9790,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 77
       },
       {
-        "sampleId": "38154c74-b8a3-4997-a72b-a2ebc6dc4990",
-        "gender": "male",
+        "Patient": "38154c74-b8a3-4997-a72b-a2ebc6dc4990",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intestinalPseudoObstruction",
           "motorDelay",
           "ptosis",
@@ -9809,13 +9809,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 76
       },
       {
-        "sampleId": "3a15c999-e76d-4fee-86c8-a7923776b123",
-        "gender": "male",
+        "Patient": "3a15c999-e76d-4fee-86c8-a7923776b123",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "muscleWeakness",
           "ophthalmoplegia",
@@ -9830,13 +9830,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 48
       },
       {
-        "sampleId": "9f537395-bf29-4cfc-b5aa-a3249038b22c",
-        "gender": "male",
+        "Patient": "9f537395-bf29-4cfc-b5aa-a3249038b22c",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "diabetesMellitus",
           "developmentalRegression",
@@ -9849,13 +9849,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 4
       },
       {
-        "sampleId": "16bcded1-de15-4858-b645-ca1a409d5d2c",
-        "gender": "male",
+        "Patient": "16bcded1-de15-4858-b645-ca1a409d5d2c",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
           "increasedMuscleFatiguability",
@@ -9870,13 +9870,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 13
       },
       {
-        "sampleId": "071404a7-0ed6-4724-b85c-8099611c7897",
-        "gender": "female",
+        "Patient": "071404a7-0ed6-4724-b85c-8099611c7897",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
@@ -9892,13 +9892,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 4
       },
       {
-        "sampleId": "f2a2b56d-476d-48be-b636-2c852a77752d",
-        "gender": "male",
+        "Patient": "f2a2b56d-476d-48be-b636-2c852a77752d",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "leftVentricularNoncompactionCardiomyopathy",
           "muscleWeakness",
@@ -9911,13 +9911,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 76
       },
       {
-        "sampleId": "1c492c00-ea73-4e49-a1fa-7c7ce8a993d0",
-        "gender": "male",
+        "Patient": "1c492c00-ea73-4e49-a1fa-7c7ce8a993d0",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "delayedSocialDevelopment",
           "diabetesMellitus",
@@ -9932,13 +9932,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 66
       },
       {
-        "sampleId": "e1ec5d4c-cae5-450d-9e83-67c442645708",
-        "gender": "female",
+        "Patient": "e1ec5d4c-cae5-450d-9e83-67c442645708",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "delayedSocialDevelopment",
           "diabetesMellitus",
@@ -9953,13 +9953,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 15
       },
       {
-        "sampleId": "873eb807-c9cc-4f8a-888f-76e4d411a507",
-        "gender": "male",
+        "Patient": "873eb807-c9cc-4f8a-888f-76e4d411a507",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "intestinalPseudoObstruction",
           "peripheralNeuropathy",
@@ -9973,13 +9973,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 28
       },
       {
-        "sampleId": "11ada608-cfbb-4115-b917-27ca16ebf981",
-        "gender": "male",
+        "Patient": "11ada608-cfbb-4115-b917-27ca16ebf981",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "diabetesMellitus",
           "increasedMuscleFatiguability",
@@ -9995,13 +9995,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 92
       },
       {
-        "sampleId": "fe709e13-733e-49fd-b3dc-aa41d73f605f",
-        "gender": "female",
+        "Patient": "fe709e13-733e-49fd-b3dc-aa41d73f605f",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "ophthalmoplegia",
           "apnea",
@@ -10013,13 +10013,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 62
       },
       {
-        "sampleId": "0ce7bd5b-e35e-4c40-8cfe-0a91a99cc265",
-        "gender": "female",
+        "Patient": "0ce7bd5b-e35e-4c40-8cfe-0a91a99cc265",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "developmentalRegression",
@@ -10031,13 +10031,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 5
       },
       {
-        "sampleId": "2c4c7b96-5577-4bba-9e4a-4ac8ecf4dfbe",
-        "gender": "female",
+        "Patient": "2c4c7b96-5577-4bba-9e4a-4ac8ecf4dfbe",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "sensorineuralHearingImpairment",
           "motorDelay",
@@ -10051,13 +10051,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 25
       },
       {
-        "sampleId": "f9928b82-b456-4059-a92e-15fbda298a23",
-        "gender": "female",
+        "Patient": "f9928b82-b456-4059-a92e-15fbda298a23",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
           "increasedMuscleFatiguability",
@@ -10071,13 +10071,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 59
       },
       {
-        "sampleId": "bf1a517b-b609-4af9-b728-4a3cd7596bd0",
-        "gender": "male",
+        "Patient": "bf1a517b-b609-4af9-b728-4a3cd7596bd0",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "intellectualDisability"
@@ -10088,13 +10088,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 23
       },
       {
-        "sampleId": "984d5f2f-4443-49b6-ab05-5dd24a6813b3",
-        "gender": "male",
+        "Patient": "984d5f2f-4443-49b6-ab05-5dd24a6813b3",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "muscleWeakness",
           "ptosis",
           "rhabdomyolysis",
@@ -10108,13 +10108,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 91
       },
       {
-        "sampleId": "b9c9e473-b6ec-40d2-8c61-b7429159942d",
-        "gender": "female",
+        "Patient": "b9c9e473-b6ec-40d2-8c61-b7429159942d",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "increasedMuscleFatiguability",
@@ -10130,13 +10130,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 72
       },
       {
-        "sampleId": "c27eeee7-ad8d-4708-bec7-777ee07f1e4a",
-        "gender": "female",
+        "Patient": "c27eeee7-ad8d-4708-bec7-777ee07f1e4a",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "increasedMuscleFatiguability",
           "muscleWeakness",
@@ -10150,13 +10150,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 50
       },
       {
-        "sampleId": "810e825d-a765-4799-a8ec-14977466ae6c",
-        "gender": "female",
+        "Patient": "810e825d-a765-4799-a8ec-14977466ae6c",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "intellectualDisability",
           "motorDelay",
@@ -10169,13 +10169,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 34
       },
       {
-        "sampleId": "ab9d6549-35b2-4182-a552-e877809756f1",
-        "gender": "female",
+        "Patient": "ab9d6549-35b2-4182-a552-e877809756f1",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "sensorineuralHearingImpairment",
           "peripheralNeuropathy",
@@ -10189,13 +10189,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 5
       },
       {
-        "sampleId": "6099ee9c-71db-4736-baa4-50d31444af73",
-        "gender": "male",
+        "Patient": "6099ee9c-71db-4736-baa4-50d31444af73",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -10215,13 +10215,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 78
       },
       {
-        "sampleId": "e8a05b1a-c5f3-43c9-b7b6-41b888659c01",
-        "gender": "male",
+        "Patient": "e8a05b1a-c5f3-43c9-b7b6-41b888659c01",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "intestinalPseudoObstruction",
           "intellectualDisability",
           "muscleWeakness",
@@ -10235,13 +10235,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 41
       },
       {
-        "sampleId": "3de28d01-7ee7-496b-9862-88f6822e3ec8",
-        "gender": "male",
+        "Patient": "3de28d01-7ee7-496b-9862-88f6822e3ec8",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "truncalAtaxia",
@@ -10261,13 +10261,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 34
       },
       {
-        "sampleId": "1f568f95-f6c8-48e0-9cbb-4979a96c0fa2",
-        "gender": "male",
+        "Patient": "1f568f95-f6c8-48e0-9cbb-4979a96c0fa2",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -10284,13 +10284,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 56
       },
       {
-        "sampleId": "80a9b2d2-d85d-4e6f-8d30-382681a928e9",
-        "gender": "female",
+        "Patient": "80a9b2d2-d85d-4e6f-8d30-382681a928e9",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "migraine",
           "developmentalRegression",
@@ -10304,13 +10304,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 36
       },
       {
-        "sampleId": "486b248a-b1ff-4231-9ced-adf32b7dc00f",
-        "gender": "male",
+        "Patient": "486b248a-b1ff-4231-9ced-adf32b7dc00f",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
           "constipation",
@@ -10326,13 +10326,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 20
       },
       {
-        "sampleId": "b6e0051d-5f87-4591-a70a-66390c6bce9b",
-        "gender": "male",
+        "Patient": "b6e0051d-5f87-4591-a70a-66390c6bce9b",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "motorDelay",
           "peripheralNeuropathy",
@@ -10349,13 +10349,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 82
       },
       {
-        "sampleId": "4af6b1eb-5523-4e3e-be99-5898e99ac046",
-        "gender": "male",
+        "Patient": "4af6b1eb-5523-4e3e-be99-5898e99ac046",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "constipation",
           "ophthalmoplegia",
@@ -10369,13 +10369,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 62
       },
       {
-        "sampleId": "17981ced-b34e-4502-9c66-c4218e8345e3",
-        "gender": "male",
+        "Patient": "17981ced-b34e-4502-9c66-c4218e8345e3",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "motorDelay",
           "ophthalmoplegia",
           "developmentalRegression"
@@ -10386,13 +10386,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 37
       },
       {
-        "sampleId": "fcd9e957-b522-4a35-b18b-a4e0bc42c4bc",
-        "gender": "male",
+        "Patient": "fcd9e957-b522-4a35-b18b-a4e0bc42c4bc",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "intestinalPseudoObstruction",
@@ -10408,13 +10408,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 92
       },
       {
-        "sampleId": "23939030-84f6-4e90-8de8-da57aa85750a",
-        "gender": "female",
+        "Patient": "23939030-84f6-4e90-8de8-da57aa85750a",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "increasedMuscleFatiguability",
           "developmentalRegression",
@@ -10428,13 +10428,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 71
       },
       {
-        "sampleId": "00e2ba7a-bbc6-4312-b2fd-3056f1abac4f",
-        "gender": "male",
+        "Patient": "00e2ba7a-bbc6-4312-b2fd-3056f1abac4f",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "ophthalmoplegia",
           "migraine",
@@ -10448,13 +10448,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 42
       },
       {
-        "sampleId": "b8d6a62d-9ef1-4c01-96a5-b99e65d59cbf",
-        "gender": "female",
+        "Patient": "b8d6a62d-9ef1-4c01-96a5-b99e65d59cbf",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "motorDelay",
           "ptosis",
@@ -10468,13 +10468,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 25
       },
       {
-        "sampleId": "bae18ce5-8844-4951-8f4b-e347c3774ef9",
-        "gender": "female",
+        "Patient": "bae18ce5-8844-4951-8f4b-e347c3774ef9",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "increasedMuscleFatiguability",
           "intestinalPseudoObstruction",
@@ -10491,13 +10491,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 98
       },
       {
-        "sampleId": "ea15bcf8-984d-4786-81f4-8b5f7c48d1b5",
-        "gender": "male",
+        "Patient": "ea15bcf8-984d-4786-81f4-8b5f7c48d1b5",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intellectualDisability",
           "muscleWeakness",
           "seizures",
@@ -10510,13 +10510,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 34
       },
       {
-        "sampleId": "6cefb82e-d890-47d9-bddb-90cb55952ddf",
-        "gender": "female",
+        "Patient": "6cefb82e-d890-47d9-bddb-90cb55952ddf",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "ptosis",
           "migraine",
@@ -10529,13 +10529,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 54
       },
       {
-        "sampleId": "3adc178e-c615-4e3e-a5e5-f187c658289d",
-        "gender": "female",
+        "Patient": "3adc178e-c615-4e3e-a5e5-f187c658289d",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "constipation",
           "delayedSocialDevelopment",
@@ -10549,13 +10549,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 10
       },
       {
-        "sampleId": "6b171a77-8c3e-45ce-883c-fc17749804cc",
-        "gender": "female",
+        "Patient": "6b171a77-8c3e-45ce-883c-fc17749804cc",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "muscleWeakness",
           "ophthalmoplegia",
@@ -10569,13 +10569,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 82
       },
       {
-        "sampleId": "2e6df063-3374-4d18-9dbc-250d2e473520",
-        "gender": "female",
+        "Patient": "2e6df063-3374-4d18-9dbc-250d2e473520",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "ptosis",
           "migraine",
           "delayedSpeechAndLanguageDevelopment",
@@ -10588,13 +10588,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 38
       },
       {
-        "sampleId": "9b6b1e18-9797-4bff-abff-8dcea5d8749e",
-        "gender": "male",
+        "Patient": "9b6b1e18-9797-4bff-abff-8dcea5d8749e",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "diabetesMellitus",
           "motorDelay",
           "raggedRedMuscleFibers",
@@ -10606,13 +10606,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 37
       },
       {
-        "sampleId": "4c4adbab-796b-4395-87b0-1e8155ce1fbe",
-        "gender": "female",
+        "Patient": "4c4adbab-796b-4395-87b0-1e8155ce1fbe",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "developmentalRegression",
           "renalTubularAcidosis",
           "apnea",
@@ -10624,13 +10624,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 81
       },
       {
-        "sampleId": "cdaf1b60-fc37-4fc7-85e3-1bc34effacaa",
-        "gender": "female",
+        "Patient": "cdaf1b60-fc37-4fc7-85e3-1bc34effacaa",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "diabetesMellitus",
           "increasedMuscleFatiguability",
@@ -10646,13 +10646,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 47
       },
       {
-        "sampleId": "09c7b65a-36ce-475c-8a1b-f1605d4404f3",
-        "gender": "male",
+        "Patient": "09c7b65a-36ce-475c-8a1b-f1605d4404f3",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "ptosis",
           "migraine"
@@ -10663,13 +10663,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 90
       },
       {
-        "sampleId": "7d54b345-692b-4587-bce2-06d1d09a7445",
-        "gender": "male",
+        "Patient": "7d54b345-692b-4587-bce2-06d1d09a7445",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "delayedSocialDevelopment",
@@ -10689,13 +10689,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 25
       },
       {
-        "sampleId": "dc5452ed-f280-4085-abc7-210a0e456675",
-        "gender": "male",
+        "Patient": "dc5452ed-f280-4085-abc7-210a0e456675",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "diabetesMellitus",
           "motorDelay",
@@ -10712,13 +10712,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 76
       },
       {
-        "sampleId": "09f9a32d-444d-4aec-bc06-4115548b5bc7",
-        "gender": "female",
+        "Patient": "09f9a32d-444d-4aec-bc06-4115548b5bc7",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "dilatedCardiomyopathy",
           "diabetesMellitus",
@@ -10735,13 +10735,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 81
       },
       {
-        "sampleId": "310bc905-1369-4419-82c6-e92be6eab89d",
-        "gender": "female",
+        "Patient": "310bc905-1369-4419-82c6-e92be6eab89d",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -10763,13 +10763,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 43
       },
       {
-        "sampleId": "8baf14de-3386-4b5d-8a2f-292eeeae56ec",
-        "gender": "female",
+        "Patient": "8baf14de-3386-4b5d-8a2f-292eeeae56ec",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "migraine",
           "rhabdomyolysis",
@@ -10782,13 +10782,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 10
       },
       {
-        "sampleId": "def066b2-2903-471b-b0cc-0227cfeeadde",
-        "gender": "male",
+        "Patient": "def066b2-2903-471b-b0cc-0227cfeeadde",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "constipation",
           "intellectualDisability",
@@ -10802,13 +10802,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 61
       },
       {
-        "sampleId": "96097e3b-7a30-4fee-ac7f-0eb2a7fc3499",
-        "gender": "female",
+        "Patient": "96097e3b-7a30-4fee-ac7f-0eb2a7fc3499",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "dilatedCardiomyopathy",
@@ -10827,13 +10827,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 71
       },
       {
-        "sampleId": "94a13eec-ea29-4445-b0a8-2f6125bdd636",
-        "gender": "female",
+        "Patient": "94a13eec-ea29-4445-b0a8-2f6125bdd636",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -10850,13 +10850,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 19
       },
       {
-        "sampleId": "0a844c97-640d-4ea4-96f3-7cfb6a5095d9",
-        "gender": "male",
+        "Patient": "0a844c97-640d-4ea4-96f3-7cfb6a5095d9",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "ophthalmoplegia",
           "seizures",
@@ -10869,13 +10869,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 88
       },
       {
-        "sampleId": "e58cf707-837b-4dab-b7c6-487f40cfe666",
-        "gender": "female",
+        "Patient": "e58cf707-837b-4dab-b7c6-487f40cfe666",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
           "renalTubularAcidosis",
@@ -10891,13 +10891,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 57
       },
       {
-        "sampleId": "0eff4ad0-f16a-4c2c-aca3-92a7dfb3f776",
-        "gender": "female",
+        "Patient": "0eff4ad0-f16a-4c2c-aca3-92a7dfb3f776",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "increasedMuscleFatiguability",
           "intellectualDisability",
@@ -10911,13 +10911,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 5
       },
       {
-        "sampleId": "a6a7ae87-a50c-4ab0-80c6-2b91182a6fde",
-        "gender": "male",
+        "Patient": "a6a7ae87-a50c-4ab0-80c6-2b91182a6fde",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "hypertrophicCardiomyopathy",
@@ -10938,13 +10938,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 53
       },
       {
-        "sampleId": "b85010ac-a009-4dfb-a5c2-0bb67fff5ac1",
-        "gender": "female",
+        "Patient": "b85010ac-a009-4dfb-a5c2-0bb67fff5ac1",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intellectualDisability",
           "muscleWeakness",
           "ptosis",
@@ -10959,13 +10959,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 97
       },
       {
-        "sampleId": "5faaa365-b621-47dc-be41-82bebcc83b9a",
-        "gender": "male",
+        "Patient": "5faaa365-b621-47dc-be41-82bebcc83b9a",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "constipation",
@@ -10986,13 +10986,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 23
       },
       {
-        "sampleId": "fdbe002f-ec2e-4006-8c6b-21dc450ca255",
-        "gender": "male",
+        "Patient": "fdbe002f-ec2e-4006-8c6b-21dc450ca255",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "increasedMuscleFatiguability",
           "ophthalmoplegia",
           "migraine",
@@ -11006,13 +11006,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 32
       },
       {
-        "sampleId": "d8a3cf13-56aa-4a99-9a40-e635787c9184",
-        "gender": "female",
+        "Patient": "d8a3cf13-56aa-4a99-9a40-e635787c9184",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "intestinalPseudoObstruction",
           "muscleWeakness",
@@ -11025,13 +11025,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 55
       },
       {
-        "sampleId": "4d6bc52b-a504-4dd9-80a3-456c97966dc1",
-        "gender": "male",
+        "Patient": "4d6bc52b-a504-4dd9-80a3-456c97966dc1",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "ophthalmoplegia",
           "developmentalRegression",
@@ -11045,26 +11045,26 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 10
       },
       {
-        "sampleId": "6d748f3f-2ddb-4c2a-8aeb-45b972cf1e50",
-        "gender": "male",
+        "Patient": "6d748f3f-2ddb-4c2a-8aeb-45b972cf1e50",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [],
+        "Condition": [],
         "alanineInCerebralSpinalFluid": 59,
         "lactateInCerebralSpinalFluid": 85,
         "alanineInSerumOrPlasma": 47,
         "lactateInVenousBlood": 9
       },
       {
-        "sampleId": "c6629d90-2ab1-4d80-a9bf-ce4d875656b5",
-        "gender": "male",
+        "Patient": "c6629d90-2ab1-4d80-a9bf-ce4d875656b5",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "increasedMuscleFatiguability",
           "ophthalmoplegia",
@@ -11078,13 +11078,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 85
       },
       {
-        "sampleId": "05b1f001-0a98-46db-b4fe-7f9915308309",
-        "gender": "male",
+        "Patient": "05b1f001-0a98-46db-b4fe-7f9915308309",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "increasedMuscleFatiguability",
           "intestinalPseudoObstruction",
           "apnea",
@@ -11098,13 +11098,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 74
       },
       {
-        "sampleId": "1d28c579-16ff-4f11-9400-8abe42861971",
-        "gender": "male",
+        "Patient": "1d28c579-16ff-4f11-9400-8abe42861971",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "constipation",
           "increasedMuscleFatiguability",
@@ -11119,13 +11119,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 66
       },
       {
-        "sampleId": "7cb6a654-2a58-4cc7-9620-45ccaa15d1bd",
-        "gender": "female",
+        "Patient": "7cb6a654-2a58-4cc7-9620-45ccaa15d1bd",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "delayedSocialDevelopment",
           "intellectualDisability",
@@ -11139,13 +11139,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 12
       },
       {
-        "sampleId": "1266867e-8b38-4ca2-92b0-64a113372879",
-        "gender": "male",
+        "Patient": "1266867e-8b38-4ca2-92b0-64a113372879",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "truncalAtaxia",
           "delayedSocialDevelopment",
@@ -11157,13 +11157,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 70
       },
       {
-        "sampleId": "58edc299-0db1-4f47-bdb2-192a19e2dd27",
-        "gender": "male",
+        "Patient": "58edc299-0db1-4f47-bdb2-192a19e2dd27",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "intellectualDisability",
           "seizures",
@@ -11175,13 +11175,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 84
       },
       {
-        "sampleId": "12d2baba-c6cf-4596-92a0-8a8ea9945b0d",
-        "gender": "female",
+        "Patient": "12d2baba-c6cf-4596-92a0-8a8ea9945b0d",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "leftVentricularNoncompactionCardiomyopathy",
           "diabetesMellitus",
@@ -11195,13 +11195,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 74
       },
       {
-        "sampleId": "ee4df912-97f1-4795-b7c1-54a989f55995",
-        "gender": "male",
+        "Patient": "ee4df912-97f1-4795-b7c1-54a989f55995",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "motorDelay",
           "peripheralNeuropathy",
           "muscularHypotonia",
@@ -11214,13 +11214,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 8
       },
       {
-        "sampleId": "084aaeed-c9ad-4712-8a49-34b6f491c461",
-        "gender": "female",
+        "Patient": "084aaeed-c9ad-4712-8a49-34b6f491c461",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "diabetesMellitus",
           "motorDelay",
@@ -11238,13 +11238,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 35
       },
       {
-        "sampleId": "6543c2de-c584-4d6b-a5f8-f03737b79b1f",
-        "gender": "male",
+        "Patient": "6543c2de-c584-4d6b-a5f8-f03737b79b1f",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "intestinalPseudoObstruction",
           "raggedRedMuscleFibers",
@@ -11256,13 +11256,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 71
       },
       {
-        "sampleId": "4952e956-ec1b-46c1-824f-a85d9ef1814c",
-        "gender": "female",
+        "Patient": "4952e956-ec1b-46c1-824f-a85d9ef1814c",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -11277,13 +11277,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 72
       },
       {
-        "sampleId": "7e1a4b79-641d-4fca-8fa1-394bf39dfee4",
-        "gender": "female",
+        "Patient": "7e1a4b79-641d-4fca-8fa1-394bf39dfee4",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "truncalAtaxia",
           "sensorineuralHearingImpairment",
@@ -11300,13 +11300,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 68
       },
       {
-        "sampleId": "54edd9a8-aa30-4c4d-b066-2b0723ccb5ab",
-        "gender": "male",
+        "Patient": "54edd9a8-aa30-4c4d-b066-2b0723ccb5ab",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "delayedSocialDevelopment",
           "increasedMuscleFatiguability",
@@ -11327,13 +11327,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 13
       },
       {
-        "sampleId": "60c3ac0d-c9aa-4819-b70f-bd1d5c4d695d",
-        "gender": "female",
+        "Patient": "60c3ac0d-c9aa-4819-b70f-bd1d5c4d695d",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "ptosis",
           "muscularHypotonia",
@@ -11347,13 +11347,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 28
       },
       {
-        "sampleId": "08c3b5c7-7af4-440d-a1b1-df2f1fb1b8f5",
-        "gender": "female",
+        "Patient": "08c3b5c7-7af4-440d-a1b1-df2f1fb1b8f5",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "migraine",
           "peripheralNeuropathy",
@@ -11366,13 +11366,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 24
       },
       {
-        "sampleId": "2f8f0890-0824-4722-8d2c-88561bf969c6",
-        "gender": "female",
+        "Patient": "2f8f0890-0824-4722-8d2c-88561bf969c6",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "intellectualDisability",
           "ptosis",
@@ -11386,13 +11386,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 54
       },
       {
-        "sampleId": "2c527571-37a2-4d1a-9226-848eb0bc5a1a",
-        "gender": "female",
+        "Patient": "2c527571-37a2-4d1a-9226-848eb0bc5a1a",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "increasedMuscleFatiguability",
           "glaucoma"
@@ -11403,13 +11403,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 73
       },
       {
-        "sampleId": "503ac07b-0f44-4821-a8a5-8a6dc39c2946",
-        "gender": "female",
+        "Patient": "503ac07b-0f44-4821-a8a5-8a6dc39c2946",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
@@ -11423,13 +11423,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 44
       },
       {
-        "sampleId": "d8754663-ff5c-4516-9fce-6d547543cf77",
-        "gender": "male",
+        "Patient": "d8754663-ff5c-4516-9fce-6d547543cf77",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "motorDelay",
           "migraine",
@@ -11442,13 +11442,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 81
       },
       {
-        "sampleId": "78885c45-c26c-4d33-95fe-3108cf6e3df7",
-        "gender": "female",
+        "Patient": "78885c45-c26c-4d33-95fe-3108cf6e3df7",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "increasedMuscleFatiguability",
           "peripheralNeuropathy"
@@ -11459,13 +11459,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 90
       },
       {
-        "sampleId": "76a4eb31-b402-4251-85f2-773288b3e29c",
-        "gender": "female",
+        "Patient": "76a4eb31-b402-4251-85f2-773288b3e29c",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "constipation",
           "sensorineuralHearingImpairment",
@@ -11478,13 +11478,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 72
       },
       {
-        "sampleId": "baf2f8fa-7558-49c5-8eb9-91a1a19944a0",
-        "gender": "female",
+        "Patient": "baf2f8fa-7558-49c5-8eb9-91a1a19944a0",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "migraine",
           "renalTubularAcidosis",
@@ -11497,13 +11497,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 97
       },
       {
-        "sampleId": "3bd5bdfb-2e22-4659-961c-0e10349d0387",
-        "gender": "male",
+        "Patient": "3bd5bdfb-2e22-4659-961c-0e10349d0387",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
           "ptosis",
@@ -11516,13 +11516,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 78
       },
       {
-        "sampleId": "b9f0aa07-e74b-41f8-9251-c2da210f9842",
-        "gender": "female",
+        "Patient": "b9f0aa07-e74b-41f8-9251-c2da210f9842",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "constipation",
           "renalTubularAcidosis",
@@ -11538,13 +11538,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 67
       },
       {
-        "sampleId": "b01ee8b0-6d27-4c12-b41b-966919ca26a4",
-        "gender": "female",
+        "Patient": "b01ee8b0-6d27-4c12-b41b-966919ca26a4",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
           "nystagmus"
@@ -11555,13 +11555,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 51
       },
       {
-        "sampleId": "15114c81-41d6-4b9e-91c2-8fe78840508c",
-        "gender": "female",
+        "Patient": "15114c81-41d6-4b9e-91c2-8fe78840508c",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -11576,13 +11576,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 61
       },
       {
-        "sampleId": "9d34de20-d4b1-4417-8c50-941b699614bf",
-        "gender": "male",
+        "Patient": "9d34de20-d4b1-4417-8c50-941b699614bf",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "constipation",
           "increasedMuscleFatiguability",
@@ -11596,13 +11596,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 68
       },
       {
-        "sampleId": "f0d93458-c20d-4696-abbc-0c0bd4416e3d",
-        "gender": "female",
+        "Patient": "f0d93458-c20d-4696-abbc-0c0bd4416e3d",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "sensorineuralHearingImpairment",
@@ -11618,13 +11618,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 22
       },
       {
-        "sampleId": "6b526a05-940c-4f7e-8ea4-02951e2914e3",
-        "gender": "male",
+        "Patient": "6b526a05-940c-4f7e-8ea4-02951e2914e3",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -11642,13 +11642,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 32
       },
       {
-        "sampleId": "b75c01cd-def6-4076-bd76-5d3396d0059a",
-        "gender": "female",
+        "Patient": "b75c01cd-def6-4076-bd76-5d3396d0059a",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "intestinalPseudoObstruction",
@@ -11664,13 +11664,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 67
       },
       {
-        "sampleId": "ba4dc846-4973-4860-84c2-77df9851789b",
-        "gender": "male",
+        "Patient": "ba4dc846-4973-4860-84c2-77df9851789b",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "delayedSocialDevelopment",
           "motorDelay",
@@ -11686,13 +11686,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 24
       },
       {
-        "sampleId": "e63799e9-606a-4a7f-9412-847df13d6185",
-        "gender": "female",
+        "Patient": "e63799e9-606a-4a7f-9412-847df13d6185",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "hypertrophicCardiomyopathy",
           "rhabdomyolysis",
@@ -11704,13 +11704,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 92
       },
       {
-        "sampleId": "76e34500-7a1a-4a87-85cd-d0b1803cd0a1",
-        "gender": "male",
+        "Patient": "76e34500-7a1a-4a87-85cd-d0b1803cd0a1",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "peripheralNeuropathy",
           "nystagmus"
         ],
@@ -11720,13 +11720,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 18
       },
       {
-        "sampleId": "94961d7a-d00d-419f-a561-940ff5e58105",
-        "gender": "male",
+        "Patient": "94961d7a-d00d-419f-a561-940ff5e58105",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "constipation",
           "sensorineuralHearingImpairment",
@@ -11741,13 +11741,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 98
       },
       {
-        "sampleId": "92832fa7-fbe2-4297-8cc5-f7cff0d43f40",
-        "gender": "female",
+        "Patient": "92832fa7-fbe2-4297-8cc5-f7cff0d43f40",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "delayedSocialDevelopment",
           "apnea"
@@ -11758,13 +11758,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 31
       },
       {
-        "sampleId": "fdf53f70-fae8-4d16-bde5-900f1c3aec64",
-        "gender": "male",
+        "Patient": "fdf53f70-fae8-4d16-bde5-900f1c3aec64",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "increasedMuscleFatiguability",
           "ophthalmoplegia",
@@ -11776,13 +11776,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 1
       },
       {
-        "sampleId": "faa82765-761b-4646-a4ef-0a7032d15659",
-        "gender": "female",
+        "Patient": "faa82765-761b-4646-a4ef-0a7032d15659",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "diabetesMellitus",
           "intestinalPseudoObstruction",
@@ -11795,13 +11795,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 41
       },
       {
-        "sampleId": "044dfc5e-62db-4f9b-b54f-b6ddad8aeae8",
-        "gender": "female",
+        "Patient": "044dfc5e-62db-4f9b-b54f-b6ddad8aeae8",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intestinalPseudoObstruction",
           "intellectualDisability",
           "apnea",
@@ -11815,13 +11815,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 99
       },
       {
-        "sampleId": "f92680cc-3083-43a7-83ff-01171f30517f",
-        "gender": "male",
+        "Patient": "f92680cc-3083-43a7-83ff-01171f30517f",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "sensorineuralHearingImpairment",
           "intellectualDisability",
@@ -11839,13 +11839,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 68
       },
       {
-        "sampleId": "1ea80a5e-47ad-47b4-aade-331036b88c0e",
-        "gender": "male",
+        "Patient": "1ea80a5e-47ad-47b4-aade-331036b88c0e",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "constipation",
           "sensorineuralHearingImpairment",
@@ -11859,13 +11859,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 27
       },
       {
-        "sampleId": "fd89b49c-06a6-4e81-ad6b-730c2ea1adfb",
-        "gender": "female",
+        "Patient": "fd89b49c-06a6-4e81-ad6b-730c2ea1adfb",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "muscleWeakness",
@@ -11882,13 +11882,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 11
       },
       {
-        "sampleId": "f8ae67a6-73d8-4120-8ebc-ff08c91d00a6",
-        "gender": "male",
+        "Patient": "f8ae67a6-73d8-4120-8ebc-ff08c91d00a6",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "diabetesMellitus",
           "developmentalRegression",
@@ -11901,13 +11901,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 94
       },
       {
-        "sampleId": "481896d4-b36c-42fd-a61e-8a471e6b3028",
-        "gender": "male",
+        "Patient": "481896d4-b36c-42fd-a61e-8a471e6b3028",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "constipation",
           "intellectualDisability",
@@ -11923,13 +11923,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 34
       },
       {
-        "sampleId": "92b8b870-b0ec-4bf0-b62a-d2333cc153d1",
-        "gender": "female",
+        "Patient": "92b8b870-b0ec-4bf0-b62a-d2333cc153d1",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "apnea",
           "strokeLikeEpisode",
           "muscularHypotonia",
@@ -11941,13 +11941,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 64
       },
       {
-        "sampleId": "e1127e15-8a18-4945-8b3c-3ae6df7b9ad2",
-        "gender": "female",
+        "Patient": "e1127e15-8a18-4945-8b3c-3ae6df7b9ad2",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "intestinalPseudoObstruction",
           "intellectualDisability",
           "ophthalmoplegia",
@@ -11960,13 +11960,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 64
       },
       {
-        "sampleId": "84cdf97d-3d3f-4ca2-a326-17a7639b5d4c",
-        "gender": "female",
+        "Patient": "84cdf97d-3d3f-4ca2-a326-17a7639b5d4c",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "raggedRedMuscleFibers",
           "spasticity",
@@ -11979,13 +11979,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 19
       },
       {
-        "sampleId": "0776d67a-3ecb-4259-afd2-f2ef8ef3ff3c",
-        "gender": "male",
+        "Patient": "0776d67a-3ecb-4259-afd2-f2ef8ef3ff3c",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "intellectualDisability",
           "motorDelay",
@@ -12001,13 +12001,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 44
       },
       {
-        "sampleId": "f115fda1-2f35-46bb-abbd-7512b86cf5eb",
-        "gender": "female",
+        "Patient": "f115fda1-2f35-46bb-abbd-7512b86cf5eb",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "apnea",
           "rodConeDystrophy"
@@ -12018,13 +12018,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 1
       },
       {
-        "sampleId": "ca836d34-e4b3-420d-afa9-26927e0ef9a7",
-        "gender": "male",
+        "Patient": "ca836d34-e4b3-420d-afa9-26927e0ef9a7",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "sensorineuralHearingImpairment",
           "diabetesMellitus",
@@ -12041,13 +12041,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 38
       },
       {
-        "sampleId": "1fb9b2bf-de28-4e52-b9d1-e297435c3647",
-        "gender": "female",
+        "Patient": "1fb9b2bf-de28-4e52-b9d1-e297435c3647",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
@@ -12065,13 +12065,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 82
       },
       {
-        "sampleId": "a38a8c6a-1472-4aec-9f1f-d148dd74ab10",
-        "gender": "male",
+        "Patient": "a38a8c6a-1472-4aec-9f1f-d148dd74ab10",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "diabetesMellitus",
@@ -12091,13 +12091,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 40
       },
       {
-        "sampleId": "dbcdf7b1-9476-4d7a-8ecc-f9bb658ff844",
-        "gender": "female",
+        "Patient": "dbcdf7b1-9476-4d7a-8ecc-f9bb658ff844",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "diabetesMellitus",
           "increasedMuscleFatiguability",
           "ophthalmoplegia",
@@ -12112,13 +12112,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 35
       },
       {
-        "sampleId": "e58beeb3-0cef-4f48-8c5d-6413c336a8af",
-        "gender": "male",
+        "Patient": "e58beeb3-0cef-4f48-8c5d-6413c336a8af",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "constipation",
           "sensorineuralHearingImpairment",
@@ -12135,13 +12135,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 9
       },
       {
-        "sampleId": "e0e97a21-3a98-4c8f-ab8b-aa02032a1e23",
-        "gender": "male",
+        "Patient": "e0e97a21-3a98-4c8f-ab8b-aa02032a1e23",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "intestinalPseudoObstruction",
           "migraine",
@@ -12157,13 +12157,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 35
       },
       {
-        "sampleId": "5faf76a4-fbee-4e5f-a89e-c2dc467588a3",
-        "gender": "male",
+        "Patient": "5faf76a4-fbee-4e5f-a89e-c2dc467588a3",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "leftVentricularNoncompactionCardiomyopathy",
           "increasedMuscleFatiguability",
@@ -12179,13 +12179,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 30
       },
       {
-        "sampleId": "858af329-0790-4026-aeb5-45cbe17dde0e",
-        "gender": "male",
+        "Patient": "858af329-0790-4026-aeb5-45cbe17dde0e",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "diabetesMellitus",
           "intestinalPseudoObstruction",
@@ -12199,13 +12199,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 41
       },
       {
-        "sampleId": "2657e591-4772-4710-84fd-240110841c7d",
-        "gender": "male",
+        "Patient": "2657e591-4772-4710-84fd-240110841c7d",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "constipation",
           "muscleWeakness",
@@ -12221,13 +12221,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 68
       },
       {
-        "sampleId": "28385e37-5ae7-47b1-afea-25b911f90366",
-        "gender": "male",
+        "Patient": "28385e37-5ae7-47b1-afea-25b911f90366",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "developmentalRegression",
           "raggedRedMuscleFibers",
           "opticAtrophy"
@@ -12238,13 +12238,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 11
       },
       {
-        "sampleId": "63778f86-c9fc-4951-98ae-48f7375091e0",
-        "gender": "female",
+        "Patient": "63778f86-c9fc-4951-98ae-48f7375091e0",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "motorDelay",
           "seizures",
           "corticalVisualImpairment"
@@ -12255,13 +12255,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 89
       },
       {
-        "sampleId": "99f791b8-b8dc-4745-a079-f65064499da5",
-        "gender": "male",
+        "Patient": "99f791b8-b8dc-4745-a079-f65064499da5",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "muscleWeakness",
           "developmentalRegression",
@@ -12274,13 +12274,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 89
       },
       {
-        "sampleId": "80e51c29-acd3-4823-9fd7-31b70659ef8b",
-        "gender": "female",
+        "Patient": "80e51c29-acd3-4823-9fd7-31b70659ef8b",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "delayedSocialDevelopment",
           "diabetesMellitus",
@@ -12294,13 +12294,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 83
       },
       {
-        "sampleId": "52b79dbc-ecb7-4581-9376-decfb7efe1b7",
-        "gender": "female",
+        "Patient": "52b79dbc-ecb7-4581-9376-decfb7efe1b7",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "increasedMuscleFatiguability",
           "peripheralNeuropathy"
@@ -12311,13 +12311,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 86
       },
       {
-        "sampleId": "e97cc6e4-631e-4de8-94cf-55a6dc3337de",
-        "gender": "female",
+        "Patient": "e97cc6e4-631e-4de8-94cf-55a6dc3337de",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "increasedMuscleFatiguability",
@@ -12333,13 +12333,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 39
       },
       {
-        "sampleId": "4f6dfa43-0f75-4209-9021-16b76006b5af",
-        "gender": "female",
+        "Patient": "4f6dfa43-0f75-4209-9021-16b76006b5af",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -12356,13 +12356,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 35
       },
       {
-        "sampleId": "8c8285ec-3de2-4ef4-877d-10ac5e976b5e",
-        "gender": "female",
+        "Patient": "8c8285ec-3de2-4ef4-877d-10ac5e976b5e",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "constipation",
           "sensorineuralHearingImpairment",
@@ -12379,13 +12379,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 32
       },
       {
-        "sampleId": "a8215acd-6e04-42b5-837d-514bc430cb8c",
-        "gender": "male",
+        "Patient": "a8215acd-6e04-42b5-837d-514bc430cb8c",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "motorDelay",
           "apnea",
@@ -12397,13 +12397,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 71
       },
       {
-        "sampleId": "3d309f9f-1a5e-40e7-b5f3-a94fb88e0948",
-        "gender": "female",
+        "Patient": "3d309f9f-1a5e-40e7-b5f3-a94fb88e0948",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "intestinalPseudoObstruction",
           "intellectualDisability",
@@ -12420,13 +12420,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 16
       },
       {
-        "sampleId": "01461561-f274-4d67-897d-0be411978d16",
-        "gender": "male",
+        "Patient": "01461561-f274-4d67-897d-0be411978d16",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "leftVentricularNoncompactionCardiomyopathy",
           "increasedMuscleFatiguability",
@@ -12443,13 +12443,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 4
       },
       {
-        "sampleId": "ccfba9f4-b0b0-4a3a-ad02-be324256c4eb",
-        "gender": "male",
+        "Patient": "ccfba9f4-b0b0-4a3a-ad02-be324256c4eb",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "sensorineuralHearingImpairment",
           "delayedSocialDevelopment",
@@ -12463,13 +12463,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 88
       },
       {
-        "sampleId": "47bba40f-16a8-49a9-b720-440993cbaffd",
-        "gender": "male",
+        "Patient": "47bba40f-16a8-49a9-b720-440993cbaffd",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "increasedMuscleFatiguability",
           "intestinalPseudoObstruction",
           "raggedRedMuscleFibers",
@@ -12483,13 +12483,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 8
       },
       {
-        "sampleId": "300cae1a-1a8f-45c6-8a31-f4b5fb958008",
-        "gender": "female",
+        "Patient": "300cae1a-1a8f-45c6-8a31-f4b5fb958008",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "sensorineuralHearingImpairment",
           "motorDelay",
@@ -12505,13 +12505,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 84
       },
       {
-        "sampleId": "7421003b-fdea-4e76-b905-cbf13d53c941",
-        "gender": "female",
+        "Patient": "7421003b-fdea-4e76-b905-cbf13d53c941",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "intellectualDisability",
           "muscleWeakness",
@@ -12525,13 +12525,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 39
       },
       {
-        "sampleId": "56c5a0a1-02a9-4daa-9fc1-202d5628b2b7",
-        "gender": "male",
+        "Patient": "56c5a0a1-02a9-4daa-9fc1-202d5628b2b7",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "constipation",
           "ptosis",
@@ -12545,13 +12545,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 1
       },
       {
-        "sampleId": "045b8f54-008f-4bf2-b1f3-f19e2bb97a30",
-        "gender": "female",
+        "Patient": "045b8f54-008f-4bf2-b1f3-f19e2bb97a30",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "diabetesMellitus",
           "intestinalPseudoObstruction",
@@ -12567,13 +12567,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 8
       },
       {
-        "sampleId": "7a4b5e37-e5d0-4df1-be5b-a237632919be",
-        "gender": "male",
+        "Patient": "7a4b5e37-e5d0-4df1-be5b-a237632919be",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "increasedMuscleFatiguability",
@@ -12589,13 +12589,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 12
       },
       {
-        "sampleId": "eb952f76-eeb1-4376-bb89-23e4a0743484",
-        "gender": "male",
+        "Patient": "eb952f76-eeb1-4376-bb89-23e4a0743484",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "ophthalmoplegia",
           "spasticity"
@@ -12606,13 +12606,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 81
       },
       {
-        "sampleId": "bbd3edb0-34e3-40bd-b36c-8478cb74dba3",
-        "gender": "male",
+        "Patient": "bbd3edb0-34e3-40bd-b36c-8478cb74dba3",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "motorDelay",
           "muscleWeakness",
@@ -12628,13 +12628,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 36
       },
       {
-        "sampleId": "80c93a26-dcae-4814-9d59-51ebf15a4f59",
-        "gender": "female",
+        "Patient": "80c93a26-dcae-4814-9d59-51ebf15a4f59",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "delayedSocialDevelopment",
           "increasedMuscleFatiguability",
@@ -12655,13 +12655,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 86
       },
       {
-        "sampleId": "bd75e1ca-5e02-4cfa-a6e4-95d1884533c3",
-        "gender": "female",
+        "Patient": "bd75e1ca-5e02-4cfa-a6e4-95d1884533c3",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "constipation",
           "sensorineuralHearingImpairment",
@@ -12680,13 +12680,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 39
       },
       {
-        "sampleId": "50e6d5ff-c3e7-44ab-bd03-7a7b0cf28192",
-        "gender": "female",
+        "Patient": "50e6d5ff-c3e7-44ab-bd03-7a7b0cf28192",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
           "constipation",
@@ -12702,13 +12702,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 23
       },
       {
-        "sampleId": "7ed53531-d64a-4455-a90e-f35a94eaba68",
-        "gender": "male",
+        "Patient": "7ed53531-d64a-4455-a90e-f35a94eaba68",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "nystagmus"
         ],
@@ -12718,13 +12718,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 36
       },
       {
-        "sampleId": "14e8a0ca-7d02-49ef-8440-074a4bb06c43",
-        "gender": "male",
+        "Patient": "14e8a0ca-7d02-49ef-8440-074a4bb06c43",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "cataract"
         ],
         "alanineInCerebralSpinalFluid": 49,
@@ -12733,13 +12733,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 19
       },
       {
-        "sampleId": "afece081-2b77-4611-bace-b9241391e0e9",
-        "gender": "male",
+        "Patient": "afece081-2b77-4611-bace-b9241391e0e9",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "intellectualDisability",
           "developmentalRegression",
@@ -12753,13 +12753,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 22
       },
       {
-        "sampleId": "b31271f3-1eac-4ad3-ac84-8a8a6cfd09be",
-        "gender": "male",
+        "Patient": "b31271f3-1eac-4ad3-ac84-8a8a6cfd09be",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "increasedMuscleFatiguability",
@@ -12775,13 +12775,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 12
       },
       {
-        "sampleId": "620c1886-a7fd-431b-b339-648cfe789bd7",
-        "gender": "male",
+        "Patient": "620c1886-a7fd-431b-b339-648cfe789bd7",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "delayedSocialDevelopment",
@@ -12799,13 +12799,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 24
       },
       {
-        "sampleId": "af345a22-e838-4284-8125-03fc814060ea",
-        "gender": "female",
+        "Patient": "af345a22-e838-4284-8125-03fc814060ea",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "truncalAtaxia",
           "sensorineuralHearingImpairment",
@@ -12823,13 +12823,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 20
       },
       {
-        "sampleId": "7fe7c6c4-2576-4ff9-872d-1f47b2aefd2f",
-        "gender": "female",
+        "Patient": "7fe7c6c4-2576-4ff9-872d-1f47b2aefd2f",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
@@ -12845,13 +12845,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 28
       },
       {
-        "sampleId": "7ad7ef84-e480-48ba-afe5-3a3ccf6be39d",
-        "gender": "female",
+        "Patient": "7ad7ef84-e480-48ba-afe5-3a3ccf6be39d",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "motorDelay",
           "muscleWeakness",
           "renalTubularAcidosis",
@@ -12864,13 +12864,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 40
       },
       {
-        "sampleId": "33e8734a-cf60-45ec-aab4-77324daa1567",
-        "gender": "female",
+        "Patient": "33e8734a-cf60-45ec-aab4-77324daa1567",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "intestinalPseudoObstruction",
           "motorDelay",
@@ -12886,13 +12886,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 1
       },
       {
-        "sampleId": "bc33f610-3fad-4900-8bef-729ff29c3af9",
-        "gender": "female",
+        "Patient": "bc33f610-3fad-4900-8bef-729ff29c3af9",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "constipation",
           "delayedSocialDevelopment",
@@ -12909,13 +12909,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 68
       },
       {
-        "sampleId": "aae38a21-045f-4baa-99b8-f2cb7cf37565",
-        "gender": "female",
+        "Patient": "aae38a21-045f-4baa-99b8-f2cb7cf37565",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
@@ -12934,13 +12934,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 14
       },
       {
-        "sampleId": "8dbd936b-2588-472c-a562-3394a9ea8140",
-        "gender": "female",
+        "Patient": "8dbd936b-2588-472c-a562-3394a9ea8140",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "increasedMuscleFatiguability",
           "intellectualDisability",
@@ -12953,13 +12953,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 62
       },
       {
-        "sampleId": "54442dca-cb2f-41c9-84c0-40e2aa262b03",
-        "gender": "female",
+        "Patient": "54442dca-cb2f-41c9-84c0-40e2aa262b03",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "truncalAtaxia",
           "constipation",
@@ -12977,13 +12977,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 22
       },
       {
-        "sampleId": "2c33609d-d85c-4ab3-9176-785dde8b6732",
-        "gender": "female",
+        "Patient": "2c33609d-d85c-4ab3-9176-785dde8b6732",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "hypertrophicCardiomyopathy",
           "delayedSocialDevelopment",
@@ -12998,13 +12998,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 22
       },
       {
-        "sampleId": "97da8b59-64d0-4a74-abe7-8f850f8950a8",
-        "gender": "male",
+        "Patient": "97da8b59-64d0-4a74-abe7-8f850f8950a8",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "ophthalmoplegia",
           "developmentalRegression",
@@ -13018,13 +13018,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 43
       },
       {
-        "sampleId": "9cbdc316-d581-4218-a5ca-ceb48dd9a226",
-        "gender": "male",
+        "Patient": "9cbdc316-d581-4218-a5ca-ceb48dd9a226",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "truncalAtaxia",
           "ophthalmoplegia",
@@ -13038,13 +13038,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 8
       },
       {
-        "sampleId": "899e9bc8-44c6-4674-831a-6e93de00231b",
-        "gender": "male",
+        "Patient": "899e9bc8-44c6-4674-831a-6e93de00231b",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "dilatedCardiomyopathy",
           "diabetesMellitus",
@@ -13062,13 +13062,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 71
       },
       {
-        "sampleId": "d65f764a-dfd5-4da3-b0b8-2a6e53287c69",
-        "gender": "male",
+        "Patient": "d65f764a-dfd5-4da3-b0b8-2a6e53287c69",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
           "diabetesMellitus",
@@ -13082,13 +13082,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 30
       },
       {
-        "sampleId": "d3ac4bc8-3dbe-476b-bd66-1e552fb09dbd",
-        "gender": "male",
+        "Patient": "d3ac4bc8-3dbe-476b-bd66-1e552fb09dbd",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -13103,13 +13103,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 98
       },
       {
-        "sampleId": "c03aa276-0f67-4ae2-a8a9-f28f27dc28fe",
-        "gender": "male",
+        "Patient": "c03aa276-0f67-4ae2-a8a9-f28f27dc28fe",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
           "diabetesMellitus",
@@ -13129,13 +13129,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 24
       },
       {
-        "sampleId": "44ab2ab6-4de3-423a-856e-78b813f2c5bc",
-        "gender": "female",
+        "Patient": "44ab2ab6-4de3-423a-856e-78b813f2c5bc",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "diabetesMellitus",
           "motorDelay",
@@ -13153,13 +13153,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 0
       },
       {
-        "sampleId": "8e27f594-02c6-4bd8-9345-e7a9f3dd03fe",
-        "gender": "male",
+        "Patient": "8e27f594-02c6-4bd8-9345-e7a9f3dd03fe",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "delayedSocialDevelopment",
           "increasedMuscleFatiguability",
@@ -13179,13 +13179,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 74
       },
       {
-        "sampleId": "b0b46603-7828-47c6-8e39-e6c7af809b1d",
-        "gender": "male",
+        "Patient": "b0b46603-7828-47c6-8e39-e6c7af809b1d",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "delayedSocialDevelopment",
           "increasedMuscleFatiguability",
@@ -13201,13 +13201,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 53
       },
       {
-        "sampleId": "236129cb-2f2e-4db4-a4f1-f94b8fcc9956",
-        "gender": "male",
+        "Patient": "236129cb-2f2e-4db4-a4f1-f94b8fcc9956",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "ptosis",
@@ -13222,13 +13222,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 24
       },
       {
-        "sampleId": "3bf0de84-5a22-4d5c-b81a-8854dc8d8450",
-        "gender": "female",
+        "Patient": "3bf0de84-5a22-4d5c-b81a-8854dc8d8450",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "truncalAtaxia",
           "constipation",
@@ -13246,13 +13246,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 47
       },
       {
-        "sampleId": "d50d6537-5930-4399-9c45-4a551f907a71",
-        "gender": "female",
+        "Patient": "d50d6537-5930-4399-9c45-4a551f907a71",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "increasedMuscleFatiguability",
           "motorDelay",
@@ -13266,13 +13266,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 53
       },
       {
-        "sampleId": "925cc685-7964-4f9c-b8ba-55f70e8d152c",
-        "gender": "male",
+        "Patient": "925cc685-7964-4f9c-b8ba-55f70e8d152c",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "leftVentricularNoncompactionCardiomyopathy",
           "ptosis",
@@ -13289,13 +13289,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 86
       },
       {
-        "sampleId": "47ea8ac4-7875-4b96-875b-5173743d6700",
-        "gender": "male",
+        "Patient": "47ea8ac4-7875-4b96-875b-5173743d6700",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "truncalAtaxia",
           "delayedSocialDevelopment",
@@ -13310,13 +13310,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 4
       },
       {
-        "sampleId": "7f35f0f7-3a45-4b15-8264-a6ce89d92a42",
-        "gender": "male",
+        "Patient": "7f35f0f7-3a45-4b15-8264-a6ce89d92a42",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "constipation",
@@ -13331,13 +13331,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 99
       },
       {
-        "sampleId": "42d45a62-dd11-4ed7-baac-f76d85593bc0",
-        "gender": "male",
+        "Patient": "42d45a62-dd11-4ed7-baac-f76d85593bc0",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "ptosis",
           "developmentalRegression",
           "rhabdomyolysis",
@@ -13349,13 +13349,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 71
       },
       {
-        "sampleId": "d52e5f5a-e13b-421a-8ada-59bc992701bc",
-        "gender": "female",
+        "Patient": "d52e5f5a-e13b-421a-8ada-59bc992701bc",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "sensorineuralHearingImpairment",
           "diabetesMellitus",
@@ -13372,13 +13372,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 81
       },
       {
-        "sampleId": "b9d45541-7ecd-4eb4-9fd3-9a37edc96c3a",
-        "gender": "male",
+        "Patient": "b9d45541-7ecd-4eb4-9fd3-9a37edc96c3a",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "truncalAtaxia",
           "diabetesMellitus",
@@ -13392,13 +13392,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 25
       },
       {
-        "sampleId": "37769fc2-081f-4d84-855a-ea0e8de5e90f",
-        "gender": "female",
+        "Patient": "37769fc2-081f-4d84-855a-ea0e8de5e90f",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "ophthalmoplegia",
           "ptosis",
@@ -13411,13 +13411,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 40
       },
       {
-        "sampleId": "ab84620f-8249-416e-9154-5fb36465aad7",
-        "gender": "female",
+        "Patient": "ab84620f-8249-416e-9154-5fb36465aad7",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "diabetesMellitus",
           "ophthalmoplegia",
@@ -13434,13 +13434,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 51
       },
       {
-        "sampleId": "08362b77-bbf5-499a-b65e-893d4e6d8cbc",
-        "gender": "male",
+        "Patient": "08362b77-bbf5-499a-b65e-893d4e6d8cbc",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "sensorineuralHearingImpairment",
           "delayedSocialDevelopment",
@@ -13455,13 +13455,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 8
       },
       {
-        "sampleId": "3b5a58df-5a57-4eae-b88e-5f2fbbf7785d",
-        "gender": "female",
+        "Patient": "3b5a58df-5a57-4eae-b88e-5f2fbbf7785d",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -13476,13 +13476,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 44
       },
       {
-        "sampleId": "8f18b71a-3176-4144-bd45-0d25ab5a4ef0",
-        "gender": "male",
+        "Patient": "8f18b71a-3176-4144-bd45-0d25ab5a4ef0",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "intestinalPseudoObstruction",
           "intellectualDisability",
@@ -13495,13 +13495,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 32
       },
       {
-        "sampleId": "6c88e1ab-8a30-49c6-9da2-982785f64ac0",
-        "gender": "male",
+        "Patient": "6c88e1ab-8a30-49c6-9da2-982785f64ac0",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "ophthalmoplegia",
           "peripheralNeuropathy",
           "nystagmus",
@@ -13513,13 +13513,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 48
       },
       {
-        "sampleId": "06e1a090-a002-4512-a9f5-f2e8000d16bb",
-        "gender": "female",
+        "Patient": "06e1a090-a002-4512-a9f5-f2e8000d16bb",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
@@ -13533,13 +13533,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 28
       },
       {
-        "sampleId": "f33da162-eb12-4ded-871d-ca46f064cfbd",
-        "gender": "female",
+        "Patient": "f33da162-eb12-4ded-871d-ca46f064cfbd",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -13558,13 +13558,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 0
       },
       {
-        "sampleId": "c05f7330-44b4-4c9a-a417-d33831457e79",
-        "gender": "male",
+        "Patient": "c05f7330-44b4-4c9a-a417-d33831457e79",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "increasedMuscleFatiguability",
           "apnea",
           "seizures",
@@ -13576,13 +13576,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 43
       },
       {
-        "sampleId": "84cfc288-e98a-473b-948e-9e5d146da4ea",
-        "gender": "female",
+        "Patient": "84cfc288-e98a-473b-948e-9e5d146da4ea",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "sensorineuralHearingImpairment",
           "delayedSocialDevelopment",
@@ -13601,13 +13601,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 1
       },
       {
-        "sampleId": "464d502e-7a96-4ea9-b499-a56dc30abc18",
-        "gender": "male",
+        "Patient": "464d502e-7a96-4ea9-b499-a56dc30abc18",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
           "apnea",
@@ -13620,13 +13620,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 56
       },
       {
-        "sampleId": "7cf95e87-6747-43a6-be3e-db17eaef2264",
-        "gender": "male",
+        "Patient": "7cf95e87-6747-43a6-be3e-db17eaef2264",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "constipation",
           "sensorineuralHearingImpairment",
@@ -13646,13 +13646,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 24
       },
       {
-        "sampleId": "4bc9c73a-ab81-4ad9-83d0-6b56fe32d6aa",
-        "gender": "male",
+        "Patient": "4bc9c73a-ab81-4ad9-83d0-6b56fe32d6aa",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "constipation",
           "diabetesMellitus",
@@ -13670,13 +13670,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 38
       },
       {
-        "sampleId": "c9c72b88-71d2-4c55-8667-8dcc37b33749",
-        "gender": "female",
+        "Patient": "c9c72b88-71d2-4c55-8667-8dcc37b33749",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "sensorineuralHearingImpairment",
@@ -13697,13 +13697,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 0
       },
       {
-        "sampleId": "0482444f-b831-444a-83de-06a2408a2aed",
-        "gender": "male",
+        "Patient": "0482444f-b831-444a-83de-06a2408a2aed",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
@@ -13721,13 +13721,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 68
       },
       {
-        "sampleId": "5269e5da-8f57-48db-84ce-ca4f9a8eb0e9",
-        "gender": "female",
+        "Patient": "5269e5da-8f57-48db-84ce-ca4f9a8eb0e9",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "hypertrophicCardiomyopathy",
@@ -13746,13 +13746,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 3
       },
       {
-        "sampleId": "55e26b47-0995-4bc9-b1c8-2156e27b050e",
-        "gender": "female",
+        "Patient": "55e26b47-0995-4bc9-b1c8-2156e27b050e",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "delayedSocialDevelopment",
@@ -13767,13 +13767,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 68
       },
       {
-        "sampleId": "542b8e66-280d-4477-b32c-fca10500ded9",
-        "gender": "male",
+        "Patient": "542b8e66-280d-4477-b32c-fca10500ded9",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "muscleWeakness",
           "rhabdomyolysis",
@@ -13787,13 +13787,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 15
       },
       {
-        "sampleId": "6b2fb9e8-d2eb-4e6e-9d08-4a1274caa617",
-        "gender": "male",
+        "Patient": "6b2fb9e8-d2eb-4e6e-9d08-4a1274caa617",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "intellectualDisability",
           "ptosis",
@@ -13810,13 +13810,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 87
       },
       {
-        "sampleId": "533c679b-cbce-43b3-892e-7e7d6098803d",
-        "gender": "female",
+        "Patient": "533c679b-cbce-43b3-892e-7e7d6098803d",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "ophthalmoplegia",
@@ -13833,13 +13833,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 81
       },
       {
-        "sampleId": "26616ed5-9e41-4405-b953-0dcaec6f2227",
-        "gender": "male",
+        "Patient": "26616ed5-9e41-4405-b953-0dcaec6f2227",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "diabetesMellitus",
           "apnea",
           "muscularHypotonia",
@@ -13851,13 +13851,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 57
       },
       {
-        "sampleId": "b8097cb9-752f-455c-b5b3-d1f61558c283",
-        "gender": "male",
+        "Patient": "b8097cb9-752f-455c-b5b3-d1f61558c283",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "intestinalPseudoObstruction",
           "motorDelay",
           "ophthalmoplegia",
@@ -13873,13 +13873,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 21
       },
       {
-        "sampleId": "6bdfa365-2d66-4f72-b097-bbbb72b4238e",
-        "gender": "male",
+        "Patient": "6bdfa365-2d66-4f72-b097-bbbb72b4238e",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "motorDelay",
           "glaucoma",
@@ -13891,13 +13891,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 95
       },
       {
-        "sampleId": "9fe44744-656e-42a3-8c03-465e1fbbe21a",
-        "gender": "male",
+        "Patient": "9fe44744-656e-42a3-8c03-465e1fbbe21a",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "ophthalmoplegia",
           "migraine",
@@ -13915,13 +13915,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 52
       },
       {
-        "sampleId": "5dd5886f-ba05-4340-8be9-d872b8ca4802",
-        "gender": "female",
+        "Patient": "5dd5886f-ba05-4340-8be9-d872b8ca4802",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "truncalAtaxia",
           "ptosis",
@@ -13935,13 +13935,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 57
       },
       {
-        "sampleId": "a166aa1b-5045-4cbd-9a10-3f6ff1c9bd1f",
-        "gender": "female",
+        "Patient": "a166aa1b-5045-4cbd-9a10-3f6ff1c9bd1f",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "truncalAtaxia",
           "seizures",
@@ -13953,13 +13953,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 13
       },
       {
-        "sampleId": "fc8c7a59-d7ff-4302-b41f-6b9d6c470b7a",
-        "gender": "female",
+        "Patient": "fc8c7a59-d7ff-4302-b41f-6b9d6c470b7a",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "truncalAtaxia"
         ],
@@ -13969,13 +13969,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 55
       },
       {
-        "sampleId": "5e1e0511-5777-438a-8558-8ccd0ad10615",
-        "gender": "female",
+        "Patient": "5e1e0511-5777-438a-8558-8ccd0ad10615",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "motorDelay",
           "developmentalRegression",
@@ -13989,13 +13989,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 59
       },
       {
-        "sampleId": "43c174fd-d9dc-45cc-9d5d-0470584db035",
-        "gender": "male",
+        "Patient": "43c174fd-d9dc-45cc-9d5d-0470584db035",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "constipation",
           "ptosis",
@@ -14010,13 +14010,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 81
       },
       {
-        "sampleId": "6cdef585-fd84-4302-8e80-a34e7f870651",
-        "gender": "female",
+        "Patient": "6cdef585-fd84-4302-8e80-a34e7f870651",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "increasedMuscleFatiguability",
           "ophthalmoplegia",
@@ -14036,13 +14036,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 46
       },
       {
-        "sampleId": "5b4e3bf6-c8cb-4bee-910b-4807470a6d11",
-        "gender": "male",
+        "Patient": "5b4e3bf6-c8cb-4bee-910b-4807470a6d11",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "intestinalPseudoObstruction",
           "motorDelay",
@@ -14058,13 +14058,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 73
       },
       {
-        "sampleId": "9092f0eb-06ec-4258-9838-189186eec58e",
-        "gender": "female",
+        "Patient": "9092f0eb-06ec-4258-9838-189186eec58e",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "intestinalPseudoObstruction",
           "muscleWeakness",
@@ -14078,13 +14078,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 8
       },
       {
-        "sampleId": "c592b1d4-7209-4052-999e-63cb2d98f2e9",
-        "gender": "male",
+        "Patient": "c592b1d4-7209-4052-999e-63cb2d98f2e9",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "increasedMuscleFatiguability",
@@ -14098,13 +14098,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 52
       },
       {
-        "sampleId": "9b212688-60e9-4b0b-acec-2ca297e86109",
-        "gender": "female",
+        "Patient": "9b212688-60e9-4b0b-acec-2ca297e86109",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "increasedMuscleFatiguability",
           "migraine",
@@ -14119,13 +14119,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 32
       },
       {
-        "sampleId": "974d5e07-805b-4361-a9ec-e3a8c4c7b8e6",
-        "gender": "male",
+        "Patient": "974d5e07-805b-4361-a9ec-e3a8c4c7b8e6",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "dilatedCardiomyopathy",
           "truncalAtaxia",
@@ -14140,13 +14140,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 80
       },
       {
-        "sampleId": "359d7715-cca7-4bc2-9715-3b46aaef6044",
-        "gender": "female",
+        "Patient": "359d7715-cca7-4bc2-9715-3b46aaef6044",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
           "delayedSocialDevelopment",
@@ -14159,13 +14159,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 65
       },
       {
-        "sampleId": "b9488028-b058-43f7-80ca-8b9de0556ebb",
-        "gender": "male",
+        "Patient": "b9488028-b058-43f7-80ca-8b9de0556ebb",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "constipation",
           "migraine",
@@ -14178,13 +14178,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 23
       },
       {
-        "sampleId": "2162d518-06dd-45f5-aa64-40e9a63260e7",
-        "gender": "female",
+        "Patient": "2162d518-06dd-45f5-aa64-40e9a63260e7",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "developmentalRegression",
           "delayedSpeechAndLanguageDevelopment",
@@ -14197,13 +14197,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 7
       },
       {
-        "sampleId": "c6031065-40f2-4545-b85b-a0c9845ab5a0",
-        "gender": "female",
+        "Patient": "c6031065-40f2-4545-b85b-a0c9845ab5a0",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
@@ -14218,13 +14218,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 9
       },
       {
-        "sampleId": "518060cd-5a43-41ca-bc82-74208ca6ecb0",
-        "gender": "female",
+        "Patient": "518060cd-5a43-41ca-bc82-74208ca6ecb0",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "motorDelay",
           "migraine",
           "cataract"
@@ -14235,13 +14235,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 1
       },
       {
-        "sampleId": "99f6173f-3e08-4986-9c03-6eff0eb3f22e",
-        "gender": "female",
+        "Patient": "99f6173f-3e08-4986-9c03-6eff0eb3f22e",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "motorDelay",
           "peripheralNeuropathy",
           "renalTubularAcidosis",
@@ -14255,13 +14255,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 22
       },
       {
-        "sampleId": "0e9d2f1c-976f-4f3a-b68e-007aa16c78a4",
-        "gender": "female",
+        "Patient": "0e9d2f1c-976f-4f3a-b68e-007aa16c78a4",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "dilatedCardiomyopathy",
           "truncalAtaxia",
@@ -14275,13 +14275,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 3
       },
       {
-        "sampleId": "d7286149-008c-40ee-94cb-17e51b421802",
-        "gender": "female",
+        "Patient": "d7286149-008c-40ee-94cb-17e51b421802",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "delayedSocialDevelopment",
           "muscleWeakness",
@@ -14295,13 +14295,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 40
       },
       {
-        "sampleId": "a939a013-162f-4913-8885-dfe890357deb",
-        "gender": "male",
+        "Patient": "a939a013-162f-4913-8885-dfe890357deb",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "increasedMuscleFatiguability",
           "ptosis",
           "renalTubularAcidosis",
@@ -14313,13 +14313,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 56
       },
       {
-        "sampleId": "943ac793-d7ab-4704-bbf8-d046b92b556d",
-        "gender": "female",
+        "Patient": "943ac793-d7ab-4704-bbf8-d046b92b556d",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "ophthalmoplegia",
           "renalTubularAcidosis",
@@ -14334,13 +14334,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 21
       },
       {
-        "sampleId": "7ec59807-b0f1-4410-8684-01d9070d33e2",
-        "gender": "female",
+        "Patient": "7ec59807-b0f1-4410-8684-01d9070d33e2",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "diabetesMellitus",
           "muscleWeakness",
@@ -14358,13 +14358,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 40
       },
       {
-        "sampleId": "f33d2f52-5225-412f-ad44-f633b7e2efbd",
-        "gender": "female",
+        "Patient": "f33d2f52-5225-412f-ad44-f633b7e2efbd",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "diabetesMellitus",
           "increasedMuscleFatiguability",
@@ -14382,13 +14382,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 43
       },
       {
-        "sampleId": "b6395ec0-c448-4a43-adf2-a10552defe29",
-        "gender": "male",
+        "Patient": "b6395ec0-c448-4a43-adf2-a10552defe29",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "delayedSocialDevelopment",
           "diabetesMellitus",
@@ -14404,13 +14404,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 1
       },
       {
-        "sampleId": "d9b00b19-d15b-4f3f-8d1a-859ecaf05058",
-        "gender": "male",
+        "Patient": "d9b00b19-d15b-4f3f-8d1a-859ecaf05058",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "rhabdomyolysis",
           "muscularHypotonia",
@@ -14423,13 +14423,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 64
       },
       {
-        "sampleId": "7a77768f-a083-41a0-a8ed-d0b1d7de27d5",
-        "gender": "male",
+        "Patient": "7a77768f-a083-41a0-a8ed-d0b1d7de27d5",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "delayedSocialDevelopment",
           "motorDelay",
@@ -14443,13 +14443,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 9
       },
       {
-        "sampleId": "a007da22-cb47-43bb-a691-f4bdad709efa",
-        "gender": "female",
+        "Patient": "a007da22-cb47-43bb-a691-f4bdad709efa",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "sensorineuralHearingImpairment",
@@ -14466,13 +14466,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 22
       },
       {
-        "sampleId": "f881b147-71a1-4d7b-8521-bac533205758",
-        "gender": "female",
+        "Patient": "f881b147-71a1-4d7b-8521-bac533205758",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "ophthalmoplegia",
           "peripheralNeuropathy",
           "seizures",
@@ -14486,13 +14486,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 99
       },
       {
-        "sampleId": "95d176f8-3bdf-43c0-89f7-9aeff6589f65",
-        "gender": "male",
+        "Patient": "95d176f8-3bdf-43c0-89f7-9aeff6589f65",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "ptosis",
           "seizures",
@@ -14504,13 +14504,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 28
       },
       {
-        "sampleId": "c2b4cf55-ec67-4b29-b6ac-297228b58dd6",
-        "gender": "male",
+        "Patient": "c2b4cf55-ec67-4b29-b6ac-297228b58dd6",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "migraine",
           "spasticity"
         ],
@@ -14520,13 +14520,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 4
       },
       {
-        "sampleId": "34a6b17f-9ae2-459f-b142-6faf66853a8d",
-        "gender": "female",
+        "Patient": "34a6b17f-9ae2-459f-b142-6faf66853a8d",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "increasedMuscleFatiguability",
           "intellectualDisability",
@@ -14545,13 +14545,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 51
       },
       {
-        "sampleId": "963fa965-1f9c-4729-a185-dd6f2dd9b913",
-        "gender": "female",
+        "Patient": "963fa965-1f9c-4729-a185-dd6f2dd9b913",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "sensorineuralHearingImpairment",
           "migraine",
@@ -14567,13 +14567,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 3
       },
       {
-        "sampleId": "29eb4d90-b503-4650-a60c-f7b2a92bf805",
-        "gender": "female",
+        "Patient": "29eb4d90-b503-4650-a60c-f7b2a92bf805",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "increasedMuscleFatiguability",
           "ophthalmoplegia",
           "ptosis",
@@ -14589,13 +14589,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 21
       },
       {
-        "sampleId": "da716917-f60f-4f24-a312-7dda8938b0ce",
-        "gender": "male",
+        "Patient": "da716917-f60f-4f24-a312-7dda8938b0ce",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "hypertrophicCardiomyopathy",
@@ -14614,13 +14614,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 89
       },
       {
-        "sampleId": "4bca16cb-d01f-4af5-b5a7-01fd2a2514ff",
-        "gender": "male",
+        "Patient": "4bca16cb-d01f-4af5-b5a7-01fd2a2514ff",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "migraine",
           "peripheralNeuropathy",
@@ -14637,13 +14637,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 8
       },
       {
-        "sampleId": "89bed74a-7660-4ff9-9910-9856030d82cc",
-        "gender": "female",
+        "Patient": "89bed74a-7660-4ff9-9910-9856030d82cc",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "muscleWeakness",
           "renalTubularAcidosis",
@@ -14655,13 +14655,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 3
       },
       {
-        "sampleId": "5cd66941-1fd4-46c5-827e-5f8cb7b7a2df",
-        "gender": "male",
+        "Patient": "5cd66941-1fd4-46c5-827e-5f8cb7b7a2df",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "intellectualDisability",
           "developmentalRegression",
@@ -14681,13 +14681,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 84
       },
       {
-        "sampleId": "95aec9cc-6764-4dfe-9eb8-a143d7c3dadb",
-        "gender": "female",
+        "Patient": "95aec9cc-6764-4dfe-9eb8-a143d7c3dadb",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "diabetesMellitus",
           "increasedMuscleFatiguability",
@@ -14701,13 +14701,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 81
       },
       {
-        "sampleId": "94d2a083-a4af-4b87-a57a-91405265ec74",
-        "gender": "female",
+        "Patient": "94d2a083-a4af-4b87-a57a-91405265ec74",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "leftVentricularNoncompactionCardiomyopathy",
           "motorDelay",
@@ -14721,13 +14721,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 52
       },
       {
-        "sampleId": "d98c5114-99b3-4504-b717-e0061bff51fc",
-        "gender": "male",
+        "Patient": "d98c5114-99b3-4504-b717-e0061bff51fc",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "motorDelay",
           "migraine",
@@ -14742,13 +14742,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 7
       },
       {
-        "sampleId": "9a70f819-a1e7-4d53-9d3b-7a5da6ebf5b0",
-        "gender": "female",
+        "Patient": "9a70f819-a1e7-4d53-9d3b-7a5da6ebf5b0",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -14764,13 +14764,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 64
       },
       {
-        "sampleId": "b7e5d1dc-0183-48a9-bdc0-1e0f298e1edd",
-        "gender": "male",
+        "Patient": "b7e5d1dc-0183-48a9-bdc0-1e0f298e1edd",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intellectualDisability",
           "muscleWeakness"
         ],
@@ -14780,13 +14780,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 11
       },
       {
-        "sampleId": "51150798-548b-4640-932c-f753fe5c4b68",
-        "gender": "male",
+        "Patient": "51150798-548b-4640-932c-f753fe5c4b68",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "sensorineuralHearingImpairment",
           "muscleWeakness",
@@ -14801,13 +14801,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 69
       },
       {
-        "sampleId": "811df2b2-9582-48b5-84f5-9fd02c5056e6",
-        "gender": "male",
+        "Patient": "811df2b2-9582-48b5-84f5-9fd02c5056e6",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "constipation",
           "intellectualDisability",
@@ -14822,13 +14822,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 38
       },
       {
-        "sampleId": "e82963eb-3cea-4f73-bff4-cf22556daca9",
-        "gender": "female",
+        "Patient": "e82963eb-3cea-4f73-bff4-cf22556daca9",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "muscleWeakness",
           "rhabdomyolysis",
@@ -14840,13 +14840,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 89
       },
       {
-        "sampleId": "baf9b6e5-a952-407e-bd70-8280cbbafcfc",
-        "gender": "female",
+        "Patient": "baf9b6e5-a952-407e-bd70-8280cbbafcfc",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "diabetesMellitus",
@@ -14861,13 +14861,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 72
       },
       {
-        "sampleId": "1ea1327c-ee31-4a8e-88a1-dca916297835",
-        "gender": "male",
+        "Patient": "1ea1327c-ee31-4a8e-88a1-dca916297835",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "ophthalmoplegia",
           "developmentalRegression",
@@ -14880,13 +14880,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 16
       },
       {
-        "sampleId": "49977f5c-ae6a-42bb-a423-fec9f9a06bc8",
-        "gender": "male",
+        "Patient": "49977f5c-ae6a-42bb-a423-fec9f9a06bc8",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "increasedMuscleFatiguability",
           "motorDelay",
           "rhabdomyolysis",
@@ -14898,13 +14898,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 26
       },
       {
-        "sampleId": "a826f24f-bcf9-4ac3-ad37-cbd8f90d2119",
-        "gender": "male",
+        "Patient": "a826f24f-bcf9-4ac3-ad37-cbd8f90d2119",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "constipation",
           "developmentalRegression",
@@ -14919,13 +14919,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 42
       },
       {
-        "sampleId": "b08b49cf-d03e-45a3-adb8-a521c44186a9",
-        "gender": "male",
+        "Patient": "b08b49cf-d03e-45a3-adb8-a521c44186a9",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "intestinalPseudoObstruction",
@@ -14941,13 +14941,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 43
       },
       {
-        "sampleId": "e803fc5c-043e-4298-831d-918b172f63fe",
-        "gender": "male",
+        "Patient": "e803fc5c-043e-4298-831d-918b172f63fe",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "intellectualDisability",
           "peripheralNeuropathy",
           "renalTubularAcidosis",
@@ -14959,13 +14959,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 8
       },
       {
-        "sampleId": "1db273cd-10a2-45ad-a3b6-dca53360d9da",
-        "gender": "female",
+        "Patient": "1db273cd-10a2-45ad-a3b6-dca53360d9da",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "constipation",
           "delayedSocialDevelopment",
@@ -14987,13 +14987,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 50
       },
       {
-        "sampleId": "361f38c2-ffc7-4c74-8ea4-3ceb58d20c53",
-        "gender": "female",
+        "Patient": "361f38c2-ffc7-4c74-8ea4-3ceb58d20c53",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "sensorineuralHearingImpairment",
           "delayedSocialDevelopment",
@@ -15011,13 +15011,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 27
       },
       {
-        "sampleId": "6096e9a1-2bef-4b7a-afb1-bdb56b1591ba",
-        "gender": "male",
+        "Patient": "6096e9a1-2bef-4b7a-afb1-bdb56b1591ba",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "leftVentricularNoncompactionCardiomyopathy",
           "sensorineuralHearingImpairment",
@@ -15033,13 +15033,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 93
       },
       {
-        "sampleId": "34c9d302-4155-4c5e-9056-85d2c2d86f0c",
-        "gender": "female",
+        "Patient": "34c9d302-4155-4c5e-9056-85d2c2d86f0c",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "developmentalRegression",
           "apnea",
@@ -15053,13 +15053,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 83
       },
       {
-        "sampleId": "91c19225-7815-40b7-9074-9cf9beda38a9",
-        "gender": "female",
+        "Patient": "91c19225-7815-40b7-9074-9cf9beda38a9",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "delayedSocialDevelopment",
           "intestinalPseudoObstruction",
@@ -15073,13 +15073,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 54
       },
       {
-        "sampleId": "4c982916-58ee-45af-be7a-bc8efa840fe3",
-        "gender": "female",
+        "Patient": "4c982916-58ee-45af-be7a-bc8efa840fe3",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "constipation",
           "increasedMuscleFatiguability",
@@ -15093,13 +15093,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 91
       },
       {
-        "sampleId": "4c05fabb-3347-4066-8c27-c272c6aec66e",
-        "gender": "male",
+        "Patient": "4c05fabb-3347-4066-8c27-c272c6aec66e",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "truncalAtaxia",
           "diabetesMellitus",
@@ -15116,13 +15116,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 81
       },
       {
-        "sampleId": "03fe18cc-3632-439b-bbae-52cc6bfd7db6",
-        "gender": "male",
+        "Patient": "03fe18cc-3632-439b-bbae-52cc6bfd7db6",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "truncalAtaxia",
           "nystagmus",
@@ -15134,13 +15134,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 11
       },
       {
-        "sampleId": "7376b289-6018-455e-9548-267bfdc8471c",
-        "gender": "female",
+        "Patient": "7376b289-6018-455e-9548-267bfdc8471c",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "diabetesMellitus",
           "increasedMuscleFatiguability",
@@ -15156,13 +15156,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 50
       },
       {
-        "sampleId": "8d701e7a-9a73-4d63-a2ef-ae81dabcd89c",
-        "gender": "male",
+        "Patient": "8d701e7a-9a73-4d63-a2ef-ae81dabcd89c",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "sensorineuralHearingImpairment",
           "diabetesMellitus",
@@ -15180,13 +15180,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 64
       },
       {
-        "sampleId": "2630f7a8-463a-4e98-8126-4ede8755360c",
-        "gender": "female",
+        "Patient": "2630f7a8-463a-4e98-8126-4ede8755360c",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "delayedSocialDevelopment",
           "ptosis",
@@ -15201,13 +15201,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 74
       },
       {
-        "sampleId": "b4143404-8fa4-4f54-94a0-4cdea94ac95c",
-        "gender": "female",
+        "Patient": "b4143404-8fa4-4f54-94a0-4cdea94ac95c",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "renalTubularAcidosis",
           "apnea",
           "muscularHypotonia",
@@ -15219,13 +15219,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 70
       },
       {
-        "sampleId": "8a32ad2a-8eda-438d-9d72-be93c73c9999",
-        "gender": "female",
+        "Patient": "8a32ad2a-8eda-438d-9d72-be93c73c9999",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "ophthalmoplegia",
           "peripheralNeuropathy",
@@ -15238,13 +15238,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 73
       },
       {
-        "sampleId": "1878cbd9-7b5c-45c4-9598-ccbdbf90f42c",
-        "gender": "male",
+        "Patient": "1878cbd9-7b5c-45c4-9598-ccbdbf90f42c",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "truncalAtaxia",
           "increasedMuscleFatiguability",
@@ -15262,13 +15262,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 16
       },
       {
-        "sampleId": "5a7cab21-9c82-4706-a599-381694dd0642",
-        "gender": "male",
+        "Patient": "5a7cab21-9c82-4706-a599-381694dd0642",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "motorDelay",
           "strokeLikeEpisode"
         ],
@@ -15278,13 +15278,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 53
       },
       {
-        "sampleId": "59f8c4eb-ba65-41d9-b81d-0ff29d726a8d",
-        "gender": "female",
+        "Patient": "59f8c4eb-ba65-41d9-b81d-0ff29d726a8d",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "sensorineuralHearingImpairment",
           "intestinalPseudoObstruction",
@@ -15301,13 +15301,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 97
       },
       {
-        "sampleId": "5d3f1c61-d3a5-416c-af74-e22e88316ee0",
-        "gender": "female",
+        "Patient": "5d3f1c61-d3a5-416c-af74-e22e88316ee0",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -15324,13 +15324,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 60
       },
       {
-        "sampleId": "72906060-40df-4e06-a2b4-4d89822c5fd7",
-        "gender": "male",
+        "Patient": "72906060-40df-4e06-a2b4-4d89822c5fd7",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
@@ -15345,13 +15345,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 31
       },
       {
-        "sampleId": "36b6da6f-dd11-4803-8e9b-c546d24dbdd7",
-        "gender": "male",
+        "Patient": "36b6da6f-dd11-4803-8e9b-c546d24dbdd7",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "seizures",
           "corticalVisualImpairment"
@@ -15362,13 +15362,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 31
       },
       {
-        "sampleId": "013817e8-cd6f-42c0-83fa-355f8b12907f",
-        "gender": "female",
+        "Patient": "013817e8-cd6f-42c0-83fa-355f8b12907f",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
@@ -15383,13 +15383,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 5
       },
       {
-        "sampleId": "35cf6cd2-423e-431e-89fa-6995fe5fad30",
-        "gender": "female",
+        "Patient": "35cf6cd2-423e-431e-89fa-6995fe5fad30",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intestinalPseudoObstruction",
           "intellectualDisability",
           "renalTubularAcidosis",
@@ -15403,13 +15403,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 65
       },
       {
-        "sampleId": "a62705cd-7e83-4866-9869-c8a6566b7b6a",
-        "gender": "female",
+        "Patient": "a62705cd-7e83-4866-9869-c8a6566b7b6a",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "diabetesMellitus",
           "intellectualDisability",
@@ -15425,13 +15425,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 73
       },
       {
-        "sampleId": "0cac6a24-a9f4-4eb6-a7de-4072e3aed02d",
-        "gender": "female",
+        "Patient": "0cac6a24-a9f4-4eb6-a7de-4072e3aed02d",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "migraine",
           "muscularHypotonia",
@@ -15443,13 +15443,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 32
       },
       {
-        "sampleId": "b77d8309-3fb2-47de-81f7-c281e9155b92",
-        "gender": "female",
+        "Patient": "b77d8309-3fb2-47de-81f7-c281e9155b92",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "intestinalPseudoObstruction",
           "intellectualDisability",
@@ -15463,13 +15463,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 62
       },
       {
-        "sampleId": "7223ec39-4232-4106-a384-530c0374056c",
-        "gender": "female",
+        "Patient": "7223ec39-4232-4106-a384-530c0374056c",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "increasedMuscleFatiguability",
           "intestinalPseudoObstruction",
@@ -15486,13 +15486,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 29
       },
       {
-        "sampleId": "7a2c5db9-00fd-4d41-9587-b3afaccd7a05",
-        "gender": "male",
+        "Patient": "7a2c5db9-00fd-4d41-9587-b3afaccd7a05",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
@@ -15507,13 +15507,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 94
       },
       {
-        "sampleId": "848fb30e-77ad-4b30-9813-0fd5968813ee",
-        "gender": "male",
+        "Patient": "848fb30e-77ad-4b30-9813-0fd5968813ee",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "delayedSocialDevelopment",
           "diabetesMellitus",
@@ -15527,13 +15527,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 2
       },
       {
-        "sampleId": "1221d04e-3e58-4226-a1b1-d202fdc9ae6a",
-        "gender": "female",
+        "Patient": "1221d04e-3e58-4226-a1b1-d202fdc9ae6a",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "ptosis",
           "rhabdomyolysis",
           "delayedSpeechAndLanguageDevelopment",
@@ -15547,13 +15547,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 85
       },
       {
-        "sampleId": "a30d31b2-24a0-42f8-a73e-9f1697371f19",
-        "gender": "female",
+        "Patient": "a30d31b2-24a0-42f8-a73e-9f1697371f19",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "leftVentricularNoncompactionCardiomyopathy",
           "rhabdomyolysis",
@@ -15566,13 +15566,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 54
       },
       {
-        "sampleId": "64a4722a-bbff-4a2b-8a66-e4b298be1688",
-        "gender": "male",
+        "Patient": "64a4722a-bbff-4a2b-8a66-e4b298be1688",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "increasedMuscleFatiguability",
           "motorDelay",
           "peripheralNeuropathy",
@@ -15587,13 +15587,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 96
       },
       {
-        "sampleId": "21f7afc4-6d10-43a0-8d4e-df8cf2ea6a57",
-        "gender": "male",
+        "Patient": "21f7afc4-6d10-43a0-8d4e-df8cf2ea6a57",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "increasedMuscleFatiguability",
           "muscleWeakness",
           "apnea",
@@ -15607,13 +15607,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 32
       },
       {
-        "sampleId": "1fb8e34c-11a9-4348-9473-b40cc0fb4b34",
-        "gender": "male",
+        "Patient": "1fb8e34c-11a9-4348-9473-b40cc0fb4b34",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "sensorineuralHearingImpairment",
           "corticalVisualImpairment",
@@ -15626,13 +15626,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 83
       },
       {
-        "sampleId": "29f1e95d-9c9b-41a2-8c7c-bf8f88023160",
-        "gender": "male",
+        "Patient": "29f1e95d-9c9b-41a2-8c7c-bf8f88023160",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "sensorineuralHearingImpairment",
           "delayedSocialDevelopment",
@@ -15645,13 +15645,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 68
       },
       {
-        "sampleId": "8c9d85d9-8e99-4003-b23d-3608cdf1267a",
-        "gender": "male",
+        "Patient": "8c9d85d9-8e99-4003-b23d-3608cdf1267a",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "delayedSocialDevelopment",
@@ -15664,13 +15664,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 85
       },
       {
-        "sampleId": "2067f490-827d-4d8c-b559-73766b8d52fb",
-        "gender": "male",
+        "Patient": "2067f490-827d-4d8c-b559-73766b8d52fb",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "constipation",
           "intestinalPseudoObstruction",
@@ -15685,13 +15685,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 17
       },
       {
-        "sampleId": "72cd83e1-a9e8-422b-be2d-9caa261a96c8",
-        "gender": "female",
+        "Patient": "72cd83e1-a9e8-422b-be2d-9caa261a96c8",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "constipation",
           "developmentalRegression",
@@ -15705,13 +15705,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 7
       },
       {
-        "sampleId": "2dfe2fff-c4a2-49b4-9fc8-f33239f94fc5",
-        "gender": "female",
+        "Patient": "2dfe2fff-c4a2-49b4-9fc8-f33239f94fc5",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "delayedSocialDevelopment",
           "muscleWeakness",
@@ -15728,13 +15728,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 90
       },
       {
-        "sampleId": "1b329e73-a74f-4dae-bcd0-91d1c1c8e9aa",
-        "gender": "female",
+        "Patient": "1b329e73-a74f-4dae-bcd0-91d1c1c8e9aa",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "delayedSocialDevelopment",
           "diabetesMellitus",
@@ -15752,13 +15752,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 54
       },
       {
-        "sampleId": "f686b46b-c010-4add-93ee-315bdd7f40df",
-        "gender": "female",
+        "Patient": "f686b46b-c010-4add-93ee-315bdd7f40df",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "constipation",
           "diabetesMellitus",
@@ -15773,13 +15773,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 44
       },
       {
-        "sampleId": "bf104b3f-b0a0-479f-81b8-ef9baad0bd4c",
-        "gender": "male",
+        "Patient": "bf104b3f-b0a0-479f-81b8-ef9baad0bd4c",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
           "motorDelay",
@@ -15796,13 +15796,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 11
       },
       {
-        "sampleId": "42ab6b2d-9e09-4fcd-bf57-d470837885b4",
-        "gender": "male",
+        "Patient": "42ab6b2d-9e09-4fcd-bf57-d470837885b4",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -15817,13 +15817,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 60
       },
       {
-        "sampleId": "b83a12cf-f2a5-4aa4-8d39-57eddacf6ab1",
-        "gender": "male",
+        "Patient": "b83a12cf-f2a5-4aa4-8d39-57eddacf6ab1",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "motorDelay",
@@ -15839,13 +15839,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 62
       },
       {
-        "sampleId": "e6c3c8ea-f8e4-41dd-a04c-c23c4705b566",
-        "gender": "female",
+        "Patient": "e6c3c8ea-f8e4-41dd-a04c-c23c4705b566",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "increasedMuscleFatiguability",
           "delayedSpeechAndLanguageDevelopment",
           "glaucoma",
@@ -15857,13 +15857,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 57
       },
       {
-        "sampleId": "1043ca13-c1b0-48c7-b243-c914630e4a1e",
-        "gender": "male",
+        "Patient": "1043ca13-c1b0-48c7-b243-c914630e4a1e",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "migraine",
           "developmentalRegression",
@@ -15878,13 +15878,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 14
       },
       {
-        "sampleId": "8a6f06dd-a40b-43ee-b629-ada5a560f83e",
-        "gender": "female",
+        "Patient": "8a6f06dd-a40b-43ee-b629-ada5a560f83e",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "constipation",
           "intellectualDisability",
@@ -15898,13 +15898,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 38
       },
       {
-        "sampleId": "de2ff97c-39b3-43e9-99b0-730ff3dda7c0",
-        "gender": "female",
+        "Patient": "de2ff97c-39b3-43e9-99b0-730ff3dda7c0",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "motorDelay",
           "ophthalmoplegia",
           "ptosis",
@@ -15919,13 +15919,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 2
       },
       {
-        "sampleId": "08339260-361f-4565-907b-76744727f4a8",
-        "gender": "female",
+        "Patient": "08339260-361f-4565-907b-76744727f4a8",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "dilatedCardiomyopathy",
           "hypertrophicCardiomyopathy",
@@ -15945,13 +15945,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 38
       },
       {
-        "sampleId": "4a3fb470-3777-4028-9c6b-e93fd17167e1",
-        "gender": "female",
+        "Patient": "4a3fb470-3777-4028-9c6b-e93fd17167e1",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "developmentalRegression",
@@ -15968,13 +15968,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 11
       },
       {
-        "sampleId": "41380d91-e664-4654-9426-0e63ead27796",
-        "gender": "male",
+        "Patient": "41380d91-e664-4654-9426-0e63ead27796",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "motorDelay",
@@ -15989,13 +15989,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 45
       },
       {
-        "sampleId": "512d4a1e-5317-463d-8412-46c0af7ceae5",
-        "gender": "female",
+        "Patient": "512d4a1e-5317-463d-8412-46c0af7ceae5",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "increasedMuscleFatiguability"
         ],
@@ -16005,13 +16005,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 13
       },
       {
-        "sampleId": "577d7b53-bf02-42bc-b6c3-9a30d785b56f",
-        "gender": "male",
+        "Patient": "577d7b53-bf02-42bc-b6c3-9a30d785b56f",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "truncalAtaxia",
@@ -16027,13 +16027,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 91
       },
       {
-        "sampleId": "9c95f2bc-3ba2-4ee5-b3c5-7d468716ef39",
-        "gender": "male",
+        "Patient": "9c95f2bc-3ba2-4ee5-b3c5-7d468716ef39",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "intestinalPseudoObstruction",
           "delayedSpeechAndLanguageDevelopment"
@@ -16044,13 +16044,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 87
       },
       {
-        "sampleId": "df8eecdd-db68-4d89-824e-9600e14aa86d",
-        "gender": "male",
+        "Patient": "df8eecdd-db68-4d89-824e-9600e14aa86d",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "truncalAtaxia",
@@ -16069,13 +16069,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 40
       },
       {
-        "sampleId": "0d1a72e3-5bcd-4d3f-8c9d-1ec45b28e7ab",
-        "gender": "male",
+        "Patient": "0d1a72e3-5bcd-4d3f-8c9d-1ec45b28e7ab",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "intestinalPseudoObstruction",
           "intellectualDisability",
@@ -16091,13 +16091,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 49
       },
       {
-        "sampleId": "dca5f0d2-7b2c-4744-83e8-c312c7e640f7",
-        "gender": "female",
+        "Patient": "dca5f0d2-7b2c-4744-83e8-c312c7e640f7",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "diabetesMellitus",
           "ophthalmoplegia",
           "rhabdomyolysis",
@@ -16109,13 +16109,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 69
       },
       {
-        "sampleId": "21f526b5-7880-424b-a7ce-8cc30002df6b",
-        "gender": "female",
+        "Patient": "21f526b5-7880-424b-a7ce-8cc30002df6b",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "delayedSocialDevelopment",
           "ophthalmoplegia",
@@ -16130,13 +16130,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 88
       },
       {
-        "sampleId": "3700565a-dba2-4ebc-8fdb-3748f32ca4e2",
-        "gender": "female",
+        "Patient": "3700565a-dba2-4ebc-8fdb-3748f32ca4e2",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "truncalAtaxia",
           "developmentalRegression",
@@ -16148,13 +16148,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 98
       },
       {
-        "sampleId": "6f30a4da-6ccb-4cc0-9578-c4cf34e2d060",
-        "gender": "male",
+        "Patient": "6f30a4da-6ccb-4cc0-9578-c4cf34e2d060",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
           "sensorineuralHearingImpairment",
@@ -16168,13 +16168,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 74
       },
       {
-        "sampleId": "b5b030ff-b643-4c25-a78e-ddf850ae3358",
-        "gender": "male",
+        "Patient": "b5b030ff-b643-4c25-a78e-ddf850ae3358",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "delayedSocialDevelopment",
@@ -16190,13 +16190,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 77
       },
       {
-        "sampleId": "e5404c89-5c01-4749-bf17-fd9f126bb6c6",
-        "gender": "female",
+        "Patient": "e5404c89-5c01-4749-bf17-fd9f126bb6c6",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "diabetesMellitus",
           "ptosis",
           "migraine",
@@ -16211,13 +16211,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 1
       },
       {
-        "sampleId": "c9604a24-727b-4720-bbf5-29a1c417184a",
-        "gender": "female",
+        "Patient": "c9604a24-727b-4720-bbf5-29a1c417184a",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "dilatedCardiomyopathy",
           "hypertrophicCardiomyopathy",
@@ -16232,13 +16232,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 91
       },
       {
-        "sampleId": "a4d92aea-341d-4c5c-a312-8ad3975ab134",
-        "gender": "female",
+        "Patient": "a4d92aea-341d-4c5c-a312-8ad3975ab134",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "diabetesMellitus",
           "motorDelay",
@@ -16255,13 +16255,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 0
       },
       {
-        "sampleId": "b37d3e14-49d7-4c53-b585-bf5b38036655",
-        "gender": "male",
+        "Patient": "b37d3e14-49d7-4c53-b585-bf5b38036655",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "sensorineuralHearingImpairment",
           "intestinalPseudoObstruction",
@@ -16273,13 +16273,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 59
       },
       {
-        "sampleId": "82fcbec6-7895-4f92-9829-1f4498ee1c8b",
-        "gender": "male",
+        "Patient": "82fcbec6-7895-4f92-9829-1f4498ee1c8b",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "constipation",
           "muscleWeakness",
@@ -16295,13 +16295,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 96
       },
       {
-        "sampleId": "af7a271b-6c7c-4dc1-a62f-ef4226732900",
-        "gender": "female",
+        "Patient": "af7a271b-6c7c-4dc1-a62f-ef4226732900",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "sensorineuralHearingImpairment",
           "migraine",
@@ -16313,13 +16313,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 67
       },
       {
-        "sampleId": "c6555771-7394-4331-8e72-306a2c62b4e7",
-        "gender": "male",
+        "Patient": "c6555771-7394-4331-8e72-306a2c62b4e7",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "increasedMuscleFatiguability",
           "ophthalmoplegia",
           "migraine",
@@ -16335,13 +16335,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 61
       },
       {
-        "sampleId": "9ebc88b4-1d17-427d-b790-b900da45449f",
-        "gender": "female",
+        "Patient": "9ebc88b4-1d17-427d-b790-b900da45449f",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "delayedSocialDevelopment",
           "increasedMuscleFatiguability",
@@ -16353,13 +16353,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 76
       },
       {
-        "sampleId": "788cad90-bc00-4b6f-8bbc-10f1117fbbec",
-        "gender": "male",
+        "Patient": "788cad90-bc00-4b6f-8bbc-10f1117fbbec",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "diabetesMellitus",
           "ptosis",
@@ -16375,13 +16375,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 31
       },
       {
-        "sampleId": "6e098776-4b94-449e-a600-1ba8f3cd0806",
-        "gender": "female",
+        "Patient": "6e098776-4b94-449e-a600-1ba8f3cd0806",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "intellectualDisability",
           "migraine",
           "peripheralNeuropathy",
@@ -16394,13 +16394,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 32
       },
       {
-        "sampleId": "92617b51-bcea-4ae2-814a-e7c3dca19c26",
-        "gender": "male",
+        "Patient": "92617b51-bcea-4ae2-814a-e7c3dca19c26",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "delayedSocialDevelopment",
           "diabetesMellitus",
@@ -16414,13 +16414,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 27
       },
       {
-        "sampleId": "f71ce233-73db-4ced-8bca-26689fc451e2",
-        "gender": "female",
+        "Patient": "f71ce233-73db-4ced-8bca-26689fc451e2",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "truncalAtaxia",
           "intellectualDisability",
@@ -16435,13 +16435,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 37
       },
       {
-        "sampleId": "4b2093de-ea3f-4495-ad95-a99deb5277fd",
-        "gender": "female",
+        "Patient": "4b2093de-ea3f-4495-ad95-a99deb5277fd",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "diabetesMellitus",
           "increasedMuscleFatiguability"
@@ -16452,13 +16452,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 73
       },
       {
-        "sampleId": "1a657587-7a2e-4603-8ee2-6cce787c2437",
-        "gender": "male",
+        "Patient": "1a657587-7a2e-4603-8ee2-6cce787c2437",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "increasedMuscleFatiguability",
           "intellectualDisability",
@@ -16473,13 +16473,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 19
       },
       {
-        "sampleId": "42073309-ee28-41fe-a261-71670b6fc919",
-        "gender": "female",
+        "Patient": "42073309-ee28-41fe-a261-71670b6fc919",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "leftVentricularNoncompactionCardiomyopathy",
           "rhabdomyolysis",
@@ -16493,13 +16493,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 2
       },
       {
-        "sampleId": "a8f0053e-d1f5-4937-957e-b650e5297bd9",
-        "gender": "female",
+        "Patient": "a8f0053e-d1f5-4937-957e-b650e5297bd9",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "muscleWeakness"
         ],
@@ -16509,13 +16509,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 32
       },
       {
-        "sampleId": "69bb2219-1994-47dd-87d8-18b6265225b1",
-        "gender": "male",
+        "Patient": "69bb2219-1994-47dd-87d8-18b6265225b1",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
           "sensorineuralHearingImpairment",
@@ -16530,13 +16530,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 26
       },
       {
-        "sampleId": "0187998c-d614-47c7-b4f0-bd3665f82fcd",
-        "gender": "female",
+        "Patient": "0187998c-d614-47c7-b4f0-bd3665f82fcd",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "hypertrophicCardiomyopathy",
           "diabetesMellitus",
@@ -16553,13 +16553,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 0
       },
       {
-        "sampleId": "f5754285-c5b6-47f1-9719-5582b8e13d40",
-        "gender": "male",
+        "Patient": "f5754285-c5b6-47f1-9719-5582b8e13d40",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "intellectualDisability",
           "motorDelay",
@@ -16577,13 +16577,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 53
       },
       {
-        "sampleId": "e1163a7d-5b3f-4109-a58d-c731c484ce65",
-        "gender": "female",
+        "Patient": "e1163a7d-5b3f-4109-a58d-c731c484ce65",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "increasedMuscleFatiguability",
           "muscleWeakness",
@@ -16598,13 +16598,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 10
       },
       {
-        "sampleId": "e8300e42-13d4-4359-9981-cf72742f3415",
-        "gender": "male",
+        "Patient": "e8300e42-13d4-4359-9981-cf72742f3415",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "increasedMuscleFatiguability",
@@ -16621,13 +16621,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 45
       },
       {
-        "sampleId": "23f7f91a-e4ea-47da-8faf-99441a3b78ef",
-        "gender": "female",
+        "Patient": "23f7f91a-e4ea-47da-8faf-99441a3b78ef",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "constipation",
           "peripheralNeuropathy",
@@ -16643,13 +16643,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 54
       },
       {
-        "sampleId": "5944b17c-26be-4c3d-b70a-e380040d284d",
-        "gender": "male",
+        "Patient": "5944b17c-26be-4c3d-b70a-e380040d284d",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "constipation",
           "sensorineuralHearingImpairment",
@@ -16664,13 +16664,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 60
       },
       {
-        "sampleId": "41cf808d-cd21-45f2-9c59-62338b11dcb8",
-        "gender": "female",
+        "Patient": "41cf808d-cd21-45f2-9c59-62338b11dcb8",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "constipation",
           "intestinalPseudoObstruction",
@@ -16687,13 +16687,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 21
       },
       {
-        "sampleId": "dad2a83e-12b5-4636-aa44-eaa4f926fd2e",
-        "gender": "female",
+        "Patient": "dad2a83e-12b5-4636-aa44-eaa4f926fd2e",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "intestinalPseudoObstruction",
           "intellectualDisability",
@@ -16707,13 +16707,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 72
       },
       {
-        "sampleId": "46b46165-841b-46be-b599-c3132973d3b6",
-        "gender": "male",
+        "Patient": "46b46165-841b-46be-b599-c3132973d3b6",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
@@ -16727,13 +16727,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 23
       },
       {
-        "sampleId": "37409f1c-9e55-4cd2-958f-868d0cad1ce7",
-        "gender": "male",
+        "Patient": "37409f1c-9e55-4cd2-958f-868d0cad1ce7",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "diabetesMellitus",
           "intellectualDisability",
@@ -16748,13 +16748,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 11
       },
       {
-        "sampleId": "fda6b574-8aa3-491e-ace6-b3718358ee04",
-        "gender": "male",
+        "Patient": "fda6b574-8aa3-491e-ace6-b3718358ee04",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "delayedSocialDevelopment",
           "intestinalPseudoObstruction",
@@ -16767,13 +16767,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 79
       },
       {
-        "sampleId": "bf8e4d14-5589-4d0e-bf93-bca5f59021ff",
-        "gender": "male",
+        "Patient": "bf8e4d14-5589-4d0e-bf93-bca5f59021ff",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "truncalAtaxia",
@@ -16789,13 +16789,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 24
       },
       {
-        "sampleId": "684d4042-b79f-425f-a82b-af15e567a871",
-        "gender": "female",
+        "Patient": "684d4042-b79f-425f-a82b-af15e567a871",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "constipation",
           "increasedMuscleFatiguability",
@@ -16812,13 +16812,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 19
       },
       {
-        "sampleId": "5a0b87a8-039a-4159-8784-090c180e8f70",
-        "gender": "male",
+        "Patient": "5a0b87a8-039a-4159-8784-090c180e8f70",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "intestinalPseudoObstruction",
           "muscleWeakness",
@@ -16837,13 +16837,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 86
       },
       {
-        "sampleId": "f20ed0a0-afb4-47e8-acba-8909c40a7f79",
-        "gender": "female",
+        "Patient": "f20ed0a0-afb4-47e8-acba-8909c40a7f79",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "intestinalPseudoObstruction",
           "seizures",
@@ -16856,13 +16856,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 5
       },
       {
-        "sampleId": "57017460-dd4b-4701-803c-11f0e0509a12",
-        "gender": "female",
+        "Patient": "57017460-dd4b-4701-803c-11f0e0509a12",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "migraine",
           "peripheralNeuropathy",
           "developmentalRegression"
@@ -16873,13 +16873,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 24
       },
       {
-        "sampleId": "b5a729a5-48fa-4d3c-93fe-c77d146821ed",
-        "gender": "female",
+        "Patient": "b5a729a5-48fa-4d3c-93fe-c77d146821ed",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
           "delayedSocialDevelopment",
@@ -16894,13 +16894,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 55
       },
       {
-        "sampleId": "bed85165-2f69-44aa-86fc-bbbb729b7616",
-        "gender": "male",
+        "Patient": "bed85165-2f69-44aa-86fc-bbbb729b7616",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
           "sensorineuralHearingImpairment",
@@ -16915,13 +16915,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 68
       },
       {
-        "sampleId": "310b8180-eea4-45c8-93d1-1be33d7cf7e4",
-        "gender": "female",
+        "Patient": "310b8180-eea4-45c8-93d1-1be33d7cf7e4",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "diabetesMellitus",
           "developmentalRegression",
@@ -16936,13 +16936,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 68
       },
       {
-        "sampleId": "032afb75-1373-4706-b6c2-73fc94b020ec",
-        "gender": "female",
+        "Patient": "032afb75-1373-4706-b6c2-73fc94b020ec",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "dilatedCardiomyopathy",
@@ -16959,13 +16959,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 26
       },
       {
-        "sampleId": "6a8dd29e-d331-4b2d-98c3-7b6fa3f5d867",
-        "gender": "female",
+        "Patient": "6a8dd29e-d331-4b2d-98c3-7b6fa3f5d867",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "diabetesMellitus",
           "intestinalPseudoObstruction",
@@ -16981,13 +16981,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 3
       },
       {
-        "sampleId": "37c244d0-4ab8-43ba-af56-cea91c3de5bc",
-        "gender": "male",
+        "Patient": "37c244d0-4ab8-43ba-af56-cea91c3de5bc",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "intestinalPseudoObstruction",
           "migraine",
           "corticalVisualImpairment"
@@ -16998,13 +16998,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 89
       },
       {
-        "sampleId": "e73b95fd-8328-4fed-8744-94e20bf9ad7b",
-        "gender": "female",
+        "Patient": "e73b95fd-8328-4fed-8744-94e20bf9ad7b",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "sensorineuralHearingImpairment",
           "intellectualDisability",
@@ -17017,13 +17017,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 25
       },
       {
-        "sampleId": "8a3d61b7-69f3-4276-b25b-55cc3fc3b254",
-        "gender": "female",
+        "Patient": "8a3d61b7-69f3-4276-b25b-55cc3fc3b254",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "dilatedCardiomyopathy",
@@ -17041,13 +17041,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 16
       },
       {
-        "sampleId": "245e583d-5ecf-4571-8cfa-4ccf1ad00f5d",
-        "gender": "female",
+        "Patient": "245e583d-5ecf-4571-8cfa-4ccf1ad00f5d",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "increasedMuscleFatiguability",
           "migraine",
@@ -17064,13 +17064,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 33
       },
       {
-        "sampleId": "e010bd4b-31a2-424c-8d9f-5b4367ae3fd6",
-        "gender": "female",
+        "Patient": "e010bd4b-31a2-424c-8d9f-5b4367ae3fd6",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "sensorineuralHearingImpairment",
           "increasedMuscleFatiguability",
@@ -17085,13 +17085,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 9
       },
       {
-        "sampleId": "a5ee9a8c-1afd-4855-b8d2-8fde0b929ec4",
-        "gender": "male",
+        "Patient": "a5ee9a8c-1afd-4855-b8d2-8fde0b929ec4",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "sensorineuralHearingImpairment",
           "peripheralNeuropathy",
@@ -17105,13 +17105,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 23
       },
       {
-        "sampleId": "c4c3894a-a5bc-45dd-9f4b-5ff4e3123f62",
-        "gender": "female",
+        "Patient": "c4c3894a-a5bc-45dd-9f4b-5ff4e3123f62",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "intestinalPseudoObstruction",
           "motorDelay",
@@ -17127,13 +17127,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 11
       },
       {
-        "sampleId": "9338c747-a924-4d7a-b87a-ccbe8fd001ae",
-        "gender": "female",
+        "Patient": "9338c747-a924-4d7a-b87a-ccbe8fd001ae",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "motorDelay",
           "migraine",
           "renalTubularAcidosis",
@@ -17150,13 +17150,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 87
       },
       {
-        "sampleId": "d606ec0d-ec60-40b9-90c0-e7a3b77fd344",
-        "gender": "female",
+        "Patient": "d606ec0d-ec60-40b9-90c0-e7a3b77fd344",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "delayedSocialDevelopment",
@@ -17172,13 +17172,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 64
       },
       {
-        "sampleId": "77dbdcca-46ed-4ff5-a9d8-dc8e11fd4cc7",
-        "gender": "female",
+        "Patient": "77dbdcca-46ed-4ff5-a9d8-dc8e11fd4cc7",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "increasedMuscleFatiguability",
           "intellectualDisability",
@@ -17197,13 +17197,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 11
       },
       {
-        "sampleId": "c45f3a28-3175-4893-8a7c-7c2414237fde",
-        "gender": "female",
+        "Patient": "c45f3a28-3175-4893-8a7c-7c2414237fde",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "muscleWeakness",
           "ptosis",
@@ -17218,13 +17218,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 95
       },
       {
-        "sampleId": "e0d2bdd5-b860-4ab6-8cc5-8e15abfc9a9f",
-        "gender": "male",
+        "Patient": "e0d2bdd5-b860-4ab6-8cc5-8e15abfc9a9f",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "muscleWeakness",
           "ophthalmoplegia",
           "developmentalRegression",
@@ -17236,13 +17236,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 58
       },
       {
-        "sampleId": "c9b467af-27c8-4460-b713-a3dd69f47047",
-        "gender": "female",
+        "Patient": "c9b467af-27c8-4460-b713-a3dd69f47047",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "delayedSocialDevelopment",
@@ -17260,13 +17260,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 72
       },
       {
-        "sampleId": "218a70a3-d95c-40b3-9e06-321bafda06f2",
-        "gender": "male",
+        "Patient": "218a70a3-d95c-40b3-9e06-321bafda06f2",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "intellectualDisability",
           "renalTubularAcidosis",
@@ -17284,13 +17284,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 39
       },
       {
-        "sampleId": "beea6b42-c570-456d-bcaf-50257376afbe",
-        "gender": "female",
+        "Patient": "beea6b42-c570-456d-bcaf-50257376afbe",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
           "sensorineuralHearingImpairment",
@@ -17305,13 +17305,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 89
       },
       {
-        "sampleId": "de79694b-2a21-46e7-a8d2-a10ee6cee3d7",
-        "gender": "male",
+        "Patient": "de79694b-2a21-46e7-a8d2-a10ee6cee3d7",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "leftVentricularNoncompactionCardiomyopathy",
           "increasedMuscleFatiguability"
@@ -17322,13 +17322,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 47
       },
       {
-        "sampleId": "0f96a71b-339a-4c68-9020-43e3f207cf1f",
-        "gender": "male",
+        "Patient": "0f96a71b-339a-4c68-9020-43e3f207cf1f",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "diabetesMellitus",
           "peripheralNeuropathy",
@@ -17342,13 +17342,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 95
       },
       {
-        "sampleId": "fd5348b9-51c8-40cf-a3ed-96164255b33a",
-        "gender": "male",
+        "Patient": "fd5348b9-51c8-40cf-a3ed-96164255b33a",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "diabetesMellitus",
           "intestinalPseudoObstruction",
           "muscleWeakness",
@@ -17363,13 +17363,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 21
       },
       {
-        "sampleId": "8ccefb59-d30c-4f38-9fd1-c9b7af2085b7",
-        "gender": "male",
+        "Patient": "8ccefb59-d30c-4f38-9fd1-c9b7af2085b7",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "intellectualDisability",
           "muscleWeakness",
@@ -17385,13 +17385,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 11
       },
       {
-        "sampleId": "59175c0f-da58-4272-98fb-497fa1932c0c",
-        "gender": "male",
+        "Patient": "59175c0f-da58-4272-98fb-497fa1932c0c",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "truncalAtaxia",
           "delayedSocialDevelopment",
@@ -17406,13 +17406,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 1
       },
       {
-        "sampleId": "265d2993-e194-4d26-98d2-9e1e74682d26",
-        "gender": "female",
+        "Patient": "265d2993-e194-4d26-98d2-9e1e74682d26",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "diabetesMellitus",
           "intestinalPseudoObstruction",
@@ -17428,13 +17428,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 60
       },
       {
-        "sampleId": "d3416893-5b1a-498b-b73d-9b2997f9f572",
-        "gender": "male",
+        "Patient": "d3416893-5b1a-498b-b73d-9b2997f9f572",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "truncalAtaxia",
           "diabetesMellitus",
@@ -17448,13 +17448,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 43
       },
       {
-        "sampleId": "f445865b-0144-4dcc-b5e8-121cc02f5f33",
-        "gender": "male",
+        "Patient": "f445865b-0144-4dcc-b5e8-121cc02f5f33",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "intellectualDisability",
@@ -17470,13 +17470,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 21
       },
       {
-        "sampleId": "e2d077b1-92b6-4351-9877-f13ac396a800",
-        "gender": "female",
+        "Patient": "e2d077b1-92b6-4351-9877-f13ac396a800",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "diabetesMellitus",
           "intestinalPseudoObstruction",
           "muscleWeakness",
@@ -17491,13 +17491,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 32
       },
       {
-        "sampleId": "b6b5594b-f19b-497c-9e14-ebd74f1479b7",
-        "gender": "male",
+        "Patient": "b6b5594b-f19b-497c-9e14-ebd74f1479b7",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "sensorineuralHearingImpairment",
@@ -17519,13 +17519,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 4
       },
       {
-        "sampleId": "eedd3a79-955d-4aad-a438-fbe1c4792446",
-        "gender": "female",
+        "Patient": "eedd3a79-955d-4aad-a438-fbe1c4792446",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "increasedMuscleFatiguability",
           "intestinalPseudoObstruction",
@@ -17537,13 +17537,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 83
       },
       {
-        "sampleId": "10b9b40e-3a57-447f-9a9c-9889bfb5f1db",
-        "gender": "female",
+        "Patient": "10b9b40e-3a57-447f-9a9c-9889bfb5f1db",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
           "diabetesMellitus",
@@ -17562,13 +17562,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 17
       },
       {
-        "sampleId": "9c58182c-0d3b-4e3d-a634-e669d7d023ba",
-        "gender": "female",
+        "Patient": "9c58182c-0d3b-4e3d-a634-e669d7d023ba",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "raggedRedMuscleFibers",
           "strokeLikeEpisode",
@@ -17581,13 +17581,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 77
       },
       {
-        "sampleId": "1c6fae3c-9b7a-419a-a588-05765192f8a1",
-        "gender": "male",
+        "Patient": "1c6fae3c-9b7a-419a-a588-05765192f8a1",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "hypertrophicCardiomyopathy",
           "motorDelay",
@@ -17601,13 +17601,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 11
       },
       {
-        "sampleId": "fd1f8751-8a62-4ad9-bf1d-1e7847081955",
-        "gender": "female",
+        "Patient": "fd1f8751-8a62-4ad9-bf1d-1e7847081955",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -17625,13 +17625,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 14
       },
       {
-        "sampleId": "b6f29f58-01b4-47b5-8761-f82135f31499",
-        "gender": "female",
+        "Patient": "b6f29f58-01b4-47b5-8761-f82135f31499",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "dilatedCardiomyopathy",
           "hypertrophicCardiomyopathy",
@@ -17650,13 +17650,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 23
       },
       {
-        "sampleId": "6d7121c7-faa6-4630-822d-57adac49c21f",
-        "gender": "male",
+        "Patient": "6d7121c7-faa6-4630-822d-57adac49c21f",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "increasedMuscleFatiguability",
           "motorDelay",
@@ -17673,13 +17673,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 40
       },
       {
-        "sampleId": "b28745c5-1a57-4211-8249-0d91f75fbe5e",
-        "gender": "male",
+        "Patient": "b28745c5-1a57-4211-8249-0d91f75fbe5e",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "sensorineuralHearingImpairment",
           "diabetesMellitus",
@@ -17695,13 +17695,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 68
       },
       {
-        "sampleId": "d1a4b835-26d1-4f0d-8170-fbcffe503dcd",
-        "gender": "male",
+        "Patient": "d1a4b835-26d1-4f0d-8170-fbcffe503dcd",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -17718,13 +17718,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 42
       },
       {
-        "sampleId": "902f1516-4195-46d3-935c-8175620f0240",
-        "gender": "male",
+        "Patient": "902f1516-4195-46d3-935c-8175620f0240",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "sensorineuralHearingImpairment",
           "motorDelay",
@@ -17739,13 +17739,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 14
       },
       {
-        "sampleId": "93abf860-d7df-4ea1-960a-a7df85da924c",
-        "gender": "female",
+        "Patient": "93abf860-d7df-4ea1-960a-a7df85da924c",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "migraine",
           "renalTubularAcidosis",
           "apnea",
@@ -17758,13 +17758,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 75
       },
       {
-        "sampleId": "97e6ca7e-3bea-4b42-a32c-db32f3c62d6f",
-        "gender": "female",
+        "Patient": "97e6ca7e-3bea-4b42-a32c-db32f3c62d6f",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "increasedMuscleFatiguability",
           "intestinalPseudoObstruction",
           "migraine",
@@ -17779,13 +17779,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 99
       },
       {
-        "sampleId": "60f5fc30-f8a3-464b-8be0-a84f9f3de4b1",
-        "gender": "female",
+        "Patient": "60f5fc30-f8a3-464b-8be0-a84f9f3de4b1",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "diabetesMellitus",
           "peripheralNeuropathy",
@@ -17797,13 +17797,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 55
       },
       {
-        "sampleId": "acf9bffe-383b-4050-9bd0-4dbfa2f354f0",
-        "gender": "male",
+        "Patient": "acf9bffe-383b-4050-9bd0-4dbfa2f354f0",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "intellectualDisability",
           "ophthalmoplegia",
@@ -17817,13 +17817,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 19
       },
       {
-        "sampleId": "2372ac2e-e9f3-4748-a687-e76724b3a990",
-        "gender": "female",
+        "Patient": "2372ac2e-e9f3-4748-a687-e76724b3a990",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "delayedSocialDevelopment",
           "migraine",
@@ -17840,13 +17840,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 7
       },
       {
-        "sampleId": "22628c9b-6ef7-4a06-8881-a8b7552fac6c",
-        "gender": "female",
+        "Patient": "22628c9b-6ef7-4a06-8881-a8b7552fac6c",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "motorDelay",
           "ptosis",
@@ -17861,13 +17861,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 44
       },
       {
-        "sampleId": "9e38df69-f4d5-4faf-8e3f-61736ba4c243",
-        "gender": "female",
+        "Patient": "9e38df69-f4d5-4faf-8e3f-61736ba4c243",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "increasedMuscleFatiguability",
@@ -17882,13 +17882,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 17
       },
       {
-        "sampleId": "822ab46a-c621-456a-8d38-8d2026e00b9c",
-        "gender": "female",
+        "Patient": "822ab46a-c621-456a-8d38-8d2026e00b9c",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -17906,13 +17906,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 17
       },
       {
-        "sampleId": "13b96ede-4629-46d2-854d-a412c4985489",
-        "gender": "male",
+        "Patient": "13b96ede-4629-46d2-854d-a412c4985489",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "muscleWeakness",
@@ -17928,13 +17928,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 43
       },
       {
-        "sampleId": "9eef8be6-cbab-436a-93b9-87076919c9d8",
-        "gender": "male",
+        "Patient": "9eef8be6-cbab-436a-93b9-87076919c9d8",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "diabetesMellitus",
           "intellectualDisability",
           "muscularHypotonia"
@@ -17945,13 +17945,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 94
       },
       {
-        "sampleId": "798bd747-173e-4fe6-a13a-bb204875022d",
-        "gender": "female",
+        "Patient": "798bd747-173e-4fe6-a13a-bb204875022d",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "intestinalPseudoObstruction",
           "strokeLikeEpisode"
@@ -17962,13 +17962,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 37
       },
       {
-        "sampleId": "1f79bf76-bfad-4710-bb86-44c69c4d270b",
-        "gender": "female",
+        "Patient": "1f79bf76-bfad-4710-bb86-44c69c4d270b",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
           "constipation",
@@ -17989,13 +17989,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 28
       },
       {
-        "sampleId": "0b69cd3d-6d07-4c65-804c-db8b68b5f684",
-        "gender": "male",
+        "Patient": "0b69cd3d-6d07-4c65-804c-db8b68b5f684",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "dilatedCardiomyopathy",
           "increasedMuscleFatiguability",
@@ -18008,13 +18008,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 55
       },
       {
-        "sampleId": "596cead3-5375-4b99-afca-d96a4c584ad2",
-        "gender": "female",
+        "Patient": "596cead3-5375-4b99-afca-d96a4c584ad2",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
@@ -18030,13 +18030,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 68
       },
       {
-        "sampleId": "9a4cccb8-8498-47ba-87e5-1d463b43f854",
-        "gender": "male",
+        "Patient": "9a4cccb8-8498-47ba-87e5-1d463b43f854",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "increasedMuscleFatiguability",
           "motorDelay",
@@ -18051,13 +18051,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 73
       },
       {
-        "sampleId": "5ddac333-f749-402f-9cb2-8e97c4179bff",
-        "gender": "male",
+        "Patient": "5ddac333-f749-402f-9cb2-8e97c4179bff",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "sensorineuralHearingImpairment",
           "ptosis",
@@ -18071,13 +18071,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 44
       },
       {
-        "sampleId": "8741f21c-a4d9-4248-af22-b34dd69d6fd0",
-        "gender": "female",
+        "Patient": "8741f21c-a4d9-4248-af22-b34dd69d6fd0",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "constipation",
@@ -18094,13 +18094,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 78
       },
       {
-        "sampleId": "06415b73-0828-4779-83c3-283ba6b19183",
-        "gender": "female",
+        "Patient": "06415b73-0828-4779-83c3-283ba6b19183",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "delayedSocialDevelopment",
           "increasedMuscleFatiguability",
@@ -18114,13 +18114,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 50
       },
       {
-        "sampleId": "41c813fe-c9e9-4379-8ffa-1863e90e6504",
-        "gender": "female",
+        "Patient": "41c813fe-c9e9-4379-8ffa-1863e90e6504",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "sensorineuralHearingImpairment",
           "intestinalPseudoObstruction",
@@ -18134,13 +18134,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 21
       },
       {
-        "sampleId": "459b6008-373c-4b26-a026-d3b2c46323dc",
-        "gender": "male",
+        "Patient": "459b6008-373c-4b26-a026-d3b2c46323dc",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "developmentalRegression",
           "apnea",
           "raggedRedMuscleFibers",
@@ -18154,13 +18154,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 4
       },
       {
-        "sampleId": "62dfa4a4-78a3-4280-a2f1-9eb9af4f15b8",
-        "gender": "female",
+        "Patient": "62dfa4a4-78a3-4280-a2f1-9eb9af4f15b8",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "diabetesMellitus",
           "intestinalPseudoObstruction",
@@ -18175,13 +18175,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 2
       },
       {
-        "sampleId": "959c3a14-f4b1-40e5-92c7-be1e4eae503f",
-        "gender": "female",
+        "Patient": "959c3a14-f4b1-40e5-92c7-be1e4eae503f",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "dilatedCardiomyopathy",
           "truncalAtaxia",
@@ -18198,13 +18198,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 99
       },
       {
-        "sampleId": "b6c08b7d-0832-43ad-8cff-689b828ae7e9",
-        "gender": "male",
+        "Patient": "b6c08b7d-0832-43ad-8cff-689b828ae7e9",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "intellectualDisability",
           "motorDelay",
           "renalTubularAcidosis",
@@ -18218,13 +18218,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 86
       },
       {
-        "sampleId": "b775bf0b-e80e-47bc-a464-5e6df98824ae",
-        "gender": "male",
+        "Patient": "b775bf0b-e80e-47bc-a464-5e6df98824ae",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "developmentalRegression",
           "delayedSpeechAndLanguageDevelopment"
@@ -18235,13 +18235,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 0
       },
       {
-        "sampleId": "ee6daea6-27d0-40d8-babd-968fcb21d27e",
-        "gender": "male",
+        "Patient": "ee6daea6-27d0-40d8-babd-968fcb21d27e",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "sensorineuralHearingImpairment",
           "intellectualDisability",
@@ -18255,13 +18255,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 64
       },
       {
-        "sampleId": "108e78b4-1558-42b3-94d9-802fb221899d",
-        "gender": "male",
+        "Patient": "108e78b4-1558-42b3-94d9-802fb221899d",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "constipation",
           "intestinalPseudoObstruction",
@@ -18277,13 +18277,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 83
       },
       {
-        "sampleId": "e0ae6026-d67d-48e1-9eee-a451d20f1944",
-        "gender": "female",
+        "Patient": "e0ae6026-d67d-48e1-9eee-a451d20f1944",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "constipation",
           "sensorineuralHearingImpairment",
@@ -18298,13 +18298,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 59
       },
       {
-        "sampleId": "2558451c-2b8e-4464-bef4-dda667e25c88",
-        "gender": "female",
+        "Patient": "2558451c-2b8e-4464-bef4-dda667e25c88",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "motorDelay",
           "ptosis",
@@ -18319,13 +18319,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 62
       },
       {
-        "sampleId": "5550f39e-3a33-464c-86d5-bb5d7ae90fb5",
-        "gender": "female",
+        "Patient": "5550f39e-3a33-464c-86d5-bb5d7ae90fb5",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "dilatedCardiomyopathy",
           "developmentalRegression",
@@ -18338,13 +18338,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 26
       },
       {
-        "sampleId": "e989ef2b-705e-4333-b79a-e80fa8b40e0a",
-        "gender": "female",
+        "Patient": "e989ef2b-705e-4333-b79a-e80fa8b40e0a",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "intestinalPseudoObstruction",
           "developmentalRegression",
@@ -18359,13 +18359,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 90
       },
       {
-        "sampleId": "644380a3-ecf9-4945-867d-6f43251a15bf",
-        "gender": "female",
+        "Patient": "644380a3-ecf9-4945-867d-6f43251a15bf",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "constipation",
@@ -18382,13 +18382,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 22
       },
       {
-        "sampleId": "f4ebe2c7-394a-4c65-8193-3daf2ec5c0b7",
-        "gender": "male",
+        "Patient": "f4ebe2c7-394a-4c65-8193-3daf2ec5c0b7",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
           "muscleWeakness",
@@ -18406,13 +18406,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 45
       },
       {
-        "sampleId": "ccaa0cbc-408c-4c99-afb2-800df033d329",
-        "gender": "female",
+        "Patient": "ccaa0cbc-408c-4c99-afb2-800df033d329",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
           "delayedSocialDevelopment",
@@ -18430,13 +18430,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 96
       },
       {
-        "sampleId": "33c436f2-5169-47e3-8316-b0ee4a2b770e",
-        "gender": "female",
+        "Patient": "33c436f2-5169-47e3-8316-b0ee4a2b770e",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "sensorineuralHearingImpairment",
           "intellectualDisability",
@@ -18453,13 +18453,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 78
       },
       {
-        "sampleId": "56836052-d754-4609-959a-f43838e82c32",
-        "gender": "male",
+        "Patient": "56836052-d754-4609-959a-f43838e82c32",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "constipation",
           "intellectualDisability",
@@ -18472,13 +18472,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 51
       },
       {
-        "sampleId": "18c72c54-3f87-43cb-b947-f708f2f6b4f4",
-        "gender": "male",
+        "Patient": "18c72c54-3f87-43cb-b947-f708f2f6b4f4",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "constipation",
           "intellectualDisability",
@@ -18495,13 +18495,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 24
       },
       {
-        "sampleId": "bbb34ffe-5dcd-4bfb-a8d9-e84c0af30ef7",
-        "gender": "female",
+        "Patient": "bbb34ffe-5dcd-4bfb-a8d9-e84c0af30ef7",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
           "sensorineuralHearingImpairment",
@@ -18513,13 +18513,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 41
       },
       {
-        "sampleId": "880612ab-6f49-4b86-99e0-32e773126c78",
-        "gender": "male",
+        "Patient": "880612ab-6f49-4b86-99e0-32e773126c78",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "motorDelay",
           "muscleWeakness",
@@ -18537,13 +18537,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 45
       },
       {
-        "sampleId": "f502d39a-52c8-4093-8082-def9ed330d11",
-        "gender": "male",
+        "Patient": "f502d39a-52c8-4093-8082-def9ed330d11",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intellectualDisability",
           "migraine",
           "developmentalRegression",
@@ -18557,13 +18557,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 51
       },
       {
-        "sampleId": "3c0d5012-a119-421f-87fd-914feb5b6b1b",
-        "gender": "female",
+        "Patient": "3c0d5012-a119-421f-87fd-914feb5b6b1b",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -18576,13 +18576,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 56
       },
       {
-        "sampleId": "58a13c73-d3f5-48cc-a571-da0c608dc80c",
-        "gender": "female",
+        "Patient": "58a13c73-d3f5-48cc-a571-da0c608dc80c",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "delayedSocialDevelopment",
@@ -18600,13 +18600,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 48
       },
       {
-        "sampleId": "a10d80b3-413a-4731-9325-99251240a4c4",
-        "gender": "male",
+        "Patient": "a10d80b3-413a-4731-9325-99251240a4c4",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "renalTubularAcidosis",
           "seizures",
@@ -18618,13 +18618,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 57
       },
       {
-        "sampleId": "6711975e-c6d6-477e-a4bf-1f3910dd9ee8",
-        "gender": "male",
+        "Patient": "6711975e-c6d6-477e-a4bf-1f3910dd9ee8",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "intestinalPseudoObstruction",
           "peripheralNeuropathy",
@@ -18639,13 +18639,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 60
       },
       {
-        "sampleId": "424e8557-25d1-46e2-893d-61e214b14c2e",
-        "gender": "female",
+        "Patient": "424e8557-25d1-46e2-893d-61e214b14c2e",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "constipation",
           "muscleWeakness",
@@ -18660,13 +18660,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 47
       },
       {
-        "sampleId": "6521c758-7a5b-40b8-86cd-ec5285a1a5a4",
-        "gender": "male",
+        "Patient": "6521c758-7a5b-40b8-86cd-ec5285a1a5a4",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "diabetesMellitus",
           "apnea",
           "opticAtrophy"
@@ -18677,13 +18677,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 39
       },
       {
-        "sampleId": "b6805ccf-881b-4cd3-960b-b261a2332849",
-        "gender": "male",
+        "Patient": "b6805ccf-881b-4cd3-960b-b261a2332849",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
           "increasedMuscleFatiguability",
@@ -18698,13 +18698,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 20
       },
       {
-        "sampleId": "2d9ff2a2-6ba1-4d29-902f-90ce23eb4b4c",
-        "gender": "female",
+        "Patient": "2d9ff2a2-6ba1-4d29-902f-90ce23eb4b4c",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
           "constipation",
@@ -18720,13 +18720,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 78
       },
       {
-        "sampleId": "2b4b6701-d34b-4d0d-9cae-d6d7c317fb4b",
-        "gender": "female",
+        "Patient": "2b4b6701-d34b-4d0d-9cae-d6d7c317fb4b",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "increasedMuscleFatiguability",
           "intestinalPseudoObstruction",
@@ -18741,13 +18741,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 99
       },
       {
-        "sampleId": "105f5ac3-e732-43fa-acc9-457d6c601d23",
-        "gender": "female",
+        "Patient": "105f5ac3-e732-43fa-acc9-457d6c601d23",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "sensorineuralHearingImpairment",
           "motorDelay",
@@ -18763,13 +18763,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 8
       },
       {
-        "sampleId": "b196c032-aae9-4505-8364-fb203dec8b96",
-        "gender": "male",
+        "Patient": "b196c032-aae9-4505-8364-fb203dec8b96",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "sensorineuralHearingImpairment",
           "increasedMuscleFatiguability",
@@ -18782,13 +18782,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 26
       },
       {
-        "sampleId": "21f0001d-35f7-41c8-a7b0-ff7d2af8fd53",
-        "gender": "male",
+        "Patient": "21f0001d-35f7-41c8-a7b0-ff7d2af8fd53",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "intellectualDisability",
           "ptosis",
@@ -18805,13 +18805,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 81
       },
       {
-        "sampleId": "23463d91-3057-4a87-b305-1ef9c2062f7e",
-        "gender": "male",
+        "Patient": "23463d91-3057-4a87-b305-1ef9c2062f7e",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "sensorineuralHearingImpairment",
           "motorDelay",
@@ -18829,13 +18829,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 63
       },
       {
-        "sampleId": "47e09055-a65b-4322-8329-d989e55baddc",
-        "gender": "male",
+        "Patient": "47e09055-a65b-4322-8329-d989e55baddc",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "peripheralNeuropathy",
           "apnea",
@@ -18850,13 +18850,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 6
       },
       {
-        "sampleId": "15fdd404-5492-43d8-93b3-64c7e1e2726f",
-        "gender": "female",
+        "Patient": "15fdd404-5492-43d8-93b3-64c7e1e2726f",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "intellectualDisability",
           "muscleWeakness",
@@ -18868,13 +18868,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 11
       },
       {
-        "sampleId": "bb85f263-f0cb-44ee-ab09-e26dce73dad6",
-        "gender": "male",
+        "Patient": "bb85f263-f0cb-44ee-ab09-e26dce73dad6",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "motorDelay",
           "migraine",
@@ -18889,13 +18889,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 54
       },
       {
-        "sampleId": "e03ddc7a-698d-4560-8315-e43a9ab4ceea",
-        "gender": "male",
+        "Patient": "e03ddc7a-698d-4560-8315-e43a9ab4ceea",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "diabetesMellitus",
           "intestinalPseudoObstruction",
@@ -18912,13 +18912,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 10
       },
       {
-        "sampleId": "80abb19b-d1d9-40bc-8d1d-f6a096cb2958",
-        "gender": "female",
+        "Patient": "80abb19b-d1d9-40bc-8d1d-f6a096cb2958",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "ptosis",
           "peripheralNeuropathy",
@@ -18933,13 +18933,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 86
       },
       {
-        "sampleId": "5f3d8f91-bbc7-4ea4-914d-60f3f608320f",
-        "gender": "female",
+        "Patient": "5f3d8f91-bbc7-4ea4-914d-60f3f608320f",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -18958,13 +18958,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 1
       },
       {
-        "sampleId": "66a7fffe-1da8-4809-9338-d69794050414",
-        "gender": "male",
+        "Patient": "66a7fffe-1da8-4809-9338-d69794050414",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "sensorineuralHearingImpairment",
           "intestinalPseudoObstruction",
@@ -18981,13 +18981,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 60
       },
       {
-        "sampleId": "4bfd379e-cbeb-4acb-82d9-172bcd93e370",
-        "gender": "female",
+        "Patient": "4bfd379e-cbeb-4acb-82d9-172bcd93e370",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "constipation",
           "diabetesMellitus",
@@ -19005,13 +19005,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 51
       },
       {
-        "sampleId": "9cd67f57-b845-4349-801e-aa36849973a9",
-        "gender": "male",
+        "Patient": "9cd67f57-b845-4349-801e-aa36849973a9",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "hypertrophicCardiomyopathy",
@@ -19030,13 +19030,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 74
       },
       {
-        "sampleId": "423369a5-2551-42f9-b387-dfd60bd18ce7",
-        "gender": "male",
+        "Patient": "423369a5-2551-42f9-b387-dfd60bd18ce7",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
@@ -19056,13 +19056,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 19
       },
       {
-        "sampleId": "6b60dcc7-5088-488d-bc9a-474e6a4ade89",
-        "gender": "male",
+        "Patient": "6b60dcc7-5088-488d-bc9a-474e6a4ade89",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "sensorineuralHearingImpairment",
           "peripheralNeuropathy",
@@ -19076,13 +19076,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 46
       },
       {
-        "sampleId": "f2cc3eb4-8d72-42c1-bd91-cb6c1500f420",
-        "gender": "female",
+        "Patient": "f2cc3eb4-8d72-42c1-bd91-cb6c1500f420",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "sensorineuralHearingImpairment",
           "increasedMuscleFatiguability",
@@ -19096,13 +19096,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 17
       },
       {
-        "sampleId": "814b66e0-a8e4-4c00-93a9-8e27aca07067",
-        "gender": "female",
+        "Patient": "814b66e0-a8e4-4c00-93a9-8e27aca07067",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -19117,13 +19117,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 91
       },
       {
-        "sampleId": "921a4abb-0607-4f38-b1da-2db7f9cb7dd7",
-        "gender": "male",
+        "Patient": "921a4abb-0607-4f38-b1da-2db7f9cb7dd7",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "diabetesMellitus",
@@ -19138,13 +19138,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 42
       },
       {
-        "sampleId": "dec7fdef-4b73-44f5-8744-2bfc30ce413d",
-        "gender": "female",
+        "Patient": "dec7fdef-4b73-44f5-8744-2bfc30ce413d",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "migraine",
           "peripheralNeuropathy",
@@ -19158,13 +19158,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 62
       },
       {
-        "sampleId": "0cae3ef5-2892-4de2-b66a-53e702e66c41",
-        "gender": "male",
+        "Patient": "0cae3ef5-2892-4de2-b66a-53e702e66c41",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "constipation",
           "intellectualDisability",
@@ -19180,13 +19180,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 48
       },
       {
-        "sampleId": "b83ad113-9623-4463-bead-1077a28bd697",
-        "gender": "female",
+        "Patient": "b83ad113-9623-4463-bead-1077a28bd697",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -19200,13 +19200,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 7
       },
       {
-        "sampleId": "fba2820c-cf34-4d12-bf8f-3181e0d31a9f",
-        "gender": "male",
+        "Patient": "fba2820c-cf34-4d12-bf8f-3181e0d31a9f",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "diabetesMellitus",
           "intestinalPseudoObstruction",
@@ -19223,13 +19223,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 97
       },
       {
-        "sampleId": "d29f48f8-7f4a-4a81-a246-a2633fc7c414",
-        "gender": "male",
+        "Patient": "d29f48f8-7f4a-4a81-a246-a2633fc7c414",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "motorDelay",
           "developmentalRegression",
@@ -19244,13 +19244,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 11
       },
       {
-        "sampleId": "52d65e5e-3b09-4433-996f-49e6e5c04a75",
-        "gender": "female",
+        "Patient": "52d65e5e-3b09-4433-996f-49e6e5c04a75",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "intestinalPseudoObstruction",
@@ -19264,13 +19264,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 84
       },
       {
-        "sampleId": "ed1cfb6a-e7bc-4a67-aef5-a4d0afd3a76a",
-        "gender": "male",
+        "Patient": "ed1cfb6a-e7bc-4a67-aef5-a4d0afd3a76a",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "diabetesMellitus",
           "renalTubularAcidosis",
@@ -19282,13 +19282,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 81
       },
       {
-        "sampleId": "a6b5e5d6-560a-495b-9058-66870908d928",
-        "gender": "male",
+        "Patient": "a6b5e5d6-560a-495b-9058-66870908d928",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
           "sensorineuralHearingImpairment",
@@ -19304,13 +19304,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 58
       },
       {
-        "sampleId": "f3a6fa5e-178e-4c63-a269-425de5227059",
-        "gender": "female",
+        "Patient": "f3a6fa5e-178e-4c63-a269-425de5227059",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "diabetesMellitus",
           "migraine",
@@ -19324,13 +19324,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 21
       },
       {
-        "sampleId": "0e464bfe-99ae-4008-a022-6b381d83a5bc",
-        "gender": "male",
+        "Patient": "0e464bfe-99ae-4008-a022-6b381d83a5bc",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "intestinalPseudoObstruction",
           "intellectualDisability",
@@ -19344,13 +19344,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 24
       },
       {
-        "sampleId": "2d67a9e4-ee07-47f0-8820-8213a23b4072",
-        "gender": "female",
+        "Patient": "2d67a9e4-ee07-47f0-8820-8213a23b4072",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intestinalPseudoObstruction",
           "seizures",
           "spasticity",
@@ -19362,13 +19362,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 21
       },
       {
-        "sampleId": "2db57474-2369-4855-b659-73b6cea4009a",
-        "gender": "male",
+        "Patient": "2db57474-2369-4855-b659-73b6cea4009a",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "increasedMuscleFatiguability",
           "glaucoma"
@@ -19379,13 +19379,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 90
       },
       {
-        "sampleId": "6068f0dc-69af-434a-9606-b8188e7a319a",
-        "gender": "female",
+        "Patient": "6068f0dc-69af-434a-9606-b8188e7a319a",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "delayedSocialDevelopment",
           "ophthalmoplegia",
@@ -19402,13 +19402,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 87
       },
       {
-        "sampleId": "69104d22-2208-47a2-846f-ca4bec77df70",
-        "gender": "male",
+        "Patient": "69104d22-2208-47a2-846f-ca4bec77df70",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "motorDelay",
@@ -19423,13 +19423,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 77
       },
       {
-        "sampleId": "11ffcd5c-1b1e-46ae-83ca-59ccf4298870",
-        "gender": "female",
+        "Patient": "11ffcd5c-1b1e-46ae-83ca-59ccf4298870",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "truncalAtaxia",
           "constipation",
@@ -19445,13 +19445,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 18
       },
       {
-        "sampleId": "b9e60bae-4bda-4fcf-86b4-b4557c451222",
-        "gender": "male",
+        "Patient": "b9e60bae-4bda-4fcf-86b4-b4557c451222",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "intestinalPseudoObstruction",
           "cataract",
@@ -19463,13 +19463,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 8
       },
       {
-        "sampleId": "401de012-f480-4bea-b211-4a82dd24b5d4",
-        "gender": "female",
+        "Patient": "401de012-f480-4bea-b211-4a82dd24b5d4",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "constipation",
           "ophthalmoplegia",
@@ -19483,13 +19483,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 49
       },
       {
-        "sampleId": "375afd8f-27b7-489f-8446-fbcabb1a2f7e",
-        "gender": "male",
+        "Patient": "375afd8f-27b7-489f-8446-fbcabb1a2f7e",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "apnea",
           "strokeLikeEpisode",
@@ -19501,13 +19501,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 51
       },
       {
-        "sampleId": "d6ec8206-cf02-4489-a6c7-882ea0c1064a",
-        "gender": "male",
+        "Patient": "d6ec8206-cf02-4489-a6c7-882ea0c1064a",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
           "delayedSocialDevelopment",
@@ -19523,13 +19523,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 43
       },
       {
-        "sampleId": "980a9e38-7599-475b-b4fb-b2c17ab95587",
-        "gender": "female",
+        "Patient": "980a9e38-7599-475b-b4fb-b2c17ab95587",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "diabetesMellitus",
           "intestinalPseudoObstruction",
@@ -19549,13 +19549,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 70
       },
       {
-        "sampleId": "6fd67f34-af23-4b18-8b37-629878949886",
-        "gender": "male",
+        "Patient": "6fd67f34-af23-4b18-8b37-629878949886",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "delayedSocialDevelopment",
           "diabetesMellitus",
@@ -19570,13 +19570,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 59
       },
       {
-        "sampleId": "dc3078f0-f0e5-4d67-a1fc-9eebca6de00e",
-        "gender": "female",
+        "Patient": "dc3078f0-f0e5-4d67-a1fc-9eebca6de00e",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "diabetesMellitus",
           "cataract",
@@ -19588,13 +19588,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 49
       },
       {
-        "sampleId": "3d00c86d-08a3-4518-b441-8357434ea9d3",
-        "gender": "male",
+        "Patient": "3d00c86d-08a3-4518-b441-8357434ea9d3",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "delayedSocialDevelopment",
           "diabetesMellitus",
@@ -19610,13 +19610,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 61
       },
       {
-        "sampleId": "6d1ad55e-e9b8-4b69-9434-fc6df8de5dc8",
-        "gender": "male",
+        "Patient": "6d1ad55e-e9b8-4b69-9434-fc6df8de5dc8",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -19632,13 +19632,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 58
       },
       {
-        "sampleId": "d6459a1e-e0d8-42ca-b1f9-a219d3a87c24",
-        "gender": "female",
+        "Patient": "d6459a1e-e0d8-42ca-b1f9-a219d3a87c24",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "diabetesMellitus",
@@ -19656,13 +19656,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 83
       },
       {
-        "sampleId": "abcd2ca0-b1be-48e3-8564-045f74c65576",
-        "gender": "female",
+        "Patient": "abcd2ca0-b1be-48e3-8564-045f74c65576",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "sensorineuralHearingImpairment",
           "diabetesMellitus",
@@ -19678,13 +19678,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 3
       },
       {
-        "sampleId": "95b60df1-aca5-4a72-949d-4dbd75ce3715",
-        "gender": "female",
+        "Patient": "95b60df1-aca5-4a72-949d-4dbd75ce3715",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "truncalAtaxia",
@@ -19700,13 +19700,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 84
       },
       {
-        "sampleId": "e85b6060-15a7-4a16-aab5-2ff89c2c4df9",
-        "gender": "male",
+        "Patient": "e85b6060-15a7-4a16-aab5-2ff89c2c4df9",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "intellectualDisability",
           "peripheralNeuropathy",
@@ -19720,13 +19720,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 72
       },
       {
-        "sampleId": "ec20bae0-b334-4018-b133-aee1ba1e74dc",
-        "gender": "female",
+        "Patient": "ec20bae0-b334-4018-b133-aee1ba1e74dc",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "diabetesMellitus",
           "increasedMuscleFatiguability",
@@ -19740,13 +19740,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 50
       },
       {
-        "sampleId": "913c1675-c926-4947-9db6-b25ff610cd1c",
-        "gender": "male",
+        "Patient": "913c1675-c926-4947-9db6-b25ff610cd1c",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "delayedSocialDevelopment",
           "intestinalPseudoObstruction",
@@ -19759,13 +19759,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 0
       },
       {
-        "sampleId": "26d5c946-457d-495d-b3cc-6080455b72b5",
-        "gender": "female",
+        "Patient": "26d5c946-457d-495d-b3cc-6080455b72b5",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "constipation",
           "diabetesMellitus",
@@ -19783,13 +19783,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 72
       },
       {
-        "sampleId": "0b7f4c77-7c98-4768-bbe5-214c6b26c98a",
-        "gender": "female",
+        "Patient": "0b7f4c77-7c98-4768-bbe5-214c6b26c98a",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -19802,13 +19802,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 33
       },
       {
-        "sampleId": "05742315-41e9-4264-a99f-724bfea97662",
-        "gender": "female",
+        "Patient": "05742315-41e9-4264-a99f-724bfea97662",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "motorDelay",
           "developmentalRegression",
@@ -19823,13 +19823,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 41
       },
       {
-        "sampleId": "f3ff6074-8fb9-4cff-b58c-cf7a94a3d0a2",
-        "gender": "male",
+        "Patient": "f3ff6074-8fb9-4cff-b58c-cf7a94a3d0a2",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "sensorineuralHearingImpairment",
           "motorDelay",
@@ -19842,13 +19842,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 81
       },
       {
-        "sampleId": "44472d49-0d3b-4207-8bf5-b2407ad273ab",
-        "gender": "male",
+        "Patient": "44472d49-0d3b-4207-8bf5-b2407ad273ab",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "diabetesMellitus",
           "increasedMuscleFatiguability",
@@ -19863,13 +19863,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 82
       },
       {
-        "sampleId": "f50e5c3f-e77c-4722-b5ad-c9c4c6e1bc0a",
-        "gender": "male",
+        "Patient": "f50e5c3f-e77c-4722-b5ad-c9c4c6e1bc0a",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "intestinalPseudoObstruction",
           "muscleWeakness",
@@ -19883,13 +19883,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 30
       },
       {
-        "sampleId": "854354b2-6277-4602-8e43-35572d46fd8d",
-        "gender": "female",
+        "Patient": "854354b2-6277-4602-8e43-35572d46fd8d",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "hypertrophicCardiomyopathy",
@@ -19903,13 +19903,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 50
       },
       {
-        "sampleId": "073652c3-bf0b-4bdd-8a0c-a8bd4944e036",
-        "gender": "female",
+        "Patient": "073652c3-bf0b-4bdd-8a0c-a8bd4944e036",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "constipation",
@@ -19925,13 +19925,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 57
       },
       {
-        "sampleId": "edd648bc-0f14-4d29-9583-6ef14f7b63d4",
-        "gender": "male",
+        "Patient": "edd648bc-0f14-4d29-9583-6ef14f7b63d4",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "intestinalPseudoObstruction",
           "ophthalmoplegia",
@@ -19946,13 +19946,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 12
       },
       {
-        "sampleId": "1b57d5fc-8fb1-4979-a566-6f7932f25063",
-        "gender": "male",
+        "Patient": "1b57d5fc-8fb1-4979-a566-6f7932f25063",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "truncalAtaxia",
           "constipation",
@@ -19972,13 +19972,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 66
       },
       {
-        "sampleId": "8d283ef5-236e-41db-b98f-98ff4b9bf0c5",
-        "gender": "male",
+        "Patient": "8d283ef5-236e-41db-b98f-98ff4b9bf0c5",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intestinalPseudoObstruction",
           "migraine",
           "developmentalRegression",
@@ -19990,13 +19990,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 13
       },
       {
-        "sampleId": "fc3f002e-2051-47d5-adc5-2959d70c013f",
-        "gender": "female",
+        "Patient": "fc3f002e-2051-47d5-adc5-2959d70c013f",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "intellectualDisability",
           "developmentalRegression",
@@ -20009,13 +20009,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 61
       },
       {
-        "sampleId": "f1316bb5-17e9-4a57-9fdc-b57188684a57",
-        "gender": "female",
+        "Patient": "f1316bb5-17e9-4a57-9fdc-b57188684a57",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "delayedSocialDevelopment",
           "migraine",
@@ -20029,13 +20029,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 33
       },
       {
-        "sampleId": "b87b7019-c7ce-45d5-88cf-b5c4896f8506",
-        "gender": "female",
+        "Patient": "b87b7019-c7ce-45d5-88cf-b5c4896f8506",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intellectualDisability",
           "ophthalmoplegia",
           "rhabdomyolysis",
@@ -20048,13 +20048,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 37
       },
       {
-        "sampleId": "ad7abde7-ab27-43c1-99e1-2dcb86e41efa",
-        "gender": "male",
+        "Patient": "ad7abde7-ab27-43c1-99e1-2dcb86e41efa",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "intellectualDisability",
           "motorDelay",
@@ -20070,13 +20070,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 86
       },
       {
-        "sampleId": "634d628a-8972-411a-8fad-a626946c6bf5",
-        "gender": "female",
+        "Patient": "634d628a-8972-411a-8fad-a626946c6bf5",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intestinalPseudoObstruction",
           "muscleWeakness",
           "peripheralNeuropathy",
@@ -20089,13 +20089,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 85
       },
       {
-        "sampleId": "03fa8869-0ac4-471c-ac45-6c93429d94a0",
-        "gender": "female",
+        "Patient": "03fa8869-0ac4-471c-ac45-6c93429d94a0",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intellectualDisability",
           "muscleWeakness",
           "ophthalmoplegia",
@@ -20109,13 +20109,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 55
       },
       {
-        "sampleId": "70a60ee3-a78f-4c8a-997e-94a0cb6ef14b",
-        "gender": "female",
+        "Patient": "70a60ee3-a78f-4c8a-997e-94a0cb6ef14b",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "dilatedCardiomyopathy",
           "delayedSocialDevelopment",
@@ -20131,13 +20131,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 41
       },
       {
-        "sampleId": "124898f8-bc1f-4131-9f42-e3d71360f061",
-        "gender": "female",
+        "Patient": "124898f8-bc1f-4131-9f42-e3d71360f061",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "intestinalPseudoObstruction",
@@ -20151,13 +20151,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 14
       },
       {
-        "sampleId": "d4af84a3-1fb7-4b69-bbc1-eb6e28cab5e8",
-        "gender": "female",
+        "Patient": "d4af84a3-1fb7-4b69-bbc1-eb6e28cab5e8",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "leftVentricularNoncompactionCardiomyopathy",
           "delayedSocialDevelopment",
           "peripheralNeuropathy",
@@ -20170,13 +20170,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 14
       },
       {
-        "sampleId": "00226d5f-54f0-4377-8b85-a239126f81c8",
-        "gender": "male",
+        "Patient": "00226d5f-54f0-4377-8b85-a239126f81c8",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -20188,13 +20188,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 71
       },
       {
-        "sampleId": "d4d704c1-98e4-492f-85da-aabb0f9d92a6",
-        "gender": "female",
+        "Patient": "d4d704c1-98e4-492f-85da-aabb0f9d92a6",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "dilatedCardiomyopathy",
           "truncalAtaxia",
@@ -20210,13 +20210,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 2
       },
       {
-        "sampleId": "47b0155e-33c5-49b7-9071-90bdb5bbe46f",
-        "gender": "male",
+        "Patient": "47b0155e-33c5-49b7-9071-90bdb5bbe46f",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "diabetesMellitus",
           "peripheralNeuropathy",
@@ -20230,13 +20230,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 26
       },
       {
-        "sampleId": "6cd03d50-a2cd-4595-ae5a-1128541486a1",
-        "gender": "female",
+        "Patient": "6cd03d50-a2cd-4595-ae5a-1128541486a1",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "hypertrophicCardiomyopathy",
           "sensorineuralHearingImpairment",
@@ -20252,13 +20252,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 0
       },
       {
-        "sampleId": "d8fb304c-d073-4852-9bc6-d5817ee5dc8a",
-        "gender": "female",
+        "Patient": "d8fb304c-d073-4852-9bc6-d5817ee5dc8a",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "intestinalPseudoObstruction",
           "ophthalmoplegia",
@@ -20270,13 +20270,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 13
       },
       {
-        "sampleId": "80d6d854-9348-4509-9d07-d34765351962",
-        "gender": "female",
+        "Patient": "80d6d854-9348-4509-9d07-d34765351962",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "sensorineuralHearingImpairment",
           "delayedSocialDevelopment",
@@ -20292,13 +20292,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 67
       },
       {
-        "sampleId": "b8b0a477-a247-4756-a2d9-eb923d367f5b",
-        "gender": "female",
+        "Patient": "b8b0a477-a247-4756-a2d9-eb923d367f5b",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "dilatedCardiomyopathy",
           "delayedSocialDevelopment",
@@ -20313,13 +20313,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 62
       },
       {
-        "sampleId": "a2e8f706-293e-420f-b8a5-0b0783c69193",
-        "gender": "female",
+        "Patient": "a2e8f706-293e-420f-b8a5-0b0783c69193",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "constipation",
           "diabetesMellitus",
@@ -20334,13 +20334,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 17
       },
       {
-        "sampleId": "f8536ca3-3ba8-4640-8603-dc803bc104f6",
-        "gender": "male",
+        "Patient": "f8536ca3-3ba8-4640-8603-dc803bc104f6",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "sensorineuralHearingImpairment",
           "diabetesMellitus",
           "muscleWeakness",
@@ -20354,13 +20354,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 7
       },
       {
-        "sampleId": "3f45f3c8-ad2a-4de4-a682-8df5b6f64474",
-        "gender": "male",
+        "Patient": "3f45f3c8-ad2a-4de4-a682-8df5b6f64474",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "truncalAtaxia",
           "increasedMuscleFatiguability",
@@ -20376,13 +20376,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 34
       },
       {
-        "sampleId": "b36fc7a8-e830-4c48-b5d3-aaa1fa4c6c86",
-        "gender": "male",
+        "Patient": "b36fc7a8-e830-4c48-b5d3-aaa1fa4c6c86",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "increasedMuscleFatiguability",
           "muscularHypotonia",
@@ -20395,13 +20395,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 53
       },
       {
-        "sampleId": "d7563f78-ef04-4436-8446-f76595b00734",
-        "gender": "male",
+        "Patient": "d7563f78-ef04-4436-8446-f76595b00734",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "delayedSocialDevelopment",
           "intestinalPseudoObstruction",
           "muscleWeakness",
@@ -20414,13 +20414,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 45
       },
       {
-        "sampleId": "b9d66ed0-fd7a-4302-9161-c069a9f00579",
-        "gender": "male",
+        "Patient": "b9d66ed0-fd7a-4302-9161-c069a9f00579",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "leftVentricularNoncompactionCardiomyopathy",
           "constipation",
@@ -20439,13 +20439,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 56
       },
       {
-        "sampleId": "52b9d23d-f759-4d0a-ba7e-8022c46b5ffd",
-        "gender": "male",
+        "Patient": "52b9d23d-f759-4d0a-ba7e-8022c46b5ffd",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "intellectualDisability",
           "motorDelay",
@@ -20460,13 +20460,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 24
       },
       {
-        "sampleId": "5d2ee687-d53d-43d4-be43-989a8cefa6d9",
-        "gender": "female",
+        "Patient": "5d2ee687-d53d-43d4-be43-989a8cefa6d9",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "sensorineuralHearingImpairment",
           "motorDelay",
@@ -20481,13 +20481,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 25
       },
       {
-        "sampleId": "376111d3-5cf9-424a-b873-23c54a8318f4",
-        "gender": "male",
+        "Patient": "376111d3-5cf9-424a-b873-23c54a8318f4",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "hypertrophicCardiomyopathy",
           "intestinalPseudoObstruction",
           "intellectualDisability",
@@ -20502,13 +20502,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 25
       },
       {
-        "sampleId": "d29e2d06-9253-4aec-8f4b-bc601cb4502f",
-        "gender": "female",
+        "Patient": "d29e2d06-9253-4aec-8f4b-bc601cb4502f",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "arrhythmia",
           "ophthalmoplegia",
@@ -20522,13 +20522,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 71
       },
       {
-        "sampleId": "e4ce9450-bb82-402a-90cb-568e346bcf69",
-        "gender": "female",
+        "Patient": "e4ce9450-bb82-402a-90cb-568e346bcf69",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "intellectualDisability",
           "seizures",
@@ -20541,13 +20541,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 37
       },
       {
-        "sampleId": "74ffee2d-ccd7-4c88-b933-b51ed8594a95",
-        "gender": "male",
+        "Patient": "74ffee2d-ccd7-4c88-b933-b51ed8594a95",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "delayedSocialDevelopment",
           "diabetesMellitus",
@@ -20567,13 +20567,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 36
       },
       {
-        "sampleId": "19773804-99eb-487b-8dda-bdff7ec70b24",
-        "gender": "male",
+        "Patient": "19773804-99eb-487b-8dda-bdff7ec70b24",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "muscleWeakness",
           "ophthalmoplegia",
@@ -20588,13 +20588,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 91
       },
       {
-        "sampleId": "d0d3280c-ee58-4dad-94c6-b85b18b54df3",
-        "gender": "male",
+        "Patient": "d0d3280c-ee58-4dad-94c6-b85b18b54df3",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "constipation",
           "ophthalmoplegia",
@@ -20609,13 +20609,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 50
       },
       {
-        "sampleId": "d51633a6-a7cd-44e2-830e-7409bd77e29e",
-        "gender": "male",
+        "Patient": "d51633a6-a7cd-44e2-830e-7409bd77e29e",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "truncalAtaxia",
           "sensorineuralHearingImpairment",
@@ -20631,13 +20631,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 70
       },
       {
-        "sampleId": "64725785-56ff-4a30-9f99-fcce325fe373",
-        "gender": "female",
+        "Patient": "64725785-56ff-4a30-9f99-fcce325fe373",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "dilatedCardiomyopathy",
           "delayedSocialDevelopment",
@@ -20656,13 +20656,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 49
       },
       {
-        "sampleId": "0a10ed81-6ec3-4d02-bbfb-0f5b7f2600a8",
-        "gender": "female",
+        "Patient": "0a10ed81-6ec3-4d02-bbfb-0f5b7f2600a8",
+        "Gender": "female",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "motorDelay",
           "raggedRedMuscleFibers",
           "strokeLikeEpisode",
@@ -20677,13 +20677,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 38
       },
       {
-        "sampleId": "3b1bac10-c4aa-414a-9d60-ab3a3548e085",
-        "gender": "male",
+        "Patient": "3b1bac10-c4aa-414a-9d60-ab3a3548e085",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "diabetesMellitus",
           "intestinalPseudoObstruction",
@@ -20698,13 +20698,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 86
       },
       {
-        "sampleId": "275f4089-4fcb-442f-b096-86717d6e0323",
-        "gender": "male",
+        "Patient": "275f4089-4fcb-442f-b096-86717d6e0323",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "sensorineuralHearingImpairment",
           "increasedMuscleFatiguability",
@@ -20719,13 +20719,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 24
       },
       {
-        "sampleId": "8a5cc436-243b-4de7-8da5-37abef91100e",
-        "gender": "female",
+        "Patient": "8a5cc436-243b-4de7-8da5-37abef91100e",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "increasedMuscleFatiguability",
           "ophthalmoplegia",
@@ -20741,13 +20741,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 4
       },
       {
-        "sampleId": "0076de36-93a8-45e6-8f4e-1d1445f20a48",
-        "gender": "male",
+        "Patient": "0076de36-93a8-45e6-8f4e-1d1445f20a48",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "intellectualDisability",
           "ophthalmoplegia",
           "strokeLikeEpisode",
@@ -20759,13 +20759,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 8
       },
       {
-        "sampleId": "d8d4fd65-e49e-4628-81a0-0ffc2e8b924f",
-        "gender": "female",
+        "Patient": "d8d4fd65-e49e-4628-81a0-0ffc2e8b924f",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
           "increasedMuscleFatiguability",
@@ -20784,13 +20784,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 8
       },
       {
-        "sampleId": "d9a17c26-e25e-49b5-b176-2e74007404cb",
-        "gender": "male",
+        "Patient": "d9a17c26-e25e-49b5-b176-2e74007404cb",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "disorderOfCranialNerve",
           "diabetesMellitus",
           "corticalVisualImpairment"
@@ -20801,13 +20801,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 15
       },
       {
-        "sampleId": "517bb684-0d2d-4fa5-8d9b-63e7ac2bead1",
-        "gender": "male",
+        "Patient": "517bb684-0d2d-4fa5-8d9b-63e7ac2bead1",
+        "Gender": "male",
         "choiceDilated": "uncheked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "constipation",
           "intestinalPseudoObstruction",
           "apnea",
@@ -20820,13 +20820,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 23
       },
       {
-        "sampleId": "8a3e3f7b-cdb2-496d-9418-02664b23c638",
-        "gender": "male",
+        "Patient": "8a3e3f7b-cdb2-496d-9418-02664b23c638",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "uncheked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "dilatedCardiomyopathy",
           "leftVentricularNoncompactionCardiomyopathy",
@@ -20841,13 +20841,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 96
       },
       {
-        "sampleId": "47a571a6-ea1f-48ce-8b5b-0d9cad07da17",
-        "gender": "female",
+        "Patient": "47a571a6-ea1f-48ce-8b5b-0d9cad07da17",
+        "Gender": "female",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "uncheked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "truncalAtaxia",
           "constipation",
           "ptosis",
@@ -20864,13 +20864,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 82
       },
       {
-        "sampleId": "f848c923-6e17-4109-9dda-fbd4d19e847a",
-        "gender": "male",
+        "Patient": "f848c923-6e17-4109-9dda-fbd4d19e847a",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "arrhythmia",
           "truncalAtaxia",
           "intellectualDisability",
@@ -20889,13 +20889,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 75
       },
       {
-        "sampleId": "d46e865e-e749-4256-a9c6-5371901cbeb1",
-        "gender": "male",
+        "Patient": "d46e865e-e749-4256-a9c6-5371901cbeb1",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "checked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "ptosis",
           "peripheralNeuropathy",
           "delayedSpeechAndLanguageDevelopment",
@@ -20907,13 +20907,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
         "lactateInVenousBlood": 68
       },
       {
-        "sampleId": "b12f162a-79d9-419d-8082-a7e236502d19",
-        "gender": "male",
+        "Patient": "b12f162a-79d9-419d-8082-a7e236502d19",
+        "Gender": "male",
         "choiceDilated": "checked",
         "choiceHyperthrophic": "uncheked",
         "choiceLeftVentricularNonCompaction": "checked",
         "choiceEndocardialFibroElastosis": "checked",
-        "conditions": [
+        "Condition": [
           "dilatedCardiomyopathy",
           "constipation",
           "sensorineuralHearingImpairment",

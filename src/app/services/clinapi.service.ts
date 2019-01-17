@@ -58,10 +58,11 @@ export class ClinapiService implements OnDestroy {
     }
 
     getMitochondria(demo = false, authorize = false): Observable<any> {
-        //return this.http.get<any>('http://localhost:4000/mitochondria').map(res => res.data);
         //if authorize to see clinical data
         if(authorize){
-            return Observable.of<any>(FAKE_MITOCHONDRIA_DATA);
+            return this.http.get<any>(`http://129.94.15.156:8080/vsal/core/find?pheno=true&dataset=mito&jwt=${localStorage.getItem('idToken')}`).map(res => {
+                return JSON.parse(res.pheno)
+            });
         }//if not authorize but want to see demo
         else if(demo){
             console.log("DEMO")

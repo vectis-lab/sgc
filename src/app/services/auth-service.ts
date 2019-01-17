@@ -20,7 +20,6 @@ export class Auth {
         clientID: environment.auth0ClientId,
         domain: environment.auth0Domain,
         responseType: 'token id_token',
-        audience: 'https://sgc.au.auth0.com/userinfo',
         redirectUri: `${constants.ORIGIN_URL}/auth`,
         scope: 'openid email'
     });
@@ -67,6 +66,7 @@ export class Auth {
 
     public setSession(authResult): void {
         const idToken = jwtDecode(authResult.idToken);
+        localStorage.setItem('idToken', authResult.idToken);
         localStorage.setItem(uidKey, idToken.email);
         localStorage.setItem('userId', idToken.sub);
         const expiresAt = JSON.stringify(idToken.exp * 1000);

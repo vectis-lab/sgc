@@ -47,7 +47,7 @@ export class SavedSearchesComponent implements OnInit, OnDestroy {
     }))
 
     this.auth.userPermissions.subscribe(permissions => {
-        if(permissions.includes('read:clindata')){
+        if(permissions.includes('mito/pheno')){
             this.denied = false;
         }else {
             this.denied = true;
