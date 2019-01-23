@@ -74,21 +74,21 @@ export class Auth {
 		localStorage.setItem(expiredAtKey, expiresAt);
     }
 
-    public getSavedSearches(token){
+    public getSavedSearches(){
         const httpOptions = {
             headers: new HttpHeaders({
                 'Content-Type':  'application/json',
-                'Authorization': `Bearer ${token.access_token}`
+                'Authorization': `Bearer ${localStorage.getItem('idToken')}`
             })
         };
         return this.http.get(`https://${environment.auth0Domain}/api/v2/users/${localStorage.getItem('userId')}`, httpOptions).map((res: any) => res.user_metadata.savedSearches);
     }
 
-    public updateSavedSearches(token, savedSearches){
+    public updateSavedSearches(savedSearches){
         const httpOptions = {
             headers: new HttpHeaders({
                 'Content-Type':  'application/json',
-                'Authorization': `Bearer ${token.access_token}`
+                'Authorization': `Bearer ${localStorage.getItem('idToken')}`
             })
         };
         return this.http.patch(`https://${environment.auth0Domain}/api/v2/users/${localStorage.getItem('userId')}`, {
@@ -97,27 +97,14 @@ export class Auth {
         }}, httpOptions).map(res => res);
     }
 
-    public getUserPermissions(token){
+    public getUserPermissions(){
         const httpOptions = {
             headers: new HttpHeaders({
                 'Content-Type':  'application/json',
-                'Authorization': `Bearer ${token.access_token}`
+                'Authorization': `Bearer ${localStorage.getItem('idToken')}`
             })
         };
         return this.http.get(`https://${environment.auth0Domain}/api/v2/users/${localStorage.getItem('userId')}`, httpOptions).map((res: any) => res.app_metadata.authorization.permissions);
-    }
-
-    public getToken(){
-        const httpOptions = {
-            headers: new HttpHeaders({
-                'content-type': 'application/json'
-            })
-        };
-        return this.http.post(`https://${environment.auth0Domain}/oauth/token`, { 
-        grant_type: 'client_credentials',
-        client_id: environment.auth0MachineClientId,
-        client_secret: environment.auth0MachineClientSecret,
-        audience: `https://${environment.auth0Domain}/api/v2/` }, httpOptions).map(res => res);
     }
 
     private handleAuthResult = (err, authResult) => {

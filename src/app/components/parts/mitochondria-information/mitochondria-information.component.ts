@@ -7,6 +7,7 @@ import { ClinicalFilteringService } from '../../../services/clinical-filtering.s
 import { Auth } from '../../../services/auth-service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
+import { DEV } from "../../../mocks/mitodata";
 
 export class MitochondriaChart {
 
@@ -167,7 +168,7 @@ export class MitochondriaInformationComponent implements AfterViewInit, OnDestro
             var choiceEndocardialFibroElastosisDim = this.ndx.dimension(function(d){ return d.choiceEndocardialFibroElastosis;});
             var choiceEndocardialFibroElastosisGroup = choiceEndocardialFibroElastosisDim.group();
 
-            if(demo){
+            if(demo || DEV){
                 this.charts = [
                     new MitochondriaChart(
                         'gender',

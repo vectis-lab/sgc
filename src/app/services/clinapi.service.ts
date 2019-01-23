@@ -9,6 +9,7 @@ import { VariantSearchService } from "./variant-search-service";
 import * as seedrandom from "seedrandom";
 import { Subscription } from "rxjs/Subscription";
 import { HttpClient } from '@angular/common/http';
+import { DEV } from "../mocks/mitodata";
 
 @Injectable()
 export class ClinapiService implements OnDestroy {
@@ -60,9 +61,14 @@ export class ClinapiService implements OnDestroy {
     getMitochondria(demo = false, authorize = false): Observable<any> {
         //if authorize to see clinical data
         if(authorize){
-            return this.http.get<any>(`http://129.94.15.156:8080/vsal/core/find?pheno=true&dataset=mito&jwt=${localStorage.getItem('idToken')}`).map(res => {
-                return JSON.parse(res.pheno)
-            });
+            //For staging/demo use mock data
+            if(DEV){
+                return Observable.of<any>(FAKE_MITOCHONDRIA_DATA);
+            }else{
+                return this.http.get<any>(`http://129.94.15.156:8080/vsal/core/find?pheno=true&dataset=mito&jwt=${localStorage.getItem('idToken')}`).map(res => {
+                    return JSON.parse(res.pheno)
+                });
+            }
         }//if not authorize but want to see demo
         else if(demo){
             console.log("DEMO")

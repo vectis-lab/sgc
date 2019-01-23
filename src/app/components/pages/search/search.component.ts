@@ -52,16 +52,14 @@ export class SearchComponent implements  OnInit, OnDestroy {
 
         this.selectedOption = this.searchBarService.options[0].getValue();
 
-        this.subscriptions.push(this.auth.getToken().subscribe(token => {
-            this.auth.getSavedSearches(token).subscribe(savedSearches => {
-                this.clinicalFilteringService.initSaveSearches(savedSearches);
-            })
+        this.auth.getSavedSearches().subscribe(savedSearches => {
+            this.clinicalFilteringService.initSaveSearches(savedSearches);
+        })
 
-            this.auth.getUserPermissions(token).subscribe(permissions => {
-                this.auth.setUserPermissions(permissions);
-            })
-        }))
-    }
+        this.auth.getUserPermissions().subscribe(permissions => {
+            this.auth.setUserPermissions(permissions);
+        })
+        }
 
     parseParams(params: Params) {
         if (!params['query']) {
