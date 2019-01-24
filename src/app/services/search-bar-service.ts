@@ -3,6 +3,7 @@ import { RegionService } from './autocomplete/region-service';
 import { combineLatest } from 'rxjs/observable/combineLatest';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
+import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import { SearchOption } from '../model/search-option';
 import { Router, Params } from '@angular/router';
 import { AutocompleteService } from './autocomplete/autocomplete-service';
@@ -17,6 +18,8 @@ export class SearchBarService {
     options: SearchOption[];
     autocompleteError = '';
     searchedEvent = new Subject();
+    startGreaterThanEndSource = new BehaviorSubject<boolean>(false);
+    startGreaterThanEnd = this.startGreaterThanEndSource.asObservable();
 
     constructor(private geneService: ElasticGeneSearch,
                 private regionService: RegionService,
@@ -57,6 +60,9 @@ export class SearchBarService {
             if (v.length <= 0) {
                 return handleAutocompleteError('Failed to find any results for: ' + query);
             }
+            if(this.checkErrorRegion(query)){
+                return handleAutocompleteError('Start position cannot be greater than end');
+            }
             const bestMatch = v[0];
             if (bestMatch.match(query)) {
                 return bestMatch;
@@ -65,6 +71,23 @@ export class SearchBarService {
             }
         });
 
+    }
+
+    checkErrorRegion(query){
+        const results = new RegExp(/^([\dxy]+|mt+)[:\-\.,\\/](\d+)[:\-\.,\\/](\d+)$/, "i").exec(query);
+        const checkChromosome = new RegExp(/^([\dxy]+|mt+)$/, "i")
+        if(results !== null) {
+            const chromosome = results[1];
+            const start = Number(results[2]);
+            const end = Number(results[3]);
+            if(checkChromosome.test(chromosome) && !isNaN(start) && !isNaN(end)){
+                if(start > end){
+                    return true;
+                }
+            }
+        }else{
+            return false;
+        }
     }
 
     parseOptions(params: Params) {
@@ -82,13 +105,22 @@ export class SearchBarService {
 
     searchAutocompleteServices(term: string): Observable<VariantAutocompleteResult<any>[]> {
         return combineLatest(...this.autocompleteServices.map((autocompleteService) => {
-            return autocompleteService.search(term).catch(e => Observable.of<GenericAutocompleteResult<any>[]>([]));
+            return autocompleteService.search(term).catch(e => { 
+                return Observable.of<GenericAutocompleteResult<any>[]>([])
+            });
         }), this.combineStreams);
     }
 
     searchAutocompleteServicesStartsWith(term: string, startsWith: any[] = []): Observable<GenericAutocompleteResult<any>[]> {
+        if(this.checkErrorRegion(term)){
+            this.startGreaterThanEndSource.next(true);
+        }else{
+            this.startGreaterThanEndSource.next(false);
+        }
         return combineLatest(this.autocompleteServices.map((autocompleteService) => {
-            return autocompleteService.search(term).startWith(startsWith).catch(e => Observable.of([]));
+            return autocompleteService.search(term).startWith(startsWith).catch(e => {
+                return Observable.of([])
+            });
         }), this.combineStreams);
     }
 

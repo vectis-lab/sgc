@@ -19,9 +19,6 @@ export class RegionService implements AutocompleteService<Region> {
             const chromosome = results[1];
             const start = Number(results[2]);
             const end = Number(results[3]);
-            if (start > end) {
-                throw new Error('Start position cannot be greater than end');
-            }
             const r = new Region(chromosome, start, end);
             const regions = [new RegionAutocomplete(r, r.name(), '', this)];
             return Observable.of<GenericAutocompleteResult<Region>[]>(regions);
