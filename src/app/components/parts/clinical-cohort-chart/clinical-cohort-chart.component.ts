@@ -1,26 +1,26 @@
 import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnDestroy,Output, EventEmitter } from '@angular/core';
 import * as dc from 'dc';
-import { MitochondriaChart } from '../mitochondria-information/mitochondria-information.component';
+import { Chart } from '../neuromuscular-information/neuromuscular-information.component';
 import { ClinapiService } from '../../../services/clinapi.service';
 import { HelperService } from '../../../services/helper.service';
-import { CONDITION_GROUPING } from '../../../shared/conditionGrouping';
 import { ClinicalFilteringService } from '../../../services/clinical-filtering.service';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
-    selector: 'app-mitochondria-chart',
-    templateUrl: './mitochondria-chart.component.html',
-    styleUrls: ['./mitochondria-chart.component.css'],
+    selector: 'app-clinical-cohort-chart',
+    templateUrl: './clinical-cohort-chart.component.html',
+    styleUrls: ['./clinical-cohort-chart.component.css'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class MitochondriaChartComponent implements AfterViewInit, OnDestroy {
-    @Input() data: MitochondriaChart;
+export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
+    @Input() data: Chart;
     chart: any;
     saveSearches = {};
     subscriptions: Subscription[] = [];
     filter = [];
     @Output() hiddenChart = new EventEmitter<string>();
     hover: boolean = false;
+    scrolledRowChart: boolean = false;
 
 
     constructor(private cd: ChangeDetectorRef, private cs: ClinapiService, private hs: HelperService, private ClinicalFilterService: ClinicalFilteringService) {
@@ -91,35 +91,15 @@ export class MitochondriaChartComponent implements AfterViewInit, OnDestroy {
     }
 
     initRowChart() {
+        if(this.data.group.all().length > 8){
+            this.scrolledRowChart = true;
+        }
         this.chart = dc.rowChart(`.chart .${this.data.name}`)                                                                           
                     .width(this.data.width)
                     .height(this.data.height)
                     .group(this.data.group)
                     .elasticX(true)
-                    .ordering(function(d){
-                        let i = 0;
-                        if(CONDITION_GROUPING[0].includes(d.key))
-                            return i++;                       
-                        else if(CONDITION_GROUPING[1].includes(d.key))
-                            return 25 + i++;
-                        else if(CONDITION_GROUPING[2].includes(d.key))
-                            return 50 + i++;
-                        else if(CONDITION_GROUPING[3].includes(d.key))
-                            return 100 + i++;
-                    })
                     .dimension(this.data.dim)
-                    .colors(d3.scale.ordinal().domain(["a","b","c","d"])
-                                    .range(["#d6e8f5","#85bae0", "#348ccb", "#25628e"]))
-                    .colorAccessor(function(d) { 
-                        if(CONDITION_GROUPING[0].includes(d.key)) 
-                            return "a";
-                        else if(CONDITION_GROUPING[1]. includes(d.key))
-                            return "b";
-                        else if(CONDITION_GROUPING[2]. includes(d.key))
-                            return "c";
-                        else if(CONDITION_GROUPING[3]. includes(d.key))
-                            return "d";
-                        });
         if(this.ClinicalFilterService.filters[this.data.name]){
             this.ClinicalFilterService.filters[this.data.name].forEach(filter => {
                 this.chart.filter(filter);

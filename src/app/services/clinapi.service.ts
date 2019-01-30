@@ -5,11 +5,12 @@ import { MAXIMUM_NUMBER_OF_VARIANTS } from "./cttv-service";
 import { VariantTrackService } from "./genome-browser/variant-track-service";
 import { FAKE_CLINICAL_DATA } from "../mocks/clindata";
 import { FAKE_MITOCHONDRIA_DATA } from "../mocks/mitodata";
+import { FAKE_NEUROMUSCULAR_DATA } from "../mocks/neuromusculardata";
 import { VariantSearchService } from "./variant-search-service";
 import * as seedrandom from "seedrandom";
 import { Subscription } from "rxjs/Subscription";
 import { HttpClient } from '@angular/common/http';
-import { DEV } from "../mocks/mitodata";
+import { DEV } from "../shared/tempConfiguration";
 
 @Injectable()
 export class ClinapiService implements OnDestroy {
@@ -73,6 +74,27 @@ export class ClinapiService implements OnDestroy {
         else if(demo){
             console.log("DEMO")
             return Observable.of<any>(FAKE_MITOCHONDRIA_DATA);
+        }//if not authorize and not opt to see demo
+        else {
+            return Observable.throw({ status: 401 });
+        }
+    }
+
+    getNeuromuscular(demo = false, authorize = false): Observable<any> {
+        if(authorize){
+            //For staging/demo use mock data
+            if(DEV){
+                return Observable.of<any>(FAKE_NEUROMUSCULAR_DATA);
+            }else{
+                //Don't have the real data of neuromuscular deployed anywhere yet
+                /*return this.http.get<any>(`http://129.94.15.156:8080/vsal/core/find?pheno=true&dataset=mito&jwt=${localStorage.getItem('idToken')}`).map(res => {
+                    return JSON.parse(res.pheno)
+                });*/
+            }
+        }//if not authorize but want to see demo
+        else if(demo){
+            console.log("DEMO")
+            return Observable.of<any>(FAKE_NEUROMUSCULAR_DATA);
         }//if not authorize and not opt to see demo
         else {
             return Observable.throw({ status: 401 });

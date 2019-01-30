@@ -1,0 +1,14 @@
+<div class="chart" (mouseenter)="hover=true" (mouseleave)="hover=false">
+  <div class="toolbar">
+      <div class="row">
+          <div *ngIf="filter.length ===0" class="option"></div>
+          <i *ngIf="filter.length > 0" (click)="resetFilter()" class="option material-icons left">refresh</i>
+          <h4>{{capitalizeCamelCase(data.name)}}</h4>
+          <div *ngIf="!hover" class="option"></div>
+          <i *ngIf="hover" (click)="hideChart()" class="option material-icons right">clear</i>
+      </div>
+  </div>
+  <div class="content">
+      <div [ngClass]="(scrolledRowChart)? [data.name, 'scrolled-row-chart'] : data.name"></div>
+  </div>
+</div>

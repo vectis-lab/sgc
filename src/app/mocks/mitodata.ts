@@ -1,5 +1,3 @@
-export const DEV = false;
-
 export const FAKE_MITOCHONDRIA_DATA = [
       {
         "Patient": "e739a538-fece-4c44-a625-2a0cfc3c2a4e",

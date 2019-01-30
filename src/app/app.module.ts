@@ -98,14 +98,14 @@ import { SnackbarHelpComponent } from './components/parts/snackbar-help/snackbar
 import { LoadingComponent } from './components/pages/loading/loading.component';
 import { SignUpComponent } from './components/parts/sign-up/sign-up.component';
 import { AuthGuardComponent } from './components/parts/auth-guard/auth-guard.component';
-import { MitochondriaInformationComponent } from './components/parts/mitochondria-information/mitochondria-information.component';
-import { MitochondriaChartComponent } from './components/parts/mitochondria-chart/mitochondria-chart.component';
 import { HelperService } from './services/helper.service';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { ClinicalFilteringService } from './services/clinical-filtering.service';
 import { SavedSearchesComponent } from './components/parts/saved-searches/saved-searches.component';
 import { CohortComponent, CohortDialog } from './components/parts/cohort/cohort.component';
 import { CohortsComponent } from './components/parts/cohorts/cohorts.component';
+import { NeuromuscularInformationComponent } from './components/parts/neuromuscular-information/neuromuscular-information.component';
+import { ClinicalCohortChartComponent } from './components/parts/clinical-cohort-chart/clinical-cohort-chart.component';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -204,12 +204,12 @@ if (environment.production && !environment.ci) {
         LoadingComponent,
         SignUpComponent,
         AuthGuardComponent,
-        MitochondriaInformationComponent,
-        MitochondriaChartComponent,
         SavedSearchesComponent,
         CohortComponent,
         CohortDialog,
-        CohortsComponent
+        CohortsComponent,
+        NeuromuscularInformationComponent,
+        ClinicalCohortChartComponent
     ],
     entryComponents: [
         SignUpComponent,

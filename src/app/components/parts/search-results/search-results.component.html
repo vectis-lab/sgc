@@ -12,9 +12,9 @@
                 <app-region-information *ngIf="showRegionInformation()"></app-region-information>
             </div>
         </mat-tab>
-        <mat-tab label="Mitochondria Clinical Filtering">
-            <div class="mitochondria-filters tab-content">
-                <app-mitochondria-information *ngIf="showMito"></app-mitochondria-information>
+        <mat-tab [label]="selectedCohort + ' Clinical Filtering'">
+            <div class="clinical-filters tab-content">
+                <app-neuromuscular-information *ngIf="showClin && selectedCohort === 'Neuromuscular'"></app-neuromuscular-information>
             </div>
 
         </mat-tab>

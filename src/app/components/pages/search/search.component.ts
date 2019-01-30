@@ -7,7 +7,7 @@ import { GenericAutocompleteResult } from '../../../model/autocomplete-result';
 import { MatSnackBar, MatSnackBarRef } from '@angular/material';
 import { SnackbarDemoComponent } from '../../parts/snackbar-demo/snackbar-demo.component';
 import { ClinicalFilteringService } from '../../../services/clinical-filtering.service';
-import { query } from '../../../../../node_modules/@angular/animations';
+import { Mitochondria, Neuromuscular } from '../../../shared/cohortAuthor';
 
 const SMALL_WIDTH = 720;
 
@@ -30,7 +30,7 @@ export class SearchComponent implements  OnInit, OnDestroy {
     searchedQueryType: string;
     searchedQueryTemp: string;
     searchedQuery: string
-    mitoAuthors = ['John Christodoulou', 'David Thorburn', 'Joy Lee', 'Nick Smith', 'David Coman', 'Maina Kava', 'Michael Fahey', 'Carolyn Ellaway', 'Janice Fletcher', 'Phillipa Lamont', 'Mike Ryan', 'Maie Walsh', 'Alexandra Filipovska']
+    authors = [];
 
     constructor(public searchBarService: SearchBarService,
                 public auth: Auth,
@@ -48,6 +48,15 @@ export class SearchComponent implements  OnInit, OnDestroy {
         this.clinicalFilteringService.setShowFilter(false);
         this.subscriptions.push(this.clinicalFilteringService.showFilter.subscribe(flag =>{
             this.showFilter = flag;
+        }))
+
+        this.subscriptions.push(this.searchBarService.cohort.subscribe(cohort =>{
+            this.selectedOption = cohort;
+            if(cohort === "Mitochondria"){
+                this.authors = Mitochondria;
+            }else if(cohort === "Neuromuscular"){
+                this.authors = Neuromuscular;
+            }
         }))
 
         this.selectedOption = this.searchBarService.options[0].getValue();

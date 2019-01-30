@@ -22,7 +22,6 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
     @Input() autocomplete: VariantAutocompleteResult<any>;
     @Output() errorEvent = new EventEmitter();
     showClin = false;
-    showMito = false;
     public variants: Variant[] = [];
     public loadingVariants = false;
     private subscriptions: Subscription[] = [];
@@ -30,6 +29,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
     selectedTabIndex = 0;
     timeout = null;
     @Output() searchQuery = new EventEmitter<string>();
+    selectedCohort = ""
 
     constructor(public searchService: VariantSearchService,
                 private cd: ChangeDetectorRef,
@@ -41,29 +41,30 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
     }
 
     ngOnInit(): void {
-        //NEED TO FIX MITOCHONDRIA GENE SEARCH FIRST BEFORE FILTERING MT RESULT
-        //if(this.autocomplete.result.chromosome === "MT"){
-            this.variants = this.searchService.variants;
-            this.subscriptions.push(this.searchService.results.subscribe(v => {
-                this.variants = v.variants;
+        this.variants = this.searchService.variants;
+        this.subscriptions.push(this.searchService.results.subscribe(v => {
+            this.variants = v.variants;
+            this.cd.detectChanges();
+        }));
+
+        this.subscriptions.push(this.searchService.errors.subscribe((e) => {
+            this.errorEvent.emit(e);
+        }));
+
+        this.subscriptions.push(this.searchBarService.cohort.subscribe((cohort) => {
+            this.selectedCohort = cohort;
+        }));
+
+        this.loadingVariants = true;
+        this.autocomplete.search(this.searchService, this.searchBarService.options)
+            .then(() => {
+                this.loadingVariants = false;
                 this.cd.detectChanges();
-            }));
-    
-            this.subscriptions.push(this.searchService.errors.subscribe((e) => {
+            })
+            .catch((e) => {
+                this.loadingVariants = false;
                 this.errorEvent.emit(e);
-            }));
-    
-            this.loadingVariants = true;
-            this.autocomplete.search(this.searchService, this.searchBarService.options)
-                .then(() => {
-                    this.loadingVariants = false;
-                    this.cd.detectChanges();
-                })
-                .catch((e) => {
-                    this.loadingVariants = false;
-                    this.errorEvent.emit(e);
-                });
-        //}
+            });
     }
 
     ngAfterViewInit() {
@@ -73,7 +74,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
             if (p['demo']) {
                 this.selectedTabIndex = 1;
                 this.clinicalFilteringService.setShowFilter(true);
-                this.showMitochondriaFilters();
+                this.showClinicalFilters();
             }
         });
     }
@@ -113,29 +114,15 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
         }
     }
 
-    showMitochondriaFilters() {
-        const c = document.getElementsByClassName('mitochondria-filters');
-        if (c.length) {
-            this.showMito = true;
-        } else {
-            this.timeout = window.setTimeout(() => {
-                this.showMitochondriaFilters();
-            }, 200)
-        }
-    }
-
     goToSmallerRegion() {
         const obj = {query: this.searchService.getSmallerRegionString(), timestamp: Date.now()};
         this.router.navigate(['/search/results', obj]);
     }
 
     tabSelected(v) {
-        if (v.index === 2) {
-            this.showClinicalFilters();
-        }
         if (v.index === 1) {
             this.clinicalFilteringService.setShowFilter(true);
-            this.showMitochondriaFilters();
+            this.showClinicalFilters();
         }else{
             this.clinicalFilteringService.setShowFilter(false);
         }

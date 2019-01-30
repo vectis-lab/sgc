@@ -18,7 +18,10 @@ export class SearchBarService {
     options: SearchOption[];
     autocompleteError = '';
     searchedEvent = new Subject();
-    startGreaterThanEndSource = new BehaviorSubject<boolean>(false);
+    private cohortSource = new BehaviorSubject<string>("Mitochondria");
+    cohort = this.cohortSource.asObservable();
+
+    private startGreaterThanEndSource = new BehaviorSubject<boolean>(false);
     startGreaterThanEnd = this.startGreaterThanEndSource.asObservable();
 
     constructor(private geneService: ElasticGeneSearch,
@@ -34,7 +37,7 @@ export class SearchBarService {
         this.autocompleteError = '';
         this.query = '';
         this.options = [
-            new SearchOption('Cohorts', '', ['Mitochondria'], 'Mitochondria'),
+            new SearchOption('Cohorts', 'cohorts', ['Mitochondria', 'Neuromuscular'], 'Mitochondria'),
         ];
     }
 
@@ -50,6 +53,8 @@ export class SearchBarService {
         }
 
         this.searchedEvent.next();
+
+        this.setCohort(this.options[0].getValue())
 
         const handleAutocompleteError = (e: string): Promise<any> => {
             this.autocompleteError = e;
@@ -71,6 +76,10 @@ export class SearchBarService {
             }
         });
 
+    }
+
+    setCohort(selectedCohort){
+        this.cohortSource.next(selectedCohort);
     }
 
     checkErrorRegion(query){
