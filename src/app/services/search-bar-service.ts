@@ -18,8 +18,11 @@ export class SearchBarService {
     options: SearchOption[];
     autocompleteError = '';
     searchedEvent = new Subject();
-    private cohortSource = new BehaviorSubject<string>("Mitochondria");
+    private cohortSource = new BehaviorSubject<string>("");
     cohort = this.cohortSource.asObservable();
+    //Temporary cohort is basically cohortSource, this is used to prevent updating all Cohort text before user do the search
+    private tempCohortSource = new BehaviorSubject<string>("coy");
+    tempCohort = this.tempCohortSource.asObservable();
 
     private startGreaterThanEndSource = new BehaviorSubject<boolean>(false);
     startGreaterThanEnd = this.startGreaterThanEndSource.asObservable();
@@ -53,8 +56,7 @@ export class SearchBarService {
         }
 
         this.searchedEvent.next();
-
-        this.setCohort(this.options[0].getValue())
+        this.setCohort(this.tempCohortSource.getValue());
 
         const handleAutocompleteError = (e: string): Promise<any> => {
             this.autocompleteError = e;
@@ -80,6 +82,10 @@ export class SearchBarService {
 
     setCohort(selectedCohort){
         this.cohortSource.next(selectedCohort);
+    }
+
+    setTempCohort(selectedCohort){
+        this.tempCohortSource.next(selectedCohort);
     }
 
     checkErrorRegion(query){

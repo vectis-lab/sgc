@@ -27,5 +27,6 @@ export class SearchOptionComponent implements OnInit {
 
     selectOption(selected: string) {
         this.option.setValue(selected);
+        this.searchBarService.setTempCohort(selected)
     }
 }

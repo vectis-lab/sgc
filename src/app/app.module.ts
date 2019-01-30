@@ -106,6 +106,7 @@ import { CohortComponent, CohortDialog } from './components/parts/cohort/cohort.
 import { CohortsComponent } from './components/parts/cohorts/cohorts.component';
 import { NeuromuscularInformationComponent } from './components/parts/neuromuscular-information/neuromuscular-information.component';
 import { ClinicalCohortChartComponent } from './components/parts/clinical-cohort-chart/clinical-cohort-chart.component';
+import { SearchBarService } from './services/search-bar-service';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -234,6 +235,7 @@ if (environment.production && !environment.ci) {
         LocalStorageService,
         HelperService,
         ClinicalFilteringService,
+        SearchBarService,
         { provide: ErrorHandler, useClass: RavenErrorHandler },
         { provide: 'NULL_VALUE', useValue: null }
     ],
