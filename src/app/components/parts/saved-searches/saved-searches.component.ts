@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 import { ClinicalFilteringService } from '../../../services/clinical-filtering.service';
 import { HelperService } from '../../../services/helper.service';
+import { SearchBarService } from '../../../services/search-bar-service';
 import * as dc from 'dc';
 import {ErrorStateMatcher} from '@angular/material/core';
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
@@ -24,13 +25,14 @@ export class SavedSearchesComponent implements OnInit, OnDestroy {
   subscriptions: Subscription[] = [];
   filters = {};
   savedSearches = {};
+  selectedCohort = "";
   objectKeys= Object.keys;
   @ViewChild("saveSearchForm") saveSearchForm: NgForm;
   selectedSaveSearch: string;
   denied: boolean;
 
   constructor(private clinicalFilteringService: ClinicalFilteringService,
-    private helper: HelperService, private auth: Auth) { }
+    private helper: HelperService, private auth: Auth, private searchBarService: SearchBarService) { }
 
   saveNameFormControl = new FormControl('', [
     Validators.required,
@@ -38,6 +40,10 @@ export class SavedSearchesComponent implements OnInit, OnDestroy {
   matcher = new MyErrorStateMatcher();
 
   ngOnInit() {
+    this.subscriptions.push(this.searchBarService.cohort.subscribe(cohort => {
+        this.selectedCohort = cohort;
+    }))
+
     this.subscriptions.push(this.clinicalFilteringService.filters.subscribe(filter => {
         this.filters = filter
     }))
@@ -69,16 +75,16 @@ export class SavedSearchesComponent implements OnInit, OnDestroy {
   }
 
   saveSearches(){
-      return this.clinicalFilteringService.saveSearches(this.saveNameFormControl.value);
+      return this.clinicalFilteringService.saveSearches(this.selectedCohort, this.saveNameFormControl.value);
   }
 
   applySavedSearches(savedFilterName){
-      return this.clinicalFilteringService.applySavedSearches(savedFilterName)
+      return this.clinicalFilteringService.applySavedSearches(this.selectedCohort, savedFilterName)
   }
 
   deleteSavedSearches(savedFilterName){
     this.selectedSaveSearch = null;
-    return this.clinicalFilteringService.deleteSaveSearches(savedFilterName)
+    return this.clinicalFilteringService.deleteSaveSearches(this.selectedCohort, savedFilterName)
 }
 
 }

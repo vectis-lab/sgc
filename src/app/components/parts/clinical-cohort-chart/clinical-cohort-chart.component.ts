@@ -4,6 +4,7 @@ import { Chart } from '../neuromuscular-information/neuromuscular-information.co
 import { ClinapiService } from '../../../services/clinapi.service';
 import { HelperService } from '../../../services/helper.service';
 import { ClinicalFilteringService } from '../../../services/clinical-filtering.service';
+import { SearchBarService } from '../../../services/search-bar-service';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
@@ -21,9 +22,10 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
     @Output() hiddenChart = new EventEmitter<string>();
     hover: boolean = false;
     scrolledRowChart: boolean = false;
+    selectedCohort = "";
 
 
-    constructor(private cd: ChangeDetectorRef, private cs: ClinapiService, private hs: HelperService, private ClinicalFilterService: ClinicalFilteringService) {
+    constructor(private cd: ChangeDetectorRef, private cs: ClinapiService, private hs: HelperService, private ClinicalFilterService: ClinicalFilteringService, private searchBarService: SearchBarService) {
     }
 
     ngAfterViewInit(): void {
@@ -34,6 +36,10 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
         }else if (this.data.type === "bar"){
             this.initBarChart();
         }
+
+        this.subscriptions.push(this.searchBarService.cohort.subscribe(cohort => {
+            this.selectedCohort = cohort;
+        }))
 
         this.chart.on("filtered", (c) => {
             this.cd.detectChanges();
@@ -47,17 +53,17 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
         }))
 
         this.subscriptions.push(this.ClinicalFilterService.savedSearchesName.subscribe(name => {
-            let objKeys = Object.keys(this.saveSearches[name])
+            let objKeys = Object.keys(this.saveSearches[this.selectedCohort][name])
             if(objKeys.includes(this.data.name)){
                 objKeys.forEach(dim => {
                     if(dim === this.data.name){
                         if(this.data.type === "pie")
-                            this.chart.replaceFilter(this.saveSearches[name][dim]);
+                            this.chart.replaceFilter(this.saveSearches[this.selectedCohort][name][dim]);
                         if(this.data.type === "bar")
-                            this.chart.replaceFilter(this.saveSearches[name][dim][0]);
+                            this.chart.replaceFilter(this.saveSearches[[this.selectedCohort][name][dim][0]);
                         if(this.data.type === "row"){
                             this.chart.filter(null)
-                            this.chart.filter([this.saveSearches[name][dim]])
+                            this.chart.filter([this.saveSearches[this.selectedCohort][name][dim]])
                         }
                     }
                 })

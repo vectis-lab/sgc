@@ -48,25 +48,26 @@ export class ClinicalFilteringService implements OnDestroy {
         this.savedSearchesSource.next(savedSearches);
     }
 
-    saveSearches(name){
+    saveSearches(cohort, name){
         let currentSavedSearches = Object.assign({}, this.savedSearchesSource.getValue());
+        
         let currentFilter = Object.assign({}, this.filtersSource.getValue());
-        currentSavedSearches[name] = currentFilter;
+        currentSavedSearches[cohort][name] = currentFilter;
         this.auth.updateSavedSearches(currentSavedSearches).subscribe(savedSearches => {
             this.savedSearchesSource.next(currentSavedSearches);
         })
     }
 
-    deleteSaveSearches(name){
+    deleteSaveSearches(cohort, name){
         let currentSavedSearches = Object.assign({}, this.savedSearchesSource.getValue());
-        delete currentSavedSearches[name];
+        delete currentSavedSearches[cohort][name];
         this.auth.updateSavedSearches(currentSavedSearches).subscribe(savedSearches => {
             this.savedSearchesSource.next(currentSavedSearches);
         })
     }
 
-    applySavedSearches(savedFilterName) {
-        let savedSearches = Object.assign({}, this.savedSearchesSource.getValue()[savedFilterName]);
+    applySavedSearches(cohort, savedFilterName) {
+        let savedSearches = Object.assign({}, this.savedSearchesSource.getValue()[cohort][savedFilterName]);
         this.filtersSource.next(savedSearches);
         this.savedSearchesNameSource.next(savedFilterName);
     }

@@ -1,10 +1,10 @@
 <div>
-  <div *ngIf="objectKeys(savedSearches).length > 0 && !denied">
+  <div *ngIf="objectKeys(savedSearches[selectedCohort]).length > 0 && !denied">
     <h2 id="applied-filter-header">Saved Search</h2>
     <mat-form-field>
         <mat-select placeholder="Saved Searches" [(ngModel)]="selectedSaveSearch">
           <mat-option [value]="null"></mat-option>
-          <mat-option *ngFor="let savedSearch of objectKeys(savedSearches)" [value]="savedSearch">{{savedSearch}}</mat-option>
+          <mat-option *ngFor="let savedSearch of objectKeys(savedSearches[selectedCohort])" [value]="savedSearch">{{savedSearch}}</mat-option>
         </mat-select>
     </mat-form-field>
     <button class="sidenav-button" mat-button (click)="applySavedSearches(selectedSaveSearch)" *ngIf="selectedSaveSearch">Apply</button>
