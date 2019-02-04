@@ -60,7 +60,7 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
                         if(this.data.type === "pie")
                             this.chart.replaceFilter(this.saveSearches[this.selectedCohort][name][dim]);
                         if(this.data.type === "bar")
-                            this.chart.replaceFilter(this.saveSearches[[this.selectedCohort][name][dim][0]);
+                            this.chart.replaceFilter(this.saveSearches[this.selectedCohort][name][dim][0]);
                         if(this.data.type === "row"){
                             this.chart.filter(null)
                             this.chart.filter([this.saveSearches[this.selectedCohort][name][dim]])

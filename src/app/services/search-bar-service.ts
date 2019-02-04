@@ -21,7 +21,7 @@ export class SearchBarService {
     private cohortSource = new BehaviorSubject<string>("");
     cohort = this.cohortSource.asObservable();
     //Temporary cohort is basically cohortSource, this is used to prevent updating all Cohort text before user do the search
-    private tempCohortSource = new BehaviorSubject<string>("coy");
+    private tempCohortSource = new BehaviorSubject<string>("Mitochondria");
     tempCohort = this.tempCohortSource.asObservable();
 
     private startGreaterThanEndSource = new BehaviorSubject<boolean>(false);
