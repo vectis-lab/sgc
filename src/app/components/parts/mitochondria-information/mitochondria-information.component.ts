@@ -7,7 +7,6 @@ import { ClinicalFilteringService } from '../../../services/clinical-filtering.s
 import { Auth } from '../../../services/auth-service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
-import { DEV } from "../../../mocks/mitodata";
 
 export class MitochondriaChart {
 
@@ -143,182 +142,39 @@ export class MitochondriaInformationComponent implements AfterViewInit, OnDestro
             conditionDim = this.ndx.dimension(function(d){ 
                 return d.Condition;
             });
-            
-            var alanineInCerebralSpinalFluidDim = this.ndx.dimension(function(d){ return d.alanineInCerebralSpinalFluid;});
-            var alanineInCerebralSpinalFluidGroup = alanineInCerebralSpinalFluidDim.group();
 
-            var lactateInCerebralSpinalFluidDim = this.ndx.dimension(function(d){ return d.lactateInCerebralSpinalFluid;});
-            var lactateInCerebralSpinalFluidGroup = lactateInCerebralSpinalFluidDim.group();
+            this.charts = [
+                new MitochondriaChart(
+                    'gender',
+                    'pie',
+                    genderDim,
+                    340,
+                    200,
+                    true,
+                    genderGroup,
+                ),
+                new MitochondriaChart(
+                    'conditions',
+                    'row',
+                    conditionDim,
+                    325,
+                    700,
+                    true,
+                    conditionGroup,
+                    (dimension, filters) => {
+                        dimension.filter(null);   
+                        if (filters.length === 0)
+                            dimension.filter(null);
+                        else
+                            dimension.filterFunction(function (d) {
+                                if (_.difference(filters, d).length === 0) return true;
+                                return false; 
+                            });
+                        return filters;  
+                    },
+                ),
 
-            var alanineInSerumOrPlasmaDim = this.ndx.dimension(function(d){ return d.alanineInSerumOrPlasma;});
-            var alanineInSerumOrPlasmaGroup = alanineInSerumOrPlasmaDim.group();
-
-            var lactateInVenousBloodDim = this.ndx.dimension(function(d){ return d.lactateInVenousBlood;});
-            var lactateInVenousBloodGroup = lactateInVenousBloodDim.group();
-
-            var choiceDilatedDim = this.ndx.dimension(function(d){ return d.choiceDilated;});
-            var choiceDilatedGroup = choiceDilatedDim.group();
-
-            var choiceHyperthrophicDim = this.ndx.dimension(function(d){ return d.choiceHyperthrophic;});
-            var choiceHyperthrophicGroup = choiceHyperthrophicDim.group();
-
-            var choiceLeftVentricularNonCompactionDim = this.ndx.dimension(function(d){ return d.choiceLeftVentricularNonCompaction;});
-            var choiceLeftVentricularNonCompactionGroup = choiceLeftVentricularNonCompactionDim.group();
-
-            var choiceEndocardialFibroElastosisDim = this.ndx.dimension(function(d){ return d.choiceEndocardialFibroElastosis;});
-            var choiceEndocardialFibroElastosisGroup = choiceEndocardialFibroElastosisDim.group();
-
-            if(demo || DEV){
-                this.charts = [
-                    new MitochondriaChart(
-                        'gender',
-                        'pie',
-                        genderDim,
-                        340,
-                        200,
-                        true,
-                        genderGroup,
-                    ),
-                    new MitochondriaChart(
-                        'alanineInCerebralSpinalFluid',
-                        'bar',
-                        alanineInCerebralSpinalFluidDim,
-                        340,
-                        200,
-                        true,
-                        alanineInCerebralSpinalFluidGroup,
-                        null,
-                        'Alanine [Moles/volume] in Cerebral spinal fluid',
-                        '# Samples',
-                    ),      
-                    new MitochondriaChart(
-                        'lactateInCerebralSpinalFluid',
-                        'bar',
-                        lactateInCerebralSpinalFluidDim,
-                        340,
-                        200,
-                        true,
-                        lactateInCerebralSpinalFluidGroup,
-                        null,
-                        'Lactate [Moles/volume] in Cerebral spinal fluid',
-                        '# Samples',
-                    ),
-                    new MitochondriaChart(
-                        'alanineInSerumOrPlasma',
-                        'bar',
-                        alanineInSerumOrPlasmaDim,
-                        340,
-                        200,
-                        true,
-                        alanineInSerumOrPlasmaGroup,
-                        null,
-                        'Alanine [Moles/volume] in Serum or Plasma',
-                        '# Samples',
-                    ),
-                    new MitochondriaChart(
-                        'lactateInVenousBlood',
-                        'bar',
-                        lactateInVenousBloodDim,
-                        340,
-                        200,
-                        false,
-                        lactateInVenousBloodGroup,
-                        null,
-                        'Lactate [Moles/volume] in Venous blood',
-                        '# Samples',
-                    ),
-                    new MitochondriaChart(
-                        'choiceDilated',
-                        'pie',
-                        choiceDilatedDim,
-                        340,
-                        200,
-                        true,
-                        choiceDilatedGroup,
-                    ),
-                    new MitochondriaChart(
-                        'choiceHyperthrophic',
-                        'pie',
-                        choiceHyperthrophicDim,
-                        340,
-                        200,
-                        false,
-                        choiceHyperthrophicGroup,
-                    ),
-                    new MitochondriaChart(
-                        'choiceLeftVentricularNonCompaction',
-                        'pie',
-                        choiceLeftVentricularNonCompactionDim,
-                        340,
-                        200,
-                        false,
-                        choiceLeftVentricularNonCompactionGroup,
-                    ),
-                    new MitochondriaChart(
-                        'choiceEndocardialFibroElastosis',
-                        'pie',
-                        choiceEndocardialFibroElastosisDim,
-                        340,
-                        200,
-                        false,
-                        choiceEndocardialFibroElastosisGroup,
-                    ),
-                    new MitochondriaChart(
-                        'conditions',
-                        'row',
-                        conditionDim,
-                        325,
-                        700,
-                        true,
-                        conditionGroup,
-                        (dimension, filters) => {
-                            dimension.filter(null);   
-                            if (filters.length === 0)
-                                dimension.filter(null);
-                            else
-                                dimension.filterFunction(function (d) {
-                                    if (_.difference(filters, d).length === 0) return true;
-                                    return false; 
-                                });
-                            return filters;  
-                        },
-                    ),
-    
-                ];
-            }else{
-                this.charts = [
-                    new MitochondriaChart(
-                        'gender',
-                        'pie',
-                        genderDim,
-                        340,
-                        200,
-                        true,
-                        genderGroup,
-                    ),
-                    new MitochondriaChart(
-                        'conditions',
-                        'row',
-                        conditionDim,
-                        325,
-                        700,
-                        true,
-                        conditionGroup,
-                        (dimension, filters) => {
-                            dimension.filter(null);   
-                            if (filters.length === 0)
-                                dimension.filter(null);
-                            else
-                                dimension.filterFunction(function (d) {
-                                    if (_.difference(filters, d).length === 0) return true;
-                                    return false; 
-                                });
-                            return filters;  
-                        },
-                    ),
-    
-                ];
-            }
+            ];
 
 
             dc.dataCount('.dc-data-count')

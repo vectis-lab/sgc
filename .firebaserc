@@ -2,6 +2,7 @@
   "projects": {
     "staging": "sgc-staging-bbdf9",
     "prod": "sgc-prod-1df82",
-    "demo": "agha-demo"
+    "demo": "agha-demo",
+    "dev": "agha-dev"
   }
 }

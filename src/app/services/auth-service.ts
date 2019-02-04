@@ -33,6 +33,7 @@ export class Auth {
     }
 
     public handleAuthentication(): void {
+        console.log("Your token is: " + localStorage.getItem('idToken'))
         this.auth0.parseHash(this.handleAuthResult);
         LogRocket.identify(localStorage.getItem(uidKey));
     }
@@ -50,7 +51,7 @@ export class Auth {
         }, cb);
     }
 
-    public authenticated() {
+    public authenticated() {     
         const exp = localStorage.getItem(expiredAtKey);
         if (!exp) {
             return false;
