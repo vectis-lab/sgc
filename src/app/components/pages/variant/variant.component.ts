@@ -71,7 +71,7 @@ export class VariantComponent implements OnInit, OnDestroy {
     }
 
     beaconQuery(v: Variant) {
-        return `${ v.chr }:${ v.start }>${v.alt}`;
+        return `${ v.c }:${ v.s }>${v.a}`;
     }
 
     toggleBeacon() {
@@ -81,12 +81,12 @@ export class VariantComponent implements OnInit, OnDestroy {
     private getVariant(sq: SearchQuery, reference: string, alternate: string) {
         this.vss.getVariants(sq).then(variants => {
             this.loading = false;
-            const vf = variants.filter((v) => v.alt === alternate && v.ref === reference);
+            const vf = variants.filter((v) => v.a === alternate && v.r === reference);
             if (vf.length > 1) {
                 this.error = 'Found more than one variant for query';
             } else if (vf.length > 0) {
                 this.variant = vf[0];
-                if (this.variant.type !== 'SNP') {
+                if (this.variant.t !== 'SNP') {
                     this.beaconSupported = false;
                 } else {
                     this.beacons = this.bss.searchBeacon(this.beaconQuery(this.variant));
@@ -95,7 +95,7 @@ export class VariantComponent implements OnInit, OnDestroy {
                     }));
                 }
 
-                const r = new Region(this.variant.chr, this.variant.start, this.variant.start);
+                const r = new Region(this.variant.c, this.variant.s, this.variant.s);
                 this.rs.getGenesInRegion(r).subscribe((g) => {
                     if (g.length > 0) {
                         this.gene = g[0];

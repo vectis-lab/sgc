@@ -130,6 +130,9 @@ export class MitochondriaInformationComponent implements AfterViewInit, OnDestro
             }).group();
 
             const all = this.ndx.groupAll();
+
+            var sampleIdDim = this.ndx.dimension(function(d){ return d.Patient;})
+            var sampleIdGroup = sampleIdDim.group();
             
             var genderDim = this.ndx.dimension(function(d){ return d.Gender;})
             var genderGroup = genderDim.group();
@@ -144,6 +147,15 @@ export class MitochondriaInformationComponent implements AfterViewInit, OnDestro
             });
 
             this.charts = [
+                new MitochondriaChart(
+                    'sampleId',
+                    'row',
+                    sampleIdDim,
+                    325,
+                    1200,
+                    true,
+                    sampleIdGroup,
+                ),
                 new MitochondriaChart(
                     'gender',
                     'pie',

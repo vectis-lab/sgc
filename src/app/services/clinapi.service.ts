@@ -9,6 +9,7 @@ import { VariantSearchService } from "./variant-search-service";
 import * as seedrandom from "seedrandom";
 import { Subscription } from "rxjs/Subscription";
 import { HttpClient } from '@angular/common/http';
+import { SearchOption } from '../model/search-option';
 
 
 @Injectable()
@@ -77,20 +78,20 @@ export class ClinapiService implements OnDestroy {
 
     //Bakal diganti nih!!!
     filterVariants = (v: any[]) => {
-        if (this.samples.length >= 1139) {
+        if (this.samples.length >= 74) {
             return v;
         } else if (this.samples.length === 0) {
             return [];
         }
         const rng = seedrandom(this.samples.join(""));
-        const p = this.samples.length / 1139.0 + 0.025;
+        const p = this.samples.length / 74.0 + 0.025;
         const vf = [];
         for (let i = 0; i < v.length; i++) {
             if (rng() < p) {
                 vf.push(v[i]);
             }
         }
-        return vf;
+        return [];
     };
 
     ngOnDestroy() {

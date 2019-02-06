@@ -90,26 +90,16 @@ export class VariantsTableComponent implements OnInit, OnDestroy, AfterViewInit 
     downloadFile() {
         const data = this.variants.map((v: Variant) => {
             return {
-                'Chrom': v.chr,
-                'Position': v.start,
-                'RSID': v.rsid,
-                'Reference': v.ref,
-                'Alternate': v.alt,
-                'Type': v.type,
-                'Homozygotes Count': v.nHomVar,
-                'Heterozygotes Count': v.nHet,
+                'Chrom': v.c,
+                'Position': v.s,
+                'RSID': v.rs,
+                'Reference': v.r,
+                'Alternate': v.a,
+                'Type': v.t,
+                'Homozygotes Count': v.homc,
+                'Heterozygotes Count': v.hetc,
                 'Allele Count': v.ac,
                 'Allele Frequency': v.af,
-                'cato': v.cato,
-                'eigen': v.eigen,
-                'sift': v.sift,
-                'polyPhen': v.polyPhen,
-                'tgpAF': v.tgpAF,
-                'hrcAF': v.hrcAF,
-                'gnomadAF': v.gnomadAF,
-                'consequences': v.consequences,
-                'gene': v.geneSymbol,
-                'clinvar': v.clinvar
             };
         });
         const csv = Papa.unparse(data);

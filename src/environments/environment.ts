@@ -25,6 +25,7 @@ export const environment = {
     auth0MachineClientSecret: '',
     beaconNetworkUrl: '',
     vsalUrl: '',
+    vsalUrl2: '',
     elasticUrl: '',
     durlUrl: '',
     sentryUrl: '',
