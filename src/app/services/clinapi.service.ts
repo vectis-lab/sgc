@@ -11,6 +11,7 @@ import { Subscription } from "rxjs/Subscription";
 import { HttpClient } from '@angular/common/http';
 import { SearchOption } from '../model/search-option';
 import { VsalService } from "./vsal-service";
+import { environment } from '../../environments/environment';
 
 
 @Injectable()
@@ -77,7 +78,7 @@ export class ClinapiService implements OnDestroy {
         //if authorize to see clinical data
         if(authorize){
             //For staging/demo use mock data
-            return this.http.get<any>(`http://129.94.15.156:8080/vsal/core/find?pheno=true&dataset=mito&jwt=${localStorage.getItem('idToken')}`).map(res => {
+            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=mito&jwt=${localStorage.getItem('idToken')}`).map(res => {
                 return JSON.parse(res.pheno)
             });
         }//if not authorize but want to see demo

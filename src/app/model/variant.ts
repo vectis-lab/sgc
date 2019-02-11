@@ -38,6 +38,7 @@ export class Variant {
     homc: number;
     hetc: number;
     vac: string;
+    vaf: number;
     vhomc: string;
     vhetc: string;
     highlight = false;

@@ -11,21 +11,29 @@ export class TableService {
         'Type': (v: Variant) => v.t,
         'dbSNP': (v: Variant) => v.rs,
         'Homozygotes Count': (v: Variant) => v.homc,
+        'Virtual Homozygotes Count': (v: Variant) => v.vhomc,
         'Heterozygotes Count': (v: Variant) => v.hetc,
+        'Virtual Heterozygotes Count': (v: Variant) => v.vhetc,
         'Allele Count': (v: Variant) => v.ac,
+        'Virtual Allele Count': (v: Variant) => v.vac,
         'Allele Freq': (v: Variant) => v.af.toExponential(4),
+        'Virtual Allele Freq': (v: Variant) => v.vaf?v.vaf.toExponential(4):null,
     };
 
     private searchResultKeys: any[] = [
         ['Location', true],
         ['Reference', true],
         ['Alternate', true],
-        ['Type', true],
+        ['Type', false],
         ['dbSNP', false],
         ['Homozygotes Count', false],
+        ['Virtual Homozygotes Count', false],
         ['Heterozygotes Count', false],
-        ['Allele Count', false],
-        ['Allele Freq', true]
+        ['Virtual Heterozygotes Count', false],
+        ['Allele Count', true],
+        ['Virtual Allele Count', true],
+        ['Allele Freq', true],
+        ['Virtual Allele Freq', true]
     ];
 
     private columns: Map<string, boolean> = new Map<string, boolean>(this.searchResultKeys);
@@ -39,11 +47,19 @@ export class TableService {
         'Homozygotes Count': (v: Variant) => {
             return v.homc;
         },
+        'Virtual Homozygotes Count': (v: Variant) => {
+            return v.vhomc;
+        },
         'Heterozygotes Count': (v: Variant) => {
             return v.hetc;
         },
+        'Virtual Heterozygotes Count': (v: Variant) => {
+            return v.vhetc;
+        },
         'Allele Count': (v: Variant) => v.ac,
+        'Virtual Allele Count': (v: Variant) => v.vac,
         'Allele Freq': (v: Variant) => v.af,
+        'Virtual Allele Freq': (v: Variant) => v.vaf,
     };
 
     private tooltips: any = {
@@ -116,9 +132,13 @@ export class TableService {
             ['Type', false],
             ['dbSNP', false],
             ['Homozygotes Count', false],
+            ['Virtual Homozygotes Count', false],
             ['Heterozygotes Count', false],
+            ['Virtual Heterozygotes Count', false],
             ['Allele Count', false],
+            ['Virtual Allele Count', false],
             ['Allele Freq', true],
+            ['Virtual Allele Freq', true],
         ];
         this.columns = new Map<string, boolean>(keys);
     }
