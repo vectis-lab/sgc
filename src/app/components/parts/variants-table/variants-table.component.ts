@@ -13,7 +13,7 @@ import { FilterAutoComponent } from '../filter-auto/filter-auto.component';
 
 const DB_SNP_URL = 'https://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi';
 const MINIMAL_VIEW = 500;
-const ALLELEFREQ_DIFFERENCE_THRESHOLD = 0.7;
+const ALLELEFREQ_DIFFERENCE_THRESHOLD = 0.2;
 
 @Component({
     selector: 'app-variants-table',
