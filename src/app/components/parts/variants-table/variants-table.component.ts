@@ -13,6 +13,7 @@ import { FilterAutoComponent } from '../filter-auto/filter-auto.component';
 
 const DB_SNP_URL = 'https://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi';
 const MINIMAL_VIEW = 500;
+const ALLELEFREQ_DIFFERENCE_THRESHOLD = 0.7;
 
 @Component({
     selector: 'app-variants-table',
@@ -109,6 +110,15 @@ export class VariantsTableComponent implements OnInit, OnDestroy, AfterViewInit 
 
     compare(a: Variant, b: Variant) {
         return JSON.stringify(a) === JSON.stringify(b);
+    }
+
+    compareAlleleFreq(a: Variant) {
+        if(a.af && a.vaf){
+            if(Math.abs(a.af - a.vaf) > ALLELEFREQ_DIFFERENCE_THRESHOLD){
+                return true;
+            }
+        }
+        return false;
     }
 
     ngOnDestroy() {
