@@ -31,6 +31,9 @@ export class VariantTrackService implements TrackService {
     highlightedVariant = new Subject<Variant>();
     clickedVariant = new Subject<Variant>();
     data: any;
+    showVirtualCohort = new Subject<boolean>();
+    showVirtualCohortFlag: boolean = false;
+    queryStopper: boolean = false; //Workaround to stop querying backend when user only switch Virtual Cohort.
 
     readonly overlays: GenomeBrowserOverlay[] = ['None', 'Homozygotes', 'Heterozygotes'];
     private activeOverlay: GenomeBrowserOverlay = 'None';
@@ -40,7 +43,8 @@ export class VariantTrackService implements TrackService {
     private pinFeature: any;
 
     constructor(private searchService: VariantSearchService,
-                private regionService: RegionService) {
+                private regionService: RegionService
+            ) {
         this.pinFeature = tnt.track.feature.pin().fixed(this.drawYAxis);
 
         this.initCreateMethod();
@@ -50,6 +54,10 @@ export class VariantTrackService implements TrackService {
             v.highlight ? this.highlightPin(v) : this.unHighlightPin(v);
         });
 
+        this.showVirtualCohort.subscribe(v => {
+            this.queryStopper = true;
+            this.showVirtualCohortFlag = v;
+        })
         this.data = this.createDataMethod();
         const display = this.createDisplayMethod();
 
@@ -162,16 +170,24 @@ export class VariantTrackService implements TrackService {
     }
 
     private createDataMethod(): () => any {
-        const createPin = (variant: Variant) => {
-            return new VariantPin(
-                variant.s,
-                variant.af,
-                this.variantName(variant),
-                variant
-            );
-        };
         return tnt.track.data.async()
             .retriever((loc: any) => {
+                const createPin = (variant: Variant) => {
+                    if(this.showVirtualCohortFlag){
+                        return new VariantPin(
+                            variant.s,
+                            variant.vaf,
+                            this.variantName(variant),
+                            variant
+                        );
+                    }
+                    return new VariantPin(
+                        variant.s,
+                        variant.af,
+                        this.variantName(variant),
+                        variant
+                    );
+                };
 
                 const region = new Region(String(this.searchService.lastQuery.chromosome),
                     loc.from,
@@ -185,13 +201,14 @@ export class VariantTrackService implements TrackService {
                     this.regionService
                 );
 
-                if (this.searchService.startingRegion.start !== loc.from ||
+                if ((this.searchService.startingRegion.start !== loc.from ||
                     this.searchService.startingRegion.end !== loc.to ||
-                    this.searchService.filter !== null) {
+                    this.searchService.filter !== null) && !this.queryStopper) {
                     return regionAutocomplete.search(this.searchService, this.searchService.lastQuery.options).then(() => {
                         return Promise.resolve(this.searchService.variants.map(createPin));
                     });
                 } else {
+                    this.queryStopper = false;
                     return Promise.resolve(this.searchService.variants.map(createPin));
                 }
             });
@@ -297,6 +314,8 @@ export class VariantTrackService implements TrackService {
             variant.rs,
             variant.af,
             variant.ac,
+            variant.vaf,
+            variant.vac,
             variant.a,
             variant.t,
             variant.s,

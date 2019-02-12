@@ -45,7 +45,11 @@ export class ClinapiService implements OnDestroy {
                 'AAACA','AAACB','AAACC','AAACD','AAACF','AAACG','AAACH','AAACJ','AAACK','AAACL','AAACM','AAACN','AAACO','AAACP','AAACQ','AAACR','AAACS','AAACT',
                 'AAACU','AAACV','AAACX','AAACY','AAACZ']
 
-                const mockSamples = TEMP_SAMPLES.slice(0, this.samples.length)
+                const MITO_SAMPLES = ["A0121001", "A0121002", "A0121003", "A0121004", "A0121005", "A0121006", "A0121007", "A0121008", "A0121009", "A0121010", "A0121011", "A0121012", "A0121013", "A0121014", "A0121015", "A0121016", "A0121017", "A0121018", "A0121019", "A0121020", "A0421001", "A0421002", "A0421004", "A0621001", "A0621002", "A0621003", "A0721001", "A0721002", "A0721003", "A0721004", "A0721005", "A0821001", "A0921001", "A0921002", "A0921003", "A0921004", "A0921005", "A0921006", "A1121001", "A1121002", "A1121003", "A1121004", "A1121005", "A1121006", "A1121007", "A1121008", "A1121009", "A1121010", "A1121011", "A1221001", "A1221002", "A1221003", "A1221004", "A1421001", "A1421002", "A1421003", "A1421004", "A1421005", "A1421006", "A1421007", "A1421008", "A1421009", "A1421010", "A1421011", "A1421012", "A1421013", "A1921001", "A1921002", "A1921003", "A1921004", "A1921005", "A1921006", "A1921007", "A1921008"];
+
+                const mockSamples = this.samples.map(sample => {
+                    return TEMP_SAMPLES[MITO_SAMPLES.indexOf(sample)];
+                })
                 if(this.samples.length){
                     this.vss.lastQuery.options = [(new SearchOption('', 'samples', [], mockSamples.join()))];
                 }else{
