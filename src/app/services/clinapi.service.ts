@@ -127,10 +127,9 @@ export class ClinapiService implements OnDestroy {
             if(DEV){
                 return Observable.of<any>(FAKE_NEUROMUSCULAR_DATA);
             }else{
-                //Don't have the real data of neuromuscular deployed anywhere yet
-                /*return this.http.get<any>(`http://129.94.15.156:8080/vsal/core/find?pheno=true&dataset=mito&jwt=${localStorage.getItem('idToken')}`).map(res => {
+                return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=neuromuscular&jwt=${localStorage.getItem('idToken')}`).map(res => {
                     return JSON.parse(res.pheno)
-                });*/
+                });
             }
         }//if not authorize but want to see demo
         else if(demo){
