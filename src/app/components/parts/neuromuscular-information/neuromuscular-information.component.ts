@@ -43,7 +43,7 @@ export class NeuromuscularInformationComponent implements AfterViewInit, OnDestr
 
     ngAfterViewInit() {
         this.subscriptions.push(this.auth.userPermissions.subscribe(permissions => {
-            if(permissions.includes('mito/pheno')){
+            if(permissions.includes('neuromuscular/pheno')){
                 this.getNeuromuscular(this.demo, true);
             }else {
                 this.getNeuromuscular(this.demo, false)
