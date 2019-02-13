@@ -7,23 +7,8 @@ import { ClinicalFilteringService } from '../../../services/clinical-filtering.s
 import { Auth } from '../../../services/auth-service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
+import { Chart } from "../../../model/clinical-cohort-chart";
 import { DEV } from "../../../shared/tempConfiguration";
-
-export class Chart {
-
-    constructor(public name: string,
-                public type: string,
-                public dim: any,
-                public width: number,
-                public height: number,
-                public enabled = false,
-                public group: any,
-                public filterHandler:any = null,
-                public xAxisLabel: string = "",
-                public yAxisLabel: string = "",
-            ) {
-    }
-}
 
 @Component({
     selector: 'app-neuromuscular-information',
@@ -43,62 +28,6 @@ export class NeuromuscularInformationComponent implements AfterViewInit, OnDestr
     params: any;
     subscriptions: Subscription[] = [];
     demo: boolean = false;
-    /*chartOption = {
-        title: {
-          text: 'Test Echarts'
-        },
-        tooltip : {
-          trigger: 'axis'
-        },
-        legend: {
-          data:['test1','test2','test3','test4','test5']
-        },
-        toolbox: {
-          feature: {
-            saveAsImage: {}
-          }
-        },
-        grid: {
-          left: '3%',
-          right: '4%',
-          bottom: '3%',
-          containLabel: true
-        },
-        xAxis : [
-          {
-            type : 'category',
-            boundaryGap : false,
-            data : ['test1','test2','test3','test4','test5','test6','test7']
-          }
-        ],
-        yAxis : [
-          {
-            type : 'value'
-          }
-        ],
-        series : [
-          {
-            name:'low',
-            type:'line',
-            stack: '总量',
-            areaStyle: {normal: {}},
-            data:[320, 332, 301, 334, 390, 330, 320]
-          },
-          {
-            name:'high',
-            type:'line',
-            stack: '总量',
-            label: {
-              normal: {
-                show: true,
-                position: 'top'
-              }
-            },
-            areaStyle: {normal: {}},
-            data:[820, 932, 901, 934, 1290, 1330, 1320]
-          }
-        ]
-      }*/
 
     constructor(private cs: ClinapiService,
                 private cd: ChangeDetectorRef,
@@ -165,130 +94,107 @@ export class NeuromuscularInformationComponent implements AfterViewInit, OnDestr
             var serumCkDim = this.ndx.dimension(function(d){ return d['Serum CK'];});
             var serumCkGroup = serumCkDim.group();
 
-            if(demo || DEV){
-                this.charts = [
-                    new Chart(
-                        'ageOfOnset',
-                        'row',
-                        ageOfOnsetDim,
-                        340,
-                        200,
-                        true,
-                        ageOfOnsetGroup,
-                    ),
-                    new Chart(
-                        'evolutionOfSymptoms',
-                        'row',
-                        evolutionOfSymptomsDim,
-                        340,
-                        200,
-                        true,
-                        evolutionOfSymptomsGroup
-                    ),
-                    new Chart(
-                        'muscleWeakness',
-                        'row',
-                        muscleWeaknessDim,
-                        340,
-                        200,
-                        true,
-                        muscleWeaknessGroup
-                    ),
-                    new Chart(
-                        'facial',
-                        'pie',
-                        facialDim,
-                        340,
-                        200,
-                        true,
-                        facialGroup
-                    ),
-                    new Chart(
-                        'ptosis',
-                        'pie',
-                        ptosisDim,
-                        340,
-                        200,
-                        true,
-                        ptosisGroup
-                    ),
-                    new Chart(
-                        'proximalUl',
-                        'pie',
-                        proximalUlDim,
-                        340,
-                        200,
-                        true,
-                        proximalUlGroup
-                    ),
-                    new Chart(
-                        'proxLlWeakness',
-                        'row',
-                        proxLlWeaknessDim,
-                        340,
-                        200,
-                        true,
-                        proxLlWeaknessGroup
-                    ),
-                    new Chart(
-                        'distalLlWeakness',
-                        'row',
-                        distalLlWeaknessDim,
-                        340,
-                        200,
-                        true,
-                        distalLlWeaknessGroup
-                    ),
-                    new Chart(
-                        'leftBicep',
-                        'row',
-                        leftBicepDim,
-                        340,
-                        200,
-                        true,
-                        leftBicepGroup
-                    ),
-                    new Chart(
-                        'rightBicep',
-                        'row',
-                        rightBicepDim,
-                        340,
-                        200,
-                        true,
-                        rightBicepGroup
-                    ),
-                    new Chart(
-                        'serumCk',
-                        'row',
-                        serumCkDim,
-                        340,
-                        1000,
-                        true,
-                        serumCkGroup
-                    ),
-                ];
-            }else{
-                this.charts = [
-                    new Chart(
-                        'ageOfOnset',
-                        'row',
-                        ageOfOnsetDim,
-                        340,
-                        200,
-                        true,
-                        ageOfOnsetGroup,
-                    ),
-                    new Chart(
-                        'evolutionOfSymptoms',
-                        'row',
-                        evolutionOfSymptomsDim,
-                        340,
-                        200,
-                        true,
-                        evolutionOfSymptomsGroup
-                    ),    
-                ];
-            }
+            this.charts = [
+                new Chart(
+                    'ageOfOnset',
+                    'row',
+                    ageOfOnsetDim,
+                    340,
+                    200,
+                    true,
+                    ageOfOnsetGroup,
+                ),
+                new Chart(
+                    'evolutionOfSymptoms',
+                    'row',
+                    evolutionOfSymptomsDim,
+                    340,
+                    200,
+                    true,
+                    evolutionOfSymptomsGroup
+                ),
+                new Chart(
+                    'muscleWeakness',
+                    'row',
+                    muscleWeaknessDim,
+                    340,
+                    200,
+                    true,
+                    muscleWeaknessGroup
+                ),
+                new Chart(
+                    'facial',
+                    'pie',
+                    facialDim,
+                    340,
+                    200,
+                    true,
+                    facialGroup
+                ),
+                new Chart(
+                    'ptosis',
+                    'pie',
+                    ptosisDim,
+                    340,
+                    200,
+                    true,
+                    ptosisGroup
+                ),
+                new Chart(
+                    'proximalUl',
+                    'pie',
+                    proximalUlDim,
+                    340,
+                    200,
+                    true,
+                    proximalUlGroup
+                ),
+                new Chart(
+                    'proxLlWeakness',
+                    'row',
+                    proxLlWeaknessDim,
+                    340,
+                    200,
+                    true,
+                    proxLlWeaknessGroup
+                ),
+                new Chart(
+                    'distalLlWeakness',
+                    'row',
+                    distalLlWeaknessDim,
+                    340,
+                    200,
+                    true,
+                    distalLlWeaknessGroup
+                ),
+                new Chart(
+                    'leftBicep',
+                    'row',
+                    leftBicepDim,
+                    340,
+                    200,
+                    true,
+                    leftBicepGroup
+                ),
+                new Chart(
+                    'rightBicep',
+                    'row',
+                    rightBicepDim,
+                    340,
+                    200,
+                    true,
+                    rightBicepGroup
+                ),
+                new Chart(
+                    'serumCk',
+                    'row',
+                    serumCkDim,
+                    340,
+                    1000,
+                    true,
+                    serumCkGroup
+                ),
+            ];
 
 
             dc.dataCount('.dc-data-count')

@@ -1,6 +1,6 @@
 import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnDestroy,Output, EventEmitter } from '@angular/core';
 import * as dc from 'dc';
-import { Chart } from '../neuromuscular-information/neuromuscular-information.component';
+import { Chart } from '../../../model/clinical-cohort-chart';
 import { ClinapiService } from '../../../services/clinapi.service';
 import { HelperService } from '../../../services/helper.service';
 import { ClinicalFilteringService } from '../../../services/clinical-filtering.service';

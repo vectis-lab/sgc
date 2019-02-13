@@ -107,6 +107,7 @@ import { CohortsComponent } from './components/parts/cohorts/cohorts.component';
 import { NeuromuscularInformationComponent } from './components/parts/neuromuscular-information/neuromuscular-information.component';
 import { ClinicalCohortChartComponent } from './components/parts/clinical-cohort-chart/clinical-cohort-chart.component';
 import { SearchBarService } from './services/search-bar-service';
+import { MitochondriaInformationComponent } from './components/parts/mitochondria-information/mitochondria-information.component';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -210,7 +211,8 @@ if (environment.production && !environment.ci) {
         CohortDialog,
         CohortsComponent,
         NeuromuscularInformationComponent,
-        ClinicalCohortChartComponent
+        ClinicalCohortChartComponent,
+        MitochondriaInformationComponent
     ],
     entryComponents: [
         SignUpComponent,

@@ -62,7 +62,6 @@ export class ClinapiService implements OnDestroy {
     getMitochondria(demo = false, authorize = false): Observable<any> {
         //if authorize to see clinical data
         if(authorize){
-            //For staging/demo use mock data
             if(DEV){
                 return Observable.of<any>(FAKE_MITOCHONDRIA_DATA);
             }else{
@@ -82,7 +81,6 @@ export class ClinapiService implements OnDestroy {
 
     getNeuromuscular(demo = false, authorize = false): Observable<any> {
         if(authorize){
-            //For staging/demo use mock data
             if(DEV){
                 return Observable.of<any>(FAKE_NEUROMUSCULAR_DATA);
             }else{

@@ -15,6 +15,7 @@
         <mat-tab [label]="selectedCohort + ' Clinical Filtering'">
             <div class="clinical-filters tab-content">
                 <app-neuromuscular-information *ngIf="showClin && selectedCohort === 'Neuromuscular'"></app-neuromuscular-information>
+                <app-mitochondria-information *ngIf="showClin && selectedCohort === 'Mitochondria'"></app-mitochondria-information>
             </div>
 
         </mat-tab>
