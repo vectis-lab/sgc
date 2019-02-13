@@ -19,6 +19,9 @@
                 <mat-slide-toggle *ngIf="ensemblSupported" [ngModel]="transcriptsShown" (ngModelChange)="toggleTranscripts()" matTooltip="Show/hide Transcripts from Ensembl" matTooltipPosition="above">
                     Transcripts
                 </mat-slide-toggle>
+                <mat-slide-toggle [ngStyle]="{'margin-left': '10px'}" [ngModel]="virtualCohort" (ngModelChange)="toggleVirtualCohort()" matTooltip="View virtual cohort value" matTooltipPosition="above">
+                    Virtual Cohort
+                </mat-slide-toggle>
             </div>
     </div>
     <div #genomeBrowser id="genome-browser"></div>

@@ -60,6 +60,9 @@ export class NeuromuscularInformationComponent implements AfterViewInit, OnDestr
             }).group();
 
             const all = this.ndx.groupAll();
+
+            var sampleIdDim = this.ndx.dimension(function(d){ return d['Study Number'];})
+            var sampleIdGroup = sampleIdDim.group();
             
             var ageOfOnsetDim = this.ndx.dimension(function(d){ return d['Age of onset'];})
             var ageOfOnsetGroup = ageOfOnsetDim.group();
@@ -95,6 +98,15 @@ export class NeuromuscularInformationComponent implements AfterViewInit, OnDestr
             var serumCkGroup = serumCkDim.group();
 
             this.charts = [
+                new Chart(
+                    'sampleId',
+                    'row',
+                    sampleIdDim,
+                    325,
+                    1400,
+                    true,
+                    sampleIdGroup,
+                ),
                 new Chart(
                     'ageOfOnset',
                     'row',

@@ -9,6 +9,12 @@
     height: 220px;
 }
 
+.sampleId {
+    overflow-y: auto;
+    width: 340px;
+    height: 220px;
+}
+
 h4 {
     text-align: center;
     margin: 0;

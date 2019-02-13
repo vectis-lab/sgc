@@ -18,15 +18,14 @@ export class VsalService {
 
     getVariants(query: SearchQuery): Observable<VariantRequest> {
         let urlParams = new HttpParams()
-            .append('chr', query.chromosome)
-            .append('start', String(query.start))
-            .append('end', String(query.end))
+            .append('chromosome', query.chromosome)
+            .append('dataset', 'mgrb')
+            .append('positionStart', String(query.start))
+            .append('positionEnd', String(query.end))
             .append('limit', VSAL_VARIANT_LIMIT.toString())
-            .append('sortBy', 'start')
-            .append('descend', 'false')
             .append('skip', '0')
-            .append('count', 'true')
-            .append('annot', 'true');
+            .append('returnAnnotations', 'true')
+            .append('jwt', localStorage.getItem('idToken'));
 
         query.options.forEach(o => {
             if (o.key) {
@@ -42,33 +41,33 @@ export class VsalService {
             acc.error += x.error;
             return acc;
         }, new VariantRequest([])).map((v: VariantRequest) => {
-            v.variants.sort((a: Variant, b: Variant) => a.start - b.start);
+            v.variants.sort((a: Variant, b: Variant) => a.s - b.s);
             return v;
         });
     }
 
-    getVariantsBySampleIds(query: Array<string>): Observable<VariantRequest> {
-        let urlParams = new HttpParams()
-            .append('sampleIds', JSON.stringify(query))
-            .append('limit', VSAL_VARIANT_LIMIT.toString())
-            .append('sortBy', 'start')
-            .append('descend', 'false')
-            .append('skip', '0')
-            .append('count', 'true')
-            .append('annot', 'true');
+    // getVariantsBySampleIds(query: Array<string>): Observable<VariantRequest> {
+    //     let urlParams = new HttpParams()
+    //         .append('sampleIds', JSON.stringify(query))
+    //         .append('limit', VSAL_VARIANT_LIMIT.toString())
+    //         .append('sortBy', 'start')
+    //         .append('descend', 'false')
+    //         .append('skip', '0')
+    //         .append('count', 'true')
+    //         .append('annot', 'true');
 
-        const headers = new HttpHeaders()
-            .append('Content-Type', 'application/json')
-            .append('Accept', '*/*');
-        return this.requests(urlParams, headers).reduce((acc: VariantRequest, x: VariantRequest, i: number) => {
-            acc.variants = acc.variants.concat(x.variants);
-            acc.error += x.error;
-            return acc;
-        }, new VariantRequest([])).map((v: VariantRequest) => {
-            v.variants.sort((a: Variant, b: Variant) => a.start - b.start);
-            return v;
-        });
-    }
+    //     const headers = new HttpHeaders()
+    //         .append('Content-Type', 'application/json')
+    //         .append('Accept', '*/*');
+    //     return this.requests(urlParams, headers).reduce((acc: VariantRequest, x: VariantRequest, i: number) => {
+    //         acc.variants = acc.variants.concat(x.variants);
+    //         acc.error += x.error;
+    //         return acc;
+    //     }, new VariantRequest([])).map((v: VariantRequest) => {
+    //         v.variants.sort((a: Variant, b: Variant) => a.start - b.start);
+    //         return v;
+    //     });
+    // }
 
     private requests(params: HttpParams, headers: HttpHeaders): Observable<VariantRequest> {
         return Observable.create((observer) => {
@@ -100,14 +99,14 @@ export class VsalService {
     }
 
     private request(params: HttpParams, headers: HttpHeaders): Observable<VariantRequest> {
-        return this.http.get(environment.vsalUrl, {params: params, headers: headers})
+        return this.http.get(environment.vsalUrl2, {params: params, headers: headers})
             .timeout(VSAL_TIMEOUT)
             .map((data) => {
                 if (data['error']) {
                     Raven.captureMessage("VSAL ERROR: " + data['error']);
                     return new VariantRequest([], constants.GENERIC_SERVICE_ERROR_MESSAGE);
                 }
-                const vs = new VariantRequest(data['variants']);
+                const vs = new VariantRequest(data['v']);
                 if (data['total'] && data['total'] !== -1) {
                     vs.total = data['total'];
                 }

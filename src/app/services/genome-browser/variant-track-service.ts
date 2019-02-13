@@ -14,7 +14,7 @@ const PIN_COLOR = '#004D95';
 const PIN_SELECTED_COLOR = '#00aedb';
 const OVERLAY_COLOR = '#D54A0F';
 
-export type GenomeBrowserOverlay = 'None' | 'Homozygotes' | 'Heterozygotes' | 'DbSNP';
+export type GenomeBrowserOverlay = 'None' | 'Homozygotes' | 'Heterozygotes';
 
 class VariantPin {
     constructor(public pos: number,
@@ -31,8 +31,11 @@ export class VariantTrackService implements TrackService {
     highlightedVariant = new Subject<Variant>();
     clickedVariant = new Subject<Variant>();
     data: any;
+    showVirtualCohort = new Subject<boolean>();
+    showVirtualCohortFlag: boolean = false;
+    queryStopper: boolean = false; //Workaround to stop querying backend when user only switch Virtual Cohort.
 
-    readonly overlays: GenomeBrowserOverlay[] = ['None', 'Homozygotes', 'Heterozygotes', 'DbSNP'];
+    readonly overlays: GenomeBrowserOverlay[] = ['None', 'Homozygotes', 'Heterozygotes'];
     private activeOverlay: GenomeBrowserOverlay = 'None';
     private overlayMap: Map<GenomeBrowserOverlay, any> = new Map<GenomeBrowserOverlay, any>();
     private highlightCache: any = {};
@@ -40,7 +43,8 @@ export class VariantTrackService implements TrackService {
     private pinFeature: any;
 
     constructor(private searchService: VariantSearchService,
-                private regionService: RegionService) {
+                private regionService: RegionService
+            ) {
         this.pinFeature = tnt.track.feature.pin().fixed(this.drawYAxis);
 
         this.initCreateMethod();
@@ -50,6 +54,10 @@ export class VariantTrackService implements TrackService {
             v.highlight ? this.highlightPin(v) : this.unHighlightPin(v);
         });
 
+        this.showVirtualCohort.subscribe(v => {
+            this.queryStopper = true;
+            this.showVirtualCohortFlag = v;
+        })
         this.data = this.createDataMethod();
         const display = this.createDisplayMethod();
 
@@ -162,16 +170,24 @@ export class VariantTrackService implements TrackService {
     }
 
     private createDataMethod(): () => any {
-        const createPin = (variant: Variant) => {
-            return new VariantPin(
-                variant.start,
-                variant.af,
-                this.variantName(variant),
-                variant
-            );
-        };
         return tnt.track.data.async()
             .retriever((loc: any) => {
+                const createPin = (variant: Variant) => {
+                    if(this.showVirtualCohortFlag){
+                        return new VariantPin(
+                            variant.s,
+                            variant.vaf,
+                            this.variantName(variant),
+                            variant
+                        );
+                    }
+                    return new VariantPin(
+                        variant.s,
+                        variant.af,
+                        this.variantName(variant),
+                        variant
+                    );
+                };
 
                 const region = new Region(String(this.searchService.lastQuery.chromosome),
                     loc.from,
@@ -185,13 +201,14 @@ export class VariantTrackService implements TrackService {
                     this.regionService
                 );
 
-                if (this.searchService.startingRegion.start !== loc.from ||
+                if ((this.searchService.startingRegion.start !== loc.from ||
                     this.searchService.startingRegion.end !== loc.to ||
-                    this.searchService.filter !== null) {
+                    this.searchService.filter !== null) && !this.queryStopper) {
                     return regionAutocomplete.search(this.searchService, this.searchService.lastQuery.options).then(() => {
                         return Promise.resolve(this.searchService.variants.map(createPin));
                     });
                 } else {
+                    this.queryStopper = false;
                     return Promise.resolve(this.searchService.variants.map(createPin));
                 }
             });
@@ -225,7 +242,7 @@ export class VariantTrackService implements TrackService {
                 that.createMethod.call(this, pins);
 
                 const homoz = pins.filter((d: VariantPin) => {
-                    return d.variant.nHomVar;
+                    return d.variant.homc;
                 });
                 homoz.select('line').attr('stroke', OVERLAY_COLOR);
                 homoz.select('circle').attr('fill', OVERLAY_COLOR);
@@ -237,14 +254,14 @@ export class VariantTrackService implements TrackService {
                 that.createMethod.call(this, pins);
 
                 const hetz = pins.filter((d: VariantPin) => {
-                    return d.variant.nHet;
+                    return d.variant.hetc;
                 });
                 hetz.select('line').attr('stroke', OVERLAY_COLOR);
                 hetz.select('circle').attr('fill', OVERLAY_COLOR);
             });
         });
 
-        this.overlayMap.set('DbSNP', (overlay: any) => {
+        /*this.overlayMap.set('DbSNP', (overlay: any) => {
             this.pinFeature.create(function (pins: any) {
                 that.createMethod.call(this, pins);
                 const dbSNPs = pins.filter((d: VariantPin) => {
@@ -253,7 +270,7 @@ export class VariantTrackService implements TrackService {
                 dbSNPs.select('line').attr('stroke', OVERLAY_COLOR);
                 dbSNPs.select('circle').attr('fill', OVERLAY_COLOR);
             });
-        });
+        });*/
     }
 
     private highlightPin(v: Variant) {
@@ -293,23 +310,25 @@ export class VariantTrackService implements TrackService {
 
     private variantHash(variant: Variant) {
         const d = [
-            variant.chr,
-            variant.rsid,
+            variant.c,
+            variant.rs,
             variant.af,
             variant.ac,
-            variant.alt,
-            variant.ref,
-            variant.start,
-            variant.type
+            variant.vaf,
+            variant.vac,
+            variant.a,
+            variant.t,
+            variant.s,
+            variant.t
         ];
         return window.btoa(JSON.stringify(d));
     }
 
     private variantName(variant: Variant) {
-        return variant.chr +
-            variant.start +
-            variant.ref +
-            variant.alt +
-            variant.type;
+        return variant.c +
+            variant.s +
+            variant.r +
+            variant.a +
+            variant.t;
     }
 }

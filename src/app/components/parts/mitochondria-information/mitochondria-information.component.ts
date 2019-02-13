@@ -7,23 +7,7 @@ import { ClinicalFilteringService } from '../../../services/clinical-filtering.s
 import { Auth } from '../../../services/auth-service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
-import { DEV } from "../../../shared/tempConfiguration";
-
-export class MitochondriaChart {
-
-    constructor(public name: string,
-                public type: string,
-                public dim: any,
-                public width: number,
-                public height: number,
-                public enabled = false,
-                public group: any,
-                public filterHandler:any = null,
-                public xAxisLabel: string = "",
-                public yAxisLabel: string = "",
-            ) {
-    }
-}
+import { Chart } from "../../../model/clinical-cohort-chart";
 
 @Component({
     selector: 'app-mitochondria-information',
@@ -39,7 +23,7 @@ export class MitochondriaInformationComponent implements AfterViewInit, OnDestro
     denied = false;
     patients = [];
     ndx: any;
-    charts: MitochondriaChart[];
+    charts: Chart[];
     params: any;
     subscriptions: Subscription[] = [];
     demo: boolean = false;
@@ -131,6 +115,9 @@ export class MitochondriaInformationComponent implements AfterViewInit, OnDestro
             }).group();
 
             const all = this.ndx.groupAll();
+
+            var sampleIdDim = this.ndx.dimension(function(d){ return d.Patient;})
+            var sampleIdGroup = sampleIdDim.group();
             
             var genderDim = this.ndx.dimension(function(d){ return d.Gender;})
             var genderGroup = genderDim.group();
@@ -145,7 +132,16 @@ export class MitochondriaInformationComponent implements AfterViewInit, OnDestro
             });
 
             this.charts = [
-                new MitochondriaChart(
+                new Chart(
+                    'sampleId',
+                    'row',
+                    sampleIdDim,
+                    325,
+                    1200,
+                    true,
+                    sampleIdGroup,
+                ),
+                new Chart(
                     'gender',
                     'pie',
                     genderDim,
@@ -154,7 +150,7 @@ export class MitochondriaInformationComponent implements AfterViewInit, OnDestro
                     true,
                     genderGroup,
                 ),
-                new MitochondriaChart(
+                new Chart(
                     'conditions',
                     'row',
                     conditionDim,
@@ -176,7 +172,6 @@ export class MitochondriaInformationComponent implements AfterViewInit, OnDestro
                 ),
 
             ];
-
 
 
             dc.dataCount('.dc-data-count')
