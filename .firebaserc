@@ -1,6 +1,9 @@
 {
   "projects": {
     "staging": "sgc-staging-bbdf9",
-    "prod": "sgc-prod-1df82"
+    "prod": "sgc-prod-1df82",
+    "demo": "agha-demo",
+    "dev": "agha-dev",
+    "staging": "agha-staging"
   }
 }

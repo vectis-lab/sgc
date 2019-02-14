@@ -61,13 +61,12 @@ export class ClinicalChartComponent implements AfterViewInit, OnDestroy {
             .width(window.innerWidth > 400 ? 320 : 220)
             .height(100)
             .x(d3.scale.linear().domain([this.data.min, this.data.max]))
-            .brushOn(true)
             .elasticX(true)
             .elasticY(true)
             .yAxisLabel(this.data.yAxisLabel)
             .xAxisLabel(this.data.xAxisLabel)
             .dimension(this.data.dim)
-            .margins({top: 15, right: 20, bottom: 45, left: 50})
+            .margins({top: 15, right: 20, bottom: 45, left: 40})
             .group(this.data.dim.group().reduceCount());
 
         this.chart.yAxis().ticks(3);

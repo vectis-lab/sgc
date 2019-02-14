@@ -4,7 +4,7 @@ const DB_SNP_URL = 'https://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi';
 
 
 export class Variant {
-    v: string;
+    /*v: string;
     rsid: string;
     chr: string;
     start: number;
@@ -25,13 +25,29 @@ export class Variant {
     gnomadAF: string;
     consequences: string;
     geneSymbol: string;
-    clinvar: string;
+    clinvar: string;*/
+
+    c: string;
+    s: number;
+    rs: string;
+    a: string;
+    r: string;
+    t: string;
+    ac: number;
+    af: number;
+    homc: number;
+    hetc: number;
+    vac: string;
+    vaf: number;
+    vhomc: string;
+    vhetc: string;
+    highlight = false;
 
     static dbSnpUrl(variant: Variant) {
-        return `${DB_SNP_URL}?rs=${variant.rsid}`;
+        return `${DB_SNP_URL}?rs=${variant.rs}`;
     }
 
     static displayName(variant: Variant) {
-        return `${ variant.chr }-${ variant.start }-${ variant.ref }-${ variant.alt }`;
+        return `${ variant.c }-${ variant.s }-${ variant.r }-${ variant.a }`;
     }
 }

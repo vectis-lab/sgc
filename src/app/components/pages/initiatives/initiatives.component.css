@@ -44,6 +44,19 @@
     z-index: 1000;
 }
 
+#agha{
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-right: 10px;
+    border-right: solid;
+}
+
+#va{
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
 app-program-card {
     z-index: 0;
     margin-left: 1rem;

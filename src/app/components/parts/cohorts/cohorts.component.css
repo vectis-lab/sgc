@@ -1,0 +1,18 @@
+.cohorts {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+section .title {
+    font-size: xx-large;
+    margin-bottom: 1rem;
+}

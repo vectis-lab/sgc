@@ -1,5 +1,4 @@
-
-<app-page-container [showTitle]="scrollService.currentScrollTop" [showBanner]="true">
+<app-page-container>
     <div class="initiatives">
         <div class="cover-parent">
             <div class="shadow-cover" [ngStyle]="shadowStyle"></div>
@@ -7,19 +6,30 @@
         </div>
 
         <app-search-bar-with-options class="band" [expanded]="true"></app-search-bar-with-options>
-        <div class="band-flex">
+        <!--<div class="band-flex">
             <div class="program-cards">
                 <app-program-card *ngFor="let initiative of initiatives" [initiative]="initiative"></app-program-card>
             </div>
         </div>
-
+        <div class="band-flex">
+            <app-nswgp [onlyRenderCohort]='true'></app-nswgp>
+        </div>-->
+        <div class="band-flex">
+            <div id="agha">
+                <img src="assets/logos/agha.png" />
+            </div>
+            <div id="va">
+                <img src="assets/logos/VariantAtlas.png" width=260px />
+            </div>
+        </div>
+        <div class="band-flex">
+            <app-cohorts></app-cohorts>
+        </div>
         <div class="band-flex">
             <div class="totals">
                 <app-totals-widget></app-totals-widget>
             </div>
         </div>
-
-        <app-home-about class="band"></app-home-about>
 
         <app-home-footer class="band"></app-home-footer>
 

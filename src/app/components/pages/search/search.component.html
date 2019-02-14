@@ -1,22 +1,63 @@
 <app-page-container [showBanner]="true">
     <app-auth-guard *ngIf="!auth.authenticated()"></app-auth-guard>
     <div *ngIf="auth.authenticated()">
-        <div class="search-jumbo">
-            <app-search-bar-with-options [expanded]="!searching" [expandable]="searching"></app-search-bar-with-options>
-        </div>
-        <section class="content">
-            <div class="message message-error" *ngIf="searchBarService.autocompleteError">
-                {{ searchBarService.autocompleteError }}
-            </div>
-            <div class="message message-error" *ngIf="error">{{ error }}</div>
-
-            <div *ngIf="!searchBarService.autocompleteError && !error && autocomplete != null">
-                <div class="search-results">
-                    <app-search-results [autocomplete]="autocomplete"
-                                        (errorEvent)="handleError($event)"></app-search-results>
+        <mat-sidenav-container *ngIf="!error">
+            <mat-sidenav #sidenav mode="side" fixedInViewport="true" fixedTopGap="71" [opened]="!isSmallScreen()" disableClose="true">
+                <div *ngIf="searchedQuery">     
+                    <mat-accordion>
+                        <mat-expansion-panel hideToggle="true">
+                            <mat-expansion-panel-header class="expansion-header">
+                                <mat-panel-title>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <span class="cohort-name">{{selectedOption}}</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="cohort-description">See authors >></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <mat-list dense>
+                                <mat-list-item *ngFor="let author of authors">{{author}}</mat-list-item>
+                                <mat-list-item><img src="assets/amdf.png" height="100" width="100"/></mat-list-item>
+                            </mat-list>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                    <mat-divider></mat-divider>
+                    <h2 id="query-header">Query</h2>
+                    <div *ngIf="searchedQueryType === 'gene'">
+                        <div class ="query-search">Gene</div>
+                        <div class ="query-search">Symbol: {{searchedQuery}}</div>
+                    </div>
+                    <div *ngIf="searchedQueryType === 'region'">
+                        <div class ="query-search">Region</div>
+                        <div class ="query-search">Location: {{searchedQuery}}</div>
+                    </div>
                 </div>
+                <mat-divider></mat-divider>
+                <app-saved-searches *ngIf="showFilter"></app-saved-searches>
+            </mat-sidenav>
+            <div class="search-jumbo">
+                <app-search-bar-with-options [expanded]="!searching" [expandable]="searching"></app-search-bar-with-options>
             </div>
-        </section>
+            <section class="content">
+                <div class="message message-error" *ngIf="searchBarService.autocompleteError">
+                    {{ searchBarService.autocompleteError }}
+                </div>
+                <div class="message message-error" *ngIf="error">{{ error }}</div>
+                <div *ngIf="!searchBarService.autocompleteError && !error && autocomplete != null">
+                    <div class="search-results">
+                        <app-search-results [autocomplete]="autocomplete"
+                                            (errorEvent)="handleError($event)" (searchQuery)="getSearchQuery($event)"></app-search-results>
+                    </div>
+                </div>
+            </section>
+        </mat-sidenav-container>
     </div>
 
 </app-page-container>

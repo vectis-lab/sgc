@@ -1,0 +1,13 @@
+.applied-filter{
+    display:block;
+    width:170px;
+    word-wrap:break-word;
+}
+
+.sidenav-button{
+    width: 100%;
+}
+
+#applied-filter-header{
+    padding-left: 10px;
+}

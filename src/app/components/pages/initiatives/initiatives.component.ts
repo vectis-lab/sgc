@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Initiative } from '../../../model/initiative';
 import { InitiativeService } from '../../../services/project-data/initiative-service';
-import { SearchBarService } from '../../../services/search-bar-service';
 import { Router } from '@angular/router';
 import { ScrollService } from '../../../services/scroll-service';
 
 @Component({
     selector: 'app-initiatives',
     templateUrl: './initiatives.component.html',
-    styleUrls: ['./initiatives.component.css'],
-    providers: [SearchBarService]
+    styleUrls: ['./initiatives.component.css']
 })
 export class InitiativesComponent implements OnInit {
     initiatives: Initiative[];
@@ -19,7 +17,8 @@ export class InitiativesComponent implements OnInit {
 
     constructor(public scrollService: ScrollService,
                 private initiativeService: InitiativeService,
-                private router: Router) {
+                private router: Router
+            ) {
     }
 
     ngOnInit(): void {

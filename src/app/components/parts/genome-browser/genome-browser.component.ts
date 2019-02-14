@@ -29,6 +29,7 @@ export class GenomeBrowserComponent implements AfterViewInit, OnDestroy {
     subscription: Subscription;
     ensemblSupported = true;
     locked = false;
+    virtualCohort = false;
 
     constructor(private searchService: VariantSearchService,
                 private variantTrackService: VariantTrackService,
@@ -126,6 +127,21 @@ export class GenomeBrowserComponent implements AfterViewInit, OnDestroy {
 
     toggleTranscripts() {
         this.transcriptsShown ? this.hideTranscripts() : this.showTranscripts();
+    }
+
+    showVirtualCohort() {
+        this.variantTrackService.showVirtualCohort.next(true);
+        this.virtualCohort = true;
+    }
+
+    hideVirtualCohort() {
+        this.variantTrackService.showVirtualCohort.next(false);
+        this.virtualCohort = false;
+    }
+
+    toggleVirtualCohort() {
+        this.virtualCohort ? this.hideVirtualCohort() : this.showVirtualCohort();
+        this.genomeBrowser.start();
     }
 
     forward() {

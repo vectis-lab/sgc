@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { RegionService } from './autocomplete/region-service';
 import { Subject } from 'rxjs/Subject';
+import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import { SearchOption } from '../model/search-option';
 import { Router, Params } from '@angular/router';
 import { AutocompleteService } from './autocomplete/autocomplete-service';
@@ -16,6 +17,14 @@ export class SearchBarService {
     options: SearchOption[];
     autocompleteError = '';
     searchedEvent = new Subject();
+    private cohortSource = new BehaviorSubject<string>("");
+    cohort = this.cohortSource.asObservable();
+    //Temporary cohort is basically cohortSource, this is used to prevent updating all Cohort text before user do the search
+    private tempCohortSource = new BehaviorSubject<string>("Mitochondria");
+    tempCohort = this.tempCohortSource.asObservable();
+
+    private startGreaterThanEndSource = new BehaviorSubject<boolean>(false);
+    startGreaterThanEnd = this.startGreaterThanEndSource.asObservable();
 
     constructor(private geneService: ElasticGeneSearch,
                 private regionService: RegionService,
@@ -30,7 +39,7 @@ export class SearchBarService {
         this.autocompleteError = '';
         this.query = '';
         this.options = [
-            new SearchOption('Cohorts', '', ['MGRB'], 'MGRB'),
+            new SearchOption('Cohorts', 'cohorts', ['Mitochondria', 'Neuromuscular'], 'Mitochondria'),
         ];
     }
 
@@ -46,6 +55,7 @@ export class SearchBarService {
         }
 
         this.searchedEvent.next();
+        this.setCohort(this.tempCohortSource.getValue());
 
         const handleAutocompleteError = (e: string): Promise<any> => {
             this.autocompleteError = e;
@@ -56,6 +66,9 @@ export class SearchBarService {
             if (v.length <= 0) {
                 return handleAutocompleteError('Failed to find any results for: ' + query);
             }
+            if(this.checkErrorRegion(query)){
+                return handleAutocompleteError('Start position cannot be greater than end');
+            }
             const bestMatch = v[0];
             if (bestMatch.match(query)) {
                 return bestMatch;
@@ -64,6 +77,31 @@ export class SearchBarService {
             }
         });
 
+    }
+
+    setCohort(selectedCohort){
+        this.cohortSource.next(selectedCohort);
+    }
+
+    setTempCohort(selectedCohort){
+        this.tempCohortSource.next(selectedCohort);
+    }
+
+    checkErrorRegion(query){
+        const results = new RegExp(/^([\dxy]+|mt+)[:\-\.,\\/](\d+)[:\-\.,\\/](\d+)$/, "i").exec(query);
+        const checkChromosome = new RegExp(/^([\dxy]+|mt+)$/, "i")
+        if(results !== null) {
+            const chromosome = results[1];
+            const start = Number(results[2]);
+            const end = Number(results[3]);
+            if(checkChromosome.test(chromosome) && !isNaN(start) && !isNaN(end)){
+                if(start > end){
+                    return true;
+                }
+            }
+        }else{
+            return false;
+        }
     }
 
     parseOptions(params: Params) {
@@ -86,6 +124,11 @@ export class SearchBarService {
     }
 
     searchAutocompleteServicesStartsWith(term: string, startsWith: any[] = []): Observable<GenericAutocompleteResult<any>[]> {
+        if(this.checkErrorRegion(term)){
+            this.startGreaterThanEndSource.next(true);
+        }else{
+            this.startGreaterThanEndSource.next(false);
+        }
         return combineLatest(this.autocompleteServices.map((autocompleteService) => {
             return autocompleteService.search(term).startWith(startsWith).catch(e => of([]));
         }), this.combineStreams);

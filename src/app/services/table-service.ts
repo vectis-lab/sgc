@@ -6,74 +6,60 @@ export class TableService {
 
     private displayMap: any = {
         'Location': (v: Variant) => this.locationString(v),
-        'Reference': (v: Variant) => v.ref,
-        'Alternate': (v: Variant) => v.alt,
-        'Type': (v: Variant) => v.type,
-        'dbSNP': (v: Variant) => v.rsid,
-        'Homozygotes Count': (v: Variant) => v.nHomVar,
-        'Heterozygotes Count': (v: Variant) => v.nHet,
+        'Reference': (v: Variant) => v.r,
+        'Alternate': (v: Variant) => v.a,
+        'Type': (v: Variant) => v.t,
+        'dbSNP': (v: Variant) => v.rs,
+        'Homozygotes Count': (v: Variant) => v.homc,
+        'Virtual Homozygotes Count': (v: Variant) => v.vhomc,
+        'Heterozygotes Count': (v: Variant) => v.hetc,
+        'Virtual Heterozygotes Count': (v: Variant) => v.vhetc,
         'Allele Count': (v: Variant) => v.ac,
+        'Virtual Allele Count': (v: Variant) => v.vac,
         'Allele Freq': (v: Variant) => v.af.toExponential(4),
-        'cato': (v: Variant) => v.cato,
-        'eigen': (v: Variant) => v.eigen,
-        'sift': (v: Variant) => v.sift,
-        'polyPhen': (v: Variant) => v.polyPhen,
-        'tgpAF': (v: Variant) => v.tgpAF,
-        'hrcAF': (v: Variant) => v.hrcAF,
-        'GnomadAF': (v: Variant) => v.gnomadAF,
-        'consequences': (v: Variant) => v.consequences,
-        'gene': (v: Variant) => v.geneSymbol,
-        'clinvar': (v: Variant) => v.clinvar
+        'Virtual Allele Freq': (v: Variant) => v.vaf?v.vaf.toExponential(4):null,
     };
 
     private searchResultKeys: any[] = [
         ['Location', true],
         ['Reference', true],
         ['Alternate', true],
-        ['Type', true],
+        ['Type', false],
         ['dbSNP', false],
         ['Homozygotes Count', false],
+        ['Virtual Homozygotes Count', false],
         ['Heterozygotes Count', false],
-        ['Allele Count', false],
-        ['cato', false],
-        ['eigen', false],
-        ['sift', false],
-        ['polyPhen', false],
-        ['tgpAF', false],
-        ['hrcAF', false],
-        ['consequences', true],
-        ['gene', false],
-        ['clinvar', false],
-        ['GnomadAF', true],
-        ['Allele Freq', true]
+        ['Virtual Heterozygotes Count', false],
+        ['Allele Count', true],
+        ['Virtual Allele Count', true],
+        ['Allele Freq', true],
+        ['Virtual Allele Freq', true]
     ];
 
     private columns: Map<string, boolean> = new Map<string, boolean>(this.searchResultKeys);
 
     readonly sortMap: any = {
-        'Location': (v: Variant) => v.start,
-        'Reference': (v: Variant) => v.ref,
-        'Alternate': (v: Variant) => v.alt,
-        'Type': (v: Variant) => v.type,
-        'dbSNP': (v: Variant) => v.rsid ? v.rsid.match(/rs(\d+)/)[1] : 0,
+        'Location': (v: Variant) => v.s,
+        'Reference': (v: Variant) => v.r,
+        'Alternate': (v: Variant) => v.a,
+        'Type': (v: Variant) => v.t,
+        'dbSNP': (v: Variant) => v.rs ? v.rs.match(/rs(\d+)/)[1] : 0,
         'Homozygotes Count': (v: Variant) => {
-            return v.nHomVar;
+            return v.homc;
+        },
+        'Virtual Homozygotes Count': (v: Variant) => {
+            return v.vhomc;
         },
         'Heterozygotes Count': (v: Variant) => {
-            return v.nHet;
+            return v.hetc;
+        },
+        'Virtual Heterozygotes Count': (v: Variant) => {
+            return v.vhetc;
         },
         'Allele Count': (v: Variant) => v.ac,
+        'Virtual Allele Count': (v: Variant) => v.vac,
         'Allele Freq': (v: Variant) => v.af,
-        'cato': (v: Variant) => v.cato,
-        'eigen': (v: Variant) => v.eigen,
-        'sift': (v: Variant) => v.sift ? v.sift : '',
-        'polyPhen': (v: Variant) => v.polyPhen ? v.polyPhen : '',
-        'tgpAF': (v: Variant) => v.tgpAF,
-        'hrcAF': (v: Variant) => v.hrcAF,
-        'GnomadAF': (v: Variant) => v.gnomadAF,
-        'consequences': (v: Variant) => v.consequences ? v.consequences : '',
-        'gene': (v: Variant) => v.geneSymbol ? v.geneSymbol : '',
-        'clinvar': (v: Variant) => v.clinvar ? v.clinvar : ''
+        'Virtual Allele Freq': (v: Variant) => v.vaf,
     };
 
     private tooltips: any = {
@@ -92,7 +78,7 @@ export class TableService {
     }
 
     display(label: string, variant: Variant): string {
-        return this.displayMap[label](variant) ? String(this.displayMap[label](variant)) : '';
+        return this.displayMap[label](variant)!==null ? String(this.displayMap[label](variant)) : '';
     }
 
     sort(label: string, variants: Variant[]) {
@@ -146,20 +132,13 @@ export class TableService {
             ['Type', false],
             ['dbSNP', false],
             ['Homozygotes Count', false],
+            ['Virtual Homozygotes Count', false],
             ['Heterozygotes Count', false],
-            ['Missed Genotypes', false],
+            ['Virtual Heterozygotes Count', false],
             ['Allele Count', false],
+            ['Virtual Allele Count', false],
             ['Allele Freq', true],
-            ['cato', false],
-            ['eigen', false],
-            ['sift', false],
-            ['polyPhen', false],
-            ['tgpAF', false],
-            ['hrcAF', false],
-            ['gnomadAF', false],
-            ['consequences', false],
-            ['gene', false],
-            ['clinvar', false]
+            ['Virtual Allele Freq', true],
         ];
         this.columns = new Map<string, boolean>(keys);
     }
@@ -175,6 +154,6 @@ export class TableService {
     }
 
     private locationString(variant: Variant) {
-        return `${variant.chr} : ${variant.start}`;
+        return `${variant.c} : ${variant.s}`;
     }
 }

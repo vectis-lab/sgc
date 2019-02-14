@@ -151,7 +151,7 @@ export class ClincalFilteringComponent implements AfterViewInit, OnDestroy {
                     '# Patients'
                 ),
 
-            ];
+            ]; 
 
             dc.dataCount('.dc-data-count')
                 .dimension(this.ndx)

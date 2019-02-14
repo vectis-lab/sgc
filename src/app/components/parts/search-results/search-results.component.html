@@ -2,7 +2,7 @@
     <mat-spinner color="primary"></mat-spinner>
 </div>
 
-<div *ngIf="!loadingVariants && variants.length <= 0">No Variants found for the query</div>
+<div class="message message-error" *ngIf="!loadingVariants && variants.length <= 0">No Variants found for the query</div>
 
 <div class="search-result-content" *ngIf="searchService.commenced">
     <mat-tab-group (selectChange)="tabSelected($event)" [selectedIndex]="selectedTabIndex">
@@ -11,12 +11,13 @@
                 <app-gene-information *ngIf="showGeneInformation()" [autocomplete]="autocomplete" [variants]="variants"></app-gene-information>
                 <app-region-information *ngIf="showRegionInformation()"></app-region-information>
             </div>
-
         </mat-tab>
-        <mat-tab #tab label="Clinical Filtering" >
+        <mat-tab [label]="selectedCohort + ' Clinical Filtering'">
             <div class="clinical-filters tab-content">
-                <app-clincal-filtering *ngIf="showClin"></app-clincal-filtering>
+                <app-neuromuscular-information *ngIf="showClin && selectedCohort === 'Neuromuscular'"></app-neuromuscular-information>
+                <app-mitochondria-information *ngIf="showClin && selectedCohort === 'Mitochondria'"></app-mitochondria-information>
             </div>
+
         </mat-tab>
     </mat-tab-group>
 

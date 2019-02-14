@@ -97,6 +97,15 @@ import { SnackbarHelpComponent } from './components/parts/snackbar-help/snackbar
 import { LoadingComponent } from './components/pages/loading/loading.component';
 import { SignUpComponent } from './components/parts/sign-up/sign-up.component';
 import { AuthGuardComponent } from './components/parts/auth-guard/auth-guard.component';
+import { HelperService } from './services/helper.service';
+import { ClinicalFilteringService } from './services/clinical-filtering.service';
+import { SavedSearchesComponent } from './components/parts/saved-searches/saved-searches.component';
+import { CohortComponent, CohortDialog } from './components/parts/cohort/cohort.component';
+import { CohortsComponent } from './components/parts/cohorts/cohorts.component';
+import { NeuromuscularInformationComponent } from './components/parts/neuromuscular-information/neuromuscular-information.component';
+import { ClinicalCohortChartComponent } from './components/parts/clinical-cohort-chart/clinical-cohort-chart.component';
+import { SearchBarService } from './services/search-bar-service';
+import { MitochondriaInformationComponent } from './components/parts/mitochondria-information/mitochondria-information.component';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -131,7 +140,7 @@ export class RavenErrorHandler implements ErrorHandler {
         HttpClientModule,
         NgxPaginationModule,
         NgxDatatableModule,
-        MaterialModule
+        MaterialModule,
     ],
     declarations: [
         AppComponent,
@@ -189,13 +198,21 @@ export class RavenErrorHandler implements ErrorHandler {
         LoadingComponent,
         SignUpComponent,
         AuthGuardComponent,
+        SavedSearchesComponent,
+        CohortComponent,
+        CohortDialog,
+        CohortsComponent,
+        NeuromuscularInformationComponent,
+        ClinicalCohortChartComponent,
+        MitochondriaInformationComponent
     ],
     entryComponents: [
         SignUpComponent,
         ErrorDialogComponent,
         SummaryDialogComponent,
         SnackbarDemoComponent,
-        SnackbarHelpComponent
+        SnackbarHelpComponent,
+        CohortDialog
     ],
     providers: [
         Auth,
@@ -210,6 +227,9 @@ export class RavenErrorHandler implements ErrorHandler {
         PositionService,
         TableService,
         LocalStorageService,
+        HelperService,
+        ClinicalFilteringService,
+        SearchBarService,
         { provide: ErrorHandler, useClass: RavenErrorHandler },
         { provide: 'NULL_VALUE', useValue: null }
     ],

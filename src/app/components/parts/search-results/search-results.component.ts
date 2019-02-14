@@ -3,13 +3,14 @@ import { Variant } from '../../../model/variant';
 import { MAXIMUM_NUMBER_OF_VARIANTS } from '../../../services/cttv-service';
 
 import { VariantSearchService } from '../../../services/variant-search-service';
-import { Subscription } from 'rxjs/Subscription';
 import { VariantTrackService } from '../../../services/genome-browser/variant-track-service';
+import { Subscription } from 'rxjs/Subscription';
 import { SearchBarService } from '../../../services/search-bar-service';
 import { VariantAutocompleteResult } from '../../../model/autocomplete-result';
 import { Gene } from '../../../model/gene';
 import { Region } from '../../../model/region';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ClinicalFilteringService } from '../../../services/clinical-filtering.service';
 
 @Component({
     selector: 'app-search-results',
@@ -27,16 +28,19 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
     maximumNumberOfVariants = MAXIMUM_NUMBER_OF_VARIANTS;
     selectedTabIndex = 0;
     timeout = null;
+    @Output() searchQuery = new EventEmitter<string>();
+    selectedCohort = ""
 
     constructor(public searchService: VariantSearchService,
                 private cd: ChangeDetectorRef,
                 private searchBarService: SearchBarService,
                 private router: Router,
-                private route: ActivatedRoute) {
+                private route: ActivatedRoute,
+                private clinicalFilteringService: ClinicalFilteringService,
+            ) {
     }
 
     ngOnInit(): void {
-
         this.variants = this.searchService.variants;
         this.subscriptions.push(this.searchService.results.subscribe(v => {
             this.variants = v.variants;
@@ -45,6 +49,10 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
 
         this.subscriptions.push(this.searchService.errors.subscribe((e) => {
             this.errorEvent.emit(e);
+        }));
+
+        this.subscriptions.push(this.searchBarService.cohort.subscribe((cohort) => {
+            this.selectedCohort = cohort;
         }));
 
         this.loadingVariants = true;
@@ -60,9 +68,12 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
     }
 
     ngAfterViewInit() {
+        this.clinicalFilteringService.setShowFilter(false);
+        
         this.route.params.subscribe(p => {
             if (p['demo']) {
                 this.selectedTabIndex = 1;
+                this.clinicalFilteringService.setShowFilter(true);
                 this.showClinicalFilters();
             }
         });
@@ -76,10 +87,16 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
     }
 
     showGeneInformation() {
+        if(!this.searchService.hasMoved() && this.autocomplete.result instanceof Gene){
+            this.searchQuery.emit('gene')
+        }     
         return !this.searchService.hasMoved() && this.autocomplete.result instanceof Gene;
     }
 
     showRegionInformation() {
+        if(this.searchService.hasMoved() || this.autocomplete.result instanceof Region){
+            this.searchQuery.emit('region');
+        }
         return this.searchService.hasMoved() || this.autocomplete.result instanceof Region;
     }
 
@@ -104,7 +121,10 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
 
     tabSelected(v) {
         if (v.index === 1) {
+            this.clinicalFilteringService.setShowFilter(true);
             this.showClinicalFilters();
+        }else{
+            this.clinicalFilteringService.setShowFilter(false);
         }
     }
 }

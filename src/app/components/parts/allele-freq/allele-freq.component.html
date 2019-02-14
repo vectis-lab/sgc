@@ -8,7 +8,7 @@
     <div [ngStyle]="freq > scales[4] ? style : {}"></div>
 </div>
 
-<div *ngIf="!ts.showScales">
+<div *ngIf="!ts.showScales" [ngStyle]="highlight?{color:'red'}:{}">
     {{ formattedFreq }}
 </div>
 

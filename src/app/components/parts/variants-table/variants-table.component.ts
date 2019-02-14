@@ -13,6 +13,7 @@ import { FilterAutoComponent } from '../filter-auto/filter-auto.component';
 
 const DB_SNP_URL = 'https://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi';
 const MINIMAL_VIEW = 500;
+const ALLELEFREQ_DIFFERENCE_THRESHOLD = 0.2;
 
 @Component({
     selector: 'app-variants-table',
@@ -90,26 +91,16 @@ export class VariantsTableComponent implements OnInit, OnDestroy, AfterViewInit 
     downloadFile() {
         const data = this.variants.map((v: Variant) => {
             return {
-                'Chrom': v.chr,
-                'Position': v.start,
-                'RSID': v.rsid,
-                'Reference': v.ref,
-                'Alternate': v.alt,
-                'Type': v.type,
-                'Homozygotes Count': v.nHomVar,
-                'Heterozygotes Count': v.nHet,
+                'Chrom': v.c,
+                'Position': v.s,
+                'RSID': v.rs,
+                'Reference': v.r,
+                'Alternate': v.a,
+                'Type': v.t,
+                'Homozygotes Count': v.homc,
+                'Heterozygotes Count': v.hetc,
                 'Allele Count': v.ac,
                 'Allele Frequency': v.af,
-                'cato': v.cato,
-                'eigen': v.eigen,
-                'sift': v.sift,
-                'polyPhen': v.polyPhen,
-                'tgpAF': v.tgpAF,
-                'hrcAF': v.hrcAF,
-                'gnomadAF': v.gnomadAF,
-                'consequences': v.consequences,
-                'gene': v.geneSymbol,
-                'clinvar': v.clinvar
             };
         });
         const csv = Papa.unparse(data);
@@ -119,6 +110,15 @@ export class VariantsTableComponent implements OnInit, OnDestroy, AfterViewInit 
 
     compare(a: Variant, b: Variant) {
         return JSON.stringify(a) === JSON.stringify(b);
+    }
+
+    compareAlleleFreq(a: Variant) {
+        if(a.af && a.vaf){
+            if(Math.abs(a.af - a.vaf) > ALLELEFREQ_DIFFERENCE_THRESHOLD){
+                return true;
+            }
+        }
+        return false;
     }
 
     ngOnDestroy() {
