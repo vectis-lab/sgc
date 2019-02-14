@@ -5,7 +5,6 @@ import { constants } from '../app.constants';
 import { MatDialog } from '@angular/material';
 import { ErrorDialogComponent } from '../components/parts/error-dialog/error-dialog.component';
 import * as jwtDecode from 'jwt-decode';
-import * as LogRocket from 'logrocket';
 import * as auth0 from 'auth0-js';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
@@ -35,12 +34,11 @@ export class Auth {
     public handleAuthentication(): void {
         console.log("Your token is: " + localStorage.getItem('idToken'))
         this.auth0.parseHash(this.handleAuthResult);
-        LogRocket.identify(localStorage.getItem(uidKey));
     }
 
     public login() {
         localStorage.setItem(urlStateKey, location.pathname);
-				this.auth0.authorize();
+		this.auth0.authorize();
     };
 
     public signUp(email, password, cb) {
@@ -71,8 +69,7 @@ export class Auth {
         localStorage.setItem(uidKey, idToken.email);
         localStorage.setItem('userId', idToken.sub);
         const expiresAt = JSON.stringify(idToken.exp * 1000);
-        LogRocket.identify(localStorage.getItem(uidKey));
-		localStorage.setItem(expiredAtKey, expiresAt);
+        localStorage.setItem(expiredAtKey, expiresAt);
     }
 
     public getSavedSearches(){

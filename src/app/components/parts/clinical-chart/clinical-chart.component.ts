@@ -1,5 +1,4 @@
 import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnDestroy, OnInit } from '@angular/core';
-import * as crossfilter from 'crossfilter2';
 import * as dc from 'dc';
 import { ClinicalChart } from '../clincal-filtering/clincal-filtering.component';
 import { ClinapiService } from '../../../services/clinapi.service';

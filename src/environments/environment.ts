@@ -31,5 +31,4 @@ export const environment = {
     sentryUrl: '',
     clinicalUrl: '',
     mapd: new MapDSettings(),
-    logrocket: ''
 };

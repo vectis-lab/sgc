@@ -9,7 +9,7 @@ export class ClinicalChart {
 
     constructor(public name: string,
                 public type: string,
-                public dim: any,
+                public dim: crossfilter.Dimension<any, any>,
                 public min: number,
                 public max: number,
                 public xAxisLabel: string,

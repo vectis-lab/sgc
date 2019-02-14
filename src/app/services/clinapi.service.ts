@@ -1,20 +1,19 @@
-import { Injectable, OnDestroy } from "@angular/core";
-import { Observable } from "rxjs/Observable";
-import { Subject } from "rxjs/Subject";
-import { MAXIMUM_NUMBER_OF_VARIANTS } from "./cttv-service";
-import { VariantTrackService } from "./genome-browser/variant-track-service";
+import { Injectable, OnDestroy } from '@angular/core';
+import { Subject } from 'rxjs/Subject';
+import { MAXIMUM_NUMBER_OF_VARIANTS } from './cttv-service';
+import { VariantTrackService } from './genome-browser/variant-track-service';
 import { FAKE_CLINICAL_DATA } from "../mocks/clindata";
 import { FAKE_MITOCHONDRIA_DATA } from "../mocks/mitodata";
 import { FAKE_NEUROMUSCULAR_DATA } from "../mocks/neuromusculardata";
 import { VariantSearchService } from "./variant-search-service";
-import * as seedrandom from "seedrandom";
-import { Subscription } from "rxjs/Subscription";
-import { HttpClient } from '@angular/common/http';
+import * as seedrandom from 'seedrandom';
 import { DEV } from "../shared/tempConfiguration";
+import { Subscription } from 'rxjs/Subscription';
+import { of, throwError, Observable } from "rxjs";
 import { SearchOption } from '../model/search-option';
 import { VsalService } from "./vsal-service";
 import { environment } from '../../environments/environment';
-
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class ClinapiService implements OnDestroy {
@@ -96,9 +95,9 @@ export class ClinapiService implements OnDestroy {
 
     getPatients(demo = false): Observable<any> {
         if (demo) {
-            return Observable.of<any>(FAKE_CLINICAL_DATA);
+            return of<any>(FAKE_CLINICAL_DATA);
         } else {
-            return Observable.throw({ status: 401 });
+            return throwError({status: 401})
         }
     }
 

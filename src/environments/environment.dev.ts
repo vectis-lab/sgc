@@ -25,6 +25,5 @@ export const environment = {
         dbName: 'mapd',
         user: 'mapd',
         pwd: 'HyperInteractive',
-    },
-    logrocket: 'rnmokq/sgc-dev-gdsgq'
+    }
 };
