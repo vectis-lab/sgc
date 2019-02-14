@@ -131,7 +131,7 @@ export class NeuromuscularInformationComponent implements AfterViewInit, OnDestr
                     muscleWeaknessDim,
                     340,
                     200,
-                    true,
+                    false,
                     muscleWeaknessGroup
                 ),
                 new Chart(
@@ -140,7 +140,7 @@ export class NeuromuscularInformationComponent implements AfterViewInit, OnDestr
                     facialDim,
                     340,
                     200,
-                    true,
+                    false,
                     facialGroup
                 ),
                 new Chart(
@@ -149,7 +149,7 @@ export class NeuromuscularInformationComponent implements AfterViewInit, OnDestr
                     ptosisDim,
                     340,
                     200,
-                    true,
+                    false,
                     ptosisGroup
                 ),
                 new Chart(
@@ -158,7 +158,7 @@ export class NeuromuscularInformationComponent implements AfterViewInit, OnDestr
                     proximalUlDim,
                     340,
                     200,
-                    true,
+                    false,
                     proximalUlGroup
                 ),
                 new Chart(
@@ -167,7 +167,7 @@ export class NeuromuscularInformationComponent implements AfterViewInit, OnDestr
                     proxLlWeaknessDim,
                     340,
                     200,
-                    true,
+                    false,
                     proxLlWeaknessGroup
                 ),
                 new Chart(
@@ -176,7 +176,7 @@ export class NeuromuscularInformationComponent implements AfterViewInit, OnDestr
                     distalLlWeaknessDim,
                     340,
                     200,
-                    true,
+                    false,
                     distalLlWeaknessGroup
                 ),
                 new Chart(
@@ -185,7 +185,7 @@ export class NeuromuscularInformationComponent implements AfterViewInit, OnDestr
                     leftBicepDim,
                     340,
                     200,
-                    true,
+                    false,
                     leftBicepGroup
                 ),
                 new Chart(
@@ -194,7 +194,7 @@ export class NeuromuscularInformationComponent implements AfterViewInit, OnDestr
                     rightBicepDim,
                     340,
                     200,
-                    true,
+                    false,
                     rightBicepGroup
                 ),
                 new Chart(
@@ -203,7 +203,7 @@ export class NeuromuscularInformationComponent implements AfterViewInit, OnDestr
                     serumCkDim,
                     340,
                     1000,
-                    true,
+                    false,
                     serumCkGroup
                 ),
             ];
