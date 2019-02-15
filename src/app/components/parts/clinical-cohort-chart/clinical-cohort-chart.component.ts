@@ -106,6 +106,7 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
                     .group(this.data.group)
                     .elasticX(true)
                     .dimension(this.data.dim)
+                    .ordinalColors(['rgb(107, 174, 214)'])
         if(this.ClinicalFilterService.filters[this.data.name]){
             this.ClinicalFilterService.filters[this.data.name].forEach(filter => {
                 this.chart.filter(filter);
