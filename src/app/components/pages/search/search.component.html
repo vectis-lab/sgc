@@ -1,7 +1,7 @@
 <app-page-container [showBanner]="true">
     <app-auth-guard *ngIf="!auth.authenticated()"></app-auth-guard>
     <div *ngIf="auth.authenticated()">
-        <mat-sidenav-container *ngIf="!error">
+        <mat-sidenav-container>
             <mat-sidenav #sidenav mode="side" fixedInViewport="true" fixedTopGap="71" [opened]="!isSmallScreen()" disableClose="true">
                 <div *ngIf="searchedQuery">     
                     <mat-accordion>
