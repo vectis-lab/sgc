@@ -1,4 +1,4 @@
-<div>
+<div *ngIf=savedSearches[selectedCohort]>
   <div *ngIf="objectKeys(savedSearches[selectedCohort]).length > 0 && !denied">
     <h2 id="applied-filter-header">Saved Search</h2>
     <mat-form-field>

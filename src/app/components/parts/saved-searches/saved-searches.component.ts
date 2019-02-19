@@ -7,6 +7,7 @@ import * as dc from 'dc';
 import {ErrorStateMatcher} from '@angular/material/core';
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import { Auth } from '../../../services/auth-service';
+import { Router } from '@angular/router';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -32,7 +33,7 @@ export class SavedSearchesComponent implements OnInit, OnDestroy {
   denied: boolean;
 
   constructor(private clinicalFilteringService: ClinicalFilteringService,
-    private helper: HelperService, private auth: Auth, private searchBarService: SearchBarService) { }
+    private helper: HelperService, private auth: Auth, private searchBarService: SearchBarService, private router: Router) { }
 
   saveNameFormControl = new FormControl('', [
     Validators.required,
@@ -50,6 +51,9 @@ export class SavedSearchesComponent implements OnInit, OnDestroy {
 
     this.subscriptions.push(this.clinicalFilteringService.savedSearches.subscribe(savedSearches => {
         this.savedSearches = savedSearches
+    },
+    error => {
+        this.router.navigate(['/error']);
     }))
 
     this.auth.userPermissions.subscribe(permissions => {
@@ -58,7 +62,11 @@ export class SavedSearchesComponent implements OnInit, OnDestroy {
         }else {
             this.denied = true;
         }
-    })  
+    }) 
+    //Manual error handling if saved searches is undefined
+    if(typeof this.savedSearches[this.selectedCohort] === "undefined"){
+        this.router.navigate(['/error']);
+    }
 
   }
 
