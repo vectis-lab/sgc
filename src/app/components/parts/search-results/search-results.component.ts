@@ -28,7 +28,6 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
     maximumNumberOfVariants = MAXIMUM_NUMBER_OF_VARIANTS;
     selectedTabIndex = 0;
     timeout = null;
-    @Output() searchQuery = new EventEmitter<string>();
     selectedCohort = ""
 
     constructor(public searchService: VariantSearchService,
@@ -87,16 +86,10 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
     }
 
     showGeneInformation() {
-        if(!this.searchService.hasMoved() && this.autocomplete.result instanceof Gene){
-            this.searchQuery.emit('gene')
-        }     
         return !this.searchService.hasMoved() && this.autocomplete.result instanceof Gene;
     }
 
     showRegionInformation() {
-        if(this.searchService.hasMoved() || this.autocomplete.result instanceof Region){
-            this.searchQuery.emit('region');
-        }
         return this.searchService.hasMoved() || this.autocomplete.result instanceof Region;
     }
 

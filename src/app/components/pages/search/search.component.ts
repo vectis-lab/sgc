@@ -26,9 +26,6 @@ export class SearchComponent implements  OnInit, OnDestroy {
     private mediaMatcher: MediaQueryList = matchMedia(`(max-width: ${SMALL_WIDTH}px)`);
     showFilter: boolean;
     selectedOption: string;
-    searchedQueryType: string;
-    searchedQueryTemp: string;
-    searchedQuery: string
     authors = [];
 
     constructor(public searchBarService: SearchBarService,
@@ -92,13 +89,6 @@ export class SearchComponent implements  OnInit, OnDestroy {
             this.cd.detectChanges();
         }).catch(() => {
         });
-        this.searchedQueryTemp = params['query'];
-    }
-
-    getSearchQuery(type: string){
-        this.searchedQueryType = type;
-        //Work around so type and the searched query update together.
-        this.searchedQuery = this.searchedQueryTemp;
     }
 
     ngOnDestroy() {

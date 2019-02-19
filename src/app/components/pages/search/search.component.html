@@ -3,7 +3,7 @@
     <div *ngIf="auth.authenticated()">
         <mat-sidenav-container>
             <mat-sidenav #sidenav mode="side" fixedInViewport="true" fixedTopGap="71" [opened]="!isSmallScreen()" disableClose="true">
-                <div *ngIf="searchedQuery">     
+                <div>     
                     <mat-accordion>
                         <mat-expansion-panel hideToggle="true">
                             <mat-expansion-panel-header class="expansion-header">
@@ -28,16 +28,6 @@
                             </mat-list>
                         </mat-expansion-panel>
                     </mat-accordion>
-                    <mat-divider></mat-divider>
-                    <h2 id="query-header">Query</h2>
-                    <div *ngIf="searchedQueryType === 'gene'">
-                        <div class ="query-search">Gene</div>
-                        <div class ="query-search">Symbol: {{searchedQuery}}</div>
-                    </div>
-                    <div *ngIf="searchedQueryType === 'region'">
-                        <div class ="query-search">Region</div>
-                        <div class ="query-search">Location: {{searchedQuery}}</div>
-                    </div>
                 </div>
                 <mat-divider></mat-divider>
                 <app-saved-searches *ngIf="showFilter"></app-saved-searches>
@@ -53,7 +43,7 @@
                 <div *ngIf="!searchBarService.autocompleteError && !error && autocomplete != null">
                     <div class="search-results">
                         <app-search-results [autocomplete]="autocomplete"
-                                            (errorEvent)="handleError($event)" (searchQuery)="getSearchQuery($event)"></app-search-results>
+                                            (errorEvent)="handleError($event)"></app-search-results>
                     </div>
                 </div>
             </section>
