@@ -12,7 +12,7 @@
                 <i *ngIf="termsDropdown" class="material-icons">keyboard_arrow_up</i>
             </div>
 
-            <div *ngIf="termsDropdown" class="terms-dropdown" (click)="goToMgrbTerms($event)">
+            <div *ngIf="termsDropdown" [ngClass]="['terms', 'dropdown']" (click)="goToMgrbTerms($event)">
                 <a>MGRB</a>
             </div>
         </a>
@@ -22,7 +22,16 @@
             <div class="spacer">|</div>
             <a (click)="openSignUpDialog()">SIGN UP</a>
         </div>
+        <a *ngIf="auth.authenticated()" [ngClass]="{'is-active': termsLinkActive}" (click)="toggleUser($event)">
+            <div class="terms-link">
+                <span class="label">{{userEmail}}</span>
+                <i *ngIf="!userDropdown" class="material-icons">keyboard_arrow_down</i>
+                <i *ngIf="userDropdown" class="material-icons">keyboard_arrow_up</i>
+            </div>
 
-        <a (click)="auth.logout()" *ngIf="auth.authenticated()">LOG OUT</a>
+            <div *ngIf="userDropdown" [ngClass]="['user', 'dropdown']" (click)="auth.logout()">
+                <a>LOG OUT</a>
+            </div>
+        </a>
     </nav>
 </div>
