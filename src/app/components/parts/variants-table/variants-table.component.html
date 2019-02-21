@@ -34,9 +34,9 @@
                           class="value">{{ ts.display(label, variant) }}</span>
                     <a *ngIf="label === 'Location'" target="_blank" [href]="variantUrl(variant)">{{ ts.display(label, variant) }}</a>
                     <app-allele-freq *ngIf="label === 'Allele Freq'"
-                                     [freq]="variant.af" [highlight]="compareAlleleFreq(variant)"></app-allele-freq>
+                                     [freq]="variant.af" [highlight]="compareAlleleFreq(variant,variant.af)"></app-allele-freq>
                     <app-allele-freq *ngIf="label === 'Virtual Allele Freq'"
-                                     [freq]="variant.vaf" [highlight]="compareAlleleFreq(variant)"></app-allele-freq>
+                                     [freq]="variant.vaf" [highlight]="compareAlleleFreq(variant,variant.vaf)"></app-allele-freq>
                     <app-allele-freq *ngIf="label === 'GnomadAF'"
                                      [freq]="variant.gnomadAF" color="seagreen"></app-allele-freq>
 
