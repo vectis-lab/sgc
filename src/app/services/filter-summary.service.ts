@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Variant } from '../model/variant';
+import { VariantSummary } from '../model/variant-summary';
 import SearchApi from 'js-worker-search';
 import { isUndefined } from 'util';
-import { TableService } from './table-service';
+import { TableSummaryService } from './table-summary-service';
 import { FilterSharedService, FilterOperator, COMMAND_TOKEN } from '../shared/filter-shared-service';
 
+
 @Injectable()
-export class FilterService {
+export class FilterSummaryService {
     filterSharedService = new FilterSharedService();
 
     private searchApi: any;
 
-    constructor(public ts: TableService) {
+    constructor(public ts: TableSummaryService) {
         this.searchApi = new SearchApi();
         this.keys().sort().forEach((k) => {
             this.searchApi.indexDocument(k, COMMAND_TOKEN + k);
@@ -30,11 +31,10 @@ export class FilterService {
 
     isCommand = (s: string) => this.filterSharedService.isCommand(s);
 
-    filterVariants = (command: string, variants: Variant[]) => this.filterSharedService.filterVariants(command, variants, this.ts);
+    filterVariants = (command: string, variants: VariantSummary[]) => this.filterSharedService.filterVariants(command, variants, this.ts);
 
-    filter = (command: string, op: FilterOperator, value: string | number, variants: Variant[]) => this.filterSharedService.filter(command, op, value, variants, this.ts);
+    filter = (command: string, op: FilterOperator, value: string | number, variants: VariantSummary[]) => this.filterSharedService.filter(command, op, value, variants, this.ts);
 
     clean = (s: string): string => this.filterSharedService.clean(s, this.ts);
-
 
 }

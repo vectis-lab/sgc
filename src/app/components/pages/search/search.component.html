@@ -42,7 +42,7 @@
                 <div class="message message-error" *ngIf="error">{{ error }}</div>
                 <div *ngIf="!searchBarService.autocompleteError && !error && autocomplete != null">
                     <div class="search-results">
-                        <app-search-results [autocomplete]="autocomplete"
+                        <app-search-results [autocomplete]="autocomplete" [autocompleteSummary]="autocomplete"
                                             (errorEvent)="handleError($event)"></app-search-results>
                     </div>
                 </div>

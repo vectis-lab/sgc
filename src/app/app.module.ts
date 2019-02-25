@@ -66,6 +66,7 @@ import { VariantsTableComponent } from './components/parts/variants-table/varian
 import { PositionService } from './services/autocomplete/position-service';
 import { OverlayMenuComponent } from './components/parts/overlay-menu/overlay-menu.component';
 import { TableService } from './services/table-service';
+import { TableSummaryService } from './services/table-summary-service';
 import { PcaPlotComponent } from './components/parts/pca-plot/pca-plot.component';
 import { FilterAutoComponent } from './components/parts/filter-auto/filter-auto.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -106,6 +107,11 @@ import { NeuromuscularInformationComponent } from './components/parts/neuromuscu
 import { ClinicalCohortChartComponent } from './components/parts/clinical-cohort-chart/clinical-cohort-chart.component';
 import { SearchBarService } from './services/search-bar-service';
 import { MitochondriaInformationComponent } from './components/parts/mitochondria-information/mitochondria-information.component';
+import { VariantsSummaryTableComponent } from './components/parts/variants-summary-table/variants-summary-table.component';
+import { GenomeBrowserSummaryComponent } from './components/parts/genome-browser-summary/genome-browser-summary.component';
+import { GenomeBrowserSummaryResizableComponent } from './components/parts/genome-browser-summary-resizable/genome-browser-summary-resizable.component';
+import { OverlayMenuSummaryComponent } from './components/parts/overlay-menu-summary/overlay-menu-summary.component';
+import { FilterAutoSummaryComponent } from './components/parts/filter-auto-summary/filter-auto-summary.component';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -204,7 +210,12 @@ export class RavenErrorHandler implements ErrorHandler {
         CohortsComponent,
         NeuromuscularInformationComponent,
         ClinicalCohortChartComponent,
-        MitochondriaInformationComponent
+        MitochondriaInformationComponent,
+        VariantsSummaryTableComponent,
+        GenomeBrowserSummaryComponent,
+        GenomeBrowserSummaryResizableComponent,
+        OverlayMenuSummaryComponent,
+        FilterAutoSummaryComponent,
     ],
     entryComponents: [
         SignUpComponent,
@@ -226,6 +237,7 @@ export class RavenErrorHandler implements ErrorHandler {
         EnsemblService,
         PositionService,
         TableService,
+        TableSummaryService,
         LocalStorageService,
         HelperService,
         ClinicalFilteringService,
