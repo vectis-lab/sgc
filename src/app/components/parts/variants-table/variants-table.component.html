@@ -1,6 +1,7 @@
 <div class="results">
 
     <div class="task-bar">
+        <span class="threshold-info">AF difference threshold: {{afThreshold*100}}%</span>
         <app-filter-auto [variants]="variants" (output)="onFilter($event)"></app-filter-auto>
 
         <div class="options">

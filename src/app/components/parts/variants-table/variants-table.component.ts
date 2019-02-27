@@ -10,10 +10,11 @@ import * as Papa from 'papaparse';
 import { VariantSearchService } from '../../../services/variant-search-service';
 import { TableService } from '../../../services/table-service';
 import { FilterAutoComponent } from '../filter-auto/filter-auto.component';
+import { ALLELEFREQ_DIFFERENCE_THRESHOLD } from '../../../shared/afThreshold';
 
 const DB_SNP_URL = 'https://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi';
 const MINIMAL_VIEW = 500;
-const ALLELEFREQ_DIFFERENCE_THRESHOLD = 0.2;
+
 
 @Component({
     selector: 'app-variants-table',
@@ -29,6 +30,7 @@ export class VariantsTableComponent implements OnInit, OnDestroy, AfterViewInit 
     showSettings = true;
     private highlightedVariant: Variant;
     private subscriptions: Subscription[] = [];
+    private afThreshold = ALLELEFREQ_DIFFERENCE_THRESHOLD;
 
     constructor(public  ts: TableService,
                 private searchService: VariantSearchService,
