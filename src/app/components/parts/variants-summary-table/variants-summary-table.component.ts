@@ -133,6 +133,10 @@ export class VariantsSummaryTableComponent implements OnInit, OnDestroy, AfterVi
       return this.router.createUrlTree(['/search/variant', {query: VariantSummary.displayName(v)}]).toString();
   }
 
+  variantVarsomeUrl(v: VariantSummary) {
+    return `https://varsome.com/variant/hg19/${VariantSummary.displayName(v)}`;
+  }
+
   toggleScales($event) {
       $event.stopPropagation();
       this.ts.showScales = !this.ts.showScales;

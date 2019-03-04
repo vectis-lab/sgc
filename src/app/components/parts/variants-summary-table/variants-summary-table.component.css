@@ -23,6 +23,24 @@
     cursor: pointer;
 }
 
+.location-column {
+    color: #00aedb;
+}
+
+.location-column:hover {
+    cursor: pointer;
+}
+
+#arrow-icon {
+    vertical-align: bottom;
+}
+
+.location-menu { 
+    line-height: 24px;
+    height: 24px;
+    padding: 0 10px;
+}
+
 @media (min-width: 0px) and (max-width: 800px) {
 
     .location {

@@ -32,7 +32,11 @@
 
                     <span *ngIf="label !== 'Allele Freq' && label !== 'GnomadAF' && label !== 'Location'"
                           class="value">{{ ts.display(label, variant) }}</span>
-                    <a *ngIf="label === 'Location'" target="_blank" [href]="variantUrl(variant)">{{ ts.display(label, variant) }}</a>
+                    <span *ngIf="label === 'Location'" class="location-column" [matMenuTriggerFor]="locationMenu">{{ ts.display(label, variant) }}<mat-icon id="arrow-icon" [ngClass]="variant.highlight?arrow-show:arrow-hide">arrow_drop_down</mat-icon></span>
+                    <mat-menu #locationMenu="matMenu">
+                        <button mat-menu-item class="location-menu"><a target="_blank" [href]="variantUrl(variant)">Beacon</a></button>
+                        <button mat-menu-item class="location-menu"><a target="_blank" [href]="variantVarsomeUrl(variant)">Varsome</a></button>
+                    </mat-menu>
                     <app-allele-freq *ngIf="label === 'Allele Freq'"
                                      [freq]="variant.af"></app-allele-freq>
                     <app-allele-freq *ngIf="label === 'GnomadAF'"
