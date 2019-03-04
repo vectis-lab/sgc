@@ -114,11 +114,10 @@ export class VariantsTableComponent implements OnInit, OnDestroy, AfterViewInit 
         return JSON.stringify(a) === JSON.stringify(b);
     }
 
-    compareAlleleFreq(a: Variant, type: number) {
-        if(a.af && a.vaf){
-            if(Math.abs(a.af - a.vaf) > ALLELEFREQ_DIFFERENCE_THRESHOLD){
-                //If this type of Af is the one that exceeds the value then highlight
-                if(type > a.af || type > a.vaf){
+    compareAlleleFreq(variant: Variant, self: number, comparator: number) {
+        if(variant[self] && variant[comparator]){
+            if(Math.abs(variant[self] - variant[comparator]) > ALLELEFREQ_DIFFERENCE_THRESHOLD){
+                if(variant[self] > variant[comparator]){
                     return true;
                 }    
             }

@@ -10,6 +10,7 @@ import * as Papa from 'papaparse';
 import { VariantSummarySearchService } from '../../../services/variant-summary-search-service';
 import { TableSummaryService } from '../../../services/table-summary-service';
 import { FilterAutoSummaryComponent } from '../filter-auto-summary/filter-auto-summary.component';
+import { ALLELEFREQ_DIFFERENCE_THRESHOLD } from '../../../shared/afThreshold';
 
 const DB_SNP_URL = 'https://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi';
 const MINIMAL_VIEW = 500;
@@ -120,6 +121,17 @@ export class VariantsSummaryTableComponent implements OnInit, OnDestroy, AfterVi
   compare(a: VariantSummary, b: VariantSummary) {
       return JSON.stringify(a) === JSON.stringify(b);
   }
+
+  compareAlleleFreq(variant: Variant, self: number, comparator: number) {
+    if(variant[self] && variant[comparator]){
+        if(Math.abs(variant[self] - variant[comparator]) > ALLELEFREQ_DIFFERENCE_THRESHOLD){
+            if(variant[self] > variant[comparator]){
+                return true;
+            }    
+        }
+    }
+    return false;
+}
 
   ngOnDestroy() {
       this.subscriptions.forEach((s) => s.unsubscribe());
