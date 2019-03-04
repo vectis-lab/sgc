@@ -1,36 +1,47 @@
 import { Component, ChangeDetectorRef, OnDestroy, Input, Output, EventEmitter, OnInit, AfterViewInit } from '@angular/core';
 import { Variant } from '../../../model/variant';
+import { VariantSummary } from '../../../model/variant-summary';
 import { MAXIMUM_NUMBER_OF_VARIANTS } from '../../../services/cttv-service';
 
 import { VariantSearchService } from '../../../services/variant-search-service';
+import { VariantSummarySearchService } from '../../../services/variant-summary-search-service';
 import { VariantTrackService } from '../../../services/genome-browser/variant-track-service';
+import { VariantSummaryTrackService } from '../../../services/genome-browser/variant-summary-track-service';
 import { Subscription } from 'rxjs/Subscription';
 import { SearchBarService } from '../../../services/search-bar-service';
-import { VariantAutocompleteResult } from '../../../model/autocomplete-result';
+import { VariantAutocompleteResult, VariantSummaryAutocompleteResult } from '../../../model/autocomplete-result';
 import { Gene } from '../../../model/gene';
 import { Region } from '../../../model/region';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ClinicalFilteringService } from '../../../services/clinical-filtering.service';
+import { Subject } from 'rxjs/Subject';
 
 @Component({
     selector: 'app-search-results',
     templateUrl: './search-results.component.html',
     styleUrls: ['./search-results.component.css'],
-    providers: [VariantSearchService, VariantTrackService]
+    providers: [VariantSearchService, VariantTrackService, VariantSummarySearchService, VariantSummaryTrackService]
 })
 export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit {
     @Input() autocomplete: VariantAutocompleteResult<any>;
+    @Input() autocompleteSummary: VariantSummaryAutocompleteResult<any>;
     @Output() errorEvent = new EventEmitter();
     showClin = false;
     public variants: Variant[] = [];
+    public variantsSummary: VariantSummary[] = [];
     public loadingVariants = false;
+    public loadingVariantsSummary = false;
     private subscriptions: Subscription[] = [];
     maximumNumberOfVariants = MAXIMUM_NUMBER_OF_VARIANTS;
     selectedTabIndex = 0;
     timeout = null;
-    selectedCohort = ""
+    selectedCohort = "";
+    private showVirtualCohort = new Subject<boolean>();
+    showVirtualCohortFlag: boolean;
+
 
     constructor(public searchService: VariantSearchService,
+                public searchSummaryService: VariantSummarySearchService,
                 private cd: ChangeDetectorRef,
                 private searchBarService: SearchBarService,
                 private router: Router,
@@ -41,20 +52,46 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
 
     ngOnInit(): void {
         this.variants = this.searchService.variants;
-        this.subscriptions.push(this.searchService.results.subscribe(v => {
-            this.variants = v.variants;
+        this.variantsSummary = this.searchSummaryService.variants;
+        
+        this.showVirtualCohort.next(false);
+
+        this.subscriptions.push(this.showVirtualCohort.subscribe((flag) => {
+            this.showVirtualCohortFlag = flag;
+        }));
+
+        this.subscriptions.push(this.searchSummaryService.results.subscribe(v => {
+            this.variantsSummary = v.variants;
             this.cd.detectChanges();
         }));
 
-        this.subscriptions.push(this.searchService.errors.subscribe((e) => {
-            this.errorEvent.emit(e);
+        this.subscriptions.push(this.searchService.results.subscribe(v => {
+            this.variants = v.variants;
+            this.cd.detectChanges();
         }));
 
         this.subscriptions.push(this.searchBarService.cohort.subscribe((cohort) => {
             this.selectedCohort = cohort;
         }));
 
+        this.subscriptions.push(this.searchService.errors.subscribe((e) => {
+            this.errorEvent.emit(e);
+        }));
+
+        this.loadingVariantsSummary = true;
+
+        this.autocompleteSummary.searchSummary(this.searchSummaryService, this.searchBarService.options)
+            .then(() => {
+                this.loadingVariantsSummary = false;
+                this.cd.detectChanges();
+            })
+            .catch((e) => {
+                this.loadingVariantsSummary = false;
+                this.errorEvent.emit(e);
+            });
+
         this.loadingVariants = true;
+
         this.autocomplete.search(this.searchService, this.searchBarService.options)
             .then(() => {
                 this.loadingVariants = false;
@@ -64,6 +101,8 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
                 this.loadingVariants = false;
                 this.errorEvent.emit(e);
             });
+        
+
     }
 
     ngAfterViewInit() {
@@ -86,11 +125,11 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
     }
 
     showGeneInformation() {
-        return !this.searchService.hasMoved() && this.autocomplete.result instanceof Gene;
+        return !this.searchSummaryService.hasMoved() && this.autocompleteSummary.result instanceof Gene;
     }
 
     showRegionInformation() {
-        return this.searchService.hasMoved() || this.autocomplete.result instanceof Region;
+        return this.searchSummaryService.hasMoved() || this.autocompleteSummary.result instanceof Region;
     }
 
     // workaround because dc.js is not playing nice with angular and material tabs
@@ -115,8 +154,10 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
     tabSelected(v) {
         if (v.index === 1) {
             this.clinicalFilteringService.setShowFilter(true);
+            this.showVirtualCohort.next(true);
             this.showClinicalFilters();
         }else{
+            this.showVirtualCohort.next(false);
             this.clinicalFilteringService.setShowFilter(false);
         }
     }

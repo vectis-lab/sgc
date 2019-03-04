@@ -1,19 +1,19 @@
 import { Injectable } from '@angular/core';
 import { VsalService } from './vsal-service';
-import { Variant } from '../model/variant';
+import { VariantSummary } from '../model/variant-summary';
 import { Subject } from 'rxjs/Subject';
 import { SearchQuery } from '../model/search-query';
-import { VariantRequest } from '../model/variant-request';
+import { VariantSearch } from '../shared/variant-search';
+import { VariantSummaryRequest } from '../model/variant-summary-request';
 import { Region } from '../model/region';
 import { of, Observable } from "rxjs";
-import { VariantSearch } from '../shared/variant-search';
 
 const DEBOUNCE_TIME = 100;
 
 @Injectable()
-export class VariantSearchService {
-    variants: Variant[] = [];
-    results: Observable<VariantRequest>;
+export class VariantSummarySearchService {
+    variants: VariantSummary[] = [];
+    results: Observable<VariantSummaryRequest>;
     errors = new Subject<any>();
     commenced = false;
     lastQuery: SearchQuery;
@@ -26,7 +26,7 @@ export class VariantSearchService {
         this.results = this.searchQuery
             .debounceTime(DEBOUNCE_TIME)
             .switchMap((query: SearchQuery) => {
-                return this.vsal.getVariants(query).map((vr: VariantRequest) => {
+                return this.vsal.getVariantsSummary(query).map((vr: VariantSummaryRequest) => { 
                     if (this.filter) {
                         vr.variants = this.filter(vr.variants);
                     }
@@ -35,10 +35,9 @@ export class VariantSearchService {
             })
             .catch(e => {
                 this.errors.next(e);
-                return of<VariantRequest>(new VariantRequest([], e));
+                return of<VariantSummaryRequest>(new VariantSummaryRequest([], e));
             })
             .share();
-
         this.results.subscribe((cs) => {
             if (!this.startingRegion) {
                 this.startingRegion = new Region(this.lastQuery.chromosome, this.lastQuery.start, this.lastQuery.end);
@@ -48,7 +47,7 @@ export class VariantSearchService {
         });
     }
 
-    getVariants(query: SearchQuery): Promise<Variant[]> {
+    getVariants(query: SearchQuery): Promise<VariantSummary[]> {
         this.lastQuery = query;
         return this.variantSearch.getVariants(query, this.lastQuery, this.results, this.errors, this.searchQuery)
     }
@@ -58,6 +57,8 @@ export class VariantSearchService {
 
     getSmallerRegionString= () => this.variantSearch.getSmallerRegionString(this.lastQuery);
 
-    hasMoved = () => this.variantSearch.hasMoved(this.startingRegion, this.lastQuery);
+    hasMoved = () => {
+        return this.variantSearch.hasMoved(this.startingRegion, this.lastQuery)
+    };
 }
 

@@ -1,6 +1,6 @@
 import {
     Component, ElementRef, ChangeDetectorRef, AfterContentInit,
-    HostListener, OnDestroy
+    HostListener, OnDestroy, Input
 } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 import { Subscription } from 'rxjs/Subscription';

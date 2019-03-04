@@ -1,7 +1,8 @@
 import { Variant } from '../model/variant';
+import { TableSharedService } from '../shared/table-service';
 
 export class TableService {
-
+    private tableService = new TableSharedService();
     showScales = true;
 
     private displayMap: any = {
@@ -62,9 +63,7 @@ export class TableService {
         'Virtual Allele Freq': (v: Variant) => v.vaf,
     };
 
-    private tooltips: any = {
-        'Allele Freq': () => this.showScales ? 'Allele frequency on a discrete scale: <1/10000, <1/1000, <1%, <5%, <50% and >50%' : ''
-    };
+    private tooltips = this.tableService.afTooltips(this.showScales);
 
     private lastSortedLabel = '';
     private lastSortedOrder = true;
@@ -74,54 +73,27 @@ export class TableService {
     }
 
     tooltip(key) {
-        return this.tooltips[key] ? this.tooltips[key]() : '';
+        return this.tableService.tooltip(key, this.tooltips);
     }
 
     display(label: string, variant: Variant): string {
-        return this.displayMap[label](variant)!==null ? String(this.displayMap[label](variant)) : '';
+        return this.tableService.display(label, variant, this.displayMap);
     }
 
     sort(label: string, variants: Variant[]) {
-        if (this.lastSortedLabel === label) {
-            this.lastSortedOrder = !this.lastSortedOrder;
-        } else {
-            this.lastSortedLabel = label;
-            this.lastSortedOrder = true;
-        }
-        const fn = this.sortMap[label];
-        if (this.lastSortedOrder) {
-            variants.sort((a: any, b: any) => {
-                if (fn(a) < fn(b)) {
-                    return -1;
-                } else if (fn(a) > fn(b)) {
-                    return 1;
-                } else {
-                    return 0;
-                }
-            });
-        } else {
-            variants.sort((a: any, b: any) => {
-                if (fn(a) > fn(b)) {
-                    return -1;
-                } else if (fn(a) < fn(b)) {
-                    return 1;
-                } else {
-                    return 0;
-                }
-            });
-        }
+        return this.tableService.sort(label, variants, this.lastSortedLabel, this.sortMap, this.lastSortedOrder);
     }
 
     keys() {
-        return Array.from(this.columns.keys());
+        return this.tableService.keys(this.columns);
     }
 
     get(k: string) {
-        return this.columns.get(k);
+        return this.tableService.get(k, this.columns);
     }
 
     set(k: string, v: boolean) {
-        this.columns.set(k, v);
+        this.tableService.set(k, v, this.columns);
     }
 
     minimalView() {
@@ -144,13 +116,7 @@ export class TableService {
     }
 
     activeColumns(): string[] {
-        const ac: string[] = [];
-        this.columns.forEach((v, k) => {
-            if (v) {
-                ac.push(k);
-            }
-        });
-        return ac;
+        return this.tableService.activeColumns(this.columns);
     }
 
     private locationString(variant: Variant) {
