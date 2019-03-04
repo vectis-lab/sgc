@@ -122,7 +122,7 @@ export class VariantsSummaryTableComponent implements OnInit, OnDestroy, AfterVi
       return JSON.stringify(a) === JSON.stringify(b);
   }
 
-  compareAlleleFreq(variant: Variant, self: number, comparator: number) {
+  compareAlleleFreq(variant: VariantSummary, self: number, comparator: number) {
     if(variant[self] && variant[comparator]){
         if(Math.abs(variant[self] - variant[comparator]) > ALLELEFREQ_DIFFERENCE_THRESHOLD){
             if(variant[self] > variant[comparator]){
