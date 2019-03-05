@@ -32,6 +32,7 @@ export class Auth {
     }
 
     public handleAuthentication(): void {
+        console.log(`Built: ${environment.version}`)
         console.log("Your token is: " + localStorage.getItem('idToken'))
         this.auth0.parseHash(this.handleAuthResult);
     }

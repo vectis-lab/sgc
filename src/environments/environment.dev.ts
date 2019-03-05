@@ -1,4 +1,5 @@
 export const environment = {
+    version: '1.0.0',
     production: false,
     ci: false,
     ensemblDomain: 'grch37.rest.ensembl.org',

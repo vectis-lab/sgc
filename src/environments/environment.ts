@@ -13,6 +13,7 @@ export class MapDSettings {
 }
 
 export const environment = {
+    version: '',
     production: false,
     ci: false,
     ensemblDomain: '',
