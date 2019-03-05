@@ -8,7 +8,8 @@
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "build-dev": "node ./replace.build.js && ng build -c=dev"
   },
   "private": true,
   "dependencies": {
@@ -72,6 +73,7 @@
     "karma-jasmine": "~1.1.0",
     "protractor": "~5.2.2",
     "puppeteer": "^0.13.0",
+    "replace-in-file": "^3.4.3",
     "sass-loader": "^6.0.6",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
