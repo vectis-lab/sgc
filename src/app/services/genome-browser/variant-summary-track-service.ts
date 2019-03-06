@@ -9,12 +9,7 @@ import { RegionAutocomplete } from '../../model/region-autocomplete';
 import { RegionService } from '../autocomplete/region-service';
 import { TrackService } from './track-service';
 import * as tnt from 'tnt.genome';
-
-const PIN_COLOR = '#004D95';
-const PIN_SELECTED_COLOR = '#00aedb';
-const OVERLAY_COLOR = '#D54A0F';
-
-export type GenomeBrowserOverlay = 'None' | 'Homozygotes' | 'Heterozygotes' | 'DbSNP';
+import { PIN_COLOR, PIN_SELECTED_COLOR, OVERLAY_COLOR, GenomeBrowserOverlay, VariantTrackSharedService } from '../../shared/variant-track-shared-service';
 
 class VariantPin {
     constructor(public pos: number,
@@ -38,6 +33,7 @@ export class VariantSummaryTrackService implements TrackService {
     private highlightCache: any = {};
     private createMethod: any;
     private pinFeature: any;
+    private vts = new VariantTrackSharedService();
 
     constructor(private searchService: VariantSummarySearchService,
                 private regionService: RegionService) {
@@ -71,18 +67,11 @@ export class VariantSummaryTrackService implements TrackService {
             );
     }
 
-    public setOverlay(overlay: GenomeBrowserOverlay) {
-        if (this.overlayMap.has(overlay)) {
-            this.overlayMap.get(overlay)(this.pinFeature);
-            this.pinFeature.reset.apply(this.track);
-            this.pinFeature.update.apply(this.track);
-            this.activeOverlay = overlay;
-        }
+    public setOverlay = (overlay: GenomeBrowserOverlay) => {
+        this.vts.setOverlay(overlay, this.overlayMap, this.pinFeature, this.track, this.activeOverlay)
     }
 
-    public getOverlay() {
-        return this.activeOverlay;
-    }
+    public getOverlay = ()  => this.vts.getOverlay(this.activeOverlay);
 
     private drawYAxis(this: any, width: number) {
         const labelSpacer = 10; // magic number comes from tnt.pin which is hardcoded for labels

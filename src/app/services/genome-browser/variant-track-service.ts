@@ -9,18 +9,13 @@ import { RegionAutocomplete } from '../../model/region-autocomplete';
 import { RegionService } from '../autocomplete/region-service';
 import { TrackService } from './track-service';
 import * as tnt from 'tnt.genome';
-
-const PIN_COLOR = '#004D95';
-const PIN_SELECTED_COLOR = '#00aedb';
-const OVERLAY_COLOR = '#D54A0F';
-
-export type GenomeBrowserOverlay = 'None' | 'Homozygotes' | 'Heterozygotes';
+import { PIN_COLOR, PIN_SELECTED_COLOR, OVERLAY_COLOR, GenomeBrowserOverlay } from '../../shared/variant-track-shared-service';
 
 class VariantPin {
     constructor(public pos: number,
                 public val: number,
                 public name: string,
-                public variant: Variant) {
+                public variant: Variant ) {
     }
 }
 
@@ -260,17 +255,6 @@ export class VariantTrackService implements TrackService {
                 hetz.select('circle').attr('fill', OVERLAY_COLOR);
             });
         });
-
-        /*this.overlayMap.set('DbSNP', (overlay: any) => {
-            this.pinFeature.create(function (pins: any) {
-                that.createMethod.call(this, pins);
-                const dbSNPs = pins.filter((d: VariantPin) => {
-                    return d.variant.rsid;
-                });
-                dbSNPs.select('line').attr('stroke', OVERLAY_COLOR);
-                dbSNPs.select('circle').attr('fill', OVERLAY_COLOR);
-            });
-        });*/
     }
 
     private highlightPin(v: Variant) {
