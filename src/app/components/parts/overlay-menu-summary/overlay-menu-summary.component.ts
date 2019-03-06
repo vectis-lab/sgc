@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { VariantSummaryTrackService, GenomeBrowserOverlay } from '../../../services/genome-browser/variant-summary-track-service';
+import { VariantSummaryTrackService } from '../../../services/genome-browser/variant-summary-track-service';
+import { GenomeBrowserOverlay } from '../../../shared/variant-track-shared-service';
 
 @Component({
     selector: 'app-overlay-menu-summary',
