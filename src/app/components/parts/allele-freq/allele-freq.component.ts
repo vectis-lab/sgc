@@ -10,7 +10,7 @@ import { ALLELEFREQ_DIFFERENCE_THRESHOLD } from '../../../shared/afThreshold';
 
 export class AlleleFreqComponent implements OnInit {
     @Input() freq: number;
-    @Input() highlight: number;
+    @Input() highlight: boolean;
     @Input() color = 'steelblue';
     style: any;
     formattedFreq: string;
