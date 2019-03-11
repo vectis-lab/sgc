@@ -1,5 +1,6 @@
 import { Component, Input, HostListener, ElementRef, AfterViewInit } from '@angular/core';
 import { SearchBarService } from '../../../services/search-bar-service';
+import { ClinicalFilteringService } from '../../../services/clinical-filtering.service';
 import { ScrollService } from '../../../services/scroll-service';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
@@ -17,6 +18,7 @@ export class SearchBarWithOptionsComponent implements AfterViewInit {
     @Input() action = (query) => {
         this.searchBarService.query = query;
         const obj = {query: query, timestamp: Date.now()};
+        this.clinicalFilteringService.clearFilters();
         this.router.navigate(['/search/results', obj]);
     };
     private subscriptions: Subscription[] = [];
@@ -34,7 +36,8 @@ export class SearchBarWithOptionsComponent implements AfterViewInit {
 
     constructor(public elf: ElementRef,
                 public router: Router,
-                public searchBarService: SearchBarService) {
+                public searchBarService: SearchBarService,
+                public clinicalFilteringService: ClinicalFilteringService ) {
     }
 
     ngAfterViewInit(): void {
