@@ -11,7 +11,7 @@ export class TableSharedService {
     }
 
     display(label: string, variant: any, displayMap): string {
-        return displayMap[label](variant) ? String(displayMap[label](variant)) : '';
+        return displayMap[label](variant) !== null ? String(displayMap[label](variant)) : '';
     }
 
     sort(label: string, variants: any[], lastSortedLabel, sortMap, lastSortedOrder) {
