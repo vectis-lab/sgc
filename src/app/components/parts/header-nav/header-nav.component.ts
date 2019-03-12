@@ -22,6 +22,7 @@ export class HeaderNavComponent implements OnInit {
         }
         if (!this.elf.nativeElement.contains($event.target)) {
             this.hideTerms();
+            this.hideUser();
         }
     }
 
@@ -57,6 +58,7 @@ export class HeaderNavComponent implements OnInit {
     showTerms = () => {
         if (!this.termsDropdown) {
             this.termsDropdown = true;
+            this.userDropdown = false;
         }
     };
 
@@ -74,6 +76,7 @@ export class HeaderNavComponent implements OnInit {
     showUser = () => {
         if (!this.userDropdown) {
             this.userDropdown = true;
+            this.termsDropdown = false;
         }
     };
 
