@@ -1,5 +1,5 @@
 export const environment = {
-    version: 'sgc_staging_Tue Mar 12 2019 16:36:34 GMT+1100 (Australian Eastern Daylight Time)',
+    version: 'sgc_staging_Tue Mar 12 2019 17:32:33 GMT+1100 (Australian Eastern Daylight Time)',
     production: false,
     ci: false,
     ensemblDomain: 'grch37.rest.ensembl.org',
