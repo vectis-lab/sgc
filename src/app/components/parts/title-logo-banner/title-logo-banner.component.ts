@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./title-logo-banner.component.css']
 })
 export class TitleLogoBannerComponent implements OnInit {
-    title = 'Thingamajig';
+    title = '';
     subtitle = '';
 
     constructor() {
