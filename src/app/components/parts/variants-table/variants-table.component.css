@@ -24,7 +24,7 @@
 }
 
 .varsome-link {
-    margin-right: 1rem;
+    float: right;
 }
 
 @media (min-width: 0px) and (max-width: 800px) {
