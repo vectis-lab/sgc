@@ -32,10 +32,10 @@
 
                     <span *ngIf="label !== 'Allele Freq' && label !== 'GnomadAF' && label !== 'Location' && label !== 'Virtual Allele Freq'"
                           class="value">{{ ts.display(label, variant) }}</span>
-                    <a *ngIf="label === 'Location'" target="_blank" [href]="variantUrl(variant)">{{ ts.display(label, variant) }}</a>
                     <a *ngIf="label === 'Location'" target="_blank" [href]="variantVarsomeUrl(variant)" class='varsome-link'>
-                            <i class="fa fa-external-link" aria-hidden="true" matTooltip="Go to Varsome" matTooltipPosition="above"></i>
+                        <i class="fa fa-external-link" aria-hidden="true" matTooltip="See variant in Varsome" matTooltipPosition="above"></i>
                     </a>
+                    <a *ngIf="label === 'Location'" target="_blank" [href]="variantUrl(variant)">{{ ts.display(label, variant) }}</a>
                     <app-allele-freq *ngIf="label === 'Allele Freq'"
                                      [freq]="variant.af" [highlight]="compareAlleleFreq(variant,'af', 'vaf')"></app-allele-freq>
                     <app-allele-freq *ngIf="label === 'Virtual Allele Freq'"
