@@ -20,7 +20,7 @@ export class SearchBarWithOptionsComponent implements AfterViewInit {
         this.router.navigate(['/search/results', obj]);
     };
     private subscriptions: Subscription[] = [];
-    private regionError: boolean = false;
+    regionError: boolean = false;
 
     @HostListener('document:click', ['$event']) onClick($event: Event) {
         this.toggleExpansion($event);
