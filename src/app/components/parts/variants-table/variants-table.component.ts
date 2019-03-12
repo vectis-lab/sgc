@@ -148,7 +148,7 @@ export class VariantsTableComponent implements OnInit, OnDestroy, AfterViewInit 
 
     variantVarsomeUrl(v: Variant) {
         return `https://varsome.com/variant/hg19/${Variant.displayName(v)}`;
-      }
+    }
 
     toggleScales($event) {
         $event.stopPropagation();
