@@ -20,7 +20,6 @@ export class NswgpComponent implements OnInit {
     cohorts: Cohort[];
     cohorts2015: Cohort[];
     cohorts2016: Cohort[];
-    cohorts2017: Cohort[];
     activeAnchor = '';
 
     constructor(private route: ActivatedRoute,
@@ -43,9 +42,6 @@ export class NswgpComponent implements OnInit {
                     });
                     this.cohorts2016 = result.filter((cohort: Cohort) => {
                         return cohort.tags.some((tag: string) => tag === '2016');
-                    });
-                    this.cohorts2017 = result.filter((cohort: Cohort) => {
-                        return cohort.tags.some((tag: string) => tag === '2017');
                     });
                 });
             });
