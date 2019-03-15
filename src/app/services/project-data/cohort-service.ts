@@ -403,6 +403,24 @@ const COHORTS = new Map<string, Cohort>([
             sex: []
         }
     ],
+    [
+        'bipolar',
+        {
+            id: 'bipolar',
+            link: '',
+            title: 'Bipolar Disorder',
+            summary: '',
+            tags: ['2017'],
+            people: [''],
+            genomes: '',
+            sequenced: '',
+            logos: ['assets/logos/pow.png', 'assets/logos/neura.png', 'assets/logos/black_dog.png', 'assets/logos/unsw.png'],
+            heights: [],
+            weights: [],
+            ages: [],
+            sex: []
+        }
+    ],
 ]);
 
 @Injectable()
