@@ -7,6 +7,7 @@ import { VariantSearchService } from '../../../services/variant-search-service';
 import { VariantSummarySearchService } from '../../../services/variant-summary-search-service';
 import { VariantTrackService } from '../../../services/genome-browser/variant-track-service';
 import { VariantSummaryTrackService } from '../../../services/genome-browser/variant-summary-track-service';
+import { SampleSearch } from '../../../services/sample-search.service';
 import { Subscription } from 'rxjs/Subscription';
 import { SearchBarService } from '../../../services/search-bar-service';
 import { VariantAutocompleteResult, VariantSummaryAutocompleteResult } from '../../../model/autocomplete-result';
@@ -26,11 +27,13 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
     @Input() autocomplete: VariantAutocompleteResult<any>;
     @Input() autocompleteSummary: VariantSummaryAutocompleteResult<any>;
     @Output() errorEvent = new EventEmitter();
-    showClin = false;
+    private showClin = false;
+    private geneFilter = [];
     public variants: Variant[] = [];
     public variantsSummary: VariantSummary[] = [];
     public loadingVariants = false;
     public loadingVariantsSummary = false;
+    public loadingSample = false;
     private subscriptions: Subscription[] = [];
     maximumNumberOfVariants = MAXIMUM_NUMBER_OF_VARIANTS;
     selectedTabIndex = 0;
@@ -47,6 +50,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
                 private router: Router,
                 private route: ActivatedRoute,
                 private clinicalFilteringService: ClinicalFilteringService,
+                private sampleSearch: SampleSearch
             ) {
     }
 
@@ -76,6 +80,14 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
 
         this.subscriptions.push(this.searchService.errors.subscribe((e) => {
             this.errorEvent.emit(e);
+        }));
+
+        this.subscriptions.push(this.sampleSearch.sampleLoading.subscribe((loading) => {
+            this.loadingSample = loading;
+        }));
+
+        this.subscriptions.push(this.sampleSearch.genes.subscribe((genes) => {
+            this.geneFilter = genes;
         }));
 
         this.loadingVariantsSummary = true;

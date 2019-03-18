@@ -39,7 +39,7 @@ export class SearchBarService {
         this.autocompleteError = '';
         this.query = '';
         this.options = [
-            new SearchOption('Cohorts', 'cohorts', ['Mitochondria', 'Neuromuscular'], 'Mitochondria'),
+            new SearchOption('Cohorts', 'dataset', ['Mitochondria', 'Neuromuscular'], 'Mitochondria'),
         ];
     }
 

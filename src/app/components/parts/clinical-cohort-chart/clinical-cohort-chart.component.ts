@@ -1,11 +1,14 @@
 import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnDestroy,Output, EventEmitter } from '@angular/core';
 import * as dc from 'dc';
+import { skip } from 'rxjs/operators';
 import { Chart } from '../../../model/clinical-cohort-chart';
 import { ClinapiService } from '../../../services/clinapi.service';
 import { HelperService } from '../../../services/helper.service';
 import { ClinicalFilteringService } from '../../../services/clinical-filtering.service';
+import { SampleSearch } from '../../../services/sample-search.service';
 import { SearchBarService } from '../../../services/search-bar-service';
 import { Subscription } from 'rxjs/Subscription';
+import { TEMP_SAMPLES, MITO_SAMPLES, NEURO_SAMPLES } from '../../../mocks/sample.mock'
 
 @Component({
     selector: 'app-clinical-cohort-chart',
@@ -24,8 +27,12 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
     scrolledRowChart: boolean = false;
     selectedCohort = "";
 
-
-    constructor(private cd: ChangeDetectorRef, private cs: ClinapiService, private hs: HelperService, private ClinicalFilterService: ClinicalFilteringService, private searchBarService: SearchBarService) {
+    constructor(private cd: ChangeDetectorRef, 
+                private cs: ClinapiService, 
+                private hs: HelperService, 
+                private ClinicalFilterService: ClinicalFilteringService, 
+                private searchBarService: SearchBarService, 
+                private sampleSearch: SampleSearch) {
     }
 
     ngAfterViewInit(): void {
@@ -51,6 +58,27 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
         this.subscriptions.push(this.ClinicalFilterService.savedSearches.subscribe(ss => {
             this.saveSearches = ss
         }))
+
+        if(this.data.name === "sampleId"){
+            this.subscriptions.push(this.sampleSearch.sampleIds.subscribe(ids => {
+                if(ids){
+                    const intersectTempSample = ids.filter(value => -1 !==  TEMP_SAMPLES.indexOf(value));
+                    let mockSamples = [];
+                    intersectTempSample.forEach(value => {
+                        mockSamples.push(MITO_SAMPLES[TEMP_SAMPLES.indexOf(value)])
+                    })
+                    
+                    this.chart.filter(null);
+                    this.chart.filter([mockSamples]);
+                    this.chart.redrawGroup();
+                    this.ClinicalFilterService.setFilters(this.data.name, this.chart.filters());
+                }else{
+                    this.chart.filter(null);
+                    this.chart.redrawGroup();
+                    this.ClinicalFilterService.setFilters(this.data.name, this.chart.filters());
+                }
+            }))
+        }  
 
         this.subscriptions.push(this.ClinicalFilterService.savedSearchesName.subscribe(name => {
             let objKeys = Object.keys(this.saveSearches[this.selectedCohort][name])

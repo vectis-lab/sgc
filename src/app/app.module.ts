@@ -112,6 +112,8 @@ import { GenomeBrowserSummaryComponent } from './components/parts/genome-browser
 import { GenomeBrowserSummaryResizableComponent } from './components/parts/genome-browser-summary-resizable/genome-browser-summary-resizable.component';
 import { OverlayMenuSummaryComponent } from './components/parts/overlay-menu-summary/overlay-menu-summary.component';
 import { FilterAutoSummaryComponent } from './components/parts/filter-auto-summary/filter-auto-summary.component';
+import { GeneListComponent } from './components/parts/gene-list/gene-list.component';
+import { SampleSearch } from './services/sample-search.service';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -216,6 +218,7 @@ export class RavenErrorHandler implements ErrorHandler {
         GenomeBrowserSummaryResizableComponent,
         OverlayMenuSummaryComponent,
         FilterAutoSummaryComponent,
+        GeneListComponent,
     ],
     entryComponents: [
         SignUpComponent,
@@ -243,7 +246,8 @@ export class RavenErrorHandler implements ErrorHandler {
         ClinicalFilteringService,
         SearchBarService,
         { provide: ErrorHandler, useClass: RavenErrorHandler },
-        { provide: 'NULL_VALUE', useValue: null }
+        { provide: 'NULL_VALUE', useValue: null },
+        SampleSearch
     ],
     bootstrap: [AppComponent]
 })

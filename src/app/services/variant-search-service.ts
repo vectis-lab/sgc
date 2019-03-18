@@ -8,6 +8,7 @@ import { Region } from '../model/region';
 import { of, Observable } from "rxjs";
 import { VariantSearch } from '../shared/variant-search';
 
+
 const DEBOUNCE_TIME = 100;
 
 @Injectable()
@@ -22,7 +23,8 @@ export class VariantSearchService {
     private searchQuery = new Subject<SearchQuery>();
     private variantSearch = new VariantSearch();
 
-    constructor(private vsal: VsalService) {
+    constructor(private vsal: VsalService
+    ) {
         this.results = this.searchQuery
             .debounceTime(DEBOUNCE_TIME)
             .switchMap((query: SearchQuery) => {
@@ -52,6 +54,8 @@ export class VariantSearchService {
         this.lastQuery = query;
         return this.variantSearch.getVariants(query, this.lastQuery, this.results, this.errors, this.searchQuery)
     }
+
+    
 
     getCurrentRegion = (): Region => this.variantSearch.getCurrentRegion(this.lastQuery);
 

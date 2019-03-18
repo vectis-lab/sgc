@@ -6,6 +6,7 @@ import { VariantSummary } from '../model/variant-summary'
 import { environment } from '../../environments/environment';
 import { SearchQuery } from '../model/search-query';
 import { VariantRequest } from '../model/variant-request';
+import { SampleRequest } from '../model/sample-request';
 import { VariantSummaryRequest } from '../model/variant-summary-request';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { of, Observable } from "rxjs";
@@ -79,6 +80,70 @@ export class VsalService {
             v.variants.sort((a: VariantSummary, b: VariantSummary) => a.start - b.start);
             return v;
         });
+    }
+
+    getSamples(query: SearchQuery): Observable<SampleRequest> {
+        let urlParams = new HttpParams()
+            .append('chromosome', query.chromosome)
+            .append('dataset', 'mgrb')
+            .append('selectSamplesByGT', 'true')
+            .append('positionStart', String(query.start))
+            .append('positionEnd', String(query.end))
+            .append('returnAnnotations', 'true')
+            .append('jwt', localStorage.getItem('idToken'));
+
+        query.options.forEach(o => {
+            if (o.key) {
+                urlParams = urlParams.append(o.key, o.getValue());
+            }
+        });
+        const headers = new HttpHeaders()
+            .append('Content-Type', 'application/json')
+            .append('Accept', '*/*');
+        return this.http.get(environment.vsalUrl2, {params: urlParams, headers: headers})
+            .timeout(VSAL_TIMEOUT)
+            .map((data) => {
+                if (data['error']) {
+                    Raven.captureMessage("VSAL ERROR: " + data['error']);
+                    return new SampleRequest([], constants.GENERIC_SERVICE_ERROR_MESSAGE);
+                }
+                const vs = new SampleRequest(data['sampleIDs']);
+                vs.total = data['total'];
+                return vs;
+            },
+            error => {
+                Raven.captureMessage("VSAL ERROR: " + JSON.stringify(e));
+                return of(new SampleRequest([], constants.GENERIC_SERVICE_ERROR_MESSAGE));
+            })
+    }
+
+    private requestsSamples(params: HttpParams, headers: HttpHeaders): Observable<SampleRequest> {
+        return Observable.create((observer) => {
+            this.requestSamples(params, headers).subscribe((vs: SampleRequest) => {
+                observer.next(vs);
+                if (vs.error) {
+                    observer.complete();
+                }
+            });
+        });
+    }
+
+    private requestSamples(params: HttpParams, headers: HttpHeaders): Observable<SampleRequest> {
+        return this.http.get(environment.vsalUrl, {params: params, headers: headers})
+            .timeout(VSAL_TIMEOUT)
+            .map((data) => {
+                if (data['error']) {
+                    Raven.captureMessage("VSAL ERROR: " + data['error']);
+                    return new SampleRequest([], constants.GENERIC_SERVICE_ERROR_MESSAGE);
+                }
+                const vs = new SampleRequest(data['sampleIDs']);
+                vs.total = data['total'];
+                return vs;
+            })
+            .catch((e) => {
+                Raven.captureMessage("VSAL ERROR: " + JSON.stringify(e));
+                return of(new SampleRequest([], constants.GENERIC_SERVICE_ERROR_MESSAGE));
+            });
     }
 
     // getVariantsBySampleIds(query: Array<string>): Observable<VariantRequest> {

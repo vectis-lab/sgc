@@ -30,6 +30,7 @@
                     </mat-accordion>
                 </div>
                 <mat-divider></mat-divider>
+                <app-gene-list *ngIf="showFilter"></app-gene-list>
                 <app-saved-searches *ngIf="showFilter"></app-saved-searches>
             </mat-sidenav>
             <div class="search-jumbo">
