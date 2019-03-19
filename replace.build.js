@@ -1,6 +1,5 @@
 var replace = require('replace-in-file');
-var package = require("./package.json");
-var buildVersion = package.version;
+var buildVersion = `agha_staging_${new Date()}`
 const options = {
     files: 'src/environments/environment.dev.ts',
     from: /version: '(.*)'/g,
