@@ -67,7 +67,7 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
                     intersectTempSample.forEach(value => {
                         mockSamples.push(MITO_SAMPLES[TEMP_SAMPLES.indexOf(value)])
                     })
-                    
+
                     this.chart.filter(null);
                     this.chart.filter([mockSamples]);
                     this.chart.redrawGroup();

@@ -1,19 +1,19 @@
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
-import {Component, ElementRef, ViewChild, OnDestroy} from '@angular/core';
+import {Component, ElementRef, ViewChild, OnDestroy, AfterViewInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {MatAutocompleteSelectedEvent, MatChipInputEvent, MatAutocomplete} from '@angular/material';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 import { GENE_REGION_MAPPING } from '../../../shared/geneRegionMapping';
 import { SampleSearch } from '../../../services/sample-search.service';
-
+import { ClinicalFilteringService } from '../../../services/clinical-filtering.service';
 
 @Component({
   selector: 'app-gene-list',
   templateUrl: './gene-list.component.html',
   styleUrls: ['./gene-list.component.css']
 })
-export class GeneListComponent implements OnDestroy{
+export class GeneListComponent implements OnDestroy, AfterViewInit{
   visible = true;
   selectable = true;
   removable = true;
@@ -27,12 +27,15 @@ export class GeneListComponent implements OnDestroy{
   @ViewChild('geneInput') geneInput: ElementRef<HTMLInputElement>;
   @ViewChild('auto') matAutocomplete: MatAutocomplete;
 
-  constructor(private sampleSearch: SampleSearch) {
+  constructor(private sampleSearch: SampleSearch,
+              private cfs: ClinicalFilteringService) {
     this.filteredGenes = this.geneCtrl.valueChanges.pipe(
         startWith(null),
-        map((gene: string | null) => gene ? this._filter(gene) : this.allGenes.slice()));
-    
-    sampleSearch.genes.subscribe(genes => {
+        map((gene: string | null) => gene ? this._filter(gene) : this.allGenes.slice()));   
+  }
+
+  ngAfterViewInit(): void {
+    this.sampleSearch.genes.subscribe(genes => {
       this.genes = genes;
     })
   }
@@ -60,8 +63,5 @@ export class GeneListComponent implements OnDestroy{
   }
 
   ngOnDestroy() {
-    if(this.genes.length > 0){
-      this.sampleSearch.clearGeneFilter();
-    }
   }
 }
