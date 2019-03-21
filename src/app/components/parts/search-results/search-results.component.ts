@@ -33,7 +33,6 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
     public variantsSummary: VariantSummary[] = [];
     public loadingVariants = false;
     public loadingVariantsSummary = false;
-    public loadingSample = false;
     private subscriptions: Subscription[] = [];
     maximumNumberOfVariants = MAXIMUM_NUMBER_OF_VARIANTS;
     selectedTabIndex = 0;
@@ -82,14 +81,10 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
             this.errorEvent.emit(e);
         }));
 
-        this.subscriptions.push(this.sampleSearch.sampleLoading.subscribe((loading) => {
-            this.loadingSample = loading;
-        }));
-
-        this.subscriptions.push(this.sampleSearch.genes.subscribe((genes) => {
+        this.subscriptions.push(this.sampleSearch.genesFilter.subscribe((genes) => {
             this.geneFilter = genes;
         }));
-
+        
         this.loadingVariantsSummary = true;
 
         this.autocompleteSummary.searchSummary(this.searchSummaryService, this.searchBarService.options)

@@ -1,5 +1,5 @@
 export const environment = {
-    version: '1.0.2',
+    version: 'agha_staging_Tue Mar 19 2019 17:54:27 GMT+1100 (Australian Eastern Daylight Time)',
     production: false,
     ci: false,
     ensemblDomain: 'grch37.rest.ensembl.org',

@@ -112,39 +112,11 @@ export class VsalService {
                 return vs;
             },
             error => {
-                Raven.captureMessage("VSAL ERROR: " + JSON.stringify(e));
+                Raven.captureMessage("VSAL ERROR: " + JSON.stringify(error));
                 return of(new SampleRequest([], constants.GENERIC_SERVICE_ERROR_MESSAGE));
             })
     }
 
-    private requestsSamples(params: HttpParams, headers: HttpHeaders): Observable<SampleRequest> {
-        return Observable.create((observer) => {
-            this.requestSamples(params, headers).subscribe((vs: SampleRequest) => {
-                observer.next(vs);
-                if (vs.error) {
-                    observer.complete();
-                }
-            });
-        });
-    }
-
-    private requestSamples(params: HttpParams, headers: HttpHeaders): Observable<SampleRequest> {
-        return this.http.get(environment.vsalUrl, {params: params, headers: headers})
-            .timeout(VSAL_TIMEOUT)
-            .map((data) => {
-                if (data['error']) {
-                    Raven.captureMessage("VSAL ERROR: " + data['error']);
-                    return new SampleRequest([], constants.GENERIC_SERVICE_ERROR_MESSAGE);
-                }
-                const vs = new SampleRequest(data['sampleIDs']);
-                vs.total = data['total'];
-                return vs;
-            })
-            .catch((e) => {
-                Raven.captureMessage("VSAL ERROR: " + JSON.stringify(e));
-                return of(new SampleRequest([], constants.GENERIC_SERVICE_ERROR_MESSAGE));
-            });
-    }
 
     // getVariantsBySampleIds(query: Array<string>): Observable<VariantRequest> {
     //     let urlParams = new HttpParams()

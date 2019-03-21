@@ -60,9 +60,9 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
         }))
 
         if(this.data.name === "sampleId"){
-            this.subscriptions.push(this.sampleSearch.sampleIds.subscribe(ids => {
-                if(ids){
-                    const intersectTempSample = ids.filter(value => -1 !==  TEMP_SAMPLES.indexOf(value));
+            this.subscriptions.push(this.sampleSearch.sampleIds.subscribe(samples => {
+                if(samples){
+                    const intersectTempSample = samples.filter(value => -1 !==  TEMP_SAMPLES.indexOf(value));
                     let mockSamples = [];
                     intersectTempSample.forEach(value => {
                         mockSamples.push(MITO_SAMPLES[TEMP_SAMPLES.indexOf(value)])

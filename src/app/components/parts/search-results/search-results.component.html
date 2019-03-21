@@ -20,7 +20,6 @@
 
         </mat-tab>
     </mat-tab-group>
-
     <div *ngIf="!showVirtualCohortFlag&&variantsSummary.length > 10000&&geneFilter.length === 0" class="message message-error">
             This region contains too many variants to visualize with our genome browser, please choose a smaller region like:
             <a (click)="goToSmallerRegion()">{{searchService.getSmallerRegionString()}}</a>
@@ -33,9 +32,6 @@
     <app-genome-browser-summary-resizable *ngIf="!showVirtualCohortFlag&&variantsSummary.length <= maximumNumberOfVariants"></app-genome-browser-summary-resizable>
     <app-variants-summary-table *ngIf="!showVirtualCohortFlag" [variants]="variantsSummary"></app-variants-summary-table>
 
-    <app-genome-browser-resizable *ngIf="showVirtualCohortFlag&&variants.length <= maximumNumberOfVariants&&geneFilter.length === 0&&!loadingSample"></app-genome-browser-resizable>
-    <app-variants-table *ngIf="showVirtualCohortFlag&&!loadingSample" [variants]="variants"></app-variants-table>
-    <div class="loading-message" *ngIf="loadingSample">
-        <mat-spinner color="primary"></mat-spinner>
-    </div>
+    <app-genome-browser-resizable *ngIf="showVirtualCohortFlag&&variants.length <= maximumNumberOfVariants&&geneFilter.length === 0"></app-genome-browser-resizable>
+    <app-variants-table *ngIf="showVirtualCohortFlag" [variants]="variants"></app-variants-table>
 </div>

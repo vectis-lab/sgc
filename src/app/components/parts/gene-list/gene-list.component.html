@@ -24,3 +24,7 @@
     </mat-option>
   </mat-autocomplete>
 </mat-form-field>
+<div *ngIf="loadingSample"> 
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+<div *ngIf="error">{{error.message}}</div>

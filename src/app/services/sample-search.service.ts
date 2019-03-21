@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
+import { forkJoin } from "rxjs";
 import { Subject } from "rxjs/Subject";
-import { SampleRequest } from '../model/sample-request';
+import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import { VsalService } from './vsal-service';
 import { GENE_REGION_MAPPING } from '../shared/geneRegionMapping';
 
@@ -13,32 +14,51 @@ export class SampleSearch {
     private sampleLoadingSource = new Subject<boolean>();
     sampleLoading = this.sampleLoadingSource.asObservable();
 
-    private genesSource = new Subject<string[]>();
-    genes = this.genesSource.asObservable();
+    private genesFilterSource = new BehaviorSubject<string[]>([]);
+    genesFilter = this.genesFilterSource.asObservable();
+
+    error = new Subject<any>();
 
     constructor(private vsal: VsalService) { }
 
-    getSamples(gene) {
+    getSamples(genes) {
         this.sampleLoadingSource.next(true);
-        let searchGene = GENE_REGION_MAPPING[gene];
-        searchGene.options = [];
-        this.vsal.getSamples(searchGene).subscribe(ids => {
+        this.genesFilterSource.next(genes);
+        const joinedQuery = genes.map(gene => {
+            const sampleQuery = GENE_REGION_MAPPING[gene];
+            sampleQuery.options = [];
+            return this.vsal.getSamples(sampleQuery)}
+        )
+
+        forkJoin(joinedQuery).subscribe(joinedSampleRequest => {
+            let joinedSampleIds = []
+            joinedSampleRequest.forEach(sampleRequest => {
+                joinedSampleIds = joinedSampleIds.concat(sampleRequest.samples);               
+                joinedSampleIds = joinedSampleIds.filter((elem, index) =>  joinedSampleIds.indexOf(elem) === index);
+            });
             this.sampleLoadingSource.next(false);
-            this.sampleIdsSource.next(ids.samples);
-            this.genesSource.next([gene]);
-        })
+            this.sampleIdsSource.next(joinedSampleIds);
+            this.error.next(null);
+        },
+        e => {
+            this.error.next(e);
+            this.sampleLoadingSource.next(false);
+        });  
     }
 
-    //Cause for now only support 1 gene, so remove gene just basically remove everything
-    removeGene() {
-        this.sampleLoadingSource.next(true);
-        this.sampleIdsSource.next(null);
-        this.sampleLoadingSource.next(false);
-        this.genesSource.next([])
+    removeGene(gene) {
+        let removedGenesFilter = [...this.genesFilterSource.getValue()];
+        if(removedGenesFilter.length){
+            this.genesFilterSource.next(removedGenesFilter);
+            this.getSamples(removedGenesFilter);
+        }else{
+            this.genesFilterSource.next([]);
+        }
+            
     }
 
     clearGeneFilter() {
-        this.genesSource.next([]);
+        this.genesFilterSource.next([]);
     }
 
 }
