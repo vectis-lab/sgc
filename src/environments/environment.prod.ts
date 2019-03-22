@@ -12,7 +12,7 @@ export const environment = {
     auth0MachineClientSecret: 'xcLNeH7df-f8v6tHuiHkkX8x200fB7U5oyd4WFMMOWcgqCCBrLeTQ3Rc4yuC6RYv',
     beaconNetworkUrl: 'https://beacon-network.org/api',
     vsalUrl: 'https://sgc.garvan.org.au/ssvs/query',
-    vsalUrl2: 'https://localhost:8888/vsal/core/find',
+    vsalUrl2: 'https://129.94.15.179/vsal/core/find',
     elasticUrl: 'https://dr-sgc.kccg.garvan.org.au/_elasticsearch',
     durlUrl: 'https://wt-ec1ac815dce38c76c2e7662693b82189-0.run.webtask.io/durl',
     sentryUrl: 'https://4126e3ee842b4f079400ccf84980e84e@sentry.io/158608',
