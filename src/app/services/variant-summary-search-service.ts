@@ -49,7 +49,7 @@ export class VariantSummarySearchService {
 
     getVariants(query: SearchQuery): Promise<VariantSummary[]> {
         this.lastQuery = query;
-        return this.variantSearch.getVariants(query, this.lastQuery, this.results, this.errors, this.searchQuery)
+        return this.variantSearch.getVariants(query, this.results, this.errors, this.searchQuery)
     }
 
     getCurrentRegion = (): Region => this.variantSearch.getCurrentRegion(this.lastQuery);

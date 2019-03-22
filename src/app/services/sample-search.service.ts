@@ -3,7 +3,9 @@ import { forkJoin } from "rxjs";
 import { Subject } from "rxjs/Subject";
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import { VsalService } from './vsal-service';
+import { VariantSearchService } from './variant-search-service';
 import { GENE_REGION_MAPPING } from '../shared/geneRegionMapping';
+import { SampleRequest } from '../model/sample-request';
 
 
 @Injectable()
@@ -19,7 +21,9 @@ export class SampleSearch {
 
     error = new Subject<any>();
 
-    constructor(private vsal: VsalService) { }
+    constructor(private vsal: VsalService
+        //, private vss: VariantSearchService
+    ) { }
 
     getSamples(genes) {
         this.sampleLoadingSource.next(true);
@@ -29,12 +33,12 @@ export class SampleSearch {
             sampleQuery.options = [];
             return this.vsal.getSamples(sampleQuery)}
         )
-
-        forkJoin(joinedQuery).subscribe(joinedSampleRequest => {
+        //this.vss.getVariants(GENE_REGION_MAPPING[genes[0]]);
+        forkJoin(joinedQuery).subscribe((joinedSampleRequest) => {
             let joinedSampleIds = []
             joinedSampleRequest.forEach(sampleRequest => {
-                joinedSampleIds = joinedSampleIds.concat(sampleRequest.samples);               
-                joinedSampleIds = joinedSampleIds.filter((elem, index) =>  joinedSampleIds.indexOf(elem) === index);
+                joinedSampleIds = joinedSampleIds.concat(sampleRequest['samples']);               
+                joinedSampleIds = joinedSampleIds.filter((elem, index) =>  joinedSampleIds.indexOf(elem) === index);              
             });
             this.sampleLoadingSource.next(false);
             this.sampleIdsSource.next(joinedSampleIds);

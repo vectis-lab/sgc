@@ -3,7 +3,7 @@ import { SearchQuery } from '../model/search-query';
 import { VariantSummaryRequest } from '../model/variant-summary-request';
 
 export class VariantSearch {
-    getVariants(query: SearchQuery, lastQuery, results, errors, searchQuery): Promise<any[]> {
+    getVariants(query: SearchQuery, results, errors, searchQuery): Promise<any[]> {
         const promise = new Promise<any[]>((resolve, reject) => {
             results.take(1).subscribe(
                 (vr: VariantSummaryRequest) => {
