@@ -77,7 +77,6 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
     }
 
     ngAfterViewInit() {
-
     }
 
     ngOnDestroy() {
@@ -85,7 +84,6 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
             window.clearTimeout(this.timeout);
         }
         this.subscriptions.forEach((s) => s.unsubscribe());
-        this.searchBarService.setCohort("");
     }
 
     goToSmallerRegion() {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import { SearchBarService } from '../../../services/search-bar-service';
@@ -10,7 +10,7 @@ import { SearchBarService } from '../../../services/search-bar-service';
     templateUrl: './privacy-footer.component.html',
     styleUrls: ['./privacy-footer.component.css']
 })
-export class PrivacyFooterComponent implements OnInit {
+export class PrivacyFooterComponent implements OnInit, OnDestroy {
     year = '2019';
     subscriptions: Subscription[] = [];
     selectedCohort = '';
@@ -20,7 +20,7 @@ export class PrivacyFooterComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.subscriptions.push(this.searchBarService.cohort.subscribe(cohort =>{
+        this.subscriptions.push(this.searchBarService.authCohort.subscribe(cohort =>{
             if(cohort === "Mitochondria"){
                 this.selectedCohort = 'mitochondria';
             }else if(cohort === "Neuromuscular"){
@@ -32,12 +32,15 @@ export class PrivacyFooterComponent implements OnInit {
     }
     
     goToCohortAuthor(){
-        if(this.selectedCohort === ''){
+        if(this.selectedCohort === '' || (!this.router.url.includes('/search/results') && !this.router.url.includes('/clinical/results'))){
             this.router.navigate(['/authors']);
         }else{
-            console.log(this.selectedCohort);
             this.router.navigate(['/authors'], {fragment: this.selectedCohort})
         }
+    }
+
+    ngOnDestroy() {
+        this.subscriptions.forEach(subscription => {subscription.unsubscribe()})
     }
 }
 

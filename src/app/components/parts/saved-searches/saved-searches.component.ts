@@ -63,10 +63,6 @@ export class SavedSearchesComponent implements OnInit, OnDestroy {
             this.denied = true;
         }
     }) 
-    //Manual error handling if saved searches is undefined
-    if(typeof this.savedSearches[this.selectedCohort] === "undefined"){
-        this.router.navigate(['/error']);
-    }
 
   }
 
