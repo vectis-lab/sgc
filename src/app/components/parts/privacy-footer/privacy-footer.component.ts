@@ -20,7 +20,7 @@ export class PrivacyFooterComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit() {
-        this.subscriptions.push(this.searchBarService.authCohort.subscribe(cohort =>{
+        this.subscriptions.push(this.searchBarService.cohort.subscribe(cohort =>{
             if(cohort === "Mitochondria"){
                 this.selectedCohort = 'mitochondria';
             }else if(cohort === "Neuromuscular"){
