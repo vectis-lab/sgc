@@ -11,10 +11,14 @@ import { MgrbTermsComponent } from './components/pages/mgrb-terms/mgrb-terms.com
 import { VariantComponent } from './components/pages/variant/variant.component';
 import { ErrorComponent } from './components/pages/error/error.component';
 import { ExploreComponent } from './components/pages/explore/explore.component';
+import { ClinicalComponent } from './components/pages/clinical/clinical.component';
+import { CohortAuthorsComponent } from './components/pages/cohort-authors/cohort-authors.component';
 
 const appRoutes: Routes = [
     { path: 'initiatives', component: InitiativesComponent },
     { path: 'about',  component: AboutComponent },
+    { path: 'clinical', component: ClinicalComponent },
+    { path: 'clinical/results', component: ClinicalComponent },
     { path: 'auth',  component: LoadingComponent },
     { path: 'search/results', component: SearchComponent },
     { path: 'search/variant', component: VariantComponent },
@@ -25,6 +29,7 @@ const appRoutes: Routes = [
     { path: 'initiatives/nswgp', component: NswgpComponent },
     { path: 'initiatives/gcmp', component: GcmpComponent },
     { path: 'error', component: ErrorComponent },
+    { path: 'authors', component: CohortAuthorsComponent },
     // disabled until we get approval from data committee
     // { path: 'initiatives/mgrb/download', component: MgrbDownloadComponent },
     { path: 'terms/mgrb', component: MgrbTermsComponent },

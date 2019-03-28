@@ -1,6 +1,10 @@
 <div class="footer">
     <div class="container">
-        <a class="label" href="https://www.garvan.org.au/about-us/policies/privacy-policy">Privacy Policy</a>
+        <div>
+            <a class="label" href="https://www.garvan.org.au/about-us/policies/privacy-policy">Privacy Policy</a>
+            <span> | </span>
+            <a class="label" (click)="goToCohortAuthor()">Cohort Authors</a>
+        </div>
         <span class="label copyright">Copyright © {{ year }}</span>
     </div>
 </div>

@@ -17,9 +17,6 @@ export class ClinicalFilteringService implements OnDestroy {
     private savedSearchesNameSource = new Subject<string>();
     savedSearchesName = this.savedSearchesNameSource.asObservable();
 
-    private showFilterSource = new BehaviorSubject<boolean>(false);
-    showFilter = this.showFilterSource.asObservable();
-
     constructor(private auth: Auth, private sampleSearch: SampleSearch) {
     }
 
@@ -72,11 +69,6 @@ export class ClinicalFilteringService implements OnDestroy {
         this.filtersSource.next(savedSearches);
         this.savedSearchesNameSource.next(savedFilterName);
     }
-
-    setShowFilter(bool){
-        this.showFilterSource.next(bool);
-    }
-
 
     ngOnDestroy() {
         this.filtersSource.next({})

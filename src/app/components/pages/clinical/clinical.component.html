@@ -1,0 +1,26 @@
+<app-page-container>
+    <app-auth-guard *ngIf="!auth.authenticated()"></app-auth-guard>
+    <div *ngIf="auth.authenticated()">
+        <mat-sidenav-container>
+            <mat-sidenav #sidenav mode="side" fixedInViewport="true" fixedTopGap="71" [opened]="!isSmallScreen()" disableClose="true">
+                <app-gene-list *ngIf="!searchBarService.autocompleteError && !error && autocomplete != null"></app-gene-list>
+                <app-saved-searches *ngIf="!searchBarService.autocompleteError && !error && autocomplete != null"></app-saved-searches>
+            </mat-sidenav>
+            <div class="search-jumbo">
+                <app-search-bar-with-options [expanded]="!searching" [action]="searchClinicalFiltering" [expandable]="searching"></app-search-bar-with-options>
+            </div>
+            <section class="content">
+                <div class="message message-error" *ngIf="searchBarService.autocompleteError">
+                    {{ searchBarService.autocompleteError }}
+                </div>
+                <div class="message message-error" *ngIf="error">{{ error }}</div>
+                <div *ngIf="!searchBarService.autocompleteError && !error && autocomplete != null">
+                    <div class="search-results">
+                        <app-clinical-filtering [autocomplete]="autocomplete"
+                                            (errorEvent)="handleError($event)"></app-clinical-filtering>
+                    </div>
+                </div>
+            </section>
+        </mat-sidenav-container>
+        </div>
+</app-page-container>

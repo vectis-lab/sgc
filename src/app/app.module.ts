@@ -114,6 +114,9 @@ import { OverlayMenuSummaryComponent } from './components/parts/overlay-menu-sum
 import { FilterAutoSummaryComponent } from './components/parts/filter-auto-summary/filter-auto-summary.component';
 import { GeneListComponent } from './components/parts/gene-list/gene-list.component';
 import { SampleSearch } from './services/sample-search.service';
+import { ClinicalComponent } from './components/pages/clinical/clinical.component';
+import { ClinicalFilteringComponent } from './components/parts/clinical-filtering/clinical-filtering.component';
+import { CohortAuthorsComponent } from './components/pages/cohort-authors/cohort-authors.component';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -219,6 +222,9 @@ export class RavenErrorHandler implements ErrorHandler {
         OverlayMenuSummaryComponent,
         FilterAutoSummaryComponent,
         GeneListComponent,
+        ClinicalComponent,
+        ClinicalFilteringComponent,
+        CohortAuthorsComponent,
     ],
     entryComponents: [
         SignUpComponent,

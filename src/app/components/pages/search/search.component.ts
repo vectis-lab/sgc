@@ -1,4 +1,4 @@
-import { Component, OnDestroy, ChangeDetectorRef, OnInit, Inject } from '@angular/core';
+import { Component, OnDestroy, ChangeDetectorRef, OnInit } from '@angular/core';
 import { Auth } from '../../../services/auth-service';
 import { Subscription } from 'rxjs/Subscription';
 import { Params, ActivatedRoute, Router } from '@angular/router';
@@ -24,7 +24,6 @@ export class SearchComponent implements  OnInit, OnDestroy {
     searching = false;
     sb: MatSnackBarRef<SnackbarDemoComponent> = null;
     private mediaMatcher: MediaQueryList = matchMedia(`(max-width: ${SMALL_WIDTH}px)`);
-    showFilter: boolean;
     selectedOption: string;
     authors = [];
 
@@ -41,11 +40,6 @@ export class SearchComponent implements  OnInit, OnDestroy {
         }
     }
     ngOnInit(): void {
-        this.clinicalFilteringService.setShowFilter(false);
-        this.subscriptions.push(this.clinicalFilteringService.showFilter.subscribe(flag =>{
-            this.showFilter = flag;
-        }))
-
         this.subscriptions.push(this.searchBarService.cohort.subscribe(cohort =>{
             this.selectedOption = cohort;
             if(cohort === "Mitochondria"){

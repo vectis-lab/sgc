@@ -1,4 +1,4 @@
-<h2 id="header">Genes</h2>
+<h2 id="header">mtDNA Genes</h2>
 <mat-form-field>
   <mat-chip-list #chipList>
     <mat-chip
@@ -10,7 +10,6 @@
       <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
     </mat-chip>
     <input
-      placeholder="Genes"
       #geneInput
       [formControl]="geneCtrl"
       [matAutocomplete]="auto"
