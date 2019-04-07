@@ -62,7 +62,44 @@ export class SearchBarService {
             return Promise.reject(e);
         };
 
-        const arrayOfQueries = query.split();
+        return this.searchAutocompleteServices(query).take(1).toPromise().then(v => {
+            if (v.length <= 0) {
+                return handleAutocompleteError('Failed to find any results for: ' + query);
+            }
+            if(this.checkErrorRegion(query)){
+                return handleAutocompleteError('Start position cannot be greater than end');
+            }
+            const bestMatch = v[0];
+            if (bestMatch.match(query)) {
+                return bestMatch;
+            } else {
+                return handleAutocompleteError('Failed to find any results for: ' + query);
+            }
+
+        });
+
+    }
+
+    searchWithMultipleParams(params: Params): Promise<VariantAutocompleteResult<any>[]> {
+        const query = params['query'];
+        if (!query) {
+            return <any>Promise.resolve();
+        }
+        this.parseOptions(params);
+
+        if (!this.query) {
+            this.query = query;
+        }
+
+        this.searchedEvent.next();
+        this.setCohort(this.tempCohortSource.getValue());
+
+        const handleAutocompleteError = (e: string): Promise<any> => {
+            this.autocompleteError = e;
+            return Promise.reject(e);
+        };
+
+        const arrayOfQueries = query.split(',');
 
         const queries = arrayOfQueries.map(q => this.searchAutocompleteServices(q).take(1).toPromise())
 
@@ -73,12 +110,8 @@ export class SearchBarService {
             if(this.checkErrorRegion(query)){
                 return handleAutocompleteError('Start position cannot be greater than end');
             }
-            const bestMatch = v[0][0];
-            if (bestMatch.match(query)) {
-                return bestMatch;
-            } else {
-                return handleAutocompleteError('Failed to find any results for: ' + query);
-            }
+            const bestMatches = v.map(q => q[0]);
+            return bestMatches;
         });
 
     }
@@ -133,6 +166,7 @@ export class SearchBarService {
         }else{
             this.startGreaterThanEndSource.next(false);
         }
+
         return combineLatest(this.autocompleteServices.map((autocompleteService) => {
             return autocompleteService.search(term).startWith(startsWith).catch(e => of([]));
         }), this.combineStreams);

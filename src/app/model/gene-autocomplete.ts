@@ -11,12 +11,18 @@ import { Region } from './region';
 
 export class GeneAutocomplete extends GenericAutocompleteResult<Gene> {
 
-    search(ss: SampleSearch, vsal: VariantSearchService, options: SearchOption[]): Promise<Variant[]> {
+    /*search(ss: SampleSearch, vsal: VariantSearchService, options: SearchOption[]): Promise<Variant[]> {
         return this.autocompleteService.getDetails(this).toPromise().then((gene: Gene) => {
             return ss.getSamples(new SearchQuery(gene.chromosome, gene.start, gene.end, options)).then(() => {
                 return vsal.getVariants(new SearchQuery(gene.chromosome, gene.start, gene.end, options))
             });
         }).catch(e => e);
+    }*/
+
+    getSearchQueries(options: SearchOption[]): Promise<SearchQuery> {
+        return this.autocompleteService.getDetails(this).toPromise().then((gene: Gene) => {
+            return new SearchQuery(gene.chromosome, gene.start, gene.end, options);
+        });
     }
 
     searchSummary(vsal2: VariantSummarySearchService, options: SearchOption[]): Promise<VariantSummary[]> {

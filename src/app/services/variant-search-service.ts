@@ -17,17 +17,17 @@ export class VariantSearchService {
     results: Observable<VariantRequest>;
     errors = new Subject<any>();
     commenced = false;
-    lastQuery: SearchQuery;
+    lastQuery: SearchQuery[];
     startingRegion: Region;
     filter: any = null;
-    private searchQuery = new Subject<SearchQuery>();
+    private searchQuery = new Subject<SearchQuery[]>();
     private variantSearch = new VariantSearch();
 
     constructor(private vsal: VsalService
     ) {
         this.results = this.searchQuery
             .debounceTime(DEBOUNCE_TIME)
-            .switchMap((query: SearchQuery) => {
+            .switchMap((query: SearchQuery[]) => {
                 return this.vsal.getVariants(query).map((vr: VariantRequest) => {
                     if (this.filter) {
                         vr.variants = this.filter(vr.variants);
@@ -42,15 +42,12 @@ export class VariantSearchService {
             .share();
 
         this.results.subscribe((cs) => {
-            if (!this.startingRegion) {
-                this.startingRegion = new Region(this.lastQuery.chromosome, this.lastQuery.start, this.lastQuery.end);
-            }
             this.variants = cs.variants;
             this.commenced = true;
         });
     }
 
-    getVariants(query: SearchQuery): Promise<Variant[]> {
+    getVariants(query: SearchQuery[]): Promise<Variant[]> {
         this.lastQuery = query;
         const promise = new Promise<any[]>((resolve, reject) => {
             this.results.take(1).subscribe(
@@ -78,7 +75,5 @@ export class VariantSearchService {
 
 
     getSmallerRegionString= () => this.variantSearch.getSmallerRegionString(this.lastQuery);
-
-    hasMoved = () => this.variantSearch.hasMoved(this.startingRegion, this.lastQuery);
 }
 

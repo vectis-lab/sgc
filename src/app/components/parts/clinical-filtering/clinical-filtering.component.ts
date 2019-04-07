@@ -8,6 +8,7 @@ import { SampleSearch } from '../../../services/sample-search.service';
 import { Subscription } from 'rxjs/Subscription';
 import { SearchBarService } from '../../../services/search-bar-service';
 import { VariantAutocompleteResult } from '../../../model/autocomplete-result';
+import { SearchQuery } from '../../../model/search-query';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ClinicalFilteringService } from '../../../services/clinical-filtering.service';
 
@@ -18,7 +19,7 @@ import { ClinicalFilteringService } from '../../../services/clinical-filtering.s
     providers: [VariantSearchService, VariantTrackService]
 })
 export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewInit {
-    @Input() autocomplete: VariantAutocompleteResult<any>;
+    @Input() autocomplete: VariantAutocompleteResult<any>[];
     @Output() errorEvent = new EventEmitter();
     private geneFilter = [];
     public variants: Variant[] = [];
@@ -66,8 +67,23 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
 
         this.loadingVariants = true;
 
+        const allQueries = this.autocomplete.map(ac => ac.getSearchQueries(this.searchBarService.options))
 
-        this.autocomplete.search(this.sampleSearch, this.searchService, this.searchBarService.options)
+        Promise.all(allQueries).then((queries: SearchQuery[]) => {
+            return this.sampleSearch.getSamples(queries).then(() => {
+                return this.searchService.getVariants(queries)
+                .then(() => {
+                    this.loadingVariants = false;
+                    this.cd.detectChanges();
+                })
+                .catch((e) => {
+                    this.loadingVariants = false;
+                    this.errorEvent.emit(e);
+                });
+            });
+        })
+
+        /*this.autocomplete.search(this.sampleSearch, this.searchService, this.searchBarService.options)
             .then(() => {
                 this.loadingVariants = false;
                 this.cd.detectChanges();
@@ -75,7 +91,7 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
             .catch((e) => {
                 this.loadingVariants = false;
                 this.errorEvent.emit(e);
-            });
+            });*/
         
 
     }

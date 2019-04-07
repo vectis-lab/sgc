@@ -14,14 +14,14 @@ export class SampleSearch {
     results: Observable<SampleRequest>;
     errors = new Subject<any>();
     commenced = false;
-    lastQuery: SearchQuery;
+    lastQuery: SearchQuery[];
     startingRegion: Region;
-    private searchQuery = new Subject<SearchQuery>();
+    private searchQuery = new Subject<SearchQuery[]>();
 
     constructor(private vsal: VsalService) {
         this.results = this.searchQuery
         .debounceTime(DEBOUNCE_TIME)
-        .switchMap((query: SearchQuery) => {
+        .switchMap((query: SearchQuery[]) => {
             return this.vsal.getSamples(query).map((sr: SampleRequest) => {
                 return sr;
             });
@@ -33,15 +33,12 @@ export class SampleSearch {
         .share();
 
         this.results.subscribe((sr) => {
-            if (!this.startingRegion) {
-                this.startingRegion = new Region(this.lastQuery.chromosome, this.lastQuery.start, this.lastQuery.end);
-            }
             this.ids = sr.samples;
             this.commenced = true;
         });
      }
 
-    getSamples(query: SearchQuery) {
+    getSamples(query: SearchQuery[]) {
         this.lastQuery = query;
         const promise = new Promise<any[]>((resolve, reject) => {
             this.results.take(1).subscribe(

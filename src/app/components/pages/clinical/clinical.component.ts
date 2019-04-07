@@ -19,7 +19,7 @@ const SMALL_WIDTH = 720;
 export class ClinicalComponent implements OnInit, OnDestroy {
   subscriptions: Subscription[] = [];
   sbSub: Subscription = null;
-  autocomplete: GenericAutocompleteResult<any>;
+  autocomplete: GenericAutocompleteResult<any>[];
   error = '';
   searching = false;
   sb: MatSnackBarRef<SnackbarDemoComponent> = null;
@@ -68,7 +68,7 @@ export class ClinicalComponent implements OnInit, OnDestroy {
       this.error = '';
       this.autocomplete = null;
       this.searching = true;
-      this.searchBarService.searchWithParams(params).then((v) => {
+      this.searchBarService.searchWithMultipleParams(params).then((v) => {
           this.autocomplete = v;
           this.cd.detectChanges();
       }).catch(() => {

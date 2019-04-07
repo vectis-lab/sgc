@@ -34,10 +34,10 @@ export class ClinapiService implements OnDestroy {
                     .all()
                     .filter(s => s.value > 0)
                     .map(s => s.key);
-                const loc = {
+                /*const loc = {
                     from: this.vss.lastQuery.start,
                     to: this.vss.lastQuery.end
-                };
+                };*/
 
                 const mockSamples = this.samples.map(sample => {
                     if(this.samples.every(val => MITO_SAMPLES.includes(val))){
@@ -49,9 +49,9 @@ export class ClinapiService implements OnDestroy {
                 })
 
                 if(this.samples.length){
-                    this.vss.lastQuery.options = [(new SearchOption('', 'samples', [], mockSamples.join()))];
+                    this.vss.lastQuery[0].options = [(new SearchOption('', 'samples', [], mockSamples.join()))];
                 }else{
-                    this.vss.lastQuery.options=[]
+                    this.vss.lastQuery[0].options=[]
                 }
                 
                 /*No genome browser so VTS is not needed

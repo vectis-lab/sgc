@@ -19,18 +19,21 @@ export class VsalService {
     constructor(private http: HttpClient) {
     }
 
-    getVariants(query: SearchQuery): Observable<VariantRequest> {
+    getVariants(query: SearchQuery[]): Observable<VariantRequest> {
+        const chromosome = query.map(q => q.chromosome).join();
+        const start = query.map(q => q.start).join();
+        const end = query.map(q => q.end).join();
         let urlParams = new HttpParams()
-            .append('chromosome', query.chromosome)
+            .append('chromosome', chromosome)
             .append('dataset', 'mgrb')
-            .append('positionStart', String(query.start))
-            .append('positionEnd', String(query.end))
+            .append('positionStart', start)
+            .append('positionEnd', end)
             .append('limit', VSAL_VARIANT_LIMIT.toString())
             .append('skip', '0')
             .append('returnAnnotations', 'true')
             .append('jwt', localStorage.getItem('idToken'));
 
-        query.options.forEach(o => {
+        query[0].options.forEach(o => {
             if (o.key) {
                 urlParams = urlParams.append(o.key, o.getValue());
             }
@@ -82,17 +85,21 @@ export class VsalService {
         });
     }
 
-    getSamples(query: SearchQuery): Observable<SampleRequest> {
+    getSamples(query: SearchQuery[]): Observable<SampleRequest> {
+        const chromosome = query.map(q => q.chromosome).join();
+        const start = query.map(q => q.start).join();
+        const end = query.map(q => q.end).join();
+
         let urlParams = new HttpParams()
-            .append('chromosome', query.chromosome)
+            .append('chromosome', chromosome)
             .append('dataset', 'mgrb')
             .append('selectSamplesByGT', 'true')
-            .append('positionStart', String(query.start))
-            .append('positionEnd', String(query.end))
+            .append('positionStart', start)
+            .append('positionEnd', end)
             .append('returnAnnotations', 'true')
             .append('jwt', localStorage.getItem('idToken'));
 
-        query.options.forEach(o => {
+        query[0].options.forEach(o => {
             if (o.key) {
                 urlParams = urlParams.append(o.key, o.getValue());
             }
