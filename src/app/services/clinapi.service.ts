@@ -1,7 +1,6 @@
 import { Injectable, OnDestroy } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 import { MAXIMUM_NUMBER_OF_VARIANTS } from './cttv-service';
-import { VariantTrackService } from './genome-browser/variant-track-service';
 import { FAKE_CLINICAL_DATA } from "../mocks/clindata";
 import { FAKE_MITOCHONDRIA_DATA } from "../mocks/mitodata";
 import { FAKE_NEUROMUSCULAR_DATA } from "../mocks/neuromusculardata";
@@ -24,7 +23,6 @@ export class ClinapiService implements OnDestroy {
 
     constructor(
         private vss: VariantSearchService,
-        private vts: VariantTrackService,
         private http: HttpClient
     ) {
         this.subs.push(
@@ -34,10 +32,6 @@ export class ClinapiService implements OnDestroy {
                     .all()
                     .filter(s => s.value > 0)
                     .map(s => s.key);
-                /*const loc = {
-                    from: this.vss.lastQuery.start,
-                    to: this.vss.lastQuery.end
-                };*/
 
                 const mockSamples = this.samples.map(sample => {
                     if(this.samples.every(val => MITO_SAMPLES.includes(val))){
@@ -54,17 +48,6 @@ export class ClinapiService implements OnDestroy {
                     this.vss.lastQuery[0].options=[]
                 }
                 
-                /*No genome browser so VTS is not needed
-                if (this.vss.variants.length > MAXIMUM_NUMBER_OF_VARIANTS) {
-                    this.vss.getVariants(this.vss.lastQuery);
-                } else {
-                    vts.track.data().call(vts.track, {
-                        loc: loc,
-                        on_success: () => {
-                            vts.track.display().update.call(vts.track, loc);
-                        }
-                    });
-                }*/
                 this.vss.getVariants(this.vss.lastQuery);
             })
         );

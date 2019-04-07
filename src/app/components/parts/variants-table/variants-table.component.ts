@@ -4,7 +4,6 @@ import {
 import { Variant } from '../../../model/variant';
 import { Subscription } from 'rxjs/Subscription';
 import { Router } from '@angular/router';
-import { VariantTrackService } from '../../../services/genome-browser/variant-track-service';
 
 import * as Papa from 'papaparse';
 import { VariantSearchService } from '../../../services/variant-search-service';
@@ -34,7 +33,6 @@ export class VariantsTableComponent implements OnInit, OnDestroy, AfterViewInit 
 
     constructor(public  ts: TableService,
                 private searchService: VariantSearchService,
-                private variantTrack: VariantTrackService,
                 private cd: ChangeDetectorRef,
                 private router: Router) {
     }
@@ -44,27 +42,6 @@ export class VariantsTableComponent implements OnInit, OnDestroy, AfterViewInit 
             this.ts.minimalView();
             this.showSettings = false;
         }
-
-        this.subscriptions.push(this.variantTrack.highlightedVariant.subscribe((v: Variant) => {
-            if (v.highlight) {
-                this.highlightedVariant = v;
-            } else {
-                this.highlightedVariant = null;
-            }
-            this.cd.detectChanges();
-        }));
-
-        this.subscriptions.push(this.variantTrack.clickedVariant.subscribe((variant: Variant) => {
-            const index = this.variants.findIndex((v => this.compare(v, variant)));
-            this.currentPage = Math.ceil((index + 1) / this.pageSize);
-            this.cd.detectChanges();
-        }));
-
-        this.subscriptions.push(this.variantTrack.clickedVariant.subscribe((variant: Variant) => {
-            const index = this.variants.findIndex((v => this.compare(v, variant)));
-            this.currentPage = Math.ceil((index + 1) / this.pageSize);
-            this.cd.detectChanges();
-        }));
 
     }
 
@@ -78,12 +55,10 @@ export class VariantsTableComponent implements OnInit, OnDestroy, AfterViewInit 
 
     highlightVariant(variant: Variant) {
         variant.highlight = true;
-        this.variantTrack.highlightedVariant.next(variant);
     }
 
     unHighlightVariant(variant: Variant) {
         variant.highlight = false;
-        this.variantTrack.highlightedVariant.next(variant);
     }
 
     sortVariants(label: string) {

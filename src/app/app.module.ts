@@ -39,12 +39,10 @@ import { SearchComponent } from './components/pages/search/search.component';
 import { SearchResultsComponent } from './components/parts/search-results/search-results.component';
 import { AlleleFreqComponent } from './components/parts/allele-freq/allele-freq.component';
 import { VsalService } from './services/vsal-service';
-import { GenomeBrowserComponent } from './components/parts/genome-browser/genome-browser.component';
 import { Auth } from './services/auth-service';
 import { RegionService } from './services/autocomplete/region-service';
 import { SearchBarComponent } from './components/parts/search-bar/search-bar.component';
 import { SearchOptionComponent } from './components/parts/search-option/search-option.component';
-import { GenomeBrowserResizeComponent } from './components/parts/genome-browser-resizable/genome-browser-resizable.component';
 import { BeaconComponent } from './components/pages/beacon/beacon.component';
 import { SearchBarWithOptionsComponent } from './components/parts/search-bar-with-options/search-bar-with-options.component';
 import { TitleLogoBannerComponent } from './components/parts/title-logo-banner/title-logo-banner.component';
@@ -64,7 +62,6 @@ import { PrivacyFooterComponent } from './components/parts/privacy-footer/privac
 import { ElasticGeneSearch } from './services/autocomplete/elastic-gene-search-service';
 import { VariantsTableComponent } from './components/parts/variants-table/variants-table.component';
 import { PositionService } from './services/autocomplete/position-service';
-import { OverlayMenuComponent } from './components/parts/overlay-menu/overlay-menu.component';
 import { TableService } from './services/table-service';
 import { TableSummaryService } from './services/table-summary-service';
 import { PcaPlotComponent } from './components/parts/pca-plot/pca-plot.component';
@@ -170,9 +167,7 @@ export class RavenErrorHandler implements ErrorHandler {
         PieChartComponent,
         CohortListComponent,
         GraphsWidgetComponent,
-        GenomeBrowserComponent,
         SearchOptionComponent,
-        GenomeBrowserResizeComponent,
         BeaconComponent,
         SearchBarWithOptionsComponent,
         TitleLogoBannerComponent,
@@ -187,7 +182,6 @@ export class RavenErrorHandler implements ErrorHandler {
         HomeAboutComponent,
         PrivacyFooterComponent,
         VariantsTableComponent,
-        OverlayMenuComponent,
         PcaPlotComponent,
         FilterAutoComponent,
         PageContainerComponent,

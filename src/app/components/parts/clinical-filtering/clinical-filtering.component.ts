@@ -3,7 +3,6 @@ import { Variant } from '../../../model/variant';
 import { MAXIMUM_NUMBER_OF_VARIANTS } from '../../../services/cttv-service';
 
 import { VariantSearchService } from '../../../services/variant-search-service';
-import { VariantTrackService } from '../../../services/genome-browser/variant-track-service';
 import { SampleSearch } from '../../../services/sample-search.service';
 import { Subscription } from 'rxjs/Subscription';
 import { SearchBarService } from '../../../services/search-bar-service';
@@ -16,7 +15,7 @@ import { ClinicalFilteringService } from '../../../services/clinical-filtering.s
     selector: 'app-clinical-filtering',
     templateUrl: './clinical-filtering.component.html',
     styleUrls: ['./clinical-filtering.component.css'],
-    providers: [VariantSearchService, VariantTrackService]
+    providers: [VariantSearchService]
 })
 export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewInit {
     @Input() autocomplete: VariantAutocompleteResult<any>[];
