@@ -12,7 +12,6 @@ import { of, throwError, Observable } from "rxjs";
 import { HttpClient } from '@angular/common/http';
 import { DEV } from "../shared/tempConfiguration";
 import { SearchOption } from '../model/search-option';
-import { VsalService } from "./vsal-service";
 import { environment } from '../../environments/environment';
 import { TEMP_SAMPLES, MITO_SAMPLES, NEURO_SAMPLES } from '../mocks/sample.mock'
 
@@ -26,7 +25,6 @@ export class ClinapiService implements OnDestroy {
     constructor(
         private vss: VariantSearchService,
         private vts: VariantTrackService,
-        private vsal: VsalService,
         private http: HttpClient
     ) {
         this.subs.push(
@@ -56,6 +54,7 @@ export class ClinapiService implements OnDestroy {
                     this.vss.lastQuery.options=[]
                 }
                 
+                /*No genome browser so VTS is not needed
                 if (this.vss.variants.length > MAXIMUM_NUMBER_OF_VARIANTS) {
                     this.vss.getVariants(this.vss.lastQuery);
                 } else {
@@ -65,7 +64,8 @@ export class ClinapiService implements OnDestroy {
                             vts.track.display().update.call(vts.track, loc);
                         }
                     });
-                }
+                }*/
+                this.vss.getVariants(this.vss.lastQuery);
             })
         );
     }
@@ -117,7 +117,6 @@ export class ClinapiService implements OnDestroy {
         }
     }
 
-    //Bakal diganti nih!!!
     filterVariants = (v: any[]) => {
         if (this.samples.length === 0) {
             return [];

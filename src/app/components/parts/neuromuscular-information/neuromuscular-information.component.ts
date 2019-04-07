@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ViewEncapsulation, OnDestroy } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ViewEncapsulation, OnDestroy, OnInit, Input } from '@angular/core';
 import { ClinapiService } from '../../../services/clinapi.service';
 import * as dc from 'dc';
 import * as crossfilter from 'crossfilter2';
@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import { Chart } from "../../../model/clinical-cohort-chart";
 import { DEV } from "../../../shared/tempConfiguration";
+import { TEMP_SAMPLES, NEURO_SAMPLES } from '../../../mocks/sample.mock'
 
 @Component({
     selector: 'app-neuromuscular-information',
@@ -18,8 +19,10 @@ import { DEV } from "../../../shared/tempConfiguration";
     changeDetection: ChangeDetectionStrategy.OnPush,
     encapsulation: ViewEncapsulation.None,
 })
-export class NeuromuscularInformationComponent implements AfterViewInit, OnDestroy {
-
+export class NeuromuscularInformationComponent implements AfterViewInit, OnDestroy, OnInit {
+    @Input() samples: string[] = [];
+    //We now use mockSamples which is just hardcoded mapping, later this will be removed
+    mockSamples: string[];
     error: any;
     denied = false;
     patients = [];
@@ -39,6 +42,14 @@ export class NeuromuscularInformationComponent implements AfterViewInit, OnDestr
             this.params = p;
             this.demo = p['demo'] === 'true';
         }));
+    }
+
+    ngOnInit() {
+        const tempSample = this.samples.filter(sample => {
+            return TEMP_SAMPLES.includes(sample);
+        })
+
+        this.mockSamples = tempSample.map(sample => NEURO_SAMPLES[TEMP_SAMPLES.indexOf(sample)])
     }
 
     ngAfterViewInit() {
@@ -106,6 +117,7 @@ export class NeuromuscularInformationComponent implements AfterViewInit, OnDestr
                     1400,
                     true,
                     sampleIdGroup,
+                    this.mockSamples
                 ),
                 new Chart(
                     'ageOfOnset',

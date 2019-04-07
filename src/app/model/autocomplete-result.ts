@@ -1,6 +1,7 @@
 import { Variant } from './variant';
 import { VariantSummary } from './variant-summary';
 import { VariantSearchService } from '../services/variant-search-service';
+import { SampleSearch } from '../services/sample-search.service';
 import { VariantSummarySearchService } from '../services/variant-summary-search-service';
 import { AutocompleteService } from '../services/autocomplete/autocomplete-service';
 import { SearchOption } from './search-option';
@@ -18,7 +19,7 @@ export abstract class GenericAutocompleteResult<T> {
 }
 
 export abstract class VariantAutocompleteResult<T> extends GenericAutocompleteResult<T> {
-    abstract search(vsal: VariantSearchService, options: SearchOption[]): Promise<Variant[]>;
+    abstract search(ss: SampleSearch, vsal: VariantSearchService, options: SearchOption[]): Promise<Variant[]>;
     abstract region(): Promise<Region>;
 }
 

@@ -39,7 +39,6 @@ export class ClinicalFilteringService implements OnDestroy {
 
     clearFilters(){
         this.filtersSource.next({});
-        this.sampleSearch.clearGeneFilter();
     }
 
     initSaveSearches(savedSearches){

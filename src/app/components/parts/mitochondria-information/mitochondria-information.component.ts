@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ViewEncapsulation, OnDestroy } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ViewEncapsulation, OnDestroy, Input, OnInit } from '@angular/core';
 import { ClinapiService } from '../../../services/clinapi.service';
 import * as dc from 'dc';
 import * as crossfilter from 'crossfilter2';
@@ -8,6 +8,7 @@ import { Auth } from '../../../services/auth-service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import { Chart } from "../../../model/clinical-cohort-chart";
+import { TEMP_SAMPLES, MITO_SAMPLES } from '../../../mocks/sample.mock'
 
 @Component({
     selector: 'app-mitochondria-information',
@@ -17,8 +18,10 @@ import { Chart } from "../../../model/clinical-cohort-chart";
     changeDetection: ChangeDetectionStrategy.OnPush,
     encapsulation: ViewEncapsulation.None,
 })
-export class MitochondriaInformationComponent implements AfterViewInit, OnDestroy {
-
+export class MitochondriaInformationComponent implements OnInit, AfterViewInit, OnDestroy {
+    @Input() samples: string[] = [];
+    //We now use mockSamples which is just hardcoded mapping, later this will be removed
+    mockSamples: string[];
     error: any;
     denied = false;
     patients = [];
@@ -96,6 +99,14 @@ export class MitochondriaInformationComponent implements AfterViewInit, OnDestro
         }));
     }
 
+    ngOnInit() {
+        const tempSample = this.samples.filter(sample => {
+            return TEMP_SAMPLES.includes(sample);
+        })
+
+        this.mockSamples = tempSample.map(sample => MITO_SAMPLES[TEMP_SAMPLES.indexOf(sample)])
+    }
+
     ngAfterViewInit() {
         this.subscriptions.push(this.auth.userPermissions.subscribe(permissions => {
             if(permissions.includes('mito/pheno')){
@@ -140,6 +151,7 @@ export class MitochondriaInformationComponent implements AfterViewInit, OnDestro
                     1200,
                     true,
                     sampleIdGroup,
+                    this.mockSamples
                 ),
                 new Chart(
                     'gender',
@@ -158,6 +170,7 @@ export class MitochondriaInformationComponent implements AfterViewInit, OnDestro
                     700,
                     true,
                     conditionGroup,
+                    null,
                     (dimension, filters) => {
                         dimension.filter(null);   
                         if (filters.length === 0)

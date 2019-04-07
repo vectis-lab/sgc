@@ -1,0 +1,18 @@
+<button mat-stroked-button (click)="search()" class="search-button">Search</button>
+<app-search-option *ngFor="let option of searchBarService.options" [option]="option"></app-search-option>
+<app-search-bar-clinical [options]="{autofocus: false}" [action]='addGene'></app-search-bar-clinical>
+<mat-form-field class="chip-list">
+    <mat-chip-list #chipList aria-label="Fruit selection">
+      <mat-chip *ngFor="let query of queries" [selectable]="selectable"
+               [removable]="removable" (removed)="remove(query)">
+        {{query}}
+        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+      </mat-chip>
+      <input placeholder="Genes"
+             [matChipInputFor]="chipList"
+             [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+             [matChipInputAddOnBlur]="addOnBlur"
+             (matChipInputTokenEnd)="add($event)"
+             (paste)="paste($event)">
+    </mat-chip-list>
+  </mat-form-field>

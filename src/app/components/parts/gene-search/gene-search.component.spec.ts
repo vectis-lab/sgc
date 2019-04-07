@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GeneListComponent } from './gene-list.component';
+import { GeneSearchComponent } from './gene-search.component';
 
-describe('GeneListComponent', () => {
-  let component: GeneListComponent;
-  let fixture: ComponentFixture<GeneListComponent>;
+describe('GeneSearchComponent', () => {
+  let component: GeneSearchComponent;
+  let fixture: ComponentFixture<GeneSearchComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GeneListComponent ]
+      declarations: [ GeneSearchComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GeneListComponent);
+    fixture = TestBed.createComponent(GeneSearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

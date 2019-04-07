@@ -52,7 +52,24 @@ export class VariantSearchService {
 
     getVariants(query: SearchQuery): Promise<Variant[]> {
         this.lastQuery = query;
-        return this.variantSearch.getVariants(query, this.results, this.errors, this.searchQuery)
+        const promise = new Promise<any[]>((resolve, reject) => {
+            this.results.take(1).subscribe(
+                (vr: VariantRequest) => {
+                    if (vr.error) {
+                        this.errors.next(vr.error);
+                        resolve([]);
+                        return;
+                    }
+                    resolve(vr.variants);
+                },
+                (e: any) => {
+                    this.errors.next(e);
+                    resolve([]);
+                }
+            );
+        });
+        this.searchQuery.next(query);
+        return promise;
     }
 
     

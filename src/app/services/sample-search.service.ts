@@ -1,68 +1,65 @@
 import { Injectable } from '@angular/core';
-import { forkJoin } from "rxjs";
-import { Subject } from "rxjs/Subject";
-import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import { VsalService } from './vsal-service';
-import { VariantSearchService } from './variant-search-service';
-import { GENE_REGION_MAPPING } from '../shared/geneRegionMapping';
+import { Subject } from 'rxjs/Subject';
+import { SearchQuery } from '../model/search-query';
+import { Region } from '../model/region';
+import { of, Observable } from "rxjs";
 import { SampleRequest } from '../model/sample-request';
 
+const DEBOUNCE_TIME = 100;
 
 @Injectable()
 export class SampleSearch {
-    private sampleIdsSource = new Subject<string[]>();
-    sampleIds = this.sampleIdsSource.asObservable();
+    ids: string[] = [];
+    results: Observable<SampleRequest>;
+    errors = new Subject<any>();
+    commenced = false;
+    lastQuery: SearchQuery;
+    startingRegion: Region;
+    private searchQuery = new Subject<SearchQuery>();
 
-    private sampleLoadingSource = new Subject<boolean>();
-    sampleLoading = this.sampleLoadingSource.asObservable();
-
-    private genesFilterSource = new BehaviorSubject<string[]>([]);
-    genesFilter = this.genesFilterSource.asObservable();
-
-    error = new Subject<any>();
-
-    constructor(private vsal: VsalService
-        //, private vss: VariantSearchService
-    ) { }
-
-    getSamples(genes) {
-        this.sampleLoadingSource.next(true);
-        this.genesFilterSource.next(genes);
-        const joinedQuery = genes.map(gene => {
-            const sampleQuery = GENE_REGION_MAPPING[gene];
-            sampleQuery.options = [];
-            return this.vsal.getSamples(sampleQuery)}
-        )
-        //this.vss.getVariants(GENE_REGION_MAPPING[genes[0]]);
-        forkJoin(joinedQuery).subscribe((joinedSampleRequest) => {
-            let joinedSampleIds = []
-            joinedSampleRequest.forEach(sampleRequest => {
-                joinedSampleIds = joinedSampleIds.concat(sampleRequest['samples']);               
-                joinedSampleIds = joinedSampleIds.filter((elem, index) =>  joinedSampleIds.indexOf(elem) === index);              
+    constructor(private vsal: VsalService) {
+        this.results = this.searchQuery
+        .debounceTime(DEBOUNCE_TIME)
+        .switchMap((query: SearchQuery) => {
+            return this.vsal.getSamples(query).map((sr: SampleRequest) => {
+                return sr;
             });
-            this.sampleLoadingSource.next(false);
-            this.sampleIdsSource.next(joinedSampleIds);
-            this.error.next(null);
-        },
-        e => {
-            this.error.next(e);
-            this.sampleLoadingSource.next(false);
-        });  
-    }
+        })
+        .catch(e => {
+            this.errors.next(e);
+            return of<SampleRequest>(new SampleRequest([], e));
+        })
+        .share();
 
-    removeGene(gene) {
-        let removedGenesFilter = [...this.genesFilterSource.getValue()];
-        if(removedGenesFilter.length){
-            this.genesFilterSource.next(removedGenesFilter);
-            this.getSamples(removedGenesFilter);
-        }else{
-            this.genesFilterSource.next([]);
-        }
-            
-    }
+        this.results.subscribe((sr) => {
+            if (!this.startingRegion) {
+                this.startingRegion = new Region(this.lastQuery.chromosome, this.lastQuery.start, this.lastQuery.end);
+            }
+            this.ids = sr.samples;
+            this.commenced = true;
+        });
+     }
 
-    clearGeneFilter() {
-        this.genesFilterSource.next([]);
+    getSamples(query: SearchQuery) {
+        this.lastQuery = query;
+        const promise = new Promise<any[]>((resolve, reject) => {
+            this.results.take(1).subscribe(
+                (sr: SampleRequest) => {
+                    if (sr.error) {
+                        this.errors.next(sr.error);
+                        resolve([]);
+                        return;
+                    }
+                    resolve(sr.samples);
+                },
+                (e: any) => {
+                    this.errors.next(e);
+                    resolve([]);
+                }
+            );
+        });
+        this.searchQuery.next(query);
+        return promise;
     }
-
 }

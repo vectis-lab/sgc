@@ -3,6 +3,7 @@ import { VariantSummary } from './variant-summary';
 import { GenericAutocompleteResult } from './autocomplete-result';
 import { Gene } from './gene';
 import { VariantSearchService } from '../services/variant-search-service';
+import { SampleSearch } from '../services/sample-search.service';
 import { VariantSummarySearchService } from '../services/variant-summary-search-service';
 import { SearchOption } from './search-option';
 import { SearchQuery } from './search-query';
@@ -10,9 +11,11 @@ import { Region } from './region';
 
 export class GeneAutocomplete extends GenericAutocompleteResult<Gene> {
 
-    search(vsal: VariantSearchService, options: SearchOption[]): Promise<Variant[]> {
+    search(ss: SampleSearch, vsal: VariantSearchService, options: SearchOption[]): Promise<Variant[]> {
         return this.autocompleteService.getDetails(this).toPromise().then((gene: Gene) => {
-            return vsal.getVariants(new SearchQuery(gene.chromosome, gene.start, gene.end, options));
+            return ss.getSamples(new SearchQuery(gene.chromosome, gene.start, gene.end, options)).then(() => {
+                return vsal.getVariants(new SearchQuery(gene.chromosome, gene.start, gene.end, options))
+            });
         }).catch(e => e);
     }
 

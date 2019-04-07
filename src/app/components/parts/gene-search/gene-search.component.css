@@ -1,0 +1,8 @@
+::ng-deep .mat-chip { 
+    margin: 3px 8px !important;
+}
+
+.search-button {
+    margin: 10px 20% 10px 20%;
+    min-width: 110px;
+}

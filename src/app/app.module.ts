@@ -112,11 +112,13 @@ import { GenomeBrowserSummaryComponent } from './components/parts/genome-browser
 import { GenomeBrowserSummaryResizableComponent } from './components/parts/genome-browser-summary-resizable/genome-browser-summary-resizable.component';
 import { OverlayMenuSummaryComponent } from './components/parts/overlay-menu-summary/overlay-menu-summary.component';
 import { FilterAutoSummaryComponent } from './components/parts/filter-auto-summary/filter-auto-summary.component';
-import { GeneListComponent } from './components/parts/gene-list/gene-list.component';
 import { SampleSearch } from './services/sample-search.service';
 import { ClinicalComponent } from './components/pages/clinical/clinical.component';
 import { ClinicalFilteringComponent } from './components/parts/clinical-filtering/clinical-filtering.component';
 import { CohortAuthorsComponent } from './components/pages/cohort-authors/cohort-authors.component';
+import { GeneSearchComponent } from './components/parts/gene-search/gene-search.component';
+import { SearchBarClinicalComponent } from './components/parts/search-bar-clinical/search-bar-clinical.component';
+import { GenePanelsComponent } from './components/parts/gene-panels/gene-panels.component';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -221,10 +223,12 @@ export class RavenErrorHandler implements ErrorHandler {
         GenomeBrowserSummaryResizableComponent,
         OverlayMenuSummaryComponent,
         FilterAutoSummaryComponent,
-        GeneListComponent,
         ClinicalComponent,
         ClinicalFilteringComponent,
         CohortAuthorsComponent,
+        GeneSearchComponent,
+        SearchBarClinicalComponent,
+        GenePanelsComponent,
     ],
     entryComponents: [
         SignUpComponent,

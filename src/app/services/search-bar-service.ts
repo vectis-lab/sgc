@@ -62,14 +62,18 @@ export class SearchBarService {
             return Promise.reject(e);
         };
 
-        return this.searchAutocompleteServices(query).take(1).toPromise().then(v => {
+        const arrayOfQueries = query.split();
+
+        const queries = arrayOfQueries.map(q => this.searchAutocompleteServices(q).take(1).toPromise())
+
+        return <any>Promise.all(queries).then(v => {
             if (v.length <= 0) {
                 return handleAutocompleteError('Failed to find any results for: ' + query);
             }
             if(this.checkErrorRegion(query)){
                 return handleAutocompleteError('Start position cannot be greater than end');
             }
-            const bestMatch = v[0];
+            const bestMatch = v[0][0];
             if (bestMatch.match(query)) {
                 return bestMatch;
             } else {
