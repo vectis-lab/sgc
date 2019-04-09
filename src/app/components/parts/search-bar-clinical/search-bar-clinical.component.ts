@@ -80,9 +80,9 @@ export class SearchBarClinicalComponent implements OnInit, OnDestroy {
           this.selectedIndex++;
       } else if (event.code === 'Enter' && this.autocompleteResults.length > 0) {
           this.search(event, searchBox, this.autocompleteResults[this.selectedIndex]);
+          this.clearInput();
       } else if (event.code === 'Enter') {
-          this.searchTerms.next(''); // clear any pending results
-          this.action(searchBox.value);
+          //Should display error message
       }
   }
 
@@ -119,5 +119,9 @@ export class SearchBarClinicalComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
       this.subscriptions.forEach((s) => s.unsubscribe());
+  }
+
+  clearInput() {
+      this.inputValue = ""; 
   }
 }
