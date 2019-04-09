@@ -26,6 +26,9 @@ export class SearchBarService {
     private startGreaterThanEndSource = new BehaviorSubject<boolean>(false);
     startGreaterThanEnd = this.startGreaterThanEndSource.asObservable();
 
+    private genePanelsSource = new BehaviorSubject<string>('');
+    genePanels = this.genePanelsSource.asObservable();
+
     constructor(private geneService: ElasticGeneSearch,
                 private regionService: RegionService,
                 private positionService: PositionService,
@@ -80,9 +83,9 @@ export class SearchBarService {
 
     }
 
-    searchWithMultipleParams(params: Params): Promise<VariantAutocompleteResult<any>[]> {
+    searchWithMultipleParams(params: Params, genePanels: string): Promise<VariantAutocompleteResult<any>[]> {
         const query = params['query'];
-        if (!query) {
+        if (!query && genePanels.length === 0) {
             return <any>Promise.resolve();
         }
         this.parseOptions(params);
@@ -99,7 +102,16 @@ export class SearchBarService {
             return Promise.reject(e);
         };
 
-        const arrayOfQueries = query.split(',');
+        let arrayOfQueries = [];
+
+        if(query.length){
+            arrayOfQueries = query.split(',');
+        }
+
+        if(genePanels.length){
+            const genePanelsQueries = genePanels.split(',');
+            arrayOfQueries = arrayOfQueries.concat(genePanelsQueries);
+        }
 
         const queries = arrayOfQueries.map(q => this.searchAutocompleteServices(q).take(1).toPromise())
 
@@ -122,6 +134,10 @@ export class SearchBarService {
 
     setTempCohort(selectedCohort){
         this.tempCohortSource.next(selectedCohort);
+    }
+
+    setGenePanels(genePanels){
+        this.genePanelsSource.next(genePanels);
     }
 
     checkErrorRegion(query){

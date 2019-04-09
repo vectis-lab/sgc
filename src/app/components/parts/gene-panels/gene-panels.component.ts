@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MITOCHONDRIAL_DISORDERS } from '../../../shared/genePanels';
+import { SearchBarService } from '../../../services/search-bar-service';
 
 @Component({
   selector: 'app-gene-panels',
@@ -8,9 +9,9 @@ import { MITOCHONDRIAL_DISORDERS } from '../../../shared/genePanels';
 })
 export class GenePanelsComponent implements OnInit {
   options: object[] = [{label: 'Mitochondrial Disorders', value: "MITOCHONDRIAL_DISORDERS"}];
-  genesValue: string;
+  private genesValue: string;
 
-  constructor() { }
+  constructor(public searchBarService: SearchBarService) { }
 
   ngOnInit() {
   }
@@ -18,8 +19,10 @@ export class GenePanelsComponent implements OnInit {
   onChange(event) {
     if(event.value === "MITOCHONDRIAL_DISORDERS"){
       this.genesValue = MITOCHONDRIAL_DISORDERS.join();
+      this.searchBarService.setGenePanels(this.genesValue);
     }else{
       this.genesValue = "";
+      this.searchBarService.setGenePanels('');
     }
     
   }

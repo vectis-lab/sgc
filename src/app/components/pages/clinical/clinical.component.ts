@@ -25,6 +25,7 @@ export class ClinicalComponent implements OnInit, OnDestroy {
   sb: MatSnackBarRef<SnackbarDemoComponent> = null;
   private mediaMatcher: MediaQueryList = matchMedia(`(max-width: ${SMALL_WIDTH}px)`);
   selectedOption: string;
+  private genePanels: string = '';
 
   constructor(public searchBarService: SearchBarService,
               public auth: Auth,
@@ -41,17 +42,21 @@ export class ClinicalComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
       this.selectedOption = this.searchBarService.options[0].getValue();
 
-      this.auth.getSavedSearches().subscribe(savedSearches => {
+      this.subscriptions.push(this.auth.getSavedSearches().subscribe(savedSearches => {
           this.clinicalFilteringService.initSaveSearches(savedSearches);
-      })
+      }))
 
-      this.auth.getUserPermissions().subscribe(permissions => {
+      this.subscriptions.push(this.auth.getUserPermissions().subscribe(permissions => {
           this.auth.setUserPermissions(permissions);
-      })
+      }))
+
+      this.subscriptions.push(this.searchBarService.genePanels.subscribe(genes => {
+        this.genePanels = genes;
+      }))
       }
 
   parseParams(params: Params) {
-      if (!params['query']) {
+      if (!params['query'] && !this.genePanels) {
           return;
       }
       if (params['demo']) {
@@ -68,7 +73,7 @@ export class ClinicalComponent implements OnInit, OnDestroy {
       this.error = '';
       this.autocomplete = null;
       this.searching = true;
-      this.searchBarService.searchWithMultipleParams(params).then((v) => {
+      this.searchBarService.searchWithMultipleParams(params, this.genePanels).then((v) => {
           this.autocomplete = v;
           this.cd.detectChanges();
       }).catch(() => {
