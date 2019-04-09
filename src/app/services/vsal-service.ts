@@ -107,6 +107,8 @@ export class VsalService {
         const headers = new HttpHeaders()
             .append('Content-Type', 'application/json')
             .append('Accept', '*/*');
+        //later will change it to post
+        //this.http.post(environment.vsalUrl2, urlParams, {headers: headers})
         return this.http.get(environment.vsalUrl2, {params: urlParams, headers: headers})
             .timeout(VSAL_TIMEOUT)
             .map((data) => {
