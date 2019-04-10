@@ -1,10 +1,10 @@
 <mat-form-field>
   <mat-label>Panels</mat-label>
-  <mat-select (selectionChange)="onChange($event)">
+  <mat-select [(ngModel)]="selectedGenePanel" (selectionChange)="onChange($event)">
     <mat-option>None</mat-option>
     <mat-option *ngFor="let option of options" [value]='option.value'>{{option.label}}</mat-option>
   </mat-select>
 </mat-form-field>
 <mat-form-field>
-  <textarea [(ngModel)]="genesValue" matInput class='genes-text' rows='6' placeholder="List of genes from panels" disabled></textarea>
+  <textarea [(ngModel)]="genePanelsValue" matInput class='genes-text' rows='6' placeholder="List of genes from panels" disabled></textarea>
 </mat-form-field>

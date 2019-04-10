@@ -101,6 +101,11 @@ export class ClinicalComponent implements OnInit, OnDestroy {
       return this.mediaMatcher.matches;
   }
 
+  clearFilter() {
+      this.searchBarService.setGeneList([]);
+      this.searchBarService.setGenePanels('');
+  }
+
   private dismissSnackBar() {
       if (this.sb) {
           this.sbSub.unsubscribe();

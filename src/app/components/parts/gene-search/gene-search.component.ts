@@ -19,6 +19,7 @@ export class GeneSearchComponent implements AfterViewInit, OnInit {
     removable = true;
     addOnBlur = true;
     readonly separatorKeysCodes: number[] = [ENTER, COMMA];
+    private subscription: Subscription[] = [];
     queries: string[] = [];
 
     constructor(public router: Router,
@@ -28,11 +29,15 @@ export class GeneSearchComponent implements AfterViewInit, OnInit {
     }
 
     ngOnInit(): void {
-      this.route.params.subscribe(p => {
+      this.subscription.push(this.route.params.subscribe(p => {
         if (p['query']) {
           this.queries = this.searchBarService.query.split(',');
         }
-    });
+      }));
+
+      this.subscription.push(this.searchBarService.geneList.subscribe(queries => {
+        this.queries = queries;
+      }))
     }
 
     ngAfterViewInit(): void {
@@ -42,6 +47,7 @@ export class GeneSearchComponent implements AfterViewInit, OnInit {
     addGene = (query) =>  {
       if(this.queries.indexOf(query) === -1){
         this.queries.push(query.toUpperCase());
+        this.searchBarService.setGeneList(this.queries);
       }
     }
 
@@ -59,6 +65,7 @@ export class GeneSearchComponent implements AfterViewInit, OnInit {
       if ((value || '').trim()) {
         if(this.queries.indexOf(value) === -1){
           this.queries.push(value.toUpperCase());
+          this.searchBarService.setGeneList(this.queries);
         }
       }
       if (input) {
@@ -71,6 +78,7 @@ export class GeneSearchComponent implements AfterViewInit, OnInit {
   
       if (index >= 0) {
         this.queries.splice(index, 1);
+        this.searchBarService.setGeneList(this.queries);
       }
     }
 
@@ -84,6 +92,10 @@ export class GeneSearchComponent implements AfterViewInit, OnInit {
           this.queries.push(value.trim());
         }
       })
+    }
+
+    clear() {
+      this.searchBarService.setGeneList([]);
     }
 
 }
