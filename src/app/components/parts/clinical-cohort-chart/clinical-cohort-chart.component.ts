@@ -95,6 +95,7 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
             .title(() => this.data.name);
         if(Array.isArray(this.data.initFilter)){
             this.chart.filter([this.data.initFilter]);
+            this.filter = this.chart.filters();
             this.cs.changes.next();
             this.ClinicalFilterService.setFilters(this.data.name, this.chart.filters());
             this.chart.renderGroup();
@@ -123,6 +124,7 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
 
         if(Array.isArray(this.data.initFilter)){
             this.chart.filter([this.data.initFilter]);
+            this.filter = this.chart.filters();
             this.cs.changes.next();
             this.ClinicalFilterService.setFilters(this.data.name, this.chart.filters());
             this.chart.renderGroup();
@@ -152,6 +154,7 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
 
         if(Array.isArray(this.data.initFilter)){
             this.chart.filter([this.data.initFilter]);
+            this.filter = this.chart.filters();
             this.cs.changes.next();
             this.ClinicalFilterService.setFilters(this.data.name, this.chart.filters());
             this.chart.renderGroup();
