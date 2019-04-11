@@ -117,7 +117,9 @@ export class SearchBarService {
         }
 
         let genes;
-        genes = GenePanels[panel].join();
+        if(GenePanels[panel]){
+            genes = GenePanels[panel].join();
+        }
 
         if(panel.length){
             const genePanelsQueries = genes.split(',');
