@@ -25,7 +25,7 @@ export class ClinicalComponent implements OnInit, OnDestroy {
   sb: MatSnackBarRef<SnackbarDemoComponent> = null;
   private mediaMatcher: MediaQueryList = matchMedia(`(max-width: ${SMALL_WIDTH}px)`);
   selectedOption: string;
-  private genePanels: string = '';
+  private geneList: string = '';
 
   constructor(public searchBarService: SearchBarService,
               public auth: Auth,
@@ -50,13 +50,13 @@ export class ClinicalComponent implements OnInit, OnDestroy {
           this.auth.setUserPermissions(permissions);
       }))
 
-      this.subscriptions.push(this.searchBarService.genePanels.subscribe(genes => {
-        this.genePanels = genes;
+      this.subscriptions.push(this.searchBarService.geneList.subscribe(genes => {
+        this.geneList = genes;
       }))
       }
 
   parseParams(params: Params) {
-      if (!params['query'] && !this.genePanels) {
+      if (!params['query'] && !this.geneList) {
           return;
       }
       if (params['demo']) {
@@ -73,19 +73,12 @@ export class ClinicalComponent implements OnInit, OnDestroy {
       this.error = '';
       this.autocomplete = null;
       this.searching = true;
-      this.searchBarService.searchWithMultipleParams(params, this.genePanels).then((v) => {
+      this.searchBarService.searchWithMultipleParams(params).then((v) => {
           this.autocomplete = v;
           this.cd.detectChanges();
       }).catch(() => {
       });
   }
-
-    searchClinicalFiltering = (q) => {
-        this.searchBarService.query = q;
-        const obj = {query: q, timestamp: Date.now()};
-        this.clinicalFilteringService.clearFilters();
-        this.router.navigate(['/clinical/results', obj]);
-    };
 
   ngOnDestroy() {
       this.subscriptions.forEach((s => s.unsubscribe()));
@@ -99,11 +92,6 @@ export class ClinicalComponent implements OnInit, OnDestroy {
 
   isSmallScreen(): boolean {
       return this.mediaMatcher.matches;
-  }
-
-  clearFilter() {
-      this.searchBarService.setGeneList([]);
-      this.searchBarService.setGenePanels('');
   }
 
   private dismissSnackBar() {

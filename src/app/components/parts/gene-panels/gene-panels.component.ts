@@ -1,7 +1,8 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { MITOCHONDRIAL_DISORDERS, MITOCHONDRIAL_LIVER_DISEASE } from '../../../shared/genePanels';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
+import * as GenePanels from '../../../shared/genePanels';
 import { SearchBarService } from '../../../services/search-bar-service';
 import { Subscription } from 'rxjs/Subscription';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-gene-panels',
@@ -13,34 +14,33 @@ export class GenePanelsComponent implements OnInit, OnDestroy {
     label: 'Mitochondrial disorders', value: "MITOCHONDRIAL_DISORDERS"},
     {label: 'Mitochondrial liver disease', value: "MITOCHONDRIAL_LIVER_DISEASE"}
   ];
-  private selectedGenePanel: string;
-  private genePanelsValue: string;
+  @Input() selectedGenePanel: string;
+  private geneList: string;
   private subscriptions: Subscription[] = [];
 
-  constructor(public searchBarService: SearchBarService) { }
+  constructor(public searchBarService: SearchBarService,private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.subscriptions.push(this.searchBarService.genePanels.subscribe(panel => {
-      this.selectedGenePanel = panel;
-      this.setGenePanelValue(panel);
-    }))
+    this.subscriptions.push(this.route.params.subscribe(p => {
+      if (p['panel']) {
+        this.selectedGenePanel = this.searchBarService.panel;
+        this.setGenePanelValue(this.selectedGenePanel);
+      }
+    }));
+
+    this.subscriptions.push(this.searchBarService.geneList.subscribe(genes => {
+      this.geneList = genes;
+    }));
   }
 
   onChange(event) {
-    this.searchBarService.setGenePanels(event.value);
     this.setGenePanelValue(event.value);
+    this.searchBarService.panel = event.value;
   }
 
   setGenePanelValue(value) {
-    if(value === 'MITOCHONDRIAL_DISORDERS'){
-      this.genePanelsValue = MITOCHONDRIAL_DISORDERS.join();
-    }   
-    else if(value === 'MITOCHONDRIAL_LIVER_DISEASE'){
-      this.genePanelsValue = MITOCHONDRIAL_LIVER_DISEASE.join();
-    }
-    else{
-      this.genePanelsValue = '';
-    }
+    this.geneList = GenePanels[value];
+    this.searchBarService.setGeneList(this.geneList);
   }
 
   ngOnDestroy() {

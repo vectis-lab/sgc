@@ -1,4 +1,5 @@
 <button mat-stroked-button (click)="search()" class="search-button">Search</button>
+<i (click)='clearFilter()' class="option material-icons right">refresh</i>
 <app-search-option *ngFor="let option of searchBarService.options" [option]="option"></app-search-option>
 <app-search-bar-clinical [options]="{autofocus: false}" [action]='addGene'></app-search-bar-clinical>
 <mat-form-field class="chip-list">
@@ -16,3 +17,4 @@
              (paste)="paste($event)">
     </mat-chip-list>
   </mat-form-field>
+<app-gene-panels [selectedGenePanel]='searchBarService.panel'></app-gene-panels>

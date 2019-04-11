@@ -3,9 +3,7 @@
     <div *ngIf="auth.authenticated()">
         <mat-sidenav-container>
             <mat-sidenav #sidenav mode="side" fixedInViewport="true" fixedTopGap="71" [opened]="!isSmallScreen()" disableClose="true">
-                <i (click)='clearFilter()' class="option material-icons right">refresh</i>
                 <app-gene-search [autocomplete]="autocomplete"></app-gene-search>
-                <app-gene-panels></app-gene-panels>
                 <mat-divider></mat-divider>
                 <app-saved-searches *ngIf="!searchBarService.autocompleteError && !error && autocomplete != null"></app-saved-searches>
             </mat-sidenav>

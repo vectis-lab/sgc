@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, Input, OnInit } from '@angular/core';
+import { Component, AfterViewInit, Input, OnInit, OnDestroy } from '@angular/core';
 import { SearchBarService } from '../../../services/search-bar-service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
@@ -12,7 +12,7 @@ import { GenericAutocompleteResult } from '../../../model/autocomplete-result';
     templateUrl: './gene-search.component.html',
     styleUrls: ['./gene-search.component.css']
 })
-export class GeneSearchComponent implements AfterViewInit, OnInit {
+export class GeneSearchComponent implements AfterViewInit, OnInit, OnDestroy {
     @Input() autocomplete: GenericAutocompleteResult<any>[];
     visible = true;
     selectable = true;
@@ -34,10 +34,6 @@ export class GeneSearchComponent implements AfterViewInit, OnInit {
           this.queries = this.searchBarService.query.split(',');
         }
       }));
-
-      this.subscription.push(this.searchBarService.geneList.subscribe(queries => {
-        this.queries = queries;
-      }))
     }
 
     ngAfterViewInit(): void {
@@ -47,13 +43,12 @@ export class GeneSearchComponent implements AfterViewInit, OnInit {
     addGene = (query) =>  {
       if(this.queries.indexOf(query) === -1){
         this.queries.push(query.toUpperCase());
-        this.searchBarService.setGeneList(this.queries);
       }
     }
 
     search() {
       this.searchBarService.query = this.queries.join();
-      const obj = {query: this.searchBarService.query, timestamp: Date.now()};
+      const obj = {query: this.searchBarService.query, panel:this.searchBarService.panel, timestamp: Date.now()};
       this.clinicalFilteringService.clearFilters();
       this.router.navigate(['/clinical/results', obj]);
     }
@@ -65,7 +60,6 @@ export class GeneSearchComponent implements AfterViewInit, OnInit {
       if ((value || '').trim()) {
         if(this.queries.indexOf(value) === -1){
           this.queries.push(value.toUpperCase());
-          this.searchBarService.setGeneList(this.queries);
         }
       }
       if (input) {
@@ -78,7 +72,6 @@ export class GeneSearchComponent implements AfterViewInit, OnInit {
   
       if (index >= 0) {
         this.queries.splice(index, 1);
-        this.searchBarService.setGeneList(this.queries);
       }
     }
 
@@ -94,8 +87,15 @@ export class GeneSearchComponent implements AfterViewInit, OnInit {
       })
     }
 
-    clear() {
-      this.searchBarService.setGeneList([]);
+    clearFilter() {
+      this.queries = [];
+      this.searchBarService.query = '';
+      this.searchBarService.panel = '';
+      this.searchBarService.setGeneList('');
+    }
+
+    ngOnDestroy() {
+      this.subscription.forEach(s => {s.unsubscribe()});
     }
 
 }

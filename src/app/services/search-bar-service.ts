@@ -9,10 +9,12 @@ import { GenericAutocompleteResult, VariantAutocompleteResult } from '../model/a
 import { ElasticGeneSearch } from './autocomplete/elastic-gene-search-service';
 import { PositionService } from './autocomplete/position-service';
 import { of, Observable, combineLatest } from "rxjs";
+import * as GenePanels from '../shared/genePanels';
 
 @Injectable()
 export class SearchBarService {
     query = '';
+    panel='';
     autocompleteServices: AutocompleteService<any>[] = [];
     options: SearchOption[];
     autocompleteError = '';
@@ -26,10 +28,7 @@ export class SearchBarService {
     private startGreaterThanEndSource = new BehaviorSubject<boolean>(false);
     startGreaterThanEnd = this.startGreaterThanEndSource.asObservable();
 
-    private genePanelsSource = new BehaviorSubject<string>('');
-    genePanels = this.genePanelsSource.asObservable();
-
-    private geneListSource = new BehaviorSubject<string[]>([]);
+    private geneListSource = new BehaviorSubject<string>('');
     geneList = this.geneListSource.asObservable();
 
     constructor(private geneService: ElasticGeneSearch,
@@ -86,15 +85,21 @@ export class SearchBarService {
 
     }
 
-    searchWithMultipleParams(params: Params, genePanelsQuery: string): Promise<VariantAutocompleteResult<any>[]> {
+    searchWithMultipleParams(params: Params): Promise<VariantAutocompleteResult<any>[]> {
         const query = params['query'];
-        if (!query && genePanelsQuery.length === 0) {
+        const panel = params['panel'];
+
+        if (!query && !panel) {
             return <any>Promise.resolve();
         }
         this.parseOptions(params);
 
         if (!this.query) {
             this.query = query;
+        }
+
+        if (!this.panel) {
+            this.panel = panel;
         }
 
         this.searchedEvent.next();
@@ -111,8 +116,11 @@ export class SearchBarService {
             arrayOfQueries = query.split(',');
         }
 
-        if(genePanelsQuery.length){
-            const genePanelsQueries = genePanelsQuery.split(',');
+        let genes;
+        genes = GenePanels[panel].join();
+
+        if(panel.length){
+            const genePanelsQueries = genes.split(',');
             arrayOfQueries = arrayOfQueries.concat(genePanelsQueries);
         }
 
@@ -137,10 +145,6 @@ export class SearchBarService {
 
     setTempCohort(selectedCohort){
         this.tempCohortSource.next(selectedCohort);
-    }
-
-    setGenePanels(genePanels){
-        this.genePanelsSource.next(genePanels);
     }
 
     setGeneList(value){
