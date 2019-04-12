@@ -18,15 +18,13 @@ export class GenePanelsComponent implements OnInit, OnDestroy {
   private geneList: string;
   private subscriptions: Subscription[] = [];
 
-  constructor(public searchBarService: SearchBarService,private route: ActivatedRoute) { }
+  constructor(public searchBarService: SearchBarService,
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.subscriptions.push(this.route.params.subscribe(p => {
-      if (p['panel']) {
-        this.selectedGenePanel = this.searchBarService.panel;
-        this.setGenePanelValue(this.selectedGenePanel);
-      }
-    }));
+    if(this.selectedGenePanel){
+      this.setGenePanelValue(this.selectedGenePanel);
+    }
 
     this.subscriptions.push(this.searchBarService.geneList.subscribe(genes => {
       this.geneList = genes;

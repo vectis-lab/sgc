@@ -33,6 +33,9 @@ export class GeneSearchComponent implements AfterViewInit, OnInit, OnDestroy {
         if (p['query']) {
           this.queries = this.searchBarService.query.split(',');
         }
+        if(p['panel']){
+          this.searchBarService.panel = p['panel'];
+        }
       }));
     }
 
