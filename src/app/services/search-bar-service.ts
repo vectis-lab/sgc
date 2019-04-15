@@ -92,7 +92,6 @@ export class SearchBarService {
         return this.searchAutocompleteServices(query).take(1).toPromise().then(v => {
             const bestMatch = v[0];
             if(v[0]){
-                console.log(query);
                 if (this.checkErrorRegion(query)) {
                     return false;
                 } else if(bestMatch.match(query)){

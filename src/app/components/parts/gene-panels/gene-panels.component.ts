@@ -38,7 +38,12 @@ export class GenePanelsComponent implements OnInit, OnDestroy {
 
   setGenePanelValue(value) {
     this.geneList = GenePanels[value];
-    this.searchBarService.setGeneList(this.geneList);
+    if(this.geneList !== undefined){
+      this.searchBarService.setGeneList(this.geneList);
+    }else{
+      this.searchBarService.setGeneList('');
+    }
+    
   }
 
   ngOnDestroy() {
