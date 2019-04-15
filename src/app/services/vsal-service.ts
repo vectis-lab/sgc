@@ -119,8 +119,8 @@ export class VsalService {
                 const vs = new SampleRequest(data['sampleIDs']);
                 vs.total = data['total'];
                 return vs;
-            },
-            error => {
+            })
+            .catch(error => {
                 Raven.captureMessage("VSAL ERROR: " + JSON.stringify(error));
                 return of(new SampleRequest([], constants.GENERIC_SERVICE_ERROR_MESSAGE));
             })

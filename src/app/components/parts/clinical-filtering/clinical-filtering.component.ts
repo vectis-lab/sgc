@@ -64,6 +64,10 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
             this.errorEvent.emit(e);
         }));
 
+        this.subscriptions.push(this.sampleSearch.errors.subscribe((e) => {
+            this.errorEvent.emit(e);
+        }));
+
         this.loadingVariants = true;
 
         const allQueries = this.autocomplete.map(ac => ac.getSearchQueries(this.searchBarService.options))
@@ -79,6 +83,10 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
                     this.loadingVariants = false;
                     this.errorEvent.emit(e);
                 });
+            })
+            .catch((e) => {
+                this.loadingVariants = false;
+                this.errorEvent.emit(e);
             });
         })
 
