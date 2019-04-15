@@ -92,7 +92,6 @@ export class SearchBarClinicalComponent implements OnInit, OnDestroy {
 
   searchAutocomplete(query: string) {
       this.loading = true;
-      this.searchBarService.autocompleteError = '';
       this.searchTerms.next(query);
   }
 

@@ -5,7 +5,7 @@ import { MAXIMUM_NUMBER_OF_VARIANTS } from '../../../services/cttv-service';
 import { VariantSearchService } from '../../../services/variant-search-service';
 import { SampleSearch } from '../../../services/sample-search.service';
 import { Subscription } from 'rxjs/Subscription';
-import { SearchBarService } from '../../../services/search-bar-service';
+import { SearchBarService, QUERY_LIST_ERROR } from '../../../services/search-bar-service';
 import { VariantAutocompleteResult } from '../../../model/autocomplete-result';
 import { SearchQuery } from '../../../model/search-query';
 import { ActivatedRoute, Router } from '@angular/router';

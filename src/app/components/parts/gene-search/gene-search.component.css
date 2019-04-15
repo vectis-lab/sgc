@@ -12,3 +12,7 @@
     margin: 10px 20% 10px 20%;
     min-width: 110px;
 }
+
+.chip-red{
+    background-color: #ff9797;
+}

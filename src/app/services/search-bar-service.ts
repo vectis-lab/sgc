@@ -10,6 +10,9 @@ import { ElasticGeneSearch } from './autocomplete/elastic-gene-search-service';
 import { PositionService } from './autocomplete/position-service';
 import { of, Observable, combineLatest } from "rxjs";
 import * as GenePanels from '../shared/genePanels';
+import { Term } from '../model/term';
+
+export const QUERY_LIST_ERROR = "You query is incorrect. Please check your query and try again"
 
 @Injectable()
 export class SearchBarService {
@@ -85,6 +88,27 @@ export class SearchBarService {
 
     }
 
+    verifyQuery(query: string): Promise<boolean>{
+        return this.searchAutocompleteServices(query).take(1).toPromise().then(v => {
+            const bestMatch = v[0];
+            if(v[0]){
+                console.log(query);
+                if (this.checkErrorRegion(query)) {
+                    return false;
+                } else if(bestMatch.match(query)){
+                    return true;
+                }else {
+                    return false;
+                }
+            }else{
+                return false;
+            }
+            
+
+        });
+
+    }
+
     searchWithMultipleParams(params: Params): Promise<VariantAutocompleteResult<any>[]> {
         const query = params['query'];
         const panel = params['panel'];
@@ -129,12 +153,6 @@ export class SearchBarService {
         const queries = arrayOfQueries.map(q => this.searchAutocompleteServices(q).take(1).toPromise())
 
         return <any>Promise.all(queries).then(v => {
-            if (v.length <= 0) {
-                return handleAutocompleteError('Failed to find any results for: ' + query);
-            }
-            if(this.checkErrorRegion(query)){
-                return handleAutocompleteError('Start position cannot be greater than end');
-            }
             const bestMatches = v.map(q => q[0]);
             return bestMatches;
         });
