@@ -16,3 +16,7 @@
 .chip-red{
     background-color: #ff9797;
 }
+
+.reset{
+    cursor: pointer;
+}

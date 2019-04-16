@@ -12,7 +12,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { of, Observable } from "rxjs";
 
 export const VSAL_VARIANT_LIMIT = 10000;
-export const VSAL_TIMEOUT = 60000;
+export const VSAL_TIMEOUT = 300000;
 
 @Injectable()
 export class VsalService {
@@ -96,18 +96,26 @@ export class VsalService {
             .append('selectSamplesByGT', 'true')
             .append('positionStart', start)
             .append('positionEnd', end)
-            .append('returnAnnotations', 'true')
             .append('jwt', localStorage.getItem('idToken'));
+
+        /*let objParams = {
+            chromosome: chromosome,
+            dataset: 'mgrb',
+            selectSamplesByGT: 'true',
+            positionStart: start,
+            positionEnd: end,
+            jwt: localStorage.getItem('idToken')
+        }*/
 
         query[0].options.forEach(o => {
             if (o.key) {
-                urlParams = urlParams.append(o.key, o.getValue());
+                urlParams = urlParams.append(o.key, o.getValue())
             }
         });
+
         const headers = new HttpHeaders()
             .append('Content-Type', 'application/json')
             .append('Accept', '*/*');
-        //later will change it to post
         //this.http.post(environment.vsalUrl2, urlParams, {headers: headers})
         return this.http.get(environment.vsalUrl2, {params: urlParams, headers: headers})
             .timeout(VSAL_TIMEOUT)
