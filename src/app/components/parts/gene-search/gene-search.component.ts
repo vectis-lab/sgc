@@ -96,7 +96,9 @@ export class GeneSearchComponent implements AfterViewInit, OnInit, OnDestroy {
       const terms = this.queries.map(query => query.term);
       if ((value || '').trim()) {
         if(terms.indexOf(value) === -1){
-          this.queries.push(new Term(value.toUpperCase(), false));
+          if(this.queries.map(q => q.term).indexOf(value.toUpperCase()) === -1){
+            this.queries.push(new Term(value.toUpperCase(), false));
+          }
         }
       }
 
@@ -120,7 +122,9 @@ export class GeneSearchComponent implements AfterViewInit, OnInit, OnDestroy {
       .split(/;|,|\n/)
       .forEach(value => {
         if(value.trim()){
-          this.queries.push(new Term(value.trim().toUpperCase(), false));
+          if(this.queries.map(q => q.term).indexOf(value.toUpperCase()) === -1){
+            this.queries.push(new Term(value.trim().toUpperCase(), false));
+          }
         }
       })
     }
