@@ -30,7 +30,6 @@ export class VsalService {
             .append('positionEnd', end)
             .append('limit', VSAL_VARIANT_LIMIT.toString())
             .append('skip', '0')
-            .append('returnAnnotations', 'true')
             .append('jwt', localStorage.getItem('idToken'));
 
         query[0].options.forEach(o => {
