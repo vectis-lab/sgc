@@ -18,6 +18,7 @@ import { TEMP_SAMPLES, MITO_SAMPLES, NEURO_SAMPLES } from '../../../mocks/sample
 })
 export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
     @Input() data: Chart;
+    @Input() showSampleText: boolean;
     chart: any;
     saveSearches = {};
     subscriptions: Subscription[] = [];
