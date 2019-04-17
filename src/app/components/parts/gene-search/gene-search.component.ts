@@ -79,7 +79,7 @@ export class GeneSearchComponent implements AfterViewInit, OnInit, OnDestroy {
         }
       })
 
-      if(!error){
+      if(!error && this.queries.length){
         this.searchBarService.autocompleteError = '';
         this.searchBarService.query = this.queries.map(query => query.term).join();
         const obj = {query: this.searchBarService.query, panel:this.searchBarService.panel, timestamp: Date.now()};
@@ -97,7 +97,13 @@ export class GeneSearchComponent implements AfterViewInit, OnInit, OnDestroy {
       if ((value || '').trim()) {
         if(terms.indexOf(value) === -1){
           if(this.queries.map(q => q.term).indexOf(value.toUpperCase()) === -1){
-            this.queries.push(new Term(value.toUpperCase(), false));
+            this.searchBarService.verifyQuery(value.toUpperCase()).then(flag => {
+                if(flag){
+                  this.queries.push(new Term(value.toUpperCase(), true));
+                }else{
+                  this.queries.push(new Term(value.toUpperCase(), false));
+                }
+              });      
           }
         }
       }
@@ -123,7 +129,13 @@ export class GeneSearchComponent implements AfterViewInit, OnInit, OnDestroy {
       .forEach(value => {
         if(value.trim()){
           if(this.queries.map(q => q.term).indexOf(value.toUpperCase()) === -1){
-            this.queries.push(new Term(value.trim().toUpperCase(), false));
+            this.searchBarService.verifyQuery(value.trim().toUpperCase()).then(flag => {
+              if(flag){
+                this.queries.push(new Term(value.trim().toUpperCase(), true));
+              }else{
+                this.queries.push(new Term(value.trim().toUpperCase(), false));
+              }
+            });  
           }
         }
       })
