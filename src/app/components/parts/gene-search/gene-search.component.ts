@@ -79,7 +79,7 @@ export class GeneSearchComponent implements AfterViewInit, OnInit, OnDestroy {
         }
       })
 
-      if(!error&&(this.queries || this.searchBarService.panel)){
+      if(!error&&(this.queries.length || this.searchBarService.panel)){
         this.searchBarService.autocompleteError = '';
         this.searchBarService.query = this.queries.map(query => query.term).join();
         const obj = {query: this.searchBarService.query, panel:this.searchBarService.panel, timestamp: Date.now()};
