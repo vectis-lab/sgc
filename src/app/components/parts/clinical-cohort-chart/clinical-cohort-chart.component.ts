@@ -8,7 +8,6 @@ import { ClinicalFilteringService } from '../../../services/clinical-filtering.s
 import { SampleSearch } from '../../../services/sample-search.service';
 import { SearchBarService } from '../../../services/search-bar-service';
 import { Subscription } from 'rxjs/Subscription';
-import { TEMP_SAMPLES, MITO_SAMPLES, NEURO_SAMPLES } from '../../../mocks/sample.mock'
 
 @Component({
     selector: 'app-clinical-cohort-chart',
@@ -126,7 +125,6 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
         if(Array.isArray(this.data.initFilter)){
             this.chart.filter([this.data.initFilter]);
             this.filter = this.chart.filters();
-            this.cs.changes.next();
             this.ClinicalFilterService.setFilters(this.data.name, this.chart.filters());
             this.chart.renderGroup();
         }

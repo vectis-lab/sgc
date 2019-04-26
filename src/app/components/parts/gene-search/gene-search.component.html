@@ -1,6 +1,6 @@
 <button mat-stroked-button (click)="search()" class="search-button">Search</button>
 <i (click)='clearFilter()' class="reset material-icons">refresh</i>
-<app-search-option *ngFor="let option of searchBarService.options" [option]="option"></app-search-option>
+<app-search-option [option]="searchBarService.options[0]"></app-search-option>
 <app-search-bar-clinical [options]="{autofocus: false}" [action]='addGene'></app-search-bar-clinical>
 <mat-form-field class="chip-list">
     <mat-chip-list #chipList>
