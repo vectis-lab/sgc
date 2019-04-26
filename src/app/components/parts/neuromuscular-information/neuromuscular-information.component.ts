@@ -31,6 +31,7 @@ export class NeuromuscularInformationComponent implements AfterViewInit, OnDestr
     params: any;
     subscriptions: Subscription[] = [];
     demo: boolean = false;
+    showSampleText: boolean = false;
 
     constructor(private cs: ClinapiService,
                 private cd: ChangeDetectorRef,

@@ -30,6 +30,7 @@ export class MitochondriaInformationComponent implements OnInit, AfterViewInit, 
     params: any;
     subscriptions: Subscription[] = [];
     demo: boolean = false;
+    showSampleText: boolean = false;
     /*chartOption = {
         title: {
           text: 'Test Echarts'

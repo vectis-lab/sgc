@@ -1,0 +1,6 @@
+<form>
+  <mat-form-field style="width: 100%;">
+    <textarea name="samples" matInput rows="12" style="resize: none;" [ngModel]="samples.join(', ')" (ngModelChange)="onFilter($event)"></textarea>
+  </mat-form-field>
+</form>
+<mat-progress-bar mode="query" *ngIf="loadingSamplesFilter"></mat-progress-bar>

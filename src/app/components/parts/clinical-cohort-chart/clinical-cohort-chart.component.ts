@@ -18,6 +18,7 @@ import { TEMP_SAMPLES, MITO_SAMPLES, NEURO_SAMPLES } from '../../../mocks/sample
 })
 export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
     @Input() data: Chart;
+    @Input() showSampleText: boolean;
     chart: any;
     saveSearches = {};
     subscriptions: Subscription[] = [];
@@ -184,7 +185,14 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
         return this.hs.capitalizeCamelCase(data);
     }
 
+    filterSamples(samples: string[]){
+        this.chart.filter(null);
+        this.chart.filter([samples.map(sample => sample.trim())]);
+        this.filter = this.chart.filters();
+        this.cs.changes.next();
+        this.chart.redrawGroup();
 
+    }
     ngOnDestroy(): void {
         this.subscriptions.forEach((s => s.unsubscribe()));
         dc.chartRegistry.deregister(this.chart)

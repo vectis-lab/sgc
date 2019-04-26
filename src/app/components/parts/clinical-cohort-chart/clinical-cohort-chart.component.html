@@ -8,7 +8,11 @@
           <i *ngIf="hover" (click)="hideChart()" class="option material-icons right">clear</i>
       </div>
   </div>
-  <div class="content">
-      <div [ngClass]="(scrolledRowChart)? [data.name, 'scrolled-row-chart'] : data.name"></div>
+  <div class="content" *ngIf="data.name === 'sampleId'">
+      <div [style.display]="this.showSampleText?'none':'block'" [ngClass]="(scrolledRowChart)? [data.name, 'scrolled-row-chart'] : data.name"></div>
+      <app-samples-text *ngIf="this.showSampleText" [samples]="chart.filters()" (filterSamples)="filterSamples($event)"></app-samples-text>
   </div>
+  <div class="content" *ngIf="data.name !== 'sampleId'">
+        <div [ngClass]="(scrolledRowChart)? [data.name, 'scrolled-row-chart'] : data.name"></div>
+    </div>
 </div>

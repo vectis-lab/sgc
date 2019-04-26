@@ -116,6 +116,7 @@ import { CohortAuthorsComponent } from './components/pages/cohort-authors/cohort
 import { GeneSearchComponent } from './components/parts/gene-search/gene-search.component';
 import { SearchBarClinicalComponent } from './components/parts/search-bar-clinical/search-bar-clinical.component';
 import { GenePanelsComponent } from './components/parts/gene-panels/gene-panels.component';
+import { SamplesTextComponent } from './components/parts/samples-text/samples-text.component';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -223,6 +224,7 @@ export class RavenErrorHandler implements ErrorHandler {
         GeneSearchComponent,
         SearchBarClinicalComponent,
         GenePanelsComponent,
+        SamplesTextComponent,
     ],
     entryComponents: [
         SignUpComponent,
