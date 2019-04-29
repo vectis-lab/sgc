@@ -109,7 +109,7 @@ export class VariantsTableComponent implements OnInit, OnDestroy, AfterViewInit 
     }
 
     variantUrl(v: Variant) {
-        return this.router.createUrlTree(['/search/variant', {query: Variant.displayName(v)}]).toString();
+        return this.router.createUrlTree(['/clinical/variant', {query: Variant.displayName(v)}]).toString();
     }
 
     variantVarsomeUrl(v: Variant) {

@@ -9,6 +9,7 @@ import { NswgpComponent } from './components/pages/programmes/nswgp/nswgp.compon
 import { MgrbComponent } from './components/pages/programmes/mgrb/mgrb.component';
 import { MgrbTermsComponent } from './components/pages/mgrb-terms/mgrb-terms.component';
 import { VariantComponent } from './components/pages/variant/variant.component';
+import { VariantSummaryComponent } from './components/pages/variant-summary/variant-summary.component';
 import { ErrorComponent } from './components/pages/error/error.component';
 import { ExploreComponent } from './components/pages/explore/explore.component';
 import { ClinicalComponent } from './components/pages/clinical/clinical.component';
@@ -21,7 +22,8 @@ const appRoutes: Routes = [
     { path: 'clinical/results', component: ClinicalComponent },
     { path: 'auth',  component: LoadingComponent },
     { path: 'search/results', component: SearchComponent },
-    { path: 'search/variant', component: VariantComponent },
+    { path: 'clinical/variant', component: VariantComponent },
+    { path: 'search/variant-summary', component: VariantSummaryComponent },
     { path: 'search', component: SearchComponent },
     { path: 'explore', component: ExploreComponent },
     { path: 'beacon', component: BeaconComponent },

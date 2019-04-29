@@ -117,6 +117,7 @@ import { GeneSearchComponent } from './components/parts/gene-search/gene-search.
 import { SearchBarClinicalComponent } from './components/parts/search-bar-clinical/search-bar-clinical.component';
 import { GenePanelsComponent } from './components/parts/gene-panels/gene-panels.component';
 import { SamplesTextComponent } from './components/parts/samples-text/samples-text.component';
+import { VariantSummaryComponent } from './components/pages/variant-summary/variant-summary.component';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -225,6 +226,7 @@ export class RavenErrorHandler implements ErrorHandler {
         SearchBarClinicalComponent,
         GenePanelsComponent,
         SamplesTextComponent,
+        VariantSummaryComponent,
     ],
     entryComponents: [
         SignUpComponent,
