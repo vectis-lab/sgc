@@ -144,7 +144,10 @@ export class MitochondriaInformationComponent implements OnInit, AfterViewInit, 
                     1200,
                     true,
                     sampleIdGroup,
-                    this.samples
+                    this.samples.map(sample => {
+                        const index = this.patients.findIndex(patient => patient.internalIDs === sample);
+                        return this.patients[index]['externalIDs']
+                    })
                 ),
                 new Chart(
                     'gender',

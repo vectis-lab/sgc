@@ -79,7 +79,7 @@ export class VariantComponent implements OnInit, OnDestroy {
     }
 
     private getVariant(sq: SearchQuery, reference: string, alternate: string) {
-        this.vss.getVariants([sq]).then(variants => {
+        this.vss.getVariants([sq], []).then(variants => {
             this.loading = false;
             const vf = variants.filter((v) => v.a === alternate && v.r === reference);
             if (vf.length > 1) {

@@ -31,15 +31,8 @@ export class ClinapiService implements OnDestroy {
                     .all()
                     .filter(s => (s.value > 0 && s.key !== ""))
                     .map(s => s.key);
-
-
-                if(this.samples.length){
-                    this.vss.lastQuery[0].options = [(new SearchOption('', 'samples', [], this.samples.join()))];
-                }else{
-                    this.vss.lastQuery[0].options=[]
-                }
                 
-                this.vss.getVariants(this.vss.lastQuery);
+                this.vss.getVariants(this.vss.lastQuery, this.samples.join());
             })
         );
     }
