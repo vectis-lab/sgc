@@ -8,8 +8,6 @@ import { Auth } from '../../../services/auth-service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import { Chart } from "../../../model/clinical-cohort-chart";
-import { DEV } from "../../../shared/tempConfiguration";
-import { TEMP_SAMPLES, NEURO_SAMPLES } from '../../../mocks/sample.mock'
 
 @Component({
     selector: 'app-neuromuscular-information',
@@ -21,8 +19,6 @@ import { TEMP_SAMPLES, NEURO_SAMPLES } from '../../../mocks/sample.mock'
 })
 export class NeuromuscularInformationComponent implements AfterViewInit, OnDestroy, OnInit {
     @Input() samples: string[] = [];
-    //We now use mockSamples which is just hardcoded mapping, later this will be removed
-    mockSamples: string[];
     error: any;
     denied = false;
     patients = [];
@@ -46,11 +42,6 @@ export class NeuromuscularInformationComponent implements AfterViewInit, OnDestr
     }
 
     ngOnInit() {
-        const tempSample = this.samples.filter(sample => {
-            return TEMP_SAMPLES.includes(sample);
-        })
-
-        this.mockSamples = tempSample.map(sample => NEURO_SAMPLES[TEMP_SAMPLES.indexOf(sample)])
     }
 
     ngAfterViewInit() {
@@ -68,12 +59,12 @@ export class NeuromuscularInformationComponent implements AfterViewInit, OnDestr
             this.patients = v;
             this.ndx = crossfilter(this.patients);
             this.cs.samplesGroup = this.ndx.dimension((d) => {
-                return d['Study Number'];
+                return d['internalIDs'];
             }).group();
 
             const all = this.ndx.groupAll();
 
-            var sampleIdDim = this.ndx.dimension(function(d){ return d['Study Number'];})
+            var sampleIdDim = this.ndx.dimension(function(d){ return d['externalIDs'];})
             var sampleIdGroup = sampleIdDim.group();
             
             var ageOfOnsetDim = this.ndx.dimension(function(d){ return d['Age of onset'];})
@@ -118,7 +109,7 @@ export class NeuromuscularInformationComponent implements AfterViewInit, OnDestr
                     1400,
                     true,
                     sampleIdGroup,
-                    this.mockSamples
+                    this.samples
                 ),
                 new Chart(
                     'ageOfOnset',

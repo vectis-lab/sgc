@@ -25,7 +25,7 @@ export class VsalService {
         const end = query.map(q => q.end).join();
         let urlParams = new HttpParams()
             .append('chromosome', chromosome)
-            .append('dataset', 'mgrb')
+            .append('dataset', 'mito')
             .append('positionStart', start)
             .append('positionEnd', end)
             .append('limit', VSAL_VARIANT_LIMIT.toString())
@@ -91,7 +91,7 @@ export class VsalService {
 
         let urlParams = new HttpParams()
             .append('chromosome', chromosome)
-            .append('dataset', 'mgrb')
+            .append('dataset', 'mito')
             .append('selectSamplesByGT', 'true')
             .append('positionStart', start)
             .append('positionEnd', end)

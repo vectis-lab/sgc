@@ -11,7 +11,6 @@ import { SearchQuery } from '../../../model/search-query';
 import { SearchOption } from '../../../model/search-option';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ClinicalFilteringService } from '../../../services/clinical-filtering.service';
-import { TEMP_SAMPLES } from '../../../mocks/sample.mock';
 
 @Component({
     selector: 'app-clinical-filtering',
@@ -76,7 +75,12 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
 
         Promise.all(allQueries).then((queries: SearchQuery[]) => {
             return this.sampleSearch.getSamples(queries).then((result) => {
-                queries[0].options.push((new SearchOption('', 'samples', [], result.filter(sample => TEMP_SAMPLES.includes(sample)).join())));
+                if(result.length){
+                    queries[0].options.slice(0, 1);
+                    queries[0].options.push((new SearchOption('', 'samples', [], result.join())));
+                }else{
+                    queries[0].options.slice(0, 1);
+                }
 
                 return this.searchService.getVariants(queries)
                 .then(() => {

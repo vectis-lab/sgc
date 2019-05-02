@@ -1,22 +1,23 @@
 export const FAKE_MITOCHONDRIA_DATA = [
   {
-    "Patient":"A0121001",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A0121001",
+    "Gender": "FEMALE",
+    "Condition": [
       "Increased muscle fatiguability",
       "Intellectual disability",
       "Muscle weakness",
       "Peripheral neuropathy",
       "Muscular hypotonia"
     ],
-    "Observation":{
-      "Lactate [Moles/volume] in Venous blood":"1.5-3.2"
-    }
+    "Observation": {
+      "Lactate [Moles/volume] in Venous blood": "1.5-3.2"
+    },
+    "internalIDs": "16G004037"
   },
   {
-    "Patient":"A0121002",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A0121002",
+    "Gender": "FEMALE",
+    "Condition": [
       "Arrhythmia",
       "Left ventricular noncompaction cardiomyopathy",
       "Delayed social development",
@@ -25,15 +26,16 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Delayed speech and language development",
       "Spasticity"
     ],
-    "Observation":{
-      "Alanine [Moles/volume] in Serum or Plasma":"Normal",
-      "Lactate [Moles/volume] in Venous blood":"2.8"
-    }
+    "Observation": {
+      "Alanine [Moles/volume] in Serum or Plasma": "Normal",
+      "Lactate [Moles/volume] in Venous blood": "2.8"
+    },
+    "internalIDs": "17W000223"
   },
   {
-    "Patient":"A0121003",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A0121003",
+    "Gender": "FEMALE",
+    "Condition": [
       "Delayed social development",
       "Intellectual disability",
       "Motor delay",
@@ -42,39 +44,40 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Spasticity",
       "Cortical visual impairment"
     ],
-    "Observation":{
-      "Alanine [Moles/volume] in Cerebral spinal fluid":"55",
-      "Lactate [Moles/volume] in Cerebral spinal fluid":"4.8",
-      "Alanine [Moles/volume] in Serum or Plasma":"722",
-      "Lactate [Moles/volume] in Venous blood":"2.7"
-    }
+    "Observation": {
+      "Alanine [Moles/volume] in Cerebral spinal fluid": "55",
+      "Lactate [Moles/volume] in Cerebral spinal fluid": "4.8",
+      "Alanine [Moles/volume] in Serum or Plasma": "722",
+      "Lactate [Moles/volume] in Venous blood": "2.7"
+    },
+    "internalIDs": "17W000281"
   },
   {
-    "Patient":"A0121004",
-    "Gender":"MALE",
-    "Condition":[
+    "externalIDs": "A0121004",
+    "Gender": "MALE",
+    "Condition": [
       "Dilated cardiomyopathy"
     ],
-    "Observation":{
-      "Alanine [Moles/volume] in Serum or Plasma":"Normal",
-      "Lactate [Moles/volume] in Venous blood":"0.6-4"
-    }
+    "Observation": {
+      "Alanine [Moles/volume] in Serum or Plasma": "Normal",
+      "Lactate [Moles/volume] in Venous blood": "0.6-4"
+    },
+    "internalIDs": "17W000284"
   },
   {
-    "Patient":"A0121005",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A0121005",
+    "Gender": "FEMALE",
+    "Condition": [
       "Muscle weakness",
       "Rhabdomyolysis"
     ],
-    "Observation":{
-
-    }
+    "Observation": {},
+    "internalIDs": "17W000334"
   },
   {
-    "Patient":"A0121006",
-    "Gender":"MALE",
-    "Condition":[
+    "externalIDs": "A0121006",
+    "Gender": "MALE",
+    "Condition": [
       "Sensorineural hearing impairment",
       "Delayed social development",
       "Increased muscle fatiguability",
@@ -84,35 +87,32 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Developmental regression",
       "Delayed speech and language development"
     ],
-    "Observation":{
-      "Lactate [Moles/volume] in Venous blood":"1.6"
-    }
+    "Observation": {
+      "Lactate [Moles/volume] in Venous blood": "1.6"
+    },
+    "internalIDs": "17W000354"
   },
   {
-    "Patient":"A0121007",
-    "Gender":"MALE",
-    "Condition":[
-
-    ],
-    "Observation":{
-
-    }
+    "externalIDs": "A0121007",
+    "Gender": "MALE",
+    "Condition": [],
+    "Observation": {},
+    "internalIDs": "17W000597"
   },
   {
-    "Patient":"A0121008",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A0121008",
+    "Gender": "FEMALE",
+    "Condition": [
       "Muscle weakness",
       "Peripheral neuropathy"
     ],
-    "Observation":{
-
-    }
+    "Observation": {},
+    "internalIDs": "17W000672"
   },
   {
-    "Patient":"A0121009",
-    "Gender":"MALE",
-    "Condition":[
+    "externalIDs": "A0121009",
+    "Gender": "MALE",
+    "Condition": [
       "Sensorineural hearing impairment",
       "Delayed social development",
       "Motor delay",
@@ -120,39 +120,38 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Muscular hypotonia",
       "Spasticity"
     ],
-    "Observation":{
-      "Alanine [Moles/volume] in Cerebral spinal fluid":"Normal",
-      "Lactate [Moles/volume] in Cerebral spinal fluid":"1",
-      "Alanine [Moles/volume] in Serum or Plasma":"Normal",
-      "Lactate [Moles/volume] in Venous blood":"1.2"
-    }
+    "Observation": {
+      "Alanine [Moles/volume] in Cerebral spinal fluid": "Normal",
+      "Lactate [Moles/volume] in Cerebral spinal fluid": "1",
+      "Alanine [Moles/volume] in Serum or Plasma": "Normal",
+      "Lactate [Moles/volume] in Venous blood": "1.2"
+    },
+    "internalIDs": "17W000742"
   },
   {
-    "Patient":"A0121010",
-    "Gender":"MALE",
-    "Condition":[
+    "externalIDs": "A0121010",
+    "Gender": "MALE",
+    "Condition": [
       "Intellectual disability",
       "Motor delay",
       "Developmental regression"
     ],
-    "Observation":{
-      "Lactate [Moles/volume] in Cerebral spinal fluid":"3.2"
-    }
+    "Observation": {
+      "Lactate [Moles/volume] in Cerebral spinal fluid": "3.2"
+    },
+    "internalIDs": "17W000831"
   },
   {
-    "Patient":"A0121011",
-    "Gender":"MALE",
-    "Condition":[
-
-    ],
-    "Observation":{
-
-    }
+    "externalIDs": "A0121011",
+    "Gender": "MALE",
+    "Condition": [],
+    "Observation": {},
+    "internalIDs": "17W000873"
   },
   {
-    "Patient":"A0121012",
-    "Gender":"MALE",
-    "Condition":[
+    "externalIDs": "A0121012",
+    "Gender": "MALE",
+    "Condition": [
       "Arrhythmia",
       "Sensorineural hearing impairment",
       "Delayed social development",
@@ -163,27 +162,27 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Spasticity",
       "Cataract"
     ],
-    "Observation":{
-      "Lactate [Moles/volume] in Venous blood":"2.3"
-    }
+    "Observation": {
+      "Lactate [Moles/volume] in Venous blood": "2.3"
+    },
+    "internalIDs": "17W000934"
   },
   {
-    "Patient":"A0121013",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A0121013",
+    "Gender": "FEMALE",
+    "Condition": [
       "Delayed social development",
       "Intellectual disability",
       "Motor delay",
       "Delayed speech and language development"
     ],
-    "Observation":{
-
-    }
+    "Observation": {},
+    "internalIDs": "17W000990"
   },
   {
-    "Patient":"A0121014",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A0121014",
+    "Gender": "FEMALE",
+    "Condition": [
       "Truncal ataxia",
       "Delayed social development",
       "Intellectual disability",
@@ -193,71 +192,63 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Delayed speech and language development",
       "Muscular hypotonia"
     ],
-    "Observation":{
-      "Lactate [Moles/volume] in Cerebral spinal fluid":"1.2",
-      "Lactate [Moles/volume] in Venous blood":"2.4"
-    }
+    "Observation": {
+      "Lactate [Moles/volume] in Cerebral spinal fluid": "1.2",
+      "Lactate [Moles/volume] in Venous blood": "2.4"
+    },
+    "internalIDs": "17W001121"
   },
   {
-    "Patient":"A0121015",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A0121015",
+    "Gender": "FEMALE",
+    "Condition": [
       "Diabetes mellitus",
       "Muscle weakness",
       "Ragged-red muscle fibers"
     ],
-    "Observation":{
-
-    }
+    "Observation": {},
+    "internalIDs": "17W001127"
   },
   {
-    "Patient":"A0121016",
-    "Gender":"MALE",
-    "Condition":[
-
-    ],
-    "Observation":{
-
-    }
+    "externalIDs": "A0121016",
+    "Gender": "MALE",
+    "Condition": [],
+    "Observation": {},
+    "internalIDs": "17W001129"
   },
   {
-    "Patient":"A0121017",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A0121017",
+    "Gender": "FEMALE",
+    "Condition": [
       "Delayed social development",
       "Intellectual disability",
       "Motor delay",
       "Delayed speech and language development"
     ],
-    "Observation":{
-      "Alanine [Moles/volume] in Serum or Plasma":"558",
-      "Lactate [Moles/volume] in Venous blood":"3.6"
-    }
+    "Observation": {
+      "Alanine [Moles/volume] in Serum or Plasma": "558",
+      "Lactate [Moles/volume] in Venous blood": "3.6"
+    },
+    "internalIDs": "17W001142"
   },
   {
-    "Patient":"A0121018",
-    "Gender":"MALE",
-    "Condition":[
-
-    ],
-    "Observation":{
-
-    }
+    "externalIDs": "A0121018",
+    "Gender": "MALE",
+    "Condition": [],
+    "Observation": {},
+    "internalIDs": "17W001163"
   },
   {
-    "Patient":"A0121019",
-    "Gender":"FEMALE",
-    "Condition":[
-
-    ],
-    "Observation":{
-
-    }
+    "externalIDs": "A0121019",
+    "Gender": "FEMALE",
+    "Condition": [],
+    "Observation": {},
+    "internalIDs": "18W000014"
   },
   {
-    "Patient":"A0121020",
-    "Gender":"MALE",
-    "Condition":[
+    "externalIDs": "A0121020",
+    "Gender": "MALE",
+    "Condition": [
       "Constipation",
       "Increased muscle fatiguability",
       "Intellectual disability",
@@ -265,14 +256,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Muscle weakness",
       "Delayed speech and language development"
     ],
-    "Observation":{
-
-    }
+    "Observation": {},
+    "internalIDs": "18W000052"
   },
   {
-    "Patient":"A0421001",
-    "Gender":"MALE",
-    "Condition":[
+    "externalIDs": "A0421001",
+    "Gender": "MALE",
+    "Condition": [
       "Constipation",
       "Sensorineural hearing impairment",
       "Delayed social development",
@@ -284,14 +274,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Delayed speech and language development",
       "Muscular hypotonia"
     ],
-    "Observation":{
-
-    }
+    "Observation": {},
+    "internalIDs": "18W000061"
   },
   {
-    "Patient":"A0421002",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A0421002",
+    "Gender": "FEMALE",
+    "Condition": [
       "Constipation",
       "Sensorineural hearing impairment",
       "Delayed social development",
@@ -303,27 +292,27 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Muscular hypotonia",
       "Cortical visual impairment"
     ],
-    "Observation":{
-
-    }
+    "Observation": {},
+    "internalIDs": "18W000088"
   },
   {
-    "Patient":"A0421004",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A0421004",
+    "Gender": "FEMALE",
+    "Condition": [
       "Motor delay",
       "Apnea",
       "Seizures"
     ],
-    "Observation":{
-      "Lactate [Moles/volume] in Cerebral spinal fluid":"7.2",
-      "Alanine [Moles/volume] in Serum or Plasma":"856"
-    }
+    "Observation": {
+      "Lactate [Moles/volume] in Cerebral spinal fluid": "7.2",
+      "Alanine [Moles/volume] in Serum or Plasma": "856"
+    },
+    "internalIDs": "18W000089"
   },
   {
-    "Patient":"A0621001",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A0621001",
+    "Gender": "FEMALE",
+    "Condition": [
       "Truncal ataxia",
       "Sensorineural hearing impairment",
       "Muscle weakness",
@@ -333,14 +322,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Muscular hypotonia",
       "Rod-cone dystrophy"
     ],
-    "Observation":{
-
-    }
+    "Observation": {},
+    "internalIDs": "18W000252"
   },
   {
-    "Patient":"A0621002",
-    "Gender":"MALE",
-    "Condition":[
+    "externalIDs": "A0621002",
+    "Gender": "MALE",
+    "Condition": [
       "Truncal ataxia",
       "Constipation",
       "Sensorineural hearing impairment",
@@ -353,14 +341,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Nystagmus",
       "Rod-cone dystrophy"
     ],
-    "Observation":{
-
-    }
+    "Observation": {},
+    "internalIDs": "18W000303"
   },
   {
-    "Patient":"A0621003",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A0621003",
+    "Gender": "FEMALE",
+    "Condition": [
       "Truncal ataxia",
       "Muscle weakness",
       "Seizures",
@@ -369,154 +356,131 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Glaucoma",
       "Rod-cone dystrophy"
     ],
-    "Observation":{
-
-    }
+    "Observation": {},
+    "internalIDs": "18W000388"
   },
   {
-    "Patient":"A0721001",
-    "Gender":"MALE",
-    "Condition":[
-
-    ],
-    "Observation":{
-      "Alanine [Moles/volume] in Cerebral spinal fluid":"43",
-      "Lactate [Moles/volume] in Cerebral spinal fluid":"2.4",
-      "Alanine [Moles/volume] in Serum or Plasma":"670",
-      "Lactate [Moles/volume] in Venous blood":"10.8"
-    }
+    "externalIDs": "A0721001",
+    "Gender": "MALE",
+    "Condition": [],
+    "Observation": {
+      "Alanine [Moles/volume] in Cerebral spinal fluid": "43",
+      "Lactate [Moles/volume] in Cerebral spinal fluid": "2.4",
+      "Alanine [Moles/volume] in Serum or Plasma": "670",
+      "Lactate [Moles/volume] in Venous blood": "10.8"
+    },
+    "internalIDs": "18W000391"
   },
   {
-    "Patient":"A0721002",
-    "Gender":"MALE",
-    "Condition":[
-
-    ],
-    "Observation":{
-
-    }
+    "externalIDs": "A0721002",
+    "Gender": "MALE",
+    "Condition": [],
+    "Observation": {},
+    "internalIDs": "18W000394"
   },
   {
-    "Patient":"A0721003",
-    "Gender":"MALE",
-    "Condition":[
-
-    ],
-    "Observation":{
-
-    }
+    "externalIDs": "A0721003",
+    "Gender": "MALE",
+    "Condition": [],
+    "Observation": {},
+    "internalIDs": "18W000543"
   },
   {
-    "Patient":"A0721004",
-    "Gender":"FEMALE",
-    "Condition":[
-
-    ],
-    "Observation":{
-
-    }
+    "externalIDs": "A0721004",
+    "Gender": "FEMALE",
+    "Condition": [],
+    "Observation": {},
+    "internalIDs": "18W000646"
   },
   {
-    "Patient":"A0721005",
-    "Gender":"FEMALE",
-    "Condition":[
-
-    ],
-    "Observation":{
-
-    }
+    "externalIDs": "A0721005",
+    "Gender": "FEMALE",
+    "Condition": [],
+    "Observation": {},
+    "internalIDs": ""
   },
   {
-    "Patient":"A0821001",
-    "Gender":"FEMALE",
-    "Condition":[
-
-    ],
-    "Observation":{
-
-    }
+    "externalIDs": "A0821001",
+    "Gender": "FEMALE",
+    "Condition": [],
+    "Observation": {},
+    "internalIDs": ""
   },
   {
-    "Patient":"A0921001",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A0921001",
+    "Gender": "FEMALE",
+    "Condition": [
       "Constipation",
       "Increased muscle fatiguability",
       "Muscle weakness",
       "Peripheral neuropathy"
     ],
-    "Observation":{
-
-    }
+    "Observation": {},
+    "internalIDs": ""
   },
   {
-    "Patient":"A0921002",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A0921002",
+    "Gender": "FEMALE",
+    "Condition": [
       "Constipation",
       "Increased muscle fatiguability",
       "Muscle weakness",
       "Migraine",
       "Ragged-red muscle fibers"
     ],
-    "Observation":{
-
-    }
+    "Observation": {},
+    "internalIDs": ""
   },
   {
-    "Patient":"A0921003",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A0921003",
+    "Gender": "FEMALE",
+    "Condition": [
       "Increased muscle fatiguability",
       "Migraine",
       "Rhabdomyolysis"
     ],
-    "Observation":{
-
-    }
+    "Observation": {},
+    "internalIDs": ""
   },
   {
-    "Patient":"A0921004",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A0921004",
+    "Gender": "FEMALE",
+    "Condition": [
       "Increased muscle fatiguability",
       "Migraine",
       "Rhabdomyolysis",
       "Stroke-like episode"
     ],
-    "Observation":{
-
-    }
+    "Observation": {},
+    "internalIDs": ""
   },
   {
-    "Patient":"A0921005",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A0921005",
+    "Gender": "FEMALE",
+    "Condition": [
       "Arrhythmia",
       "Increased muscle fatiguability",
       "Muscle weakness",
       "Peripheral neuropathy"
     ],
-    "Observation":{
-
-    }
+    "Observation": {},
+    "internalIDs": ""
   },
   {
-    "Patient":"A0921006",
-    "Gender":"MALE",
-    "Condition":[
+    "externalIDs": "A0921006",
+    "Gender": "MALE",
+    "Condition": [
       "Diabetes mellitus",
       "Increased muscle fatiguability",
       "Muscle weakness"
     ],
-    "Observation":{
-
-    }
+    "Observation": {},
+    "internalIDs": ""
   },
   {
-    "Patient":"A1121001",
-    "Gender":"MALE",
-    "Condition":[
+    "externalIDs": "A1121001",
+    "Gender": "MALE",
+    "Condition": [
       "Delayed social development",
       "Intellectual disability",
       "Motor delay",
@@ -529,17 +493,18 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Muscular hypotonia",
       "Spasticity"
     ],
-    "Observation":{
-      "Alanine [Moles/volume] in Cerebral spinal fluid":"NP",
-      "Lactate [Moles/volume] in Cerebral spinal fluid":"NP",
-      "Alanine [Moles/volume] in Serum or Plasma":"350",
-      "Lactate [Moles/volume] in Venous blood":"6"
-    }
+    "Observation": {
+      "Alanine [Moles/volume] in Cerebral spinal fluid": "NP",
+      "Lactate [Moles/volume] in Cerebral spinal fluid": "NP",
+      "Alanine [Moles/volume] in Serum or Plasma": "350",
+      "Lactate [Moles/volume] in Venous blood": "6"
+    },
+    "internalIDs": ""
   },
   {
-    "Patient":"A1121002",
-    "Gender":"MALE",
-    "Condition":[
+    "externalIDs": "A1121002",
+    "Gender": "MALE",
+    "Condition": [
       "Disorder of cranial nerve",
       "Truncal ataxia",
       "Constipation",
@@ -553,14 +518,15 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Muscular hypotonia",
       "Nystagmus"
     ],
-    "Observation":{
-      "Lactate [Moles/volume] in Venous blood":"4.7"
-    }
+    "Observation": {
+      "Lactate [Moles/volume] in Venous blood": "4.7"
+    },
+    "internalIDs": ""
   },
   {
-    "Patient":"A1121003",
-    "Gender":"MALE",
-    "Condition":[
+    "externalIDs": "A1121003",
+    "Gender": "MALE",
+    "Condition": [
       "Hypertrophic cardiomyopathy",
       "Delayed social development",
       "Increased muscle fatiguability",
@@ -568,31 +534,33 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Motor delay",
       "Delayed speech and language development"
     ],
-    "Observation":{
-      "Alanine [Moles/volume] in Cerebral spinal fluid":"NP",
-      "Lactate [Moles/volume] in Cerebral spinal fluid":"NP",
-      "Alanine [Moles/volume] in Serum or Plasma":"normal",
-      "Lactate [Moles/volume] in Venous blood":"6.5"
-    }
+    "Observation": {
+      "Alanine [Moles/volume] in Cerebral spinal fluid": "NP",
+      "Lactate [Moles/volume] in Cerebral spinal fluid": "NP",
+      "Alanine [Moles/volume] in Serum or Plasma": "normal",
+      "Lactate [Moles/volume] in Venous blood": "6.5"
+    },
+    "internalIDs": ""
   },
   {
-    "Patient":"A1121004",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A1121004",
+    "Gender": "FEMALE",
+    "Condition": [
       "Arrhythmia",
       "Hypertrophic cardiomyopathy",
       "Sensorineural hearing impairment",
       "Motor delay"
     ],
-    "Observation":{
-      "Alanine [Moles/volume] in Serum or Plasma":"631",
-      "Lactate [Moles/volume] in Venous blood":"4-13.4"
-    }
+    "Observation": {
+      "Alanine [Moles/volume] in Serum or Plasma": "631",
+      "Lactate [Moles/volume] in Venous blood": "4-13.4"
+    },
+    "internalIDs": ""
   },
   {
-    "Patient":"A1121005",
-    "Gender":"MALE",
-    "Condition":[
+    "externalIDs": "A1121005",
+    "Gender": "MALE",
+    "Condition": [
       "Delayed social development",
       "Increased muscle fatiguability",
       "Intellectual disability",
@@ -602,17 +570,18 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Delayed speech and language development",
       "Muscular hypotonia"
     ],
-    "Observation":{
-      "Alanine [Moles/volume] in Cerebral spinal fluid":"35",
-      "Lactate [Moles/volume] in Cerebral spinal fluid":"2.7",
-      "Alanine [Moles/volume] in Serum or Plasma":"280",
-      "Lactate [Moles/volume] in Venous blood":"3.3"
-    }
+    "Observation": {
+      "Alanine [Moles/volume] in Cerebral spinal fluid": "35",
+      "Lactate [Moles/volume] in Cerebral spinal fluid": "2.7",
+      "Alanine [Moles/volume] in Serum or Plasma": "280",
+      "Lactate [Moles/volume] in Venous blood": "3.3"
+    },
+    "internalIDs": ""
   },
   {
-    "Patient":"A1121006",
-    "Gender":"MALE",
-    "Condition":[
+    "externalIDs": "A1121006",
+    "Gender": "MALE",
+    "Condition": [
       "Truncal ataxia",
       "Delayed social development",
       "Increased muscle fatiguability",
@@ -623,17 +592,18 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Muscular hypotonia",
       "Spasticity"
     ],
-    "Observation":{
-      "Alanine [Moles/volume] in Cerebral spinal fluid":"normal",
-      "Lactate [Moles/volume] in Cerebral spinal fluid":"normal",
-      "Alanine [Moles/volume] in Serum or Plasma":"normal",
-      "Lactate [Moles/volume] in Venous blood":"usually normal, only been elevated once"
-    }
+    "Observation": {
+      "Alanine [Moles/volume] in Cerebral spinal fluid": "normal",
+      "Lactate [Moles/volume] in Cerebral spinal fluid": "normal",
+      "Alanine [Moles/volume] in Serum or Plasma": "normal",
+      "Lactate [Moles/volume] in Venous blood": "usually normal, only been elevated once"
+    },
+    "internalIDs": ""
   },
   {
-    "Patient":"A1121007",
-    "Gender":"MALE",
-    "Condition":[
+    "externalIDs": "A1121007",
+    "Gender": "MALE",
+    "Condition": [
       "Disorder of cranial nerve",
       "Constipation",
       "Intellectual disability",
@@ -647,38 +617,35 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Spasticity",
       "Nystagmus"
     ],
-    "Observation":{
-      "Alanine [Moles/volume] in Serum or Plasma":"370",
-      "Lactate [Moles/volume] in Venous blood":"3.6"
-    }
+    "Observation": {
+      "Alanine [Moles/volume] in Serum or Plasma": "370",
+      "Lactate [Moles/volume] in Venous blood": "3.6"
+    },
+    "internalIDs": ""
   },
   {
-    "Patient":"A1121008",
-    "Gender":"MALE",
-    "Condition":[
-
-    ],
-    "Observation":{
-
-    }
+    "externalIDs": "A1121008",
+    "Gender": "MALE",
+    "Condition": [],
+    "Observation": {},
+    "internalIDs": ""
   },
   {
-    "Patient":"A1121009",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A1121009",
+    "Gender": "FEMALE",
+    "Condition": [
       "Increased muscle fatiguability",
       "Muscle weakness",
       "Developmental regression",
       "Spasticity"
     ],
-    "Observation":{
-
-    }
+    "Observation": {},
+    "internalIDs": ""
   },
   {
-    "Patient":"A1121010",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A1121010",
+    "Gender": "FEMALE",
+    "Condition": [
       "Delayed social development",
       "Increased muscle fatiguability",
       "Intellectual disability",
@@ -691,37 +658,36 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Spasticity",
       "Cortical visual impairment"
     ],
-    "Observation":{
-      "Lactate [Moles/volume] in Venous blood":"2.8"
-    }
+    "Observation": {
+      "Lactate [Moles/volume] in Venous blood": "2.8"
+    },
+    "internalIDs": ""
   },
   {
-    "Patient":"A1121011",
-    "Gender":"MALE",
-    "Condition":[
-
-    ],
-    "Observation":{
-
-    }
+    "externalIDs": "A1121011",
+    "Gender": "MALE",
+    "Condition": [],
+    "Observation": {},
+    "internalIDs": ""
   },
   {
-    "Patient":"A1221001",
-    "Gender":"MALE",
-    "Condition":[
+    "externalIDs": "A1221001",
+    "Gender": "MALE",
+    "Condition": [
       "Hypertrophic cardiomyopathy",
       "Muscular hypotonia"
     ],
-    "Observation":{
-      "Alanine [Moles/volume] in Cerebral spinal fluid":"NP",
-      "Lactate [Moles/volume] in Cerebral spinal fluid":"NP",
-      "Alanine [Moles/volume] in Serum or Plasma":">1000"
-    }
+    "Observation": {
+      "Alanine [Moles/volume] in Cerebral spinal fluid": "NP",
+      "Lactate [Moles/volume] in Cerebral spinal fluid": "NP",
+      "Alanine [Moles/volume] in Serum or Plasma": ">1000"
+    },
+    "internalIDs": ""
   },
   {
-    "Patient":"A1221002",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A1221002",
+    "Gender": "FEMALE",
+    "Condition": [
       "Delayed social development",
       "Increased muscle fatiguability",
       "Intellectual disability",
@@ -734,26 +700,24 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Stroke-like episode",
       "Spasticity"
     ],
-    "Observation":{
-      "Alanine [Moles/volume] in Cerebral spinal fluid":"41",
-      "Lactate [Moles/volume] in Cerebral spinal fluid":"2.7",
-      "Alanine [Moles/volume] in Serum or Plasma":"normal"
-    }
+    "Observation": {
+      "Alanine [Moles/volume] in Cerebral spinal fluid": "41",
+      "Lactate [Moles/volume] in Cerebral spinal fluid": "2.7",
+      "Alanine [Moles/volume] in Serum or Plasma": "normal"
+    },
+    "internalIDs": ""
   },
   {
-    "Patient":"A1221003",
-    "Gender":"FEMALE",
-    "Condition":[
-
-    ],
-    "Observation":{
-
-    }
+    "externalIDs": "A1221003",
+    "Gender": "FEMALE",
+    "Condition": [],
+    "Observation": {},
+    "internalIDs": ""
   },
   {
-    "Patient":"A1221004",
-    "Gender":"NOT KNOWN",
-    "Condition":[
+    "externalIDs": "A1221004",
+    "Gender": "NOT KNOWN",
+    "Condition": [
       "Disorder of cranial nerve",
       "Increased muscle fatiguability",
       "Muscle weakness",
@@ -761,42 +725,45 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Muscular hypotonia",
       "Optic atrophy"
     ],
-    "Observation":{
-      "Alanine [Moles/volume] in Cerebral spinal fluid":"NP",
-      "Lactate [Moles/volume] in Cerebral spinal fluid":"NP",
-      "Alanine [Moles/volume] in Serum or Plasma":"normal",
-      "Lactate [Moles/volume] in Venous blood":"normal"
-    }
+    "Observation": {
+      "Alanine [Moles/volume] in Cerebral spinal fluid": "NP",
+      "Lactate [Moles/volume] in Cerebral spinal fluid": "NP",
+      "Alanine [Moles/volume] in Serum or Plasma": "normal",
+      "Lactate [Moles/volume] in Venous blood": "normal"
+    },
+    "internalIDs": ""
   },
   {
-    "Patient":"A1421001",
-    "Gender":"MALE",
-    "Condition":[
+    "externalIDs": "A1421001",
+    "Gender": "MALE",
+    "Condition": [
       "Hypertrophic cardiomyopathy",
       "Muscle weakness"
     ],
-    "Observation":{
-      "Alanine [Moles/volume] in Cerebral spinal fluid":"n/a",
-      "Lactate [Moles/volume] in Cerebral spinal fluid":"n/a",
-      "Alanine [Moles/volume] in Serum or Plasma":"745",
-      "Lactate [Moles/volume] in Venous blood":"6.5"
-    }
+    "Observation": {
+      "Alanine [Moles/volume] in Cerebral spinal fluid": "n/a",
+      "Lactate [Moles/volume] in Cerebral spinal fluid": "n/a",
+      "Alanine [Moles/volume] in Serum or Plasma": "745",
+      "Lactate [Moles/volume] in Venous blood": "6.5"
+    },
+    "internalIDs": ""
   },
   {
-    "Patient":"A1421002",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A1421002",
+    "Gender": "FEMALE",
+    "Condition": [
       "Hypertrophic cardiomyopathy"
     ],
-    "Observation":{
-      "Alanine [Moles/volume] in Serum or Plasma":"857",
-      "Lactate [Moles/volume] in Venous blood":"4.2"
-    }
+    "Observation": {
+      "Alanine [Moles/volume] in Serum or Plasma": "857",
+      "Lactate [Moles/volume] in Venous blood": "4.2"
+    },
+    "internalIDs": ""
   },
   {
-    "Patient":"A1421003",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A1421003",
+    "Gender": "FEMALE",
+    "Condition": [
       "Sensorineural hearing impairment",
       "Delayed social development",
       "Intellectual disability",
@@ -806,41 +773,44 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Seizures",
       "Delayed speech and language development"
     ],
-    "Observation":{
-      "Alanine [Moles/volume] in Cerebral spinal fluid":"normal",
-      "Lactate [Moles/volume] in Cerebral spinal fluid":"normal"
-    }
+    "Observation": {
+      "Alanine [Moles/volume] in Cerebral spinal fluid": "normal",
+      "Lactate [Moles/volume] in Cerebral spinal fluid": "normal"
+    },
+    "internalIDs": ""
   },
   {
-    "Patient":"A1421004",
-    "Gender":"MALE",
-    "Condition":[
+    "externalIDs": "A1421004",
+    "Gender": "MALE",
+    "Condition": [
       "Hypertrophic cardiomyopathy",
       "Muscle weakness",
       "Seizures"
     ],
-    "Observation":{
-      "Lactate [Moles/volume] in Cerebral spinal fluid":"14.6"
-    }
+    "Observation": {
+      "Lactate [Moles/volume] in Cerebral spinal fluid": "14.6"
+    },
+    "internalIDs": ""
   },
   {
-    "Patient":"A1421005",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A1421005",
+    "Gender": "FEMALE",
+    "Condition": [
       "Constipation",
       "Intestinal pseudo-obstruction",
       "Motor delay",
       "Developmental regression",
       "Delayed speech and language development"
     ],
-    "Observation":{
-      "Lactate [Moles/volume] in Cerebral spinal fluid":"3.2"
-    }
+    "Observation": {
+      "Lactate [Moles/volume] in Cerebral spinal fluid": "3.2"
+    },
+    "internalIDs": ""
   },
   {
-    "Patient":"A1421006",
-    "Gender":"MALE",
-    "Condition":[
+    "externalIDs": "A1421006",
+    "Gender": "MALE",
+    "Condition": [
       "Constipation",
       "Delayed social development",
       "Intellectual disability",
@@ -850,28 +820,30 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Delayed speech and language development",
       "Muscular hypotonia"
     ],
-    "Observation":{
-      "Lactate [Moles/volume] in Cerebral spinal fluid":"normal",
-      "Lactate [Moles/volume] in Venous blood":"normal"
-    }
+    "Observation": {
+      "Lactate [Moles/volume] in Cerebral spinal fluid": "normal",
+      "Lactate [Moles/volume] in Venous blood": "normal"
+    },
+    "internalIDs": ""
   },
   {
-    "Patient":"A1421007",
-    "Gender":"MALE",
-    "Condition":[
+    "externalIDs": "A1421007",
+    "Gender": "MALE",
+    "Condition": [
       "Constipation",
       "Motor delay",
       "Delayed speech and language development",
       "Muscular hypotonia"
     ],
-    "Observation":{
-      "Alanine [Moles/volume] in Serum or Plasma":"305"
-    }
+    "Observation": {
+      "Alanine [Moles/volume] in Serum or Plasma": "305"
+    },
+    "internalIDs": ""
   },
   {
-    "Patient":"A1421008",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A1421008",
+    "Gender": "FEMALE",
+    "Condition": [
       "Delayed social development",
       "Intellectual disability",
       "Motor delay",
@@ -881,14 +853,13 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Cataract",
       "Cortical visual impairment"
     ],
-    "Observation":{
-
-    }
+    "Observation": {},
+    "internalIDs": ""
   },
   {
-    "Patient":"A1421009",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A1421009",
+    "Gender": "FEMALE",
+    "Condition": [
       "Delayed social development",
       "Intellectual disability",
       "Motor delay",
@@ -896,35 +867,30 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Delayed speech and language development",
       "Muscular hypotonia"
     ],
-    "Observation":{
-
-    }
+    "Observation": {},
+    "internalIDs": ""
   },
   {
-    "Patient":"A1421010",
-    "Gender":"MALE",
-    "Condition":[
+    "externalIDs": "A1421010",
+    "Gender": "MALE",
+    "Condition": [
       "Increased muscle fatiguability",
       "Muscle weakness"
     ],
-    "Observation":{
-
-    }
+    "Observation": {},
+    "internalIDs": ""
   },
   {
-    "Patient":"A1421011",
-    "Gender":"FEMALE",
-    "Condition":[
-
-    ],
-    "Observation":{
-
-    }
+    "externalIDs": "A1421011",
+    "Gender": "FEMALE",
+    "Condition": [],
+    "Observation": {},
+    "internalIDs": ""
   },
   {
-    "Patient":"A1421012",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A1421012",
+    "Gender": "FEMALE",
+    "Condition": [
       "Delayed social development",
       "Motor delay",
       "Muscle weakness",
@@ -932,25 +898,23 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Delayed speech and language development",
       "Muscular hypotonia"
     ],
-    "Observation":{
-      "Alanine [Moles/volume] in Serum or Plasma":"562",
-      "Lactate [Moles/volume] in Venous blood":"9.6"
-    }
+    "Observation": {
+      "Alanine [Moles/volume] in Serum or Plasma": "562",
+      "Lactate [Moles/volume] in Venous blood": "9.6"
+    },
+    "internalIDs": ""
   },
   {
-    "Patient":"A1421013",
-    "Gender":"MALE",
-    "Condition":[
-
-    ],
-    "Observation":{
-
-    }
+    "externalIDs": "A1421013",
+    "Gender": "MALE",
+    "Condition": [],
+    "Observation": {},
+    "internalIDs": ""
   },
   {
-    "Patient":"A1921001",
-    "Gender":"MALE",
-    "Condition":[
+    "externalIDs": "A1921001",
+    "Gender": "MALE",
+    "Condition": [
       "Arrhythmia",
       "Dilated cardiomyopathy",
       "Increased muscle fatiguability",
@@ -958,79 +922,59 @@ export const FAKE_MITOCHONDRIA_DATA = [
       "Peripheral neuropathy",
       "Optic atrophy"
     ],
-    "Observation":{
-
-    }
+    "Observation": {},
+    "internalIDs": ""
   },
   {
-    "Patient":"A1921002",
-    "Gender":"FEMALE",
-    "Condition":[
+    "externalIDs": "A1921002",
+    "Gender": "FEMALE",
+    "Condition": [
       "Increased muscle fatiguability",
       "Muscle weakness"
     ],
-    "Observation":{
-
-    }
+    "Observation": {},
+    "internalIDs": ""
   },
   {
-    "Patient":"A1921003",
-    "Gender":"FEMALE",
-    "Condition":[
-
-    ],
-    "Observation":{
-
-    }
+    "externalIDs": "A1921003",
+    "Gender": "FEMALE",
+    "Condition": [],
+    "Observation": {},
+    "internalIDs": ""
   },
   {
-    "Patient":"A1921004",
-    "Gender":"FEMALE",
-    "Condition":[
-
-    ],
-    "Observation":{
-
-    }
+    "externalIDs": "A1921004",
+    "Gender": "FEMALE",
+    "Condition": [],
+    "Observation": {},
+    "internalIDs": ""
   },
   {
-    "Patient":"A1921005",
-    "Gender":"MALE",
-    "Condition":[
-
-    ],
-    "Observation":{
-
-    }
+    "externalIDs": "A1921005",
+    "Gender": "MALE",
+    "Condition": [],
+    "Observation": {},
+    "internalIDs": ""
   },
   {
-    "Patient":"A1921006",
-    "Gender":"FEMALE",
-    "Condition":[
-
-    ],
-    "Observation":{
-
-    }
+    "externalIDs": "A1921006",
+    "Gender": "FEMALE",
+    "Condition": [],
+    "Observation": {},
+    "internalIDs": ""
   },
   {
-    "Patient":"A1921007",
-    "Gender":"FEMALE",
-    "Condition":[
-
-    ],
-    "Observation":{
-
-    }
+    "externalIDs": "A1921007",
+    "Gender": "FEMALE",
+    "Condition": [],
+    "Observation": {},
+    "internalIDs": ""
   },
   {
-    "Patient":"A1921008",
-    "Gender":"MALE",
-    "Condition":[
-
-    ],
-    "Observation":{
-
-    }
+    "externalIDs": "A1921008",
+    "Gender": "MALE",
+    "Condition": [],
+    "Observation": {},
+    "internalIDs": ""
   }
 ]

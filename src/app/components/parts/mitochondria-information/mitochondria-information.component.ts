@@ -8,7 +8,6 @@ import { Auth } from '../../../services/auth-service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import { Chart } from "../../../model/clinical-cohort-chart";
-import { TEMP_SAMPLES, MITO_SAMPLES } from '../../../mocks/sample.mock'
 
 @Component({
     selector: 'app-mitochondria-information',
@@ -20,8 +19,6 @@ import { TEMP_SAMPLES, MITO_SAMPLES } from '../../../mocks/sample.mock'
 })
 export class MitochondriaInformationComponent implements OnInit, AfterViewInit, OnDestroy {
     @Input() samples: string[] = [];
-    //We now use mockSamples which is just hardcoded mapping, later this will be removed
-    mockSamples: string[];
     error: any;
     denied = false;
     patients = [];
@@ -101,11 +98,6 @@ export class MitochondriaInformationComponent implements OnInit, AfterViewInit, 
     }
 
     ngOnInit() {
-        const tempSample = this.samples.filter(sample => {
-            return TEMP_SAMPLES.includes(sample);
-        })
-
-        this.mockSamples = tempSample.map(sample => MITO_SAMPLES[TEMP_SAMPLES.indexOf(sample)])
     }
 
     ngAfterViewInit() {
@@ -123,12 +115,12 @@ export class MitochondriaInformationComponent implements OnInit, AfterViewInit, 
             this.patients = v;
             this.ndx = crossfilter(this.patients);
             this.cs.samplesGroup = this.ndx.dimension((d) => {
-                return d.Patient;
+                return d.internalIDs;
             }).group();
 
             const all = this.ndx.groupAll();
 
-            var sampleIdDim = this.ndx.dimension(function(d){ return d.Patient;})
+            var sampleIdDim = this.ndx.dimension(function(d){ return d.externalIDs;})
             var sampleIdGroup = sampleIdDim.group();
             
             var genderDim = this.ndx.dimension(function(d){ return d.Gender;})
@@ -152,7 +144,7 @@ export class MitochondriaInformationComponent implements OnInit, AfterViewInit, 
                     1200,
                     true,
                     sampleIdGroup,
-                    this.mockSamples
+                    this.samples
                 ),
                 new Chart(
                     'gender',

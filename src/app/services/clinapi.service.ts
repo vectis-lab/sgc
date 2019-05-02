@@ -12,7 +12,6 @@ import { HttpClient } from '@angular/common/http';
 import { DEV } from "../shared/tempConfiguration";
 import { SearchOption } from '../model/search-option';
 import { environment } from '../../environments/environment';
-import { TEMP_SAMPLES, MITO_SAMPLES, NEURO_SAMPLES } from '../mocks/sample.mock'
 
 @Injectable()
 export class ClinapiService implements OnDestroy {
@@ -30,20 +29,12 @@ export class ClinapiService implements OnDestroy {
                 this.vss.filter = this.filterVariants;
                 this.samples = this.samplesGroup
                     .all()
-                    .filter(s => s.value > 0)
+                    .filter(s => (s.value > 0 && s.key !== ""))
                     .map(s => s.key);
 
-                const mockSamples = this.samples.map(sample => {
-                    if(this.samples.every(val => MITO_SAMPLES.includes(val))){
-                        return TEMP_SAMPLES[MITO_SAMPLES.indexOf(sample)];
-                    }else if(this.samples.every(val => NEURO_SAMPLES.includes(val))){
-                        return TEMP_SAMPLES[NEURO_SAMPLES.indexOf(sample)];
-                    }
-                    
-                })
 
                 if(this.samples.length){
-                    this.vss.lastQuery[0].options = [(new SearchOption('', 'samples', [], mockSamples.join()))];
+                    this.vss.lastQuery[0].options = [(new SearchOption('', 'samples', [], this.samples.join()))];
                 }else{
                     this.vss.lastQuery[0].options=[]
                 }
