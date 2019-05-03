@@ -3,8 +3,6 @@ import { Initiative } from '../../../model/initiative';
 import { InitiativeService } from '../../../services/project-data/initiative-service';
 import { Router } from '@angular/router';
 import { ScrollService } from '../../../services/scroll-service';
-import { FAKE_MITOCHONDRIA_DATA } from "../../../mocks/mitodata";
-import { FAKE_NEUROMUSCULAR_DATA } from "../../../mocks/neuromusculardata";
 
 @Component({
     selector: 'app-initiatives',
