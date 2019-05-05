@@ -34,7 +34,7 @@
                           class="value">{{ ts.display(label, variant) }}</span>
                     <a *ngIf="label === 'Location'" target="_blank" [href]="variantUrl(variant)">{{ ts.display(label, variant) }}</a>
                     <a *ngIf="label === 'Location'" target="_blank" [href]="variantVarsomeUrl(variant)" class='varsome-link'>
-                        <i class="fa fa-external-link" aria-hidden="true" matTooltip="See variant in Varsome" matTooltipPosition="above"></i>
+                        <i class="fa fa-external-link" aria-hidden="true" matTooltip="See variant in VarSome" matTooltipPosition="above"></i>
                     </a>
                     <app-allele-freq *ngIf="label === 'Allele Freq'"
                                      [freq]="variant.af" [highlight]="compareAlleleFreq(variant,'af', 'vaf')"></app-allele-freq>
