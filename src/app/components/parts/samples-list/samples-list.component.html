@@ -1,0 +1,13 @@
+<div class="chart" (mouseenter)="hover=true" (mouseleave)="hover=false">
+    <div class="toolbar">
+        <div class="row">
+            <i (click)="resetFilter()" class="option material-icons left">refresh</i>
+            <h4>Sample Id</h4>
+        </div>
+    </div>
+    <div class="content">
+      <select multiple class="samples-list" [(ngModel)]="selectedSamples" (ngModelChange)="onSelect($event)">
+        <option *ngFor="let sampleID of sampleIDs" [value]="sampleID">{{sampleID}}</option>
+      </select>
+    </div>
+</div>

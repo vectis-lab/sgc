@@ -18,7 +18,12 @@ import { Chart } from "../../../model/clinical-cohort-chart";
     encapsulation: ViewEncapsulation.None,
 })
 export class NeuromuscularInformationComponent implements AfterViewInit, OnDestroy, OnInit {
+    //Internal IDs
     @Input() samples: string[] = [];
+    externalIDs: string [] = [];
+    selectedExternalIDs: string[] = [];
+    selectedInternalIDs: string[] = [];
+    sampleDim: any;
     error: any;
     denied = false;
     patients = [];
@@ -52,11 +57,19 @@ export class NeuromuscularInformationComponent implements AfterViewInit, OnDestr
                 this.getNeuromuscular(this.demo, false)
             }
         }));
+
+        this.subscriptions.push(this.cs.internalSampleIDs.subscribe(samples => {
+            this.selectedInternalIDs = samples;
+            this.selectedExternalIDs = this.patients
+                .filter(patient => this.selectedInternalIDs.includes(patient.internalIDs))
+                .map(patient => patient.externalIDs);
+        }));
     }
 
     getNeuromuscular(demo, authorize){
         this.cs.getNeuromuscular(demo, authorize).subscribe(v => {
-            this.patients = v;
+            this.patients = v.filter(sample => this.samples.includes(sample.internalIDs));
+            this.externalIDs = this.patients.map(sample => sample.externalIDs);
             this.ndx = crossfilter(this.patients);
             this.cs.samplesGroup = this.ndx.dimension((d) => {
                 return d['internalIDs'];
@@ -64,8 +77,7 @@ export class NeuromuscularInformationComponent implements AfterViewInit, OnDestr
 
             const all = this.ndx.groupAll();
 
-            var sampleIdDim = this.ndx.dimension(function(d){ return d['externalIDs'];})
-            var sampleIdGroup = sampleIdDim.group();
+            this.sampleDim = this.ndx.dimension(function(d){ return d.externalIDs;})
             
             var ageOfOnsetDim = this.ndx.dimension(function(d){ return d['Age of onset'];})
             var ageOfOnsetGroup = ageOfOnsetDim.group();
@@ -101,16 +113,6 @@ export class NeuromuscularInformationComponent implements AfterViewInit, OnDestr
             var serumCkGroup = serumCkDim.group();
 
             this.charts = [
-                new Chart(
-                    'sampleId',
-                    'row',
-                    sampleIdDim,
-                    325,
-                    1400,
-                    true,
-                    sampleIdGroup,
-                    this.samples
-                ),
                 new Chart(
                     'ageOfOnset',
                     'row',
@@ -230,6 +232,14 @@ export class NeuromuscularInformationComponent implements AfterViewInit, OnDestr
             }
             this.cd.detectChanges();
         });
+    }
+
+    onSelectSamples(externalSamples){
+        this.selectedExternalIDs = externalSamples;
+        this.sampleDim.filter(sample => externalSamples.includes(sample));
+        dc.renderAll();
+        this.cs.changes.next();
+        this.cd.detectChanges();
     }
 
     onHidden(chartName: string){

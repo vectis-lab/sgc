@@ -42,7 +42,7 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
         }else if (this.data.type === "bar"){
             this.initBarChart();
         }
-
+ 
         this.subscriptions.push(this.searchBarService.cohort.subscribe(cohort => {
             this.selectedCohort = cohort;
         }))
@@ -92,13 +92,6 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
             .dimension(this.data.dim)
             .group(this.data.group)
             .title(() => this.data.name);
-        if(Array.isArray(this.data.initFilter)){
-            this.chart.filter([this.data.initFilter]);
-            this.filter = this.chart.filters();
-            this.cs.changes.next();
-            this.ClinicalFilterService.setFilters(this.data.name, this.chart.filters());
-            this.chart.renderGroup();
-        }
         if(this.ClinicalFilterService.filters[this.data.name] !== undefined){
             this.ClinicalFilterService.filters[this.data.name].forEach(filter => {
                 this.chart.filter(filter);
@@ -120,13 +113,6 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
                     .elasticX(true)
                     .dimension(this.data.dim)
                     .ordinalColors(['rgb(107, 174, 214)'])
-
-        if(Array.isArray(this.data.initFilter)){
-            this.chart.filter([this.data.initFilter]);
-            this.filter = this.chart.filters();
-            this.ClinicalFilterService.setFilters(this.data.name, this.chart.filters());
-            this.chart.renderGroup();
-        }
         if(this.ClinicalFilterService.filters[this.data.name]){
             this.ClinicalFilterService.filters[this.data.name].forEach(filter => {
                 this.chart.filter(filter);
@@ -149,14 +135,6 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
             .group(this.data.group);
 
         this.chart.yAxis().ticks(3);
-
-        if(Array.isArray(this.data.initFilter)){
-            this.chart.filter([this.data.initFilter]);
-            this.filter = this.chart.filters();
-            this.cs.changes.next();
-            this.ClinicalFilterService.setFilters(this.data.name, this.chart.filters());
-            this.chart.renderGroup();
-        }
 
         if(this.ClinicalFilterService.filters[this.data.name]){
             this.ClinicalFilterService.filters[this.data.name].forEach(filter => {

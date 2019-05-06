@@ -1,16 +1,12 @@
 import { Injectable, OnDestroy } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
-import { MAXIMUM_NUMBER_OF_VARIANTS } from './cttv-service';
 import { FAKE_CLINICAL_DATA } from "../mocks/clindata";
 import { FAKE_MITOCHONDRIA_DATA } from "../mocks/mitodata";
 import { FAKE_NEUROMUSCULAR_DATA } from "../mocks/neuromusculardata";
 import { VariantSearchService } from './variant-search-service';
-import * as seedrandom from 'seedrandom';
 import { Subscription } from 'rxjs/Subscription';
 import { of, throwError, Observable } from "rxjs";
 import { HttpClient } from '@angular/common/http';
-import { DEV } from "../shared/tempConfiguration";
-import { SearchOption } from '../model/search-option';
 import { environment } from '../../environments/environment';
 
 @Injectable()
@@ -19,18 +15,21 @@ export class ClinapiService implements OnDestroy {
     samplesGroup: any;
     changes = new Subject();
     subs: Subscription[] = [];
+    internalSampleIDs = new Subject<string[]>();
+    
 
     constructor(
         private vss: VariantSearchService,
         private http: HttpClient
     ) {
         this.subs.push(
-            this.changes.debounceTime(300).subscribe(v => {
+            this.changes.debounceTime(100).subscribe(v => {
                 this.vss.filter = this.filterVariants;
                 this.samples = this.samplesGroup
                     .all()
                     .filter(s => (s.value > 0 && s.key !== ""))
                     .map(s => s.key);
+                this.internalSampleIDs.next(this.samples);
                 
                 this.vss.getVariants(this.vss.lastQuery, this.samples.join());
             })
@@ -48,13 +47,9 @@ export class ClinapiService implements OnDestroy {
     getMitochondria(demo = false, authorize = false): Observable<any> {
         //if authorize to see clinical data
         if(authorize){
-            if(DEV){
-                return of<any>(FAKE_MITOCHONDRIA_DATA);
-            }else{
-                return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=mito&jwt=${localStorage.getItem('idToken')}`).map(res => {
-                    return JSON.parse(res.pheno)
-                });
-            }
+            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=mito&jwt=${localStorage.getItem('idToken')}`).map(res => {
+                return JSON.parse(res.pheno)
+            });
         }//if not authorize but want to see demo
         else if(demo){
             console.log("DEMO")
@@ -67,13 +62,9 @@ export class ClinapiService implements OnDestroy {
 
     getNeuromuscular(demo = false, authorize = false): Observable<any> {
         if(authorize){
-            if(DEV){
-                return of<any>(FAKE_NEUROMUSCULAR_DATA);
-            }else{
-                return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=neuromuscular&jwt=${localStorage.getItem('idToken')}`).map(res => {
-                    return JSON.parse(res.pheno)
-                });
-            }
+            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=neuromuscular&jwt=${localStorage.getItem('idToken')}`).map(res => {
+                return JSON.parse(res.pheno)
+            });
         }//if not authorize but want to see demo
         else if(demo){
             console.log("DEMO")

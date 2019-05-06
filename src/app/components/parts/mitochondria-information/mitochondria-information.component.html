@@ -17,9 +17,11 @@
       </div>
   </div>
   <div class="charts" *ngIf="charts">
+      <app-samples-list [sampleIDs]="externalIDs" [selectedSamples]="selectedExternalIDs" (onSelectSamples)="onSelectSamples($event)"></app-samples-list>
       <div *ngFor="let c of charts">
           <app-clinical-cohort-chart [style.display]="c.enabled ? 'block' : 'none'" [data]="c" (hiddenChart)="onHidden($event)" [showSampleText]="c.name === 'sampleId' ? showSampleText : false"></app-clinical-cohort-chart>
       </div>
   </div>
 </div>
-<div *ngIf="denied" class="message message-error">You do not have permission to view this data. You can view a <a (click)="viewDemo()">demo</a>.</div><div *ngIf="error" class="message message-error">An unexpected error occurred, please try again or contact support</div>
+<div *ngIf="denied" class="message message-error">You do not have permission to view this data. You can view a <a (click)="viewDemo()">demo</a>.</div>
+<div *ngIf="error" class="message message-error">An unexpected error occurred, please try again or contact support</div>

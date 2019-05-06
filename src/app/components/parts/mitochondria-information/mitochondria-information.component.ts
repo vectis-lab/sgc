@@ -18,7 +18,12 @@ import { Chart } from "../../../model/clinical-cohort-chart";
     encapsulation: ViewEncapsulation.None,
 })
 export class MitochondriaInformationComponent implements OnInit, AfterViewInit, OnDestroy {
+    //Internal IDs
     @Input() samples: string[] = [];
+    externalIDs: string [] = [];
+    selectedExternalIDs: string[] = [];
+    selectedInternalIDs: string[] = [];
+    sampleDim: any;
     error: any;
     denied = false;
     patients = [];
@@ -108,11 +113,19 @@ export class MitochondriaInformationComponent implements OnInit, AfterViewInit, 
                 this.getMitochondria(this.demo, false)
             }
         }));
+
+        this.subscriptions.push(this.cs.internalSampleIDs.subscribe(samples => {
+            this.selectedInternalIDs = samples;
+            this.selectedExternalIDs = this.patients
+                .filter(patient => this.selectedInternalIDs.includes(patient.internalIDs))
+                .map(patient => patient.externalIDs);
+        }));
     }
 
     getMitochondria(demo, authorize){
         this.cs.getMitochondria(demo, authorize).subscribe(v => {
-            this.patients = v;
+            this.patients = v.filter(sample => this.samples.includes(sample.internalIDs));
+            this.externalIDs = this.patients.map(sample => sample.externalIDs);
             this.ndx = crossfilter(this.patients);
             this.cs.samplesGroup = this.ndx.dimension((d) => {
                 return d.internalIDs;
@@ -120,9 +133,8 @@ export class MitochondriaInformationComponent implements OnInit, AfterViewInit, 
 
             const all = this.ndx.groupAll();
 
-            var sampleIdDim = this.ndx.dimension(function(d){ return d.externalIDs;})
-            var sampleIdGroup = sampleIdDim.group();
-            
+            this.sampleDim = this.ndx.dimension(function(d){ return d.externalIDs;})
+
             var genderDim = this.ndx.dimension(function(d){ return d.Gender;})
             var genderGroup = genderDim.group();
             
@@ -136,19 +148,6 @@ export class MitochondriaInformationComponent implements OnInit, AfterViewInit, 
             });
 
             this.charts = [
-                new Chart(
-                    'sampleId',
-                    'row',
-                    sampleIdDim,
-                    325,
-                    1200,
-                    true,
-                    sampleIdGroup,
-                    this.samples.map(sample => {
-                        const index = this.patients.findIndex(patient => patient.internalIDs === sample);
-                        return this.patients[index]['externalIDs']
-                    })
-                ),
                 new Chart(
                     'gender',
                     'pie',
@@ -202,6 +201,14 @@ export class MitochondriaInformationComponent implements OnInit, AfterViewInit, 
         });
     }
 
+    onSelectSamples(externalSamples){
+        this.selectedExternalIDs = externalSamples;
+        this.sampleDim.filter(sample => externalSamples.includes(sample));
+        dc.renderAll();
+        this.cs.changes.next();
+        this.cd.detectChanges();
+    }
+
     onHidden(chartName: string){
         this.charts.forEach(chart => {
             if(chart.name === chartName){
@@ -215,8 +222,8 @@ export class MitochondriaInformationComponent implements OnInit, AfterViewInit, 
         this.router.navigate(['/search/results', o]);
     }
 
-    resetFilters() {    
-        dc.filterAll();
+    resetFilters() {   
+        dc.filterAll(); 
         dc.renderAll();
         this.ClinicalFilterService.clearFilters();
     }
