@@ -16,7 +16,7 @@ export class SamplesListComponent implements OnInit {
   }
 
   resetFilter() {
-    this.selectedSamples = [];
+    this.onSelectSamples.emit(this.sampleIDs);
   }
 
   onSelect(samples){
