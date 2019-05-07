@@ -5,7 +5,7 @@
           selected out of <span class='total-count'></span> sample records.
       </div>
       <div class="actions">
-        <mat-slide-toggle style="vertical-align: middle;" [(ngModel)]="showSampleText">Samples text</mat-slide-toggle>
+        <mat-slide-toggle style="vertical-align: middle;" [(ngModel)]="showSampleCSV">Samples CSV</mat-slide-toggle>
         <mat-icon (click)="resetFilters()" matTooltip="Reset" matTooltipPosition="above" style="vertical-align: middle;">refresh</mat-icon>
         <mat-icon [matMenuTriggerFor]="menu" matTooltip="Add/Remove Filters" matTooltipPosition="above" style="vertical-align: middle;">toc</mat-icon>
           <mat-menu #menu="matMenu" class="my-full-width-menu">
@@ -17,7 +17,7 @@
       </div>
   </div>
   <div class="charts" *ngIf="charts">
-      <app-samples-list [sampleIDs]="externalIDs" [selectedSamples]="selectedExternalIDs" (onSelectSamples)="onSelectSamples($event)"></app-samples-list>
+      <app-samples-list [sampleIDs]="externalIDs" [selectedSamples]="selectedExternalIDs" (onSelectSamples)="onSelectSamples($event)" [showSampleCSV]="showSampleCSV" (onUpdateSamples)="onUpdateSamples($event)"></app-samples-list>
       <div *ngFor="let c of charts">
         <app-clinical-cohort-chart [style.display]="c.enabled ? 'block' : 'none'" [data]="c" (hiddenChart)="onHidden($event)" [showSampleText]="c.name === 'sampleId' ? showSampleText : false"></app-clinical-cohort-chart>
       </div>

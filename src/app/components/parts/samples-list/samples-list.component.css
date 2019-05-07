@@ -4,6 +4,10 @@
     margin: 0.8rem;
 }
 
+.content{
+    min-width: 340px;
+}
+
 .chart{
     margin-top: 1em;
 }

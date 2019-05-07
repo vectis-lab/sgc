@@ -32,7 +32,7 @@ export class MitochondriaInformationComponent implements OnInit, AfterViewInit, 
     params: any;
     subscriptions: Subscription[] = [];
     demo: boolean = false;
-    showSampleText: boolean = false;
+    showSampleCSV: boolean = false;
     /*chartOption = {
         title: {
           text: 'Test Echarts'
@@ -124,71 +124,13 @@ export class MitochondriaInformationComponent implements OnInit, AfterViewInit, 
 
     getMitochondria(demo, authorize){
         this.cs.getMitochondria(demo, authorize).subscribe(v => {
-            this.patients = v.filter(sample => this.samples.includes(sample.internalIDs));
-            this.externalIDs = this.patients.map(sample => sample.externalIDs);
-            this.ndx = crossfilter(this.patients);
-            this.cs.samplesGroup = this.ndx.dimension((d) => {
-                return d.internalIDs;
-            }).group();
+            this.patients = v;
+            let filteredPatients = this.patients.filter(sample => this.samples.includes(sample.internalIDs))
+            this.externalIDs = filteredPatients.map(sample => sample.externalIDs);
+            this.selectedExternalIDs = this.externalIDs;
+            this.ndx = crossfilter(filteredPatients);
 
-            const all = this.ndx.groupAll();
-
-            this.sampleDim = this.ndx.dimension(function(d){ return d.externalIDs;})
-
-            var genderDim = this.ndx.dimension(function(d){ return d.Gender;})
-            var genderGroup = genderDim.group();
-            
-            var conditionDim = this.ndx.dimension(function(d){ 
-                return d.Condition;
-            }, true);
-            var conditionGroup = conditionDim.group();
-            //This is needed for the filterhandler to work.
-            conditionDim = this.ndx.dimension(function(d){ 
-                return d.Condition;
-            });
-
-            this.charts = [
-                new Chart(
-                    'gender',
-                    'pie',
-                    genderDim,
-                    340,
-                    200,
-                    true,
-                    genderGroup,
-                ),
-                new Chart(
-                    'conditions',
-                    'row',
-                    conditionDim,
-                    325,
-                    700,
-                    true,
-                    conditionGroup,
-                    null,
-                    (dimension, filters) => {
-                        dimension.filter(null);   
-                        if (filters.length === 0)
-                            dimension.filter(null);
-                        else
-                            dimension.filterFunction(function (d) {
-                                if (_.difference(filters, d).length === 0) return true;
-                                return false; 
-                            });
-                        return filters;  
-                    },
-                ),
-
-            ];
-
-
-            dc.dataCount('.dc-data-count')
-            .dimension(this.ndx)
-            .group(all);
-
-            dc.renderAll();
-
-            this.cd.detectChanges();
+            this.loadCharts();
 
         },
         e => {
@@ -206,6 +148,83 @@ export class MitochondriaInformationComponent implements OnInit, AfterViewInit, 
         this.sampleDim.filter(sample => externalSamples.includes(sample));
         dc.renderAll();
         this.cs.changes.next();
+        this.cd.detectChanges();
+    }
+
+    onUpdateSamples(externalSamples){
+        let validExternalSamples = externalSamples.filter(sample => this.patients.map(p => p.externalIDs).includes(sample));
+        let filteredPatients = this.patients.filter(patient => validExternalSamples.includes(patient.externalIDs));
+        this.ndx = crossfilter(filteredPatients);
+        this.externalIDs = validExternalSamples;
+        this.selectedExternalIDs = validExternalSamples;
+        this.ClinicalFilterService.clearFilters();
+
+        this.loadCharts();
+        this.cs.changes.next();
+    }
+
+    loadCharts(){
+        this.cs.samplesGroup = this.ndx.dimension((d) => {
+            return d.internalIDs;
+        }).group();
+
+        const all = this.ndx.groupAll();
+
+        this.sampleDim = this.ndx.dimension(function(d){ return d.externalIDs;})
+
+        var genderDim = this.ndx.dimension(function(d){ return d.Gender;})
+        var genderGroup = genderDim.group();
+        
+        var conditionDim = this.ndx.dimension(function(d){ 
+            return d.Condition;
+        }, true);
+        var conditionGroup = conditionDim.group();
+        //This is needed for the filterhandler to work.
+        conditionDim = this.ndx.dimension(function(d){ 
+            return d.Condition;
+        });
+
+        this.charts = [
+            new Chart(
+                'gender',
+                'pie',
+                genderDim,
+                340,
+                200,
+                true,
+                genderGroup,
+            ),
+            new Chart(
+                'conditions',
+                'row',
+                conditionDim,
+                325,
+                700,
+                true,
+                conditionGroup,
+                null,
+                (dimension, filters) => {
+                    dimension.filter(null);   
+                    if (filters.length === 0)
+                        dimension.filter(null);
+                    else
+                        dimension.filterFunction(function (d) {
+                            if (_.difference(filters, d).length === 0) return true;
+                            return false; 
+                        });
+                    return filters;  
+                },
+            ),
+
+        ];
+
+
+        dc.dataCount('.dc-data-count')
+        .dimension(this.ndx)
+        .group(all);
+
+        dc.renderAll();
+
         this.cd.detectChanges();
     }
 

@@ -14,7 +14,7 @@ export class SamplesTextComponent implements OnInit {
   loadingSamplesFilter = false;
 
   constructor() { 
-    this.txtSamplesChanged.debounceTime(2000)
+    this.txtSamplesChanged.debounceTime(1500)
     .distinctUntilChanged()
     .subscribe(samples => {
       this.filterSamples.emit(samples);

@@ -7,8 +7,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class SamplesListComponent implements OnInit {
   @Input() sampleIDs : string[];
+  @Input() showSampleCSV : boolean;
   @Input() selectedSamples : string[];
   @Output() onSelectSamples = new EventEmitter<string[]>();
+  @Output() onUpdateSamples = new EventEmitter<string[]>();
 
   constructor() { }
 
@@ -21,6 +23,10 @@ export class SamplesListComponent implements OnInit {
 
   onSelect(samples){
     this.onSelectSamples.emit(samples);
+  }
+
+  filterCSV(samples){
+    this.onUpdateSamples.emit(samples.map(sample => sample.trim()));
   }
 
 }
