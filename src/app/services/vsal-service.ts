@@ -124,6 +124,9 @@ export class VsalService {
             .timeout(VSAL_TIMEOUT)
             .map((data) => {
                 if (data['error']) {
+                    if(data['error']['name'] === "JWT verification failed"){
+                        return new SampleRequest([], constants.PERMISSION_ERROR_MESSAGE);
+                    }
                     Raven.captureMessage("VSAL ERROR: " + data['error']);
                     return new SampleRequest([], constants.GENERIC_SERVICE_ERROR_MESSAGE);
                 }
@@ -195,6 +198,9 @@ export class VsalService {
             .timeout(VSAL_TIMEOUT)
             .map((data) => {
                 if (data['error']) {
+                    if(data['error']['name'] === "JWT verification failed"){
+                        return new VariantRequest([], constants.PERMISSION_ERROR_MESSAGE);
+                    }
                     Raven.captureMessage("VSAL ERROR: " + data['error']);
                     return new VariantRequest([], constants.GENERIC_SERVICE_ERROR_MESSAGE);
                 }
