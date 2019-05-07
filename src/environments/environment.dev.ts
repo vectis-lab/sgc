@@ -13,7 +13,7 @@ export const environment = {
     beaconNetworkUrl: 'https://beacon-network.org/api',
     // vsalUrl: 'http://localhost:3000',
     vsalUrl: 'https://sgc.garvan.org.au/ssvs/query',
-    vsalUrl2: 'https://129.94.15.179/vsal/core/find',
+    vsalUrl2: 'https://vsal.garvan.org.au/vsal/core/find',
     // elasticUrl: 'http://localhost:328v40',
     elasticUrl: 'https://dr-sgc.kccg.garvan.org.au/_elasticsearch',
     durlUrl: 'https://wt-ec1ac815dce38c76c2e7662693b82189-0.run.webtask.io/durl-dev',
