@@ -33,6 +33,9 @@ export class VariantSearchService {
                     if (this.filter) {
                         vr.variants = this.filter(vr.variants);
                     }
+                    if(this.samples.length < 1){
+                        vr.variants=[];
+                    }
                     return vr;
                 });
             })
