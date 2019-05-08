@@ -119,6 +119,7 @@ export class MitochondriaInformationComponent implements OnInit, AfterViewInit, 
             this.selectedExternalIDs = this.patients
                 .filter(patient => this.selectedInternalIDs.includes(patient.internalIDs))
                 .map(patient => patient.externalIDs);
+            this.cd.detectChanges();
         }));
     }
 
