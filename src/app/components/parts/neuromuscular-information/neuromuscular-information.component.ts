@@ -242,7 +242,7 @@ export class NeuromuscularInformationComponent implements AfterViewInit, OnDestr
                 'row',
                 serumCkDim,
                 340,
-                1000,
+                200,
                 false,
                 serumCkGroup
             ),

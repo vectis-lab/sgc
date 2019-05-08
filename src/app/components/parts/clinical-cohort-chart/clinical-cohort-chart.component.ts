@@ -105,6 +105,7 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
     initRowChart() {
         if(this.data.group.all().length > 8){
             this.scrolledRowChart = true;
+            this.data.height = this.data.group.all().length * 22
         }
         this.chart = dc.rowChart(`.chart .${this.data.name}`)                                                                           
                     .width(this.data.width)
