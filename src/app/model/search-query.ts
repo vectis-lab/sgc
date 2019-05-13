@@ -1,9 +1,9 @@
 import { SearchOption } from './search-option';
+import { Region } from './region';
 
-export class SearchQuery {
-    constructor(public chromosome: string,
-                public start: number,
-                public end: number,
-                public options: SearchOption[]) {
+export class SearchQueries {
+    constructor(public regions: Region[],
+                public options: SearchOption[]
+        ){
     }
 }

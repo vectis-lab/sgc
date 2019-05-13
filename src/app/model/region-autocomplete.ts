@@ -6,9 +6,8 @@ import { SampleSearch } from '../services/sample-search.service';
 import { VariantSummarySearchService } from '../services/variant-summary-search-service';
 import { Region } from './region';
 import { SearchOption } from './search-option';
-import { SearchQuery } from './search-query';
+import { SearchQueries } from './search-query';
 import { Position } from './position';
-
 export class RegionAutocomplete extends GenericAutocompleteResult<Region> {
     /*search(ss: SampleSearch, vsal: VariantSearchService, options: SearchOption[]): Promise<Variant[]> {
         return ss.getSamples(new SearchQuery(this.result.chromosome, this.result.start, this.result.end, options)).then(() => {
@@ -16,12 +15,12 @@ export class RegionAutocomplete extends GenericAutocompleteResult<Region> {
         })
     }*/
 
-    getSearchQueries(options: SearchOption[]): Promise<SearchQuery> {
-        return Promise.resolve(new SearchQuery(this.result.chromosome, this.result.start, this.result.end, options));
+    getRegion(): Promise<Region> {
+        return Promise.resolve(new Region(this.result.chromosome, this.result.start, this.result.end));
     }
 
     searchSummary(vsal2: VariantSummarySearchService, options: SearchOption[]): Promise<VariantSummary[]> {
-        return vsal2.getVariants(new SearchQuery(this.result.chromosome, this.result.start, this.result.end, options));
+        return vsal2.getVariants(new SearchQueries([new Region(this.result.chromosome, this.result.start, this.result.end)], options));
     }
 
     region(): Promise<Region> {

@@ -64,7 +64,6 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
     }
 
     ngAfterViewInit() {
-
     }
 
     ngOnDestroy() {

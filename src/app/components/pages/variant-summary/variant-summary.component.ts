@@ -2,7 +2,7 @@ import { ChangeDetectorRef, Component, OnDestroy, OnInit, ViewChild } from '@ang
 import { Subscription } from 'rxjs/Subscription';
 import { ActivatedRoute, Params } from '@angular/router';
 import { VariantSummarySearchService } from '../../../services/variant-summary-search-service';
-import { SearchQuery } from '../../../model/search-query';
+import { SearchQueries } from '../../../model/search-query';
 import { VariantSummary } from '../../../model/variant-summary';
 import { BeaconCache, BeaconSearchService } from '../../../services/beacon/beacon-search-service';
 import { Gene } from '../../../model/gene';
@@ -58,7 +58,7 @@ export class VariantSummaryComponent implements OnInit, OnDestroy {
             const reference = m[3];
             const alternate = m[4];
 
-            const sq = new SearchQuery(chromo, start, start, [new SearchOption('', 'returnAnnotations', [], 'true')]);
+            const sq = new SearchQueries([new Region (chromo, start, start)], [new SearchOption('', 'returnAnnotations', [], 'true')]);
             this.getVariant(sq, reference, alternate);
         } catch (e) {
             this.error = 'Could not find specified variant';
@@ -78,7 +78,7 @@ export class VariantSummaryComponent implements OnInit, OnDestroy {
         this.showBeacon = !this.showBeacon;
     }
 
-    private getVariant(sq: SearchQuery, reference: string, alternate: string) {
+    private getVariant(sq: SearchQueries, reference: string, alternate: string) {
         this.vss.getVariants(sq).then(variants => {
             this.loading = false;
             const vf = variants.filter((v) => v.alt === alternate && v.ref === reference);

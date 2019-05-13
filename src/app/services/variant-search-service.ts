@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { VsalService } from './vsal-service';
 import { Variant } from '../model/variant';
 import { Subject } from 'rxjs/Subject';
-import { SearchQuery } from '../model/search-query';
+import { SearchQueries } from '../model/search-query';
 import { VariantRequest } from '../model/variant-request';
 import { Region } from '../model/region';
 import { of, Observable } from "rxjs";
@@ -17,24 +17,21 @@ export class VariantSearchService {
     results: Observable<VariantRequest>;
     errors = new Subject<any>();
     commenced = false;
-    lastQuery: SearchQuery[];
+    lastQuery: SearchQueries;
     startingRegion: Region;
     filter: any = null;
     samples: string = "";
-    private searchQuery = new Subject<SearchQuery[]>();
+    private searchQuery = new Subject<SearchQueries>();
     private variantSearch = new VariantSearch();
 
     constructor(private vsal: VsalService
     ) {
         this.results = this.searchQuery
             .debounceTime(DEBOUNCE_TIME)
-            .switchMap((query: SearchQuery[]) => {
+            .switchMap((query: SearchQueries) => {
                 return this.vsal.getVariants(query, this.samples).map((vr: VariantRequest) => {
                     if (this.filter) {
                         vr.variants = this.filter(vr.variants);
-                    }
-                    if(this.samples.length < 1){
-                        vr.variants=[];
                     }
                     return vr;
                 });
@@ -51,7 +48,7 @@ export class VariantSearchService {
         });
     }
 
-    getVariants(query: SearchQuery[], samples): Promise<Variant[]> { 
+    getVariants(query: SearchQueries, samples): Promise<Variant[]> { 
         this.lastQuery = query;
         this.samples = samples;
         const promise = new Promise<any[]>((resolve, reject) => {

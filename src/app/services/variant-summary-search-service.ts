@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { VsalService } from './vsal-service';
 import { VariantSummary } from '../model/variant-summary';
 import { Subject } from 'rxjs/Subject';
-import { SearchQuery } from '../model/search-query';
+import { SearchQueries } from '../model/search-query';
 import { VariantSearch } from '../shared/variant-search';
 import { VariantSummaryRequest } from '../model/variant-summary-request';
 import { Region } from '../model/region';
@@ -16,16 +16,16 @@ export class VariantSummarySearchService {
     results: Observable<VariantSummaryRequest>;
     errors = new Subject<any>();
     commenced = false;
-    lastQuery: SearchQuery;
+    lastQuery: SearchQueries;
     startingRegion: Region;
     filter: any = null;
-    private searchQuery = new Subject<SearchQuery>();
+    private searchQuery = new Subject<SearchQueries>();
     private variantSearch = new VariantSearch();
 
     constructor(private vsal: VsalService) {
         this.results = this.searchQuery
             .debounceTime(DEBOUNCE_TIME)
-            .switchMap((query: SearchQuery) => {
+            .switchMap((query: SearchQueries) => {
                 return this.vsal.getVariantsSummary(query).map((vr: VariantSummaryRequest) => { 
                     if (this.filter) {
                         vr.variants = this.filter(vr.variants);
@@ -40,25 +40,25 @@ export class VariantSummarySearchService {
             .share();
         this.results.subscribe((cs) => {
             if (!this.startingRegion) {
-                this.startingRegion = new Region(this.lastQuery.chromosome, this.lastQuery.start, this.lastQuery.end);
+                this.startingRegion = new Region(this.lastQuery.regions[0].chromosome, this.lastQuery.regions[0].start, this.lastQuery.regions[0].end);
             }
             this.variants = cs.variants;
             this.commenced = true;
         });
     }
 
-    getVariants(query: SearchQuery): Promise<VariantSummary[]> {
+    getVariants(query: SearchQueries): Promise<VariantSummary[]> {
         this.lastQuery = query;
         return this.variantSearch.getVariants(query, this.results, this.errors, this.searchQuery)
     }
 
-    getCurrentRegion = (): Region => this.variantSearch.getCurrentRegion(this.lastQuery);
+    getCurrentRegion = (): Region => this.variantSearch.getCurrentRegion(this.lastQuery.regions[0]);
 
 
-    getSmallerRegionString= () => this.variantSearch.getSmallerRegionString(this.lastQuery);
+    getSmallerRegionString= () => this.variantSearch.getSmallerRegionString(this.lastQuery.regions[0]);
 
     hasMoved = () => {
-        return this.variantSearch.hasMoved(this.startingRegion, this.lastQuery)
+        return this.variantSearch.hasMoved(this.startingRegion, this.lastQuery.regions[0])
     };
 }
 

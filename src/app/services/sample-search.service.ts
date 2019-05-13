@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { VsalService } from './vsal-service';
 import { Subject } from 'rxjs/Subject';
-import { SearchQuery } from '../model/search-query';
+import { SearchQueries } from '../model/search-query';
 import { Region } from '../model/region';
 import { of, Observable } from "rxjs";
 import { SampleRequest } from '../model/sample-request';
@@ -14,14 +14,14 @@ export class SampleSearch {
     results: Observable<SampleRequest>;
     errors = new Subject<any>();
     commenced = false;
-    lastQuery: SearchQuery[];
+    lastQuery: SearchQueries;
     startingRegion: Region;
-    private searchQuery = new Subject<SearchQuery[]>();
+    private searchQuery = new Subject<SearchQueries>();
 
     constructor(private vsal: VsalService) {
         this.results = this.searchQuery
         .debounceTime(DEBOUNCE_TIME)
-        .switchMap((query: SearchQuery[]) => {
+        .switchMap((query: SearchQueries) => {
             return this.vsal.getSamples(query).map((sr: SampleRequest) => {
                 return sr;
             });
@@ -38,7 +38,7 @@ export class SampleSearch {
         });
      }
 
-    getSamples(query: SearchQuery[]) {
+    getSamples(query: SearchQueries) {
         this.lastQuery = query;
         const promise = new Promise<any[]>((resolve, reject) => {
             this.results.take(1).subscribe(

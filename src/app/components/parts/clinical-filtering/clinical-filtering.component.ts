@@ -7,11 +7,10 @@ import { SampleSearch } from '../../../services/sample-search.service';
 import { Subscription } from 'rxjs/Subscription';
 import { SearchBarService, QUERY_LIST_ERROR } from '../../../services/search-bar-service';
 import { VariantAutocompleteResult } from '../../../model/autocomplete-result';
-import { SearchQuery } from '../../../model/search-query';
-import { SearchOption } from '../../../model/search-option';
+import { SearchQueries } from '../../../model/search-query';
+import { Region } from '../../../model/region';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ClinicalFilteringService } from '../../../services/clinical-filtering.service';
-import { SearchResultsComponent } from '../search-results/search-results.component';
 
 @Component({
     selector: 'app-clinical-filtering',
@@ -72,11 +71,11 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
 
         this.loadingVariants = true;
 
-        const allQueries = this.autocomplete.map(ac => ac.getSearchQueries(this.searchBarService.options))
+        const allQueries = this.autocomplete.map(ac => ac.getRegion())
 
-        Promise.all(allQueries).then((queries: SearchQuery[]) => {
-            return this.sampleSearch.getSamples(queries).then((result) => {
-                return this.searchService.getVariants(queries, result.join())
+        Promise.all(allQueries).then((regions: Region[]) => {
+            return this.sampleSearch.getSamples(new SearchQueries(regions, this.searchBarService.options)).then((result) => {
+                return this.searchService.getVariants(new SearchQueries(regions, this.searchBarService.options), result.join())
                 .then(() => {
                     this.loadingVariants = false;
                     this.cd.detectChanges();

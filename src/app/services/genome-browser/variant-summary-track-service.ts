@@ -161,7 +161,7 @@ export class VariantSummaryTrackService implements TrackService {
         };
         return tnt.track.data.async()
             .retriever((loc: any) => {
-                const region = new Region(String(this.searchService.lastQuery.chromosome),
+                const region = new Region(String(this.searchService.lastQuery.regions[0].chromosome),
                     loc.from,
                     loc.to
                 );

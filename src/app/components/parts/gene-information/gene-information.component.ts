@@ -1,12 +1,9 @@
-import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { VariantSummarySearchService } from '../../../services/variant-summary-search-service';
 import { VariantSummary } from '../../../model/variant-summary';
 import { SearchBarService } from '../../../services/search-bar-service';
 import { Gene } from '../../../model/gene';
 import { Region } from '../../../model/region';
-import { VariantSummaryRequest } from '../../../model/variant-summary-request';
-import { RegionService } from '../../../services/autocomplete/region-service';
-import { Subscription } from 'rxjs/Subscription';
 import { GenericAutocompleteResult } from '../../../model/autocomplete-result';
 
 @Component({

@@ -4,7 +4,7 @@ import { constants } from '../app.constants';
 import { Variant } from '../model/variant';
 import { VariantSummary } from '../model/variant-summary'
 import { environment } from '../../environments/environment';
-import { SearchQuery } from '../model/search-query';
+import { SearchQueries } from '../model/search-query';
 import { VariantRequest } from '../model/variant-request';
 import { SampleRequest } from '../model/sample-request';
 import { VariantSummaryRequest } from '../model/variant-summary-request';
@@ -19,10 +19,10 @@ export class VsalService {
     constructor(private http: HttpClient) {
     }
 
-    getVariants(query: SearchQuery[], samples): Observable<VariantRequest> {
-        const chromosome = query.map(q => q.chromosome).join();
-        const start = query.map(q => q.start).join();
-        const end = query.map(q => q.end).join();
+    getVariants(query: SearchQueries, samples): Observable<VariantRequest> {
+        const chromosome = query.regions.map(q => q.chromosome).join();
+        const start = query.regions.map(q => q.start).join();
+        const end = query.regions.map(q => q.end).join();
         let urlParams = new HttpParams()
             .append('chromosome', chromosome)
             .append('dataset', 'mito')
@@ -36,7 +36,7 @@ export class VsalService {
             urlParams = urlParams.append('samples', samples);
         }
 
-        query[0].options.forEach(o => {
+        query.options.forEach(o => {
             if (o.key) {
                 urlParams = urlParams.append(o.key, o.getValue());
             }
@@ -56,11 +56,11 @@ export class VsalService {
         });
     }
 
-    getVariantsSummary(query: SearchQuery): Observable<VariantSummaryRequest> {
+    getVariantsSummary(query: SearchQueries): Observable<VariantSummaryRequest> {
         let urlParams = new HttpParams()
-            .append('chr', query.chromosome)
-            .append('start', String(query.start))
-            .append('end', String(query.end))
+            .append('chr', query.regions[0].chromosome)
+            .append('start', String(query.regions[0].start))
+            .append('end', String(query.regions[0].end))
             .append('limit', VSAL_VARIANT_LIMIT.toString())
             .append('sortBy', 'start')
             .append('descend', 'false')
@@ -88,10 +88,10 @@ export class VsalService {
         });
     }
 
-    getSamples(query: SearchQuery[]): Observable<SampleRequest> {
-        const chromosome = query.map(q => q.chromosome).join();
-        const start = query.map(q => q.start).join();
-        const end = query.map(q => q.end).join();
+    getSamples(query: SearchQueries): Observable<SampleRequest> {
+        const chromosome = query.regions.map(q => q.chromosome).join();
+        const start = query.regions.map(q => q.start).join();
+        const end = query.regions.map(q => q.end).join();
 
         let urlParams = new HttpParams()
             .append('chromosome', chromosome)
@@ -110,7 +110,7 @@ export class VsalService {
             jwt: localStorage.getItem('idToken')
         }*/
 
-        query[0].options.forEach(o => {
+        query.options.forEach(o => {
             if (o.key) {
                 urlParams = urlParams.append(o.key, o.getValue())
             }

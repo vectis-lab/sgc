@@ -61,16 +61,16 @@ export class GenomeBrowserSummaryComponent implements AfterViewInit, OnDestroy {
 
 drawBoard() {
     const that = this;
-    const end = this.searchService.lastQuery.end - this.searchService.lastQuery.start < MIN_REGION_SIZE ?
-    this.searchService.lastQuery.start + MIN_REGION_SIZE : this.searchService.lastQuery.end;
+    const end = this.searchService.lastQuery.regions[0].end - this.searchService.lastQuery.regions[0].start < MIN_REGION_SIZE ?
+    this.searchService.lastQuery.regions[0].start + MIN_REGION_SIZE : this.searchService.lastQuery.regions[0].end;
 
     this.genomeBrowser = tnt.genome()
         .species('human')
-        .chr(this.searchService.lastQuery.chromosome)
-        .from(this.searchService.lastQuery.start).to(end)
+        .chr(this.searchService.lastQuery.regions[0].chromosome)
+        .from(this.searchService.lastQuery.regions[0].start).to(end)
         .zoom_out(MAX_REGION_SIZE)
         .width(this.width)
-        .max_coord(this.elastic.getChromosome(this.searchService.lastQuery.chromosome).toPromise());
+        .max_coord(this.elastic.getChromosome(this.searchService.lastQuery.regions[0].chromosome).toPromise());
 
     const rest = this.genomeBrowser.rest();
     rest.domain(environment.ensemblDomain);

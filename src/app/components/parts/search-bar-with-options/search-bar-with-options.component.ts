@@ -17,7 +17,8 @@ export class SearchBarWithOptionsComponent implements AfterViewInit {
     @Input() example2 = '22:46546424-46639653';
     @Input() action = (query) => {
         this.searchBarService.query = query;
-        const obj = {query: query, timestamp: Date.now()};
+        const cohort = this.searchBarService.options[0].getValue();
+        const obj = {query: query, cohort: cohort, timestamp: Date.now()};
         this.clinicalFilteringService.clearFilters();
         this.router.navigate(['/search/results', obj]);
     };
