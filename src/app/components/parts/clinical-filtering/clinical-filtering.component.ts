@@ -29,7 +29,7 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
     maximumNumberOfVariants = MAXIMUM_NUMBER_OF_VARIANTS;
     selectedTabIndex = 0;
     timeout = null;
-    selectedCohort = "";
+    selectedCohort = this.searchBarService.options[0].getValue();
 
 
     constructor(public searchService: VariantSearchService,
@@ -55,10 +55,6 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
         this.subscriptions.push(this.sampleSearch.results.subscribe(s => {
             this.ids = s.samples;
             this.cd.detectChanges();
-        }));
-
-        this.subscriptions.push(this.searchBarService.cohort.subscribe((cohort) => {
-            this.selectedCohort = cohort;
         }));
 
         this.subscriptions.push(this.searchService.errors.subscribe((e) => {

@@ -10,7 +10,6 @@ import { ElasticGeneSearch } from './autocomplete/elastic-gene-search-service';
 import { PositionService } from './autocomplete/position-service';
 import { of, Observable, combineLatest } from "rxjs";
 import * as GenePanels from '../shared/genePanels';
-import { Term } from '../model/term';
 
 export const QUERY_LIST_ERROR = "You query is incorrect. Please check your query and try again"
 
@@ -22,11 +21,6 @@ export class SearchBarService {
     options: SearchOption[];
     autocompleteError = '';
     searchedEvent = new Subject();
-    private cohortSource = new BehaviorSubject<string>("");
-    cohort = this.cohortSource.asObservable();
-    //Temporary cohort is basically cohortSource, this is used to prevent updating all Cohort text before user do the search
-    private tempCohortSource = new BehaviorSubject<string>("Mitochondria");
-    tempCohort = this.tempCohortSource.asObservable();
 
     private startGreaterThanEndSource = new BehaviorSubject<boolean>(false);
     startGreaterThanEnd = this.startGreaterThanEndSource.asObservable();
@@ -53,6 +47,7 @@ export class SearchBarService {
 
     searchWithParams(params: Params): Promise<VariantAutocompleteResult<any>> {
         const query = params['query'];
+        const cohort = params['cohort'];
         if (!query) {
             return <any>Promise.resolve();
         }
@@ -63,7 +58,6 @@ export class SearchBarService {
         }
 
         this.searchedEvent.next();
-        this.setCohort(this.tempCohortSource.getValue());
 
         const handleAutocompleteError = (e: string): Promise<any> => {
             this.autocompleteError = e;
@@ -111,6 +105,7 @@ export class SearchBarService {
     searchWithMultipleParams(params: Params): Promise<VariantAutocompleteResult<any>[]> {
         const query = params['query'];
         const panel = params['panel'];
+        const cohort = params['cohort'];
 
         if (!query && !panel) {
             return <any>Promise.resolve();
@@ -126,7 +121,6 @@ export class SearchBarService {
         }
 
         this.searchedEvent.next();
-        this.setCohort(this.tempCohortSource.getValue());
 
         const handleAutocompleteError = (e: string): Promise<any> => {
             this.autocompleteError = e;
@@ -156,14 +150,6 @@ export class SearchBarService {
             return bestMatches;
         });
 
-    }
-
-    setCohort(selectedCohort){
-        this.cohortSource.next(selectedCohort);
-    }
-
-    setTempCohort(selectedCohort){
-        this.tempCohortSource.next(selectedCohort);
     }
 
     setGeneList(value){

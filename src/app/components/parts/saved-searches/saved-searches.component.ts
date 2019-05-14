@@ -26,7 +26,7 @@ export class SavedSearchesComponent implements OnInit, OnDestroy {
   subscriptions: Subscription[] = [];
   filters = {};
   savedSearches = {};
-  selectedCohort = "";
+  selectedCohort = this.searchBarService.options[0].getValue();
   objectKeys= Object.keys;
   @ViewChild("saveSearchForm") saveSearchForm: NgForm;
   selectedSaveSearch: string;
@@ -41,9 +41,6 @@ export class SavedSearchesComponent implements OnInit, OnDestroy {
   matcher = new MyErrorStateMatcher();
 
   ngOnInit() {
-    this.subscriptions.push(this.searchBarService.cohort.subscribe(cohort => {
-        this.selectedCohort = cohort;
-    }))
 
     this.subscriptions.push(this.clinicalFilteringService.filters.subscribe(filter => {
         this.filters = filter

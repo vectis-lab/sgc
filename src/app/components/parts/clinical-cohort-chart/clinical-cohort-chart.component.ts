@@ -24,7 +24,7 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
     @Output() hiddenChart = new EventEmitter<string>();
     hover: boolean = false;
     scrolledRowChart: boolean = false;
-    selectedCohort = "";
+    selectedCohort = this.searchBarService.options[0].getValue();
 
     constructor(private cd: ChangeDetectorRef, 
                 private cs: ClinapiService, 
@@ -42,10 +42,7 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
         }else if (this.data.type === "bar"){
             this.initBarChart();
         }
- 
-        this.subscriptions.push(this.searchBarService.cohort.subscribe(cohort => {
-            this.selectedCohort = cohort;
-        }))
+
 
         this.chart.on("filtered", (c) => {
             this.cd.detectChanges();

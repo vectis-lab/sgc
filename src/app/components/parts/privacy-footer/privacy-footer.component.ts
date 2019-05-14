@@ -13,22 +13,14 @@ import { SearchBarService } from '../../../services/search-bar-service';
 export class PrivacyFooterComponent implements OnInit, OnDestroy {
     year = '2019';
     subscriptions: Subscription[] = [];
-    selectedCohort = '';
+    selectedCohort = this.searchBarService.options[0].getValue().toLowerCase();
 
 
     constructor(private router: Router, private searchBarService: SearchBarService) {
     }
 
     ngOnInit() {
-        this.subscriptions.push(this.searchBarService.cohort.subscribe(cohort =>{
-            if(cohort === "Mitochondria"){
-                this.selectedCohort = 'mitochondria';
-            }else if(cohort === "Neuromuscular"){
-                this.selectedCohort = 'neuromuscular';
-            }else{
-                this.selectedCohort = '';
-            }
-        }))
+
     }
     
     goToCohortAuthor(){

@@ -24,7 +24,7 @@ export class SearchComponent implements  OnInit, OnDestroy {
     searching = false;
     sb: MatSnackBarRef<SnackbarDemoComponent> = null;
     private mediaMatcher: MediaQueryList = matchMedia(`(max-width: ${SMALL_WIDTH}px)`);
-    selectedOption: string;
+    selectedOption: string = this.searchBarService.options[0].getValue();
     authors = [];
 
     constructor(public searchBarService: SearchBarService,
@@ -40,16 +40,11 @@ export class SearchComponent implements  OnInit, OnDestroy {
         }
     }
     ngOnInit(): void {
-        this.subscriptions.push(this.searchBarService.cohort.subscribe(cohort =>{
-            this.selectedOption = cohort;
-            if(cohort === "Mitochondria"){
-                this.authors = Mitochondria;
-            }else if(cohort === "Neuromuscular"){
-                this.authors = Neuromuscular;
-            }
-        }))
-
-        this.selectedOption = this.searchBarService.options[0].getValue();
+        if(this.searchBarService.options[0].getValue() === "Mitochondria"){
+            this.authors = Mitochondria;
+        }else if(this.searchBarService.options[0].getValue() === "Neuromuscular"){
+            this.authors = Neuromuscular
+        }
 
         this.auth.getSavedSearches().subscribe(savedSearches => {
             this.clinicalFilteringService.initSaveSearches(savedSearches);
@@ -61,7 +56,7 @@ export class SearchComponent implements  OnInit, OnDestroy {
         }
 
     parseParams(params: Params) {
-        if (!params['query']) {
+        if (!params['query'] && !params['cohort']) {
             return;
         }
         if (params['demo']) {

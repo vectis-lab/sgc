@@ -26,7 +26,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
     maximumNumberOfVariants = MAXIMUM_NUMBER_OF_VARIANTS;
     selectedTabIndex = 0;
     timeout = null;
-    selectedCohort = "";
+    selectedCohort = this.searchBarService.options[0].getValue();
 
     constructor(public searchSummaryService: VariantSummarySearchService,
                 private cd: ChangeDetectorRef,
@@ -45,9 +45,6 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
             this.cd.detectChanges();
         }));
 
-        this.subscriptions.push(this.searchBarService.cohort.subscribe((cohort) => {
-            this.selectedCohort = cohort;
-        }));
         
         this.loadingVariantsSummary = true;
 

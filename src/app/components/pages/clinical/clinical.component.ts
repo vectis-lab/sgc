@@ -56,7 +56,7 @@ export class ClinicalComponent implements OnInit, OnDestroy {
       }
 
   parseParams(params: Params) {
-      if (!params['query'] && !params['panel']) {
+      if (!params['query'] && !params['cohort'] && !params['panel']) {
           return;
       }
       if (params['demo']) {
