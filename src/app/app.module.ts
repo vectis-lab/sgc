@@ -119,6 +119,7 @@ import { GenePanelsComponent } from './components/parts/gene-panels/gene-panels.
 import { SamplesTextComponent } from './components/parts/samples-text/samples-text.component';
 import { VariantSummaryComponent } from './components/pages/variant-summary/variant-summary.component';
 import { SamplesListComponent } from './components/parts/samples-list/samples-list.component';
+import { AcutecareInformationComponent } from './components/parts/acutecare-information/acutecare-information.component';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -229,6 +230,7 @@ export class RavenErrorHandler implements ErrorHandler {
         SamplesTextComponent,
         VariantSummaryComponent,
         SamplesListComponent,
+        AcutecareInformationComponent,
     ],
     entryComponents: [
         SignUpComponent,

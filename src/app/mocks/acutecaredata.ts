@@ -1,6 +1,6 @@
 export const FAKE_ACUTE_CARE_DATA = [
     {
-      "externalIDs:": "A0131001",
+      "externalIDs": "A0131001",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -40,7 +40,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "16G004037"
     },
     {
-      "externalIDs:": "A0131002",
+      "externalIDs": "A0131002",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -80,7 +80,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "17W000223"
     },
     {
-      "externalIDs:": "A0131003",
+      "externalIDs": "A0131003",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -120,7 +120,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "17W000281"
     },
     {
-      "externalIDs:": "A0131004",
+      "externalIDs": "A0131004",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -160,7 +160,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "17W000284"
     },
     {
-      "externalIDs:": "A0131005",
+      "externalIDs": "A0131005",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -200,7 +200,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "17W000334"
     },
     {
-      "externalIDs:": "A0131006",
+      "externalIDs": "A0131006",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -240,7 +240,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "17W000354"
     },
     {
-      "externalIDs:": "A0131007",
+      "externalIDs": "A0131007",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -280,7 +280,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "17W000597"
     },
     {
-      "externalIDs:": "A0131008",
+      "externalIDs": "A0131008",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -320,7 +320,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "17W000672"
     },
     {
-      "externalIDs:": "A0131009",
+      "externalIDs": "A0131009",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -360,7 +360,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "17W000742"
     },
     {
-      "externalIDs:": "A0131010",
+      "externalIDs": "A0131010",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -400,7 +400,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "17W000831"
     },
     {
-      "externalIDs:": "A0131011",
+      "externalIDs": "A0131011",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Checked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -440,7 +440,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "17W000873"
     },
     {
-      "externalIDs:": "A0131012",
+      "externalIDs": "A0131012",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -480,7 +480,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "17W000934"
     },
     {
-      "externalIDs:": "A0131013",
+      "externalIDs": "A0131013",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -520,7 +520,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "17W000990"
     },
     {
-      "externalIDs:": "A0131014",
+      "externalIDs": "A0131014",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -560,7 +560,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "17W001121"
     },
     {
-      "externalIDs:": "A0131015",
+      "externalIDs": "A0131015",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -600,7 +600,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "17W001127"
     },
     {
-      "externalIDs:": "A0131016",
+      "externalIDs": "A0131016",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -640,7 +640,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "17W001129"
     },
     {
-      "externalIDs:": "A0131017",
+      "externalIDs": "A0131017",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -680,7 +680,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "17W001142"
     },
     {
-      "externalIDs:": "A0131018",
+      "externalIDs": "A0131018",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -720,7 +720,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "17W001163"
     },
     {
-      "externalIDs:": "A0131019",
+      "externalIDs": "A0131019",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -760,7 +760,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "18W000014"
     },
     {
-      "externalIDs:": "A0131020",
+      "externalIDs": "A0131020",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -800,7 +800,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "18W000052"
     },
     {
-      "externalIDs:": "A0131021",
+      "externalIDs": "A0131021",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -840,7 +840,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "18W000061"
     },
     {
-      "externalIDs:": "A0131022",
+      "externalIDs": "A0131022",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -880,7 +880,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "18W000088"
     },
     {
-      "externalIDs:": "A0131023",
+      "externalIDs": "A0131023",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -920,7 +920,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "18W000089"
     },
     {
-      "externalIDs:": "A0131024",
+      "externalIDs": "A0131024",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -960,7 +960,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "18W000252"
     },
     {
-      "externalIDs:": "A0131025",
+      "externalIDs": "A0131025",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Checked",
@@ -1000,7 +1000,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "18W000303"
     },
     {
-      "externalIDs:": "A0131026",
+      "externalIDs": "A0131026",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Checked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -1040,7 +1040,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "18W000388"
     },
     {
-      "externalIDs:": "A0131027",
+      "externalIDs": "A0131027",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -1080,7 +1080,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "18W000391"
     },
     {
-      "externalIDs:": "A0131028",
+      "externalIDs": "A0131028",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -1120,7 +1120,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "18W000394"
     },
     {
-      "externalIDs:": "A0131029",
+      "externalIDs": "A0131029",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Checked",
@@ -1160,7 +1160,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "18W000543"
     },
     {
-      "externalIDs:": "A0131030",
+      "externalIDs": "A0131030",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Checked",
@@ -1200,7 +1200,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": "18W000646"
     },
     {
-      "externalIDs:": "A0131031",
+      "externalIDs": "A0131031",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -1240,7 +1240,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0131032",
+      "externalIDs": "A0131032",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -1280,7 +1280,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0131033",
+      "externalIDs": "A0131033",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -1320,7 +1320,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0131034",
+      "externalIDs": "A0131034",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -1360,7 +1360,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0131035",
+      "externalIDs": "A0131035",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -1400,7 +1400,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0131036",
+      "externalIDs": "A0131036",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Checked",
@@ -1440,7 +1440,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0131037",
+      "externalIDs": "A0131037",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -1480,7 +1480,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0131038",
+      "externalIDs": "A0131038",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -1520,7 +1520,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0331001",
+      "externalIDs": "A0331001",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Checked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -1560,7 +1560,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0331002",
+      "externalIDs": "A0331002",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -1600,7 +1600,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0331004",
+      "externalIDs": "A0331004",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -1640,7 +1640,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0331005",
+      "externalIDs": "A0331005",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -1680,7 +1680,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0331006",
+      "externalIDs": "A0331006",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -1720,7 +1720,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0331007",
+      "externalIDs": "A0331007",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -1760,7 +1760,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0331008",
+      "externalIDs": "A0331008",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Checked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -1800,7 +1800,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0331009",
+      "externalIDs": "A0331009",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -1840,7 +1840,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0331010",
+      "externalIDs": "A0331010",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -1880,7 +1880,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0331011",
+      "externalIDs": "A0331011",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -1920,7 +1920,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0331012",
+      "externalIDs": "A0331012",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -1960,7 +1960,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0331013",
+      "externalIDs": "A0331013",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -2000,7 +2000,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0331014",
+      "externalIDs": "A0331014",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -2040,7 +2040,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0331015",
+      "externalIDs": "A0331015",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -2080,7 +2080,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0331016",
+      "externalIDs": "A0331016",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -2120,7 +2120,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0331017",
+      "externalIDs": "A0331017",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -2160,7 +2160,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0331018",
+      "externalIDs": "A0331018",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Checked",
@@ -2200,7 +2200,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0331019",
+      "externalIDs": "A0331019",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -2240,7 +2240,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0331020",
+      "externalIDs": "A0331020",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -2280,7 +2280,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0331021",
+      "externalIDs": "A0331021",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -2320,7 +2320,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0331022",
+      "externalIDs": "A0331022",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -2360,7 +2360,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0331023",
+      "externalIDs": "A0331023",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Checked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -2400,7 +2400,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0331024",
+      "externalIDs": "A0331024",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Checked",
@@ -2440,7 +2440,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0431001",
+      "externalIDs": "A0431001",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -2480,7 +2480,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0431002",
+      "externalIDs": "A0431002",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -2520,7 +2520,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0431003",
+      "externalIDs": "A0431003",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -2560,7 +2560,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0431004",
+      "externalIDs": "A0431004",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -2600,7 +2600,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0431005",
+      "externalIDs": "A0431005",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -2640,7 +2640,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0831001",
+      "externalIDs": "A0831001",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -2680,7 +2680,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0831002",
+      "externalIDs": "A0831002",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -2720,7 +2720,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0831003",
+      "externalIDs": "A0831003",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -2760,7 +2760,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0831004",
+      "externalIDs": "A0831004",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -2800,7 +2800,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0831005",
+      "externalIDs": "A0831005",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -2840,7 +2840,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0831006",
+      "externalIDs": "A0831006",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Checked",
@@ -2880,7 +2880,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0831007",
+      "externalIDs": "A0831007",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Checked",
@@ -2920,7 +2920,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A0831008",
+      "externalIDs": "A0831008",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Checked",
@@ -2960,7 +2960,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1131001",
+      "externalIDs": "A1131001",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -3000,7 +3000,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1131002",
+      "externalIDs": "A1131002",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -3040,7 +3040,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1131003",
+      "externalIDs": "A1131003",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Checked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -3080,7 +3080,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1131004",
+      "externalIDs": "A1131004",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Checked",
@@ -3120,7 +3120,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1131005",
+      "externalIDs": "A1131005",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -3160,7 +3160,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1131006",
+      "externalIDs": "A1131006",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -3200,7 +3200,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1431001",
+      "externalIDs": "A1431001",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -3240,7 +3240,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1431002",
+      "externalIDs": "A1431002",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -3280,7 +3280,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1431003",
+      "externalIDs": "A1431003",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -3320,7 +3320,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1431004",
+      "externalIDs": "A1431004",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Checked",
@@ -3360,7 +3360,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1431005",
+      "externalIDs": "A1431005",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -3400,7 +3400,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1431006",
+      "externalIDs": "A1431006",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -3440,7 +3440,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1431007",
+      "externalIDs": "A1431007",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Checked",
@@ -3480,7 +3480,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1431008",
+      "externalIDs": "A1431008",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Checked",
@@ -3520,7 +3520,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1431009",
+      "externalIDs": "A1431009",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -3560,7 +3560,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1431010",
+      "externalIDs": "A1431010",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -3600,7 +3600,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1431011",
+      "externalIDs": "A1431011",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -3640,7 +3640,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1431012",
+      "externalIDs": "A1431012",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -3680,7 +3680,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1431013",
+      "externalIDs": "A1431013",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -3720,7 +3720,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1431014",
+      "externalIDs": "A1431014",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -3760,7 +3760,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1431015",
+      "externalIDs": "A1431015",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -3800,7 +3800,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1431016",
+      "externalIDs": "A1431016",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -3840,7 +3840,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1431017",
+      "externalIDs": "A1431017",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Checked",
@@ -3880,7 +3880,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1431018",
+      "externalIDs": "A1431018",
       "Sex of patient:": "",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -3920,7 +3920,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1431019",
+      "externalIDs": "A1431019",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -3960,7 +3960,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1531001",
+      "externalIDs": "A1531001",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -4000,7 +4000,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A1531002",
+      "externalIDs": "A1531002",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -4040,7 +4040,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A2131001",
+      "externalIDs": "A2131001",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Checked",
@@ -4080,7 +4080,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A2131002",
+      "externalIDs": "A2131002",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -4120,7 +4120,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A2131003",
+      "externalIDs": "A2131003",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -4160,7 +4160,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A2131004",
+      "externalIDs": "A2131004",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Checked",
@@ -4200,7 +4200,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A2131005",
+      "externalIDs": "A2131005",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Checked",
@@ -4240,7 +4240,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A2831001",
+      "externalIDs": "A2831001",
       "Sex of patient:": "",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -4280,7 +4280,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A2831002",
+      "externalIDs": "A2831002",
       "Sex of patient:": "",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -4320,7 +4320,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A3031001",
+      "externalIDs": "A3031001",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Checked",
@@ -4360,7 +4360,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A3031002",
+      "externalIDs": "A3031002",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Checked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -4400,7 +4400,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A3031003",
+      "externalIDs": "A3031003",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -4440,7 +4440,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A3031004",
+      "externalIDs": "A3031004",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -4480,7 +4480,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A3031005",
+      "externalIDs": "A3031005",
       "Sex of patient:": "Female",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -4520,7 +4520,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A3031006",
+      "externalIDs": "A3031006",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Unchecked",
@@ -4560,7 +4560,7 @@ export const FAKE_ACUTE_CARE_DATA = [
       "internalIDs": ""
     },
     {
-      "externalIDs:": "A3231001",
+      "externalIDs": "A3231001",
       "Sex of patient:": "Male",
       "Participant Ethnicity : (choice=Declined to specify or Unknown)": "Unchecked",
       "Participant Ethnicity : (choice=European (Non-Finnish))": "Checked",

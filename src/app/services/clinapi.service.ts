@@ -3,6 +3,7 @@ import { Subject } from 'rxjs/Subject';
 import { FAKE_CLINICAL_DATA } from "../mocks/clindata";
 import { FAKE_MITOCHONDRIA_DATA } from "../mocks/mitodata";
 import { FAKE_NEUROMUSCULAR_DATA } from "../mocks/neuromusculardata";
+import { FAKE_ACUTE_CARE_DATA } from "../mocks/acutecaredata";
 import { VariantSearchService } from './variant-search-service';
 import { Subscription } from 'rxjs/Subscription';
 import { of, throwError, Observable } from "rxjs";
@@ -69,6 +70,22 @@ export class ClinapiService implements OnDestroy {
         else if(demo){
             console.log("DEMO")
             return of<any>(FAKE_NEUROMUSCULAR_DATA);
+        }//if not authorize and not opt to see demo
+        else {
+            return throwError({ status: 401 });
+        }
+    }
+
+    getAcutecare(demo = false, authorize = false): Observable<any> {
+        if(authorize){
+            /*return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=acutecare&jwt=${localStorage.getItem('idToken')}`).map(res => {
+                return JSON.parse(res.pheno)
+            });*/
+            return of<any>(FAKE_ACUTE_CARE_DATA);
+        }//if not authorize but want to see demo
+        else if(demo){
+            console.log("DEMO")
+            return of<any>(FAKE_ACUTE_CARE_DATA);
         }//if not authorize and not opt to see demo
         else {
             return throwError({ status: 401 });
