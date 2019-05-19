@@ -6,7 +6,7 @@
         <a class="explore-beta" routerLink="/explore" routerLinkActive="is-active">Explore</a>
         <a routerLink="/beacon" routerLinkActive="is-active">Beacon</a>
         <a routerLink="/about" routerLinkActive="is-active">About</a>
-        <a [ngClass]="{'is-active': termsLinkActive}" (click)="toggleTerms($event)">
+        <!--<a [ngClass]="{'is-active': termsLinkActive}" (click)="toggleTerms($event)">
             <div class="terms-link">
                 <span class="label">Data access</span>
                 <i *ngIf="!termsDropdown" class="material-icons">keyboard_arrow_down</i>
@@ -16,7 +16,7 @@
             <div *ngIf="termsDropdown" [ngClass]="['terms', 'dropdown']" (click)="goToMgrbTerms($event)">
                 <a>MGRB</a>
             </div>
-        </a>
+        </a>-->
 
         <div *ngIf="!auth.authenticated()" class="sign-up">
             <a (click)="auth.login()">Log in</a>
