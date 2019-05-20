@@ -31,7 +31,7 @@ export class SearchBarClinicalComponent implements OnInit, OnDestroy {
   private searchResults: Observable<GenericAutocompleteResult<any>[]>;
   private searchTerms: Subject<string> = new Subject<string>();
   private subscriptions: Subscription[] = [];
-  private inputValue: string = "";
+  inputValue: string = "";
 
   @HostListener('document:click', ['$event']) outsideClick($event: Event) {
       if (!$event) {

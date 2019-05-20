@@ -15,7 +15,7 @@ export class GenePanelsComponent implements OnInit, OnDestroy {
     {label: 'Mitochondrial liver disease', value: "MITOCHONDRIAL_LIVER_DISEASE"}
   ];
   @Input() selectedGenePanel: string;
-  private geneList: string;
+  geneList: string;
   private subscriptions: Subscription[] = [];
 
   constructor(public searchBarService: SearchBarService,
