@@ -78,10 +78,9 @@ export class ClinapiService implements OnDestroy {
 
     getAcutecare(demo = false, authorize = false): Observable<any> {
         if(authorize){
-            /*return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=acutecare&jwt=${localStorage.getItem('idToken')}`).map(res => {
+            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=acutecare&jwt=${localStorage.getItem('idToken')}`).map(res => {
                 return JSON.parse(res.pheno)
-            });*/
-            return of<any>(FAKE_ACUTE_CARE_DATA);
+            });
         }//if not authorize but want to see demo
         else if(demo){
             console.log("DEMO")
