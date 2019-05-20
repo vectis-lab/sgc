@@ -8,6 +8,7 @@ import * as jwtDecode from 'jwt-decode';
 import * as auth0 from 'auth0-js';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
+import { of } from 'rxjs';
 
 export const expiredAtKey = 'expired_at';
 export const uidKey = 'uid';
@@ -80,7 +81,16 @@ export class Auth {
                 'Authorization': `Bearer ${localStorage.getItem('idToken')}`
             })
         };
-        return this.http.get(`https://${environment.auth0Domain}/api/v2/users/${localStorage.getItem('userId')}`, httpOptions).map((res: any) => res.user_metadata.savedSearches);
+        if(localStorage.getItem('userId')){
+            return this.http.get(`https://${environment.auth0Domain}/api/v2/users/${localStorage.getItem('userId')}`, httpOptions)
+            .catch((e) => {
+                console.error(e);
+                return [];
+            })
+            .map((res: any) => res.user_metadata.savedSearches);
+        }else{
+            return of([])
+        }
     }
 
     public updateSavedSearches(savedSearches){
@@ -90,10 +100,12 @@ export class Auth {
                 'Authorization': `Bearer ${localStorage.getItem('idToken')}`
             })
         };
+        
         return this.http.patch(`https://${environment.auth0Domain}/api/v2/users/${localStorage.getItem('userId')}`, {
             "user_metadata": {
                 "savedSearches": savedSearches
-        }}, httpOptions).map(res => res);
+        }}, httpOptions)
+        .map(res => res);
     }
 
     public getUserPermissions(){
@@ -103,7 +115,17 @@ export class Auth {
                 'Authorization': `Bearer ${localStorage.getItem('idToken')}`
             })
         };
-        return this.http.get(`https://${environment.auth0Domain}/api/v2/users/${localStorage.getItem('userId')}`, httpOptions).map((res: any) => res.app_metadata.authorization.permissions);
+
+        if(localStorage.getItem('userId')){
+            return this.http.get(`https://${environment.auth0Domain}/api/v2/users/${localStorage.getItem('userId')}`, httpOptions)
+            .catch((e) => {
+                return [];
+            })
+            .map((res: any) => res.app_metadata.authorization.permissions);
+        }else{
+            return of([])
+        }
+        
     }
 
     private handleAuthResult = (err, authResult) => {
