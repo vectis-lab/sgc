@@ -27,7 +27,7 @@
                                     <span>Chromosome:</span>
                                 </div>
                                 <div class="detail-value">
-                                    <span>{{ variant.chr }}</span>
+                                    <span>{{ variant.c }}</span>
                                 </div>
                             </div>
 
@@ -36,7 +36,7 @@
                                     <span>Start:</span>
                                 </div>
                                 <div class="detail-value">
-                                    <span>{{ variant.start }}</span>
+                                    <span>{{ variant.s }}</span>
                                 </div>
                             </div>
 
@@ -45,7 +45,7 @@
                                     <span>Reference:</span>
                                 </div>
                                 <div class="detail-value">
-                                    <span>{{ variant.ref }}</span>
+                                    <span>{{ variant.r }}</span>
                                 </div>
                             </div>
 
@@ -54,7 +54,7 @@
                                     <span>Alternate:</span>
                                 </div>
                                 <div class="detail-value">
-                                    <span>{{ variant.alt }}</span>
+                                    <span>{{ variant.a }}</span>
                                 </div>
                             </div>
                         </div>
@@ -64,7 +64,7 @@
                                     <span>Type:</span>
                                 </div>
                                 <div class="detail-value">
-                                    <span>{{ variant.type }}</span>
+                                    <span>{{ variant.t }}</span>
                                 </div>
                             </div>
 
@@ -95,7 +95,7 @@
                                 </div>
                                 <div class="detail-value" *ngIf="variant.rsid">
                         <span><a target="_blank" href="{{ dbSnpUrl(variant) }}">
-                            {{ variant.rsid }}
+                            {{ variant.rs }}
                             <i class="fa fa-external-link" aria-hidden="true"></i>
                         </a></span>
                                 </div>

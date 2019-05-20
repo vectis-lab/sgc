@@ -86,7 +86,7 @@ export class VariantSummaryComponent implements OnInit, OnDestroy {
                 this.error = 'Found more than one variant for query';
             } else if (vf.length > 0) {
                 this.variant = vf[0];
-                if (this.variant.type !== 'SNP') {
+                if (this.variant.type !== 'SNV' && this.variant.type !== 'SNP') {
                     this.beaconSupported = false;
                 } else {
                     this.beacons = this.bss.searchBeacon(this.beaconQuery(this.variant));
