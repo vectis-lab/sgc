@@ -34,10 +34,10 @@
                 </div>
             </span>
 
-            <div *ngIf="userDropdown" [ngClass]="['user', 'dropdown']" (click)="auth.logout()">
-                <a>Log out</a>
+            
+            <div *ngIf="userDropdown" [ngClass]="['user', 'dropdown']">
+                <div class="dropdown-item" (click)="auth.logout()">Log out</div>
             </div>
         </a>
-        
     </nav>
 </div>

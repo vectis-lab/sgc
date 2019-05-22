@@ -15,10 +15,13 @@
 .dropdown {
     position: absolute;
     right: 0;
-    padding: 30px 50px 30px 0;
-    background-color: #336F9C;
     margin-top: 17px;
     z-index: 10;
+}
+
+.dropdown-item {
+    padding: 30px 50px 30px 30px;
+    background-color: #336F9C;
 }
 
 .right-side {
