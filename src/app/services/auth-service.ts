@@ -74,6 +74,20 @@ export class Auth {
 		localStorage.setItem(expiredAtKey, expiresAt);
     }
 
+    public getUser(){
+        const httpOptions = {
+            headers: new HttpHeaders({
+                'Content-Type':  'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('idToken')}`
+            })
+        };
+        if(localStorage.getItem('userId')){
+            return this.http.get(`https://${environment.auth0Domain}/api/v2/users/${localStorage.getItem('userId')}`, httpOptions);
+        }else{
+            return of(null);
+        }
+    }
+
     public getSavedSearches(){
         const httpOptions = {
             headers: new HttpHeaders({

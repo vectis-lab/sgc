@@ -15,6 +15,7 @@ export class HeaderNavComponent implements OnInit {
     userDropdown = false;
     termsLinkActive = false;
     userEmail = localStorage.getItem('uid')?localStorage.getItem('uid'):null;
+    userPicture;
 
     @HostListener('document:click', ['$event']) outsideClick($event: Event) {
         if (!$event) {
@@ -41,6 +42,12 @@ export class HeaderNavComponent implements OnInit {
             });
 
         this.scrollService.scrolled.subscribe(this.hideTerms);
+
+        this.auth.getUser().subscribe(user => {
+            if(user){
+                this.userPicture = user.picture;
+            }
+        })
 
     }
 
