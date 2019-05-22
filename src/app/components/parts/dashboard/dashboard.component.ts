@@ -17,7 +17,6 @@ import { Gene } from '../../../model/gene';
 import { Position } from '../../../model/position';
 import { Dimension, BasicFilter, DimensionFilter, MapdFilterService } from '../../../services/mapd-filter.service';
 import { SnackbarHelpComponent } from '../snackbar-help/snackbar-help.component';
-import { SummaryDialogComponent } from '../summary-dialog/summary-dialog.component';
 import { VariantsTablePaginatedComponent } from '../variants-table-paginated/variants-table-paginated.component';
 import { RsidService } from '../../../services/autocomplete/rsid-service';
 import { Rsid } from '../../../model/rsid';
@@ -178,13 +177,6 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
     toggleChart($event, chart) {
         $event.stopPropagation();
         chart.enabled = !chart.enabled;
-    }
-
-    openSummary(): void {
-        this.dialog.open(SummaryDialogComponent, {
-            width: `700px`,
-            data: {mfs: this.cf.mfs}
-        });
     }
 
     downloadVariants() {

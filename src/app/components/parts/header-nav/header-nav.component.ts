@@ -80,11 +80,6 @@ export class HeaderNavComponent implements OnInit {
         }
     };
 
-    goToMgrbTerms(event: Event) {
-        event.stopPropagation();
-        this.router.navigate(['/terms/mgrb']);
-    }
-
     openSignUpDialog() {
         this.dialog.open(
             SignUpComponent,

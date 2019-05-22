@@ -13,10 +13,4 @@ describe('Initiative Service', () => {
             expect(initiatives.get('mgrb').title).toEqual('Medical Genome Reference Bank');
         });
     });
-
-    it('should get a single initiative', () => {
-        initiativeService.getInitiative('mgrb').then((initiative: Initiative) => {
-            expect(initiative.title).toEqual('Medical Genome Reference Bank');
-        });
-    });
 });

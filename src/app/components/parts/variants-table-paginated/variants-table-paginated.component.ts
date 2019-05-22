@@ -95,7 +95,7 @@ export class VariantsTablePaginatedComponent implements OnInit, OnDestroy {
         });
         const csv = Papa.unparse(data);
         const blob = new Blob([csv], {type: 'text/plain'});
-        saveAs(blob, 'mgrb_' + this.cf.getFilterString().replace(' ', '_') + '_' + new Date().getTime() + '.csv');
+        saveAs(blob, 'data_' + this.cf.getFilterString().replace(' ', '_') + '_' + new Date().getTime() + '.csv');
     }
 
 }

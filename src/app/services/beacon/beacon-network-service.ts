@@ -7,7 +7,7 @@ import { throwError, Observable } from "rxjs";
 const TIMEOUT = 20000;
 
 const SUPPORTED_REFERENCES = new Set(['HG19', 'GRCH37']);
-const MGRB_ID = 'garvan';
+const ID = 'garvan';
 
 export class NetworkBeacon {
     id: string;
@@ -55,7 +55,7 @@ export class BeaconNetworkService {
             .map((data: any) => {
                 return data.filter((v: NetworkBeacon) => {
                     const intersection = v.supportedReferences.filter(x => SUPPORTED_REFERENCES.has(x));
-                    return intersection.length > 0 && !v.aggregator && v.id !== MGRB_ID;
+                    return intersection.length > 0 && !v.aggregator && v.id !== ID;
                 });
             });
     }

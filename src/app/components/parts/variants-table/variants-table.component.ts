@@ -82,7 +82,7 @@ export class VariantsTableComponent implements OnInit, OnDestroy, AfterViewInit 
         });
         const csv = Papa.unparse(data);
         const blob = new Blob([csv], {type: 'text/plain'});
-        saveAs(blob, 'mgrb_' + this.searchService.getCurrentRegion().name() + '_' + new Date().getTime() + '.csv');
+        saveAs(blob, 'data_' + this.searchService.getCurrentRegion().name() + '_' + new Date().getTime() + '.csv');
     }
 
     compare(a: Variant, b: Variant) {

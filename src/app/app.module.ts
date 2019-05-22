@@ -46,10 +46,6 @@ import { SearchOptionComponent } from './components/parts/search-option/search-o
 import { BeaconComponent } from './components/pages/beacon/beacon.component';
 import { SearchBarWithOptionsComponent } from './components/parts/search-bar-with-options/search-bar-with-options.component';
 import { TitleLogoBannerComponent } from './components/parts/title-logo-banner/title-logo-banner.component';
-import { MgrbComponent } from './components/pages/programmes/mgrb/mgrb.component';
-import { NswgpComponent } from './components/pages/programmes/nswgp/nswgp.component';
-import { GcmpComponent } from './components/pages/programmes/gcmp/gcmp.component';
-import { MgrbTermsComponent } from './components/pages/mgrb-terms/mgrb-terms.component';
 import { HeaderNavComponent } from './components/parts/header-nav/header-nav.component';
 import { ScrollService } from './services/scroll-service';
 import { SideNavComponent } from './components/parts/side-nav/side-nav.component';
@@ -64,7 +60,6 @@ import { VariantsTableComponent } from './components/parts/variants-table/varian
 import { PositionService } from './services/autocomplete/position-service';
 import { TableService } from './services/table-service';
 import { TableSummaryService } from './services/table-summary-service';
-import { PcaPlotComponent } from './components/parts/pca-plot/pca-plot.component';
 import { FilterAutoComponent } from './components/parts/filter-auto/filter-auto.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageContainerComponent } from './components/parts/page-container/page-container.component';
@@ -82,14 +77,11 @@ import { DashboardComponent } from './components/parts/dashboard/dashboard.compo
 import { VariantsTablePaginatedComponent } from './components/parts/variants-table-paginated/variants-table-paginated.component';
 import { ErrorDialogComponent } from './components/parts/error-dialog/error-dialog.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ClinicalChartComponent } from './components/parts/clinical-chart/clinical-chart.component';
-import { ClincalFilteringComponent } from './components/parts/clincal-filtering/clincal-filtering.component';
 import { SnackbarDemoComponent } from './components/parts/snackbar-demo/snackbar-demo.component';
 import { MaterialModule } from './app.material';
 import { MapdRowChartComponent } from './components/parts/mapd-row-chart/mapd-row-chart.component';
 import { MapdPieChartComponent } from './components/parts/mapd-pie-chart/mapd-pie-chart.component';
 import { MapdAvgAfChartComponent } from './components/parts/mapd-avg-af-chart/mapd-avg-af-chart.component';
-import { SummaryDialogComponent } from './components/parts/summary-dialog/summary-dialog.component';
 import { HelpIconComponent } from './components/parts/help-icon/help-icon.component';
 import { SnackbarHelpComponent } from './components/parts/snackbar-help/snackbar-help.component';
 import { LoadingComponent } from './components/pages/loading/loading.component';
@@ -176,10 +168,6 @@ export class RavenErrorHandler implements ErrorHandler {
         BeaconComponent,
         SearchBarWithOptionsComponent,
         TitleLogoBannerComponent,
-        MgrbComponent,
-        NswgpComponent,
-        GcmpComponent,
-        MgrbTermsComponent,
         HeaderNavComponent,
         SideNavComponent,
         GeneInformationComponent,
@@ -187,7 +175,6 @@ export class RavenErrorHandler implements ErrorHandler {
         HomeAboutComponent,
         PrivacyFooterComponent,
         VariantsTableComponent,
-        PcaPlotComponent,
         FilterAutoComponent,
         PageContainerComponent,
         RegionInformationComponent,
@@ -198,13 +185,10 @@ export class RavenErrorHandler implements ErrorHandler {
         DashboardComponent,
         VariantsTablePaginatedComponent,
         ErrorDialogComponent,
-        ClinicalChartComponent,
-        ClincalFilteringComponent,
         SnackbarDemoComponent,
         MapdRowChartComponent,
         MapdPieChartComponent,
         MapdAvgAfChartComponent,
-        SummaryDialogComponent,
         HelpIconComponent,
         SnackbarHelpComponent,
         LoadingComponent,
@@ -237,7 +221,6 @@ export class RavenErrorHandler implements ErrorHandler {
     entryComponents: [
         SignUpComponent,
         ErrorDialogComponent,
-        SummaryDialogComponent,
         SnackbarDemoComponent,
         SnackbarHelpComponent,
         CohortDialog

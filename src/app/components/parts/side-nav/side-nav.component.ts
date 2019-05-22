@@ -31,10 +31,10 @@ export class SideNavComponent implements OnInit {
         this.termsDropdown = this.termsDropdown ? false : true;
     }
 
-    goToMgrbTerms(event: Event) {
+    /*goToMgrbTerms(event: Event) {
         this.termsDropdown = false;
         this.router.navigate(['/terms/mgrb']);
-    }
+    }*/
 
     openSignUpDialog() {
         this.dialog.open(
