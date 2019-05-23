@@ -12,7 +12,6 @@ import { HeaderNavComponent } from '../../parts/header-nav/header-nav.component'
 import { SideNavComponent } from '../../parts/side-nav/side-nav.component';
 import { PrivacyFooterComponent } from '../../parts/privacy-footer/privacy-footer.component';
 import { PageContainerComponent } from '../../parts/page-container/page-container.component';
-import { MgrbTermsComponent } from '../mgrb-terms/mgrb-terms.component';
 import { BeaconTableComponent } from '../../parts/beacon-table/beacon-table.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FormsModule } from '@angular/forms';
@@ -40,7 +39,6 @@ describe('VariantComponent', () => {
             ],
             declarations: [
                 VariantComponent,
-                MgrbTermsComponent,
                 PageContainerComponent,
                 PrivacyFooterComponent,
                 SideNavComponent,

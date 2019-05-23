@@ -11,8 +11,8 @@
             <i *ngIf="!termsDropdown" class="material-icons">keyboard_arrow_down</i>
             <i *ngIf="termsDropdown" class="material-icons">keyboard_arrow_up</i>
         </div>
-    </a>-->
-    <a *ngIf="termsDropdown" class="terms-dropdown" (click)="goToMgrbTerms($event)">MGRB</a>
+    </a>
+    <a *ngIf="termsDropdown" class="terms-dropdown" (click)="goToMgrbTerms($event)">TEXT_COMING_SOON</a>-->
     <div *ngIf="!auth.authenticated()" class="sign-up">
         <a (click)="auth.login()">LOG IN</a>
         <div class="spacer">|</div>

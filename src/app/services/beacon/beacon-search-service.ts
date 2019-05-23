@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs/Subscription';
 import { of, merge, Observable } from "rxjs";
 
 const REFERENCE = 'HG19';
-const MGRB_ID = 'garvan';
+const ID = 'garvan';
 const QUERY_LIMIT = 6; // limit of concurrent requests in most browsers
 
 export class BeaconCache {
@@ -141,7 +141,7 @@ export class BeaconSearchService implements OnDestroy {
         this.cache = new BeaconCache(beacon, this.bns);
         this.bns.supported.subscribe(
             (beacons: NetworkBeacon[]) => {
-                const beaconIds = [MGRB_ID].concat(beacons.map((v) => v.id));
+                const beaconIds = [ID].concat(beacons.map((v) => v.id));
                 beaconIds.forEach((id) => {
                     this.cache.addBeacon(id);
                 });
