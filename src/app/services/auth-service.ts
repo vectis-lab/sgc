@@ -9,6 +9,7 @@ import * as auth0 from 'auth0-js';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import { of } from 'rxjs';
+import { skip } from 'rxjs/operators';
 
 export const expiredAtKey = 'expired_at';
 export const uidKey = 'uid';
@@ -24,7 +25,7 @@ export class Auth {
         scope: 'openid email'
     });
 
-    private userPermissionsSource = new BehaviorSubject<string[]>([]);
+    private userPermissionsSource = new BehaviorSubject<string[]>(null);
     userPermissions = this.userPermissionsSource.asObservable();
     
     constructor(private router: Router,

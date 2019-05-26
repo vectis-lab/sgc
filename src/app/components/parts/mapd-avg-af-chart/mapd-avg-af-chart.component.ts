@@ -70,6 +70,8 @@ export class MapdAvgAfChartComponent implements AfterViewInit, OnDestroy {
 
         this.rangeChart.dc.xAxis().scale(this.rangeChart.dc.x()).orient('bottom');
         this.rangeChart.dc.render();
+        //Workaround because still have problem where the chart doesn't show the initial filtered data properly, so the trick is just to render twice
+        this.rangeChart.dc.redrawGroup();
 
         this.afAvgChart.dc = dc.barChart('#afAvg')
             .width(width)
@@ -95,6 +97,8 @@ export class MapdAvgAfChartComponent implements AfterViewInit, OnDestroy {
 
         this.afAvgChart.dc.xAxis().scale(this.afAvgChart.dc.x()).orient('bottom');
         this.afAvgChart.dc.render();
+        //Workaround because still have problem where the chart doesn't show the initial filtered data properly, so the trick is just to render twice
+        this.afAvgChart.dc.redrawGroup();
 
         // TODO: handle click
         // afa.dc.on("renderlet.foo", (chart) => {

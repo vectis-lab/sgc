@@ -10,6 +10,8 @@ import { Gene } from '../../../model/gene';
 import { Region } from '../../../model/region';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ClinicalFilteringService } from '../../../services/clinical-filtering.service';
+import { Auth } from '../../../services/auth-service';
+import { constants } from '../../../app.constants';
 
 @Component({
     selector: 'app-search-results',
@@ -31,6 +33,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
     constructor(public searchSummaryService: VariantSummarySearchService,
                 private cd: ChangeDetectorRef,
                 private searchBarService: SearchBarService,
+                private auth: Auth,
                 private router: Router,
                 private route: ActivatedRoute,
                 private clinicalFilteringService: ClinicalFilteringService
@@ -40,23 +43,37 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
     ngOnInit(): void {
         this.variantsSummary = this.searchSummaryService.variants;
 
-        this.subscriptions.push(this.searchSummaryService.results.subscribe(v => {
-            this.variantsSummary = v.variants;
-            this.cd.detectChanges();
+        this.loadingVariantsSummary = true;
+        this.subscriptions.push(this.auth.getUserPermissions().subscribe(permissions => {
+                if(
+                    this.selectedCohort === "Mitochondria" && permissions.includes('mito/summary') || 
+                    this.selectedCohort === "Acutecare" && permissions.includes('acutecare/summary') || 
+                    this.selectedCohort === "Neuromuscular" && permissions.includes('neuromuscular/summary')
+                ){
+                    this.subscriptions.push(this.searchSummaryService.results.subscribe(v => {
+                        this.variantsSummary = v.variants;
+                        this.cd.detectChanges();
+                    }));
+            
+                    this.autocompleteSummary.searchSummary(this.searchSummaryService, this.searchBarService.options)
+                        .then(() => {
+                            this.loadingVariantsSummary = false;
+                            this.cd.detectChanges();
+                        })
+                        .catch((e) => {
+                            this.loadingVariantsSummary = false;
+                            this.errorEvent.emit(e);
+                        });
+                }else{
+                    if(permissions){
+                        this.errorEvent.emit(constants.PERMISSION_ERROR_MESSAGE)
+                        this.loadingVariantsSummary = false;
+                    }
+                }
+                      
         }));
 
-        
-        this.loadingVariantsSummary = true;
 
-        this.autocompleteSummary.searchSummary(this.searchSummaryService, this.searchBarService.options)
-            .then(() => {
-                this.loadingVariantsSummary = false;
-                this.cd.detectChanges();
-            })
-            .catch((e) => {
-                this.loadingVariantsSummary = false;
-                this.errorEvent.emit(e);
-            });
         
     }
 

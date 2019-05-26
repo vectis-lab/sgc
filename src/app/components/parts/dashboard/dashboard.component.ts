@@ -20,6 +20,8 @@ import { SnackbarHelpComponent } from '../snackbar-help/snackbar-help.component'
 import { VariantsTablePaginatedComponent } from '../variants-table-paginated/variants-table-paginated.component';
 import { RsidService } from '../../../services/autocomplete/rsid-service';
 import { Rsid } from '../../../model/rsid';
+import { Router } from '@angular/router';
+import { Auth } from '../../../services/auth-service';
 
 const SMALL_WIDTH = 720;
 
@@ -44,12 +46,14 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
     query: string = null;
     error = '';
     searchError = '';
-    loading = true;
+    loading = false;
     showSql = false;
     total = 0;
     subtotal = 0;
     sql = '';
     helpEnabled = false;
+    cohort: string = null;
+    permissions = [];
 
     errors = new Subject<any>();
 
@@ -58,15 +62,18 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
     constructor(public searchBarService: SearchBarService,
                 private cd: ChangeDetectorRef,
                 private mapd: MapdService,
+                private auth: Auth,
                 public cf: CrossfilterService,
                 public dialog: MatDialog,
                 public cs: ChartsService,
                 public rsids: RsidService,
-                public snackBar: MatSnackBar) {
+                public snackBar: MatSnackBar,
+                public router: Router,) {
         this.searchBarService.autocompleteServices.push(rsids);
         this.subscriptions.push(this.errors.subscribe((e) => {
             Raven.captureMessage(e);
-            this.error = constants.GENERIC_SERVICE_ERROR_MESSAGE;
+
+            this.error = e;
             this.cd.detectChanges();
         }));
     }
@@ -76,8 +83,9 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     ngAfterViewInit(): void {
-
-        this.loading = true;
+        this.subscriptions.push(this.auth.getUserPermissions().subscribe(permissions => {
+            this.permissions = permissions;                  
+    }));
 
         this.subscriptions.push(this.cf.updates.debounceTime(100).subscribe(() => {
             const p1 = this.cf.x.sizeAsync().then((v) => {
@@ -91,13 +99,6 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
             this.cf.currentFilters = this.cf.x.getFilter().filter((x) => x);
             Promise.all([p1, p2]).then(() => this.cd.detectChanges());
         }));
-
-        this.mapd.connect().then((session) => {
-            return this.cf.create(session, 'mgrb');
-        }).then(() => {
-            this.cf.updates.next();
-            this.cd.detectChanges();
-        }).catch((e) => this.errors.next(e));
     }
 
     clearFilters() {
@@ -106,7 +107,7 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
         dc.filterAll();
         dc.redrawAllAsync().then(() => {
             this.cf.updates.next();
-        }).catch((e) => this.errors.next(e));
+        }).catch((e) => this.errors.next(constants.GENERIC_SERVICE_ERROR_MESSAGE));
     }
 
     ngOnDestroy() {
@@ -114,42 +115,113 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     addGeneOrRegion = (q) => {
+        //Later cohort will be used
+        const cohort = this.searchBarService.options[0].getValue();
         this.searchBarService.query = q;
         const obj = {query: q};
         this.searchError = '';
+        this.errors.next('');
 
-        this.searchBarService.searchWithParams(obj).then((v: GenericAutocompleteResult<Gene | Region | Position | Rsid>) => {
-            this.cf.mfs.clearFilters();
-            if (!v) {
-                return;
+        if(
+            (cohort === "Mitochondria" && this.permissions.includes('mito/summary')) || 
+            (cohort === "Acutecare" && this.permissions.includes('acutecare/summary')) || 
+            (cohort === "Neuromuscular" && this.permissions.includes('neuromuscular/summary'))
+        ){
+            if(this.mapd.session === null || this.cohort !== cohort){
+                if(this.mapd.session){
+                    this.cf.mfs.clearFilters();
+                }
+                this.loading = true;
+                this.mapd.connect().then((session) => {;
+                    return this.cf.create(session, 'mgrb');
+                }).then(() => {
+                    if(!q){
+                        this.cf.updates.next();
+                        this.cd.detectChanges();
+                    }else{
+                        this.searchBarService.searchWithParams(obj).then((v: GenericAutocompleteResult<Gene | Region | Position | Rsid>) => {  
+                            if (!v) {
+                                return;
+                            }
+                            if (v.result instanceof Gene) {
+                                const f = new DimensionFilter();
+                                f.dimension = new Dimension();
+                                f.dimension.name = 'geneSymbol';
+                                f.operator = '=';
+                                f.value = v.result.symbol;
+                                this.cf.mfs.addFilter(f);
+                            } else if (v.result instanceof Region) {
+                                const r = (<Region>v.result);
+                                const f = new BasicFilter(`chromosome='${r.chromosome}' AND c3_START >= ${r.start} AND c3_START <= ${r.end}`);
+                                this.cf.mfs.addFilter(f);
+                            } else if (v.result instanceof Position) {
+                                const p = (<Position>v.result);
+                                const f = new BasicFilter(`chromosome='${p.chromosome}' AND c3_START >= ${p.start} AND c3_START <= ${p.end}`);
+                                this.cf.mfs.addFilter(f);
+                            } else if (v.result instanceof Rsid) {
+                                const f = new BasicFilter(`rsid='${v.result.name().toLowerCase()}'`);
+                                this.cf.mfs.addFilter(f);
+                            }
+    
+                            this.cf.updates.next();
+                            this.cd.detectChanges(); 
+                        }).catch(e => {
+                            this.searchError = e;
+                            this.cd.detectChanges();
+                        });
+                    }
+                }).catch((e) => this.errors.next(constants.GENERIC_SERVICE_ERROR_MESSAGE));
+            }else{
+                if(q){
+                    this.searchBarService.searchWithParams(obj).then((v: GenericAutocompleteResult<Gene | Region | Position | Rsid>) => {
+                        this.cf.mfs.clearFilters();
+                        dc.filterAll();
+                        
+                        if (!v) {
+                            return;
+                        }
+                        if (v.result instanceof Gene) {
+                            const f = new DimensionFilter();
+                            f.dimension = new Dimension();
+                            f.dimension.name = 'geneSymbol';
+                            f.operator = '=';
+                            f.value = v.result.symbol;
+                            this.cf.mfs.addFilter(f);
+                        } else if (v.result instanceof Region) {
+                            const r = (<Region>v.result);
+                            const f = new BasicFilter(`chromosome='${r.chromosome}' AND c3_START >= ${r.start} AND c3_START <= ${r.end}`);
+                            this.cf.mfs.addFilter(f);
+                        } else if (v.result instanceof Position) {
+                            const p = (<Position>v.result);
+                            const f = new BasicFilter(`chromosome='${p.chromosome}' AND c3_START >= ${p.start} AND c3_START <= ${p.end}`);
+                            this.cf.mfs.addFilter(f);
+                        } else if (v.result instanceof Rsid) {
+                            const f = new BasicFilter(`rsid='${v.result.name().toLowerCase()}'`);
+                            this.cf.mfs.addFilter(f);
+                        }
+            
+                        dc.redrawAllAsync().then(() => {
+                            this.cf.updates.next();
+                            this.cd.detectChanges();
+                        }).catch((e) => this.errors.next(constants.GENERIC_SERVICE_ERROR_MESSAGE));
+                    }).catch(e => {
+                        this.searchError = e;
+                        this.cd.detectChanges();
+                    });
+                }else{
+                    this.clearFilters();
+                }
             }
-            if (v.result instanceof Gene) {
-                const f = new DimensionFilter();
-                f.dimension = new Dimension();
-                f.dimension.name = 'geneSymbol';
-                f.operator = '=';
-                f.value = v.result.symbol;
-                this.cf.mfs.addFilter(f);
-            } else if (v.result instanceof Region) {
-                const r = (<Region>v.result);
-                const f = new BasicFilter(`chromosome='${r.chromosome}' AND c3_START >= ${r.start} AND c3_START <= ${r.end}`);
-                this.cf.mfs.addFilter(f);
-            } else if (v.result instanceof Position) {
-                const p = (<Position>v.result);
-                const f = new BasicFilter(`chromosome='${p.chromosome}' AND c3_START >= ${p.start} AND c3_START <= ${p.end}`);
-                this.cf.mfs.addFilter(f);
-            } else if (v.result instanceof Rsid) {
-                const f = new BasicFilter(`rsid='${v.result.name().toLowerCase()}'`);
-                this.cf.mfs.addFilter(f);
+        }else{
+            if(this.permissions){
+                this.errors.next(constants.PERMISSION_ERROR_MESSAGE);
             }
+        }
+        
 
-            dc.redrawAllAsync().then(() => {
-                this.cf.updates.next();
-            }).catch((e) => this.errors.next(e));
-        }).catch(e => {
-            this.searchError = e;
-            this.cd.detectChanges();
-        });
+        this.cohort = cohort;
+
+        
     };
 
     toggleSql($event) {
