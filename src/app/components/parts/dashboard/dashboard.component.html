@@ -1,6 +1,6 @@
 <mat-sidenav-container>
     <mat-sidenav #sidenav mode="side" fixedInViewport="true" fixedTopGap="71" [opened]="!isSmallScreen()" disableClose="true">
-        <div *ngIf="cohort">
+        <div *ngIf="cohort && !error">
             <app-help-icon *ngIf="helpEnabled">Reset all filters or view the total counts.</app-help-icon>
             <div class="side-toolbar">
                 <mat-icon class="material-icons" (click)="clearFilters()" matTooltip="Clear All Filters" matTooltipPosition="right">refresh
