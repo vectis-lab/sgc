@@ -82,7 +82,7 @@ export class Auth {
                 'Authorization': `Bearer ${localStorage.getItem('idToken')}`
             })
         };
-        if(localStorage.getItem('userId')){
+        if(localStorage.getItem('userId') && this.authenticated()){
             return this.http.get(`https://${environment.auth0Domain}/api/v2/users/${localStorage.getItem('userId')}`, httpOptions);
         }else{
             return of(null);
@@ -96,7 +96,7 @@ export class Auth {
                 'Authorization': `Bearer ${localStorage.getItem('idToken')}`
             })
         };
-        if(localStorage.getItem('userId')){
+        if(localStorage.getItem('userId') && this.authenticated()){
             return this.http.get(`https://${environment.auth0Domain}/api/v2/users/${localStorage.getItem('userId')}`, httpOptions)
             .catch((e) => {
                 console.error(e);
@@ -131,7 +131,7 @@ export class Auth {
             })
         };
 
-        if(localStorage.getItem('userId')){
+        if(localStorage.getItem('userId') && this.authenticated()){
             return this.http.get(`https://${environment.auth0Domain}/api/v2/users/${localStorage.getItem('userId')}`, httpOptions)
             .catch((e) => {
                 return [];
