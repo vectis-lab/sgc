@@ -5,7 +5,7 @@ import { VariantSummary } from '../../../model/variant-summary';
 import { Subscription } from 'rxjs/Subscription';
 import { Router } from '@angular/router';
 import { VariantSummaryTrackService } from '../../../services/genome-browser/variant-summary-track-service';
-
+import { SearchBarService } from '../../../services/search-bar-service';
 import * as Papa from 'papaparse';
 import { VariantSummarySearchService } from '../../../services/variant-summary-search-service';
 import { TableSummaryService } from '../../../services/table-summary-service';
@@ -34,7 +34,8 @@ export class VariantsSummaryTableComponent implements OnInit, OnDestroy, AfterVi
               private searchService: VariantSummarySearchService,
               private variantTrack: VariantSummaryTrackService,
               private cd: ChangeDetectorRef,
-              private router: Router) {
+              private router: Router,
+              private searchBarService: SearchBarService,) {
   }
 
   ngOnInit() {
@@ -142,7 +143,7 @@ export class VariantsSummaryTableComponent implements OnInit, OnDestroy, AfterVi
   }
 
   variantUrl(v: VariantSummary) {
-      return this.router.createUrlTree(['/search/variant-summary', {query: VariantSummary.displayName(v)}]).toString();
+      return this.router.createUrlTree(['/search/variant-summary', {query: VariantSummary.displayName(v), cohort: this.searchBarService.options[0].getValue()}]).toString();
   }
 
   variantVarsomeUrl(v: VariantSummary) {

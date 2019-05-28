@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 
 import * as Papa from 'papaparse';
 import { VariantSearchService } from '../../../services/variant-search-service';
+import { SearchBarService } from '../../../services/search-bar-service';
 import { TableService } from '../../../services/table-service';
 import { FilterAutoComponent } from '../filter-auto/filter-auto.component';
 import { ALLELEFREQ_DIFFERENCE_THRESHOLD } from '../../../shared/afThreshold';
@@ -34,7 +35,9 @@ export class VariantsTableComponent implements OnInit, OnDestroy, AfterViewInit 
     constructor(public  ts: TableService,
                 private searchService: VariantSearchService,
                 private cd: ChangeDetectorRef,
-                private router: Router) {
+                private router: Router,
+                private searchBarService: SearchBarService,
+            ) {
     }
 
     ngOnInit() {
@@ -109,7 +112,7 @@ export class VariantsTableComponent implements OnInit, OnDestroy, AfterViewInit 
     }
 
     variantUrl(v: Variant) {
-        return this.router.createUrlTree(['/clinical/variant', {query: Variant.displayName(v)}]).toString();
+        return this.router.createUrlTree(['/clinical/variant', {query: Variant.displayName(v), cohort: this.searchBarService.options[0].getValue()}]).toString();
     }
 
     variantVarsomeUrl(v: Variant) {

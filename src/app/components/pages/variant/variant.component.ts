@@ -10,6 +10,7 @@ import { RegionService } from '../../../services/autocomplete/region-service';
 import { Region } from '../../../model/region';
 import { SearchOption } from '../../../model/search-option';
 import { Auth } from '../../../services/auth-service';
+import { COHORT_VALUE_MAPPING } from '../../../model/cohort-value-mapping';
 
 @Component({
     selector: 'app-variant',
@@ -29,6 +30,7 @@ export class VariantComponent implements OnInit, OnDestroy {
     loading = true;
     beaconSupported = true;
     displayName = Variant.displayName;
+    cohort = '';
 
     constructor(private route: ActivatedRoute,
                 private vss: VariantSearchService,
@@ -51,14 +53,15 @@ export class VariantComponent implements OnInit, OnDestroy {
 
     parseParams(params: Params) {
         try {
-            const r = /([\dxy]*)-(\d*)-([AGTC\*]*)-([AGTC\*]*)+/ig;
+            this.cohort = params['cohort'];
+            const r = /([\dxymt]*)-(\d*)-([AGTC\*]*)-([AGTC\*]*)+/ig;
             const m = r.exec(params['query']);
             const chromo = m[1];
             const start = Number(m[2]);
             const reference = m[3];
             const alternate = m[4];
 
-            const sq = new SearchQueries([new Region(chromo, start, start)], [new SearchOption('', 'returnAnnotations', [], 'true')]);
+            const sq = new SearchQueries([new Region(chromo, start, start)], [new SearchOption('', 'dataset', [], COHORT_VALUE_MAPPING[this.cohort]), new SearchOption('', 'returnAnnotations', [], 'true')]);
             this.getVariant(sq, reference, alternate);
         } catch (e) {
             this.error = 'Could not find specified variant';
@@ -82,6 +85,7 @@ export class VariantComponent implements OnInit, OnDestroy {
         this.vss.getVariants(sq, []).then(variants => {
             this.loading = false;
             const vf = variants.filter((v) => v.a === alternate && v.r === reference);
+            
             if (vf.length > 1) {
                 this.error = 'Found more than one variant for query';
             } else if (vf.length > 0) {

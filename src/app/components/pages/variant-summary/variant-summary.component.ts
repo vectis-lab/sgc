@@ -29,6 +29,7 @@ export class VariantSummaryComponent implements OnInit, OnDestroy {
     loading = true;
     beaconSupported = true;
     displayName = VariantSummary.displayName;
+    cohort= '';
 
     constructor(private route: ActivatedRoute,
                 private vss: VariantSummarySearchService,
@@ -51,7 +52,8 @@ export class VariantSummaryComponent implements OnInit, OnDestroy {
 
     parseParams(params: Params) {
         try {
-            const r = /([\dxy]*)-(\d*)-([AGTC\*]*)-([AGTC\*]*)+/ig;
+            this.cohort = params['cohort'];
+            const r = /([\dxymt]*)-(\d*)-([AGTC\*]*)-([AGTC\*]*)+/ig;
             const m = r.exec(params['query']);
             const chromo = m[1];
             const start = Number(m[2]);
