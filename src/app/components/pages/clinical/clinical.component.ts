@@ -46,10 +46,6 @@ export class ClinicalComponent implements OnInit, OnDestroy {
           this.clinicalFilteringService.initSaveSearches(savedSearches);
       }))
 
-      this.subscriptions.push(this.auth.getUserPermissions().subscribe(permissions => {
-          this.auth.setUserPermissions(permissions);
-      }))
-
       this.subscriptions.push(this.searchBarService.geneList.subscribe(genes => {
         this.geneList = genes;
       }))

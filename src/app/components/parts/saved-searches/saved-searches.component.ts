@@ -53,7 +53,7 @@ export class SavedSearchesComponent implements OnInit, OnDestroy {
         this.router.navigate(['/error']);
     }))
 
-    this.auth.userPermissions.subscribe(permissions => {
+    this.auth.getUserPermissions().subscribe(permissions => {
         if(permissions.includes('mito/pheno')){
             this.denied = false;
         }else {

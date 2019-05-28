@@ -24,9 +24,6 @@ export class Auth {
         redirectUri: `${constants.ORIGIN_URL}/auth`,
         scope: 'openid email'
     });
-
-    private userPermissionsSource = new BehaviorSubject<string[]>(null);
-    userPermissions = this.userPermissionsSource.asObservable();
     
     constructor(private router: Router,
                 public dialog: MatDialog,
@@ -173,9 +170,5 @@ export class Auth {
         localStorage.removeItem(uidKey);
         localStorage.removeItem(urlStateKey);
         localStorage.removeItem('userId')
-    }
-
-    setUserPermissions(permissions){
-        this.userPermissionsSource.next(permissions);
     }
 }

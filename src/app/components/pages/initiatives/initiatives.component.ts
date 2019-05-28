@@ -30,10 +30,6 @@ export class InitiativesComponent implements OnInit, OnDestroy {
             this.initiatives = Array.from(<Iterable<Initiative>> initiatives.values());
         });
 
-        this.subscriptions.push(this.auth.getUserPermissions().subscribe(permissions => {
-            this.auth.setUserPermissions(permissions);
-        }))
-
         this.subscriptions.push(this.scrollService.scrolled.subscribe(() => {
             let o = this.scrollService.currentScrollTop / 400;
             this.shadowStyle = {
