@@ -10,6 +10,7 @@ import { RegionService } from '../../../services/autocomplete/region-service';
 import { Region } from '../../../model/region';
 import { SearchOption } from '../../../model/search-option';
 import { Auth } from '../../../services/auth-service';
+import { COHORT_VALUE_MAPPING_SSVS } from '../../../model/cohort-value-mapping';
 
 @Component({
     selector: 'app-variant-summary',
@@ -59,8 +60,13 @@ export class VariantSummaryComponent implements OnInit, OnDestroy {
             const start = Number(m[2]);
             const reference = m[3];
             const alternate = m[4];
+            let searchOption = [new SearchOption('', 'returnAnnotations', [], 'true')];
+            if(COHORT_VALUE_MAPPING_SSVS[this.cohort]){
+                searchOption = [new SearchOption('', 'dataset', [], this.cohort), new SearchOption('', 'returnAnnotations', [], 'true')];
+            }
+            const sq = new SearchQueries([new Region (chromo, start, start)], searchOption);
 
-            const sq = new SearchQueries([new Region (chromo, start, start)], [new SearchOption('', 'returnAnnotations', [], 'true')]);
+
             this.getVariant(sq, reference, alternate);
         } catch (e) {
             this.error = 'Could not find specified variant';

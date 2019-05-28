@@ -10,6 +10,7 @@ import { SampleRequest } from '../model/sample-request';
 import { VariantSummaryRequest } from '../model/variant-summary-request';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { of, Observable } from "rxjs";
+import { COHORT_VALUE_MAPPING_SSVS, COHORT_VALUE_MAPPING } from '../model/cohort-value-mapping';
 
 export const VSAL_VARIANT_LIMIT = 10000;
 export const VSAL_TIMEOUT = 300000;
@@ -38,7 +39,7 @@ export class VsalService {
         query.options.forEach(o => {
             if (o.key) {
                 if(o.key === 'dataset'){
-                    urlParams = urlParams.append('dataset', 'mito');
+                    urlParams = urlParams.append('dataset', COHORT_VALUE_MAPPING[o.getValue()]);
                 }else {
                     urlParams = urlParams.append(o.key, o.getValue());
                 }          
@@ -74,8 +75,8 @@ export class VsalService {
         query.options.forEach(o => {
             if (o.key) {
                 if(o.key === 'dataset'){
-                    if(o.getValue() === 'Mitochondria'){
-                        urlParams = urlParams.append('dataset', 'mito');
+                    if(COHORT_VALUE_MAPPING_SSVS[o.getValue()]){
+                        urlParams = urlParams.append('dataset', COHORT_VALUE_MAPPING_SSVS[o.getValue()]);
                     }
                 }else {
                     urlParams = urlParams.append(o.key, o.getValue());
@@ -121,7 +122,7 @@ export class VsalService {
         query.options.forEach(o => {
             if (o.key) {
                 if(o.key === 'dataset'){
-                    urlParams = urlParams.append('dataset', 'mito');
+                    urlParams = urlParams.append('dataset', COHORT_VALUE_MAPPING[o.getValue()]);
                 }else {
                     urlParams = urlParams.append(o.key, o.getValue());
                 }           
