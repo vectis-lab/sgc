@@ -25,7 +25,6 @@ export class VsalService {
         const end = query.regions.map(q => q.end).join();
         let urlParams = new HttpParams()
             .append('chromosome', chromosome)
-            .append('dataset', 'mito')
             .append('positionStart', start)
             .append('positionEnd', end)
             .append('limit', VSAL_VARIANT_LIMIT.toString())
@@ -38,7 +37,11 @@ export class VsalService {
 
         query.options.forEach(o => {
             if (o.key) {
-                urlParams = urlParams.append(o.key, o.getValue());
+                if(o.key === 'dataset'){
+                    urlParams = urlParams.append('dataset', 'mito');
+                }else {
+                    urlParams = urlParams.append(o.key, o.getValue());
+                }          
             }
         });
 
@@ -70,7 +73,13 @@ export class VsalService {
 
         query.options.forEach(o => {
             if (o.key) {
-                urlParams = urlParams.append(o.key, o.getValue());
+                if(o.key === 'dataset'){
+                    if(o.getValue() === 'Mitochondria'){
+                        urlParams = urlParams.append('dataset', 'mito');
+                    }
+                }else {
+                    urlParams = urlParams.append(o.key, o.getValue());
+                }           
             }
         });
 
@@ -95,7 +104,6 @@ export class VsalService {
 
         let urlParams = new HttpParams()
             .append('chromosome', chromosome)
-            .append('dataset', 'mito')
             .append('selectSamplesByGT', 'true')
             .append('positionStart', start)
             .append('positionEnd', end)
@@ -112,7 +120,11 @@ export class VsalService {
 
         query.options.forEach(o => {
             if (o.key) {
-                urlParams = urlParams.append(o.key, o.getValue())
+                if(o.key === 'dataset'){
+                    urlParams = urlParams.append('dataset', 'mito');
+                }else {
+                    urlParams = urlParams.append(o.key, o.getValue());
+                }           
             }
         });
 
