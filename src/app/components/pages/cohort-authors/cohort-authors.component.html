@@ -18,12 +18,21 @@
             <mat-grid-tile *ngFor="let author of mitochondriaAuthors">{{author}}</mat-grid-tile>
           </mat-grid-list>
       </div>
+      <div [ngClass]="{'is-active': activeAnchor === 'acutecare', 'cohort': true}" id='neuromuscular'>
+          <mat-grid-list cols="4" rowHeight="9:1">
+              <mat-grid-tile [rowspan]="23">
+                  <div class="cohort-title">
+                    <h1>Acute Care</h1>
+                  </div>
+              </mat-grid-tile>
+              <mat-grid-tile *ngFor="let author of acutecareAuthors">{{author}}</mat-grid-tile>
+          </mat-grid-list>
+        </div>
       <div [ngClass]="{'is-active': activeAnchor === 'neuromuscular', 'cohort': true}" id='neuromuscular'>
         <mat-grid-list cols="4" rowHeight="9:1">
             <mat-grid-tile [rowspan]="5">
                 <div class="cohort-title">
                   <h1>Neuromuscular</h1>
-                  <img src="assets/amdf.png" height="100" width="100"/>
                 </div>
             </mat-grid-tile>
             <mat-grid-tile *ngFor="let author of neuromuscularAuthors">{{author}}</mat-grid-tile>

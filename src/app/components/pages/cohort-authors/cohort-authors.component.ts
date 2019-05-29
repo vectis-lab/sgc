@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
-import { Mitochondria, Neuromuscular } from '../../../shared/cohortAuthor';
+import { Mitochondria, Neuromuscular, Acutecare } from '../../../shared/cohortAuthor';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 
@@ -11,6 +11,7 @@ import { Subscription } from 'rxjs/Subscription';
 export class CohortAuthorsComponent implements OnInit, AfterViewInit, OnDestroy {
   mitochondriaAuthors = Mitochondria;
   neuromuscularAuthors = Neuromuscular;
+  acutecareAuthors = Acutecare;
   activeAnchor = '';
   private subscriptions: Subscription[] = [];
 
