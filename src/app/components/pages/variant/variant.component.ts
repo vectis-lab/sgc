@@ -10,7 +10,6 @@ import { RegionService } from '../../../services/autocomplete/region-service';
 import { Region } from '../../../model/region';
 import { SearchOption } from '../../../model/search-option';
 import { Auth } from '../../../services/auth-service';
-import { COHORT_VALUE_MAPPING } from '../../../model/cohort-value-mapping';
 
 @Component({
     selector: 'app-variant',
@@ -61,7 +60,7 @@ export class VariantComponent implements OnInit, OnDestroy {
             const reference = m[3];
             const alternate = m[4];
 
-            const sq = new SearchQueries([new Region(chromo, start, start)], [new SearchOption('', 'dataset', [], COHORT_VALUE_MAPPING[this.cohort]), new SearchOption('', 'returnAnnotations', [], 'true')]);
+            const sq = new SearchQueries([new Region(chromo, start, start)], [new SearchOption('', 'dataset', [], this.cohort), new SearchOption('', 'returnAnnotations', [], 'true')]);
             this.getVariant(sq, reference, alternate);
         } catch (e) {
             this.error = 'Could not find specified variant';
