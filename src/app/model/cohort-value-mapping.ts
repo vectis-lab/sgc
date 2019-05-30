@@ -5,7 +5,7 @@ export const COHORT_VALUE_MAPPING_VSAL = {
 }
 
 export const COHORT_VALUE_MAPPING_SSVS = {
-    Mitochondria: null,
+    Mitochondria: 'mito',
     Acutecare: null,
     Neuromuscular: null
 }
