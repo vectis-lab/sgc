@@ -15,7 +15,7 @@ export const environment = {
     vsalUrl2: 'https://vsal.garvan.org.au/vsal/core/find',
     elasticUrl: 'https://dr-sgc.kccg.garvan.org.au/_elasticsearch',
     durlUrl: 'https://wt-ec1ac815dce38c76c2e7662693b82189-0.run.webtask.io/durl',
-    sentryUrl: 'https://4126e3ee842b4f079400ccf84980e84e@sentry.io/158608',
+    sentryUrl: 'https://6d4633523e614c36a0ba2a92358ab4cc@sentry.io/1471908',
     clinicalUrl: 'http://localhost:3000',
     mapd: {
         protocol: 'https',
