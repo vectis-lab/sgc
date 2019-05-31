@@ -71,7 +71,9 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
                 public router: Router,) {
         this.searchBarService.autocompleteServices.push(rsids);
         this.subscriptions.push(this.errors.subscribe((e) => {
-            Raven.captureMessage(e);
+            if(e !== '' || e !== constants.GENERIC_SERVICE_ERROR_MESSAGE){
+                Raven.captureMessage(e);
+            }
 
             this.error = e;
             this.cd.detectChanges();
@@ -166,6 +168,7 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
                             this.cf.updates.next();
                             this.cd.detectChanges(); 
                         }).catch(e => {
+                            this.loading=false;
                             this.searchError = e;
                             this.cd.detectChanges();
                         });
@@ -205,6 +208,7 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
                             this.cd.detectChanges();
                         }).catch((e) => this.errors.next(constants.GENERIC_SERVICE_ERROR_MESSAGE));
                     }).catch(e => {
+                        this.loading=false;
                         this.searchError = e;
                         this.cd.detectChanges();
                     });
