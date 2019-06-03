@@ -10,8 +10,8 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./gene-panels.component.css']
 })
 export class GenePanelsComponent implements OnInit, OnDestroy {
-  options: object[] = [{
-    label: 'Mitochondrial disorders', value: "MITOCHONDRIAL_DISORDERS"},
+  options: object[] = [
+    //{label: 'Mitochondrial disorders', value: "MITOCHONDRIAL_DISORDERS"},
     {label: 'Mitochondrial liver disease', value: "MITOCHONDRIAL_LIVER_DISEASE"}
   ];
   @Input() selectedGenePanel: string;
