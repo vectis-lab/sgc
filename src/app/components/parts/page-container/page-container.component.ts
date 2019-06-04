@@ -1,6 +1,7 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { ScrollService } from '../../../services/scroll-service';
+import { SearchBarService } from '../../../services/search-bar-service';
 
 const MIN_NAV_WIDTH = 1285;
 
@@ -22,7 +23,8 @@ export class PageContainerComponent implements OnInit {
     }
 
     constructor(private router: Router,
-                private scrollService: ScrollService) {
+                private scrollService: ScrollService,
+                private searchBarService: SearchBarService) {
         this.windowResized();
         this.router.events
             .filter((x, idx) => x instanceof NavigationEnd)

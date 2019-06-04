@@ -14,7 +14,6 @@ const SMALL_WIDTH = 720;
   selector: 'app-clinical',
   templateUrl: './clinical.component.html',
   styleUrls: ['./clinical.component.css'],
-  providers: [ SearchBarService ]
 })
 export class ClinicalComponent implements OnInit, OnDestroy {
   subscriptions: Subscription[] = [];

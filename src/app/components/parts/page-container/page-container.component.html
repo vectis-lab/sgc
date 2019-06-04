@@ -18,14 +18,15 @@
 
 <header class="header">
     <div class="header-content">
-                <span id="header-title">
-                    <div class="menu-title" *ngIf="!sidenav.opened && showTitle"
-                         routerLink="/initiatives">
-                            <div class="logo-small">
-                                <img src="assets/logos/VAplusAGHA2.png">
-                            </div>
+        <span id="header-title">
+            <div class="menu-title" *ngIf="!sidenav.opened && showTitle"
+                    routerLink="/initiatives">
+                    <div class="logo-small">
+                        <img src="assets/logos/VAplusAGHA2.png">
                     </div>
-                </span>
+            </div>
+        </span>
+        <app-search-option [option]="searchBarService.options[0]"></app-search-option>
         <i *ngIf="showHamburger" class="material-icons"
            (click)="sidenav.open()">menu</i>
         <app-header-nav *ngIf="!showHamburger"></app-header-nav>
