@@ -113,6 +113,7 @@ import { VariantSummaryComponent } from './components/pages/variant-summary/vari
 import { SamplesListComponent } from './components/parts/samples-list/samples-list.component';
 import { AcutecareInformationComponent } from './components/parts/acutecare-information/acutecare-information.component';
 import { CohortInformationComponent } from './components/parts/cohort-information/cohort-information.component';
+import { AlleleFreqSummaryComponent } from './components/parts/allele-freq-summary/allele-freq-summary.component';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -217,6 +218,7 @@ export class RavenErrorHandler implements ErrorHandler {
         SamplesListComponent,
         AcutecareInformationComponent,
         CohortInformationComponent,
+        AlleleFreqSummaryComponent,
     ],
     entryComponents: [
         SignUpComponent,
