@@ -24,7 +24,7 @@ export class PageContainerComponent implements OnInit {
 
     constructor(private router: Router,
                 private scrollService: ScrollService,
-                private searchBarService: SearchBarService) {
+                public searchBarService: SearchBarService) {
         this.windowResized();
         this.router.events
             .filter((x, idx) => x instanceof NavigationEnd)
