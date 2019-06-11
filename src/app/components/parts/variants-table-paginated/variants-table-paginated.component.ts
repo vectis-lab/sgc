@@ -56,7 +56,9 @@ export class VariantsTablePaginatedComponent implements OnInit, OnDestroy {
                 });
                 this.variants = data;
                 this.loading = false;
-                this.cd.detectChanges();
+                if (!this.cd['destroyed']) {
+                    this.cd.detectChanges();
+                }
             });
     }
 

@@ -21,7 +21,7 @@ const appRoutes: Routes = [
     { path: 'clinical/variant', component: VariantComponent },
     { path: 'search/variant-summary', component: VariantSummaryComponent },
     { path: 'search', component: SearchComponent },
-    { path: 'explore', component: ExploreComponent },
+    { path: 'explore/:cohort', component: ExploreComponent },
     { path: 'beacon', component: BeaconComponent },
     { path: 'error', component: ErrorComponent },
     { path: 'authors', component: CohortAuthorsComponent },

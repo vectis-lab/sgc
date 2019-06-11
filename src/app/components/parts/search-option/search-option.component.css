@@ -1,6 +1,7 @@
 .option {
     position: relative;
     cursor: pointer;
+    font-size: medium;
 }
 
 .option span {
@@ -11,7 +12,7 @@
     background-color: white;
     border: 1px solid lightgrey;
     position: absolute;
-    width: 100px;
+    width: 170px;
     box-shadow: 0 2px 4px rgba(0,0,0,.16);
     -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.16);
     z-index: 99999;
@@ -26,6 +27,7 @@
 }
 
 .selected-option {
+    color: white;
     display: flex;
     align-items: center;
 }

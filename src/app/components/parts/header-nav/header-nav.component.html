@@ -3,7 +3,7 @@
         <a routerLink="/initiatives" routerLinkActive="is-active">Initiatives</a>
         <a routerLink="/search" routerLinkActive="is-active">Summary</a>
         <a routerLink="/clinical" routerLinkActive="is-active">Clinical Filtering</a>
-        <a routerLink="/explore" routerLinkActive="is-active">Explore</a>
+        <a [routerLink]="['/explore', cohort]" routerLinkActive="is-active">Explore</a>
         <a routerLink="/beacon" routerLinkActive="is-active">Beacon</a>
         <a routerLink="/about" routerLinkActive="is-active">About</a>
         <!--<a [ngClass]="{'is-active': termsLinkActive}" (click)="toggleTerms($event)">

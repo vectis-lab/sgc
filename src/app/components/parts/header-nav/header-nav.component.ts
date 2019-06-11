@@ -1,9 +1,11 @@
 import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { Auth } from '../../../services/auth-service';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { ScrollService } from '../../../services/scroll-service';
+import { SearchBarService } from '../../../services/search-bar-service';
 import { SignUpComponent } from '../sign-up/sign-up.component';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
     selector: 'app-header-nav',
@@ -11,11 +13,13 @@ import { SignUpComponent } from '../sign-up/sign-up.component';
     styleUrls: ['./header-nav.component.css']
 })
 export class HeaderNavComponent implements OnInit {
+    subscriptions: Subscription[] = [];
     termsDropdown = false;
     userDropdown = false;
     termsLinkActive = false;
     userEmail = localStorage.getItem('uid')?localStorage.getItem('uid'):null;
     userPicture;
+    cohort = this.searchBarService.options[0].getValue();
 
     @HostListener('document:click', ['$event']) outsideClick($event: Event) {
         if (!$event) {
@@ -29,10 +33,14 @@ export class HeaderNavComponent implements OnInit {
 
     constructor(public auth: Auth,
                 private router: Router,
+                private route: ActivatedRoute,
                 private elf: ElementRef,
                 private scrollService: ScrollService,
-                public dialog: MatDialog) {
+                public dialog: MatDialog,
+                private searchBarService: SearchBarService) {    
+
     }
+    
 
     ngOnInit() {
         this.router.events
