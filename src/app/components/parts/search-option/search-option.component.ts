@@ -3,6 +3,7 @@ import { SearchOption } from '../../../model/search-option';
 import { SearchBarService } from '../../../services/search-bar-service';
 import { Subscription } from 'rxjs/Subscription';
 import { Params, ActivatedRoute, Router } from '@angular/router';
+import { ClinicalFilteringService } from '../../../services/clinical-filtering.service';
 
 @Component({
     selector: 'app-search-option',
@@ -22,8 +23,11 @@ export class SearchOptionComponent implements OnInit {
         }
     }
     cohort: string;
+    query: string;
+    panel: string;
 
-    constructor(private elf: ElementRef, private searchBarService: SearchBarService, private route: ActivatedRoute,) {
+    constructor(private elf: ElementRef, private searchBarService: SearchBarService, private route: ActivatedRoute, private router: Router, public clinicalFilteringService: ClinicalFilteringService) {
+        
     }
 
     ngOnInit() {
@@ -31,11 +35,31 @@ export class SearchOptionComponent implements OnInit {
             if(p['cohort']){
                 this.option.setValue(p['cohort']);
             }
+            if(p['query']){
+                this.query = p['query'];
+            }
+            if(p['panel']){
+                this.panel = p['panel'];
+            }
         }));
     }
 
     selectOption(selected: string) {
         this.option.setValue(selected);
         this.searchBarService.options[0].setValue(selected);
+        if(this.router.url.includes('/search')){
+            if(this.query){
+                const obj = {query: this.query, cohort: this.option.getValue(), timestamp: Date.now()};
+                this.router.navigate(['/search/results', obj]);
+            }
+        }else if(this.router.url.includes('/clinical')){
+            if(this.query || this.panel){
+                const obj = {query: this.query || '', cohort: this.option.getValue(), panel: this.panel || '', timestamp: Date.now()};
+                this.clinicalFilteringService.clearFilters();
+                this.router.navigate(['/clinical/results', obj]);
+            }
+        }else if(this.router.url.includes('/explore')){
+            this.router.navigate([`/explore/${this.option.getValue()}`]);
+        }
     }
 }
