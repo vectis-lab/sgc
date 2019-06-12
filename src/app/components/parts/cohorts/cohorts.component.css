@@ -16,3 +16,14 @@ section .title {
     font-size: xx-large;
     margin-bottom: 1rem;
 }
+
+p {
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+span {
+    font-size: 16px;
+    font-weight: 600 !important; 
+}

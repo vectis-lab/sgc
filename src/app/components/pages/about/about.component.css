@@ -9,12 +9,14 @@ article {
 }
 
 .content {
+    display: inline-block;
     align-self: flex-start;
 }
 
 .sponsor-images {
     display: flex;
     justify-content: flex-start;
+    float: right;
     align-items: center;
     flex-direction: column;
     margin-top: 5rem;
@@ -32,13 +34,16 @@ article {
 }
 
 .contact {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    float: left;
 }
 
 .contact p {
     font-size: larger;
+}
+
+.content-footer > ::ng-deep figure {
+    justify-content: flex-start !important;
+    align-items: left !important;
 }
 
 h4 {

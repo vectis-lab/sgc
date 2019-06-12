@@ -1,4 +1,4 @@
-<div class="search-band">
+<div class="search-band" [ngStyle]="{backgroundColor: bgColor}">
     <div class="search-content" [ngClass]="{'expanded': expanded}">
         <div class="search-bar">
             <app-search-bar [options]="{autofocus: false}" (focused)="onFocus()" [action]="action" [regError]="regionError"></app-search-bar>        

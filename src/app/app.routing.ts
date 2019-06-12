@@ -1,6 +1,6 @@
 import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './components/pages/about/about.component';
-import { InitiativesComponent } from './components/pages/initiatives/initiatives.component';
+import { HomeComponent } from './components/pages/home/home.component';
 import { LoadingComponent } from './components/pages/loading/loading.component';
 import { SearchComponent } from './components/pages/search/search.component';
 import { BeaconComponent } from './components/pages/beacon/beacon.component';
@@ -12,7 +12,7 @@ import { ClinicalComponent } from './components/pages/clinical/clinical.componen
 import { CohortAuthorsComponent } from './components/pages/cohort-authors/cohort-authors.component';
 
 const appRoutes: Routes = [
-    { path: 'initiatives', component: InitiativesComponent },
+    { path: '', component: HomeComponent },
     { path: 'about',  component: AboutComponent },
     { path: 'clinical', component: ClinicalComponent },
     { path: 'clinical/results', component: ClinicalComponent },
@@ -25,8 +25,8 @@ const appRoutes: Routes = [
     { path: 'beacon', component: BeaconComponent },
     { path: 'error', component: ErrorComponent },
     { path: 'authors', component: CohortAuthorsComponent },
-    { path: '', redirectTo: '/initiatives', pathMatch: 'full'},
-    { path: '**', redirectTo: '/initiatives', pathMatch: 'full'},
+    { path: '', redirectTo: '/', pathMatch: 'full'},
+    { path: '**', redirectTo: '/', pathMatch: 'full'},
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);

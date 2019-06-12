@@ -1,0 +1,17 @@
+.initiatives {
+    display: flex;
+    flex-wrap: wrap;
+    top: 70%;
+    position: relative;
+}
+
+.band {
+    width: 100%;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 90px;
+}

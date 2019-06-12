@@ -3,6 +3,9 @@
         <article>
             <div class="content">
                 <h1 class="title">About</h1>
+                <div class="sponsor-images">
+                    <img src="assets/logos/agha.png">
+                </div>
                 <p>
                         Genomic technology is a relatively new and disruptive technology in healthcare. Its successful 
                         implementation relies on whole-of-system change. Genomic medicine has the potential to transform 
@@ -30,19 +33,37 @@
                         Our network comprises more than 80 partners and 440 investigators. They include clinicians, researchers 
                         and diagnostic geneticists who work across 18 clinical Flagships studies and four research program areas.
                 </p>
-
-                <h1 class="title">Contact Us</h1>
-                <div class="contact">
-                    <div class="contact-details">
-                        <p>(03) 9936 6345</p>
-                        <p>australian.genomics@mcri.edu.au</p>
-                    </div>
-                </div>
-            </div>
-            <div class="sponsor-images">
-                <img src="assets/logos/agha.png">
             </div>
         </article>
+        <h1 class="title">Rare Disease Flagship</h1>
+        <div class="band-flex">
+            <app-cohorts></app-cohorts>
+        </div>
+        <mat-grid-list cols="2" rowHeight="2:1">
+                <mat-grid-tile class="content-footer">
+                    <div>
+                        <h1 class="title">Contact Us</h1>
+                        <div>
+                            <p>Phone: (03) 9936 6345</p>
+                            <p>Email: australian.genomics@mcri.edu.au</p>
+                            <p>50 Flemington Road</p>
+                            <p>Parkville, Victoria 3052,</p>
+                            <p>Australia</p>
+                        </div>
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile class="content-footer">
+                    <div>
+                        <h1 class="title">Partners</h1>
+                        <div>
+                            <a href="http://www.health.nsw.gov.au/Pages/default.aspx" target="_blank"><img
+                                src="assets/logos/nswhealth.png" [ngStyle]="{maxHeight: '60px'}"></a>
+                            <a href="http://www.garvan.org.au/research/kinghorn-centre-for-clinical-genomics/clinical-genomics"
+                                target="_blank"><img src="assets/logos/kccggarvan.png" [ngStyle]="{maxHeight: '60px'}"></a>
+                        </div>
+                    </div>
+                </mat-grid-tile>
+            </mat-grid-list>
 
     </section>
 </app-page-container>

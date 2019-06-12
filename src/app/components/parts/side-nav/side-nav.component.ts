@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material';
 import { Auth } from '../../../services/auth-service';
 import { Router, NavigationEnd } from '@angular/router';
 import { SignUpComponent } from '../sign-up/sign-up.component';
+import { SearchBarService } from '../../../services/search-bar-service';
 
 @Component({
     selector: 'app-side-nav',
@@ -12,10 +13,12 @@ import { SignUpComponent } from '../sign-up/sign-up.component';
 export class SideNavComponent implements OnInit {
     termsDropdown = false;
     termsLinkActive = false;
+    cohort = this.searchBarService.options[0].getValue();
 
     constructor(public auth: Auth,
                 private router: Router,
-                public dialog: MatDialog) {
+                public dialog: MatDialog,
+                private searchBarService: SearchBarService) {
     }
 
     ngOnInit() {

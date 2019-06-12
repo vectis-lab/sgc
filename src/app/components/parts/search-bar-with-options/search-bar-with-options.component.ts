@@ -22,6 +22,7 @@ export class SearchBarWithOptionsComponent implements AfterViewInit {
         this.clinicalFilteringService.clearFilters();
         this.router.navigate(['/search/results', obj]);
     };
+    @Input() bgColor = 'white';
     private subscriptions: Subscription[] = [];
     regionError: boolean = false;
 

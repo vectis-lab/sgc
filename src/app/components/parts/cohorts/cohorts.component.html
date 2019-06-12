@@ -1,5 +1,14 @@
 <section>
-    <div class="cohorts">
-        <app-cohort *ngFor="let cohort of cohorts" [title]="cohort.title" [imgSource]="cohort.imgSource" [dialogContent]="cohort.content"></app-cohort>
-    </div> 
+    <mat-accordion>
+        <mat-expansion-panel *ngFor="let cohort of cohorts">
+            <mat-expansion-panel-header>
+            <mat-panel-title>
+                <span>{{cohort.title}}</span>
+            </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div *ngFor="let c of cohort.content">
+                <p><span>{{c.header}}:</span> {{c.text}}</p>
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
 </section> 

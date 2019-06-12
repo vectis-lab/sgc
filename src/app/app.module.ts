@@ -90,7 +90,6 @@ import { AuthGuardComponent } from './components/parts/auth-guard/auth-guard.com
 import { HelperService } from './services/helper.service';
 import { ClinicalFilteringService } from './services/clinical-filtering.service';
 import { SavedSearchesComponent } from './components/parts/saved-searches/saved-searches.component';
-import { CohortComponent, CohortDialog } from './components/parts/cohort/cohort.component';
 import { CohortsComponent } from './components/parts/cohorts/cohorts.component';
 import { NeuromuscularInformationComponent } from './components/parts/neuromuscular-information/neuromuscular-information.component';
 import { ClinicalCohortChartComponent } from './components/parts/clinical-cohort-chart/clinical-cohort-chart.component';
@@ -114,6 +113,7 @@ import { SamplesListComponent } from './components/parts/samples-list/samples-li
 import { AcutecareInformationComponent } from './components/parts/acutecare-information/acutecare-information.component';
 import { CohortInformationComponent } from './components/parts/cohort-information/cohort-information.component';
 import { AlleleFreqSummaryComponent } from './components/parts/allele-freq-summary/allele-freq-summary.component';
+import { HomeComponent } from './components/pages/home/home.component';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -196,8 +196,6 @@ export class RavenErrorHandler implements ErrorHandler {
         SignUpComponent,
         AuthGuardComponent,
         SavedSearchesComponent,
-        CohortComponent,
-        CohortDialog,
         CohortsComponent,
         NeuromuscularInformationComponent,
         ClinicalCohortChartComponent,
@@ -219,13 +217,13 @@ export class RavenErrorHandler implements ErrorHandler {
         AcutecareInformationComponent,
         CohortInformationComponent,
         AlleleFreqSummaryComponent,
+        HomeComponent,
     ],
     entryComponents: [
         SignUpComponent,
         ErrorDialogComponent,
         SnackbarDemoComponent,
-        SnackbarHelpComponent,
-        CohortDialog
+        SnackbarHelpComponent
     ],
     providers: [
         Auth,
