@@ -34,8 +34,8 @@ mat-sidenav-container {
 
 .header-content {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    flex-direction: row;
     align-items: center;
     height: 70px;
     max-width: 110em;
@@ -93,6 +93,15 @@ mat-sidenav .title {
 
 .header-content i {
     color: white
+}
+
+.container-nav {
+    display: inline-flex;
+}
+
+.cohort-option{
+    margin-top: 13px;
+    padding-right: 1em;
 }
 
 .logo-small {

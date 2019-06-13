@@ -26,9 +26,11 @@
                     </div>
             </div>
         </span>
-        <app-search-option [option]="searchBarService.options[0]"></app-search-option>
-        <i *ngIf="showHamburger" class="material-icons"
-           (click)="sidenav.open()">menu</i>
-        <app-header-nav *ngIf="!showHamburger"></app-header-nav>
+        <div class='container-nav'>
+            <app-search-option [option]="searchBarService.options[0]" class="cohort-option"></app-search-option>
+            <i *ngIf="showHamburger" class="material-icons"
+            (click)="sidenav.open()">menu</i>
+            <app-header-nav *ngIf="!showHamburger" class="header-nav"></app-header-nav>
+        </div>
     </div>
 </header>
