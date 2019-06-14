@@ -109,7 +109,6 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
                             return this.cf.create(session, 'mgrb');                       
                         }).then(() => {
                             this.cf.updates.next();
-                            this.cd.detectChanges();
                         }).catch((e) => this.errors.next(e));
                     }else{
                         if(this.permissions){
@@ -146,7 +145,8 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     ngOnDestroy() {
-        this.subscriptions.forEach((s) => s.unsubscribe());
+        this.subscriptions.forEach((s) => {
+            s.unsubscribe()});
     }
 
     addGeneOrRegion = (q) => {
@@ -186,7 +186,6 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
 
             dc.redrawAllAsync().then(() => {
                 this.cf.updates.next();
-                this.cd.detectChanges();
             }).catch((e) => this.errors.next(constants.GENERIC_SERVICE_ERROR_MESSAGE));
         }).catch(e => {
             this.loading=false;
