@@ -45,7 +45,6 @@ import { SearchBarComponent } from './components/parts/search-bar/search-bar.com
 import { SearchOptionComponent } from './components/parts/search-option/search-option.component';
 import { BeaconComponent } from './components/pages/beacon/beacon.component';
 import { SearchBarWithOptionsComponent } from './components/parts/search-bar-with-options/search-bar-with-options.component';
-import { TitleLogoBannerComponent } from './components/parts/title-logo-banner/title-logo-banner.component';
 import { HeaderNavComponent } from './components/parts/header-nav/header-nav.component';
 import { ScrollService } from './services/scroll-service';
 import { SideNavComponent } from './components/parts/side-nav/side-nav.component';
@@ -168,7 +167,6 @@ export class RavenErrorHandler implements ErrorHandler {
         SearchOptionComponent,
         BeaconComponent,
         SearchBarWithOptionsComponent,
-        TitleLogoBannerComponent,
         HeaderNavComponent,
         SideNavComponent,
         GeneInformationComponent,
