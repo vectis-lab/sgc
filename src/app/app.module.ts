@@ -52,7 +52,6 @@ import { EnsemblService } from './services/ensembl-service';
 import { GeneInformationComponent } from './components/parts/gene-information/gene-information.component';
 import { BeaconNetworkService } from './services/beacon/beacon-network-service';
 import { HomeFooterComponent } from './components/parts/home-footer/home-footer.component';
-import { HomeAboutComponent } from './components/parts/home-about/home-about.component';
 import { PrivacyFooterComponent } from './components/parts/privacy-footer/privacy-footer.component';
 import { ElasticGeneSearch } from './services/autocomplete/elastic-gene-search-service';
 import { VariantsTableComponent } from './components/parts/variants-table/variants-table.component';
@@ -171,7 +170,6 @@ export class RavenErrorHandler implements ErrorHandler {
         SideNavComponent,
         GeneInformationComponent,
         HomeFooterComponent,
-        HomeAboutComponent,
         PrivacyFooterComponent,
         VariantsTableComponent,
         FilterAutoComponent,
