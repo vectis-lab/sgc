@@ -23,7 +23,7 @@ export class MapdService {
                         reject(error);
                     } else {
                         this.session = session;
-                        session.getFields('mgrb', (err, res) => {
+                        session.getFields('MITO', (err, res) => {
                             if (err) {
                                 reject(error);
                             } else {

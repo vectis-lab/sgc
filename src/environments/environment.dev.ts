@@ -19,8 +19,8 @@ export const environment = {
     clinicalUrl: 'http://localhost:3000',
     mapd: {
         protocol: 'https',
-        host: 'mapd.vectis-api.com',
-        port: '443',
+        host: 'vsal.garvan.org.au',
+        port: '80',
         dbName: 'mapd',
         user: 'mapd',
         pwd: 'HyperInteractive',

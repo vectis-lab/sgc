@@ -106,7 +106,7 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
                         (p['cohort'] === "Neuromuscular" && this.permissions.includes('neuromuscular/summary'))
                     ){
                         this.mapd.connect().then((session) => {
-                            return this.cf.create(session, 'mgrb');                       
+                            return this.cf.create(session, 'MITO');                       
                         }).then(() => {
                             this.cf.updates.next();
                         }).catch((e) => this.errors.next(e));
