@@ -4,6 +4,7 @@
     "prod": "sgc-prod-1df82",
     "agha-demo": "agha-demo",
     "agha-dev": "agha-dev",
-    "agha-staging": "agha-staging"
+    "agha-staging": "agha-staging",
+    "agha-prod": "agha-5a493"
   }
 }
