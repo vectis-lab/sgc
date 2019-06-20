@@ -28,11 +28,9 @@ import { ProgramCardComponent } from './components/parts/program-card/program-ca
 import { CohortCardComponent } from './components/parts/cohort-card/cohort-card.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { InitiativesComponent } from './components/pages/initiatives/initiatives.component';
-import { TotalsWidgetComponent } from './components/parts/totals-widget/totals-widget.component';
 import { ColumnChartComponent } from './components/parts/charts/column-chart.component';
 import { PieChartComponent } from './components/parts/charts/pie-chart.component';
 import { CohortListComponent } from './components/parts/cohort-list/cohort-list.component';
-import { GraphsWidgetComponent } from './components/parts/graphs-widget/graphs-widget.component';
 import { InitiativeService } from './services/project-data/initiative-service';
 import { CohortService } from './services/project-data/cohort-service';
 import { SearchComponent } from './components/pages/search/search.component';
@@ -45,15 +43,12 @@ import { SearchBarComponent } from './components/parts/search-bar/search-bar.com
 import { SearchOptionComponent } from './components/parts/search-option/search-option.component';
 import { BeaconComponent } from './components/pages/beacon/beacon.component';
 import { SearchBarWithOptionsComponent } from './components/parts/search-bar-with-options/search-bar-with-options.component';
-import { TitleLogoBannerComponent } from './components/parts/title-logo-banner/title-logo-banner.component';
 import { HeaderNavComponent } from './components/parts/header-nav/header-nav.component';
 import { ScrollService } from './services/scroll-service';
 import { SideNavComponent } from './components/parts/side-nav/side-nav.component';
 import { EnsemblService } from './services/ensembl-service';
 import { GeneInformationComponent } from './components/parts/gene-information/gene-information.component';
 import { BeaconNetworkService } from './services/beacon/beacon-network-service';
-import { HomeFooterComponent } from './components/parts/home-footer/home-footer.component';
-import { HomeAboutComponent } from './components/parts/home-about/home-about.component';
 import { PrivacyFooterComponent } from './components/parts/privacy-footer/privacy-footer.component';
 import { ElasticGeneSearch } from './services/autocomplete/elastic-gene-search-service';
 import { VariantsTableComponent } from './components/parts/variants-table/variants-table.component';
@@ -161,19 +156,14 @@ export class RavenErrorHandler implements ErrorHandler {
         CohortCardComponent,
         AboutComponent,
         InitiativesComponent,
-        TotalsWidgetComponent,
         PieChartComponent,
         CohortListComponent,
-        GraphsWidgetComponent,
         SearchOptionComponent,
         BeaconComponent,
         SearchBarWithOptionsComponent,
-        TitleLogoBannerComponent,
         HeaderNavComponent,
         SideNavComponent,
         GeneInformationComponent,
-        HomeFooterComponent,
-        HomeAboutComponent,
         PrivacyFooterComponent,
         VariantsTableComponent,
         FilterAutoComponent,
