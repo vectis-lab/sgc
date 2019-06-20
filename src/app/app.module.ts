@@ -28,11 +28,9 @@ import { ProgramCardComponent } from './components/parts/program-card/program-ca
 import { CohortCardComponent } from './components/parts/cohort-card/cohort-card.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { InitiativesComponent } from './components/pages/initiatives/initiatives.component';
-import { TotalsWidgetComponent } from './components/parts/totals-widget/totals-widget.component';
 import { ColumnChartComponent } from './components/parts/charts/column-chart.component';
 import { PieChartComponent } from './components/parts/charts/pie-chart.component';
 import { CohortListComponent } from './components/parts/cohort-list/cohort-list.component';
-import { GraphsWidgetComponent } from './components/parts/graphs-widget/graphs-widget.component';
 import { InitiativeService } from './services/project-data/initiative-service';
 import { CohortService } from './services/project-data/cohort-service';
 import { SearchComponent } from './components/pages/search/search.component';
@@ -158,10 +156,8 @@ export class RavenErrorHandler implements ErrorHandler {
         CohortCardComponent,
         AboutComponent,
         InitiativesComponent,
-        TotalsWidgetComponent,
         PieChartComponent,
         CohortListComponent,
-        GraphsWidgetComponent,
         SearchOptionComponent,
         BeaconComponent,
         SearchBarWithOptionsComponent,
