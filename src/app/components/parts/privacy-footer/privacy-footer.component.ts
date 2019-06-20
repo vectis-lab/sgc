@@ -14,7 +14,7 @@ export class PrivacyFooterComponent implements OnInit, OnDestroy {
     year = '2019';
     subscriptions: Subscription[] = [];
     selectedCohort = this.searchBarService.options[0].getValue().toLowerCase();
-
+    hover=false;
 
     constructor(private router: Router, private searchBarService: SearchBarService) {
     }
