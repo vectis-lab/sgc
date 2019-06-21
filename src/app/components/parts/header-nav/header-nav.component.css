@@ -15,13 +15,14 @@
 .dropdown {
     position: absolute;
     right: 0;
-    margin-top: 17px;
+    margin-top: 10px;
     z-index: 10;
 }
 
 .dropdown-item {
     padding: 30px 50px 30px 30px;
-    background-color: #336F9C;
+    background-color: whitesmoke;
+    color: var(--theme);
 }
 
 .right-side {
@@ -86,3 +87,9 @@ nav a {
 .empty {
     height: 30px;
 }
+
+.avatar-link {
+    position: relative;
+    top: 7px;
+}
+

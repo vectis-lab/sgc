@@ -1,3 +1,5 @@
+@import url('../../../../styles.css');
+
 mat-sidenav-container {
     height: 100%;
 }
@@ -20,7 +22,7 @@ mat-sidenav-container {
 }
 
 .header {
-    background: #004D95;
+    background: var(--theme);
     position: fixed;
     top: 0;
     left: 0;
@@ -75,11 +77,11 @@ main {
 
 mat-sidenav-layout {
     background-color: whitesmoke;
-    color: #004D95;
+    color: var(--theme);
 }
 
 mat-sidenav {
-    background-color: #004D95;
+    background-color: var(--theme);
     display: flex;
     flex-direction: column;
     align-items: flex-start;

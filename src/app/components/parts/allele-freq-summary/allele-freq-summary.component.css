@@ -6,7 +6,7 @@ div {
 }
 
 div.active {
-    background-color: #004D95;
+    background-color: var(--theme);
 }
 
 .chart {
