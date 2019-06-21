@@ -19,7 +19,7 @@ export const environment = {
     clinicalUrl: 'http://localhost:3000',
     mapd: {
         protocol: 'https',
-        host: 'vsal.garvan.org.au/mapd',
+        host: 'vsal.garvan.org.au',
         port: '443',
         dbName: 'mapd',
         user: 'mapd',
