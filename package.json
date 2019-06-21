@@ -28,7 +28,6 @@
     "@mapd/crossfilter": "git://github.com/mapd/mapd-crossfilter.git#v1.2.1",
     "@mapd/mapdc": "git://github.com/mapd/mapd-charting.git#v1.2.3",
     "@swimlane/ngx-datatable": "^11.1.5",
-    "angular-svg-icon": "^7.2.1",
     "auth0-js": "9.6.1",
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.4.1",
