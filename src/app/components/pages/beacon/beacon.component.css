@@ -29,6 +29,7 @@ form input {
 
 .mat-mini-fab {
     border-radius: 0;
+    background-color: var(--theme);
 }
 
 .network-result {
