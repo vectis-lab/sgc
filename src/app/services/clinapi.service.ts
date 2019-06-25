@@ -7,7 +7,7 @@ import { FAKE_ACUTE_CARE_DATA } from "../mocks/acutecaredata";
 import { VariantSearchService } from './variant-search-service';
 import { Subscription } from 'rxjs/Subscription';
 import { of, throwError, Observable } from "rxjs";
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 
 @Injectable()
@@ -46,9 +46,12 @@ export class ClinapiService implements OnDestroy {
     }
 
     getMitochondria(demo = false, authorize = false): Observable<any> {
+        const httpOptions = {
+            headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
+        };
         //if authorize to see clinical data
         if(authorize){
-            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=mito&jwt=${localStorage.getItem('idToken')}`).map(res => {
+            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=mito`, httpOptions).map(res => {
                 return JSON.parse(res.pheno)
             });
         }//if not authorize but want to see demo
@@ -62,8 +65,11 @@ export class ClinapiService implements OnDestroy {
     }
 
     getNeuromuscular(demo = false, authorize = false): Observable<any> {
+        const httpOptions = {
+            headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
+        };
         if(authorize){
-            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=neuromuscular&jwt=${localStorage.getItem('idToken')}`).map(res => {
+            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=neuromuscular`, httpOptions).map(res => {
                 return JSON.parse(res.pheno)
             });
         }//if not authorize but want to see demo
@@ -77,8 +83,11 @@ export class ClinapiService implements OnDestroy {
     }
 
     getAcutecare(demo = false, authorize = false): Observable<any> {
+        const httpOptions = {
+            headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
+        };
         if(authorize){
-            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=acutecare&jwt=${localStorage.getItem('idToken')}`).map(res => {
+            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=acutecare`, httpOptions).map(res => {
                 return JSON.parse(res.pheno)
             });
         }//if not authorize but want to see demo
