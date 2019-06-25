@@ -29,8 +29,7 @@ export class VsalService {
             .append('positionStart', start)
             .append('positionEnd', end)
             .append('limit', VSAL_VARIANT_LIMIT.toString())
-            .append('skip', '0')
-            .append('jwt', localStorage.getItem('idToken'));
+            .append('skip', '0');
 
         if(samples.length){
             urlParams = urlParams.append('samples', samples);
@@ -48,7 +47,8 @@ export class VsalService {
 
         const headers = new HttpHeaders()
             .append('Content-Type', 'application/json')
-            .append('Accept', '*/*');
+            .append('Accept', '*/*')
+            .append('Authorization', `Bearer ${localStorage.getItem('idToken')}`);
         return this.requests(urlParams, headers).reduce((acc: VariantRequest, x: VariantRequest, i: number) => {
             acc.variants = acc.variants.concat(x.variants);
             acc.error += x.error;
@@ -107,8 +107,7 @@ export class VsalService {
             .append('chromosome', chromosome)
             .append('selectSamplesByGT', 'true')
             .append('positionStart', start)
-            .append('positionEnd', end)
-            .append('jwt', localStorage.getItem('idToken'));
+            .append('positionEnd', end);
 
         /*let objParams = {
             chromosome: chromosome,
@@ -131,7 +130,8 @@ export class VsalService {
 
         const headers = new HttpHeaders()
             .append('Content-Type', 'application/json')
-            .append('Accept', '*/*');
+            .append('Accept', '*/*')
+            .append('Authorization', `Bearer ${localStorage.getItem('idToken')}`);
         //this.http.post(environment.vsalUrl2, urlParams, {headers: headers})
         return this.http.get(environment.vsalUrl2, {params: urlParams, headers: headers})
             .timeout(VSAL_TIMEOUT)
