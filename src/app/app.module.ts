@@ -109,6 +109,8 @@ import { AcutecareInformationComponent } from './components/parts/acutecare-info
 import { CohortInformationComponent } from './components/parts/cohort-information/cohort-information.component';
 import { AlleleFreqSummaryComponent } from './components/parts/allele-freq-summary/allele-freq-summary.component';
 import { HomeComponent } from './components/pages/home/home.component';
+import { ProfileComponent, ChangePasswordDialog } from './components/pages/profile/profile.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -143,7 +145,8 @@ export class RavenErrorHandler implements ErrorHandler {
         HttpClientModule,
         NgxPaginationModule,
         NgxDatatableModule,
-        MaterialModule
+        MaterialModule,
+        MatDialogModule
     ],
     declarations: [
         AppComponent,
@@ -208,12 +211,15 @@ export class RavenErrorHandler implements ErrorHandler {
         CohortInformationComponent,
         AlleleFreqSummaryComponent,
         HomeComponent,
+        ProfileComponent,
+        ChangePasswordDialog
     ],
     entryComponents: [
         SignUpComponent,
         ErrorDialogComponent,
         SnackbarDemoComponent,
-        SnackbarHelpComponent
+        SnackbarHelpComponent,
+        ChangePasswordDialog
     ],
     providers: [
         Auth,
