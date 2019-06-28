@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import * as GenePanels from '../../../shared/genePanels';
 import { SearchBarService } from '../../../services/search-bar-service';
+import { GenomicsEnglandService } from '../../../services/genomics-england.service';
 import { Subscription } from 'rxjs/Subscription';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -10,16 +11,19 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./gene-panels.component.css']
 })
 export class GenePanelsComponent implements OnInit, OnDestroy {
-  options: object[] = [
+  /*options: object[] = [
     //{label: 'Mitochondrial disorders', value: "MITOCHONDRIAL_DISORDERS"},
     {label: 'Mitochondrial liver disease', value: "MITOCHONDRIAL_LIVER_DISEASE"}
-  ];
+  ];*/
+  options: string[];
   @Input() selectedGenePanel: string;
   geneList: string;
+  loading: boolean = true;
   private subscriptions: Subscription[] = [];
 
   constructor(public searchBarService: SearchBarService,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute,
+              private genomicsEnglandService: GenomicsEnglandService) { }
 
   ngOnInit() {
     if(this.selectedGenePanel){
@@ -29,6 +33,12 @@ export class GenePanelsComponent implements OnInit, OnDestroy {
     this.subscriptions.push(this.searchBarService.geneList.subscribe(genes => {
       this.geneList = genes;
     }));
+
+    this.subscriptions.push(this.genomicsEnglandService.getPanels('https://panelapp.genomicsengland.co.uk/api/v1/panels/', null)
+    .subscribe(e => {
+      this.loading = false;
+      this.options = e;
+    }))
   }
 
   onChange(event) {
@@ -37,13 +47,21 @@ export class GenePanelsComponent implements OnInit, OnDestroy {
   }
 
   setGenePanelValue(value) {
-    this.geneList = GenePanels[value];
-    if(this.geneList !== undefined){
-      this.searchBarService.setGeneList(this.geneList);
+    if(value){
+      this.geneList = 'Loading...'
+      this.subscriptions.push(this.genomicsEnglandService.getPanel(value).subscribe((data) => {
+        this.geneList = data.genes.map(e => e.gene_data.gene_symbol).join();
+        console.log(this.geneList)
+        if(this.geneList !== undefined){
+          this.searchBarService.setGeneList(this.geneList);
+        }else{
+          this.searchBarService.setGeneList('');
+        }
+      }))
     }else{
-      this.searchBarService.setGeneList('');
+      this.geneList = value;
     }
-    
+
   }
 
   ngOnDestroy() {

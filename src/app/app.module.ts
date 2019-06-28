@@ -33,6 +33,7 @@ import { PieChartComponent } from './components/parts/charts/pie-chart.component
 import { CohortListComponent } from './components/parts/cohort-list/cohort-list.component';
 import { InitiativeService } from './services/project-data/initiative-service';
 import { CohortService } from './services/project-data/cohort-service';
+import { GenomicsEnglandService } from './services/genomics-england.service';
 import { SearchComponent } from './components/pages/search/search.component';
 import { SearchResultsComponent } from './components/parts/search-results/search-results.component';
 import { AlleleFreqComponent } from './components/parts/allele-freq/allele-freq.component';
@@ -240,7 +241,8 @@ export class RavenErrorHandler implements ErrorHandler {
         SearchBarService,
         { provide: ErrorHandler, useClass: RavenErrorHandler },
         { provide: 'NULL_VALUE', useValue: null },
-        SampleSearch
+        SampleSearch,
+        GenomicsEnglandService
     ],
     bootstrap: [AppComponent]
 })
