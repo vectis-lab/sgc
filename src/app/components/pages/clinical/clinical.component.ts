@@ -24,7 +24,6 @@ export class ClinicalComponent implements OnInit, OnDestroy {
   sb: MatSnackBarRef<SnackbarDemoComponent> = null;
   private mediaMatcher: MediaQueryList = matchMedia(`(max-width: ${SMALL_WIDTH}px)`);
   selectedOption: string;
-  private geneList: string = '';
 
   constructor(public searchBarService: SearchBarService,
               public auth: Auth,
@@ -43,10 +42,6 @@ export class ClinicalComponent implements OnInit, OnDestroy {
 
       this.subscriptions.push(this.auth.getSavedSearches().subscribe(savedSearches => {
           this.clinicalFilteringService.initSaveSearches(savedSearches);
-      }))
-
-      this.subscriptions.push(this.searchBarService.geneList.subscribe(genes => {
-        this.geneList = genes;
       }))
       }
 

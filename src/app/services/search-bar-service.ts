@@ -8,6 +8,7 @@ import { AutocompleteService } from './autocomplete/autocomplete-service';
 import { GenericAutocompleteResult, VariantAutocompleteResult } from '../model/autocomplete-result';
 import { ElasticGeneSearch } from './autocomplete/elastic-gene-search-service';
 import { PositionService } from './autocomplete/position-service';
+import { GenomicsEnglandService } from './genomics-england.service';
 import { of, Observable, combineLatest } from "rxjs";
 import * as GenePanels from '../shared/genePanels';
 
@@ -31,6 +32,7 @@ export class SearchBarService {
     constructor(private geneService: ElasticGeneSearch,
                 private regionService: RegionService,
                 private positionService: PositionService,
+                private genomicsEnglandService: GenomicsEnglandService,
                 private router: Router) {
         this.autocompleteServices = [
             regionService,
@@ -96,8 +98,6 @@ export class SearchBarService {
             }else{
                 return false;
             }
-            
-
         });
 
     }
@@ -134,22 +134,28 @@ export class SearchBarService {
         }
 
         let genes;
-        if(GenePanels[panel]){
-            genes = GenePanels[panel].join();
-        }
 
         if(panel.length){
-            const genePanelsQueries = genes.split(',');
-            arrayOfQueries = arrayOfQueries.concat(genePanelsQueries);
+            return this.genomicsEnglandService.getPanel(panel).toPromise().then((data) => {
+                genes = data.genes.map(e => e.gene_data.ensembl_genes.GRch37['82'].location).join();
+                const genePanelsQueries = genes.split(',');
+                arrayOfQueries = arrayOfQueries.concat(genePanelsQueries);
+
+                const queries = arrayOfQueries.map(q => this.searchAutocompleteServices(q).take(1).toPromise())
+            
+                return <any>Promise.all(queries).then(v => {
+                    const bestMatches = v.map(q => q[0]);
+                    return bestMatches;
+                });
+            })
+        }else{
+            const queries = arrayOfQueries.map(q => this.searchAutocompleteServices(q).take(1).toPromise())
+
+            return <any>Promise.all(queries).then(v => {
+                const bestMatches = v.map(q => q[0]);
+                return bestMatches;
+            });
         }
-
-        const queries = arrayOfQueries.map(q => this.searchAutocompleteServices(q).take(1).toPromise())
-
-        return <any>Promise.all(queries).then(v => {
-            const bestMatches = v.map(q => q[0]);
-            return bestMatches;
-        });
-
     }
 
     setGeneList(value){

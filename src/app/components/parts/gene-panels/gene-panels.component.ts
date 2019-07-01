@@ -51,7 +51,6 @@ export class GenePanelsComponent implements OnInit, OnDestroy {
       this.geneList = 'Loading...'
       this.subscriptions.push(this.genomicsEnglandService.getPanel(value).subscribe((data) => {
         this.geneList = data.genes.map(e => e.gene_data.gene_symbol).join();
-        console.log(this.geneList)
         if(this.geneList !== undefined){
           this.searchBarService.setGeneList(this.geneList);
         }else{
