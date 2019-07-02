@@ -15,7 +15,7 @@ export class GenePanelsComponent implements OnInit, OnDestroy {
     //{label: 'Mitochondrial disorders', value: "MITOCHONDRIAL_DISORDERS"},
     {label: 'Mitochondrial liver disease', value: "MITOCHONDRIAL_LIVER_DISEASE"}
   ];*/
-  options: string[];
+  options: string[] = [];
   @Input() selectedGenePanel: string;
   geneList: string;
   loading: boolean = true;
@@ -49,6 +49,7 @@ export class GenePanelsComponent implements OnInit, OnDestroy {
   setGenePanelValue(value) {
     if(value){
       this.geneList = 'Loading...'
+      this.searchBarService.panel = value;
       this.subscriptions.push(this.genomicsEnglandService.getPanel(value).subscribe((data) => {
         this.geneList = data.genes.map(e => e.gene_data.gene_symbol).join();
         if(this.geneList !== undefined){
@@ -60,7 +61,6 @@ export class GenePanelsComponent implements OnInit, OnDestroy {
     }else{
       this.geneList = value;
     }
-
   }
 
   ngOnDestroy() {

@@ -112,6 +112,7 @@ import { AlleleFreqSummaryComponent } from './components/parts/allele-freq-summa
 import { HomeComponent } from './components/pages/home/home.component';
 import { ProfileComponent, ChangePasswordDialog } from './components/pages/profile/profile.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { AutocompleteOptionComponent } from './components/parts/autocomplete-option/autocomplete-option.component';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -213,7 +214,8 @@ export class RavenErrorHandler implements ErrorHandler {
         AlleleFreqSummaryComponent,
         HomeComponent,
         ProfileComponent,
-        ChangePasswordDialog
+        ChangePasswordDialog,
+        AutocompleteOptionComponent
     ],
     entryComponents: [
         SignUpComponent,

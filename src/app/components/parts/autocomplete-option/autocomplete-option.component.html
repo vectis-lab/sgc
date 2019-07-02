@@ -1,0 +1,10 @@
+<form>
+  <mat-form-field [formGroup]="form">
+    <input type="text" [placeholder]="options.length?'Panel':'Loading...'" aria-label="Panel" matInput [formControl]="myControl" [formControlName]="'panelForm'" [matAutocomplete]="auto">
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)='selectPanel($event.option.value)'>
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
