@@ -1,4 +1,7 @@
 <app-autocomplete-option [options]='options' (panel)="setGenePanelValue($event)" [selectedGenePanel]='selectedGenePanel'></app-autocomplete-option>
+<span *ngIf="selectedGenePanel" class="label-panel">Selected panel: {{selectedGenePanel}}</span>
+<br/>
+<br/>
 <mat-form-field>
-  <textarea [(ngModel)]="geneList" matInput class='genes-text' rows='6' placeholder="List of genes from panels" disabled></textarea>
+  <textarea [(ngModel)]="geneList" matInput class='genes-text' rows='6' placeholder="List of genes from panel" disabled></textarea>
 </mat-form-field>
