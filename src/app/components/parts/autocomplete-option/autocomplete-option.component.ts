@@ -28,7 +28,7 @@ export class AutocompleteOptionComponent implements OnInit, OnChanges {
       startWith(''),
       map(value => this._filter(value))
     );
-
+    
     this.form = this.fb.group({
       panelForm: new FormControl({ value: '', disabled: this.options.length < 1})
   });
@@ -54,7 +54,7 @@ export class AutocompleteOptionComponent implements OnInit, OnChanges {
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
 
-    return this.options.filter(option => option.toLowerCase().indexOf(filterValue) === 0);
+    return this.options.filter(option => option.toLowerCase().includes(filterValue));
   }
 
   selectPanel(panel){

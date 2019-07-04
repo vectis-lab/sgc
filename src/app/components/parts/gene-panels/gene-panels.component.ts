@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, Input } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input,ChangeDetectorRef, AfterViewInit } from '@angular/core';
 import * as GenePanels from '../../../shared/genePanels';
 import { SearchBarService } from '../../../services/search-bar-service';
 import { GenomicsEnglandService } from '../../../services/genomics-england.service';
@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   templateUrl: './gene-panels.component.html',
   styleUrls: ['./gene-panels.component.css']
 })
-export class GenePanelsComponent implements OnInit, OnDestroy {
+export class GenePanelsComponent implements OnInit, OnDestroy, AfterViewInit {
   /*options: object[] = [
     //{label: 'Mitochondrial disorders', value: "MITOCHONDRIAL_DISORDERS"},
     {label: 'Mitochondrial liver disease', value: "MITOCHONDRIAL_LIVER_DISEASE"}
@@ -23,7 +23,8 @@ export class GenePanelsComponent implements OnInit, OnDestroy {
 
   constructor(public searchBarService: SearchBarService,
               private route: ActivatedRoute,
-              private genomicsEnglandService: GenomicsEnglandService) { }
+              private genomicsEnglandService: GenomicsEnglandService,
+              private cd: ChangeDetectorRef,) { }
 
   ngOnInit() {
     if(this.selectedGenePanel){
@@ -34,11 +35,22 @@ export class GenePanelsComponent implements OnInit, OnDestroy {
       this.geneList = genes;
     }));
 
-    this.subscriptions.push(this.genomicsEnglandService.getPanels('https://panelapp.genomicsengland.co.uk/api/v1/panels/', null)
-    .subscribe(e => {
-      this.loading = false;
-      this.options = e;
-    }))
+
+
+    if(this.genomicsEnglandService.panels){
+      this.options = this.genomicsEnglandService.panels;
+    }else{
+      this.subscriptions.push(this.genomicsEnglandService.getPanels('https://panelapp.genomicsengland.co.uk/api/v1/panels/', null)
+      .subscribe(e => {
+        this.loading = false;
+        this.genomicsEnglandService.panels = e;
+        this.options = e;
+      }))
+    }
+  }
+
+  ngAfterViewInit() {
+
   }
 
   onChange(event) {

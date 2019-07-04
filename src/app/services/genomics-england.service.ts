@@ -8,6 +8,7 @@ import {switchMap} from 'rxjs/operators'
 
 @Injectable()
 export class GenomicsEnglandService {
+    panels: string[];
     constructor(private http: HttpClient) {
     }
 
