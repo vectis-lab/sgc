@@ -21,6 +21,7 @@ export class ClinicalComponent implements OnInit, OnDestroy {
   autocomplete: GenericAutocompleteResult<any>[];
   error = '';
   searching = false;
+  loadingParseParams: boolean = false;
   sb: MatSnackBarRef<SnackbarDemoComponent> = null;
   private mediaMatcher: MediaQueryList = matchMedia(`(max-width: ${SMALL_WIDTH}px)`);
   selectedOption: string;
@@ -46,6 +47,7 @@ export class ClinicalComponent implements OnInit, OnDestroy {
       }
 
   parseParams(params: Params) {
+    	this.loadingParseParams = true;
       if (!params['query'] && !params['cohort'] && !params['panel']) {
           return;
       }
@@ -64,7 +66,8 @@ export class ClinicalComponent implements OnInit, OnDestroy {
       this.autocomplete = null;
       this.searching = true;
       this.searchBarService.searchWithMultipleParams(params).then((v) => {
-          this.autocomplete = v;
+					this.autocomplete = v;
+					this.loadingParseParams = false;
           this.cd.detectChanges();
       }).catch(() => {
       });
