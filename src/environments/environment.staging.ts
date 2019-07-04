@@ -20,7 +20,7 @@ export const environment = {
     mapd: {
         protocol: 'https',
         host: 'vsal.garvan.org.au',
-        port: '443',
+        port: '443/mito',
         dbName: 'mapd',
         user: 'mapd',
         pwd: 'HyperInteractive',
