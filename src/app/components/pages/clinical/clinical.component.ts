@@ -47,9 +47,10 @@ export class ClinicalComponent implements OnInit, OnDestroy {
       }
 
   parseParams(params: Params) {
-    	this.loadingParseParams = true;
       if (!params['query'] && !params['cohort'] && !params['panel']) {
           return;
+      }else{
+        this.loadingParseParams = true;
       }
       if (params['demo']) {
           this.sb = this.snackBar.openFromComponent(SnackbarDemoComponent, {
