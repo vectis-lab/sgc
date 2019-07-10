@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ClinapiService } from '../../../services/clinapi.service';
 import { ClinicalFields } from '../../../model/clinical-fields';
+import * as _ from 'lodash/array';
 
 @Component({
     selector: 'app-acutecare-information',
@@ -21,29 +22,61 @@ export class AcutecareInformationComponent {
         new ClinicalFields('Is father affected?', 'fatherAffected', 'pie', false),
         new ClinicalFields('Consanguinity', 'consanguinity', 'pie', true),
         new ClinicalFields('Number of variants reported', 'numberOfVariantsReported', 'row', false),
-        new ClinicalFields('Variant 1 type', 'variant1Type', 'row', false),
-        new ClinicalFields('Variant 1: Zygosity', 'variant1Zygosity', 'pie', false),
-        new ClinicalFields('Variant 1 class', 'variant1Class', 'row', false),
-        new ClinicalFields('Variant 2 type', 'variant2Type', 'row', false),
-        new ClinicalFields('Variant 2: Zygosity', 'variant2Zygosity', 'pie', false),
-        new ClinicalFields('Variant 2 class', 'variant2Class', 'row', false),
-        new ClinicalFields('Variant 3 type', 'variant3Type', 'row', false),
-        new ClinicalFields('Variant 3: Zygosity', 'variant3Zygosity', 'pie', false),
-        new ClinicalFields('Variant 3 class', 'variant3Class', 'row', false),
-        new ClinicalFields('ac_preg_info_hpo1', 'ac_preg_info_hpo1', 'row', false),
-        new ClinicalFields('ac_preg_info_hpo2', 'ac_preg_info_hpo2', 'row', false),
-        new ClinicalFields('ac_preg_info_hpo3', 'ac_preg_info_hpo3', 'row', false),
-        new ClinicalFields('ac_pheno_hpo1', 'ac_pheno_hpo1', 'row', false),
-        new ClinicalFields('ac_pheno_hpo2', 'ac_pheno_hpo2', 'row', false),
-        new ClinicalFields('ac_pheno_hpo3', 'ac_pheno_hpo3', 'row', false),
-        new ClinicalFields('ac_pheno_hpo4', 'ac_pheno_hpo4', 'row', false),
-        new ClinicalFields('ac_pheno_hpo5', 'ac_pheno_hpo5', 'row', false),
-        new ClinicalFields('ac_pheno_hpo6', 'ac_pheno_hpo6', 'row', false),
-        new ClinicalFields('ac_pheno_hpo7', 'ac_pheno_hpo7', 'row', false),
-        new ClinicalFields('ac_pheno_hpo8', 'ac_pheno_hpo8', 'row', false),
-        new ClinicalFields('ac_pheno_hpo9', 'ac_pheno_hpo9', 'row', false),
-        new ClinicalFields('ac_pheno_hpo10', 'ac_pheno_hpo10', 'row', false),
-        new ClinicalFields('ac_pheno_hpo11', 'ac_pheno_hpo11', 'row', false),
+        new ClinicalFields('Variant type', 'variantType', 'row', false, true, (dimension, filters) => {
+            dimension.filter(null);   
+            if (filters.length === 0)
+                dimension.filter(null);
+            else
+                dimension.filterFunction(function (d) {
+                    if (_.difference(filters, d).length === 0) return true;
+                    return false; 
+                });
+            return filters;  
+        }),
+        new ClinicalFields('Variant Zygosity', 'variantZygosity', 'row', false, true, (dimension, filters) => {
+            dimension.filter(null);   
+            if (filters.length === 0)
+                dimension.filter(null);
+            else
+                dimension.filterFunction(function (d) {
+                    if (_.difference(filters, d).length === 0) return true;
+                    return false; 
+                });
+            return filters;  
+        }),
+        new ClinicalFields('Variant class', 'variantClass', 'row', false, true, (dimension, filters) => {
+            dimension.filter(null);   
+            if (filters.length === 0)
+                dimension.filter(null);
+            else
+                dimension.filterFunction(function (d) {
+                    if (_.difference(filters, d).length === 0) return true;
+                    return false; 
+                });
+            return filters;  
+        }),
+        new ClinicalFields('ac_preg_info_hpo', 'ac_preg_info_hpo', 'row', false, true, (dimension, filters) => {
+            dimension.filter(null);   
+            if (filters.length === 0)
+                dimension.filter(null);
+            else
+                dimension.filterFunction(function (d) {
+                    if (_.difference(filters, d).length === 0) return true;
+                    return false; 
+                });
+            return filters;  
+        }),
+        new ClinicalFields('ac_pheno_hpo', 'ac_pheno_hpo', 'row', false, true, (dimension, filters) => {
+            dimension.filter(null);   
+            if (filters.length === 0)
+                dimension.filter(null);
+            else
+                dimension.filterFunction(function (d) {
+                    if (_.difference(filters, d).length === 0) return true;
+                    return false; 
+                });
+            return filters;  
+        }),
     ];
     phenoService: string = 'getAcutecare'
 

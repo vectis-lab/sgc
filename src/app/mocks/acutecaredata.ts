@@ -7016,7 +7016,7 @@ export const FAKE_ACUTE_CARE_DATA = [
   }
 ]
 
-const FAKE_ACUTE_CARE_DATA_COMBINED = [
+export const FAKE_ACUTE_CARE_DATA_COMBINED = [
   {
     "externalIDs": "A0131001",
     "sex": "Male",
