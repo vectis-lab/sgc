@@ -44,7 +44,7 @@
     "lodash": "^4.17.11",
     "mapbox-gl": "https://github.com/mapd/mapbox-gl-js/tarball/9c04de6949fe498c8c79f5c0627dfd6d6321f307",
     "ngx-pagination": "3.0.1",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.12.0",
     "papaparse": "^4.1.2",
     "raven-js": "^3.20.1",
     "rxjs": "^6.3.3",
