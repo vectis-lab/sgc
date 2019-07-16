@@ -33,6 +33,8 @@ export class VsalService {
 
         if(samples.length){
             urlParams = urlParams.append('samples', samples);
+        }else{
+            return of(new VariantRequest([]));
         }
 
         query.options.forEach(o => {
