@@ -13,9 +13,9 @@ export class AcutecareInformationComponent {
     @Input() samples: string[] = [];
     permission: string = 'acutecare/pheno'
     clinicalFields: ClinicalFields[] = [
-        new ClinicalFields('Sex of patient:', 'sex', 'pie'),
-        new ClinicalFields('Maternal Ethnicity (choose one of):', 'maternalEthnicity', 'row'),
-        new ClinicalFields('Paternal Ethnicity (choose one of):', 'paternalEthnicity', 'row'),
+        new ClinicalFields('sex', 'sex', 'pie'),
+        new ClinicalFields('Maternal Ethnicity', 'maternalEthnicity', 'row'),
+        new ClinicalFields('Paternal Ethnicity', 'paternalEthnicity', 'row'),
     ];
     phenoService: string = 'getAcutecare'
 
