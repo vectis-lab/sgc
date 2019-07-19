@@ -101,9 +101,7 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
                         this.cf.mfs.clearFilters();
                     }
                     if(
-                        (p['cohort'] === "Mitochondria" && this.permissions.includes('mito/summary')) || 
-                        (p['cohort'] === "Acutecare" && this.permissions.includes('acutecare/summary')) || 
-                        (p['cohort'] === "Neuromuscular" && this.permissions.includes('neuromuscular/summary'))
+                        this.auth.checkPermissions(p['cohort'], permissions)
                     ){
                         this.mapd.connect().then((session) => {
                             return this.cf.create(session, 'MITO');                       

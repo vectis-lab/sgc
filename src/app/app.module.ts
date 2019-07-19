@@ -109,6 +109,10 @@ import { AcutecareInformationComponent } from './components/parts/acutecare-info
 import { CohortInformationComponent } from './components/parts/cohort-information/cohort-information.component';
 import { AlleleFreqSummaryComponent } from './components/parts/allele-freq-summary/allele-freq-summary.component';
 import { HomeComponent } from './components/pages/home/home.component';
+import { LeukodystrophiesInformationComponent } from './components/parts/leukodystrophies-information/leukodystrophies-information.component';
+import { BrainMalformationsInformationComponent } from './components/parts/brain-malformations-information/brain-malformations-information.component';
+import { EpilepticEncephalopathiesInformationComponent } from './components/parts/epileptic-encephalopathies-information/epileptic-encephalopathies-information.component';
+import { IcconInformationComponent } from './components/parts/iccon-information/iccon-information.component';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -208,6 +212,10 @@ export class RavenErrorHandler implements ErrorHandler {
         CohortInformationComponent,
         AlleleFreqSummaryComponent,
         HomeComponent,
+        LeukodystrophiesInformationComponent,
+        BrainMalformationsInformationComponent,
+        EpilepticEncephalopathiesInformationComponent,
+        IcconInformationComponent,
     ],
     entryComponents: [
         SignUpComponent,
