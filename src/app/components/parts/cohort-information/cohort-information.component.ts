@@ -36,6 +36,7 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
     subscriptions: Subscription[] = [];
     demo: boolean = false;
     showSampleCSV: boolean = false;
+    allIsChecked = false;
 
     constructor(private cs: ClinapiService,
                 private cd: ChangeDetectorRef,
@@ -118,12 +119,14 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
         this.sampleDim = this.ndx.dimension(function(d){ return d.externalIDs;})
 
         this.charts = this.clinicalFields.map(field => {
-          let dim = this.ndx.dimension(function(d){ return d[field.fieldName];})
+          let dim = this.ndx.dimension(function(d){ 
+            return d[field.fieldName]=== "" ? 'No data' : d[field.fieldName]
+           })
           let group = dim.group();
           if(field.multivalue){
-            dim = this.ndx.dimension(function(d){ return d[field.fieldName];}, true)
+            dim = this.ndx.dimension(function(d){ return d[field.fieldName]=== "" ? 'No data' : d[field.fieldName];}, true)
             group = dim.group();
-            dim = this.ndx.dimension(function(d){ return d[field.fieldName];})
+            dim = this.ndx.dimension(function(d){ return d[field.fieldName]=== "" ? 'No data' : d[field.fieldName];})
           }
           return new Chart(field.name, field.chartType, dim, field.width, field.height, field.visible, group, null, field.filterHandler)
         })
@@ -154,6 +157,21 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
         dc.filterAll();
         dc.renderAll();
         this.ClinicalFilterService.clearFilters();
+    }
+
+    checkedAll(e){
+        this.allIsChecked = e.checked;
+        if(this.allIsChecked){
+            this.charts = this.charts.map(c => {
+                c.enabled = true;
+                return c;
+            });
+        }else{
+            this.charts = this.charts.map(c => {
+                c.enabled = false;
+                return c;
+            });
+        }
     }
 
     ngOnDestroy() {
