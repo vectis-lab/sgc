@@ -5,10 +5,11 @@ import { environment } from '../../environments/environment';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { of, Observable, forkJoin } from "rxjs";
 import {switchMap} from 'rxjs/operators'
+import {Panel} from '../model/panel'
 
 @Injectable()
 export class GenomicsEnglandService {
-    panels: string[];
+    panels: Panel[];
     constructor(private http: HttpClient) {
     }
 
@@ -17,7 +18,7 @@ export class GenomicsEnglandService {
       fullData=fullData || []
       return this.http.get(url).pipe(
         switchMap((data:any)=>{
-          fullData=fullData.concat(data.results.map(panel => panel.name));
+          fullData=fullData.concat(data.results.map(panel => new Panel(panel.name, panel.stats.number_of_genes)));
           return !data.next? of(fullData):
                  this.getPanels(data.next,fullData)
         })
@@ -41,4 +42,6 @@ export class GenomicsEnglandService {
 
 
 }
+
+
 

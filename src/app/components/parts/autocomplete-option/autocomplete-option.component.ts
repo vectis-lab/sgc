@@ -4,6 +4,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 import { Subscription } from 'rxjs/Subscription';
+import { Panel } from '../../../model/panel';
 
 @Component({
   selector: 'app-autocomplete-option',
@@ -12,10 +13,10 @@ import { Subscription } from 'rxjs/Subscription';
 })
 export class AutocompleteOptionComponent implements OnInit, OnChanges {
   myControl = new FormControl();
-  @Input() options: string[];
+  @Input() options: Panel[];
   @Input() selectedGenePanel: string = '';
   @Output() panel = new EventEmitter<string>();
-  filteredOptions: Observable<string[]>;
+  filteredOptions: Observable<Panel[]>;
   private subscription: Subscription[] = [];
 
   public form: FormGroup;
@@ -26,7 +27,7 @@ export class AutocompleteOptionComponent implements OnInit, OnChanges {
   ngOnInit() {
     this.filteredOptions = this.myControl.valueChanges.pipe(
       startWith(''),
-      map(value => this._filter(value))
+      map(value => { return this._filter(value)})
     );
     
     this.form = this.fb.group({
@@ -51,14 +52,14 @@ export class AutocompleteOptionComponent implements OnInit, OnChanges {
     }
   }
 
-  private _filter(value: string): string[] {
+  private _filter(value: string): Panel[] {
     const filterValue = value.toLowerCase();
 
-    return this.options.filter(option => option.toLowerCase().includes(filterValue));
+    return this.options.filter(option => option.name && option.name.toLowerCase().includes(filterValue));
   }
 
   selectPanel(panel){
-    if(this.options.includes(panel)){
+    if(this.options.map(o => o.name).includes(panel)){
       this.panel.emit(panel);
     }
   }

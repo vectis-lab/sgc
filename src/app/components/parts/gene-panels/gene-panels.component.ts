@@ -4,6 +4,7 @@ import { SearchBarService } from '../../../services/search-bar-service';
 import { GenomicsEnglandService } from '../../../services/genomics-england.service';
 import { Subscription } from 'rxjs/Subscription';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Panel } from '../../../model/panel';
 
 @Component({
   selector: 'app-gene-panels',
@@ -15,7 +16,7 @@ export class GenePanelsComponent implements OnInit, OnDestroy, AfterViewInit {
     //{label: 'Mitochondrial disorders', value: "MITOCHONDRIAL_DISORDERS"},
     {label: 'Mitochondrial liver disease', value: "MITOCHONDRIAL_LIVER_DISEASE"}
   ];*/
-  options: string[] = [];
+  options: Panel[] = [];
   @Input() selectedGenePanel: string;
   geneList: string;
   loading: boolean = true;
