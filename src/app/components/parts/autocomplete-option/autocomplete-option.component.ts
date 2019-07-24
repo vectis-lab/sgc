@@ -16,6 +16,7 @@ export class AutocompleteOptionComponent implements OnInit, OnChanges {
   @Input() options: Panel[];
   @Input() selectedGenePanel: string = '';
   @Output() panel = new EventEmitter<string>();
+
   filteredOptions: Observable<Panel[]>;
   private subscription: Subscription[] = [];
 
@@ -43,13 +44,21 @@ export class AutocompleteOptionComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: any) {
     let optionsState = changes['options'];
-    if(this.form && optionsState){
+    let selectedGeneState = changes['selectedGenePanel'];
+    if(this.form){
       const ctrl = this.form.get('panelForm');
-      if(optionsState.currentValue.length > 0){
-        ctrl.enable();
-        ctrl.setValue(this.selectedGenePanel);
+      if(optionsState){
+        if(optionsState.currentValue.length > 0){
+          ctrl.enable();
+          ctrl.setValue(this.selectedGenePanel);
+        }
+      }
+      if(selectedGeneState && selectedGeneState.currentValue===''){
+          ctrl.enable();
+          ctrl.setValue('');
       }
     }
+
   }
 
   private _filter(value: string): Panel[] {
