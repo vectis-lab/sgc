@@ -3,7 +3,11 @@ import { Subject } from 'rxjs/Subject';
 import { FAKE_CLINICAL_DATA } from "../mocks/clindata";
 import { FAKE_MITOCHONDRIA_DATA } from "../mocks/mitodata";
 import { FAKE_NEUROMUSCULAR_DATA } from "../mocks/neuromusculardata";
-import { FAKE_ACUTE_CARE_DATA } from "../mocks/acutecaredata";
+import { FAKE_BRAIN_MALFORMATIONS_DATA } from "../mocks/brainmalformationsdata";
+import { FAKE_EPILEPTIC_ENCEPHALOPATHIES } from "../mocks/epilepticencephalopathiesdata";
+import { FAKE_ICCON_DATA } from "../mocks/iccon";
+import { FAKE_LEUKODYSTROPHIES_DATA } from "../mocks/leukodystrophiesdata";
+import { FAKE_ACUTE_CARE_DATA, FAKE_ACUTE_CARE_DATA_COMBINED } from "../mocks/acutecaredata";
 import { VariantSearchService } from './variant-search-service';
 import { Subscription } from 'rxjs/Subscription';
 import { of, throwError, Observable } from "rxjs";
@@ -87,6 +91,7 @@ export class ClinapiService implements OnDestroy {
             headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
         };
         if(authorize){
+            return of<any>(FAKE_ACUTE_CARE_DATA_COMBINED);
             return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=acutecare`, httpOptions).map(res => {
                 return JSON.parse(res.pheno)
             });
@@ -94,6 +99,82 @@ export class ClinapiService implements OnDestroy {
         else if(demo){
             console.log("DEMO")
             return of<any>(FAKE_ACUTE_CARE_DATA);
+        }//if not authorize and not opt to see demo
+        else {
+            return throwError({ status: 401 });
+        }
+    }
+
+    getBrainMalformations(demo = false, authorize = false): Observable<any> {
+        const httpOptions = {
+            headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
+        };
+        if(authorize){
+            /*return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=bm`, httpOptions).map(res => {
+                return JSON.parse(res.pheno)
+            });*/
+            return of<any>(FAKE_BRAIN_MALFORMATIONS_DATA);
+        }//if not authorize but want to see demo
+        else if(demo){
+            console.log("DEMO")
+            return of<any>(FAKE_BRAIN_MALFORMATIONS_DATA);
+        }//if not authorize and not opt to see demo
+        else {
+            return throwError({ status: 401 });
+        }
+    }
+
+    getLeukodystrophies(demo = false, authorize = false): Observable<any> {
+        const httpOptions = {
+            headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
+        };
+        if(authorize){
+            /*return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=leukodystrophies`, httpOptions).map(res => {
+                return JSON.parse(res.pheno)
+            });*/
+            return of<any>(FAKE_LEUKODYSTROPHIES_DATA);
+        }//if not authorize but want to see demo
+        else if(demo){
+            console.log("DEMO")
+            return of<any>(FAKE_LEUKODYSTROPHIES_DATA);
+        }//if not authorize and not opt to see demo
+        else {
+            return throwError({ status: 401 });
+        }
+    }
+
+    getEpilepticEncephalopathies(demo = false, authorize = false): Observable<any> {
+        const httpOptions = {
+            headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
+        };
+        if(authorize){
+            /*return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=ee`, httpOptions).map(res => {
+                return JSON.parse(res.pheno)
+            });*/
+            return of<any>(FAKE_EPILEPTIC_ENCEPHALOPATHIES);
+        }//if not authorize but want to see demo
+        else if(demo){
+            console.log("DEMO")
+            return of<any>(FAKE_EPILEPTIC_ENCEPHALOPATHIES);
+        }//if not authorize and not opt to see demo
+        else {
+            return throwError({ status: 401 });
+        }
+    }
+
+    getIccon(demo = false, authorize = false): Observable<any> {
+        const httpOptions = {
+            headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
+        };
+        if(authorize){
+            /*return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=iccon`, httpOptions).map(res => {
+                return JSON.parse(res.pheno)
+            });*/
+            return of<any>(FAKE_ICCON_DATA);
+        }//if not authorize but want to see demo
+        else if(demo){
+            console.log("DEMO")
+            return of<any>(FAKE_ICCON_DATA);
         }//if not authorize and not opt to see demo
         else {
             return throwError({ status: 401 });
