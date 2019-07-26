@@ -301,15 +301,6 @@ export const FAKE_ICCON_DATA =  [
     "internalIDs": "17W000873"
   },
   {
-    "Site": "",
-    "externalIDs": "",
-    "Sex": "",
-    "YOB": null,
-    "Index case?": "",
-    "Case": [],
-    "internalIDs": "17W001127"
-  },
-  {
     "Site": "VIC- VCCC",
     "externalIDs": "A1827001",
     "Sex": "F",
@@ -358,7 +349,8 @@ export const FAKE_ICCON_DATA =  [
       "ovarian",
       "Polyposis: Juvenile",
       "OTHER"
-    ]
+    ],
+    "internalIDs": "17W001127"
   },
   {
     "Site": "VIC- VCCC",
@@ -705,7 +697,7 @@ export const FAKE_ICCON_DATA =  [
     "Site": "",
     "externalIDs": "",
     "Sex": "",
-    "YOB": null,
+    "YOB": "",
     "Index case?": "",
     "Case": []
   },
@@ -745,7 +737,7 @@ export const FAKE_ICCON_DATA =  [
     "Site": "",
     "externalIDs": "",
     "Sex": "",
-    "YOB": null,
+    "YOB": "",
     "Index case?": "",
     "Case": []
   },
@@ -763,7 +755,7 @@ export const FAKE_ICCON_DATA =  [
     "Site": "",
     "externalIDs": "",
     "Sex": "",
-    "YOB": null,
+    "YOB": "",
     "Index case?": "",
     "Case": []
   },
@@ -793,7 +785,7 @@ export const FAKE_ICCON_DATA =  [
     "Site": "",
     "externalIDs": "",
     "Sex": "",
-    "YOB": null,
+    "YOB": "",
     "Index case?": "",
     "Case": []
   },
@@ -875,7 +867,7 @@ export const FAKE_ICCON_DATA =  [
     "Site": "",
     "externalIDs": "",
     "Sex": "",
-    "YOB": null,
+    "YOB": "",
     "Index case?": "",
     "Case": []
   },
@@ -910,7 +902,7 @@ export const FAKE_ICCON_DATA =  [
     "Site": "",
     "externalIDs": "",
     "Sex": "",
-    "YOB": null,
+    "YOB": "",
     "Index case?": "",
     "Case": []
   },
@@ -1067,7 +1059,7 @@ export const FAKE_ICCON_DATA =  [
     "Site": "",
     "externalIDs": "",
     "Sex": "",
-    "YOB": null,
+    "YOB": "",
     "Index case?": "",
     "Case": []
   },
