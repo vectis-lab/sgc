@@ -91,7 +91,6 @@ export class ClinapiService implements OnDestroy {
             headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
         };
         if(authorize){
-            return of<any>(FAKE_ACUTE_CARE_DATA_COMBINED);
             return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=acutecare`, httpOptions).map(res => {
                 return JSON.parse(res.pheno)
             });
@@ -110,10 +109,9 @@ export class ClinapiService implements OnDestroy {
             headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
         };
         if(authorize){
-            /*return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=bm`, httpOptions).map(res => {
+            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=bm`, httpOptions).map(res => {
                 return JSON.parse(res.pheno)
-            });*/
-            return of<any>(FAKE_BRAIN_MALFORMATIONS_DATA);
+            });
         }//if not authorize but want to see demo
         else if(demo){
             console.log("DEMO")
@@ -129,10 +127,9 @@ export class ClinapiService implements OnDestroy {
             headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
         };
         if(authorize){
-            /*return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=leukodystrophies`, httpOptions).map(res => {
+            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=leukodystrophies`, httpOptions).map(res => {
                 return JSON.parse(res.pheno)
-            });*/
-            return of<any>(FAKE_LEUKODYSTROPHIES_DATA);
+            });
         }//if not authorize but want to see demo
         else if(demo){
             console.log("DEMO")
@@ -148,10 +145,9 @@ export class ClinapiService implements OnDestroy {
             headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
         };
         if(authorize){
-            /*return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=ee`, httpOptions).map(res => {
+            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=ee`, httpOptions).map(res => {
                 return JSON.parse(res.pheno)
-            });*/
-            return of<any>(FAKE_EPILEPTIC_ENCEPHALOPATHIES);
+            });
         }//if not authorize but want to see demo
         else if(demo){
             console.log("DEMO")
@@ -167,10 +163,9 @@ export class ClinapiService implements OnDestroy {
             headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
         };
         if(authorize){
-            /*return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=iccon`, httpOptions).map(res => {
+            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=iccon`, httpOptions).map(res => {
                 return JSON.parse(res.pheno)
-            });*/
-            return of<any>(FAKE_ICCON_DATA);
+            });
         }//if not authorize but want to see demo
         else if(demo){
             console.log("DEMO")
