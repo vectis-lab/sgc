@@ -31,16 +31,27 @@ export class VsalService {
             .append('limit', VSAL_VARIANT_LIMIT.toString())
             .append('skip', '0');
 
+        let objParams = {
+            chromosome: chromosome,
+            positionStart: start,
+            positionEnd: end,
+            limit: VSAL_VARIANT_LIMIT.toString(),
+            skip: 0
+        }
+
         if(samples.length){
             urlParams = urlParams.append('samples', samples);
+            objParams['samples'] = samples;
         }
 
         query.options.forEach(o => {
             if (o.key) {
                 if(o.key === 'dataset'){
                     urlParams = urlParams.append('dataset', COHORT_VALUE_MAPPING_VSAL[o.getValue()]);
+                    objParams[o.key] = COHORT_VALUE_MAPPING_VSAL[o.getValue()];
                 }else {
                     urlParams = urlParams.append(o.key, o.getValue());
+                    objParams[o.key] = urlParams.append(o.key, o.getValue());
                 }          
             }
         });
@@ -49,7 +60,7 @@ export class VsalService {
             .append('Content-Type', 'application/json')
             .append('Accept', '*/*')
             .append('Authorization', `Bearer ${localStorage.getItem('idToken')}`);
-        return this.requests(urlParams, headers).reduce((acc: VariantRequest, x: VariantRequest, i: number) => {
+        return this.requests(objParams, headers).reduce((acc: VariantRequest, x: VariantRequest, i: number) => {
             acc.variants = acc.variants.concat(x.variants);
             acc.error += x.error;
             acc.total = x.total;
@@ -109,21 +120,22 @@ export class VsalService {
             .append('positionStart', start)
             .append('positionEnd', end);
 
-        /*let objParams = {
+        let objParams = {
             chromosome: chromosome,
-            dataset: 'mgrb',
             selectSamplesByGT: 'true',
             positionStart: start,
-            positionEnd: end,
-            jwt: localStorage.getItem('idToken')
-        }*/
+            positionEnd: end
+        }
 
         query.options.forEach(o => {
             if (o.key) {
                 if(o.key === 'dataset'){
                     urlParams = urlParams.append('dataset', COHORT_VALUE_MAPPING_VSAL[o.getValue()]);
+                    objParams[o.key] = COHORT_VALUE_MAPPING_VSAL[o.getValue()];
+
                 }else {
                     urlParams = urlParams.append(o.key, o.getValue());
+                    objParams[o.key] = urlParams.append(o.key, o.getValue());
                 }           
             }
         });
@@ -132,8 +144,8 @@ export class VsalService {
             .append('Content-Type', 'application/json')
             .append('Accept', '*/*')
             .append('Authorization', `Bearer ${localStorage.getItem('idToken')}`);
-        //this.http.post(environment.vsalUrl2, urlParams, {headers: headers})
-        return this.http.get(environment.vsalUrl2, {params: urlParams, headers: headers})
+        //this.http.post(environment.vsalUrl2, objParams, {headers: headers})
+        return this.http.post(environment.vsalUrl2, objParams, {headers: headers})
             .timeout(VSAL_TIMEOUT)
             .map((data) => {
                 if (data['error']) {
@@ -177,7 +189,7 @@ export class VsalService {
     //     });
     // }
 
-    private requests(params: HttpParams, headers: HttpHeaders): Observable<VariantRequest> {
+    private requests(params: any, headers: HttpHeaders): Observable<VariantRequest> {
         return Observable.create((observer) => {
             this.request(params, headers).subscribe((vs: VariantRequest) => {
                 observer.next(vs);
@@ -189,7 +201,8 @@ export class VsalService {
                         let completed = 0;
                         const queued = Math.floor(vs.total / VSAL_VARIANT_LIMIT);
                         for (i = VSAL_VARIANT_LIMIT; i < vs.total; i += VSAL_VARIANT_LIMIT) {
-                            params = params.set('skip', String(i));
+                            //params = params.set('skip', String(i));
+                            params['skip'] = String(i);
                             this.request(params, headers).subscribe((svs: VariantRequest) => {
                                 observer.next(svs);
                                 completed++;
@@ -206,8 +219,8 @@ export class VsalService {
         });
     }
 
-    private request(params: HttpParams, headers: HttpHeaders): Observable<VariantRequest> {
-        return this.http.get(environment.vsalUrl2, {params: params, headers: headers})
+    private request(params: any, headers: HttpHeaders): Observable<VariantRequest> {
+        return this.http.post(environment.vsalUrl2, params, {headers: headers})
             .timeout(VSAL_TIMEOUT)
             .map((data) => {
                 if (data['error']) {
