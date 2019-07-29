@@ -3,8 +3,8 @@ export class TableSharedService {
     afTooltips(showScales): any{
         return {
             'Allele Freq': () => showScales ? 'Allele frequency on a discrete scale: <1/10000, <1/1000, <1%, <5%, <50% and >50%' : '',
-            'Virtual Allele Freq': () => 'Allele frequency from selected samples',
-            'Virtual Allele Count': () => 'Allele count from selected samples',
+            'Virtual Allele Freq': () => 'Allele frequency within selected samples',
+            'Virtual Allele Count': () => 'Allele count within selected samples',
         }
     }
 

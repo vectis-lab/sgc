@@ -12,7 +12,7 @@
     background-color: white;
     border: 1px solid lightgrey;
     position: absolute;
-    width: 210px;
+    width: 125%;
     box-shadow: 0 2px 4px rgba(0,0,0,.16);
     -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.16);
     z-index: 99999;
