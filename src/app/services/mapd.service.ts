@@ -9,12 +9,12 @@ export class MapdService {
     constructor(private mfs: MapdFilterService) {
     }
 
-    connect(): Promise<any> {
+    connect(cohort): Promise<any> {
         return new Promise((resolve, reject) => {
             new MapdCon()
                 .protocol([environment.mapd.protocol])
                 .host([environment.mapd.host])
-                .port([environment.mapd.port])
+                .port([environment.mapd.port + '/' + cohort])
                 .dbName([environment.mapd.dbName])
                 .user([environment.mapd.user])
                 .password([environment.mapd.pwd])
@@ -23,7 +23,7 @@ export class MapdService {
                         reject(error);
                     } else {
                         this.session = session;
-                        session.getFields('MITO', (err, res) => {
+                        session.getFields(cohort, (err, res) => {
                             if (err) {
                                 reject(error);
                             } else {

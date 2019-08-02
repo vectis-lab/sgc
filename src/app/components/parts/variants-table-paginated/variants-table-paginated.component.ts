@@ -19,6 +19,7 @@ export class VariantsTablePaginatedComponent implements OnInit, OnDestroy {
     subscriptions: Subscription[] = [];
     limit = 100;
     offset = 0;
+    @Input() cohort: string;
 
     constructor(private mapd: MapdService,
                 private cf: CrossfilterService,
@@ -43,7 +44,7 @@ export class VariantsTablePaginatedComponent implements OnInit, OnDestroy {
         this.loading = true;
         this.cd.detectChanges();
         const fs = this.cf.getFilterString();
-        this.mapd.session.query(`SELECT VARIANT, TYPE, AF, RSID, gnomadAF, clinvar, consequences FROM MITO ${fs} LIMIT ${this.limit}`,
+        this.mapd.session.query(`SELECT VARIANT, TYPE, AF, RSID, gnomadAF, clinvar, consequences FROM ${this.cohort} ${fs} LIMIT ${this.limit}`,
             {},
             (error, data) => {
                 if (error) {
