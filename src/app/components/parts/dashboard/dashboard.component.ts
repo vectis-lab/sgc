@@ -102,6 +102,7 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
                     this.permissions = permissions;
                     if(this.mapd.session){
                         this.cf.mfs.clearFilters();
+                        this.mapd.session = null;
                     }
                     if(
                         this.auth.checkPermissions(p['cohort'], permissions)
