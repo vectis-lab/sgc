@@ -11,7 +11,7 @@ export const environment = {
     auth0MachineClientId: '9O0wRIq6yuPaUYp7YGskT0DwFQ3C6Bvj',
     auth0MachineClientSecret: 'xcLNeH7df-f8v6tHuiHkkX8x200fB7U5oyd4WFMMOWcgqCCBrLeTQ3Rc4yuC6RYv',
     beaconNetworkUrl: 'https://beacon-network.org/api',
-    vsalUrl: 'https://sgc.garvan.org.au/ssvs/query',
+    vsalUrl: 'https://vsal.garvan.org.au/ssvs',
     vsalUrl2: 'https://vsal.garvan.org.au/vsal/core/find',
     elasticUrl: 'https://dr-sgc.kccg.garvan.org.au/_elasticsearch',
     durlUrl: 'https://wt-ec1ac815dce38c76c2e7662693b82189-0.run.webtask.io/durl-dev',
@@ -20,7 +20,7 @@ export const environment = {
     mapd: {
         protocol: 'https',
         host: 'vsal.garvan.org.au',
-        port: '443/mito',
+        port: '443',
         dbName: 'mapd',
         user: 'mapd',
         pwd: 'HyperInteractive',
