@@ -74,11 +74,14 @@ export class VsalService {
             .append('count', 'true')
             .append('annot', 'true');
 
+        let dataset;
+
         query.options.forEach(o => {
             if (o.key) {
                 if(o.key === 'dataset'){
                     if(COHORT_VALUE_MAPPING_SSVS[o.getValue()]){
                         urlParams = urlParams.append('dataset', COHORT_VALUE_MAPPING_SSVS[o.getValue()]);
+                        dataset = COHORT_VALUE_MAPPING_SSVS[o.getValue()];
                     }
                 }else {
                     urlParams = urlParams.append(o.key, o.getValue());
@@ -263,7 +266,7 @@ export class VsalService {
     }
 
     private requestSummary(params: HttpParams, headers: HttpHeaders): Observable<VariantSummaryRequest> {
-        return this.http.get(environment.vsalUrl, {params: params, headers: headers})
+        return this.http.get(environment.vsalUrl+ '/' + params.get('dataset') + '/query', {params: params, headers: headers})
             .timeout(VSAL_TIMEOUT)
             .map((data) => {
                 if (data['error']) {
