@@ -23,6 +23,8 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
     @Input() clinicalFields: ClinicalFields[] = [];
     @Input() permission: string = '';
     @Input() phenoService: string = '';
+    @Input() family: boolean = false;
+    includeFamily: boolean = false;
     charts: Chart[] = [];
     externalIDs: string [] = [];
     selectedExternalIDs: string[] = [];
@@ -93,7 +95,7 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
         this.selectedExternalIDs = externalSamples;
         this.sampleDim.filter(sample => externalSamples.includes(sample));
         dc.renderAll();
-        this.cs.changes.next();
+        this.getVariantsFromFilter(this.selectedExternalIDs);
         this.cd.detectChanges();
     }
 
@@ -106,7 +108,7 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
         this.ClinicalFilterService.clearFilters();
 
         this.loadCharts();
-        this.cs.changes.next();
+        this.getVariantsFromFilter(this.selectedExternalIDs);
     }
 
     loadCharts(){
@@ -171,6 +173,31 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
                 c.enabled = false;
                 return c;
             });
+        }
+    }
+
+    toggleIncludeFamily(event){
+        this.includeFamily = event.checked;
+        this.getVariantsFromFilter(this.selectedExternalIDs);
+
+    }
+
+    getFamilyMembers(externalSamples){
+        const tempFamMembers = this.patients.filter(sample => externalSamples.includes(sample.externalIDs)).map(sample => sample.familyMembers);
+        let familyMembers = [];
+        tempFamMembers.forEach(fam => {
+            familyMembers = familyMembers.concat(fam);
+        })
+
+        return familyMembers;
+    }
+
+    getVariantsFromFilter(externalSamples){
+        const familyMembers = this.getFamilyMembers(externalSamples);
+        if(this.includeFamily){
+            this.cs.changes.next(familyMembers)
+        }else{
+            this.cs.changes.next();
         }
     }
 

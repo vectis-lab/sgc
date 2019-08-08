@@ -28,12 +28,15 @@ export class ClinapiService implements OnDestroy {
         private http: HttpClient
     ) {
         this.subs.push(
-            this.changes.debounceTime(100).subscribe(v => {
+            this.changes.debounceTime(100).subscribe(family => {
                 this.vss.filter = this.filterVariants;
                 this.samples = this.samplesGroup
                     .all()
                     .filter(s => (s.value > 0 && s.key !== ""))
                     .map(s => s.key);
+                if(family){
+                    this.samples = this.samples.concat(family)
+                }
                 this.internalSampleIDs.next(this.samples);
                 
                 this.vss.getVariants(this.vss.lastQuery, this.samples.join());
