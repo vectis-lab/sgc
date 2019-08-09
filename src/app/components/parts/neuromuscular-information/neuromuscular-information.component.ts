@@ -11,6 +11,8 @@ import { ClinicalFields } from '../../../model/clinical-fields';
 export class NeuromuscularInformationComponent {
     //Internal IDs
     @Input() samples: string[] = [];
+    //pheno file
+    @Input() pheno: any[] = [];
     permission: string = 'neuromuscular/pheno'
     clinicalFields: ClinicalFields[] = [
         new ClinicalFields('Age of onset', 'ageOfOnset', 'row'),

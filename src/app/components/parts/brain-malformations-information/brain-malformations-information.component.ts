@@ -11,6 +11,8 @@ import { ClinicalFields } from '../../../model/clinical-fields';
 export class BrainMalformationsInformationComponent {
   //Internal IDs
   @Input() samples: string[] = [];
+  //pheno file
+  @Input() pheno: any[] = [];
   permission: string = 'bm/pheno'
   clinicalFields: ClinicalFields[] = [
       new ClinicalFields('Data Access Group', 'dataAccessGroup', 'pie'),

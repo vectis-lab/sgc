@@ -24,6 +24,7 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
     @Input() permission: string = '';
     @Input() phenoService: string = '';
     @Input() family: boolean = false;
+    @Input() pheno: any[] = [];
     includeFamily: boolean = false;
     charts: Chart[] = [];
     externalIDs: string [] = [];
@@ -46,10 +47,6 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
                 private auth: Auth,
                 private router: Router,
                 private route: ActivatedRoute) {
-        this.subscriptions.push(route.params.subscribe(p => {
-            this.params = p;
-            this.demo = p['demo'] === 'true';
-        }));
     }
 
     ngOnInit() {
