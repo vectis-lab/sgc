@@ -1,31 +1,31 @@
 export const COHORT_VALUE_MAPPING_VSAL = {
     Mitochondria: 'mito',
     Acutecare: 'acutecare',
-    Neuromuscular: 'mito',
-    ['Epileptic Encephalopathies']: 'mito',
-    ['Brain Malformations']: 'mito',
-    Leukodystrophies: 'mito',
-    ICCon: 'mito'
+    Neuromuscular: 'demo',
+    ['Epileptic Encephalopathies']: 'demo',
+    ['Brain Malformations']: 'demo',
+    Leukodystrophies: 'demo',
+    ICCon: 'demo'
 }
 
 export const COHORT_VALUE_MAPPING_SSVS = {
     Mitochondria: 'mito',
     Acutecare: 'acutecare',
-    Neuromuscular: null,
-    ['Epileptic Encephalopathies']: null,
-    ['Brain Malformations']: null,
-    Leukodystrophies: null,
-    ICCon: null
+    Neuromuscular: 'demo',
+    ['Epileptic Encephalopathies']: 'demo',
+    ['Brain Malformations']: 'demo',
+    Leukodystrophies: 'demo',
+    ICCon: 'demo'
 }
 
 export const COHORT_VALUE_MAPPING_MAPD = {
     Mitochondria: 'mito',
     Acutecare: 'acutecare',
-    Neuromuscular: 'mito',
-    ['Epileptic Encephalopathies']: 'mito',
-    ['Brain Malformations']: 'mito',
-    Leukodystrophies: 'mito',
-    ICCon: 'mito'
+    Neuromuscular: 'demo',
+    ['Epileptic Encephalopathies']: 'demo',
+    ['Brain Malformations']: 'demo',
+    Leukodystrophies: 'demo',
+    ICCon: 'demo'
 }
 
 export const COHORT_PERMISSION_SUMMARY_MAPPING = {
