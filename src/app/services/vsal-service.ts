@@ -13,6 +13,7 @@ import { of, Observable } from "rxjs";
 import { COHORT_VALUE_MAPPING_SSVS, COHORT_VALUE_MAPPING_VSAL } from '../model/cohort-value-mapping';
 
 export const VSAL_VARIANT_LIMIT = 10000;
+export const VSAL_KUDU_VARIANT_LIMIT = 1000;
 export const VSAL_TIMEOUT = 300000;
 
 @Injectable()
@@ -28,7 +29,7 @@ export class VsalService {
             .append('chromosome', chromosome)
             .append('positionStart', start)
             .append('positionEnd', end)
-            .append('limit', VSAL_VARIANT_LIMIT.toString())
+            .append('limit', VSAL_KUDU_VARIANT_LIMIT.toString())
             .append('skip', '0');
 
         if(samples.length){
@@ -189,11 +190,11 @@ export class VsalService {
                 if (vs.error) {
                     observer.complete();
                 } else {
-                    if (vs.total > VSAL_VARIANT_LIMIT) {
+                    if (vs.total > VSAL_KUDU_VARIANT_LIMIT) {
                         let i: number;
                         let completed = 0;
-                        const queued = Math.floor(vs.total / VSAL_VARIANT_LIMIT);
-                        for (i = VSAL_VARIANT_LIMIT; i < vs.total; i += VSAL_VARIANT_LIMIT) {
+                        const queued = Math.floor(vs.total / VSAL_KUDU_VARIANT_LIMIT);
+                        for (i = VSAL_KUDU_VARIANT_LIMIT; i < vs.total; i += VSAL_KUDU_VARIANT_LIMIT) {
                             params = params.set('skip', String(i));
                             this.request(params, headers).subscribe((svs: VariantRequest) => {
                                 observer.next(svs);
