@@ -37,9 +37,13 @@ export class SearchOptionComponent implements OnInit {
             }
             if(p['query']){
                 this.query = p['query'];
+            }else{
+                this.query = "";
             }
             if(p['panel']){
                 this.panel = p['panel'];
+            }else{
+                this.panel = "";
             }
         }));
     }
