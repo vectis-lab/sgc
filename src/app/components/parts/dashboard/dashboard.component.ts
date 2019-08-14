@@ -22,6 +22,7 @@ import { RsidService } from '../../../services/autocomplete/rsid-service';
 import { Rsid } from '../../../model/rsid';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Auth } from '../../../services/auth-service';
+import { COHORT_VALUE_MAPPING_MAPD } from '../../../model/cohort-value-mapping';
 
 const SMALL_WIDTH = 720;
 
@@ -52,6 +53,7 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
     sql = '';
     helpEnabled = false;
     cohort: string = this.searchBarService.options[0].getValue();
+    cohortMapping = COHORT_VALUE_MAPPING_MAPD[this.searchBarService.options[0].getValue()]
     permissions = [];
 
     errors = new Subject<any>();
@@ -94,6 +96,7 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
                 if(p['cohort']){
                     this.cohort = p['cohort'];
                     this.searchBarService.options[0].setValue(p['cohort']);
+                    this.cohortMapping = COHORT_VALUE_MAPPING_MAPD[p['cohort']];
                 }
                 this.subscriptions.push(this.auth.getUserPermissions().subscribe(permissions => {
                     this.permissions = permissions;
@@ -101,12 +104,11 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
                         this.cf.mfs.clearFilters();
                     }
                     if(
-                        (p['cohort'] === "Mitochondria" && this.permissions.includes('mito/summary')) || 
-                        (p['cohort'] === "Acutecare" && this.permissions.includes('acutecare/summary')) || 
-                        (p['cohort'] === "Neuromuscular" && this.permissions.includes('neuromuscular/summary'))
+                        this.auth.checkPermissions(p['cohort'], permissions)
                     ){
-                        this.mapd.connect().then((session) => {
-                            return this.cf.create(session, 'MITO');                       
+                        this.mapd.connect(this.cohortMapping).then((session) => {
+                            let sess = this.cohortMapping.toUpperCase()
+                            return this.cf.create(session, sess);                       
                         }).then(() => {
                             this.cf.updates.next();
                         }).catch((e) => this.errors.next(e));
@@ -164,12 +166,16 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
             if (!v) {
                 return;
             }
+
             if (v.result instanceof Gene) {
-                const f = new DimensionFilter();
+                //Currently MAPD doesn't translate Gene symbol into correct region
+                /*const f = new DimensionFilter();
                 f.dimension = new Dimension();
                 f.dimension.name = 'geneSymbol';
                 f.operator = '=';
-                f.value = v.result.symbol;
+                f.value = v.result.symbol;*/
+
+                const f = new BasicFilter(`chromosome='${v.result.chromosome}' AND c3_START >= ${v.result.start} AND c3_START <= ${v.result.end}`);
                 this.cf.mfs.addFilter(f);
             } else if (v.result instanceof Region) {
                 const r = (<Region>v.result);

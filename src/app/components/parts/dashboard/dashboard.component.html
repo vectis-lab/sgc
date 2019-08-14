@@ -93,7 +93,7 @@
                     <div class="table" *ngIf="subtotal > 0">
                         <app-help-icon *ngIf="helpEnabled">This table contains the filtered variants from the current query. Due to performance limitations, we
                             are currently limited to 100 variants, but we hope to increase this in the future.</app-help-icon>
-                        <app-variants-table-paginated #table></app-variants-table-paginated>
+                        <app-variants-table-paginated #table [cohort]='cohortMapping.toUpperCase()'></app-variants-table-paginated>
                     </div>
                 </div>
             </div>

@@ -4,20 +4,22 @@ import { ClinicalFields } from '../../../model/clinical-fields';
 import * as _ from 'lodash/array';
 
 @Component({
-    selector: 'app-mitochondria-information',
-    templateUrl: './mitochondria-information.component.html',
-    styleUrls: ['./mitochondria-information.component.css'],
+    selector: 'app-iccon-information',
+    templateUrl: './iccon-information.component.html',
+    styleUrls: ['./iccon-information.component.css'],
     providers: [ClinapiService]
 })
-export class MitochondriaInformationComponent {
+export class IcconInformationComponent {
     //Internal IDs
     @Input() samples: string[] = [];
     //pheno file
     @Input() pheno: any[] = [];
-    permission: string = 'mito/pheno'
+    permission: string = 'iccon/pheno'
     clinicalFields: ClinicalFields[] = [
-        new ClinicalFields('Gender', 'gender', 'pie'),
-        new ClinicalFields('Condition', 'conditions', 'row', true, true, (dimension, filters) => {
+        new ClinicalFields('Sex', 'sex', 'pie'),
+        new ClinicalFields('YOB', 'yearOfBirth', 'row'),
+        new ClinicalFields('Index case?', 'indexCase', 'row'),
+        new ClinicalFields('Case', 'case', 'row', true, true, (dimension, filters) => {
             dimension.filter(null);   
             if (filters.length === 0)
                 dimension.filter(null);
@@ -29,13 +31,11 @@ export class MitochondriaInformationComponent {
             return filters;  
         },
         325,
-        200,
-    ),
+        200),
     ];
-    phenoService: string = 'getMitochondria'
+    phenoService: string = 'getIccon'
 
     constructor() {
     }
 
 }
-

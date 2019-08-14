@@ -113,6 +113,10 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { ProfileComponent, ChangePasswordDialog } from './components/pages/profile/profile.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { AutocompleteOptionComponent } from './components/parts/autocomplete-option/autocomplete-option.component';
+import { LeukodystrophiesInformationComponent } from './components/parts/leukodystrophies-information/leukodystrophies-information.component';
+import { BrainMalformationsInformationComponent } from './components/parts/brain-malformations-information/brain-malformations-information.component';
+import { EpilepticEncephalopathiesInformationComponent } from './components/parts/epileptic-encephalopathies-information/epileptic-encephalopathies-information.component';
+import { IcconInformationComponent } from './components/parts/iccon-information/iccon-information.component';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -215,7 +219,11 @@ export class RavenErrorHandler implements ErrorHandler {
         HomeComponent,
         ProfileComponent,
         ChangePasswordDialog,
-        AutocompleteOptionComponent
+        AutocompleteOptionComponent,
+        LeukodystrophiesInformationComponent,
+        BrainMalformationsInformationComponent,
+        EpilepticEncephalopathiesInformationComponent,
+        IcconInformationComponent,
     ],
     entryComponents: [
         SignUpComponent,

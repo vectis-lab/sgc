@@ -10,6 +10,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import { of } from 'rxjs';
 import { skip } from 'rxjs/operators';
+import { COHORT_PERMISSION_SUMMARY_MAPPING } from '../model/cohort-value-mapping'
 
 export const expiredAtKey = 'expired_at';
 export const uidKey = 'uid';
@@ -175,6 +176,15 @@ export class Auth {
 			this.router.navigateByUrl(path);
         }
     };
+
+    public checkPermissions(selectedCohort, permissions): boolean{
+        let permitted = false;
+
+        if(COHORT_PERMISSION_SUMMARY_MAPPING[selectedCohort] !== undefined && permissions.includes(COHORT_PERMISSION_SUMMARY_MAPPING[selectedCohort])){
+            permitted = true;
+        }
+        return permitted;
+    }
 
     clearLocalStorage() {
         localStorage.removeItem(expiredAtKey);

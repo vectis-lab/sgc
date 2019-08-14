@@ -25,6 +25,14 @@
     margin-left: 5px;
 }
 
+.filter-button{
+    font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
+}
+
+.filter-button:hover {
+    background-color: white;
+}
+
 .dc-data-count {
     margin: 0;
 }
@@ -43,4 +51,6 @@ mat-icon {
 .my-full-width-menu {
     max-width: none;
     overflow: visible;
+    max-height: 500px;
+    overflow: scroll;
 }

@@ -11,12 +11,15 @@ import { SearchQueries } from '../../../model/search-query';
 import { Region } from '../../../model/region';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ClinicalFilteringService } from '../../../services/clinical-filtering.service';
+import { Auth } from '../../../services/auth-service';
+import { ClinapiService } from '../../../services/clinapi.service';
+import {COHORT_PERMISSION_VSAL_PHENO_MAPPING, COHORT_PHENO_GET_MAPPING} from '../../../model/cohort-value-mapping'
 
 @Component({
     selector: 'app-clinical-filtering',
     templateUrl: './clinical-filtering.component.html',
     styleUrls: ['./clinical-filtering.component.css'],
-    providers: [VariantSearchService]
+    providers: [VariantSearchService, ClinapiService]
 })
 export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewInit {
     @Input() autocomplete: VariantAutocompleteResult<any>[];
@@ -30,6 +33,9 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
     selectedTabIndex = 0;
     timeout = null;
     selectedCohort = this.searchBarService.options[0].getValue();
+    pheno: any;
+    denied = false;
+    error = false;
 
 
     constructor(public searchService: VariantSearchService,
@@ -38,7 +44,9 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
                 private router: Router,
                 private route: ActivatedRoute,
                 private clinicalFilteringService: ClinicalFilteringService,
-                private sampleSearch: SampleSearch
+                private sampleSearch: SampleSearch,
+                private auth: Auth,
+                public cs: ClinapiService
             ) {
     }
 
@@ -70,21 +78,44 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
         const allQueries = this.autocomplete.map(ac => ac.getRegion())
 
         Promise.all(allQueries).then((regions: Region[]) => {
-            return this.sampleSearch.getSamples(new SearchQueries(regions, this.searchBarService.options)).then((result) => {
-                return this.searchService.getVariants(new SearchQueries(regions, this.searchBarService.options), result.join())
-                .then(() => {
-                    this.loadingVariants = false;
+            this.subscriptions.push(this.auth.getUserPermissions().subscribe(permissions => {
+                let permitted = false;
+                if(permissions.includes(COHORT_PERMISSION_VSAL_PHENO_MAPPING[this.selectedCohort])){
+                    permitted = true;
+                }else{
+                    permitted = false;
+                }
+                this.cs[COHORT_PHENO_GET_MAPPING[this.selectedCohort]](false,permitted).subscribe(pheno => {
+                    this.pheno = pheno;
+                    return this.sampleSearch.getSamples(new SearchQueries(regions, this.searchBarService.options)).then((result) => {
+                        const list_pheno_ids = this.pheno.map(sample => sample.internalIDs)
+                        const mapping_result = result.filter(r => {
+                            return list_pheno_ids.includes(r);
+                        })
+                        return this.searchService.getVariants(new SearchQueries(regions, this.searchBarService.options), mapping_result.join())
+                        .then(() => {
+                            this.loadingVariants = false;
+                            this.cd.detectChanges();
+                        })
+                        .catch((e) => {
+                            this.loadingVariants = false;
+                            this.errorEvent.emit(e);
+                        });
+                    }).catch((e) => {
+                        this.loadingVariants = false;
+                        this.errorEvent.emit(e);
+                    });
+                },
+                e => {
+                    if (e.status && e.status === 401) {
+                        this.denied = true;
+                    } else {
+                        this.error = e;
+                    }
                     this.cd.detectChanges();
                 })
-                .catch((e) => {
-                    this.loadingVariants = false;
-                    this.errorEvent.emit(e);
-                });
-            })
-            .catch((e) => {
-                this.loadingVariants = false;
-                this.errorEvent.emit(e);
-            });
+            }));
+            
         })
 
         /*this.autocomplete.search(this.sampleSearch, this.searchService, this.searchBarService.options)

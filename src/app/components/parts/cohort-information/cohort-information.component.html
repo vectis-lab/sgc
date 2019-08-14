@@ -5,10 +5,22 @@
             selected out of <span class='total-count'></span> sample records.
         </div>
         <div class="actions">
+          <mat-slide-toggle *ngIf="family" style="vertical-align: middle;margin-right: 1em;" [(ngModel)]="includeFamily" (change)="toggleIncludeFamily($event)">Include Family</mat-slide-toggle>
           <mat-slide-toggle style="vertical-align: middle;" [(ngModel)]="showSampleCSV">Samples CSV</mat-slide-toggle>
-          <mat-icon (click)="resetFilters()" matTooltip="Reset" matTooltipPosition="above" style="vertical-align: middle;">refresh</mat-icon>
-          <mat-icon [matMenuTriggerFor]="menu" matTooltip="Add/Remove Filters" matTooltipPosition="above" style="vertical-align: middle;">toc</mat-icon>
+          <button mat-button (click)="resetFilters()" class="filter-button">
+            <mat-icon>refresh</mat-icon>
+            Reset
+          </button>
+          <button mat-button [matMenuTriggerFor]="menu" class="filter-button">
+            <mat-icon matTooltipPosition="above" style="vertical-align: middle;">toc</mat-icon>
+            More clinical traits
+          </button>
+          
             <mat-menu #menu="matMenu" class="my-full-width-menu">
+                <div class="filter-option" (click)="$event.stopPropagation(); $event.stopImmediatePropagation()">
+                    <span class="filter-label">All</span>
+                    <mat-slide-toggle (change)="checkedAll($event)" [(ngModel)]="allIsChecked"></mat-slide-toggle>
+                </div>
                 <div class="filter-option" *ngFor="let c of charts" (click)="$event.stopPropagation(); $event.stopImmediatePropagation()">
                     <span class="filter-label">{{c.name}}</span>
                     <mat-slide-toggle [(ngModel)]="c.enabled"></mat-slide-toggle>

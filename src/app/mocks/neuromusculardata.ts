@@ -171,7 +171,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Incomplete",
-    "internalIDs": "16G004037"
+    "internalIDs": "SRR1291024 "
   },
   {
     "externalIDs": "A0120002",
@@ -345,7 +345,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Incomplete",
-    "internalIDs": "17W000223"
+    "internalIDs": "SRR1291026 "
   },
   {
     "externalIDs": "A0120003",
@@ -519,7 +519,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Incomplete",
-    "internalIDs": "17W000281"
+    "internalIDs": "SRR1291030 "
   },
   {
     "externalIDs": "A0120004",
@@ -693,7 +693,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Incomplete",
-    "internalIDs": "17W000284"
+    "internalIDs": "SRR1291035 "
   },
   {
     "externalIDs": "A0120005",
@@ -867,7 +867,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Incomplete",
-    "internalIDs": "17W000334"
+    "internalIDs": "SRR1291036 "
   },
   {
     "externalIDs": "A0120006",
@@ -1041,7 +1041,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "Maisie has a single region of LOH on her array, and there is one gene that may be relevant (SGCD causing LGMD type 2F) although her symptoms are not classic for this. I am not convinced this is the answer for her, bc not a perfect match with phenotype    the LOH coordinates are:    chr5:149676985-155594226  chr5:155600815-159744304",
     "Complete?": "Incomplete",
-    "internalIDs": "17W000354"
+    "internalIDs": "SRR1291041 "
   },
   {
     "externalIDs": "A0120007",
@@ -1215,7 +1215,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Incomplete",
-    "internalIDs": "17W000597"
+    "internalIDs": "SRR1291070 "
   },
   {
     "externalIDs": "A0120008",
@@ -1389,7 +1389,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Incomplete",
-    "internalIDs": "17W000672"
+    "internalIDs": "SRR1291138 "
   },
   {
     "externalIDs": "A0120009",
@@ -1563,7 +1563,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "ECG pending",
     "Complete?": "Complete",
-    "internalIDs": "17W000742"
+    "internalIDs": "SRR1291141 "
   },
   {
     "externalIDs": "A0420001",
@@ -1737,7 +1737,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Incomplete",
-    "internalIDs": "17W000831"
+    "internalIDs": "SRR1291157 "
   },
   {
     "externalIDs": "A0420002",
@@ -1911,7 +1911,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": "17W000873"
+    "internalIDs": "SRR1293236 "
   },
   {
     "externalIDs": "A0420003",
@@ -2085,7 +2085,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": "17W000934"
+    "internalIDs": "SRR1293251 "
   },
   {
     "externalIDs": "A0420004",
@@ -2259,7 +2259,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": "17W000990"
+    "internalIDs": "SRR1293262 "
   },
   {
     "externalIDs": "A0420005",
@@ -2433,7 +2433,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Incomplete",
-    "internalIDs": "17W001121"
+    "internalIDs": "SRR1293283 "
   },
   {
     "externalIDs": "A0420006",
@@ -2607,7 +2607,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Incomplete",
-    "internalIDs": "17W001127"
+    "internalIDs": "SRR1293295 "
   },
   {
     "externalIDs": "A0420007",
@@ -2781,7 +2781,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": "17W001129"
+    "internalIDs": "SRR1293326 "
   },
   {
     "externalIDs": "A0420008",
@@ -2955,7 +2955,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": "17W001142"
+    "internalIDs": "SRR1295423 "
   },
   {
     "externalIDs": "A0420009",
@@ -3129,7 +3129,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": "17W001163"
+    "internalIDs": "SRR1295424 "
   },
   {
     "externalIDs": "A0420010",
@@ -3303,7 +3303,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "normal stature  neonatal hypotonia  now mild gross motor delay/muscle weakness   normal bulbar function",
     "Complete?": "Complete",
-    "internalIDs": "18W000014"
+    "internalIDs": "SRR1295425 "
   },
   {
     "externalIDs": "A0620001",
@@ -3477,7 +3477,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": "18W000052"
+    "internalIDs": "SRR1295426 "
   },
   {
     "externalIDs": "A0620002",
@@ -3651,7 +3651,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "dilated cardiomyopathy",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": "18W000061"
+    "internalIDs": "SRR1295432 "
   },
   {
     "externalIDs": "A0620003",
@@ -3825,7 +3825,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": "18W000088"
+    "internalIDs": "SRR1295433 "
   },
   {
     "externalIDs": "A0620004",
@@ -3999,7 +3999,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": "18W000089"
+    "internalIDs": "SRR1295465 "
   },
   {
     "externalIDs": "A0620005",
@@ -4173,7 +4173,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": "18W000252"
+    "internalIDs": "SRR1295466 "
   },
   {
     "externalIDs": "A0620006",
@@ -4347,7 +4347,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": "18W000303"
+    "internalIDs": "SRR1295515 "
   },
   {
     "externalIDs": "A0620007",
@@ -4521,7 +4521,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": "18W000388"
+    "internalIDs": "SRR1295532 "
   },
   {
     "externalIDs": "A0620008",
@@ -4695,7 +4695,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": "18W000391"
+    "internalIDs": "SRR1295533 "
   },
   {
     "externalIDs": "A0620009",
@@ -4869,7 +4869,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Incomplete",
-    "internalIDs": "18W000394"
+    "internalIDs": "SRR1295534 "
   },
   {
     "externalIDs": "A0620010",
@@ -5043,7 +5043,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": "18W000543"
+    "internalIDs": "SRR1295535 "
   },
   {
     "externalIDs": "A0620011",
@@ -5217,7 +5217,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": "18W000646"
+    "internalIDs": "SRR1295536 "
   },
   {
     "externalIDs": "A0620012",
@@ -5391,7 +5391,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": ""
+    "internalIDs": "SRR1295537 "
   },
   {
     "externalIDs": "A0620013",
@@ -5565,7 +5565,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "Fibro-adipose replacement of muscle - extraocular",
     "Complete?": "Complete",
-    "internalIDs": ""
+    "internalIDs": "SRR1295538 "
   },
   {
     "externalIDs": "A0620014",
@@ -5739,7 +5739,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": ""
+    "internalIDs": "SRR1295539 "
   },
   {
     "externalIDs": "A0620015",
@@ -5913,7 +5913,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": ""
+    "internalIDs": "SRR1295540 "
   },
   {
     "externalIDs": "A0620016",
@@ -6087,7 +6087,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": ""
+    "internalIDs": "SRR1295542 "
   },
   {
     "externalIDs": "A0620017",
@@ -6261,7 +6261,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": ""
+    "internalIDs": "SRR1295543 "
   },
   {
     "externalIDs": "A0620018",
@@ -6435,7 +6435,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": ""
+    "internalIDs": "SRR1295544 "
   },
   {
     "externalIDs": "A0620019",
@@ -6609,7 +6609,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": ""
+    "internalIDs": "SRR1295545 "
   },
   {
     "externalIDs": "A0620020",
@@ -6783,7 +6783,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": ""
+    "internalIDs": "SRR1295546 "
   },
   {
     "externalIDs": "A0620021",
@@ -6957,7 +6957,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": ""
+    "internalIDs": "SRR1295552 "
   },
   {
     "externalIDs": "A0620022",
@@ -7131,7 +7131,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": ""
+    "internalIDs": "SRR1295553 "
   },
   {
     "externalIDs": "A0620023",
@@ -7305,7 +7305,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Incomplete",
-    "internalIDs": ""
+    "internalIDs": "SRR1295554 "
   },
   {
     "externalIDs": "A0620024",
@@ -7479,7 +7479,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Incomplete",
-    "internalIDs": ""
+    "internalIDs": "SRR1295568 "
   },
   {
     "externalIDs": "A0620025",
@@ -7653,7 +7653,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Incomplete",
-    "internalIDs": ""
+    "internalIDs": "SRR1295570 "
   },
   {
     "externalIDs": "A0620026",
@@ -7827,7 +7827,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Incomplete",
-    "internalIDs": ""
+    "internalIDs": "SRR1298980 "
   },
   {
     "externalIDs": "A0620027",
@@ -8001,7 +8001,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Incomplete",
-    "internalIDs": ""
+    "internalIDs": "SRR1298981 "
   },
   {
     "externalIDs": "A0620028",
@@ -8175,7 +8175,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Incomplete",
-    "internalIDs": ""
+    "internalIDs": "SRR1298988 "
   },
   {
     "externalIDs": "A0620029",
@@ -8349,7 +8349,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Incomplete",
-    "internalIDs": ""
+    "internalIDs": "SRR1298989 "
   },
   {
     "externalIDs": "A0620030",
@@ -8523,7 +8523,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Incomplete",
-    "internalIDs": ""
+    "internalIDs": "SRR622457 "
   },
   {
     "externalIDs": "A0620031",
@@ -8697,7 +8697,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Incomplete",
-    "internalIDs": ""
+    "internalIDs": "SRR622458 "
   },
   {
     "externalIDs": "A0720001",
@@ -8871,7 +8871,7 @@ export const FAKE_NEUROMUSCULAR_DATA = [
     "Abnormality": "",
     "General Comments": "",
     "Complete?": "Complete",
-    "internalIDs": ""
+    "internalIDs": "SRR622459"
   },
   {
     "externalIDs": "A0720002",

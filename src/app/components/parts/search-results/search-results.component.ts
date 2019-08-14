@@ -46,9 +46,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy, AfterViewInit 
         this.loadingVariantsSummary = true;
         this.subscriptions.push(this.auth.getUserPermissions().subscribe(permissions => {
                 if(
-                    this.selectedCohort === "Mitochondria" && permissions.includes('mito/summary') || 
-                    this.selectedCohort === "Acutecare" && permissions.includes('acutecare/summary') || 
-                    this.selectedCohort === "Neuromuscular" && permissions.includes('neuromuscular/summary')
+                    this.auth.checkPermissions(this.selectedCohort, permissions)
                 ){
                     this.subscriptions.push(this.searchSummaryService.results.subscribe(v => {
                         this.variantsSummary = v.variants;

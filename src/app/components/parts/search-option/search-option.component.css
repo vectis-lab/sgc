@@ -12,7 +12,8 @@
     background-color: white;
     border: 1px solid lightgrey;
     position: absolute;
-    width: 170px;
+    min-width: 260px;
+    width: 125%;
     box-shadow: 0 2px 4px rgba(0,0,0,.16);
     -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.16);
     z-index: 99999;
@@ -30,4 +31,5 @@
     color: white;
     display: flex;
     align-items: center;
+    min-width: 170px;
 }
