@@ -22,7 +22,7 @@
             </span>
             
             <div *ngIf="userDropdown" [ngClass]="['user', 'dropdown']">
-                <div class="dropdown-item" [routerLink]="['/profile']">Profile</div>
+                <!--<div class="dropdown-item" [routerLink]="['/profile']">Profile</div>-->
                 <div class="dropdown-item" (click)="auth.logout()">Log out</div>
             </div>
         </a>
