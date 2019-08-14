@@ -15,7 +15,7 @@
                 <div *ngIf="!searchBarService.autocompleteError && !error && autocomplete != null">
                     <div class="search-results">
                         <app-clinical-filtering [autocomplete]="autocomplete"
-                                            (errorEvent)="handleError($event)"></app-clinical-filtering>
+                            (errorEvent)="handleError($event)"></app-clinical-filtering>
                     </div>
                 </div>
             </section>

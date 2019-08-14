@@ -113,6 +113,7 @@ import { LeukodystrophiesInformationComponent } from './components/parts/leukody
 import { BrainMalformationsInformationComponent } from './components/parts/brain-malformations-information/brain-malformations-information.component';
 import { EpilepticEncephalopathiesInformationComponent } from './components/parts/epileptic-encephalopathies-information/epileptic-encephalopathies-information.component';
 import { IcconInformationComponent } from './components/parts/iccon-information/iccon-information.component';
+import { FamilyTabComponent } from './components/parts/family-tab/family-tab.component';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -216,6 +217,7 @@ export class RavenErrorHandler implements ErrorHandler {
         BrainMalformationsInformationComponent,
         EpilepticEncephalopathiesInformationComponent,
         IcconInformationComponent,
+        FamilyTabComponent,
     ],
     entryComponents: [
         SignUpComponent,

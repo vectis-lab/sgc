@@ -6,11 +6,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./samples-list.component.css']
 })
 export class SamplesListComponent implements OnInit {
-  @Input() sampleIDs : string[];
+  @Input() sampleIDs : string[] = [];
   @Input() showSampleCSV : boolean;
   @Input() selectedSamples : string[];
   @Output() onSelectSamples = new EventEmitter<string[]>();
   @Output() onUpdateSamples = new EventEmitter<string[]>();
+  @Input() multiple: boolean = true;
+  size = this.sampleIDs.length;
 
   constructor() { }
 

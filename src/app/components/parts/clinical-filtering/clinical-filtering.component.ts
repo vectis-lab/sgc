@@ -30,12 +30,12 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
     public loadingVariants = false;
     private subscriptions: Subscription[] = [];
     maximumNumberOfVariants = MAXIMUM_NUMBER_OF_VARIANTS;
-    selectedTabIndex = 0;
     timeout = null;
     selectedCohort = this.searchBarService.options[0].getValue();
     pheno: any;
     denied = false;
     error = false;
+    mappingSamples = [];
 
 
     constructor(public searchService: VariantSearchService,
@@ -89,10 +89,10 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
                     this.pheno = pheno;
                     return this.sampleSearch.getSamples(new SearchQueries(regions, this.searchBarService.options)).then((result) => {
                         const list_pheno_ids = this.pheno.map(sample => sample.internalIDs)
-                        const mapping_result = result.filter(r => {
+                        this.mappingSamples = result.filter(r => {
                             return list_pheno_ids.includes(r);
                         })
-                        return this.searchService.getVariants(new SearchQueries(regions, this.searchBarService.options), mapping_result.join())
+                        return this.searchService.getVariants(new SearchQueries(regions, this.searchBarService.options), this.mappingSamples.join())
                         .then(() => {
                             this.loadingVariants = false;
                             this.cd.detectChanges();
