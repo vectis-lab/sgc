@@ -1,7 +1,7 @@
 <div class="chart">
     <div class="toolbar">
         <div class="row">
-            <i (click)="resetFilter()" class="option material-icons left">refresh</i>
+            <i *ngIf="multiple" (click)="resetFilter()" class="option material-icons left">refresh</i>
             <h4>Sample Id</h4>
             <span class="option right"></span>
         </div>
