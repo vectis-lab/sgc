@@ -21,10 +21,10 @@ export class ClinicalComponent implements OnInit, OnDestroy {
   autocomplete: GenericAutocompleteResult<any>[];
   error = '';
   searching = false;
+  loadingParseParams: boolean = false;
   sb: MatSnackBarRef<SnackbarDemoComponent> = null;
   private mediaMatcher: MediaQueryList = matchMedia(`(max-width: ${SMALL_WIDTH}px)`);
   selectedOption: string;
-  private geneList: string = '';
 
   constructor(public searchBarService: SearchBarService,
               public auth: Auth,
@@ -44,15 +44,13 @@ export class ClinicalComponent implements OnInit, OnDestroy {
       this.subscriptions.push(this.auth.getSavedSearches().subscribe(savedSearches => {
           this.clinicalFilteringService.initSaveSearches(savedSearches);
       }))
-
-      this.subscriptions.push(this.searchBarService.geneList.subscribe(genes => {
-        this.geneList = genes;
-      }))
       }
 
   parseParams(params: Params) {
       if (!params['query'] && !params['cohort'] && !params['panel']) {
           return;
+      }else{
+        this.loadingParseParams = true;
       }
       if (params['demo']) {
           this.sb = this.snackBar.openFromComponent(SnackbarDemoComponent, {
@@ -69,7 +67,8 @@ export class ClinicalComponent implements OnInit, OnDestroy {
       this.autocomplete = null;
       this.searching = true;
       this.searchBarService.searchWithMultipleParams(params).then((v) => {
-          this.autocomplete = v;
+					this.autocomplete = v;
+					this.loadingParseParams = false;
           this.cd.detectChanges();
       }).catch(() => {
       });

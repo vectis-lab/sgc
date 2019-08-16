@@ -1,0 +1,19 @@
+.avatar-frame{border: 1.5px solid #c7b89e;}
+.avatar-frame,.avatar-frame img{
+    margin: 0 auto;
+    width:60px;
+	height: 60px;
+	-webkit-border-radius: 50%; /* Saf3+, Chrome */
+	border-radius: 50%; /* Opera 10.5, IE 9 */
+	/*-moz-border-radius: 50%;  Disabled for FF1+ */
+}
+
+::ng-deep .mat-chip { 
+    margin: 5px 10px !important;
+    padding: 5px 10px !important;
+    font-size: 11px !important; 
+}
+
+.permission-list{
+	margin: 15px 0px;
+}

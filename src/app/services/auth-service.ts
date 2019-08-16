@@ -141,6 +141,17 @@ export class Auth {
         
     }
 
+    public updatePassword(email){
+        return this.http.post(`https://${environment.auth0Domain}/dbconnections/change_password`, {
+            client_id: environment.auth0ClientId,
+            email: email,
+            connection: 'Username-Password-Authentication'}
+            , {responseType:'text'})
+        .map(res => {
+            return res
+        });
+    }
+
     private handleAuthResult = (err, authResult) => {
         if (err) {
             if (!environment.production) {

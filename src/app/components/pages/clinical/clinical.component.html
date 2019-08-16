@@ -11,6 +11,9 @@
                 <div class="message message-error" *ngIf="searchBarService.autocompleteError">
                     {{ searchBarService.autocompleteError }}
                 </div>
+                <div class="loading-message" *ngIf="loadingParseParams&&!error&&!searchBarService.autocompleteError">
+                    <mat-spinner color="primary"></mat-spinner>
+                </div>
                 <div class="message message-error" *ngIf="error">{{ error }}</div>
                 <div *ngIf="!searchBarService.autocompleteError && !error && autocomplete != null">
                     <div class="search-results">

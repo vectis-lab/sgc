@@ -33,6 +33,7 @@ import { PieChartComponent } from './components/parts/charts/pie-chart.component
 import { CohortListComponent } from './components/parts/cohort-list/cohort-list.component';
 import { InitiativeService } from './services/project-data/initiative-service';
 import { CohortService } from './services/project-data/cohort-service';
+import { GenomicsEnglandService } from './services/genomics-england.service';
 import { SearchComponent } from './components/pages/search/search.component';
 import { SearchResultsComponent } from './components/parts/search-results/search-results.component';
 import { AlleleFreqComponent } from './components/parts/allele-freq/allele-freq.component';
@@ -110,6 +111,9 @@ import { AcutecareInformationComponent } from './components/parts/acutecare-info
 import { CohortInformationComponent } from './components/parts/cohort-information/cohort-information.component';
 import { AlleleFreqSummaryComponent } from './components/parts/allele-freq-summary/allele-freq-summary.component';
 import { HomeComponent } from './components/pages/home/home.component';
+import { ProfileComponent, ChangePasswordDialog } from './components/pages/profile/profile.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { AutocompleteOptionComponent } from './components/parts/autocomplete-option/autocomplete-option.component';
 import { LeukodystrophiesInformationComponent } from './components/parts/leukodystrophies-information/leukodystrophies-information.component';
 import { BrainMalformationsInformationComponent } from './components/parts/brain-malformations-information/brain-malformations-information.component';
 import { EpilepticEncephalopathiesInformationComponent } from './components/parts/epileptic-encephalopathies-information/epileptic-encephalopathies-information.component';
@@ -150,7 +154,8 @@ export class RavenErrorHandler implements ErrorHandler {
         HttpClientModule,
         NgxPaginationModule,
         NgxDatatableModule,
-        MaterialModule
+        MaterialModule,
+        MatDialogModule
     ],
     declarations: [
         AppComponent,
@@ -215,6 +220,9 @@ export class RavenErrorHandler implements ErrorHandler {
         CohortInformationComponent,
         AlleleFreqSummaryComponent,
         HomeComponent,
+        ProfileComponent,
+        ChangePasswordDialog,
+        AutocompleteOptionComponent,
         LeukodystrophiesInformationComponent,
         BrainMalformationsInformationComponent,
         EpilepticEncephalopathiesInformationComponent,
@@ -226,7 +234,8 @@ export class RavenErrorHandler implements ErrorHandler {
         SignUpComponent,
         ErrorDialogComponent,
         SnackbarDemoComponent,
-        SnackbarHelpComponent
+        SnackbarHelpComponent,
+        ChangePasswordDialog
     ],
     providers: [
         Auth,
@@ -248,7 +257,8 @@ export class RavenErrorHandler implements ErrorHandler {
         SearchBarService,
         { provide: ErrorHandler, useClass: RavenErrorHandler },
         { provide: 'NULL_VALUE', useValue: null },
-        SampleSearch
+        SampleSearch,
+        GenomicsEnglandService
     ],
     bootstrap: [AppComponent]
 })

@@ -1,0 +1,4 @@
+::ng-deep .mat-autocomplete-panel{
+    min-width: 550px !important;
+    overflow: auto !important;
+}
