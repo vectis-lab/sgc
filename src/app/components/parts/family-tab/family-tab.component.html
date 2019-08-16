@@ -1,3 +1,7 @@
 <div class="chart">
     <app-samples-list [sampleIDs]="externalIDs" [selectedSamples]="selectedExternalIDs" (onSelectSamples)="onSelectSamples($event)" [showSampleCSV]="showSampleCSV" (onUpdateSamples)="onUpdateSamples($event)" [multiple]="false"></app-samples-list>
 </div>
+<div *ngIf="loadingVariants">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+<app-variants-family-table *ngIf="selectedExternalIDs.length === 1 && !loadingVariants" [variants]="variants"></app-variants-family-table>

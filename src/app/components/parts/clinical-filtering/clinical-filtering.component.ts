@@ -36,6 +36,7 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
     denied = false;
     error = false;
     mappingSamples = [];
+    searchQueries : SearchQueries;
 
 
     constructor(public searchService: VariantSearchService,
@@ -78,6 +79,7 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
         const allQueries = this.autocomplete.map(ac => ac.getRegion())
 
         Promise.all(allQueries).then((regions: Region[]) => {
+            this.searchQueries = new SearchQueries(regions, this.searchBarService.options)
             this.subscriptions.push(this.auth.getUserPermissions().subscribe(permissions => {
                 let permitted = false;
                 if(permissions.includes(COHORT_PERMISSION_VSAL_PHENO_MAPPING[this.selectedCohort])){
@@ -87,12 +89,14 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
                 }
                 this.cs[COHORT_PHENO_GET_MAPPING[this.selectedCohort]](false,permitted).subscribe(pheno => {
                     this.pheno = pheno;
-                    return this.sampleSearch.getSamples(new SearchQueries(regions, this.searchBarService.options)).then((result) => {
+                    
+                    return this.sampleSearch.getSamples(this.searchQueries).then((result) => {
                         const list_pheno_ids = this.pheno.map(sample => sample.internalIDs)
                         this.mappingSamples = result.filter(r => {
                             return list_pheno_ids.includes(r);
                         })
-                        return this.searchService.getVariants(new SearchQueries(regions, this.searchBarService.options), this.mappingSamples.join())
+                        
+                        return this.searchService.getVariants(this.searchQueries, this.mappingSamples.join())
                         .then(() => {
                             this.loadingVariants = false;
                             this.cd.detectChanges();

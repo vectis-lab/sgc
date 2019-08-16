@@ -22,8 +22,12 @@
           </div>
     </mat-tab>
     <mat-tab label="Family">
-            <app-family-tab *ngIf="searchService.commenced" [pheno]="pheno" [samples]="mappingSamples"></app-family-tab>
-    </mat-tab>
+            <div class="loading-message" *ngIf="loadingVariants">
+                <mat-spinner color="primary"></mat-spinner>
+            </div>
+            <div class="message message-error" *ngIf="!loadingVariants && variants.length <= 0">No Variants found for the query</div>
+            <app-family-tab *ngIf="searchService.commenced" [pheno]="pheno" [samples]="mappingSamples" [searchQueries]="searchQueries"></app-family-tab>
+        </mat-tab>
 </mat-tab-group>
 
 <div *ngIf="selectedCohort !== 'Acutecare'">

@@ -54,6 +54,7 @@ import { ElasticGeneSearch } from './services/autocomplete/elastic-gene-search-s
 import { VariantsTableComponent } from './components/parts/variants-table/variants-table.component';
 import { PositionService } from './services/autocomplete/position-service';
 import { TableService } from './services/table-service';
+import { TableFamilyService } from './services/table-family-service';
 import { TableSummaryService } from './services/table-summary-service';
 import { FilterAutoComponent } from './components/parts/filter-auto/filter-auto.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -114,6 +115,7 @@ import { BrainMalformationsInformationComponent } from './components/parts/brain
 import { EpilepticEncephalopathiesInformationComponent } from './components/parts/epileptic-encephalopathies-information/epileptic-encephalopathies-information.component';
 import { IcconInformationComponent } from './components/parts/iccon-information/iccon-information.component';
 import { FamilyTabComponent } from './components/parts/family-tab/family-tab.component';
+import { VariantsFamilyTableComponent } from './components/parts/variants-family-table/variants-family-table.component';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -218,6 +220,7 @@ export class RavenErrorHandler implements ErrorHandler {
         EpilepticEncephalopathiesInformationComponent,
         IcconInformationComponent,
         FamilyTabComponent,
+        VariantsFamilyTableComponent,
     ],
     entryComponents: [
         SignUpComponent,
@@ -237,6 +240,7 @@ export class RavenErrorHandler implements ErrorHandler {
         EnsemblService,
         PositionService,
         TableService,
+        TableFamilyService,
         TableSummaryService,
         LocalStorageService,
         HelperService,

@@ -71,7 +71,17 @@ export class VariantSearchService {
         return promise;
     }
 
-    
+    getVariantsForFamily(query: SearchQueries, samples): Promise<Variant[]> { 
+        this.lastQuery = query;
+        this.samples = samples;
+        const promise = new Promise<any[]>((resolve, reject) => {
+            this.vsal.getVariants(query, samples).subscribe((vr: VariantRequest) => {
+                this.variants = vr.variants;
+                resolve(vr.variants);
+            });
+        })
+        return promise
+    }
 
     getCurrentRegion = (): Region => this.variantSearch.getCurrentRegion(this.lastQuery);
 
