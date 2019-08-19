@@ -103,6 +103,7 @@ import { CohortAuthorsComponent } from './components/pages/cohort-authors/cohort
 import { GeneSearchComponent } from './components/parts/gene-search/gene-search.component';
 import { SearchBarClinicalComponent } from './components/parts/search-bar-clinical/search-bar-clinical.component';
 import { GenePanelsComponent } from './components/parts/gene-panels/gene-panels.component';
+import { GenePanelsFixedComponent } from './components/parts/gene-panels-fixed/gene-panels-fixed.component';
 import { SamplesTextComponent } from './components/parts/samples-text/samples-text.component';
 import { VariantSummaryComponent } from './components/pages/variant-summary/variant-summary.component';
 import { SamplesListComponent } from './components/parts/samples-list/samples-list.component';
@@ -210,6 +211,7 @@ export class RavenErrorHandler implements ErrorHandler {
         GeneSearchComponent,
         SearchBarClinicalComponent,
         GenePanelsComponent,
+        GenePanelsFixedComponent,
         SamplesTextComponent,
         VariantSummaryComponent,
         SamplesListComponent,
