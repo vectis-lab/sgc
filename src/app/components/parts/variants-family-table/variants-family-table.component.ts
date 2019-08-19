@@ -71,14 +71,16 @@ export class VariantsFamilyTableComponent implements OnInit, OnDestroy, AfterVie
           return {
               'Chrom': v.c,
               'Position': v.s,
-              'RSID': v.rs,
               'Reference': v.r,
               'Alternate': v.a,
-              'Type': v.t,
-              'Homozygotes Count': v.homc,
-              'Heterozygotes Count': v.hetc,
-              'Allele Count': v.ac,
-              'Allele Frequency': v.af,
+              'Homozygotes Count': v.vhomc,
+              'Heterozygotes Count': v.vhetc,
+              'Family 1 Homozygotes Count': v.vhomc1,
+              'Family 1 Heterozygotes Count': v.vhetc1,
+              'Family 2 Homozygotes Count': v.vhomc2,
+              'Family 2 Heterozygotes Count': v.vhetc2,
+              'Family 3 Homozygotes Count': v.vhomc3,
+              'Family 3 Heterozygotes Count': v.vhetc3,
           };
       });
       const csv = Papa.unparse(data);

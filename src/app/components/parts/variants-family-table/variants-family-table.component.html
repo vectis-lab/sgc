@@ -1,7 +1,7 @@
 <div class="results">
 
     <div class="task-bar">
-        <app-filter-auto [variants]="variants" (output)="onFilter($event)"></app-filter-auto>
+        <app-filter-auto-family [variants]="variants" (output)="onFilter($event)"></app-filter-auto-family>
 
         <div class="options">
             <span *ngIf="!ts.activeColumns().length">Select columns to view</span>

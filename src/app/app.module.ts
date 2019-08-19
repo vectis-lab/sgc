@@ -121,6 +121,7 @@ import { EpilepticEncephalopathiesInformationComponent } from './components/part
 import { IcconInformationComponent } from './components/parts/iccon-information/iccon-information.component';
 import { FamilyTabComponent } from './components/parts/family-tab/family-tab.component';
 import { VariantsFamilyTableComponent } from './components/parts/variants-family-table/variants-family-table.component';
+import { FilterAutoFamilyComponent } from './components/parts/filter-auto-family/filter-auto-family.component';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -231,6 +232,7 @@ export class RavenErrorHandler implements ErrorHandler {
         IcconInformationComponent,
         FamilyTabComponent,
         VariantsFamilyTableComponent,
+        FilterAutoFamilyComponent,
     ],
     entryComponents: [
         SignUpComponent,
