@@ -9,7 +9,7 @@ export class TableFamilyService {
         'Location': (v: Variant) => this.locationString(v),
         'Reference': (v: Variant) => v.r,
         'Alternate': (v: Variant) => v.a,
-        'Affected Sample': (v: Variant) => v.vhetc ? 'het' : 'hom',
+        'Affected Sample': (v: Variant) => this.familyHetHomDisplay(v,''),
         'Family 1': (v: Variant) => this.familyHetHomDisplay(v,1),
         'Family 2': (v: Variant) => this.familyHetHomDisplay(v,2),
         'Family 3': (v: Variant) => this.familyHetHomDisplay(v,3),
@@ -72,7 +72,7 @@ export class TableFamilyService {
 
     familyHetHomDisplay(v: Variant, i){
         if(typeof v[`vhetc${i}`] === 'undefined'){
-            return '-'
+            return 'ref'
         }
         else if(v[`vhetc${i}`] === 0){
             return 'hom'

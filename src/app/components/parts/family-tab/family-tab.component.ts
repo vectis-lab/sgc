@@ -60,9 +60,15 @@ export class FamilyTabComponent implements AfterViewInit {
     let res = [];
     for(let i = 0; i<variants.length;i++){
       for(let j = 0; j<variants[i].length;j++){
-        let tempVariant = variants[i][j]['c']+':'+variants[i][j]['s']
+        let tempVariant = variants[i][j]['c']+':'+variants[i][j]['s'] + ' ' + variants[i][j]['a'] + ' ' + variants[i][j]['r'];
         if(!hash[tempVariant]){
           hash[tempVariant] = variants[i][j];
+          if(i>0){
+            hash[tempVariant][`vhetc${i}`] = variants[i][j]['vhetc'];
+            hash[tempVariant][`vhomc${i}`] = variants[i][j]['vhomc'];
+            delete hash[tempVariant]['vhetc'];
+            delete hash[tempVariant]['vhomc'];
+          }
         }else{
           hash[tempVariant][`vhetc${i}`] = variants[i][j]['vhetc'];
           hash[tempVariant][`vhomc${i}`] = variants[i][j]['vhomc'];
