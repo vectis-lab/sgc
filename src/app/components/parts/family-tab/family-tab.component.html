@@ -4,4 +4,4 @@
 <div *ngIf="loadingVariants">
     <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </div>
-<app-variants-family-table *ngIf="selectedExternalIDs.length === 1 && !loadingVariants" [variants]="variants"></app-variants-family-table>
+<app-variants-family-table *ngIf="selectedExternalIDs.length === 1 && !loadingVariants" [variants]="variants" [samples]="selectedInternalIDs"></app-variants-family-table>

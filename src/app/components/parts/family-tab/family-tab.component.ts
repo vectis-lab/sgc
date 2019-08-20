@@ -39,6 +39,7 @@ export class FamilyTabComponent implements AfterViewInit {
   }
 
   onSelectSamples(externalSamples){
+    this.variants = [];
     this.loadingVariants = true;
     this.selectedExternalIDs = externalSamples;
     let sample = this.pheno.filter(s => this.selectedExternalIDs.includes(s.externalIDs));

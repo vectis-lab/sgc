@@ -4,37 +4,27 @@ import { TableSharedService } from '../shared/table-service';
 export class TableFamilyService {
     private tableService = new TableSharedService();
     showScales = true;
+    samples = [];
 
-    private displayMap: any = {
+    private displayMap: any= {
         'Location': (v: Variant) => this.locationString(v),
         'Reference': (v: Variant) => v.r,
         'Alternate': (v: Variant) => v.a,
-        'Affected Sample': (v: Variant) => this.familyHetHomDisplay(v,''),
-        'Family 1': (v: Variant) => this.familyHetHomDisplay(v,1),
-        'Family 2': (v: Variant) => this.familyHetHomDisplay(v,2),
-        'Family 3': (v: Variant) => this.familyHetHomDisplay(v,3),
     };
 
-    private searchResultKeys: any[] = [
+
+    private searchResultKeys: any[]= [
         ['Location', true],
         ['Reference', true],
         ['Alternate', true],
-        ['Affected Sample' , true],
-        ['Family 1' , true],
-        ['Family 2' , true],
-        ['Family 3' , true]
     ];
 
     private columns: Map<string, boolean> = new Map<string, boolean>(this.searchResultKeys);
 
-    readonly sortMap: any = {
+    private sortMap: any = {
         'Location': (v: Variant) => v.s,
         'Reference': (v: Variant) => v.r,
         'Alternate': (v: Variant) => v.a,
-        'Affected Sample': (v: Variant) => v.vhetc,
-        'Family 1': (v: Variant) => v.vhetc1,
-        'Family 2': (v: Variant) => v.vhetc2,
-        'Family 3': (v: Variant) => v.vhetc3,
     };
 
     private tooltips = this.tableService.afTooltips(this.showScales);
@@ -43,7 +33,6 @@ export class TableFamilyService {
     private lastSortedOrder = true;
 
     constructor() {
-
     }
 
     tooltip(key) {
@@ -91,6 +80,36 @@ export class TableFamilyService {
     }
 
     activeColumns(): string[] {
+        this.displayMap = {
+            'Location': (v: Variant) => this.locationString(v),
+            'Reference': (v: Variant) => v.r,
+            'Alternate': (v: Variant) => v.a,
+        };
+
+        this.searchResultKeys = [
+            ['Location', true],
+            ['Reference', true],
+            ['Alternate', true],
+        ];
+
+        this.sortMap =  {
+            'Location': (v: Variant) => v.s,
+            'Reference': (v: Variant) => v.r,
+            'Alternate': (v: Variant) => v.a,
+        };
+
+        this.samples.forEach((s,index) => {
+            if(index === 0){
+                this.displayMap[s] = (v: Variant) => this.familyHetHomDisplay(v,'');
+                this.searchResultKeys.push([s, true]);
+                this.sortMap[s] = (v: Variant) => v.vhetc;
+            }else{
+                this.displayMap[s] = (v: Variant) => this.familyHetHomDisplay(v,index)
+                this.searchResultKeys.push([s, true]);
+                this.sortMap[s] = (v: Variant) => v.vhetc;
+            }
+        });
+        this.columns = new Map<string, boolean>(this.searchResultKeys);
         return this.tableService.activeColumns(this.columns);
     }
 

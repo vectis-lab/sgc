@@ -23,6 +23,7 @@ const MINIMAL_VIEW = 500;
 })
 export class VariantsFamilyTableComponent implements OnInit, OnDestroy, AfterViewInit {
   @Input() variants: Variant[];
+  @Input() samples: string[];
   @ViewChild(FilterAutoComponent) filterComponent: FilterAutoComponent;
   pageSize = 10;
   currentPage = 1;
@@ -39,6 +40,7 @@ export class VariantsFamilyTableComponent implements OnInit, OnDestroy, AfterVie
   }
 
   ngOnInit() {
+      this.ts.samples = this.samples;
       if (window.screen.width < MINIMAL_VIEW) {
           this.ts.minimalView();
           this.showSettings = false;
