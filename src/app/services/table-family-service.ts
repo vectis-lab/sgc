@@ -21,7 +21,7 @@ export class TableFamilyService {
 
     private columns: Map<string, boolean> = new Map<string, boolean>(this.searchResultKeys);
 
-    private sortMap: any = {
+    public sortMap: any = {
         'Location': (v: Variant) => v.s,
         'Reference': (v: Variant) => v.r,
         'Alternate': (v: Variant) => v.a,
