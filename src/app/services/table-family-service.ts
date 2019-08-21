@@ -100,13 +100,13 @@ export class TableFamilyService {
 
         this.samples.forEach((s,index) => {
             if(index === 0){
-                this.displayMap[s] = (v: Variant) => this.familyHetHomDisplay(v,'');
-                this.searchResultKeys.push([s, true]);
-                this.sortMap[s] = (v: Variant) => v.vhetc;
+                this.displayMap['Sample '+s] = (v: Variant) => this.familyHetHomDisplay(v,'');
+                this.searchResultKeys.push(['Sample '+s, true]);
+                this.sortMap['Sample '+s] = (v: Variant) => v.vhetc;
             }else{
-                this.displayMap[s] = (v: Variant) => this.familyHetHomDisplay(v,index)
-                this.searchResultKeys.push([s, true]);
-                this.sortMap[s] = (v: Variant) => v.vhetc;
+                this.displayMap['Family '+s] = (v: Variant) => this.familyHetHomDisplay(v,index)
+                this.searchResultKeys.push(['Family '+s, true]);
+                this.sortMap['Family '+s] = (v: Variant) => v['vhetc'+index];
             }
         });
         this.columns = new Map<string, boolean>(this.searchResultKeys);

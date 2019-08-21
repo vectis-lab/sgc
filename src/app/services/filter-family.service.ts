@@ -53,7 +53,7 @@ export class FilterFamilyService {
             return variants;
         }
         let  args = this.parseCommand(command);
-        if(['Affected Sample', 'Family 1', 'Family 2', 'Family 3'].includes(args[2])){
+        if(!['Location', 'Reference', 'Alternate'].includes(args[2])){
             if(args[4] === 'het'){
                 args[4] = '1';
             }else if(args[4] === 'hom'){
@@ -70,7 +70,6 @@ export class FilterFamilyService {
         if (!command) {
             return variants;
         }
-
         return variants.filter(v => {
             let a = this.ts.sortMap[command](v);
             if (a === null || isUndefined(a)) {
@@ -83,7 +82,6 @@ export class FilterFamilyService {
                     return a > value;
                 case '=':
 /* tslint:disable */
-                    console.log(a)
                     return a == value;
                 case '!=':
                     return a != value;
