@@ -30,6 +30,7 @@ export class GeneSearchComponent implements AfterViewInit, OnInit, OnDestroy {
     }
 
     ngOnInit(): void {
+      this.searchBarService.autocompleteError = '';
       this.subscription.push(this.route.params.subscribe(p => {
         if (p['query']) {
           const promiseQueries= this.searchBarService.query.split(',').map(q => {
