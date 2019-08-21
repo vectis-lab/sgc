@@ -1,4 +1,4 @@
-import { Component, Input, HostListener, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, Input, HostListener, ElementRef, AfterViewInit, OnInit } from '@angular/core';
 import { SearchBarService } from '../../../services/search-bar-service';
 import { ClinicalFilteringService } from '../../../services/clinical-filtering.service';
 import { ScrollService } from '../../../services/scroll-service';
@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs/Subscription';
     templateUrl: './search-bar-with-options.component.html',
     styleUrls: ['./search-bar-with-options.component.css']
 })
-export class SearchBarWithOptionsComponent implements AfterViewInit {
+export class SearchBarWithOptionsComponent implements AfterViewInit, OnInit {
     @Input() expanded = false;
     @Input() expandable = false;
     @Input() example1 = 'FAM110C';
@@ -42,6 +42,10 @@ export class SearchBarWithOptionsComponent implements AfterViewInit {
                 public clinicalFilteringService: ClinicalFilteringService ) {
     }
 
+    ngOnInit(): void {
+        this.searchBarService.autocompleteError = "";
+    }
+    
     ngAfterViewInit(): void {
         this.searchBarService.searchedEvent.subscribe(() => {
             this.expanded = false;
