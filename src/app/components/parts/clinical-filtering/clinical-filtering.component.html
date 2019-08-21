@@ -21,7 +21,7 @@
             <app-variants-table [variants]="variants"></app-variants-table>
           </div>
     </mat-tab>
-    <mat-tab label="Family">
+    <mat-tab label="Family" [disabled]="loadingVariants">
             <div class="loading-message" *ngIf="loadingVariants">
                 <mat-spinner color="primary"></mat-spinner>
             </div>
