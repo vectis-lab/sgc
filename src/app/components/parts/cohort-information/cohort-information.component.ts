@@ -27,14 +27,14 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
     @Input() pheno: any[] = [];
     includeFamily: boolean = false;
     charts: Chart[] = [];
+    externalIDs: string [] = [];
+    selectedExternalIDs: string[] = [];
+    selectedInternalIDs: string[] = [];
     sampleDim: any;
     error: any;
     denied = false;
-    patients;
-    externalIDs: string [];
+    patients = [];
     ndx: any;
-    selectedExternalIDs: string[];
-    selectedInternalIDs: string[] = [];
     params: any;
     subscriptions: Subscription[] = [];
     demo: boolean = false;
@@ -54,8 +54,10 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
 
     ngAfterViewInit() {
         this.subscriptions.push(this.auth.getUserPermissions().subscribe(permissions => {
-            if(!permissions.includes(this.permission)){
-                this.denied = true;
+            if(permissions.includes(this.permission)){
+                this.getPhenoData(this.demo, true);
+            }else {
+                this.getPhenoData(this.demo, false)
             }
         }));
 
@@ -66,12 +68,24 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
                 .map(patient => patient.externalIDs);
             this.cd.detectChanges();
         }));
+    }
 
-        this.patients = this.pheno.filter(sample => this.samples.includes(sample.internalIDs));
-        this.externalIDs = this.patients.map(sample => sample.externalIDs);
-        this.ndx = crossfilter(this.patients);
-        this.selectedExternalIDs = this.externalIDs;
-        this.loadCharts();
+    getPhenoData(demo, authorize){
+      this.cs[this.phenoService](demo, authorize).subscribe(v => {
+          this.patients = v.filter(sample => this.samples.includes(sample.internalIDs));
+          this.externalIDs = this.patients.map(sample => sample.externalIDs);
+          this.selectedExternalIDs = this.externalIDs;
+          this.ndx = crossfilter(this.patients);
+          this.loadCharts();
+      },
+      e => {
+          if (e.status && e.status === 401) {
+              this.denied = true;
+          } else {
+              this.error = e;
+          }
+          this.cd.detectChanges();
+      });
     }
 
     onSelectSamples(externalSamples){
