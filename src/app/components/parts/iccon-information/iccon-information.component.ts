@@ -12,8 +12,6 @@ import * as _ from 'lodash/array';
 export class IcconInformationComponent {
     //Internal IDs
     @Input() samples: string[] = [];
-    //pheno file
-    @Input() pheno: any[] = [];
     permission: string = 'iccon/pheno'
     clinicalFields: ClinicalFields[] = [
         new ClinicalFields('Sex', 'sex', 'pie'),

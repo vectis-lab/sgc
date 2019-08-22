@@ -37,23 +37,3 @@ export const COHORT_PERMISSION_SUMMARY_MAPPING = {
     Leukodystrophies: 'leukodystrophies/summary',
     ICCon: 'iccon/summary'
 }
-
-export const COHORT_PERMISSION_VSAL_PHENO_MAPPING = {
-    Mitochondria: 'mito/pheno',
-    Acutecare: 'acutecare/pheno',
-    Neuromuscular: 'neuromuscular/pheno',
-    ['Epileptic Encephalopathies']: 'ee/pheno',
-    ['Brain Malformations']: 'bm/pheno',
-    Leukodystrophies: 'leukodystrophies/pheno',
-    ICCon: 'iccon/pheno'
-}
-
-export const COHORT_PHENO_GET_MAPPING = {
-    Mitochondria: 'getMitochondria',
-    Acutecare: 'getAcutecare',
-    Neuromuscular: 'getNeuromuscular',
-    ['Epileptic Encephalopathies']: 'getEpilepticEncephalopathies',
-    ['Brain Malformations']: 'getBrainMalformations',
-    Leukodystrophies: 'getLeukodystrophies',
-    ICCon: 'getIccon'
-}

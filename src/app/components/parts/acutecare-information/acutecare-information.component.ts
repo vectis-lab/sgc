@@ -12,8 +12,6 @@ import * as _ from 'lodash/array';
 export class AcutecareInformationComponent {
     //Internal IDs
     @Input() samples: string[] = [];
-    //pheno file
-    @Input() pheno: any[] = [];
     permission: string = 'acutecare/pheno'
     clinicalFields: ClinicalFields[] = [
         new ClinicalFields('sex', 'sex', 'pie'),
