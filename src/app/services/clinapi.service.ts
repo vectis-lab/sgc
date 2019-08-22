@@ -1,7 +1,7 @@
 import { Injectable, OnDestroy } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 import { FAKE_CLINICAL_DATA } from "../mocks/clindata";
-import { FAKE_MITOCHONDRIA_DATA } from "../mocks/mitodata";
+import { FAKE_MITOCHONDRIA_DATA, FAKE_MITOCHONDRIA_DATA_MGRB } from "../mocks/mitodata";
 import { FAKE_NEUROMUSCULAR_DATA } from "../mocks/neuromusculardata";
 import { FAKE_BRAIN_MALFORMATIONS_DATA } from "../mocks/brainmalformationsdata";
 import { FAKE_EPILEPTIC_ENCEPHALOPATHIES } from "../mocks/epilepticencephalopathiesdata";
@@ -58,9 +58,10 @@ export class ClinapiService implements OnDestroy {
         };
         //if authorize to see clinical data
         if(authorize){
-            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=mito`, httpOptions).map(res => {
+            return of<any>(FAKE_MITOCHONDRIA_DATA_MGRB);
+            /*return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=mito`, httpOptions).map(res => {
                 return JSON.parse(res.pheno)
-            });
+            });*/
         }//if not authorize but want to see demo
         else if(demo){
             console.log("DEMO")

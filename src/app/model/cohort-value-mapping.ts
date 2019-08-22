@@ -1,5 +1,5 @@
 export const COHORT_VALUE_MAPPING_VSAL = {
-    Mitochondria: 'mito',
+    Mitochondria: 'mgrb',
     Acutecare: 'acutecare',
     Neuromuscular: 'demo',
     ['Epileptic Encephalopathies']: 'demo',
