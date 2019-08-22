@@ -19,6 +19,7 @@ export class FamilyTabComponent implements AfterViewInit {
   selectedInternalIDs: string[] = [];
   externalIDs: string[];
   showSampleCSV: boolean = false;
+  sampleNotFound: boolean = false;
   public variants: Variant[] = [];
   private subscriptions: Subscription[] = [];
 
@@ -41,8 +42,14 @@ export class FamilyTabComponent implements AfterViewInit {
   onSelectSamples(externalSamples){
     this.variants = [];
     this.loadingVariants = true;
+    this.sampleNotFound = false;
     this.selectedExternalIDs = externalSamples;
     let sample = this.pheno.filter(s => this.selectedExternalIDs.includes(s.externalIDs));
+    if(sample.length === 0){
+      this.sampleNotFound = true;
+      this.loadingVariants = false;
+      return ;
+    }
     this.selectedInternalIDs = sample.map(s => s.internalIDs).concat(sample[0].familyMembers);
     const allQueries = this.selectedInternalIDs.map(id => {
       return this.searchService.getVariantsForFamily(this.searchQueries, id)
@@ -51,7 +58,6 @@ export class FamilyTabComponent implements AfterViewInit {
     Promise.all(allQueries).then((v) => {
       this.loadingVariants = false;
       this.variants = this.combineVariants(v);
-
     })
     this.cd.detectChanges();
   }
@@ -78,10 +84,6 @@ export class FamilyTabComponent implements AfterViewInit {
     }
     res = Object.values(hash);
     return res;
-  }
-
-  onUpdateSamples(externalSamples){
-
   }
 
 }

@@ -1,3 +1,11 @@
 .chart{
     max-width: 35%; 
 }
+
+.toolbar {
+    display: block;
+}
+
+.actions{
+    float: right;
+}
