@@ -1,3 +1,8 @@
 .genes-text {
     margin-left: 5px;
 }
+
+.label-panel{
+    color: rgba(0, 0, 0, 0.40);
+    font-size: 11px;
+}

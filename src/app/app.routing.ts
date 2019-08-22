@@ -10,11 +10,13 @@ import { ErrorComponent } from './components/pages/error/error.component';
 import { ExploreComponent } from './components/pages/explore/explore.component';
 import { ClinicalComponent } from './components/pages/clinical/clinical.component';
 import { CohortAuthorsComponent } from './components/pages/cohort-authors/cohort-authors.component';
+import { ProfileComponent } from './components/pages/profile/profile.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'about',  component: AboutComponent },
     { path: 'clinical', component: ClinicalComponent },
+    { path: 'profile',  component: ProfileComponent },
     { path: 'clinical/results', component: ClinicalComponent },
     { path: 'auth',  component: LoadingComponent },
     { path: 'search/results', component: SearchComponent },

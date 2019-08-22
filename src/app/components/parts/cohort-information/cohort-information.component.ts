@@ -24,16 +24,17 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
     @Input() permission: string = '';
     @Input() phenoService: string = '';
     @Input() family: boolean = false;
+    @Input() pheno: any[] = [];
     includeFamily: boolean = false;
     charts: Chart[] = [];
-    externalIDs: string [] = [];
-    selectedExternalIDs: string[] = [];
-    selectedInternalIDs: string[] = [];
     sampleDim: any;
     error: any;
     denied = false;
-    patients = [];
+    patients;
+    externalIDs: string [];
     ndx: any;
+    selectedExternalIDs: string[];
+    selectedInternalIDs: string[] = [];
     params: any;
     subscriptions: Subscription[] = [];
     demo: boolean = false;
@@ -46,10 +47,6 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
                 private auth: Auth,
                 private router: Router,
                 private route: ActivatedRoute) {
-        this.subscriptions.push(route.params.subscribe(p => {
-            this.params = p;
-            this.demo = p['demo'] === 'true';
-        }));
     }
 
     ngOnInit() {
@@ -57,10 +54,8 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
 
     ngAfterViewInit() {
         this.subscriptions.push(this.auth.getUserPermissions().subscribe(permissions => {
-            if(permissions.includes(this.permission)){
-                this.getPhenoData(this.demo, true);
-            }else {
-                this.getPhenoData(this.demo, false)
+            if(!permissions.includes(this.permission)){
+                this.denied = true;
             }
         }));
 
@@ -71,24 +66,12 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
                 .map(patient => patient.externalIDs);
             this.cd.detectChanges();
         }));
-    }
 
-    getPhenoData(demo, authorize){
-      this.cs[this.phenoService](demo, authorize).subscribe(v => {
-          this.patients = v.filter(sample => this.samples.includes(sample.internalIDs));
-          this.externalIDs = this.patients.map(sample => sample.externalIDs);
-          this.selectedExternalIDs = this.externalIDs;
-          this.ndx = crossfilter(this.patients);
-          this.loadCharts();
-      },
-      e => {
-          if (e.status && e.status === 401) {
-              this.denied = true;
-          } else {
-              this.error = e;
-          }
-          this.cd.detectChanges();
-      });
+        this.patients = this.pheno.filter(sample => this.samples.includes(sample.internalIDs));
+        this.externalIDs = this.patients.map(sample => sample.externalIDs);
+        this.ndx = crossfilter(this.patients);
+        this.selectedExternalIDs = this.externalIDs;
+        this.loadCharts();
     }
 
     onSelectSamples(externalSamples){

@@ -3,13 +3,16 @@ import { RegionService } from './autocomplete/region-service';
 import { Subject } from 'rxjs/Subject';
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import { SearchOption } from '../model/search-option';
+import { Region } from '../model/region';
 import { Router, Params } from '@angular/router';
 import { AutocompleteService } from './autocomplete/autocomplete-service';
 import { GenericAutocompleteResult, VariantAutocompleteResult } from '../model/autocomplete-result';
 import { ElasticGeneSearch } from './autocomplete/elastic-gene-search-service';
 import { PositionService } from './autocomplete/position-service';
+import { GenomicsEnglandService } from './genomics-england.service';
 import { of, Observable, combineLatest } from "rxjs";
 import * as GenePanels from '../shared/genePanels';
+import { RegionAutocomplete } from '../model/region-autocomplete';
 
 export const QUERY_LIST_ERROR = "You query is incorrect. Please check your query and try again"
 
@@ -31,6 +34,7 @@ export class SearchBarService {
     constructor(private geneService: ElasticGeneSearch,
                 private regionService: RegionService,
                 private positionService: PositionService,
+                private genomicsEnglandService: GenomicsEnglandService,
                 private router: Router) {
         this.autocompleteServices = [
             regionService,
@@ -96,8 +100,6 @@ export class SearchBarService {
             }else{
                 return false;
             }
-            
-
         });
 
     }
@@ -133,23 +135,38 @@ export class SearchBarService {
             arrayOfQueries = query.split(',');
         }
 
-        let genes;
-        if(GenePanels[panel]){
-            genes = GenePanels[panel].join();
-        }
+        let regions;
 
         if(panel.length){
-            const genePanelsQueries = genes.split(',');
-            arrayOfQueries = arrayOfQueries.concat(genePanelsQueries);
+            return this.genomicsEnglandService.getPanel(panel).toPromise().then((data) => {
+                regions = data.genes.map(e => e.gene_data.ensembl_genes.GRch37['82'].location);
+
+                const regionAutocomplete = regions.map(regionString =>{
+                    const results = new RegExp(/^([\dxy]+|mt+)[:\-\.,\\/](\d+)[:\-\.,\\/](\d+)$/, "i").exec(regionString);
+                    const chromosome = results[1];
+                    const start = Number(results[2]);
+                    const end = Number(results[3]);
+                    const r = new Region(chromosome, start, end);
+                    const regions = new RegionAutocomplete(r, r.name(), '', null);
+                    return regions;
+                })
+
+                const queries = arrayOfQueries.map(q => this.searchAutocompleteServices(q).take(1).toPromise())
+            
+                return <any>Promise.all(queries).then(v => {
+                    let bestMatches = v.map(q => q[0]);
+                    bestMatches = bestMatches.concat(regionAutocomplete);
+                    return bestMatches;
+                });
+            })
+        }else{
+            const queries = arrayOfQueries.map(q => this.searchAutocompleteServices(q).take(1).toPromise())
+
+            return <any>Promise.all(queries).then(v => {
+                const bestMatches = v.map(q => q[0]);
+                return bestMatches;
+            });
         }
-
-        const queries = arrayOfQueries.map(q => this.searchAutocompleteServices(q).take(1).toPromise())
-
-        return <any>Promise.all(queries).then(v => {
-            const bestMatches = v.map(q => q[0]);
-            return bestMatches;
-        });
-
     }
 
     setGeneList(value){

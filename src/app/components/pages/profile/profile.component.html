@@ -1,0 +1,21 @@
+<app-page-container>
+  <section>
+      <mat-card *ngIf="user">
+        <div class="avatar-frame">
+          <img [src]="user.picture" />
+        </div>
+        <mat-list>
+          <mat-list-item>Email: {{user.email}}</mat-list-item>
+          <mat-list-item class="permission-list">
+            Permissions: 
+              <mat-chip-list>
+                <mat-chip *ngFor="let permission of permissions">{{permission}}</mat-chip>
+              </mat-chip-list>
+          </mat-list-item>
+          <mat-list-item *ngIf="usernamePasswordAuthentication">
+              <button mat-flat-button color="warn" (click)="updatePassword(user.email)">Change Password</button>
+          </mat-list-item>
+        </mat-list>
+      </mat-card>
+  </section>
+</app-page-container>

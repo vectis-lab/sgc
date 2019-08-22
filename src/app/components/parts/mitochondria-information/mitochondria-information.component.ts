@@ -12,6 +12,8 @@ import * as _ from 'lodash/array';
 export class MitochondriaInformationComponent {
     //Internal IDs
     @Input() samples: string[] = [];
+    //pheno file
+    @Input() pheno: any[] = [];
     permission: string = 'mito/pheno'
     clinicalFields: ClinicalFields[] = [
         new ClinicalFields('Gender', 'gender', 'pie'),
