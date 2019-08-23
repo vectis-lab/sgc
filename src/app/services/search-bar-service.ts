@@ -135,7 +135,8 @@ export class SearchBarService {
             arrayOfQueries = query.split(',');
         }
 
-        let regions;
+        //GENOMIC ENGLAND PANEL NOT READY FOR NOW
+        /*let regions;
 
         if(panel.length){
             return this.genomicsEnglandService.getPanel(panel).toPromise().then((data) => {
@@ -166,7 +167,30 @@ export class SearchBarService {
                 const bestMatches = v.map(q => q[0]);
                 return bestMatches;
             });
+        }*/
+
+        //REMOVE THIS CODE WHEN PANEL READY
+        if(query.length){
+            arrayOfQueries = query.split(',');
         }
+
+        let genes;
+        if(GenePanels[panel]){
+            genes = GenePanels[panel].join();
+        }
+
+        if(panel.length){
+            const genePanelsQueries = genes.split(',');
+            arrayOfQueries = arrayOfQueries.concat(genePanelsQueries);
+        }
+
+        const queries = arrayOfQueries.map(q => this.searchAutocompleteServices(q).take(1).toPromise())
+
+        return <any>Promise.all(queries).then(v => {
+            const bestMatches = v.map(q => q[0]);
+            return bestMatches;
+        });
+        //TILL HERE
     }
 
     setGeneList(value){

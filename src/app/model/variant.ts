@@ -4,29 +4,6 @@ const DB_SNP_URL = 'https://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi';
 
 
 export class Variant {
-    /*v: string;
-    rsid: string;
-    chr: string;
-    start: number;
-    ref: string;
-    alt: string;
-    type: string;
-    highlight = false;
-    ac: number;
-    af: number;
-    nHet: number;
-    nHomVar: number;
-    cato: number;
-    eigen: number;
-    sift: string;
-    polyPhen: string;
-    tgpAF: string;
-    hrcAF: string;
-    gnomadAF: string;
-    consequences: string;
-    geneSymbol: string;
-    clinvar: string;*/
-
     c: string;
     s: number;
     rs: string;
@@ -41,6 +18,12 @@ export class Variant {
     vaf: number;
     vhomc: string;
     vhetc: string;
+    vhomc1: string;
+    vhetc1: string;
+    vhomc2: string;
+    vhetc2: string;
+    vhomc3: string;
+    vhetc3: string;
     highlight = false;
 
     static dbSnpUrl(variant: Variant) {

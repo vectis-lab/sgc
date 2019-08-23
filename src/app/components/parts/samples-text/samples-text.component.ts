@@ -10,6 +10,7 @@ import { Subject } from 'rxjs';
 export class SamplesTextComponent implements OnInit {
   @Input() samples: string[] = [];
   @Output() filterSamples = new EventEmitter<string[]>();
+  @Input() multiple: boolean = true;
   txtSamplesChanged: Subject<string[]> = new Subject<string[]>();
   loadingSamplesFilter = false;
 
@@ -28,7 +29,11 @@ export class SamplesTextComponent implements OnInit {
   onFilter(samples) {
     this.loadingSamplesFilter=true;
     if(samples.length >= 1 && samples[0] !== ""){
-      this.txtSamplesChanged.next(samples.split(','));
+      if(this.multiple){
+        this.txtSamplesChanged.next(samples.split(','));
+      }else{
+        this.txtSamplesChanged.next([samples]);
+      }
     }else{
       this.txtSamplesChanged.next([]);
     }

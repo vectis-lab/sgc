@@ -9,7 +9,7 @@ import * as _ from 'lodash/array';
     styleUrls: ['./acutecare-information.component.css'],
     providers: [ClinapiService]
 })
-export class AcutecareInformationComponent {
+export class AcutecareInformationComponent{
     //Internal IDs
     @Input() samples: string[] = [];
     //pheno file

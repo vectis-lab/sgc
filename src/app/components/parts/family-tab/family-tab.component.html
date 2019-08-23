@@ -1,0 +1,14 @@
+<div class="toolbar">
+    <div class="actions">
+        <mat-slide-toggle style="vertical-align: middle;" [(ngModel)]="showSampleCSV">Samples CSV</mat-slide-toggle>
+    </div>
+</div>
+<div class="chart">
+    <app-samples-list [sampleIDs]="externalIDs" [selectedSamples]="selectedExternalIDs" (onSelectSamples)="onSelectSamples($event)" [showSampleCSV]="showSampleCSV" (onUpdateSamples)="onSelectSamples($event)" [multiple]="false"></app-samples-list>
+</div>
+<div *ngIf="loadingVariants">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+<app-variants-family-table *ngIf="selectedExternalIDs.length === 1 && !loadingVariants && variants.length > 0" [variants]="variants" [samples]="selectedInternalIDs"></app-variants-family-table>
+<div *ngIf="sampleNotFound && !loadingVariants" class="message message-error">Sample not found</div>
+<div *ngIf="variants.length <= 0 && selectedExternalIDs.length>0 && !loadingVariants && !sampleNotFound" class="message message-error">No Variants found for the query</div>

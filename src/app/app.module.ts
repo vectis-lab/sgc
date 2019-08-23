@@ -55,6 +55,7 @@ import { ElasticGeneSearch } from './services/autocomplete/elastic-gene-search-s
 import { VariantsTableComponent } from './components/parts/variants-table/variants-table.component';
 import { PositionService } from './services/autocomplete/position-service';
 import { TableService } from './services/table-service';
+import { TableFamilyService } from './services/table-family-service';
 import { TableSummaryService } from './services/table-summary-service';
 import { FilterAutoComponent } from './components/parts/filter-auto/filter-auto.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -103,6 +104,7 @@ import { CohortAuthorsComponent } from './components/pages/cohort-authors/cohort
 import { GeneSearchComponent } from './components/parts/gene-search/gene-search.component';
 import { SearchBarClinicalComponent } from './components/parts/search-bar-clinical/search-bar-clinical.component';
 import { GenePanelsComponent } from './components/parts/gene-panels/gene-panels.component';
+import { GenePanelsFixedComponent } from './components/parts/gene-panels-fixed/gene-panels-fixed.component';
 import { SamplesTextComponent } from './components/parts/samples-text/samples-text.component';
 import { VariantSummaryComponent } from './components/pages/variant-summary/variant-summary.component';
 import { SamplesListComponent } from './components/parts/samples-list/samples-list.component';
@@ -117,6 +119,9 @@ import { LeukodystrophiesInformationComponent } from './components/parts/leukody
 import { BrainMalformationsInformationComponent } from './components/parts/brain-malformations-information/brain-malformations-information.component';
 import { EpilepticEncephalopathiesInformationComponent } from './components/parts/epileptic-encephalopathies-information/epileptic-encephalopathies-information.component';
 import { IcconInformationComponent } from './components/parts/iccon-information/iccon-information.component';
+import { FamilyTabComponent } from './components/parts/family-tab/family-tab.component';
+import { VariantsFamilyTableComponent } from './components/parts/variants-family-table/variants-family-table.component';
+import { FilterAutoFamilyComponent } from './components/parts/filter-auto-family/filter-auto-family.component';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -210,6 +215,7 @@ export class RavenErrorHandler implements ErrorHandler {
         GeneSearchComponent,
         SearchBarClinicalComponent,
         GenePanelsComponent,
+        GenePanelsFixedComponent,
         SamplesTextComponent,
         VariantSummaryComponent,
         SamplesListComponent,
@@ -224,6 +230,9 @@ export class RavenErrorHandler implements ErrorHandler {
         BrainMalformationsInformationComponent,
         EpilepticEncephalopathiesInformationComponent,
         IcconInformationComponent,
+        FamilyTabComponent,
+        VariantsFamilyTableComponent,
+        FilterAutoFamilyComponent,
     ],
     entryComponents: [
         SignUpComponent,
@@ -244,6 +253,7 @@ export class RavenErrorHandler implements ErrorHandler {
         EnsemblService,
         PositionService,
         TableService,
+        TableFamilyService,
         TableSummaryService,
         LocalStorageService,
         HelperService,

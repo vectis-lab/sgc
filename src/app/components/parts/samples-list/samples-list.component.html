@@ -1,15 +1,15 @@
 <div class="chart">
     <div class="toolbar">
         <div class="row">
-            <i (click)="resetFilter()" class="option material-icons left">refresh</i>
+            <i *ngIf="multiple" (click)="resetFilter()" class="option material-icons left">refresh</i>
             <h4>Sample Id</h4>
             <span class="option right"></span>
         </div>
     </div>
     <div class="content">
-      <select *ngIf="!showSampleCSV" multiple class="samples-list" [(ngModel)]="selectedSamples" (ngModelChange)="onSelect($event)">
+      <select *ngIf="!showSampleCSV" [multiple]="multiple" [size]="100" class="samples-list" [(ngModel)]="selectedSamples" (ngModelChange)="onSelect($event)">
         <option *ngFor="let sampleID of sampleIDs" [value]="sampleID">{{sampleID}}</option>
       </select>
-      <app-samples-text *ngIf="showSampleCSV" [samples]="selectedSamples" (filterSamples)="filterCSV($event)"></app-samples-text>
+      <app-samples-text *ngIf="showSampleCSV" [samples]="selectedSamples" [multiple]="multiple" (filterSamples)="filterCSV($event)"></app-samples-text>
     </div>
 </div>

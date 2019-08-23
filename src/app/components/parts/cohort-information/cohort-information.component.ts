@@ -50,6 +50,7 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
     }
 
     ngOnInit() {
+
     }
 
     ngAfterViewInit() {
