@@ -8,6 +8,7 @@ import { FAKE_EPILEPTIC_ENCEPHALOPATHIES } from "../mocks/epilepticencephalopath
 import { FAKE_ICCON_DATA } from "../mocks/iccon";
 import { FAKE_LEUKODYSTROPHIES_DATA } from "../mocks/leukodystrophiesdata";
 import { FAKE_ACUTE_CARE_DATA, FAKE_ACUTE_CARE_DATA_COMBINED } from "../mocks/acutecaredata";
+import { FAKE_DEMO_DATA } from "../mocks/demodata";
 import { VariantSearchService } from './variant-search-service';
 import { Subscription } from 'rxjs/Subscription';
 import { of, throwError, Observable } from "rxjs";
@@ -173,6 +174,25 @@ export class ClinapiService implements OnDestroy {
         else if(demo){
             console.log("DEMO")
             return of<any>(FAKE_ICCON_DATA);
+        }//if not authorize and not opt to see demo
+        else {
+            return throwError({ status: 401 });
+        }
+    }
+
+    getDemo(demo = false, authorize = false): Observable<any> {
+        const httpOptions = {
+            headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
+        };
+        if(authorize){
+            return of<any>(FAKE_DEMO_DATA);
+            /*return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=demo`, httpOptions).map(res => {
+                return JSON.parse(res.pheno)
+            });*/
+        }//if not authorize but want to see demo
+        else if(demo){
+            console.log("DEMO")
+            return of<any>(FAKE_DEMO_DATA);
         }//if not authorize and not opt to see demo
         else {
             return throwError({ status: 401 });

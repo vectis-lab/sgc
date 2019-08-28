@@ -1,4 +1,7 @@
 <button mat-stroked-button (click)="search()" class="search-button">Search</button>
+<div class="search-examples">
+    Examples: <a (click)="searchExample('TTN')">TTN</a> or <a (click)="searchExample('TP53')">TP53</a>
+</div>
 <i (click)='clearFilter()' class="reset material-icons">refresh</i>
 <app-search-bar-clinical [options]="{autofocus: false}" [action]='addGene'></app-search-bar-clinical>
 <mat-form-field class="chip-list">

@@ -180,7 +180,7 @@ export class Auth {
     public checkPermissions(selectedCohort, permissions): boolean{
         let permitted = false;
 
-        if(COHORT_PERMISSION_SUMMARY_MAPPING[selectedCohort] !== undefined && permissions.includes(COHORT_PERMISSION_SUMMARY_MAPPING[selectedCohort])){
+        if((COHORT_PERMISSION_SUMMARY_MAPPING[selectedCohort] !== undefined && permissions.includes(COHORT_PERMISSION_SUMMARY_MAPPING[selectedCohort])) || COHORT_PERMISSION_SUMMARY_MAPPING[selectedCohort] === ''){
             permitted = true;
         }
         return permitted;

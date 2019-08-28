@@ -1,4 +1,4 @@
-<mat-tab-group *ngIf="selectedCohort === 'Acutecare'">
+<mat-tab-group *ngIf="selectedCohort === 'Acutecare' || selectedCohort === 'Demo'">
     <mat-tab label="Affected Samples">
         <div class="loading-message" *ngIf="loadingVariants">
             <mat-spinner color="primary"></mat-spinner>
@@ -6,13 +6,8 @@
           <div class="message message-error" *ngIf="!loadingVariants && variants.length <= 0">No Variants found for the query</div>
           
           <div class="search-result-content" *ngIf="searchService.commenced">
-            <app-neuromuscular-information *ngIf="selectedCohort === 'Neuromuscular'" [pheno]="pheno" [samples]="ids"></app-neuromuscular-information>
-            <app-mitochondria-information *ngIf="selectedCohort === 'Mitochondria'" [pheno]="pheno" [samples]="ids"></app-mitochondria-information>
             <app-acutecare-information *ngIf="selectedCohort === 'Acutecare'" [pheno]="pheno" [samples]="ids"></app-acutecare-information>
-            <app-brain-malformations-information *ngIf="selectedCohort === 'Brain Malformations'" [pheno]="pheno" [samples]="ids"></app-brain-malformations-information>
-            <app-epileptic-encephalopathies-information *ngIf="selectedCohort === 'Epileptic Encephalopathies'" [pheno]="pheno" [samples]="ids"></app-epileptic-encephalopathies-information>
-            <app-leukodystrophies-information *ngIf="selectedCohort === 'Leukodystrophies'" [pheno]="pheno" [samples]="ids"></app-leukodystrophies-information>
-            <app-iccon-information *ngIf="selectedCohort === 'ICCon'" [pheno]="pheno" [samples]="ids"></app-iccon-information>
+            <app-demo-information *ngIf="selectedCohort === 'Demo'" [pheno]="pheno" [samples]="ids"></app-demo-information>
           
             <div *ngIf="variants.length > 10000&&geneFilter.length === 0" class="message message-error">
                 This region contains too many variants to visualize with our genome browser, please choose a smaller region like:
@@ -30,7 +25,7 @@
         </mat-tab>
 </mat-tab-group>
 
-<div *ngIf="selectedCohort !== 'Acutecare'">
+<div *ngIf="selectedCohort !== 'Acutecare' && selectedCohort !== 'Demo'">
     <div class="loading-message" *ngIf="loadingVariants">
         <mat-spinner color="primary"></mat-spinner>
       </div>
@@ -39,7 +34,6 @@
       <div class="search-result-content" *ngIf="searchService.commenced">
         <app-neuromuscular-information *ngIf="selectedCohort === 'Neuromuscular'" [pheno]="pheno" [samples]="ids"></app-neuromuscular-information>
         <app-mitochondria-information *ngIf="selectedCohort === 'Mitochondria'" [pheno]="pheno" [samples]="ids"></app-mitochondria-information>
-        <app-acutecare-information *ngIf="selectedCohort === 'Acutecare'" [pheno]="pheno" [samples]="ids"></app-acutecare-information>
         <app-brain-malformations-information *ngIf="selectedCohort === 'Brain Malformations'" [pheno]="pheno" [samples]="ids"></app-brain-malformations-information>
         <app-epileptic-encephalopathies-information *ngIf="selectedCohort === 'Epileptic Encephalopathies'" [pheno]="pheno" [samples]="ids"></app-epileptic-encephalopathies-information>
         <app-leukodystrophies-information *ngIf="selectedCohort === 'Leukodystrophies'" [pheno]="pheno" [samples]="ids"></app-leukodystrophies-information>

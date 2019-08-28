@@ -82,7 +82,7 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
             this.searchQueries = new SearchQueries(regions, this.searchBarService.options)
             this.subscriptions.push(this.auth.getUserPermissions().subscribe(permissions => {
                 let permitted = false;
-                if(permissions.includes(COHORT_PERMISSION_VSAL_PHENO_MAPPING[this.selectedCohort])){
+                if(permissions.includes(COHORT_PERMISSION_VSAL_PHENO_MAPPING[this.selectedCohort]) || COHORT_PERMISSION_VSAL_PHENO_MAPPING[this.selectedCohort] === ''){
                     permitted = true;
                 }else{
                     permitted = false;

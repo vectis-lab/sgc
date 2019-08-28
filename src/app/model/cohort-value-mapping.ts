@@ -5,7 +5,8 @@ export const COHORT_VALUE_MAPPING_VSAL = {
     ['Epileptic Encephalopathies']: 'demo',
     ['Brain Malformations']: 'demo',
     Leukodystrophies: 'demo',
-    ICCon: 'demo'
+    ICCon: 'demo',
+    Demo: 'demo'
 }
 
 export const COHORT_VALUE_MAPPING_SSVS = {
@@ -15,7 +16,8 @@ export const COHORT_VALUE_MAPPING_SSVS = {
     ['Epileptic Encephalopathies']: 'demo',
     ['Brain Malformations']: 'demo',
     Leukodystrophies: 'demo',
-    ICCon: 'demo'
+    ICCon: 'demo',
+    Demo: 'demo'
 }
 
 export const COHORT_VALUE_MAPPING_MAPD = {
@@ -25,7 +27,8 @@ export const COHORT_VALUE_MAPPING_MAPD = {
     ['Epileptic Encephalopathies']: 'demo',
     ['Brain Malformations']: 'demo',
     Leukodystrophies: 'demo',
-    ICCon: 'demo'
+    ICCon: 'demo',
+    Demo: 'demo'
 }
 
 export const COHORT_PERMISSION_SUMMARY_MAPPING = {
@@ -35,7 +38,8 @@ export const COHORT_PERMISSION_SUMMARY_MAPPING = {
     ['Epileptic Encephalopathies']: 'ee/summary',
     ['Brain Malformations']: 'bm/summary',
     Leukodystrophies: 'leukodystrophies/summary',
-    ICCon: 'iccon/summary'
+    ICCon: 'iccon/summary',
+    Demo: ''
 }
 
 export const COHORT_PERMISSION_VSAL_PHENO_MAPPING = {
@@ -45,7 +49,8 @@ export const COHORT_PERMISSION_VSAL_PHENO_MAPPING = {
     ['Epileptic Encephalopathies']: 'ee/pheno',
     ['Brain Malformations']: 'bm/pheno',
     Leukodystrophies: 'leukodystrophies/pheno',
-    ICCon: 'iccon/pheno'
+    ICCon: 'iccon/pheno',
+    Demo: ''
 }
 
 export const COHORT_PHENO_GET_MAPPING = {
@@ -55,5 +60,6 @@ export const COHORT_PHENO_GET_MAPPING = {
     ['Epileptic Encephalopathies']: 'getEpilepticEncephalopathies',
     ['Brain Malformations']: 'getBrainMalformations',
     Leukodystrophies: 'getLeukodystrophies',
-    ICCon: 'getIccon'
+    ICCon: 'getIccon',
+    Demo: 'getDemo'
 }

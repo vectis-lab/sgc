@@ -55,7 +55,7 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
 
     ngAfterViewInit() {
         this.subscriptions.push(this.auth.getUserPermissions().subscribe(permissions => {
-            if(!permissions.includes(this.permission)){
+            if(this.permission && !permissions.includes(this.permission)){
                 this.denied = true;
             }
         }));
@@ -68,7 +68,9 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
             this.cd.detectChanges();
         }));
 
-        this.patients = this.pheno.filter(sample => this.samples.includes(sample.internalIDs));
+        this.patients = this.pheno.filter(sample => {
+            return this.samples.includes(sample.internalIDs)
+        });
         this.externalIDs = this.patients.map(sample => sample.externalIDs);
         this.ndx = crossfilter(this.patients);
         this.selectedExternalIDs = this.externalIDs;

@@ -122,6 +122,7 @@ import { IcconInformationComponent } from './components/parts/iccon-information/
 import { FamilyTabComponent } from './components/parts/family-tab/family-tab.component';
 import { VariantsFamilyTableComponent } from './components/parts/variants-family-table/variants-family-table.component';
 import { FilterAutoFamilyComponent } from './components/parts/filter-auto-family/filter-auto-family.component';
+import { DemoInformationComponent } from './components/parts/demo-information/demo-information.component';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -233,6 +234,7 @@ export class RavenErrorHandler implements ErrorHandler {
         FamilyTabComponent,
         VariantsFamilyTableComponent,
         FilterAutoFamilyComponent,
+        DemoInformationComponent,
     ],
     entryComponents: [
         SignUpComponent,
