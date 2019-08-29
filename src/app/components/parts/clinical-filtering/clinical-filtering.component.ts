@@ -36,6 +36,7 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
     denied = false;
     error = false;
     mappingSamples = [];
+    mappingSamplesOnlyToAvailableFamily = [];
     searchQueries : SearchQueries;
 
 
@@ -94,6 +95,11 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
                         const list_pheno_ids = this.pheno.map(sample => sample.internalIDs)
                         this.mappingSamples = result.filter(r => {
                             return list_pheno_ids.includes(r);
+                        })
+
+                        const list_pheno_ids_have_family = this.pheno.filter(sample => sample.familyId).map(sample => sample.internalIDs);
+                        this.mappingSamplesOnlyToAvailableFamily = result.filter(r => {
+                            return list_pheno_ids_have_family.includes(r);
                         })
                         
                         return this.searchService.getVariants(this.searchQueries, this.mappingSamples.join())

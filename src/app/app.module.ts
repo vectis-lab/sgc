@@ -123,6 +123,8 @@ import { FamilyTabComponent } from './components/parts/family-tab/family-tab.com
 import { VariantsFamilyTableComponent } from './components/parts/variants-family-table/variants-family-table.component';
 import { FilterAutoFamilyComponent } from './components/parts/filter-auto-family/filter-auto-family.component';
 import { DemoInformationComponent } from './components/parts/demo-information/demo-information.component';
+import { FamilyTabNewComponent } from './components/parts/family-tab-new/family-tab-new.component';
+import { RelationshipInformationComponent } from './components/parts/relationship-information/relationship-information.component';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -235,6 +237,8 @@ export class RavenErrorHandler implements ErrorHandler {
         VariantsFamilyTableComponent,
         FilterAutoFamilyComponent,
         DemoInformationComponent,
+        FamilyTabNewComponent,
+        RelationshipInformationComponent,
     ],
     entryComponents: [
         SignUpComponent,

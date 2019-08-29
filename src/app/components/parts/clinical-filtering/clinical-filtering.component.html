@@ -1,4 +1,4 @@
-<mat-tab-group *ngIf="selectedCohort === 'Acutecare' || selectedCohort === 'Demo'">
+<mat-tab-group *ngIf="selectedCohort === 'Acutecare'">
     <mat-tab label="Affected Samples">
         <div class="loading-message" *ngIf="loadingVariants">
             <mat-spinner color="primary"></mat-spinner>
@@ -7,7 +7,6 @@
           
           <div class="search-result-content" *ngIf="searchService.commenced">
             <app-acutecare-information *ngIf="selectedCohort === 'Acutecare'" [pheno]="pheno" [samples]="ids"></app-acutecare-information>
-            <app-demo-information *ngIf="selectedCohort === 'Demo'" [pheno]="pheno" [samples]="ids"></app-demo-information>
           
             <div *ngIf="variants.length > 10000&&geneFilter.length === 0" class="message message-error">
                 This region contains too many variants to visualize with our genome browser, please choose a smaller region like:
@@ -24,6 +23,32 @@
             <app-family-tab *ngIf="searchService.commenced" [pheno]="pheno" [samples]="mappingSamples" [searchQueries]="searchQueries"></app-family-tab>
         </mat-tab>
 </mat-tab-group>
+
+<mat-tab-group *ngIf="selectedCohort === 'Demo'">
+        <mat-tab label="Affected Samples">
+            <div class="loading-message" *ngIf="loadingVariants">
+                <mat-spinner color="primary"></mat-spinner>
+              </div>
+              <div class="message message-error" *ngIf="!loadingVariants && variants.length <= 0">No Variants found for the query</div>
+              
+              <div class="search-result-content" *ngIf="searchService.commenced">
+                <app-demo-information *ngIf="selectedCohort === 'Demo'" [pheno]="pheno" [samples]="ids"></app-demo-information>
+              
+                <div *ngIf="variants.length > 10000&&geneFilter.length === 0" class="message message-error">
+                    This region contains too many variants to visualize with our genome browser, please choose a smaller region like:
+                    <a (click)="goToSmallerRegion()">{{searchService.getSmallerRegionString()}}</a>
+                </div>
+                <app-variants-table [variants]="variants"></app-variants-table>
+              </div>
+        </mat-tab>
+        <mat-tab label="Family" [disabled]="loadingVariants">
+                <div class="loading-message" *ngIf="loadingVariants">
+                    <mat-spinner color="primary"></mat-spinner>
+                </div>
+                <div class="message message-error" *ngIf="!loadingVariants && variants.length <= 0">No Variants found for the query</div>
+                <app-family-tab-new *ngIf="searchService.commenced" [pheno]="pheno" [samples]="mappingSamplesOnlyToAvailableFamily" [searchQueries]="searchQueries"></app-family-tab-new>
+            </mat-tab>
+    </mat-tab-group>
 
 <div *ngIf="selectedCohort !== 'Acutecare' && selectedCohort !== 'Demo'">
     <div class="loading-message" *ngIf="loadingVariants">

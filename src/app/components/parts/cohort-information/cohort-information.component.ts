@@ -25,6 +25,7 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
     @Input() phenoService: string = '';
     @Input() family: boolean = false;
     @Input() pheno: any[] = [];
+    @Input() familyWithPheno: boolean = false;
     includeFamily: boolean = false;
     charts: Chart[] = [];
     sampleDim: any;
