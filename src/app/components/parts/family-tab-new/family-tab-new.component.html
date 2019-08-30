@@ -5,7 +5,10 @@
 </div>
 <div class="chart">
     <app-samples-list [sampleIDs]="externalIDs" [selectedSamples]="selectedExternalIDs" (onSelectSamples)="onSelectSamples($event)" [showSampleCSV]="showSampleCSV" (onUpdateSamples)="onSelectSamples($event)" [multiple]="false"></app-samples-list>
+    <app-relationship-information *ngIf="selectedExternalIDs.length === 1 && !loadingVariants && !sampleNotFound" [relationships]="familyMembers"></app-relationship-information>
+    <app-familial-filters *ngIf="selectedExternalIDs.length === 1 && !loadingVariants && !sampleNotFound" (appliedFilter)="selectFilter($event)"></app-familial-filters>
 </div>
+
 <div *ngIf="loadingVariants">
     <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </div>

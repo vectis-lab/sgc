@@ -1,0 +1,20 @@
+<div class="chart">
+    <div class="toolbar">
+        <div class="row">
+            <h4>Familial Filter</h4>
+            <span class="option right"></span>
+        </div>
+    </div>
+    <div class="content">
+      <div class='family-filter'>
+          <mat-radio-group
+            class="filter-options"
+            [(ngModel)]="selectedFilter"
+            (change)="selectFilter($event)">
+            <mat-radio-button class="filter-family-option" *ngFor="let filter of filters" [value]="filter">
+              {{filter}}
+            </mat-radio-button>
+        </mat-radio-group>
+        </div>
+    </div>
+</div>

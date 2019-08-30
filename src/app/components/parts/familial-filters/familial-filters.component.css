@@ -1,0 +1,81 @@
+.family-filter{
+    width: 330px;
+    height: 210px;
+    margin: 2rem 0.8rem 0.8rem 0.8rem;
+    padding: 0;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+}
+
+.content{
+    min-width: 330px;
+}
+
+.chart{
+    margin-top: 1em;
+}
+
+h4 {
+    text-align: center;
+    margin: 0;
+    color: rgba(0, 60, 105, 0.5);
+    font-weight: bold;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 19px;
+}
+
+.toolbar .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.toolbar .row h4 {
+    flex-basis: 0;
+    flex-grow: 3;
+}
+
+.toolbar .row .option {
+    flex-basis: 0;
+    flex-grow: 1;
+    font-size: medium;
+    color: rgba(0, 60, 105, 0.5);
+    cursor: pointer;
+}
+
+.toolbar .row .option.left {
+    text-align: start;
+}
+
+.toolbar .row .option.right {
+    text-align: end;
+}
+
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px;
+}
+
+.filter-family-option{
+    margin: 5px;
+}
+
+@media (min-width: 0px) and (max-width: 320px) {
+    .chart {
+        min-width: 200px;
+    }
+}

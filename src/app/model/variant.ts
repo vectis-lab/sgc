@@ -16,14 +16,14 @@ export class Variant {
     hetc: number;
     vac: string;
     vaf: number;
-    vhomc: string;
-    vhetc: string;
-    vhomc1: string;
-    vhetc1: string;
-    vhomc2: string;
-    vhetc2: string;
-    vhomc3: string;
-    vhetc3: string;
+    vhomc: number;
+    vhetc: number;
+    vhomc1: number;
+    vhetc1: number;
+    vhomc2: number;
+    vhetc2: number;
+    vhomc3: number;
+    vhetc3: number;
     highlight = false;
 
     static dbSnpUrl(variant: Variant) {

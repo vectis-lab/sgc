@@ -1,0 +1,15 @@
+<div class="chart">
+    <div class="toolbar">
+        <div class="row">
+            <h4>Relation</h4>
+            <span class="option right"></span>
+        </div>
+    </div>
+    <div class="content">
+      <div class='family-info'>
+          <mat-list>
+            <mat-list-item *ngFor="let relationship of relationships" [ngStyle]="{'font-size': '13px'}">{{relationship.externalIDs}} : {{relationship.Relationship}}</mat-list-item>
+          </mat-list>
+        </div>
+    </div>
+</div>

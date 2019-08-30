@@ -21,7 +21,9 @@ export class FamilyTabNewComponent implements AfterViewInit {
   showSampleCSV: boolean = false;
   sampleNotFound: boolean = false;
   public variants: Variant[] = [];
+  private unfilteredVariants: Variant[] = [];
   private subscriptions: Subscription[] = [];
+  familyMembers: any[];
 
   constructor(private cd: ChangeDetectorRef,
               public searchService: VariantSearchService,) { }
@@ -45,16 +47,17 @@ export class FamilyTabNewComponent implements AfterViewInit {
     this.sampleNotFound = false;
     this.selectedExternalIDs = externalSamples;
     let sample = this.pheno.filter(s => this.selectedExternalIDs.includes(s.externalIDs) && s.familyId);
-    let familyMembers = this.pheno.filter(s => {
-      return sample[0].familyId === s.familyId
-    });
-
     if(sample.length === 0){
       this.sampleNotFound = true;
       this.loadingVariants = false;
+      this.familyMembers = [];
+      this.variants = [];
       return ;
     }
-    this.selectedInternalIDs = familyMembers.map(s => s.internalIDs);
+    this.familyMembers = this.pheno.filter(s => {
+      return sample[0].familyId === s.familyId
+    });
+    this.selectedInternalIDs = this.familyMembers.map(s => s.internalIDs);
     const allQueries = this.selectedInternalIDs.map(id => {
       return this.searchService.getVariantsForFamily(this.searchQueries, id)
     })
@@ -62,6 +65,7 @@ export class FamilyTabNewComponent implements AfterViewInit {
     Promise.all(allQueries).then((v) => {
       this.loadingVariants = false;
       this.variants = this.combineVariants(v);
+      this.unfilteredVariants = this.variants;
     })
     this.cd.detectChanges();
   }
@@ -88,6 +92,31 @@ export class FamilyTabNewComponent implements AfterViewInit {
     }
     res = Object.values(hash);
     return res;
+  }
+
+  selectFilter(filter){
+    switch (filter) {
+      case 'All':
+        this.variants = this.unfilteredVariants;
+        break;
+      case 'Heterozygous dominant':
+        this.variants = this.unfilteredVariants.filter(v => {
+          return (v.vhetc === 1) && ((v.vhetc1 ===1 && typeof v.vhetc2 ==='undefined') || (typeof v.vhetc1 ==='undefined' && v.vhetc2 ===1));
+        });
+        break;
+      case 'Homozygous recessive':
+      this.variants = this.unfilteredVariants.filter(v => {
+        return v.vhetc === 0 && v.vhetc1 === 1 && v.vhetc2 === 1;
+      });
+        break;
+      case 'Compound heterozygous':
+        break;
+      case 'De novo dominant':
+      this.variants = this.unfilteredVariants.filter(v => {
+        return (v.vhetc === 1) && ((typeof v.vhetc1 ==='undefined' && typeof v.vhetc2 ==='undefined') || (v.vhetc1 === 0 && v.vhetc2 === 0));
+      });
+        break;
+    }
   }
 
 }

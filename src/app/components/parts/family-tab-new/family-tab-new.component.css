@@ -1,9 +1,13 @@
 .chart{
-    max-width: 35%; 
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .toolbar {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
 }
 
 .actions{
