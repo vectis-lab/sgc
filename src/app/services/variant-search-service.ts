@@ -21,6 +21,7 @@ export class VariantSearchService {
     startingRegion: Region;
     filter: any = null;
     samples: string = "";
+    noSamples: boolean = false;
     private searchQuery = new Subject<SearchQueries>();
     private variantSearch = new VariantSearch();
 
@@ -29,7 +30,7 @@ export class VariantSearchService {
         this.results = this.searchQuery
             .debounceTime(DEBOUNCE_TIME)
             .switchMap((query: SearchQueries) => {
-                return this.vsal.getVariants(query, this.samples).map((vr: VariantRequest) => {
+                return this.vsal.getVariants(query, this.samples, this.noSamples).map((vr: VariantRequest) => {
                     if (this.filter) {
                         vr.variants = this.filter(vr.variants);
                     }
@@ -48,9 +49,10 @@ export class VariantSearchService {
         });
     }
 
-    getVariants(query: SearchQueries, samples): Promise<Variant[]> { 
+    getVariants(query: SearchQueries, samples, noSamples = false): Promise<Variant[]> { 
         this.lastQuery = query;
         this.samples = samples;
+        this.noSamples = noSamples;
         const promise = new Promise<any[]>((resolve, reject) => {
             this.results.take(1).subscribe(
                 (vr: VariantRequest) => {

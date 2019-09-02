@@ -60,7 +60,7 @@ export class VariantComponent implements OnInit, OnDestroy {
             const reference = m[3];
             const alternate = m[4];
 
-            const sq = new SearchQueries([new Region(chromo, start, start)], [new SearchOption('', 'dataset', [], this.cohort), new SearchOption('', 'returnAnnotations', [], 'true')]);
+            const sq = new SearchQueries([new Region(chromo, start, start)], [new SearchOption('', 'dataset', [], this.cohort)]);
             this.getVariant(sq, reference, alternate);
         } catch (e) {
             this.error = 'Could not find specified variant';
@@ -81,7 +81,8 @@ export class VariantComponent implements OnInit, OnDestroy {
     }
 
     private getVariant(sq: SearchQueries, reference: string, alternate: string) {
-        this.vss.getVariants(sq, []).then(variants => {
+        this.vss.getVariants(sq, [], true).then(variants => {
+            console.log(variants);
             this.loading = false;
             const vf = variants.filter((v) => v.a === alternate && v.r === reference);
             
