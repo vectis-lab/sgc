@@ -3,7 +3,8 @@
         <div class="loading-message" *ngIf="loadingVariants">
             <mat-spinner color="primary"></mat-spinner>
           </div>
-          <div class="message message-error" *ngIf="!loadingVariants && variants.length <= 0">No Variants found for the query</div>
+          <div class="message message-error" *ngIf="!loadingVariants && variants.length <= 0 && !denied">No Variants found for the query</div>
+          <div *ngIf="denied && !loadingVariants" class="message message-error">You do not have permission to view this data.</div>
           
           <div class="search-result-content" *ngIf="searchService.commenced">
             <app-acutecare-information *ngIf="selectedCohort === 'Acutecare'" [pheno]="pheno" [samples]="ids"></app-acutecare-information>
@@ -19,7 +20,8 @@
             <div class="loading-message" *ngIf="loadingVariants">
                 <mat-spinner color="primary"></mat-spinner>
             </div>
-            <div class="message message-error" *ngIf="!loadingVariants && variants.length <= 0">No Variants found for the query</div>
+            <div class="message message-error" *ngIf="!loadingVariants && variants.length <= 0 && !denied">No Variants found for the query</div>
+            <div *ngIf="denied && !loadingVariants" class="message message-error">You do not have permission to view this data.</div>
             <app-family-tab *ngIf="searchService.commenced" [pheno]="pheno" [samples]="mappingSamples" [searchQueries]="searchQueries"></app-family-tab>
         </mat-tab>
 </mat-tab-group>
@@ -29,7 +31,8 @@
             <div class="loading-message" *ngIf="loadingVariants">
                 <mat-spinner color="primary"></mat-spinner>
               </div>
-              <div class="message message-error" *ngIf="!loadingVariants && variants.length <= 0">No Variants found for the query</div>
+              <div class="message message-error" *ngIf="!loadingVariants && variants.length <= 0 && !denied">No Variants found for the query</div>
+              <div *ngIf="denied && !loadingVariants" class="message message-error">You do not have permission to view this data.</div>
               
               <div class="search-result-content" *ngIf="searchService.commenced">
                 <app-demo-information *ngIf="selectedCohort === 'Demo'" [pheno]="pheno" [samples]="ids"></app-demo-information>
@@ -45,7 +48,8 @@
                 <div class="loading-message" *ngIf="loadingVariants">
                     <mat-spinner color="primary"></mat-spinner>
                 </div>
-                <div class="message message-error" *ngIf="!loadingVariants && variants.length <= 0">No Variants found for the query</div>
+                <div class="message message-error" *ngIf="!loadingVariants && variants.length <= 0 && !denied">No Variants found for the query</div>
+                <div *ngIf="denied && !loadingVariants" class="message message-error">You do not have permission to view this data.</div>
                 <app-family-tab-new *ngIf="searchService.commenced" [pheno]="pheno" [samples]="mappingSamplesOnlyToAvailableFamily" [searchQueries]="searchQueries"></app-family-tab-new>
             </mat-tab>
     </mat-tab-group>
@@ -54,7 +58,8 @@
     <div class="loading-message" *ngIf="loadingVariants">
         <mat-spinner color="primary"></mat-spinner>
       </div>
-      <div class="message message-error" *ngIf="!loadingVariants && variants.length <= 0">No Variants found for the query</div>
+      <div class="message message-error" *ngIf="!loadingVariants && variants.length <= 0 && !denied">No Variants found for the query</div>
+      <div *ngIf="denied && !loadingVariants" class="message message-error">You do not have permission to view this data.</div>
       
       <div class="search-result-content" *ngIf="searchService.commenced">
         <app-neuromuscular-information *ngIf="selectedCohort === 'Neuromuscular'" [pheno]="pheno" [samples]="ids"></app-neuromuscular-information>

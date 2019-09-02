@@ -117,6 +117,7 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
                     });
                 },
                 e => {
+                    this.loadingVariants = false;
                     if (e.status && e.status === 401) {
                         this.denied = true;
                     } else {
