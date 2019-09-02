@@ -77,7 +77,7 @@ export class VariantSearchService {
         this.lastQuery = query;
         this.samples = samples;
         const promise = new Promise<any[]>((resolve, reject) => {
-            this.vsal.getVariants(query, samples).subscribe((vr: VariantRequest) => {
+            this.vsal.getVariants(query, samples, false).subscribe((vr: VariantRequest) => {
                 this.variants = vr.variants;
                 resolve(vr.variants);
             });
