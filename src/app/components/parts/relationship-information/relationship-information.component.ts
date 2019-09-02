@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./relationship-information.component.css']
 })
 export class RelationshipInformationComponent implements OnInit {
-  private relationships: any[];
+  relationships: any[];
   @Input('relationships') set allowDay(value: any[]) {
     this.relationships = value;
   }
