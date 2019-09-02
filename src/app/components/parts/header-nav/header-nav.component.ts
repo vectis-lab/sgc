@@ -57,6 +57,10 @@ export class HeaderNavComponent implements OnInit {
             }
         })
 
+        this.subscriptions.push(this.searchBarService.selectedCohort.subscribe(cohort => {
+            this.cohort = cohort;
+        }))
+
     }
 
     toggleTerms(event: Event) {

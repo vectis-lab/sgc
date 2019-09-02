@@ -50,6 +50,7 @@ export class SearchOptionComponent implements OnInit {
 
     selectOption(selected: string) {
         this.option.setValue(selected);
+        this.searchBarService.setCohort(selected);
         this.searchBarService.options[0].setValue(selected);
         if(this.router.url.includes('/search')){
             if(this.query){

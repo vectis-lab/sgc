@@ -31,6 +31,9 @@ export class SearchBarService {
     private geneListSource = new BehaviorSubject<string>('');
     geneList = this.geneListSource.asObservable();
 
+    private selectedCohortSource = new BehaviorSubject<string>('Demo');
+    selectedCohort = this.selectedCohortSource.asObservable();
+
     constructor(private geneService: ElasticGeneSearch,
                 private regionService: RegionService,
                 private positionService: PositionService,
@@ -195,6 +198,10 @@ export class SearchBarService {
 
     setGeneList(value){
         this.geneListSource.next(value);
+    }
+
+    setCohort(value){
+        this.selectedCohortSource.next(value);
     }
 
     checkErrorRegion(query){
