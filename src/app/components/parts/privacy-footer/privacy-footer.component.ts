@@ -13,21 +13,33 @@ import { SearchBarService } from '../../../services/search-bar-service';
 export class PrivacyFooterComponent implements OnInit, OnDestroy {
     year = '2019';
     subscriptions: Subscription[] = [];
-    selectedCohort = this.searchBarService.options[0].getValue().toLowerCase();
+    selectedCohort = this.searchBarService.options[0].getValue();
     hover=false;
+
+    mappingAuthors ={
+        'Acutecare': '/rare-disease-flagships/#program-2184',
+        'Mitochondria': '/rare-disease-flagships/#program-1317',
+        'Neuromuscular': '/rare-disease-flagships/#program-1316',
+        'Epileptic Encephalopathies': '/rare-disease-flagships/#program-1318',
+        'Brain Malformations': '/rare-disease-flagships/#program-1318',
+        'Leukodystrophies': '/rare-disease-flagships/#program-1318',
+        'ICCon': '/cancer-flagships/#program-2059'
+    }
 
     constructor(private router: Router, private searchBarService: SearchBarService) {
     }
 
     ngOnInit() {
-
+        this.searchBarService.selectedCohort.subscribe(cohort => {
+            this.selectedCohort = cohort;
+        })
     }
     
     goToCohortAuthor(){
-        if(this.selectedCohort === '' || (!this.router.url.includes('/search/results') && !this.router.url.includes('/clinical/results'))){
-            this.router.navigate(['/authors']);
+        if(this.selectedCohort === '' || this.selectedCohort === 'Demo'){
+            window.open('https://www.australiangenomics.org.au/our-research/disease-flagships/rare-disease-flagships/','_blank')
         }else{
-            this.router.navigate(['/authors'], {fragment: this.selectedCohort})
+            window.open(`https://www.australiangenomics.org.au/our-research/disease-flagships${this.mappingAuthors[this.selectedCohort]}`, 'blank')
         }
     }
 

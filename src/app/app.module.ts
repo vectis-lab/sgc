@@ -100,7 +100,6 @@ import { FilterAutoSummaryComponent } from './components/parts/filter-auto-summa
 import { SampleSearch } from './services/sample-search.service';
 import { ClinicalComponent } from './components/pages/clinical/clinical.component';
 import { ClinicalFilteringComponent } from './components/parts/clinical-filtering/clinical-filtering.component';
-import { CohortAuthorsComponent } from './components/pages/cohort-authors/cohort-authors.component';
 import { GeneSearchComponent } from './components/parts/gene-search/gene-search.component';
 import { SearchBarClinicalComponent } from './components/parts/search-bar-clinical/search-bar-clinical.component';
 import { GenePanelsComponent } from './components/parts/gene-panels/gene-panels.component';
@@ -215,7 +214,6 @@ export class RavenErrorHandler implements ErrorHandler {
         FilterAutoSummaryComponent,
         ClinicalComponent,
         ClinicalFilteringComponent,
-        CohortAuthorsComponent,
         GeneSearchComponent,
         SearchBarClinicalComponent,
         GenePanelsComponent,

@@ -9,7 +9,6 @@ import { VariantSummaryComponent } from './components/pages/variant-summary/vari
 import { ErrorComponent } from './components/pages/error/error.component';
 import { ExploreComponent } from './components/pages/explore/explore.component';
 import { ClinicalComponent } from './components/pages/clinical/clinical.component';
-import { CohortAuthorsComponent } from './components/pages/cohort-authors/cohort-authors.component';
 import { ProfileComponent } from './components/pages/profile/profile.component';
 
 const appRoutes: Routes = [
@@ -26,7 +25,6 @@ const appRoutes: Routes = [
     { path: 'explore/:cohort', component: ExploreComponent },
     { path: 'beacon', component: BeaconComponent },
     { path: 'error', component: ErrorComponent },
-    { path: 'authors', component: CohortAuthorsComponent },
     { path: '', redirectTo: '/', pathMatch: 'full'},
     { path: '**', redirectTo: '/', pathMatch: 'full'},
 ];
