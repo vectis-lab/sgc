@@ -8,6 +8,8 @@ export class ClinicalFields {
                 public filterHandler: any = null,
                 public width: number = 340,
                 public height: number = 200,
+                public start: number = null,
+                public end: number = null,
             ) {
     }
 }

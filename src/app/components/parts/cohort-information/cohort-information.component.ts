@@ -117,7 +117,7 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
             group = dim.group();
             dim = this.ndx.dimension(function(d){ return d[field.fieldName]=== "" ? 'No data' : d[field.fieldName];})
           }
-          return new Chart(field.name, field.chartType, dim, field.width, field.height, field.visible, group, null, field.filterHandler)
+          return new Chart(field.name, field.chartType, dim, field.width, field.height, field.visible, group, null, field.filterHandler, "", "", field.start, field.end)
         })
 
         dc.dataCount('.dc-data-count')

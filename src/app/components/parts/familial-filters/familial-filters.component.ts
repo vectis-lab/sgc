@@ -6,7 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./familial-filters.component.css']
 })
 export class FamilialFiltersComponent implements OnInit {
-  filters = ['All', 'Heterozygous dominant', 'Homozygous recessive', 'Compound heterozygous', 'De novo dominant']
+  filters = ['All', 'Homozygous recessive', 'De novo dominant', 'Compound heterozygous', 'Heterozygous dominant']
   selectedFilter = 'All';
   @Output() appliedFilter = new EventEmitter<string>();
 
