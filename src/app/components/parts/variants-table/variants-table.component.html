@@ -23,7 +23,7 @@
 
                 </th>
             <tr>
-            <tr *ngFor="let variant of variants | paginate: { itemsPerPage: pageSize, currentPage: currentPage }"
+            <tr *ngFor="let variant of variants | paginate: { id:'clinFilter', itemsPerPage: pageSize, currentPage: currentPage }"
                 [ngClass]="{'highlighted': compare(variant, highlightedVariant) }"
                 (mouseover)="highlightVariant(variant)"
                 (mouseout)="unHighlightVariant(variant)">
@@ -55,7 +55,7 @@
                 <option *ngFor="let item of [10, 20, 50, 100]" value="{{ item }}">{{ item }}</option>
             </select>
         </div>
-        <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+        <pagination-controls id='clinFilter' (pageChange)="currentPage = $event"></pagination-controls>
     </div>
 </div>
 

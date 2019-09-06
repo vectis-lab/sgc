@@ -40,7 +40,17 @@ export class TableService {
     private columns: Map<string, boolean> = new Map<string, boolean>(this.searchResultKeys);
 
     readonly sortMap: any = {
-        'Location': (v: Variant) => v.s,
+        'Location': (v: Variant) => {
+            if(Number(v.c)){
+                return Number(v.c) * 10000000000 + v.s;
+            }else if(v.c === 'X'){
+                return 23 * 10000000000 + v.s;
+            }else if(v.c === 'Y'){
+                return 24 * 10000000000 + v.s;
+            }else if(v.c === 'MT'){
+                return 25 * 10000000000 + v.s;
+            }
+        },
         'Reference': (v: Variant) => v.r,
         'Alternate': (v: Variant) => v.a,
         'Type': (v: Variant) => v.t,
