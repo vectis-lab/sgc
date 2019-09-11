@@ -112,19 +112,29 @@ export class FamilyTabNewComponent implements AfterViewInit {
       case 'Compound heterozygous':
         this.variants = this.unfilteredVariants.filter(v => {
           if(v.vhetc === 1 && ((v.vhetc1 === 1 && typeof v.vhetc2 === 'undefined')|| (v.vhetc2 === 1 && typeof v.vhetc1 === 'undefined'))){
-            let region = null;
-            let parent = v.vhetc1;
+            let geneDetails = null;
+            let parentOne = v.vhetc1;
+            let parentTwo = v.vhetc2;
             //Check which region does it belong to
             this.searchService.lastQuery.regions.find(r => {
-              if(r.chromosome === v.c && r.start <= v.s && r.end >= v.s){
-                region = r;
-                return true;
-              }
+              r.genes.find(g => {
+                if(g.chromosome === v.c && g.start <= v.s && g.end >= v.s){
+                  geneDetails = g;
+                  return true;
+                }
+              })
               return false;
             })
-            let variantWithinRegion = this.unfilteredVariants.filter(variant => variant.c === region.chromosome && variant.s >= region.start && variant.s <= region.end);
+            let variantWithinRegion = this.unfilteredVariants.filter(variant => geneDetails && variant.c === geneDetails.chromosome && variant.s >= geneDetails.start && variant.s <= geneDetails.end);
+
             //check if there are other het variant for other parent within same region
-            let otherHet = variantWithinRegion.find(variant => variant.vhetc === 1 && variant.vhetc2 === parent && typeof variant.vhetc1 === 'undefined');
+            let otherHet = variantWithinRegion.find(variant => {
+              if(parentOne)
+                return variant.vhetc === 1 && variant.vhetc2 === parentOne && typeof variant.vhetc1 === 'undefined'
+              else if(parentTwo)
+                return variant.vhetc === 1 && typeof variant.vhetc2 === 'undefined' && variant.vhetc1 === parentTwo
+            });
+
             if(otherHet){
               return true;
             }

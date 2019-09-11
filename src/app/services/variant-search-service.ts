@@ -43,6 +43,9 @@ export class VariantSearchService {
                                 }
                             })!== undefined
                         });
+                        if(!v.geneSymbol){
+                            v.geneSymbol = "None"
+                        }
                     })
                     return vr;
                 });
@@ -97,6 +100,9 @@ export class VariantSearchService {
                             }
                         }) !== undefined
                     });
+                    if(!v.geneSymbol){
+                        v.geneSymbol = "None"
+                    }
                 })
                 this.variants = vr.variants;
                 resolve(vr.variants);
