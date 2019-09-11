@@ -16,37 +16,6 @@ export class TableSharedService {
         return displayMap[label](variant) !== null ? String(displayMap[label](variant)) : '';
     }
 
-    sort(label: string, variants: any[], lastSortedLabel, sortMap, lastSortedOrder) {
-        if (lastSortedLabel === label) {
-            lastSortedOrder = !lastSortedOrder;
-        } else {
-            lastSortedLabel = label;
-            lastSortedOrder = true;
-        }
-        const fn = sortMap[label];
-        if (lastSortedOrder) {
-            variants.sort((a: any, b: any) => {
-                if (fn(a) < fn(b)) {
-                    return -1;
-                } else if (fn(a) > fn(b)) {
-                    return 1;
-                } else {
-                    return 0;
-                }
-            });
-        } else {
-            variants.sort((a: any, b: any) => {
-                if (fn(a) > fn(b)) {
-                    return -1;
-                } else if (fn(a) < fn(b)) {
-                    return 1;
-                } else {
-                    return 0;
-                }
-            });
-        }
-    }
-
     keys(columns) {
         return Array.from(columns.keys());
     }
