@@ -10,6 +10,7 @@ export class TableFamilyService {
         'Location': (v: Variant) => this.locationString(v),
         'Reference': (v: Variant) => v.r,
         'Alternate': (v: Variant) => v.a,
+        'Gene': (v: Variant) => v.geneSymbol,
     };
 
 
@@ -17,6 +18,7 @@ export class TableFamilyService {
         ['Location', true],
         ['Reference', true],
         ['Alternate', true],
+        ['Gene', true],
     ];
 
     private columns: Map<string, boolean> = new Map<string, boolean>(this.searchResultKeys);
@@ -25,6 +27,7 @@ export class TableFamilyService {
         'Location': (v: Variant) => v.s,
         'Reference': (v: Variant) => v.r,
         'Alternate': (v: Variant) => v.a,
+        'Gene': (v: Variant) => v.geneSymbol,
     };
 
     private tooltips = this.tableService.afTooltips(this.showScales);
@@ -75,6 +78,7 @@ export class TableFamilyService {
             ['Location', true],
             ['Reference', true],
             ['Alternate', true],
+            ['Gene', true],
         ];
         this.columns = new Map<string, boolean>(keys);
     }
@@ -84,18 +88,21 @@ export class TableFamilyService {
             'Location': (v: Variant) => this.locationString(v),
             'Reference': (v: Variant) => v.r,
             'Alternate': (v: Variant) => v.a,
+            'Gene': (v: Variant) => v.geneSymbol,
         };
 
         this.searchResultKeys = [
             ['Location', true],
             ['Reference', true],
             ['Alternate', true],
+            ['Gene', true],
         ];
 
         this.sortMap =  {
             'Location': (v: Variant) => v.s,
             'Reference': (v: Variant) => v.r,
             'Alternate': (v: Variant) => v.a,
+            'Gene': (v: Variant) => v.geneSymbol,
         };
 
         this.samples.forEach((s,index) => {

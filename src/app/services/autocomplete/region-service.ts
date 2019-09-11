@@ -19,9 +19,10 @@ export class RegionService implements AutocompleteService<Region> {
             const chromosome = results[1];
             const start = Number(results[2]);
             const end = Number(results[3]);
-            const r = new Region(chromosome, start, end);
+            const r = new Region(chromosome, start, end, []);
             const regions = [new RegionAutocomplete(r, r.name(), '', this)];
             return of<GenericAutocompleteResult<Region>[]>(regions);
+            
         } else {
             return of<GenericAutocompleteResult<Region>[]>([]);
         }

@@ -24,6 +24,7 @@ export class Variant {
     vhetc2: number;
     vhomc3: number;
     vhetc3: number;
+    geneSymbol: string;
     highlight = false;
 
     static dbSnpUrl(variant: Variant) {
