@@ -115,6 +115,15 @@ mat-sidenav .title {
     height: auto;
     width: 260px;
 }
+.mat-icon {
+    font-size: 19px;
+    padding-top: 0.75em;
+    color: white;
+}
+
+::ng-deep .cohort-info{
+    white-space: pre-line;
+}
 
 @media (min-width: 0px) and (max-width: 1285px) {
 
@@ -126,9 +135,19 @@ mat-sidenav .title {
         margin: 0 1rem 0 1rem;
     }
 
+    .mat-icon {
+        font-size: 19px;
+        padding-top: 0.75em;
+        color: white;
+     }
+
     mat-sidenav {
         z-index: 30;
         min-width: 200px;
+    }
+    
+    ::ng-deep .cohort-info{
+        white-space: pre-line;
     }
 
     .backdrop-cover {
