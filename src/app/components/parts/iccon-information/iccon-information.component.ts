@@ -1,13 +1,11 @@
 import { Component, Input } from '@angular/core';
-import { ClinapiService } from '../../../services/clinapi.service';
 import { ClinicalFields } from '../../../model/clinical-fields';
 import * as _ from 'lodash/array';
 
 @Component({
     selector: 'app-iccon-information',
     templateUrl: './iccon-information.component.html',
-    styleUrls: ['./iccon-information.component.css'],
-    providers: [ClinapiService]
+    styleUrls: ['./iccon-information.component.css']
 })
 export class IcconInformationComponent {
     //Internal IDs

@@ -41,6 +41,7 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
     demo: boolean = false;
     showSampleCSV: boolean = false;
     allIsChecked = false;
+    sampleNotFound = false;
 
     constructor(private cs: ClinapiService,
                 private cd: ChangeDetectorRef,
@@ -62,10 +63,12 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
         }));
 
         this.subscriptions.push(this.cs.internalSampleIDs.subscribe(samples => {
+            this.sampleNotFound = false;
             this.selectedInternalIDs = samples;
             this.selectedExternalIDs = this.patients
                 .filter(patient => this.selectedInternalIDs.includes(patient.internalIDs))
                 .map(patient => patient.externalIDs);
+            this.cs.setSelectedExternalSamples(this.selectedExternalIDs);
             this.cd.detectChanges();
         }));
 
@@ -88,14 +91,19 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
 
     onUpdateSamples(externalSamples){
         let validExternalSamples = externalSamples.filter(sample => this.patients.map(p => p.externalIDs).includes(sample));
-        let filteredPatients = this.patients.filter(patient => validExternalSamples.includes(patient.externalIDs));
-        this.ndx = crossfilter(filteredPatients);
-        this.externalIDs = validExternalSamples;
-        this.selectedExternalIDs = validExternalSamples;
-        this.ClinicalFilterService.clearFilters();
-
-        this.loadCharts();
-        this.getVariantsFromFilter(this.selectedExternalIDs);
+        if(validExternalSamples.length > 0){
+            let filteredPatients = this.patients.filter(patient => validExternalSamples.includes(patient.externalIDs));
+            this.ndx = crossfilter(filteredPatients);
+            this.externalIDs = validExternalSamples;
+            this.selectedExternalIDs = validExternalSamples;
+            this.ClinicalFilterService.clearFilters();
+    
+            this.loadCharts();
+            this.getVariantsFromFilter(this.selectedExternalIDs);
+        }else{
+            this.sampleNotFound = true;
+            this.cd.detectChanges()
+        }
     }
 
     loadCharts(){

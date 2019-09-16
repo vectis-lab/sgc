@@ -1,4 +1,4 @@
-import { Component, HostListener, Input, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, HostListener, Input, OnInit, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { ScrollService } from '../../../services/scroll-service';
 import { SearchBarService } from '../../../services/search-bar-service';
@@ -9,7 +9,8 @@ const MIN_NAV_WIDTH = 1285;
 @Component({
     selector: 'app-page-container',
     templateUrl: './page-container.component.html',
-    styleUrls: ['./page-container.component.css']
+    styleUrls: ['./page-container.component.css'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PageContainerComponent implements OnInit {
     @Input() showTitle = true;

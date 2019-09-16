@@ -1,13 +1,11 @@
 import { Component, Input } from '@angular/core';
-import { ClinapiService } from '../../../services/clinapi.service';
 import { ClinicalFields } from '../../../model/clinical-fields';
 import * as _ from 'lodash/array';
 
 @Component({
     selector: 'app-demo-information',
     templateUrl: './demo-information.component.html',
-    styleUrls: ['./demo-information.component.css'],
-    providers: [ClinapiService]
+    styleUrls: ['./demo-information.component.css']
 })
 export class DemoInformationComponent{
     //Internal IDs

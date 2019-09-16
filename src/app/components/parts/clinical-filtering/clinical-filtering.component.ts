@@ -41,6 +41,7 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
     mappingSamples = [];
     mappingSamplesOnlyToAvailableFamily = [];
     searchQueries : SearchQueries;
+    selectedExternalSamples = [];
 
 
     constructor(public searchService: VariantSearchService,
@@ -77,6 +78,10 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
 
         this.subscriptions.push(this.sampleSearch.errors.subscribe((e) => {
             this.errorEvent.emit(e);
+        }));
+
+        this.subscriptions.push(this.cs.selectedExternalSamples.subscribe((samples) => {
+            this.selectedExternalSamples = samples;
         }));
 
         this.loadingVariants = true;

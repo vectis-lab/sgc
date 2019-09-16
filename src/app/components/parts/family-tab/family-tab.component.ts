@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef, OnDestroy, Input, Output, EventEmitter, OnInit, AfterViewInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectorRef, OnDestroy, Input, Output, EventEmitter, OnInit, AfterViewInit, OnChanges, SimpleChanges } from '@angular/core';
 import { SearchQueries } from '../../../model/search-query';
 import { VariantSearchService } from '../../../services/variant-search-service';
 import { Subscription } from 'rxjs/Subscription';
@@ -10,10 +10,11 @@ import { Variant } from '../../../model/variant';
   styleUrls: ['./family-tab.component.css'],
   providers: [VariantSearchService]
 })
-export class FamilyTabComponent implements AfterViewInit {
+export class FamilyTabComponent implements AfterViewInit, OnChanges {
   @Input() pheno: any;
   @Input() samples: string[];
   @Input() searchQueries: SearchQueries;
+  @Input() selectedExternalSamples: string[];
   loadingVariants = false;
   selectedExternalIDs: string[] = [];
   selectedInternalIDs: string[] = [];
@@ -37,6 +38,11 @@ export class FamilyTabComponent implements AfterViewInit {
         this.variants = v.variants;
         this.cd.detectChanges();
     }));
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    const selectedExternalSamples = changes.selectedExternalSamples.currentValue;
+    this.selectedExternalIDs = selectedExternalSamples;
   }
 
   onSelectSamples(externalSamples){

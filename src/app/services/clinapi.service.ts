@@ -12,6 +12,7 @@ import { FAKE_DEMO_DATA } from "../mocks/demodata";
 import { VariantSearchService } from './variant-search-service';
 import { Subscription } from 'rxjs/Subscription';
 import { of, throwError, Observable } from "rxjs";
+import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 
@@ -23,6 +24,8 @@ export class ClinapiService implements OnDestroy {
     subs: Subscription[] = [];
     internalSampleIDs = new Subject<string[]>();
     
+    private selectedExternalSamplesSource = new BehaviorSubject<string[]>([]);
+    selectedExternalSamples = this.selectedExternalSamplesSource.asObservable();
 
     constructor(
         private vss: VariantSearchService,
@@ -205,6 +208,10 @@ export class ClinapiService implements OnDestroy {
         }
         return v
     };
+
+    setSelectedExternalSamples(value){
+        this.selectedExternalSamplesSource.next(value);
+    }
 
     ngOnDestroy() {
         this.subs.forEach(s => s.unsubscribe());
