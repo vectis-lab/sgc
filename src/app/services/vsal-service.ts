@@ -13,7 +13,7 @@ import { of, Observable } from "rxjs";
 import { COHORT_VALUE_MAPPING_SSVS, COHORT_VALUE_MAPPING_VSAL } from '../model/cohort-value-mapping';
 
 export const VSAL_VARIANT_LIMIT = 10000;
-export const VSAL_TIMEOUT = 300000;
+export const VSAL_TIMEOUT = 7200000;
 
 @Injectable()
 export class VsalService {
