@@ -42,6 +42,7 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
     showSampleCSV: boolean = false;
     allIsChecked = false;
     sampleNotFound = false;
+    selectedExternalSamples = [];
 
     constructor(private cs: ClinapiService,
                 private cd: ChangeDetectorRef,
@@ -68,9 +69,14 @@ export class CohortInformationComponent implements AfterViewInit, OnDestroy, OnI
             this.selectedExternalIDs = this.patients
                 .filter(patient => this.selectedInternalIDs.includes(patient.internalIDs))
                 .map(patient => patient.externalIDs);
-            this.cs.setSelectedExternalSamples(this.selectedExternalIDs);
+            this.cs.setSelectedExternalSamplesClin(this.selectedExternalIDs);
             this.cd.detectChanges();
         }));
+
+        this.subscriptions.push(this.cs.selectedExternalSamplesFam.subscribe((samples) => {
+            this.selectedExternalSamples = samples;
+            this.cd.detectChanges();
+          }));
 
         this.patients = this.pheno.filter(sample => {
             return this.samples.includes(sample.internalIDs)

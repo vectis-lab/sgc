@@ -24,8 +24,11 @@ export class ClinapiService implements OnDestroy {
     subs: Subscription[] = [];
     internalSampleIDs = new Subject<string[]>();
     
-    private selectedExternalSamplesSource = new BehaviorSubject<string[]>([]);
-    selectedExternalSamples = this.selectedExternalSamplesSource.asObservable();
+    private selectedExternalSamplesClinSource = new BehaviorSubject<string[]>([]);
+    selectedExternalSamplesClin = this.selectedExternalSamplesClinSource.asObservable();
+
+    private selectedExternalSamplesFamSource = new BehaviorSubject<string[]>([]);
+    selectedExternalSamplesFam = this.selectedExternalSamplesFamSource.asObservable();
 
     constructor(
         private vss: VariantSearchService,
@@ -209,8 +212,12 @@ export class ClinapiService implements OnDestroy {
         return v
     };
 
-    setSelectedExternalSamples(value){
-        this.selectedExternalSamplesSource.next(value);
+    setSelectedExternalSamplesClin(value){
+        this.selectedExternalSamplesClinSource.next(value);
+    }
+
+    setSelectedExternalSamplesFam(value){
+        this.selectedExternalSamplesFamSource.next(value);
     }
 
     ngOnDestroy() {

@@ -13,3 +13,11 @@
 .actions{
     float: right;
 }
+
+.filter-button{
+    font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
+}
+
+.material-icons{
+    font-size: 20px;
+}

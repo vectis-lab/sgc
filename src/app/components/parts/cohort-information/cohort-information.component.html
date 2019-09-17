@@ -6,7 +6,11 @@
             selected out of <span class='total-count'></span> sample records.
         </div>
         <div class="actions">
-          <mat-slide-toggle *ngIf="family" style="vertical-align: middle;margin-right: 1em;" [(ngModel)]="includeFamily" (change)="toggleIncludeFamily($event)">Include Family</mat-slide-toggle>
+					<button mat-button *ngIf="selectedExternalSamples.length === 1" (click)="onSelectSamples(this.selectedExternalSamples)" class="filter-button">
+						<mat-icon>file_copy</mat-icon>
+						Pass sample selection
+					</button>
+					<mat-slide-toggle *ngIf="family" style="vertical-align: middle;margin-right: 1em;" [(ngModel)]="includeFamily" (change)="toggleIncludeFamily($event)">Include Family</mat-slide-toggle>
           <mat-slide-toggle style="vertical-align: middle;" [(ngModel)]="showSampleCSV">Samples CSV</mat-slide-toggle>
           <button mat-button (click)="resetFilters()" class="filter-button">
             <mat-icon>refresh</mat-icon>

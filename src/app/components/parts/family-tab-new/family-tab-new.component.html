@@ -1,5 +1,9 @@
 <div class="toolbar">
     <div class="actions">
+        <button mat-button  *ngIf="selectedExternalSamples.length === 1 && externalIDs.includes(selectedExternalSamples[0])" (click)="onSelectSamples(this.selectedExternalSamples)" class="filter-button">
+            <mat-icon>file_copy</mat-icon>
+            Pass sample selection
+        </button>
         <mat-slide-toggle style="vertical-align: middle;" [(ngModel)]="showSampleCSV">Samples CSV</mat-slide-toggle>
     </div>
 </div>

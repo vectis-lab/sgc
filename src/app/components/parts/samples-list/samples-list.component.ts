@@ -1,11 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-samples-list',
   templateUrl: './samples-list.component.html',
   styleUrls: ['./samples-list.component.css']
 })
-export class SamplesListComponent implements OnInit, OnChanges {
+export class SamplesListComponent implements OnInit {
   @Input() sampleIDs : string[] = [];
   @Input() showSampleCSV : boolean;
   @Input() selectedSamples : string[];
@@ -17,11 +17,6 @@ export class SamplesListComponent implements OnInit, OnChanges {
   constructor() { }
 
   ngOnInit() {
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    const selectedSamples = changes.selectedSamples.currentValue;
-    this.onSelect(selectedSamples);
   }
 
   resetFilter() {
