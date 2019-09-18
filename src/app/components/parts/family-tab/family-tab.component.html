@@ -1,6 +1,9 @@
 <div class="toolbar">
     <div class="actions">
-        <button mat-button  *ngIf="selectedExternalSamples.length === 1 && externalIDs.includes(selectedExternalSamples[0])" (click)="onSelectSamples(this.selectedExternalSamples)" class="filter-button">
+        <button mat-button  [disabled]="selectedExternalSamples.length !== 1 || !externalIDs.includes(selectedExternalSamples[0])" 
+        (click)="onSelectSamples(this.selectedExternalSamples)" 
+        class="filter-button"
+        [matTooltip]="selectedExternalSamples.length === 1 && externalIDs.includes(selectedExternalSamples[0])?'Pass sample selection from Clinical filtering: ' + selectedExternalSamples[0]:null">
             <mat-icon>file_copy</mat-icon>
             Pass sample selection
         </button>

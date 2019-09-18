@@ -6,7 +6,10 @@
             selected out of <span class='total-count'></span> sample records.
         </div>
         <div class="actions">
-					<button mat-button *ngIf="selectedExternalSamples.length === 1" (click)="onSelectSamples(this.selectedExternalSamples)" class="filter-button">
+					<button mat-button [disabled]="selectedExternalSamples.length !== 1" 
+					(click)="onSelectSamples(this.selectedExternalSamples)" class="filter-button"
+					[matTooltip]="selectedExternalSamples.length === 1?'Pass sample selection from Family: ' + selectedExternalSamples[0]:null"
+					>
 						<mat-icon>file_copy</mat-icon>
 						Pass sample selection
 					</button>

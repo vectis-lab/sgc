@@ -7,9 +7,9 @@ export class TableService {
 
     private displayMap: any = {
         'Location': (v: Variant) => this.locationString(v),
+        'Gene': (v: Variant) => v.geneSymbol,
         'Reference': (v: Variant) => v.r,
         'Alternate': (v: Variant) => v.a,
-        'Gene': (v: Variant) => v.geneSymbol,
         'Type': (v: Variant) => v.t,
         'dbSNP': (v: Variant) => v.rs,
         'Homozygotes Count': (v: Variant) => v.homc,
@@ -24,9 +24,9 @@ export class TableService {
 
     private searchResultKeys: any[] = [
         ['Location', true],
+        ['Gene', true],
         ['Reference', true],
         ['Alternate', true],
-        ['Gene', true],
         ['Type', false],
         ['dbSNP', false],
         ['Homozygotes Count', false],
@@ -43,9 +43,9 @@ export class TableService {
 
     readonly sortMap: any = {
         'Location': (v: Variant) => v.s,
+        'Gene': (v: Variant) => v.geneSymbol,
         'Reference': (v: Variant) => v.r,
         'Alternate': (v: Variant) => v.a,
-        'Gene': (v: Variant) => v.geneSymbol,
         'Type': (v: Variant) => v.t,
         'dbSNP': (v: Variant) => v.rs ? v.rs.match(/rs(\d+)/)[1] : 0,
         'Homozygotes Count': (v: Variant) => {
@@ -129,9 +129,9 @@ export class TableService {
     minimalView() {
         const keys: any[] = [
             ['Location', true],
+            ['Gene', true],
             ['Reference', true],
             ['Alternate', true],
-            ['Gene', true],
             ['Type', false],
             ['dbSNP', false],
             ['Homozygotes Count', false],

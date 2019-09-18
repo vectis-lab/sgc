@@ -138,13 +138,15 @@ export class FamilyTabNewComponent implements AfterViewInit {
             //check if there are other het variant for other parent within same region
             let otherHet = variantWithinRegion.find(variant => {
               if(parentOne)
-                return variant.vhetc === 1 && variant.vhetc2 === parentOne && typeof variant.vhetc1 === 'undefined'
+                return variant.vhetc === 1 && variant.vhetc2 === 1 && typeof variant.vhetc1 === 'undefined'
               else if(parentTwo)
-                return variant.vhetc === 1 && typeof variant.vhetc2 === 'undefined' && variant.vhetc1 === parentTwo
+                return variant.vhetc === 1 && typeof variant.vhetc2 === 'undefined' && variant.vhetc1 === 1
             });
 
             if(otherHet){
               return true;
+            }else{
+              return false;
             }
           }
           return false;
