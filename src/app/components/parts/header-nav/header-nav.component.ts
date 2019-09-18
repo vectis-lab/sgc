@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef, ChangeDetectorRef } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { Auth } from '../../../services/auth-service';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
@@ -37,7 +37,8 @@ export class HeaderNavComponent implements OnInit {
                 private elf: ElementRef,
                 private scrollService: ScrollService,
                 public dialog: MatDialog,
-                private searchBarService: SearchBarService) {    
+                private searchBarService: SearchBarService,
+                public cd: ChangeDetectorRef) {    
 
     }
     
@@ -54,6 +55,7 @@ export class HeaderNavComponent implements OnInit {
         this.auth.getUser().subscribe(user => {
             if(user){
                 this.userPicture = user.picture;
+                this.cd.detectChanges();
             }
         })
 

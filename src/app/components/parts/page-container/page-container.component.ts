@@ -53,7 +53,6 @@ export class PageContainerComponent implements OnInit {
                 this.totalSamplesGen = '';
                 this.totalSamplesPhen = ''; 
             }
-            this.cd.detectChanges();
         })
     }
 
