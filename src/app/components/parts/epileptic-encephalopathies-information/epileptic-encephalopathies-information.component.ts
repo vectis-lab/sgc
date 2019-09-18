@@ -1,12 +1,10 @@
 import { Component, Input } from '@angular/core';
-import { ClinapiService } from '../../../services/clinapi.service';
 import { ClinicalFields } from '../../../model/clinical-fields';
 
 @Component({
     selector: 'app-epileptic-encephalopathies-information',
     templateUrl: './epileptic-encephalopathies-information.component.html',
-    styleUrls: ['./epileptic-encephalopathies-information.component.css'],
-    providers: [ClinapiService]
+    styleUrls: ['./epileptic-encephalopathies-information.component.css']
 })
 export class EpilepticEncephalopathiesInformationComponent {
     //Internal IDs

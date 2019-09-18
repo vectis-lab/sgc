@@ -63,3 +63,23 @@ export const COHORT_PHENO_GET_MAPPING = {
     ICCon: 'getIccon',
     Demo: 'getDemo'
 }
+
+export const COHORT_SAMPLES_INFO = {
+    Demo: {
+        gen: '51',
+        phen: '51'
+    },
+    Mitochondria: {
+        gen: '30',
+        phen: '30'
+    },
+    Neuromuscular: null,
+    Acutecare: {
+        gen: '256',
+        phen: '79'
+    },
+    ['Epileptic Encephalopathies']: null,
+    ['Brain Malformations']: null,
+    Leukodystrophies: null,
+    ICCon: null
+}

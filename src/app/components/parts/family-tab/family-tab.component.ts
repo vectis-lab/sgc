@@ -1,8 +1,9 @@
-import { Component, ChangeDetectorRef, OnDestroy, Input, Output, EventEmitter, OnInit, AfterViewInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectorRef, OnDestroy, Input, Output, EventEmitter, OnInit, AfterViewInit } from '@angular/core';
 import { SearchQueries } from '../../../model/search-query';
 import { VariantSearchService } from '../../../services/variant-search-service';
 import { Subscription } from 'rxjs/Subscription';
 import { Variant } from '../../../model/variant';
+import { ClinapiService } from '../../../services/clinapi.service';
 
 @Component({
   selector: 'app-family-tab',
@@ -22,9 +23,11 @@ export class FamilyTabComponent implements AfterViewInit {
   sampleNotFound: boolean = false;
   public variants: Variant[] = [];
   private subscriptions: Subscription[] = [];
+  selectedExternalSamples = [];
 
   constructor(private cd: ChangeDetectorRef,
-              public searchService: VariantSearchService,) { }
+              public searchService: VariantSearchService,
+              public cs: ClinapiService) { }
 
   ngAfterViewInit(){
     this.externalIDs = this.pheno.filter(s => {
@@ -37,6 +40,10 @@ export class FamilyTabComponent implements AfterViewInit {
         this.variants = v.variants;
         this.cd.detectChanges();
     }));
+
+    this.subscriptions.push(this.cs.selectedExternalSamplesClin.subscribe((samples) => {
+      this.selectedExternalSamples = samples;
+    }));
   }
 
   onSelectSamples(externalSamples){
@@ -44,6 +51,7 @@ export class FamilyTabComponent implements AfterViewInit {
     this.loadingVariants = true;
     this.sampleNotFound = false;
     this.selectedExternalIDs = externalSamples;
+    this.cs.setSelectedExternalSamplesFam(externalSamples);
     let sample = this.pheno.filter(s => this.selectedExternalIDs.includes(s.externalIDs));
     if(sample.length === 0){
       this.sampleNotFound = true;

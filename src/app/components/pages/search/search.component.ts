@@ -66,6 +66,7 @@ export class SearchComponent implements  OnInit, OnDestroy {
         } else {
             this.dismissSnackBar();
         }
+        this.searchBarService.setCohort(params['cohort']);
         this.error = '';
         this.autocomplete = null;
         this.searching = true;

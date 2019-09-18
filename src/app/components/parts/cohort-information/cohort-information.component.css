@@ -54,3 +54,7 @@ mat-icon {
     max-height: 500px;
     overflow: scroll;
 }
+
+.material-icons{
+    font-size: 20px;
+}

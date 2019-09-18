@@ -96,6 +96,7 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
                 if(p['cohort']){
                     this.cohort = p['cohort'];
                     this.searchBarService.options[0].setValue(p['cohort']);
+                    this.searchBarService.setCohort(p['cohort']);
                     this.cohortMapping = COHORT_VALUE_MAPPING_MAPD[p['cohort']];
                 }
                 this.subscriptions.push(this.auth.getUserPermissions().subscribe(permissions => {

@@ -1,3 +1,4 @@
+<div *ngIf="sampleNotFound" class="message message-error">Sample not found</div>
 <div *ngIf="!error && !denied">
     <div class="toolbar">
         <div class='dc-data-count'>
@@ -5,7 +6,14 @@
             selected out of <span class='total-count'></span> sample records.
         </div>
         <div class="actions">
-          <mat-slide-toggle *ngIf="family" style="vertical-align: middle;margin-right: 1em;" [(ngModel)]="includeFamily" (change)="toggleIncludeFamily($event)">Include Family</mat-slide-toggle>
+					<button mat-button [disabled]="selectedExternalSamples.length !== 1" 
+					(click)="onSelectSamples(this.selectedExternalSamples)" class="filter-button"
+					[matTooltip]="selectedExternalSamples.length === 1?'Pass sample selection from Family: ' + selectedExternalSamples[0]:null"
+					>
+						<mat-icon>file_copy</mat-icon>
+						Pass sample selection
+					</button>
+					<mat-slide-toggle *ngIf="family" style="vertical-align: middle;margin-right: 1em;" [(ngModel)]="includeFamily" (change)="toggleIncludeFamily($event)">Include Family</mat-slide-toggle>
           <mat-slide-toggle style="vertical-align: middle;" [(ngModel)]="showSampleCSV">Samples CSV</mat-slide-toggle>
           <button mat-button (click)="resetFilters()" class="filter-button">
             <mat-icon>refresh</mat-icon>

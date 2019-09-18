@@ -7,6 +7,7 @@ export class TableService {
 
     private displayMap: any = {
         'Location': (v: Variant) => this.locationString(v),
+        'Gene': (v: Variant) => v.geneSymbol,
         'Reference': (v: Variant) => v.r,
         'Alternate': (v: Variant) => v.a,
         'Type': (v: Variant) => v.t,
@@ -23,6 +24,7 @@ export class TableService {
 
     private searchResultKeys: any[] = [
         ['Location', true],
+        ['Gene', true],
         ['Reference', true],
         ['Alternate', true],
         ['Type', false],
@@ -91,7 +93,34 @@ export class TableService {
     }
 
     sort(label: string, variants: Variant[]) {
-        return this.tableService.sort(label, variants, this.lastSortedLabel, this.sortMap, this.lastSortedOrder);
+        if (this.lastSortedLabel === label) {
+            this.lastSortedOrder = !this.lastSortedOrder;
+        } else {
+            this.lastSortedLabel = label;
+            this.lastSortedOrder = true;
+        }
+        const fn = this.sortMap[label];
+        if (this.lastSortedOrder) {
+            variants.sort((a: any, b: any) => {
+                if (fn(a) < fn(b)) {
+                    return -1;
+                } else if (fn(a) > fn(b)) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+            });
+        } else {
+            variants.sort((a: any, b: any) => {
+                if (fn(a) > fn(b)) {
+                    return -1;
+                } else if (fn(a) < fn(b)) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+            });
+        }
     }
 
     keys() {
@@ -109,6 +138,7 @@ export class TableService {
     minimalView() {
         const keys: any[] = [
             ['Location', true],
+            ['Gene', true],
             ['Reference', true],
             ['Alternate', true],
             ['Type', false],

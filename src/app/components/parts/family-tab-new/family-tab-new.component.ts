@@ -1,8 +1,9 @@
-import { Component, ChangeDetectorRef, OnDestroy, Input, Output, EventEmitter, OnInit, AfterViewInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectorRef, OnDestroy, Input, Output, EventEmitter, OnInit, AfterViewInit } from '@angular/core';
 import { SearchQueries } from '../../../model/search-query';
 import { VariantSearchService } from '../../../services/variant-search-service';
 import { Subscription } from 'rxjs/Subscription';
 import { Variant } from '../../../model/variant';
+import { ClinapiService } from '../../../services/clinapi.service';
 
 @Component({
   selector: 'app-family-tab-new',
@@ -24,9 +25,11 @@ export class FamilyTabNewComponent implements AfterViewInit {
   private unfilteredVariants: Variant[] = [];
   private subscriptions: Subscription[] = [];
   familyMembers: any[];
+  selectedExternalSamples = [];
 
   constructor(private cd: ChangeDetectorRef,
-              public searchService: VariantSearchService,) { }
+              public searchService: VariantSearchService,
+              public cs: ClinapiService) { }
 
   ngAfterViewInit(){
     this.externalIDs = this.pheno.filter(s => {
@@ -39,6 +42,10 @@ export class FamilyTabNewComponent implements AfterViewInit {
         this.variants = v.variants;
         this.cd.detectChanges();
     }));
+
+    this.subscriptions.push(this.cs.selectedExternalSamplesClin.subscribe((samples) => {
+      this.selectedExternalSamples = samples;
+    }));
   }
 
   onSelectSamples(externalSamples){
@@ -46,6 +53,7 @@ export class FamilyTabNewComponent implements AfterViewInit {
     this.loadingVariants = true;
     this.sampleNotFound = false;
     this.selectedExternalIDs = externalSamples;
+    this.cs.setSelectedExternalSamplesFam(externalSamples);
     let sample = this.pheno.filter(s => this.selectedExternalIDs.includes(s.externalIDs) && s.familyId);
     if(sample.length === 0){
       this.sampleNotFound = true;
@@ -110,6 +118,39 @@ export class FamilyTabNewComponent implements AfterViewInit {
       });
         break;
       case 'Compound heterozygous':
+        this.variants = this.unfilteredVariants.filter(v => {
+          if(v.vhetc === 1 && ((v.vhetc1 === 1 && typeof v.vhetc2 === 'undefined')|| (v.vhetc2 === 1 && typeof v.vhetc1 === 'undefined'))){
+            let geneDetails = null;
+            let parentOne = v.vhetc1;
+            let parentTwo = v.vhetc2;
+            //Check which region does it belong to
+            this.searchService.lastQuery.regions.find(r => {
+              r.genes.find(g => {
+                if(g.chromosome === v.c && g.start <= v.s && g.end >= v.s){
+                  geneDetails = g;
+                  return true;
+                }
+              })
+              return false;
+            })
+            let variantWithinRegion = this.unfilteredVariants.filter(variant => geneDetails && variant.c === geneDetails.chromosome && variant.s >= geneDetails.start && variant.s <= geneDetails.end);
+
+            //check if there are other het variant for other parent within same region
+            let otherHet = variantWithinRegion.find(variant => {
+              if(parentOne)
+                return variant.vhetc === 1 && variant.vhetc2 === 1 && typeof variant.vhetc1 === 'undefined'
+              else if(parentTwo)
+                return variant.vhetc === 1 && typeof variant.vhetc2 === 'undefined' && variant.vhetc1 === 1
+            });
+
+            if(otherHet){
+              return true;
+            }else{
+              return false;
+            }
+          }
+          return false;
+        });
         break;
       case 'De novo dominant':
       this.variants = this.unfilteredVariants.filter(v => {

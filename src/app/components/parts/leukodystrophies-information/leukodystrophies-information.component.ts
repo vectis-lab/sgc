@@ -1,12 +1,10 @@
 import { Component, Input } from '@angular/core';
-import { ClinapiService } from '../../../services/clinapi.service';
 import { ClinicalFields } from '../../../model/clinical-fields';
 
 @Component({
     selector: 'app-leukodystrophies-information',
     templateUrl: './leukodystrophies-information.component.html',
-    styleUrls: ['./leukodystrophies-information.component.css'],
-    providers: [ClinapiService]
+    styleUrls: ['./leukodystrophies-information.component.css']
 })
 export class LeukodystrophiesInformationComponent {
     //Internal IDs

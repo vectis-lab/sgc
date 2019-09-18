@@ -11,6 +11,8 @@ export class Chart {
                 public filterHandler:any = null,
                 public xAxisLabel: string = "",
                 public yAxisLabel: string = "",
+                public start: number = null,
+                public end: number = null
             ) {
     }
 }

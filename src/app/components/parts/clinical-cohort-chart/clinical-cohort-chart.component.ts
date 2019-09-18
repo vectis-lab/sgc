@@ -40,7 +40,7 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
         } else if (this.data.type === "pie"){
             this.initPie();
         }else if (this.data.type === "bar"){
-            this.initBarChart();
+            this.initBarChart(this.data.start, this.data.end);
         }
 
 
@@ -121,11 +121,11 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
         }
     }
 
-    initBarChart() {
+    initBarChart(start, end) {
         this.chart = dc.barChart(`.chart .${this.data.name}`)
             .width(this.data.width)
             .height(this.data.height)
-            .x(d3.scale.linear().domain([0, 100]))
+            .x(d3.scale.linear().domain([start, end]))
             .elasticY(true)
             .yAxisLabel(this.data.yAxisLabel)
             .xAxisLabel(this.data.xAxisLabel)
