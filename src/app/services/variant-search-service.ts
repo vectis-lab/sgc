@@ -35,7 +35,7 @@ export class VariantSearchService {
                         vr.variants = this.filter(vr.variants);
                     }
                     vr.variants.forEach(v =>{
-                        query.regions.find(r =>{
+                        query.regions.filter(r =>{
                             return typeof r.genes.find(region => {
                                 if(region.symbol && v.s >= region.start && v.s <= region.end){
                                     v.geneSymbol = region.symbol;
@@ -92,7 +92,7 @@ export class VariantSearchService {
         const promise = new Promise<any[]>((resolve, reject) => {
             this.vsal.getVariants(query, samples, false).subscribe((vr: VariantRequest) => {
                 vr.variants.forEach(v =>{
-                    this.lastQuery.regions.find(r =>{
+                    this.lastQuery.regions.filter(r =>{
                         return typeof r.genes.find(region => {
                             if(region.symbol && v.s >= region.start && v.s <= region.end){
                                 v.geneSymbol = region.symbol;

@@ -35,6 +35,7 @@ export class TableFamilyService {
                 return 25 * 10000000000 + v.s;
             }
         },
+        'Gene': (v:Variant) => v.geneSymbol,
         'Reference': (v: Variant) => v.r,
         'Alternate': (v: Variant) => v.a,
     };
@@ -146,6 +147,7 @@ export class TableFamilyService {
                     return 25 * 10000000000 + v.s;
                 }
             },
+            'Gene': (v:Variant) => v.geneSymbol,
             'Reference': (v: Variant) => v.r,
             'Alternate': (v: Variant) => v.a,
         };
