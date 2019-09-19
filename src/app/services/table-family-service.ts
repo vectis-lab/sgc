@@ -100,7 +100,7 @@ export class TableFamilyService {
     }
 
     familyHetHomDisplay(v: Variant, i){
-        if(typeof v[`vhetc${i}`] === 'undefined'){
+        if(v[`vhetc${i}`] === -1){
             return 'ref'
         }
         else if(v[`vhetc${i}`] === 0){

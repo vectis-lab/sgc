@@ -35,13 +35,14 @@ export class VariantSearchService {
                         vr.variants = this.filter(vr.variants);
                     }
                     vr.variants.forEach(v =>{
-                        query.regions.filter(r =>{
+                        query.regions.find(r =>{
                             return typeof r.genes.find(region => {
                                 if(region.symbol && v.s >= region.start && v.s <= region.end){
                                     v.geneSymbol = region.symbol;
                                     return true
                                 }
-                            })!== undefined
+                                return false;
+                            })!== 'undefined'
                         });
                         if(!v.geneSymbol){
                             v.geneSymbol = "None"
@@ -92,13 +93,14 @@ export class VariantSearchService {
         const promise = new Promise<any[]>((resolve, reject) => {
             this.vsal.getVariants(query, samples, false).subscribe((vr: VariantRequest) => {
                 vr.variants.forEach(v =>{
-                    this.lastQuery.regions.filter(r =>{
+                    this.lastQuery.regions.find(r =>{
                         return typeof r.genes.find(region => {
                             if(region.symbol && v.s >= region.start && v.s <= region.end){
                                 v.geneSymbol = region.symbol;
                                 return true
                             }
-                        }) !== undefined
+                            return false
+                        }) !== 'undefined'
                     });
                     if(!v.geneSymbol){
                         v.geneSymbol = "None"

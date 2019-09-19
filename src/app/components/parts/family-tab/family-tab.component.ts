@@ -88,6 +88,18 @@ export class FamilyTabComponent implements AfterViewInit {
           hash[tempVariant][`vhetc${i}`] = variants[i][j]['vhetc'];
           hash[tempVariant][`vhomc${i}`] = variants[i][j]['vhomc'];
         }
+        if(typeof hash[tempVariant]['vhetc'] === 'undefined'){
+          hash[tempVariant]['vhetc']= -1;
+          hash[tempVariant]['vhomc']= -1;
+        }
+        if(typeof hash[tempVariant]['vhetc1'] === 'undefined'){
+          hash[tempVariant]['vhetc1']= -1;
+          hash[tempVariant]['vhomc1']= -1;
+        }
+        if(typeof hash[tempVariant]['vhetc2'] === 'undefined'){
+          hash[tempVariant]['vhetc2']= -1;
+          hash[tempVariant]['vhomc2']= -1;
+        }
       }
     }
     res = Object.values(hash);

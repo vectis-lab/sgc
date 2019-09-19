@@ -53,13 +53,13 @@ export class FilterFamilyService {
             return variants;
         }
         let  args = this.parseCommand(command);
-        if(!['Location', 'Reference', 'Alternate'].includes(args[2])){
+        if(!['Location', 'Gene', 'Reference', 'Alternate'].includes(args[2])){
             if(args[4] === 'het'){
                 args[4] = '1';
             }else if(args[4] === 'hom'){
                 args[4] = '0';
-            }else{
-                args[4] = '2';
+            }else if(args[4] === 'ref'){
+                args[4] = '-1';
             }
         }
 

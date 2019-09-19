@@ -96,6 +96,18 @@ export class FamilyTabNewComponent implements AfterViewInit {
           hash[tempVariant][`vhetc${i}`] = variants[i][j]['vhetc'];
           hash[tempVariant][`vhomc${i}`] = variants[i][j]['vhomc'];
         }
+        if(typeof hash[tempVariant]['vhetc'] === 'undefined'){
+          hash[tempVariant]['vhetc']= -1;
+          hash[tempVariant]['vhomc']= -1;
+        }
+        if(typeof hash[tempVariant]['vhetc1'] === 'undefined'){
+          hash[tempVariant]['vhetc1']= -1;
+          hash[tempVariant]['vhomc1']= -1;
+        }
+        if(typeof hash[tempVariant]['vhetc2'] === 'undefined'){
+          hash[tempVariant]['vhetc2']= -1;
+          hash[tempVariant]['vhomc2']= -1;
+        }
       }
     }
     res = Object.values(hash);
@@ -109,7 +121,7 @@ export class FamilyTabNewComponent implements AfterViewInit {
         break;
       case 'Heterozygous dominant':
         this.variants = this.unfilteredVariants.filter(v => {
-          return (v.vhetc === 1) && ((v.vhetc1 ===1 && typeof v.vhetc2 ==='undefined') || (typeof v.vhetc1 ==='undefined' && v.vhetc2 ===1));
+          return (v.vhetc === 1) && ((v.vhetc1 ===1 && v.vhetc2 === -1) || (v.vhetc1 === -1 && v.vhetc2 ===1));
         });
         break;
       case 'Homozygous recessive':
@@ -119,7 +131,7 @@ export class FamilyTabNewComponent implements AfterViewInit {
         break;
       case 'Compound heterozygous':
         this.variants = this.unfilteredVariants.filter(v => {
-          if(v.vhetc === 1 && ((v.vhetc1 === 1 && typeof v.vhetc2 === 'undefined')|| (v.vhetc2 === 1 && typeof v.vhetc1 === 'undefined'))){
+          if(v.vhetc === 1 && ((v.vhetc1 === 1 && v.vhetc2 === -1)|| (v.vhetc2 === 1 && v.vhetc1 === -1))){
             let geneDetails = null;
             let parentOne = v.vhetc1;
             let parentTwo = v.vhetc2;
@@ -138,9 +150,9 @@ export class FamilyTabNewComponent implements AfterViewInit {
             //check if there are other het variant for other parent within same region
             let otherHet = variantWithinRegion.find(variant => {
               if(parentOne)
-                return variant.vhetc === 1 && variant.vhetc2 === 1 && typeof variant.vhetc1 === 'undefined'
+                return variant.vhetc === 1 && variant.vhetc2 === 1 && variant.vhetc1 === -1
               else if(parentTwo)
-                return variant.vhetc === 1 && typeof variant.vhetc2 === 'undefined' && variant.vhetc1 === 1
+                return variant.vhetc === 1 && variant.vhetc2 === -1 && variant.vhetc1 === 1
             });
 
             if(otherHet){
@@ -154,7 +166,7 @@ export class FamilyTabNewComponent implements AfterViewInit {
         break;
       case 'De novo dominant':
       this.variants = this.unfilteredVariants.filter(v => {
-        return (v.vhetc === 1) && ((typeof v.vhetc1 ==='undefined' && typeof v.vhetc2 ==='undefined') || (v.vhetc1 === 0 && v.vhetc2 === 0));
+        return (v.vhetc === 1) && ((v.vhetc1 === -1 && v.vhetc2 === -1) || (v.vhetc1 === 0 && v.vhetc2 === 0));
       });
         break;
     }
