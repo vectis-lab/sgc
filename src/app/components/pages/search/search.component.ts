@@ -14,7 +14,8 @@ const SMALL_WIDTH = 720;
 @Component({
     selector: 'app-search',
     templateUrl: './search.component.html',
-    styleUrls: ['./search.component.css']
+    styleUrls: ['./search.component.css'],
+    providers: [SearchBarService]
 })
 export class SearchComponent implements  OnInit, OnDestroy {
     subscriptions: Subscription[] = [];
