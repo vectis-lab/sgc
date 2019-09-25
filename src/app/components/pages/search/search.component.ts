@@ -49,6 +49,7 @@ export class SearchComponent implements  OnInit, OnDestroy {
         this.auth.getSavedSearches().subscribe(savedSearches => {
             this.clinicalFilteringService.initSaveSearches(savedSearches);
         })
+        this.searchBarService.query ="";
         }
 
     parseParams(params: Params) {
