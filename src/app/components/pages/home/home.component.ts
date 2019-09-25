@@ -4,6 +4,7 @@ import { Initiative } from '../../../model/initiative';
 import { InitiativeService } from '../../../services/project-data/initiative-service';
 import { Router } from '@angular/router';
 import { ScrollService } from '../../../services/scroll-service';
+import { SearchBarService } from '../../../services/search-bar-service';
 import { Auth } from '../../../services/auth-service';
 
 @Component({
@@ -21,7 +22,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     constructor(public scrollService: ScrollService,
                 private initiativeService: InitiativeService,
                 private router: Router,
-                private auth: Auth
+                private auth: Auth,
+                private searchBarService: SearchBarService
             ) {
     }
 
@@ -36,6 +38,8 @@ export class HomeComponent implements OnInit, OnDestroy {
                 'background-color': `rgba(20, 20, 40, ${o})`,
             };
         }));
+
+        this.searchBarService.query="";
     }
 
     search() {
