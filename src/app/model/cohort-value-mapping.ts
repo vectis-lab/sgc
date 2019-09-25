@@ -2,9 +2,9 @@ export const COHORT_VALUE_MAPPING_VSAL = {
     Mitochondria: 'mito',
     Acutecare: 'acutecare',
     Neuromuscular: 'demo',
-    ['Epileptic Encephalopathies']: 'demo',
-    ['Brain Malformations']: 'demo',
-    Leukodystrophies: 'demo',
+    ['Epileptic Encephalopathies']: 'ee',
+    ['Brain Malformations']: 'bm',
+    Leukodystrophies: 'leukodystrophies',
     ICCon: 'demo',
     Demo: 'demo'
 }
@@ -13,9 +13,9 @@ export const COHORT_VALUE_MAPPING_SSVS = {
     Mitochondria: 'mito',
     Acutecare: 'acutecare',
     Neuromuscular: 'demo',
-    ['Epileptic Encephalopathies']: 'demo',
-    ['Brain Malformations']: 'demo',
-    Leukodystrophies: 'demo',
+    ['Epileptic Encephalopathies']: 'ee',
+    ['Brain Malformations']: 'bm',
+    Leukodystrophies: 'leukodystrophies',
     ICCon: 'demo',
     Demo: 'demo'
 }
@@ -24,9 +24,9 @@ export const COHORT_VALUE_MAPPING_MAPD = {
     Mitochondria: 'mito',
     Acutecare: 'acutecare',
     Neuromuscular: 'demo',
-    ['Epileptic Encephalopathies']: 'demo',
-    ['Brain Malformations']: 'demo',
-    Leukodystrophies: 'demo',
+    ['Epileptic Encephalopathies']: 'ee',
+    ['Brain Malformations']: 'bm',
+    Leukodystrophies: 'leukodystrophies',
     ICCon: 'demo',
     Demo: 'demo'
 }
@@ -78,8 +78,17 @@ export const COHORT_SAMPLES_INFO = {
         gen: '256',
         phen: '79'
     },
-    ['Epileptic Encephalopathies']: null,
-    ['Brain Malformations']: null,
-    Leukodystrophies: null,
+    ['Epileptic Encephalopathies']: {
+        gen: '30',
+        phen: '30'
+    },
+    ['Brain Malformations']: {
+        gen: '41',
+        phen: '41'
+    },
+    Leukodystrophies: {
+        gen: '7',
+        phen: '7'
+    },
     ICCon: null
 }

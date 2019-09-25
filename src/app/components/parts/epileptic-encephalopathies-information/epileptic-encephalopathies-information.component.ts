@@ -13,14 +13,27 @@ export class EpilepticEncephalopathiesInformationComponent {
     @Input() pheno: any[] = [];
     permission: string = 'ee/pheno'
     clinicalFields: ClinicalFields[] = [
-        new ClinicalFields('Data Access Group', 'dataAccessGroup', 'pie'),
+        new ClinicalFields('Sex', 'sex', 'pie'),
+        new ClinicalFields('Ethnicity', 'ethnicity', 'row'),
+        new ClinicalFields('Maternal Ethnicity', 'maternalEthnicity', 'row', false),
+        new ClinicalFields('Paternal Ethnicity', 'PaternalEthnicity', 'row', false),
+        new ClinicalFields('Is mother affected?', 'isMotherAffected', 'pie', false),
+        new ClinicalFields('Is father affected?', 'isFatherAffected', 'pie', false),
+        new ClinicalFields('Consanguinity', 'consanguinity', 'pie'),
         new ClinicalFields('Age of onset', 'ageOfOnset', 'row'),
-        new ClinicalFields('Age of peak seizure frequency', 'ageOfPeakSeizureFrequency', 'row', false),
-        new ClinicalFields('Ongoing seizures', 'ongoingSeizures', 'pie', false),
-        new ClinicalFields('Status', 'status', 'row', false),
-        new ClinicalFields('Number of seizure types', 'numberOfSeizureTypes', 'row', false),
-        new ClinicalFields('Seizure type', 'seizureType', 'row', false),
-        new ClinicalFields('Hemiclonic', 'hemiclonic', 'pie', false),
+        new ClinicalFields('Seizure type', 'seizureType', 'row'),
+        new ClinicalFields('Epileptic syndrome at presentation', 'epilepticSyndromeAtPresentation' , 'row', false),
+        new ClinicalFields('Epileptic syndrome at evolution', 'epilepticSyndromeAtEvolution', 'row', false),
+        new ClinicalFields('Beneficial treatment', 'beneficialTreatment', 'row', false),
+        new ClinicalFields('Exacerbating treatment', 'exacerbatingTreatment', 'row', false),
+        new ClinicalFields('Developmental regressed', 'developmentalRegressed', 'pie', false),
+        new ClinicalFields('Developmental outcome', 'developmentalOutcome', 'pie', false),
+        new ClinicalFields('Autism spectrum disorder', 'autismSpectrumDisorder', 'pie', false),
+        new ClinicalFields('Movement disorder', 'movementDisorder', 'row', false),
+        new ClinicalFields('Head size', 'headSize', 'row', false),
+        new ClinicalFields('Dysmorphic features', 'dysmorphicFeatures', 'row', false),
+        new ClinicalFields('Growth abnormality', 'growthAbnormality', 'pie', false),
+        new ClinicalFields('Psychiatric behavioural problems', 'psychiatricBehaviouralProblems', 'row', false),
     ];
     phenoService: string = 'getEpilepticEncephalopathies'
 

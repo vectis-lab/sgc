@@ -7,7 +7,8 @@
         </div>
         <div class="actions">
 					<button mat-button [disabled]="selectedExternalSamples.length !== 1" 
-					(click)="onSelectSamples(this.selectedExternalSamples)" class="filter-button"
+                    (click)="onSelectSamples(this.selectedExternalSamples)" class="filter-button"
+                    *ngIf="familyWithPheno"
 					[matTooltip]="selectedExternalSamples.length === 1?'Pass sample selection from Family: ' + selectedExternalSamples[0]:null"
 					>
 						<mat-icon>file_copy</mat-icon>
