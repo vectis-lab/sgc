@@ -23,7 +23,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A0123028",
     "externalIDs": "A0123028",
-    "Psychiatric behavioural problems": "No"
+    "Psychiatric behavioural problems": "No",
+    "Number of variants reported": 0,
+    "Variant 1 class": "",
+    "Variant 2 class": "",
+    "Variant 3 class": "",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "18W000958",
@@ -49,7 +55,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A0123029",
     "externalIDs": "A0123029",
-    "Psychiatric behavioural problems": "No"
+    "Psychiatric behavioural problems": "No",
+    "Number of variants reported": 2,
+    "Variant 1 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 2 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 3 class": "",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "18W001436",
@@ -75,7 +87,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A0123030",
     "externalIDs": "A0123030",
-    "Psychiatric behavioural problems": "poor sleep, difficult behaviour"
+    "Psychiatric behavioural problems": "poor sleep, difficult behaviour",
+    "Number of variants reported": 2,
+    "Variant 1 class": "3A (VUS with high clinical significance (not enough information to classify them as class 4)",
+    "Variant 2 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 3 class": "",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "18W001355",
@@ -101,7 +119,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A0123031",
     "externalIDs": "A0123031",
-    "Psychiatric behavioural problems": "No"
+    "Psychiatric behavioural problems": "No",
+    "Number of variants reported": 4,
+    "Variant 1 class": "5 (Pathogenic (considered disease-causing))",
+    "Variant 2 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 3 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 4 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "19W000178",
@@ -127,7 +151,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A0123032",
     "externalIDs": "A0123032",
-    "Psychiatric behavioural problems": "No"
+    "Psychiatric behavioural problems": "No",
+    "Number of variants reported": 1,
+    "Variant 1 class": "5 (Pathogenic (considered disease-causing))",
+    "Variant 2 class": "",
+    "Variant 3 class": "",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "19W000054",
@@ -153,7 +183,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A0123033",
     "externalIDs": "A0123033",
-    "Psychiatric behavioural problems": "Can be aggressive"
+    "Psychiatric behavioural problems": "Can be aggressive",
+    "Number of variants reported": 0,
+    "Variant 1 class": "",
+    "Variant 2 class": "",
+    "Variant 3 class": "",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "19W000044",
@@ -179,7 +215,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A0123034",
     "externalIDs": "A0123034",
-    "Psychiatric behavioural problems": "No"
+    "Psychiatric behavioural problems": "No",
+    "Number of variants reported": 2,
+    "Variant 1 class": "4 (Likely pathogenic)",
+    "Variant 2 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 3 class": "",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "19W000097",
@@ -205,7 +247,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A0123035",
     "externalIDs": "A0123035",
-    "Psychiatric behavioural problems": "No"
+    "Psychiatric behavioural problems": "No",
+    "Number of variants reported": 3,
+    "Variant 1 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 2 class": "3C ( VUS with low clinical significance, the evidence suggesting they are likely to be benign)",
+    "Variant 3 class": "3C ( VUS with low clinical significance, the evidence suggesting they are likely to be benign)",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "18W001316",
@@ -231,7 +279,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "Small for age",
     "internalIDs": "A0123036",
     "externalIDs": "A0123036",
-    "Psychiatric behavioural problems": ""
+    "Psychiatric behavioural problems": "",
+    "Number of variants reported": 3,
+    "Variant 1 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 2 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 3 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "18W001332",
@@ -257,7 +311,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A0223003",
     "externalIDs": "A0223003",
-    "Psychiatric behavioural problems": "Over friendly"
+    "Psychiatric behavioural problems": "Over friendly",
+    "Number of variants reported": 2,
+    "Variant 1 class": "3A (VUS with high clinical significance (not enough information to classify them as class 4)",
+    "Variant 2 class": "5 (Pathogenic (considered disease-causing))",
+    "Variant 3 class": "",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "17W000993",
@@ -283,7 +343,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A0323001",
     "externalIDs": "A0323001",
-    "Psychiatric behavioural problems": ""
+    "Psychiatric behavioural problems": "",
+    "Number of variants reported": 1,
+    "Variant 1 class": "5 (Pathogenic (considered disease-causing))",
+    "Variant 2 class": "",
+    "Variant 3 class": "",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "18W000722",
@@ -309,7 +375,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A0323002",
     "externalIDs": "A0323002",
-    "Psychiatric behavioural problems": "No"
+    "Psychiatric behavioural problems": "No",
+    "Number of variants reported": 1,
+    "Variant 1 class": "5 (Pathogenic (considered disease-causing))",
+    "Variant 2 class": "",
+    "Variant 3 class": "",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "18W000723",
@@ -335,7 +407,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A0323003",
     "externalIDs": "A0323003",
-    "Psychiatric behavioural problems": "No"
+    "Psychiatric behavioural problems": "No",
+    "Number of variants reported": 1,
+    "Variant 1 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 2 class": "",
+    "Variant 3 class": "",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "18W001308",
@@ -361,7 +439,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A0323005",
     "externalIDs": "A0323005",
-    "Psychiatric behavioural problems": "No"
+    "Psychiatric behavioural problems": "No",
+    "Number of variants reported": 2,
+    "Variant 1 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 2 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 3 class": "",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "19W000052",
@@ -387,7 +471,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A0323008",
     "externalIDs": "A0323008",
-    "Psychiatric behavioural problems": "No"
+    "Psychiatric behavioural problems": "No",
+    "Number of variants reported": 4,
+    "Variant 1 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 2 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 3 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 4 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "19W000024",
@@ -413,7 +503,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A0323011",
     "externalIDs": "A0323011",
-    "Psychiatric behavioural problems": "No"
+    "Psychiatric behavioural problems": "No",
+    "Number of variants reported": 1,
+    "Variant 1 class": "5 (Pathogenic (considered disease-causing))",
+    "Variant 2 class": "",
+    "Variant 3 class": "",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "19W000026",
@@ -439,7 +535,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A0323012",
     "externalIDs": "A0323012",
-    "Psychiatric behavioural problems": "No"
+    "Psychiatric behavioural problems": "No",
+    "Number of variants reported": 1,
+    "Variant 1 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 2 class": "",
+    "Variant 3 class": "",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "18W001479",
@@ -465,7 +567,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A0423011",
     "externalIDs": "A0423011",
-    "Psychiatric behavioural problems": "No"
+    "Psychiatric behavioural problems": "No",
+    "Number of variants reported": 3,
+    "Variant 1 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 2 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 3 class": "3C ( VUS with low clinical significance, the evidence suggesting they are likely to be benign)",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "17W000995",
@@ -491,7 +599,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A0823002",
     "externalIDs": "A0823002",
-    "Psychiatric behavioural problems": "No"
+    "Psychiatric behavioural problems": "No",
+    "Number of variants reported": 0,
+    "Variant 1 class": "",
+    "Variant 2 class": "",
+    "Variant 3 class": "",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "18W001240",
@@ -517,7 +631,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A0823007",
     "externalIDs": "A0823007",
-    "Psychiatric behavioural problems": "No"
+    "Psychiatric behavioural problems": "No",
+    "Number of variants reported": 1,
+    "Variant 1 class": "5 (Pathogenic (considered disease-causing))",
+    "Variant 2 class": "",
+    "Variant 3 class": "",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "18W000151",
@@ -543,7 +663,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A1123001",
     "externalIDs": "A1123001",
-    "Psychiatric behavioural problems": "Hyperactivity, agitation on clondine"
+    "Psychiatric behavioural problems": "Hyperactivity, agitation on clondine",
+    "Number of variants reported": 0,
+    "Variant 1 class": "",
+    "Variant 2 class": "",
+    "Variant 3 class": "",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "18W000004",
@@ -569,7 +695,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A1423011",
     "externalIDs": "A1423011",
-    "Psychiatric behavioural problems": "No"
+    "Psychiatric behavioural problems": "No",
+    "Number of variants reported": 1,
+    "Variant 1 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 2 class": "",
+    "Variant 3 class": "",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "18W000121",
@@ -595,7 +727,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A1423013",
     "externalIDs": "A1423013",
-    "Psychiatric behavioural problems": "No"
+    "Psychiatric behavioural problems": "No",
+    "Number of variants reported": 1,
+    "Variant 1 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 2 class": "",
+    "Variant 3 class": "",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "18W001192",
@@ -621,7 +759,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A1423022",
     "externalIDs": "A1423022",
-    "Psychiatric behavioural problems": "No"
+    "Psychiatric behavioural problems": "No",
+    "Number of variants reported": 1,
+    "Variant 1 class": "3C ( VUS with low clinical significance, the evidence suggesting they are likely to be benign)",
+    "Variant 2 class": "",
+    "Variant 3 class": "",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "18W001484",
@@ -647,7 +791,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "Large for age",
     "internalIDs": "A1423024",
     "externalIDs": "A1423024",
-    "Psychiatric behavioural problems": "extreme hyperactivity"
+    "Psychiatric behavioural problems": "extreme hyperactivity",
+    "Number of variants reported": 1,
+    "Variant 1 class": "5 (Pathogenic (considered disease-causing))",
+    "Variant 2 class": "",
+    "Variant 3 class": "",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "18W001489",
@@ -673,7 +823,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A1423025",
     "externalIDs": "A1423025",
-    "Psychiatric behavioural problems": "No"
+    "Psychiatric behavioural problems": "No",
+    "Number of variants reported": 2,
+    "Variant 1 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 2 class": "3C ( VUS with low clinical significance, the evidence suggesting they are likely to be benign)",
+    "Variant 3 class": "",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "19W000032",
@@ -699,7 +855,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A1423026",
     "externalIDs": "A1423026",
-    "Psychiatric behavioural problems": "No"
+    "Psychiatric behavioural problems": "No",
+    "Number of variants reported": 3,
+    "Variant 1 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 2 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 3 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "18W001573 ",
@@ -725,7 +887,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A1423027",
     "externalIDs": "A1423027",
-    "Psychiatric behavioural problems": "ADHD - treated on Ritalin"
+    "Psychiatric behavioural problems": "ADHD - treated on Ritalin",
+    "Number of variants reported": 3,
+    "Variant 1 class": "3C ( VUS with low clinical significance, the evidence suggesting they are likely to be benign)",
+    "Variant 2 class": "3C ( VUS with low clinical significance, the evidence suggesting they are likely to be benign)",
+    "Variant 3 class": "3C ( VUS with low clinical significance, the evidence suggesting they are likely to be benign)",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "19W000059",
@@ -751,7 +919,13 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A1423028",
     "externalIDs": "A1423028",
-    "Psychiatric behavioural problems": "No"
+    "Psychiatric behavioural problems": "No",
+    "Number of variants reported": 2,
+    "Variant 1 class": "3B ( VUS with insufficient evidence to classify it as either disease causing or likely benign)",
+    "Variant 2 class": "3C ( VUS with low clinical significance, the evidence suggesting they are likely to be benign)",
+    "Variant 3 class": "",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   },
   {
     "Clinical Exome Sample Number": "19W000060",
@@ -777,6 +951,12 @@ export const FAKE_EPILEPTIC_ENCEPHALOPATHIES = [
     "Growth abnormality": "No",
     "internalIDs": "A1423029",
     "externalIDs": "A1423029",
-    "Psychiatric behavioural problems": "tantrums"
+    "Psychiatric behavioural problems": "tantrums",
+    "Number of variants reported": 1,
+    "Variant 1 class": "4 (Likely pathogenic)",
+    "Variant 2 class": "",
+    "Variant 3 class": "",
+    "Variant 4 class": "",
+    "Variant 5 class": ""
   }
 ]
