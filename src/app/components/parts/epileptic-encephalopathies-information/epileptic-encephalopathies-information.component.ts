@@ -34,6 +34,12 @@ export class EpilepticEncephalopathiesInformationComponent {
         new ClinicalFields('Dysmorphic features', 'dysmorphicFeatures', 'row', false),
         new ClinicalFields('Growth abnormality', 'growthAbnormality', 'pie', false),
         new ClinicalFields('Psychiatric behavioural problems', 'psychiatricBehaviouralProblems', 'row', false),
+        new ClinicalFields('Number of variants reported', 'numberOfVariantsReported', 'row'),
+        new ClinicalFields('Variant 1 class', 'variant1Class', 'row'),
+        new ClinicalFields('Variant 2 class', 'variant2Class', 'row'),
+        new ClinicalFields('Variant 3 class', 'variant3Class', 'row'),
+        new ClinicalFields('Variant 4 class', 'variant4Class', 'row'),
+        new ClinicalFields('Variant 5 class', 'variant5Class', 'row'),
     ];
     phenoService: string = 'getEpilepticEncephalopathies'
 
