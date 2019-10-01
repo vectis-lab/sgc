@@ -1,13 +1,6 @@
 import { Injectable, OnDestroy } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 import { FAKE_CLINICAL_DATA } from "../mocks/clindata";
-import { FAKE_MITOCHONDRIA_DATA } from "../mocks/mitodata";
-import { FAKE_NEUROMUSCULAR_DATA } from "../mocks/neuromusculardata";
-import { FAKE_BRAIN_MALFORMATIONS_DATA } from "../mocks/brainmalformationsdata";
-import { FAKE_EPILEPTIC_ENCEPHALOPATHIES } from "../mocks/epilepticencephalopathiesdata";
-import { FAKE_ICCON_DATA } from "../mocks/iccon";
-import { FAKE_LEUKODYSTROPHIES_DATA } from "../mocks/leukodystrophiesdata";
-import { FAKE_ACUTE_CARE_DATA, FAKE_ACUTE_CARE_DATA_COMBINED } from "../mocks/acutecaredata";
 import { FAKE_DEMO_DATA } from "../mocks/demodata";
 import { VariantSearchService } from './variant-search-service';
 import { Subscription } from 'rxjs/Subscription';
@@ -71,7 +64,7 @@ export class ClinapiService implements OnDestroy {
         }//if not authorize but want to see demo
         else if(demo){
             console.log("DEMO")
-            return of<any>(FAKE_MITOCHONDRIA_DATA);
+            return of<any>([]);
         }//if not authorize and not opt to see demo
         else {
             return throwError({ status: 401 });
@@ -89,7 +82,7 @@ export class ClinapiService implements OnDestroy {
         }//if not authorize but want to see demo
         else if(demo){
             console.log("DEMO")
-            return of<any>(FAKE_NEUROMUSCULAR_DATA);
+            return of<any>([]);
         }//if not authorize and not opt to see demo
         else {
             return throwError({ status: 401 });
@@ -107,7 +100,7 @@ export class ClinapiService implements OnDestroy {
         }//if not authorize but want to see demo
         else if(demo){
             console.log("DEMO")
-            return of<any>(FAKE_ACUTE_CARE_DATA);
+            return of<any>([]);
         }//if not authorize and not opt to see demo
         else {
             return throwError({ status: 401 });
@@ -125,7 +118,7 @@ export class ClinapiService implements OnDestroy {
         }//if not authorize but want to see demo
         else if(demo){
             console.log("DEMO")
-            return of<any>(FAKE_BRAIN_MALFORMATIONS_DATA);
+            return of<any>([]);
         }//if not authorize and not opt to see demo
         else {
             return throwError({ status: 401 });
@@ -143,7 +136,7 @@ export class ClinapiService implements OnDestroy {
         }//if not authorize but want to see demo
         else if(demo){
             console.log("DEMO")
-            return of<any>(FAKE_LEUKODYSTROPHIES_DATA);
+            return of<any>([]);
         }//if not authorize and not opt to see demo
         else {
             return throwError({ status: 401 });
@@ -161,7 +154,7 @@ export class ClinapiService implements OnDestroy {
         }//if not authorize but want to see demo
         else if(demo){
             console.log("DEMO")
-            return of<any>(FAKE_EPILEPTIC_ENCEPHALOPATHIES);
+            return of<any>([]);
         }//if not authorize and not opt to see demo
         else {
             return throwError({ status: 401 });
@@ -179,7 +172,7 @@ export class ClinapiService implements OnDestroy {
         }//if not authorize but want to see demo
         else if(demo){
             console.log("DEMO")
-            return of<any>(FAKE_ICCON_DATA);
+            return of<any>([]);
         }//if not authorize and not opt to see demo
         else {
             return throwError({ status: 401 });
