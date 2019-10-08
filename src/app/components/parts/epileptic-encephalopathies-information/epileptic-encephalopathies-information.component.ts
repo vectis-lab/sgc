@@ -22,6 +22,8 @@ export class EpilepticEncephalopathiesInformationComponent {
         new ClinicalFields('Consanguinity', 'consanguinity', 'pie'),
         new ClinicalFields('Age of onset', 'ageOfOnset', 'row'),
         new ClinicalFields('Seizure type', 'seizureType', 'row'),
+        new ClinicalFields('Was development ever normal?', 'wasDevelopmentEverNormal', 'pie', false),
+        new ClinicalFields('Tone Abnormality', 'toneAbnormality', 'pie', false),
         new ClinicalFields('Epileptic syndrome at presentation', 'epilepticSyndromeAtPresentation' , 'row', false),
         new ClinicalFields('Epileptic syndrome at evolution', 'epilepticSyndromeAtEvolution', 'row', false),
         new ClinicalFields('Beneficial treatment', 'beneficialTreatment', 'row', false),
