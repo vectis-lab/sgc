@@ -1,5 +1,4 @@
 import { Component, OnInit, OnDestroy, Input,ChangeDetectorRef, AfterViewInit } from '@angular/core';
-import * as GenePanels from '../../../shared/genePanels';
 import { SearchBarService } from '../../../services/search-bar-service';
 import { GenomicsEnglandService } from '../../../services/genomics-england.service';
 import { Subscription } from 'rxjs/Subscription';
@@ -12,10 +11,6 @@ import { Panel } from '../../../model/panel';
   styleUrls: ['./gene-panels.component.css']
 })
 export class GenePanelsComponent implements OnInit, OnDestroy, AfterViewInit {
-  /*options: object[] = [
-    //{label: 'Mitochondrial disorders', value: "MITOCHONDRIAL_DISORDERS"},
-    {label: 'Mitochondrial liver disease', value: "MITOCHONDRIAL_LIVER_DISEASE"}
-  ];*/
   options: Panel[] = [];
   @Input() selectedGenePanel: string;
   geneList: string;

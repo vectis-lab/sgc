@@ -13,6 +13,7 @@ import { GenomicsEnglandService } from './genomics-england.service';
 import { of, Observable, combineLatest } from "rxjs";
 import * as GenePanels from '../shared/genePanels';
 import { RegionAutocomplete } from '../model/region-autocomplete';
+import { GeneAutocomplete } from '../model/gene-autocomplete';
 
 export const QUERY_LIST_ERROR = "You query is incorrect. Please check your query and try again"
 
@@ -95,7 +96,9 @@ export class SearchBarService {
             if(v[0]){
                 if (this.checkErrorRegion(query)) {
                     return false;
-                } else if(bestMatch.match(query)){
+                } else if(bestMatch instanceof GeneAutocomplete && bestMatch.result.symbol.toUpperCase() === query.toUpperCase()){
+                    return true;
+                }else if(bestMatch instanceof RegionAutocomplete && bestMatch.match(query)){
                     return true;
                 }else {
                     return false;

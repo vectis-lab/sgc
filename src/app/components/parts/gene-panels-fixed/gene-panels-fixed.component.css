@@ -1,3 +1,13 @@
 .genes-text {
     margin-left: 5px;
 }
+
+::ng-deep .mat-select-content {
+    width: 600px !important;
+    overflow: auto !important;
+}
+
+::ng-deep .mat-select-trigger {
+    width: 595px !important;
+}
+
