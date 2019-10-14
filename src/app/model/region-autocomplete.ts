@@ -16,6 +16,9 @@ export class RegionAutocomplete extends GenericAutocompleteResult<Region> {
     }*/
 
     getRegion(): Promise<Region> {
+        if(this.result.genes.length > 0){
+            return Promise.resolve(new Region(this.result.chromosome, this.result.start, this.result.end, this.result.genes));
+        }
         return Promise.resolve(new Region(this.result.chromosome, this.result.start, this.result.end));
     }
 

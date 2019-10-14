@@ -52,25 +52,14 @@ export class ClinicalComponent implements OnInit, OnDestroy {
       }else{
         this.loadingParseParams = true;
       }
-      if (params['demo']) {
-          this.sb = this.snackBar.openFromComponent(SnackbarDemoComponent, {
-              extraClasses: ['snack-bar-demo-container'],
-              verticalPosition: 'top'
-          });
-          this.sbSub = this.sb.afterDismissed().subscribe(() => {
-              this.searchBarService.search(params['query']);
-          });
-      } else {
-          this.dismissSnackBar();
-      }
       this.error = '';
       this.autocomplete = null;
       this.searching = true;
       this.searchBarService.setCohort(params['cohort']);
       this.searchBarService.searchWithMultipleParams(params).then((v) => {
-					this.autocomplete = v;
-					this.loadingParseParams = false;
-          this.cd.detectChanges();
+        this.autocomplete = v;
+        this.loadingParseParams = false;
+        this.cd.detectChanges();
       }).catch(() => {
       });
   }

@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy, Input } from '@angular/core';
-import * as GenePanels from '../../../shared/genePanels';
+import { genePanelsFull } from '../../../shared/genePanelList';
 import { SearchBarService } from '../../../services/search-bar-service';
 import { Subscription } from 'rxjs/Subscription';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -10,10 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./gene-panels-fixed.component.css']
 })
 export class GenePanelsFixedComponent implements OnInit, OnDestroy {
-  options: object[] = [
-    //{label: 'Mitochondrial disorders', value: "MITOCHONDRIAL_DISORDERS"},
-    {label: 'Mitochondrial liver disease', value: "MITOCHONDRIAL_LIVER_DISEASE"}
-  ];
+  options: any = Object.keys(genePanelsFull);
   @Input() selectedGenePanel: string;
   geneList: string;
   private subscriptions: Subscription[] = [];
@@ -37,12 +34,13 @@ export class GenePanelsFixedComponent implements OnInit, OnDestroy {
   }
 
   setGenePanelValue(value) {
-    this.geneList = GenePanels[value];
-    if(this.geneList !== undefined){
-      this.searchBarService.setGeneList(this.geneList);
+    if(genePanelsFull[value]){
+      this.geneList = genePanelsFull[value].map(panel => panel.sym);
     }else{
-      this.searchBarService.setGeneList('');
+      this.geneList = '';
     }
+
+    this.searchBarService.setGeneList(this.geneList);
     
   }
 
