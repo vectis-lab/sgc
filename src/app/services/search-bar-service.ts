@@ -14,6 +14,7 @@ import { of, Observable, combineLatest } from "rxjs";
 import { RegionAutocomplete } from '../model/region-autocomplete';
 import { GeneAutocomplete } from '../model/gene-autocomplete';
 import { genePanelsFull } from '../shared/genePanelList';
+import { forEach } from '../../../node_modules/@angular/router/src/utils/collection';
 
 export const QUERY_LIST_ERROR = "You query is incorrect. Please check your query and try again"
 
@@ -79,7 +80,17 @@ export class SearchBarService {
             if(this.checkErrorRegion(query)){
                 return handleAutocompleteError('Start position cannot be greater than end');
             }
-            const bestMatch = v[0];
+            let bestMatch = v[0];
+            if(bestMatch instanceof GeneAutocomplete){
+                //Workaround to handle Elasticsearch not returning the correct match(Example TNNI3 will return TNNI3K instead)
+                if(bestMatch.result.symbol.toUpperCase() !== query.toUpperCase()){
+                    v.forEach(e => {
+                        if(e.result.symbol.toUpperCase() === query.toUpperCase()){
+                            bestMatch = e;
+                        }
+                    })
+                }
+            }
             if (bestMatch.match(query)) {
                 return bestMatch;
             } else {
@@ -96,8 +107,19 @@ export class SearchBarService {
             if(v[0]){
                 if (this.checkErrorRegion(query)) {
                     return false;
-                } else if(bestMatch instanceof GeneAutocomplete && bestMatch.result.symbol.toUpperCase() === query.toUpperCase()){
-                    return true;
+                }else if(bestMatch instanceof GeneAutocomplete){
+                    //Workaround to handle Elasticsearch not returning the correct match(Example TNNI3 will return TNNI3K instead)
+                    if(bestMatch.result.symbol.toUpperCase() === query.toUpperCase()){
+                        return true;
+                    }else{
+                        let flag = false; 
+                        v.forEach(e => {
+                            if(e.result.symbol.toUpperCase() === query.toUpperCase()){
+                                flag = true
+                            }
+                        })
+                        return flag;
+                    } 
                 }else if(bestMatch instanceof RegionAutocomplete && bestMatch.match(query)){
                     return true;
                 }else {
@@ -193,6 +215,19 @@ export class SearchBarService {
             if(queries.length > 0){
                 return <any>Promise.all(queries).then(v => {
                     let bestMatches = v.map(q => q[0]);
+                    //Workaround to handle Elasticsearch not returning the correct match(Example TNNI3 will return TNNI3K instead)
+                    v.forEach((matches,i) => {
+                        let bestMatch = matches[0];
+                        if(bestMatch instanceof GeneAutocomplete){
+                            if(bestMatch.result.symbol.toUpperCase() !== arrayOfQueries[i].toUpperCase()){
+                                matches.forEach(e => {
+                                    if(e.result.symbol.toUpperCase() === arrayOfQueries[i].toUpperCase()){
+                                        bestMatches[i] = e;
+                                    }
+                                })
+                            }
+                        }
+                    })
                     bestMatches = bestMatches.concat(regionAutocomplete);
                     return bestMatches;
                 });
@@ -209,6 +244,19 @@ export class SearchBarService {
 
             return <any>Promise.all(queries).then(v => {
                 let bestMatches = v.map(q => q[0]);
+                v.forEach((matches,i) => {
+                    //Workaround to handle Elasticsearch not returning the correct match(Example TNNI3 will return TNNI3K instead)
+                    let bestMatch = matches[0];
+                    if(bestMatch instanceof GeneAutocomplete){
+                        if(bestMatch.result.symbol.toUpperCase() !== arrayOfQueries[i].toUpperCase()){
+                            matches.forEach(e => {
+                                if(e.result.symbol.toUpperCase() === arrayOfQueries[i].toUpperCase()){
+                                    bestMatches[i] = e;
+                                }
+                            })
+                        }
+                    }
+                })
                 bestMatches = bestMatches.concat(regionAutocomplete);
                 return bestMatches;
             });
