@@ -6,6 +6,7 @@ import { SearchOption } from '../model/search-option';
 import { Router, Params } from '@angular/router';
 import { AutocompleteService } from './autocomplete/autocomplete-service';
 import { GenericAutocompleteResult, VariantAutocompleteResult } from '../model/autocomplete-result';
+import { GeneAutocomplete } from '../model/gene-autocomplete';
 import { ElasticGeneSearch } from './autocomplete/elastic-gene-search-service';
 import { PositionService } from './autocomplete/position-service';
 import { of, Observable, combineLatest } from "rxjs";
@@ -62,8 +63,19 @@ export class SearchBarService {
             if(this.checkErrorRegion(query)){
                 return handleAutocompleteError('Start position cannot be greater than end');
             }
-            const bestMatch = v[0];
-            if (bestMatch.match(query)) {
+            let bestMatch = v[0];
+            //Workaround to handle elasticsearch not retuning correct match(Example TNNI3 will return TNNI3K)
+            if(bestMatch instanceof GeneAutocomplete){
+                //Workaround to handle Elasticsearch not returning the correct match(Example TNNI3 will return TNNI3K instead)
+                if(bestMatch.result.symbol.toUpperCase() !== query.toUpperCase()){
+                    v.forEach(e => {
+                        if(e.result.symbol.toUpperCase() === query.toUpperCase()){
+                            bestMatch = e;
+                        }
+                    })
+                }
+                return bestMatch;
+            }else if (bestMatch.match(query)) {
                 return bestMatch;
             } else {
                 return handleAutocompleteError('Failed to find any results for: ' + query);
