@@ -88,10 +88,8 @@ import { HelperService } from './services/helper.service';
 import { ClinicalFilteringService } from './services/clinical-filtering.service';
 import { SavedSearchesComponent } from './components/parts/saved-searches/saved-searches.component';
 import { CohortsComponent } from './components/parts/cohorts/cohorts.component';
-import { NeuromuscularInformationComponent } from './components/parts/neuromuscular-information/neuromuscular-information.component';
 import { ClinicalCohortChartComponent } from './components/parts/clinical-cohort-chart/clinical-cohort-chart.component';
 import { SearchBarService } from './services/search-bar-service';
-import { MitochondriaInformationComponent } from './components/parts/mitochondria-information/mitochondria-information.component';
 import { VariantsSummaryTableComponent } from './components/parts/variants-summary-table/variants-summary-table.component';
 import { GenomeBrowserSummaryComponent } from './components/parts/genome-browser-summary/genome-browser-summary.component';
 import { GenomeBrowserSummaryResizableComponent } from './components/parts/genome-browser-summary-resizable/genome-browser-summary-resizable.component';
@@ -107,17 +105,12 @@ import { GenePanelsFixedComponent } from './components/parts/gene-panels-fixed/g
 import { SamplesTextComponent } from './components/parts/samples-text/samples-text.component';
 import { VariantSummaryComponent } from './components/pages/variant-summary/variant-summary.component';
 import { SamplesListComponent } from './components/parts/samples-list/samples-list.component';
-import { AcutecareInformationComponent } from './components/parts/acutecare-information/acutecare-information.component';
 import { CohortInformationComponent } from './components/parts/cohort-information/cohort-information.component';
 import { AlleleFreqSummaryComponent } from './components/parts/allele-freq-summary/allele-freq-summary.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { ProfileComponent, ChangePasswordDialog } from './components/pages/profile/profile.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { AutocompleteOptionComponent } from './components/parts/autocomplete-option/autocomplete-option.component';
-import { LeukodystrophiesInformationComponent } from './components/parts/leukodystrophies-information/leukodystrophies-information.component';
-import { BrainMalformationsInformationComponent } from './components/parts/brain-malformations-information/brain-malformations-information.component';
-import { EpilepticEncephalopathiesInformationComponent } from './components/parts/epileptic-encephalopathies-information/epileptic-encephalopathies-information.component';
-import { IcconInformationComponent } from './components/parts/iccon-information/iccon-information.component';
 import { FamilyTabComponent } from './components/parts/family-tab/family-tab.component';
 import { VariantsFamilyTableComponent } from './components/parts/variants-family-table/variants-family-table.component';
 import { FilterAutoFamilyComponent } from './components/parts/filter-auto-family/filter-auto-family.component';
@@ -125,7 +118,7 @@ import { DemoInformationComponent } from './components/parts/demo-information/de
 import { FamilyTabNewComponent } from './components/parts/family-tab-new/family-tab-new.component';
 import { RelationshipInformationComponent } from './components/parts/relationship-information/relationship-information.component';
 import { FamilialFiltersComponent } from './components/parts/familial-filters/familial-filters.component';
-import { ChildranzInformationComponent } from './components/parts/childranz-information/childranz-information.component';
+import { CircaInformationComponent } from './components/parts/circa-information/circa-information.component';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -205,9 +198,7 @@ export class RavenErrorHandler implements ErrorHandler {
         AuthGuardComponent,
         SavedSearchesComponent,
         CohortsComponent,
-        NeuromuscularInformationComponent,
         ClinicalCohortChartComponent,
-        MitochondriaInformationComponent,
         VariantsSummaryTableComponent,
         GenomeBrowserSummaryComponent,
         GenomeBrowserSummaryResizableComponent,
@@ -222,17 +213,12 @@ export class RavenErrorHandler implements ErrorHandler {
         SamplesTextComponent,
         VariantSummaryComponent,
         SamplesListComponent,
-        AcutecareInformationComponent,
         CohortInformationComponent,
         AlleleFreqSummaryComponent,
         HomeComponent,
         ProfileComponent,
         ChangePasswordDialog,
         AutocompleteOptionComponent,
-        LeukodystrophiesInformationComponent,
-        BrainMalformationsInformationComponent,
-        EpilepticEncephalopathiesInformationComponent,
-        IcconInformationComponent,
         FamilyTabComponent,
         VariantsFamilyTableComponent,
         FilterAutoFamilyComponent,
@@ -240,7 +226,7 @@ export class RavenErrorHandler implements ErrorHandler {
         FamilyTabNewComponent,
         RelationshipInformationComponent,
         FamilialFiltersComponent,
-        ChildranzInformationComponent,
+        CircaInformationComponent,
     ],
     entryComponents: [
         SignUpComponent,

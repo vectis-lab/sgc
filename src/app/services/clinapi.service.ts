@@ -1,7 +1,7 @@
 import { Injectable, OnDestroy } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 import { FAKE_CLINICAL_DATA } from "../mocks/clindata";
-import { FAKE_DEMO_DATA, TEST_CHILDRANZ_DATA } from "../mocks/demodata";
+import { FAKE_DEMO_DATA, TEST_CIRCA_DATA } from "../mocks/demodata";
 import { VariantSearchService } from './variant-search-service';
 import { Subscription } from 'rxjs/Subscription';
 import { of, throwError, Observable } from "rxjs";
@@ -52,133 +52,6 @@ export class ClinapiService implements OnDestroy {
         }
     }
 
-    getMitochondria(demo = false, authorize = false): Observable<any> {
-        const httpOptions = {
-            headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
-        };
-        //if authorize to see clinical data
-        if(authorize){
-            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=mito`, httpOptions).map(res => {
-                return JSON.parse(res.pheno)
-            });
-        }//if not authorize but want to see demo
-        else if(demo){
-            console.log("DEMO")
-            return of<any>([]);
-        }//if not authorize and not opt to see demo
-        else {
-            return throwError({ status: 401 });
-        }
-    }
-
-    getNeuromuscular(demo = false, authorize = false): Observable<any> {
-        const httpOptions = {
-            headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
-        };
-        if(authorize){
-            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=neuromuscular`, httpOptions).map(res => {
-                return JSON.parse(res.pheno)
-            });
-        }//if not authorize but want to see demo
-        else if(demo){
-            console.log("DEMO")
-            return of<any>([]);
-        }//if not authorize and not opt to see demo
-        else {
-            return throwError({ status: 401 });
-        }
-    }
-
-    getAcutecare(demo = false, authorize = false): Observable<any> {
-        const httpOptions = {
-            headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
-        };
-        if(authorize){
-            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=acutecare`, httpOptions).map(res => {
-                return JSON.parse(res.pheno)
-            });
-        }//if not authorize but want to see demo
-        else if(demo){
-            console.log("DEMO")
-            return of<any>([]);
-        }//if not authorize and not opt to see demo
-        else {
-            return throwError({ status: 401 });
-        }
-    }
-
-    getBrainMalformations(demo = false, authorize = false): Observable<any> {
-        const httpOptions = {
-            headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
-        };
-        if(authorize){
-            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=bm`, httpOptions).map(res => {
-                return JSON.parse(res.pheno)
-            });
-        }//if not authorize but want to see demo
-        else if(demo){
-            console.log("DEMO")
-            return of<any>([]);
-        }//if not authorize and not opt to see demo
-        else {
-            return throwError({ status: 401 });
-        }
-    }
-
-    getLeukodystrophies(demo = false, authorize = false): Observable<any> {
-        const httpOptions = {
-            headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
-        };
-        if(authorize){
-            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=leukodystrophies`, httpOptions).map(res => {
-                return JSON.parse(res.pheno)
-            });
-        }//if not authorize but want to see demo
-        else if(demo){
-            console.log("DEMO")
-            return of<any>([]);
-        }//if not authorize and not opt to see demo
-        else {
-            return throwError({ status: 401 });
-        }
-    }
-
-    getEpilepticEncephalopathies(demo = false, authorize = false): Observable<any> {
-        const httpOptions = {
-            headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
-        };
-        if(authorize){
-            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=ee`, httpOptions).map(res => {
-                return JSON.parse(res.pheno)
-            });
-        }//if not authorize but want to see demo
-        else if(demo){
-            console.log("DEMO")
-            return of<any>([]);
-        }//if not authorize and not opt to see demo
-        else {
-            return throwError({ status: 401 });
-        }
-    }
-
-    getIccon(demo = false, authorize = false): Observable<any> {
-        const httpOptions = {
-            headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
-        };
-        if(authorize){
-            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=iccon`, httpOptions).map(res => {
-                return JSON.parse(res.pheno)
-            });
-        }//if not authorize but want to see demo
-        else if(demo){
-            console.log("DEMO")
-            return of<any>([]);
-        }//if not authorize and not opt to see demo
-        else {
-            return throwError({ status: 401 });
-        }
-    }
-
     getDemo(demo = false, authorize = false): Observable<any> {
         const httpOptions = {
             headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
@@ -198,19 +71,19 @@ export class ClinapiService implements OnDestroy {
         }
     }
 
-    getChildranz(demo = false, authorize = false): Observable<any> {
+    getCirca(demo = false, authorize = false): Observable<any> {
         const httpOptions = {
             headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
         };
         if(authorize){
-            return of<any>(TEST_CHILDRANZ_DATA);
-            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=childranz`, httpOptions).map(res => {
+            return of<any>(TEST_CIRCA_DATA);
+            /*return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=demo`, httpOptions).map(res => {
                 return JSON.parse(res.pheno)
-            });
+            });*/
         }//if not authorize but want to see demo
         else if(demo){
             console.log("DEMO")
-            return of<any>(TEST_CHILDRANZ_DATA);
+            return of<any>(TEST_CIRCA_DATA);
         }//if not authorize and not opt to see demo
         else {
             return throwError({ status: 401 });

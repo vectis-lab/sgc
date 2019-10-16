@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IcconInformationComponent } from './iccon-information.component';
+import { CircaInformationComponent } from './circa-information.component';
 
-describe('IcconInformationComponent', () => {
-  let component: IcconInformationComponent;
-  let fixture: ComponentFixture<IcconInformationComponent>;
+describe('CircaInformationComponent', () => {
+  let component: CircaInformationComponent;
+  let fixture: ComponentFixture<CircaInformationComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ IcconInformationComponent ]
+      declarations: [ CircaInformationComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(IcconInformationComponent);
+    fixture = TestBed.createComponent(CircaInformationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
