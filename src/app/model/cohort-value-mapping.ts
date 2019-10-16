@@ -15,12 +15,12 @@ export const COHORT_VALUE_MAPPING_MAPD = {
 
 export const COHORT_PERMISSION_SUMMARY_MAPPING = {
     Demo: '',
-    Circa: ''
+    Circa: 'circa/summary'
 }
 
 export const COHORT_PERMISSION_VSAL_PHENO_MAPPING = {
     Demo: '',
-    Circa: ''
+    Circa: 'circa/pheno'
 }
 
 export const COHORT_PHENO_GET_MAPPING = {
