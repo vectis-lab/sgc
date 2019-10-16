@@ -68,6 +68,7 @@
         <app-epileptic-encephalopathies-information *ngIf="selectedCohort === 'Epileptic Encephalopathies'" [pheno]="pheno" [samples]="ids"></app-epileptic-encephalopathies-information>
         <app-leukodystrophies-information *ngIf="selectedCohort === 'Leukodystrophies'" [pheno]="pheno" [samples]="ids"></app-leukodystrophies-information>
         <app-iccon-information *ngIf="selectedCohort === 'ICCon'" [pheno]="pheno" [samples]="ids"></app-iccon-information>
+        <app-childranz-information *ngIf="selectedCohort === 'Childranz'" [pheno]="pheno" [samples]="ids"></app-childranz-information>
       
         <div *ngIf="variants.length > 10000&&geneFilter.length === 0" class="message message-error">
             This region contains too many variants to visualize with our genome browser, please choose a smaller region like:

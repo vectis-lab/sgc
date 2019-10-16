@@ -6,6 +6,7 @@ export const COHORT_VALUE_MAPPING_VSAL = {
     ['Brain Malformations']: 'bm',
     Leukodystrophies: 'leukodystrophies',
     ICCon: 'demo',
+    Childranz: 'demo',
     Demo: 'demo'
 }
 
@@ -17,6 +18,7 @@ export const COHORT_VALUE_MAPPING_SSVS = {
     ['Brain Malformations']: 'bm',
     Leukodystrophies: 'leukodystrophies',
     ICCon: 'demo',
+    Childranz: 'demo',
     Demo: 'demo'
 }
 
@@ -28,6 +30,7 @@ export const COHORT_VALUE_MAPPING_MAPD = {
     ['Brain Malformations']: 'bm',
     Leukodystrophies: 'leukodystrophies',
     ICCon: 'demo',
+    Childranz: 'demo',
     Demo: 'demo'
 }
 
@@ -39,6 +42,7 @@ export const COHORT_PERMISSION_SUMMARY_MAPPING = {
     ['Brain Malformations']: 'bm/summary',
     Leukodystrophies: 'leukodystrophies/summary',
     ICCon: 'iccon/summary',
+    Childranz: 'childranz/summary',
     Demo: ''
 }
 
@@ -50,6 +54,7 @@ export const COHORT_PERMISSION_VSAL_PHENO_MAPPING = {
     ['Brain Malformations']: 'bm/pheno',
     Leukodystrophies: 'leukodystrophies/pheno',
     ICCon: 'iccon/pheno',
+    Childranz: 'childranz/pheno',
     Demo: ''
 }
 
@@ -61,6 +66,7 @@ export const COHORT_PHENO_GET_MAPPING = {
     ['Brain Malformations']: 'getBrainMalformations',
     Leukodystrophies: 'getLeukodystrophies',
     ICCon: 'getIccon',
+    Childranz: 'getChildranz',
     Demo: 'getDemo'
 }
 
@@ -90,5 +96,6 @@ export const COHORT_SAMPLES_INFO = {
         gen: '7',
         phen: '7'
     },
+    Childranz: null,
     ICCon: null
 }
