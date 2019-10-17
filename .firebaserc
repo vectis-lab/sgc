@@ -5,6 +5,7 @@
     "agha-demo": "agha-demo",
     "agha-dev": "agha-dev",
     "agha-staging": "agha-staging",
-    "agha-prod": "agha-5a493"
+    "agha-prod": "agha-5a493",
+    "circa-prod": "circa-garvan"
   }
 }
