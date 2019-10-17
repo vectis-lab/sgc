@@ -1,5 +1,5 @@
-export const PIN_COLOR = '#004D95';
-export const PIN_SELECTED_COLOR = '#00aedb';
+export const PIN_COLOR = '#07607a';
+export const PIN_SELECTED_COLOR = '#05afe3';
 export const OVERLAY_COLOR = '#D54A0F';
 
 export type GenomeBrowserOverlay = 'None' | 'Homozygotes' | 'Heterozygotes' | 'DbSNP';

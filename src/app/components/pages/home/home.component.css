@@ -10,9 +10,14 @@
 }
 
 .logo {
-    display: block;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2em;
     height: 90px;
+}
+
+.logoName{
+    font-size: 5em;
+    color: #07607a;
 }

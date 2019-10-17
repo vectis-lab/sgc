@@ -7,7 +7,6 @@ import { GenericAutocompleteResult } from '../../../model/autocomplete-result';
 import { MatSnackBar, MatSnackBarRef } from '@angular/material';
 import { SnackbarDemoComponent } from '../../parts/snackbar-demo/snackbar-demo.component';
 import { ClinicalFilteringService } from '../../../services/clinical-filtering.service';
-import { Mitochondria, Neuromuscular } from '../../../shared/cohortAuthor';
 
 const SMALL_WIDTH = 720;
 
@@ -40,11 +39,6 @@ export class SearchComponent implements  OnInit, OnDestroy {
         }
     }
     ngOnInit(): void {
-        if(this.searchBarService.options[0].getValue() === "Mitochondria"){
-            this.authors = Mitochondria;
-        }else if(this.searchBarService.options[0].getValue() === "Neuromuscular"){
-            this.authors = Neuromuscular
-        }
 
         this.auth.getSavedSearches().subscribe(savedSearches => {
             this.clinicalFilteringService.initSaveSearches(savedSearches);
