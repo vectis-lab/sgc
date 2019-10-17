@@ -7,7 +7,8 @@ import * as dc from 'dc';
 import {ErrorStateMatcher} from '@angular/material/core';
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import { Auth } from '../../../services/auth-service';
-import { Router } from '@angular/router';
+import { Router } from '@angular/router'; 
+import {COHORT_PERMISSION_VSAL_PHENO_MAPPING} from '../../../model/cohort-value-mapping'
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -54,7 +55,8 @@ export class SavedSearchesComponent implements OnInit, OnDestroy {
     }))
 
     this.auth.getUserPermissions().subscribe(permissions => {
-        if(permissions.includes('mito/pheno')){
+        const selectedCohort = this.searchBarService.options[0].getValue();
+        if(permissions.includes(COHORT_PERMISSION_VSAL_PHENO_MAPPING[selectedCohort])){
             this.denied = false;
         }else {
             this.denied = true;
