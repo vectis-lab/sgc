@@ -11,9 +11,10 @@ import { ElasticGeneSearch } from './autocomplete/elastic-gene-search-service';
 import { PositionService } from './autocomplete/position-service';
 import { GenomicsEnglandService } from './genomics-england.service';
 import { of, Observable, combineLatest } from "rxjs";
-import * as GenePanels from '../shared/genePanels';
 import { RegionAutocomplete } from '../model/region-autocomplete';
 import { GeneAutocomplete } from '../model/gene-autocomplete';
+import { genePanelsFull } from '../shared/genePanelList';
+import { forEach } from '../../../node_modules/@angular/router/src/utils/collection';
 
 export const QUERY_LIST_ERROR = "You query is incorrect. Please check your query and try again"
 
@@ -79,7 +80,17 @@ export class SearchBarService {
             if(this.checkErrorRegion(query)){
                 return handleAutocompleteError('Start position cannot be greater than end');
             }
-            const bestMatch = v[0];
+            let bestMatch = v[0];
+            if(bestMatch instanceof GeneAutocomplete){
+                //Workaround to handle Elasticsearch not returning the correct match(Example TNNI3 will return TNNI3K instead)
+                if(bestMatch.result.symbol.toUpperCase() !== query.toUpperCase()){
+                    v.forEach(e => {
+                        if(e.result.symbol.toUpperCase() === query.toUpperCase()){
+                            bestMatch = e;
+                        }
+                    })
+                }
+            }
             if (bestMatch.match(query)) {
                 return bestMatch;
             } else {
@@ -96,8 +107,19 @@ export class SearchBarService {
             if(v[0]){
                 if (this.checkErrorRegion(query)) {
                     return false;
-                } else if(bestMatch instanceof GeneAutocomplete && bestMatch.result.symbol.toUpperCase() === query.toUpperCase()){
-                    return true;
+                }else if(bestMatch instanceof GeneAutocomplete){
+                    //Workaround to handle Elasticsearch not returning the correct match(Example TNNI3 will return TNNI3K instead)
+                    if(bestMatch.result.symbol.toUpperCase() === query.toUpperCase()){
+                        return true;
+                    }else{
+                        let flag = false; 
+                        v.forEach(e => {
+                            if(e.result.symbol.toUpperCase() === query.toUpperCase()){
+                                flag = true
+                            }
+                        })
+                        return flag;
+                    } 
                 }else if(bestMatch instanceof RegionAutocomplete && bestMatch.match(query)){
                     return true;
                 }else {
@@ -129,12 +151,6 @@ export class SearchBarService {
         }
 
         this.searchedEvent.next();
-
-        const handleAutocompleteError = (e: string): Promise<any> => {
-            this.autocompleteError = e;
-            return Promise.reject(e);
-        };
-
         let arrayOfQueries = [];
 
         if(query.length){
@@ -179,23 +195,72 @@ export class SearchBarService {
         if(query.length){
             arrayOfQueries = query.split(',');
         }
-
-        let genes;
-        if(GenePanels[panel]){
-            genes = GenePanels[panel].join();
-        }
+        let regions;
+        let regionAutocomplete = [];
 
         if(panel.length){
-            const genePanelsQueries = genes.split(',');
-            arrayOfQueries = arrayOfQueries.concat(genePanelsQueries);
+            regions = genePanelsFull[panel];
+            regionAutocomplete = regions.map(region =>{
+                const chromosome = region.c;
+                const start = region.s;
+                const end = region.e;
+                const symbol = region.sym;
+                const r = new Region(chromosome, start, end, [symbol]);
+                const regions = new RegionAutocomplete(r, r.name(), '', null);
+                return regions;
+            })
+            let queries = arrayOfQueries.map(q => this.searchAutocompleteServices(q).take(1).toPromise())
+
+            if(queries.length > 0){
+                return <any>Promise.all(queries).then(v => {
+                    let bestMatches = v.map(q => q[0]);
+                    //Workaround to handle Elasticsearch not returning the correct match(Example TNNI3 will return TNNI3K instead)
+                    v.forEach((matches,i) => {
+                        let bestMatch = matches[0];
+                        if(bestMatch instanceof GeneAutocomplete){
+                            if(bestMatch.result.symbol.toUpperCase() !== arrayOfQueries[i].toUpperCase()){
+                                matches.forEach(e => {
+                                    if(e.result.symbol.toUpperCase() === arrayOfQueries[i].toUpperCase()){
+                                        bestMatches[i] = e;
+                                    }
+                                })
+                            }
+                        }
+                    })
+                    bestMatches = bestMatches.concat(regionAutocomplete);
+                    return bestMatches;
+                });
+            }else{
+                //Workaround: doesn't work without giving delay to promise
+                return new Promise((resolve) => {
+                    setTimeout(function() {
+                        return resolve(regionAutocomplete);
+                      }, 1);
+                })
+            }
+        }else{
+            const queries = arrayOfQueries.map(q => this.searchAutocompleteServices(q).take(1).toPromise())
+
+            return <any>Promise.all(queries).then(v => {
+                let bestMatches = v.map(q => q[0]);
+                v.forEach((matches,i) => {
+                    //Workaround to handle Elasticsearch not returning the correct match(Example TNNI3 will return TNNI3K instead)
+                    let bestMatch = matches[0];
+                    if(bestMatch instanceof GeneAutocomplete){
+                        if(bestMatch.result.symbol.toUpperCase() !== arrayOfQueries[i].toUpperCase()){
+                            matches.forEach(e => {
+                                if(e.result.symbol.toUpperCase() === arrayOfQueries[i].toUpperCase()){
+                                    bestMatches[i] = e;
+                                }
+                            })
+                        }
+                    }
+                })
+                bestMatches = bestMatches.concat(regionAutocomplete);
+                return bestMatches;
+            });
         }
-
-        const queries = arrayOfQueries.map(q => this.searchAutocompleteServices(q).take(1).toPromise())
-
-        return <any>Promise.all(queries).then(v => {
-            const bestMatches = v.map(q => q[0]);
-            return bestMatches;
-        });
+        
         //TILL HERE
     }
 
