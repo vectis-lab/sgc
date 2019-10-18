@@ -10,7 +10,13 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./gene-panels-fixed.component.css']
 })
 export class GenePanelsFixedComponent implements OnInit, OnDestroy {
-  options: any = Object.keys(genePanelsFull);
+  options: any = Object.keys(genePanelsFull).map(e => {
+    let count = genePanelsFull[e].length;
+    return  {
+      panel: e,
+      count: count
+    };
+  });
   @Input() selectedGenePanel: string;
   geneList: string;
   private subscriptions: Subscription[] = [];
