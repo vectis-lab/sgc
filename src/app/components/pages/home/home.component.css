@@ -10,14 +10,23 @@
 }
 
 .logo {
-    display: flex;
+    display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2em;
-    height: 90px;
+    height: 100px;
+}
+
+.logoAbbreviation{
+    display: block;
+    font-size: 5em;
+    font-weight: 700;
+    color: #07607a;
+    letter-spacing: 1.28em;
 }
 
 .logoName{
-    font-size: 5em;
+    display: block;
+    font-size: 1.5em;
     color: #07607a;
 }

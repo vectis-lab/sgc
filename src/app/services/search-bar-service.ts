@@ -49,7 +49,7 @@ export class SearchBarService {
         this.autocompleteError = '';
         this.query = '';
         this.options = [
-            new SearchOption('Cohort', 'dataset', ['Demo', 'Circa'], 'Demo'),
+            new SearchOption('Cohort', 'dataset', ['Circa', 'Demo'], 'Circa'),
         ];
     }
 

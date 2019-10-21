@@ -17,7 +17,6 @@ export class CircaInformationComponent{
         new ClinicalFields('Referrer Name', 'referrerName', 'row'),
         new ClinicalFields('Funding', 'funding', 'pie'),
         new ClinicalFields('name', 'patientName', 'row'),
-        new ClinicalFields('Current Status', 'currentStatus', 'pie'),
         new ClinicalFields('birthyear', 'birthyear', 'row'),
         new ClinicalFields('Test Outcome', 'testOutcome', 'row'),
     ];
