@@ -780,8 +780,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40303002",
       "familyId": "16F00085",
       "birthyear": "1975",
-      "internalIDs": "SRR1291024",
-      "Relationship": "child"
+      "internalIDs": "SYD40303002",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "CostCo",
@@ -793,8 +794,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40303003",
       "familyId": "16F00085",
       "birthyear": "2014",
-      "internalIDs": "SRR1291026",
-      "Relationship": "mother"
+      "internalIDs": "SYD40303003",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "CostCo",
@@ -806,8 +808,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40303011",
       "familyId": "16F00085",
       "birthyear": "1975",
-      "internalIDs": "SRR1291030",
-      "Relationship": "father"
+      "internalIDs": "SYD40303011",
+      "Relationship": "father",
+      "affected": "Unaffected"
     },
     {
       "Funding": "CostCo",
@@ -819,8 +822,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341079",
       "familyId": "16F00091",
       "birthyear": "2013",
-      "internalIDs": "SRR1291035",
-      "Relationship": "child"
+      "internalIDs": "SYD40341079",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "CostCo",
@@ -832,8 +836,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341073",
       "familyId": "16F00093",
       "birthyear": "1972",
-      "internalIDs": "SRR1291036",
-      "Relationship": "child"
+      "internalIDs": "SYD40341073",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "CostCo",
@@ -845,8 +850,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341059",
       "familyId": "16F00093",
       "birthyear": "1972",
-      "internalIDs": "SRR1291041",
-      "Relationship": "mother"
+      "internalIDs": "SYD40341059",
+      "Relationship": "father",
+      "affected": "Unaffected"
     },
     {
       "Funding": "CostCo",
@@ -858,8 +864,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341058",
       "familyId": "16F00093",
       "birthyear": "2000",
-      "internalIDs": "SRR1291070",
-      "Relationship": "father"
+      "internalIDs": "SYD40341058",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "CostCo",
@@ -871,8 +878,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341065",
       "familyId": "16F00098",
       "birthyear": "2010",
-      "internalIDs": "SRR1291138",
-      "Relationship": "child"
+      "internalIDs": "SYD40341065",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "CostCo",
@@ -884,8 +892,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341064",
       "familyId": "16F00098",
       "birthyear": "1971",
-      "internalIDs": "SRR1291141",
-      "Relationship": "mother"
+      "internalIDs": "SYD40341064",
+      "Relationship": "father",
+      "affected": "Unaffected"
     },
     {
       "Funding": "CostCo",
@@ -897,8 +906,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341061",
       "familyId": "16F00098",
       "birthyear": "1977",
-      "internalIDs": "SRR1291157",
-      "Relationship": "father"
+      "internalIDs": "SYD40341061",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "CostCo",
@@ -910,8 +920,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40361987",
       "familyId": "16F00107",
       "birthyear": "2014",
-      "internalIDs": "SRR1293236",
-      "Relationship": "child"
+      "internalIDs": "SYD40361987",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "CostCo",
@@ -923,8 +934,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40361986",
       "familyId": "16F00108",
       "birthyear": "1969",
-      "internalIDs": "SRR1293251",
-      "Relationship": "child"
+      "internalIDs": "SYD40361986",
+      "Relationship": "father",
+      "affected": "Unaffected"
     },
     {
       "Funding": "CostCo",
@@ -936,8 +948,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40361985",
       "familyId": "16F00108",
       "birthyear": "1968",
-      "internalIDs": "SRR1293262",
-      "Relationship": "mother"
+      "internalIDs": "SYD40361985",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "CostCo",
@@ -949,8 +962,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40361982",
       "familyId": "16F00108",
       "birthyear": "2004",
-      "internalIDs": "SRR1293283",
-      "Relationship": "father"
+      "internalIDs": "SYD40361982",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "CostCo",
@@ -962,8 +976,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40373348",
       "familyId": "16F00113",
       "birthyear": "2006",
-      "internalIDs": "SRR1293295",
-      "Relationship": "child"
+      "internalIDs": "SYD40373348",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "CostCo",
@@ -975,8 +990,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40371906",
       "familyId": "16F00113",
       "birthyear": "1978",
-      "internalIDs": "SRR1293326",
-      "Relationship": "mother"
+      "internalIDs": "SYD40371906",
+      "Relationship": "mother",
+      "affected": "Affected"
     },
     {
       "Funding": "CostCo",
@@ -988,8 +1004,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40373353",
       "familyId": "16F00114",
       "birthyear": "2010",
-      "internalIDs": "SRR1295423",
-      "Relationship": "child"
+      "internalIDs": "SYD40373353",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "CostCo",
@@ -1001,8 +1018,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40373352",
       "familyId": "16F00114",
       "birthyear": "1981",
-      "internalIDs": "SRR1295424",
-      "Relationship": "mother"
+      "internalIDs": "SYD40373352",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "CostCo",
@@ -1014,8 +1032,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40371979",
       "familyId": "16F00114",
       "birthyear": "1976",
-      "internalIDs": "SRR1295425",
-      "Relationship": "father"
+      "internalIDs": "SYD40371979",
+      "Relationship": "father",
+      "affected": "Unaffected"
     },
     {
       "Funding": "CostCo",
@@ -1027,8 +1046,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40371907",
       "familyId": "16F00115",
       "birthyear": "2016",
-      "internalIDs": "SRR1295426",
-      "Relationship": "child"
+      "internalIDs": "SYD40371907",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "CostCo",
@@ -1040,8 +1060,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40373354",
       "familyId": "16F00116",
       "birthyear": "2004",
-      "internalIDs": "SRR1295432",
-      "Relationship": "child"
+      "internalIDs": "SYD40373354",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "CostCo",
@@ -1053,8 +1074,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40373351",
       "familyId": "16F00117",
       "birthyear": "1978",
-      "internalIDs": "SRR1295433",
-      "Relationship": "child"
+      "internalIDs": "SYD40373351",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "CostCo",
@@ -1066,8 +1088,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40371978",
       "familyId": "16F00117",
       "birthyear": "2015",
-      "internalIDs": "SRR1295465",
-      "Relationship": "mother"
+      "internalIDs": "SYD40371978",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "CostCo",
@@ -1079,8 +1102,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40371910",
       "familyId": "16F00117",
       "birthyear": "1974",
-      "internalIDs": "SRR1295466",
-      "Relationship": "father"
+      "internalIDs": "SYD40371910",
+      "Relationship": "father",
+      "affected": "Unaffected"
     },
     {
       "Funding": "CostCo",
@@ -1092,8 +1116,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40476680",
       "familyId": "17F00083",
       "birthyear": "1995",
-      "internalIDs": "SRR1295515",
-      "Relationship": "child"
+      "internalIDs": "SYD40476680",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1105,8 +1130,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40102880",
       "familyId": "15F00012",
       "birthyear": "1956",
-      "internalIDs": "SRR1295532",
-      "Relationship": "child"
+      "internalIDs": "SYD40102880",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1118,8 +1144,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40132183",
       "familyId": "16F00030",
       "birthyear": "1953",
-      "internalIDs": "SRR1295533",
-      "Relationship": "child"
+      "internalIDs": "SYD40132183",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1131,8 +1158,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341072",
       "familyId": "16F00094",
       "birthyear": "2013",
-      "internalIDs": "SRR1295534",
-      "Relationship": "child"
+      "internalIDs": "SYD40341072",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1144,8 +1172,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341069",
       "familyId": "16F00094",
       "birthyear": "1979",
-      "internalIDs": "SRR1295535",
-      "Relationship": "mother"
+      "internalIDs": "SYD40341069",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -1157,8 +1186,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341053",
       "familyId": "16F00094",
       "birthyear": "1979",
-      "internalIDs": "SRR1295536",
-      "Relationship": "father"
+      "internalIDs": "SYD40341053",
+      "Relationship": "father",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -1170,8 +1200,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341071",
       "familyId": "16F00095",
       "birthyear": "1995",
-      "internalIDs": "SRR1295537",
-      "Relationship": "child"
+      "internalIDs": "SYD40341071",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1183,8 +1214,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341067",
       "familyId": "16F00095",
       "birthyear": "1954",
-      "internalIDs": "SRR1295538",
-      "Relationship": "mother"
+      "internalIDs": "SYD40341067",
+      "Relationship": "father",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -1196,8 +1228,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341052",
       "familyId": "16F00095",
       "birthyear": "1959",
-      "internalIDs": "SRR1295539",
-      "Relationship": "father"
+      "internalIDs": "SYD40341052",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -1209,8 +1242,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341070",
       "familyId": "16F00096",
       "birthyear": "2001",
-      "internalIDs": "SRR1295540",
-      "Relationship": "child"
+      "internalIDs": "SYD40341070",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1222,8 +1256,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341054",
       "familyId": "16F00096",
       "birthyear": "1974",
-      "internalIDs": "SRR1295542",
-      "Relationship": "mother"
+      "internalIDs": "SYD40341054",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -1235,8 +1270,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341048",
       "familyId": "16F00096",
       "birthyear": "1969",
-      "internalIDs": "SRR1295543",
-      "Relationship": "father"
+      "internalIDs": "SYD40341048",
+      "Relationship": "father",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -1248,8 +1284,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341066",
       "familyId": "16F00097",
       "birthyear": "2000",
-      "internalIDs": "SRR1295544",
-      "Relationship": "child"
+      "internalIDs": "SYD40341066",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1261,8 +1298,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341062",
       "familyId": "16F00099",
       "birthyear": "1956",
-      "internalIDs": "SRR1295545",
-      "Relationship": "child"
+      "internalIDs": "SYD40341062",
+      "Relationship": "father",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -1274,8 +1312,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341063",
       "familyId": "16F00099",
       "birthyear": "1986",
-      "internalIDs": "SRR1295546",
-      "Relationship": "mother"
+      "internalIDs": "SYD40341063",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1287,8 +1326,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341060",
       "familyId": "16F00099",
       "birthyear": "1958",
-      "internalIDs": "SRR1295552",
-      "Relationship": "father"
+      "internalIDs": "SYD40341060",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -1300,8 +1340,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341057",
       "familyId": "16F00100",
       "birthyear": "1984",
-      "internalIDs": "SRR1295553",
-      "Relationship": "child"
+      "internalIDs": "SYD40341057",
+      "Relationship": "father",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -1313,8 +1354,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341056",
       "familyId": "16F00100",
       "birthyear": "2010",
-      "internalIDs": "SRR1295554",
-      "Relationship": "mother"
+      "internalIDs": "SYD40341056",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1326,8 +1368,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341055",
       "familyId": "16F00100",
       "birthyear": "1979",
-      "internalIDs": "SRR1295568",
-      "Relationship": "father"
+      "internalIDs": "SYD40341055",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -1339,8 +1382,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341051",
       "familyId": "16F00101",
       "birthyear": "2004",
-      "internalIDs": "SRR1295570",
-      "Relationship": "child"
+      "internalIDs": "SYD40341051",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1352,8 +1396,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341050",
       "familyId": "16F00101",
       "birthyear": "1980",
-      "internalIDs": "SRR1298980",
-      "Relationship": "mother"
+      "internalIDs": "SYD40341050",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -1365,8 +1410,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341047",
       "familyId": "16F00101",
       "birthyear": "1970",
-      "internalIDs": "SRR1298981",
-      "Relationship": "father"
+      "internalIDs": "SYD40341047",
+      "Relationship": "father",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -1378,8 +1424,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40341049",
       "familyId": "16F00102",
       "birthyear": "2003",
-      "internalIDs": "SRR1298988",
-      "Relationship": "child"
+      "internalIDs": "SYD40341049",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1391,8 +1438,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40308051",
       "familyId": "16F00109",
       "birthyear": "2010",
-      "internalIDs": "SRR1298989",
-      "Relationship": "child"
+      "internalIDs": "SYD40308051",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1404,8 +1452,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40368298",
       "familyId": "16F00109",
       "birthyear": "2009",
-      "internalIDs": "SRR622457",
-      "Relationship": "mother"
+      "internalIDs": "SYD40368298",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1417,8 +1466,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40370185",
       "familyId": "16F00112",
       "birthyear": "1967",
-      "internalIDs": "SRR622458",
-      "Relationship": "child"
+      "internalIDs": "SYD40370185",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1430,8 +1480,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40356487",
       "familyId": "16F00129",
       "birthyear": "2008",
-      "internalIDs": "SRR622459",
-      "Relationship": "child"
+      "internalIDs": "SYD40356487",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1443,8 +1494,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40395107",
       "familyId": "17F00001",
       "birthyear": "2010",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40395107",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1456,8 +1508,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40395106",
       "familyId": "17F00002",
       "birthyear": "2015",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40395106",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1469,8 +1522,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40622023",
       "familyId": "17F00002",
       "birthyear": "1983",
-      "internalIDs": "",
-      "Relationship": "mother"
+      "internalIDs": "SYD40622023",
+      "Relationship": "",
+      "affected": "Unknown"
     },
     {
       "Funding": "OHMR",
@@ -1482,8 +1536,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40622024",
       "familyId": "17F00002",
       "birthyear": "1981",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40622024",
+      "Relationship": "",
+      "affected": "Unknown"
     },
     {
       "Funding": "OHMR",
@@ -1495,8 +1550,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40395105",
       "familyId": "17F00003",
       "birthyear": "2011",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40395105",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1508,8 +1564,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40395316",
       "familyId": "17F00004",
       "birthyear": "2015",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40395316",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1521,8 +1578,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40412907",
       "familyId": "17F00020",
       "birthyear": "1987",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40412907",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1534,8 +1592,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40412862",
       "familyId": "17F00020",
       "birthyear": "1985",
-      "internalIDs": "",
-      "Relationship": "mother"
+      "internalIDs": "SYD40412862",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1547,8 +1606,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40412908",
       "familyId": "17F00021",
       "birthyear": "1976",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40412908",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1560,8 +1620,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40423300",
       "familyId": "17F00037",
       "birthyear": "1996",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40423300",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1573,8 +1634,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40421496",
       "familyId": "17F00037",
       "birthyear": "1972",
-      "internalIDs": "",
-      "Relationship": "mother"
+      "internalIDs": "SYD40421496",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -1586,8 +1648,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40421494",
       "familyId": "17F00037",
       "birthyear": "1994",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40421494",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1599,8 +1662,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40421495",
       "familyId": "17F00037",
       "birthyear": "1971",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40421495",
+      "Relationship": "father",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -1612,8 +1676,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40422061",
       "familyId": "17F00046",
       "birthyear": "2012",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40422061",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1625,8 +1690,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40421904",
       "familyId": "17F00046",
       "birthyear": "1980",
-      "internalIDs": "",
-      "Relationship": "mother"
+      "internalIDs": "SYD40421904",
+      "Relationship": "",
+      "affected": "Unknown"
     },
     {
       "Funding": "OHMR",
@@ -1638,8 +1704,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40421724",
       "familyId": "17F00046",
       "birthyear": "2014",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40421724",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1651,8 +1718,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40421725",
       "familyId": "17F00046",
       "birthyear": "1980",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40421725",
+      "Relationship": "",
+      "affected": "Unknown"
     },
     {
       "Funding": "OHMR",
@@ -1664,8 +1732,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40434090",
       "familyId": "17F00060",
       "birthyear": "1977",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40434090",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1677,8 +1746,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40469685",
       "familyId": "17F00078",
       "birthyear": "1983",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40469685",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -1690,8 +1760,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40469680",
       "familyId": "17F00078",
       "birthyear": "1978",
-      "internalIDs": "",
-      "Relationship": "mother"
+      "internalIDs": "SYD40469680",
+      "Relationship": "father",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -1703,8 +1774,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40469825",
       "familyId": "17F00078",
       "birthyear": "2016",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40469825",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1716,8 +1788,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40477831",
       "familyId": "17F00086",
       "birthyear": "2005",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40477831",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1729,8 +1802,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40405309",
       "familyId": "17F00015",
       "birthyear": "2009",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40405309",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1742,8 +1816,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40405303",
       "familyId": "17F00015",
       "birthyear": "1967",
-      "internalIDs": "",
-      "Relationship": "mother"
+      "internalIDs": "SYD40405303",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -1755,8 +1830,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40405291",
       "familyId": "17F00015",
       "birthyear": "1971",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40405291",
+      "Relationship": "father",
+      "affected": "Unaffected"
     },
     {
       "Funding": "CostCo",
@@ -1768,8 +1844,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40405310",
       "familyId": "17F00017",
       "birthyear": "2013",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40405310",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "CostCo",
@@ -1781,8 +1858,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40405304",
       "familyId": "17F00017",
       "birthyear": "1979",
-      "internalIDs": "",
-      "Relationship": "mother"
+      "internalIDs": "SYD40405304",
+      "Relationship": "",
+      "affected": "Unknown"
     },
     {
       "Funding": "CostCo",
@@ -1794,8 +1872,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40405298",
       "familyId": "17F00017",
       "birthyear": "1980",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40405298",
+      "Relationship": "",
+      "affected": "Unknown"
     },
     {
       "Funding": "CostCo",
@@ -1807,8 +1886,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40421751",
       "familyId": "17F00017",
       "birthyear": "2007",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40421751",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1820,8 +1900,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40421750",
       "familyId": "17F00038",
       "birthyear": "2002",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40421750",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1833,8 +1914,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40421749",
       "familyId": "17F00038",
       "birthyear": "1968",
-      "internalIDs": "",
-      "Relationship": "mother"
+      "internalIDs": "SYD40421749",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -1846,8 +1928,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40421748",
       "familyId": "17F00038",
       "birthyear": "1966",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40421748",
+      "Relationship": "father",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -1859,8 +1942,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40421905",
       "familyId": "17F00042",
       "birthyear": "1985",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40421905",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -1872,8 +1956,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40421735",
       "familyId": "17F00042",
       "birthyear": "2010",
-      "internalIDs": "",
-      "Relationship": "mother"
+      "internalIDs": "SYD40421735",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1885,8 +1970,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40421734",
       "familyId": "17F00042",
       "birthyear": "2007",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40421734",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1898,8 +1984,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40421727",
       "familyId": "17F00042",
       "birthyear": "2005",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40421727",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1911,8 +1998,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40421726",
       "familyId": "17F00042",
       "birthyear": "1984",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40421726",
+      "Relationship": "father",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -1924,8 +2012,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40430427",
       "familyId": "17F00052",
       "birthyear": "1941",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40430427",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -1937,8 +2026,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40429969",
       "familyId": "17F00052",
       "birthyear": "1970",
-      "internalIDs": "",
-      "Relationship": "mother"
+      "internalIDs": "SYD40429969",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1950,8 +2040,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40430476",
       "familyId": "17F00053",
       "birthyear": "2002",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40430476",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -1963,8 +2054,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40430477",
       "familyId": "17F00053",
       "birthyear": "1980",
-      "internalIDs": "",
-      "Relationship": "mother"
+      "internalIDs": "SYD40430477",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -1976,8 +2068,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40430475",
       "familyId": "17F00053",
       "birthyear": "1976",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40430475",
+      "Relationship": "father",
+      "affected": "Unaffected"
     },
     {
       "Funding": "CostCo",
@@ -1989,8 +2082,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40430484",
       "familyId": "17F00058",
       "birthyear": "2006",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40430484",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "CostCo",
@@ -2002,8 +2096,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40430480",
       "familyId": "17F00058",
       "birthyear": "1978",
-      "internalIDs": "",
-      "Relationship": "mother"
+      "internalIDs": "SYD40430480",
+      "Relationship": "father",
+      "affected": "Unaffected"
     },
     {
       "Funding": "CostCo",
@@ -2015,8 +2110,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40430478",
       "familyId": "17F00058",
       "birthyear": "1982",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40430478",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -2028,8 +2124,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40405315",
       "familyId": "17F00014",
       "birthyear": "1988",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40405315",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -2041,8 +2138,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40405292",
       "familyId": "17F00014",
       "birthyear": "2015",
-      "internalIDs": "",
-      "Relationship": "mother"
+      "internalIDs": "SYD40405292",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -2054,8 +2152,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40405286",
       "familyId": "17F00014",
       "birthyear": "1947",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40405286",
+      "Relationship": "father",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -2067,8 +2166,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40405317",
       "familyId": "17F00016",
       "birthyear": "1973",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40405317",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -2080,8 +2180,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40405318",
       "familyId": "17F00016",
       "birthyear": "2000",
-      "internalIDs": "",
-      "Relationship": "mother"
+      "internalIDs": "SYD40405318",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -2093,8 +2194,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40405316",
       "familyId": "17F00016",
       "birthyear": "1973",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40405316",
+      "Relationship": "father",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -2106,8 +2208,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40422063",
       "familyId": "17F00039",
       "birthyear": "1988",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40422063",
+      "Relationship": "father",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -2119,8 +2222,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40422062",
       "familyId": "17F00039",
       "birthyear": "1989",
-      "internalIDs": "",
-      "Relationship": "mother"
+      "internalIDs": "SYD40422062",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -2132,8 +2236,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40422059",
       "familyId": "17F00039",
       "birthyear": "2010",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40422059",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -2145,8 +2250,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40422058",
       "familyId": "17F00039",
       "birthyear": "2014",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40422058",
+      "Relationship": "",
+      "affected": "Unknown"
     },
     {
       "Funding": "OHMR",
@@ -2158,8 +2264,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40421747",
       "familyId": "17F00040",
       "birthyear": "1984",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40421747",
+      "Relationship": "father",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -2171,8 +2278,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40421737",
       "familyId": "17F00040",
       "birthyear": "2012",
-      "internalIDs": "",
-      "Relationship": "mother"
+      "internalIDs": "SYD40421737",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -2184,8 +2292,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40421736",
       "familyId": "17F00040",
       "birthyear": "1985",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40421736",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -2197,8 +2306,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40430470",
       "familyId": "17F00054",
       "birthyear": "1977",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40430470",
+      "Relationship": "mother",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -2210,8 +2320,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40430469",
       "familyId": "17F00054",
       "birthyear": "2012",
-      "internalIDs": "",
-      "Relationship": "mother"
+      "internalIDs": "SYD40430469",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -2223,8 +2334,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40430468",
       "familyId": "17F00054",
       "birthyear": "1978",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40430468",
+      "Relationship": "",
+      "affected": "Unknown"
     },
     {
       "Funding": "OHMR",
@@ -2236,8 +2348,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40430467",
       "familyId": "17F00054",
       "birthyear": "1956",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40430467",
+      "Relationship": "mother",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -2249,8 +2362,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40430474",
       "familyId": "17F00055",
       "birthyear": "1975",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40430474",
+      "Relationship": "father",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -2262,8 +2376,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40430472",
       "familyId": "17F00055",
       "birthyear": "2014",
-      "internalIDs": "",
-      "Relationship": "mother"
+      "internalIDs": "SYD40430472",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -2275,8 +2390,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40430473",
       "familyId": "17F00055",
       "birthyear": "1974",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40430473",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -2288,8 +2404,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40430471",
       "familyId": "17F00055",
       "birthyear": "2010",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40430471",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -2301,8 +2418,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40430487",
       "familyId": "17F00056",
       "birthyear": "1972",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40430487",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -2314,8 +2432,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40430483",
       "familyId": "17F00056",
       "birthyear": "2005",
-      "internalIDs": "",
-      "Relationship": "mother"
+      "internalIDs": "SYD40430483",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -2327,8 +2446,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40430482",
       "familyId": "17F00056",
       "birthyear": "2005",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40430482",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -2340,8 +2460,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40430481",
       "familyId": "17F00056",
       "birthyear": "1965",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40430481",
+      "Relationship": "",
+      "affected": "Unknown"
     },
     {
       "Funding": "OHMR",
@@ -2353,8 +2474,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40430486",
       "familyId": "17F00057",
       "birthyear": "1984",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40430486",
+      "Relationship": "mother",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -2366,8 +2488,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40430485",
       "familyId": "17F00057",
       "birthyear": "1971",
-      "internalIDs": "",
-      "Relationship": "mother"
+      "internalIDs": "SYD40430485",
+      "Relationship": "father",
+      "affected": "Unaffected"
     },
     {
       "Funding": "OHMR",
@@ -2379,8 +2502,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40430479",
       "familyId": "17F00057",
       "birthyear": "2002",
-      "internalIDs": "",
-      "Relationship": "father"
+      "internalIDs": "SYD40430479",
+      "Relationship": "child",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -2392,8 +2516,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40477828",
       "familyId": "17F00085",
       "birthyear": "1970",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40477828",
+      "Relationship": "",
+      "affected": "Unknown"
     },
     {
       "Funding": "OHMR",
@@ -2405,8 +2530,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40477829",
       "familyId": "17F00085",
       "birthyear": "2009",
-      "internalIDs": "",
-      "Relationship": "mother"
+      "internalIDs": "SYD40477829",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -2418,8 +2544,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40477825",
       "familyId": "17F00087",
       "birthyear": "2005",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40477825",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -2431,8 +2558,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40477826",
       "familyId": "17F00088",
       "birthyear": "2003",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40477826",
+      "Relationship": "",
+      "affected": "Affected"
     },
     {
       "Funding": "OHMR",
@@ -2444,8 +2572,9 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40477822",
       "familyId": "17F00089",
       "birthyear": "2010",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40477822",
+      "Relationship": "",
+      "affected": "Unknown"
     },
     {
       "Funding": "OHMR",
@@ -2457,7 +2586,10 @@ export const FAKE_DEMO_DATA = [
       "externalIDs": "40477824",
       "familyId": "17F00090",
       "birthyear": "1978",
-      "internalIDs": "",
-      "Relationship": "child"
+      "internalIDs": "SYD40477824",
+      "Relationship": "",
+      "affected": "Unknown"
     }
   ]
+
+  

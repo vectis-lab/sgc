@@ -1,16 +1,16 @@
 export const COHORT_VALUE_MAPPING_VSAL = {
     Demo: 'demo',
-    Circa: 'demo'
+    Circa: 'circa'
 }
 
 export const COHORT_VALUE_MAPPING_SSVS = {
     Demo: 'demo',
-    Circa: 'demo'
+    Circa: 'circa'
 }
 
 export const COHORT_VALUE_MAPPING_MAPD = {
     Demo: 'demo',
-    Circa: 'demo'
+    Circa: 'circa'
 }
 
 export const COHORT_PERMISSION_SUMMARY_MAPPING = {

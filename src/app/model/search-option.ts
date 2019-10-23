@@ -8,6 +8,9 @@ export class SearchOption {
     }
 
     display() {
+        if(this.value === 'Circa'){
+            return `${ this.name }: CIRCA`;
+        }
         return `${ this.name }: ${ this.value ? this.value : this.nonePlaceHolder}`;
     }
 

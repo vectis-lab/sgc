@@ -76,10 +76,9 @@ export class ClinapiService implements OnDestroy {
             headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
         };
         if(authorize){
-            return of<any>(TEST_CIRCA_DATA);
-            /*return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=demo`, httpOptions).map(res => {
+            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=circa`, httpOptions).map(res => {
                 return JSON.parse(res.pheno)
-            });*/
+            });
         }//if not authorize but want to see demo
         else if(demo){
             console.log("DEMO")

@@ -3,7 +3,7 @@
     <div *ngIf="showOptions" class="options">
         <div *ngFor="let option of option.allOptions(); let i = index;"
              (mousedown)="selectOption(option); showOptions = false">
-            <span class="name">{{ option }}</span>
+            <span class="name" [ngStyle]="{'text-transform': option === 'Circa' ? 'uppercase' : 'none'}">{{ option }}</span>
         </div>
     </div>
 </div>
