@@ -32,7 +32,7 @@ export class SearchBarService {
     private geneListSource = new BehaviorSubject<string>('');
     geneList = this.geneListSource.asObservable();
 
-    private selectedCohortSource = new BehaviorSubject<string>('Demo');
+    private selectedCohortSource = new BehaviorSubject<string>('Circa');
     selectedCohort = this.selectedCohortSource.asObservable();
 
     constructor(private geneService: ElasticGeneSearch,

@@ -33,5 +33,8 @@ export const COHORT_SAMPLES_INFO = {
         gen: '51',
         phen: '51'
     },
-    Circa: null
+    Circa: {
+        gen: '120',
+        phen: '120'
+    }
 }

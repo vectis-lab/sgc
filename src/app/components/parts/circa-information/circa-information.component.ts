@@ -19,6 +19,7 @@ export class CircaInformationComponent{
         new ClinicalFields('name', 'patientName', 'row'),
         new ClinicalFields('birthyear', 'birthyear', 'row'),
         new ClinicalFields('Test Outcome', 'testOutcome', 'row'),
+        new ClinicalFields('affected', 'affected', 'pie'),
     ];
     phenoService: string = 'getCirca'
 

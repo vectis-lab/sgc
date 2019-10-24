@@ -46,6 +46,9 @@ export class PageContainerComponent implements OnInit {
             if(this.cohort === 'Demo'){
                 this.cohort = 'Demo from 1000 Genome Project';
             }
+            if(this.cohort === 'Circa'){
+                this.cohort = 'CIRCA';
+            }
             if(COHORT_SAMPLES_INFO[cohort]){
                 this.totalSamplesGen = COHORT_SAMPLES_INFO[cohort]['gen'];
                 this.totalSamplesPhen = COHORT_SAMPLES_INFO[cohort]['phen'];
