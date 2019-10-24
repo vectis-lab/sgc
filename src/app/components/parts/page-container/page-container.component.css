@@ -125,6 +125,14 @@ mat-sidenav .title {
     white-space: pre-line;
 }
 
+.cohort-option {
+    padding-top: 0.2em;
+}
+
+.cohort-information{
+    padding-top: 0.9em;
+}
+
 @media (min-width: 0px) and (max-width: 1285px) {
 
     .header-message {
