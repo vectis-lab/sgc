@@ -23,10 +23,6 @@
     background-color: whitesmoke;
 }
 
-.options div {
-    padding: 5px;
-}
-
 .selected-option {
     color: white;
     display: flex;
