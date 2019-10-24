@@ -99,3 +99,15 @@ export const COHORT_SAMPLES_INFO = {
     Childranz: null,
     ICCon: null
 }
+
+export const COHORT_FAMILY_WITH_PHENO = {
+    Demo: true,
+    Mitochondria: false,
+    Acutecare: false,
+    Neuromuscular: false,
+    ['Epileptic Encephalopathies']: false,
+    ['Brain Malformations']: false,
+    Leukodystrophies: false,
+    ICCon: false,
+    Childranz: false,
+}
