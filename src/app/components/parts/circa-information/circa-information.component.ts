@@ -13,6 +13,7 @@ export class CircaInformationComponent{
     //pheno file
     @Input() pheno: any[] = [];
     clinicalFields: ClinicalFields[] = [
+        new ClinicalFields('familyData', 'familyData', 'pie'),
         new ClinicalFields('sex', 'sex', 'pie'),
         new ClinicalFields('Referrer Name', 'referrerName', 'row'),
         new ClinicalFields('Funding', 'funding', 'pie'),
