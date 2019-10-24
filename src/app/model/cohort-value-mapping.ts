@@ -38,3 +38,8 @@ export const COHORT_SAMPLES_INFO = {
         phen: '120'
     }
 }
+
+export const COHORT_FAMILY_WITH_PHENO = {
+    Demo: true,
+    Circa: true
+}

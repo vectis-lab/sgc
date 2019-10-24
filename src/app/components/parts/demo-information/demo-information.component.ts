@@ -13,6 +13,7 @@ export class DemoInformationComponent{
     //pheno file
     @Input() pheno: any[] = [];
     clinicalFields: ClinicalFields[] = [
+        new ClinicalFields('familyData', 'familyData', 'pie'),
         new ClinicalFields('gender', 'sex', 'pie'),
         new ClinicalFields('Population', 'population', 'row'),
         new ClinicalFields('Relationship', 'relationship', 'row'),

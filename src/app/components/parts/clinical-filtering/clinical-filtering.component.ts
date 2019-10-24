@@ -14,7 +14,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ClinicalFilteringService } from '../../../services/clinical-filtering.service';
 import { Auth } from '../../../services/auth-service';
 import { ClinapiService } from '../../../services/clinapi.service';
-import {COHORT_PERMISSION_VSAL_PHENO_MAPPING, COHORT_PHENO_GET_MAPPING} from '../../../model/cohort-value-mapping';
+import {COHORT_PERMISSION_VSAL_PHENO_MAPPING, COHORT_PHENO_GET_MAPPING, COHORT_FAMILY_WITH_PHENO} from '../../../model/cohort-value-mapping';
 import { of, Observable, forkJoin } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -107,6 +107,39 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
 
                     this.cs[COHORT_PHENO_GET_MAPPING[this.selectedCohort]](false,permitted).subscribe(pheno => {
                         this.pheno = pheno;
+
+                        let familyIDsCount = {}
+                        if(COHORT_FAMILY_WITH_PHENO[this.selectedCohort]){
+                            this.pheno.forEach(sample => {
+                                if(familyIDsCount[sample.familyId]){
+                                    familyIDsCount[sample.familyId] = familyIDsCount[sample.familyId] + 1;
+                                }else{
+                                    familyIDsCount[sample.familyId] = 1; 
+                                }
+                            })
+
+                           this.pheno = this.pheno.map(sample => {
+                                switch(familyIDsCount[sample.familyId]){
+                                    case 1:
+                                        sample['familyData'] = 'Singleton';
+                                        break;
+                                    case 2:
+                                        sample['familyData'] = 'Duo';
+                                        break;
+                                    case 3:
+                                        sample['familyData'] = 'Trio'
+                                        break;
+                                    case 4:
+                                        sample['familyData'] = 'Quartet'
+                                        break;
+                                    default: 
+                                        sample['familyData'] = 'Family'
+                                        break;
+
+                                }
+                                return sample;
+                           })
+                        }
                         
                         return this.sampleSearch.getSamples(this.searchQueries).then((result) => {
                             const list_pheno_ids = this.pheno.map(sample => sample.internalIDs)
