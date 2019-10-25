@@ -12,6 +12,12 @@
 
 .actions{
     float: right;
+    width: 100%;
+}
+
+.aligned-text-with-icon{
+    position: relative;
+    margin-top: 3px;
 }
 
 .filter-button{

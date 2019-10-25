@@ -133,7 +133,7 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
                                         sample['familyData'] = 'Quartet'
                                         break;
                                     default: 
-                                        sample['familyData'] = 'Family'
+                                        sample['familyData'] = '5+ Family'
                                         break;
 
                                 }
