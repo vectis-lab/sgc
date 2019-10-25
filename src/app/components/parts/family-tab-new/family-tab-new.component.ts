@@ -33,7 +33,7 @@ export class FamilyTabNewComponent implements AfterViewInit {
 
   ngAfterViewInit(){
     this.externalIDs = this.pheno.filter(s => {
-      return this.samples.includes(s.internalIDs)
+      return this.samples.includes(s.internalIDs) && s.familyData === 'Trio'
     }).map(s => s.externalIDs);
 
     this.variants = this.searchService.variants;
