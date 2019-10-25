@@ -132,8 +132,16 @@ export class ClinicalFilteringComponent implements OnInit, OnDestroy, AfterViewI
                                     case 4:
                                         sample['familyData'] = 'Quartet'
                                         break;
-                                    default: 
+                                    case 5:
+                                    case 6:
+                                    case 7:
+                                    case 8:
+                                    case 9:
+                                    case 10:
                                         sample['familyData'] = '5+ Family'
+                                        break;
+                                    default: 
+                                        sample['familyData'] = 'No family data'
                                         break;
 
                                 }
