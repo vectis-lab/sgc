@@ -22,6 +22,7 @@ export const QUERY_LIST_ERROR = "You query is incorrect. Please check your query
 export class SearchBarService {
     query = '';
     panel='';
+    panelGroup = '';
     autocompleteServices: AutocompleteService<any>[] = [];
     options: SearchOption[];
     autocompleteError = '';
@@ -135,6 +136,7 @@ export class SearchBarService {
     searchWithMultipleParams(params: Params): Promise<VariantAutocompleteResult<any>[]> {
         const query = params['query'];
         const panel = params['panel'];
+        const panelGroup = params['panelGroup']
         const cohort = params['cohort'];
 
         if (!query && !panel) {
@@ -157,48 +159,13 @@ export class SearchBarService {
             arrayOfQueries = query.split(',');
         }
 
-        //GENOMIC ENGLAND PANEL NOT READY FOR NOW
-        /*let regions;
-
-        if(panel.length){
-            return this.genomicsEnglandService.getPanel(panel).toPromise().then((data) => {
-                regions = data.genes.map(e => e.gene_data.ensembl_genes.GRch37['82'].location);
-
-                const regionAutocomplete = regions.map(regionString =>{
-                    const results = new RegExp(/^([\dxy]+|mt+)[:\-\.,\\/](\d+)[:\-\.,\\/](\d+)$/, "i").exec(regionString);
-                    const chromosome = results[1];
-                    const start = Number(results[2]);
-                    const end = Number(results[3]);
-                    const r = new Region(chromosome, start, end);
-                    const regions = new RegionAutocomplete(r, r.name(), '', null);
-                    return regions;
-                })
-
-                const queries = arrayOfQueries.map(q => this.searchAutocompleteServices(q).take(1).toPromise())
-            
-                return <any>Promise.all(queries).then(v => {
-                    let bestMatches = v.map(q => q[0]);
-                    bestMatches = bestMatches.concat(regionAutocomplete);
-                    return bestMatches;
-                });
-            })
-        }else{
-            const queries = arrayOfQueries.map(q => this.searchAutocompleteServices(q).take(1).toPromise())
-
-            return <any>Promise.all(queries).then(v => {
-                const bestMatches = v.map(q => q[0]);
-                return bestMatches;
-            });
-        }*/
-
-        //REMOVE THIS CODE WHEN PANEL READY
         if(query.length){
             arrayOfQueries = query.split(',');
         }
         let regions;
         let regionAutocomplete = [];
 
-        if(panel.length){
+        if(panel.length && panelGroup === 'agha'){
             regions = genePanelsFull[panel];
             regionAutocomplete = regions.map(region =>{
                 const chromosome = region.c;
@@ -238,6 +205,28 @@ export class SearchBarService {
                       }, 1);
                 })
             }
+        }else if(panel.length && panelGroup ==='genomicEngland'){
+            return this.genomicsEnglandService.getPanel(panel).toPromise().then((data) => {
+                regions = data.genes.map(e => e.gene_data.ensembl_genes.GRch37['82'].location);
+
+                const regionAutocomplete = regions.map(regionString =>{
+                    const results = new RegExp(/^([\dxy]+|mt+)[:\-\.,\\/](\d+)[:\-\.,\\/](\d+)$/, "i").exec(regionString);
+                    const chromosome = results[1];
+                    const start = Number(results[2]);
+                    const end = Number(results[3]);
+                    const r = new Region(chromosome, start, end);
+                    const regions = new RegionAutocomplete(r, r.name(), '', null);
+                    return regions;
+                })
+
+                const queries = arrayOfQueries.map(q => this.searchAutocompleteServices(q).take(1).toPromise())
+            
+                return <any>Promise.all(queries).then(v => {
+                    let bestMatches = v.map(q => q[0]);
+                    bestMatches = bestMatches.concat(regionAutocomplete);
+                    return bestMatches;
+                });
+            })
         }else{
             const queries = arrayOfQueries.map(q => this.searchAutocompleteServices(q).take(1).toPromise())
 
@@ -260,8 +249,6 @@ export class SearchBarService {
                 return bestMatches;
             });
         }
-        
-        //TILL HERE
     }
 
     setGeneList(value){

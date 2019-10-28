@@ -25,6 +25,7 @@ export class SearchOptionComponent implements OnInit {
     cohort: string;
     query: string;
     panel: string;
+    panelGroup: string;
 
     constructor(private elf: ElementRef, private searchBarService: SearchBarService, private route: ActivatedRoute, private router: Router, public clinicalFilteringService: ClinicalFilteringService) {
         
@@ -45,6 +46,11 @@ export class SearchOptionComponent implements OnInit {
             }else{
                 this.panel = "";
             }
+            if(p['panelGroup']){
+                this.panelGroup = p['panelGroup'];
+            }else{
+                this.panelGroup = "";
+            }
         }));
     }
 
@@ -59,7 +65,7 @@ export class SearchOptionComponent implements OnInit {
             }
         }else if(this.router.url.includes('/clinical')){
             if(this.query || this.panel){
-                const obj = {query: this.query || '', cohort: this.option.getValue(), panel: this.panel || '', timestamp: Date.now()};
+                const obj = {query: this.query || '', cohort: this.option.getValue(), panelGroup: this.panelGroup, panel: this.panel || '', timestamp: Date.now()};
                 this.clinicalFilteringService.clearFilters();
                 this.router.navigate(['/clinical/results', obj]);
             }

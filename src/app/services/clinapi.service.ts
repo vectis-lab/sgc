@@ -8,6 +8,7 @@ import { of, throwError, Observable } from "rxjs";
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
+import 'rxjs/add/operator/delay';
 
 @Injectable()
 export class ClinapiService implements OnDestroy {
@@ -215,6 +216,15 @@ export class ClinapiService implements OnDestroy {
         else {
             return throwError({ status: 401 });
         }
+    }
+
+    getAGHAPanel(cohort){
+        const httpOptions = {
+            headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
+        };
+        return this.http.get<any>(`${environment.vsalUrl2}?genelist=true&dataset=${cohort}`, httpOptions).map(res => {
+            return JSON.parse(res.genelist)
+        });
     }
 
     filterVariants = (v: any[]) => {

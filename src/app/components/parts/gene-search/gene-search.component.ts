@@ -7,11 +7,16 @@ import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import {MatChipInputEvent} from '@angular/material';
 import { GenericAutocompleteResult } from '../../../model/autocomplete-result';
 import { Term } from '../../../model/term';
+import {COHORT_PERMISSION_VSAL_PHENO_MAPPING} from '../../../model/cohort-value-mapping'
+import { Auth } from '../../../services/auth-service';
+import { ClinapiService } from '../../../services/clinapi.service';
+import { VariantSearchService } from '../../../services/variant-search-service';
 
 @Component({
     selector: 'app-gene-search',
     templateUrl: './gene-search.component.html',
-    styleUrls: ['./gene-search.component.css']
+    styleUrls: ['./gene-search.component.css'],
+    providers: [ClinapiService, VariantSearchService]
 })
 export class GeneSearchComponent implements AfterViewInit, OnInit, OnDestroy {
     @Input() autocomplete: GenericAutocompleteResult<any>[];
@@ -21,12 +26,16 @@ export class GeneSearchComponent implements AfterViewInit, OnInit, OnDestroy {
     readonly separatorKeysCodes: number[] = [ENTER, COMMA];
     private subscription: Subscription[] = [];
     queries: Term[] = [];
+    panelGroup: string = '';
+    permitted: boolean = false;
 
 
     constructor(public router: Router,
                 public clinicalFilteringService: ClinicalFilteringService,
                 public searchBarService: SearchBarService,
-                private route: ActivatedRoute ) {
+                private route: ActivatedRoute,
+                private auth: Auth,
+                private cs: ClinapiService ) {
     }
 
     ngOnInit(): void {
@@ -56,10 +65,24 @@ export class GeneSearchComponent implements AfterViewInit, OnInit, OnDestroy {
             }
           })
         }
+        if(p['panelGroup']){
+          this.searchBarService.panelGroup = p['panelGroup'];
+          this.panelGroup = this.searchBarService.panelGroup;
+        }
         if(p['panel']){
           this.searchBarService.panel = p['panel'];
         }
       }));
+
+          this.auth.getUserPermissions().subscribe(permissions => {
+            let allCohorts = Object.keys(COHORT_PERMISSION_VSAL_PHENO_MAPPING);
+            this.permitted = false;
+            allCohorts.forEach(c => {
+              if(c!== 'Demo' && permissions.includes(COHORT_PERMISSION_VSAL_PHENO_MAPPING[c])){
+                this.permitted = true
+              }
+            })           
+          })
     }
 
     ngAfterViewInit(): void {
@@ -84,7 +107,7 @@ export class GeneSearchComponent implements AfterViewInit, OnInit, OnDestroy {
         this.searchBarService.autocompleteError = '';
         this.searchBarService.query = this.queries.map(query => query.term).join();
         const cohort = this.searchBarService.options[0].getValue();
-        const obj = {query: this.searchBarService.query, cohort: cohort, panel:this.searchBarService.panel, timestamp: Date.now()};
+        const obj = {query: this.searchBarService.query, cohort: cohort, panelGroup: this.searchBarService.panelGroup, panel:this.searchBarService.panel, timestamp: Date.now()};
         this.clinicalFilteringService.clearFilters();
         this.router.navigate(['/clinical/results', obj]);
       }else{
@@ -153,6 +176,13 @@ export class GeneSearchComponent implements AfterViewInit, OnInit, OnDestroy {
           }
         }
       })
+    }
+
+    onChange(event) {
+      this.searchBarService.panelGroup = event.value;
+      this.panelGroup = this.searchBarService.panelGroup;
+      this.searchBarService.panel = '';
+      this.searchBarService.setGeneList('');
     }
 
     clearFilter() {
