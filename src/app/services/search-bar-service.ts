@@ -164,7 +164,6 @@ export class SearchBarService {
         }
         let regions;
         let regionAutocomplete = [];
-
         if(panel.length && panelGroup === 'agha'){
             regions = genePanelsFull[panel];
             regionAutocomplete = regions.map(region =>{
@@ -207,20 +206,23 @@ export class SearchBarService {
             }
         }else if(panel.length && panelGroup ==='genomicEngland'){
             return this.genomicsEnglandService.getPanel(panel).toPromise().then((data) => {
-                regions = data.genes.map(e => e.gene_data.ensembl_genes.GRch37['82'].location);
+                regions = data.genes.filter(e => e.gene_data.ensembl_genes.GRch37).map(e =>  e.gene_data.ensembl_genes.GRch37['82'].location);
+                const genes = data.genes.map(e => e.gene_data.gene_symbol);
 
-                const regionAutocomplete = regions.map(regionString =>{
+                const regionAutocomplete = regions.map((regionString, i) =>{
                     const results = new RegExp(/^([\dxy]+|mt+)[:\-\.,\\/](\d+)[:\-\.,\\/](\d+)$/, "i").exec(regionString);
                     const chromosome = results[1];
                     const start = Number(results[2]);
                     const end = Number(results[3]);
-                    const r = new Region(chromosome, start, end);
+                    const gene = genes[i];
+                    const r = new Region(chromosome, start, end, [gene]);
+
                     const regions = new RegionAutocomplete(r, r.name(), '', null);
                     return regions;
                 })
 
                 const queries = arrayOfQueries.map(q => this.searchAutocompleteServices(q).take(1).toPromise())
-            
+
                 return <any>Promise.all(queries).then(v => {
                     let bestMatches = v.map(q => q[0]);
                     bestMatches = bestMatches.concat(regionAutocomplete);

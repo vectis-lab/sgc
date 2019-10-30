@@ -26,7 +26,6 @@ export class GeneSearchComponent implements AfterViewInit, OnInit, OnDestroy {
     readonly separatorKeysCodes: number[] = [ENTER, COMMA];
     private subscription: Subscription[] = [];
     queries: Term[] = [];
-    panelGroup: string = '';
     permitted: boolean = false;
 
 
@@ -67,7 +66,6 @@ export class GeneSearchComponent implements AfterViewInit, OnInit, OnDestroy {
         }
         if(p['panelGroup']){
           this.searchBarService.panelGroup = p['panelGroup'];
-          this.panelGroup = this.searchBarService.panelGroup;
         }
         if(p['panel']){
           this.searchBarService.panel = p['panel'];
@@ -120,6 +118,7 @@ export class GeneSearchComponent implements AfterViewInit, OnInit, OnDestroy {
       this.searchBarService.query = query;
       const cohort = this.searchBarService.options[0].getValue();
       this.searchBarService.panel = "";
+      this.searchBarService.panelGroup = '';
       this.searchBarService.setGeneList("");
       const obj = {query: this.searchBarService.query, cohort: cohort, panel:"", timestamp: Date.now()};
       this.clinicalFilteringService.clearFilters();
@@ -180,7 +179,6 @@ export class GeneSearchComponent implements AfterViewInit, OnInit, OnDestroy {
 
     onChange(event) {
       this.searchBarService.panelGroup = event.value;
-      this.panelGroup = this.searchBarService.panelGroup;
       this.searchBarService.panel = '';
       this.searchBarService.setGeneList('');
     }
@@ -189,6 +187,7 @@ export class GeneSearchComponent implements AfterViewInit, OnInit, OnDestroy {
       this.queries = [];
       this.searchBarService.query = '';
       this.searchBarService.panel = '';
+      this.searchBarService.panelGroup ='';
       this.searchBarService.setGeneList('');
     }
 

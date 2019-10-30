@@ -46,7 +46,7 @@ export class GenePanelsFixedComponent implements OnInit, OnDestroy {
         }else{
             permitted = false;
         }
-        this.cs.getAGHAPanel(permitted, COHORT_VALUE_MAPPING_VSAL[cohort]).subscribe(panel =>{
+        this.cs.getAGHAPanel(COHORT_VALUE_MAPPING_VSAL[cohort]).subscribe(panel =>{
             this.panel = panel;
             this.options = Object.keys(panel).map(e => {
               let count = panel[e].length;
