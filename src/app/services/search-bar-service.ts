@@ -206,8 +206,8 @@ export class SearchBarService {
             }
         }else if(panel.length && panelGroup ==='genomicEngland'){
             return this.genomicsEnglandService.getPanel(panel).toPromise().then((data) => {
-                regions = data.genes.filter(e => e.gene_data.ensembl_genes.GRch37).map(e =>  e.gene_data.ensembl_genes.GRch37['82'].location);
-                const genes = data.genes.map(e => e.gene_data.gene_symbol);
+                regions = data.genesData.genes.filter(e => e.gene_data.ensembl_genes.GRch37).map(e =>  e.gene_data.ensembl_genes.GRch37['82'].location);
+                const genes = data.genesData.genes.map(e => e.gene_data.gene_symbol);
 
                 const regionAutocomplete = regions.map((regionString, i) =>{
                     const results = new RegExp(/^([\dxy]+|mt+)[:\-\.,\\/](\d+)[:\-\.,\\/](\d+)$/, "i").exec(regionString);

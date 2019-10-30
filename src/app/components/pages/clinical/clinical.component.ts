@@ -48,6 +48,10 @@ export class ClinicalComponent implements OnInit, OnDestroy {
 
   parseParams(params: Params) {
       if (!params['query'] && !params['cohort'] && !params['panel']) {
+        this.searchBarService.query = '';
+        this.searchBarService.panel = '';
+        this.searchBarService.panelGroup ='';
+        this.searchBarService.setGeneList('');
           return;
       }else{
         this.loadingParseParams = true;

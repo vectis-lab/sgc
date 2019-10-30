@@ -23,6 +23,7 @@ export class GenePanelsComponent implements OnInit, OnDestroy {
   geneList: string;
   loading: boolean = true;
   panel: any;
+  error: string = '';
   private subscriptions: Subscription[] = [];
 
   constructor(public searchBarService: SearchBarService,
@@ -33,10 +34,6 @@ export class GenePanelsComponent implements OnInit, OnDestroy {
               private cs: ClinapiService) { }
 
   ngOnInit() {
-    if(this.selectedGenePanel){
-      this.setGenePanelValue(this.selectedGenePanel);
-    }
-
     this.subscriptions.push(this.searchBarService.geneList.subscribe(genes => {
       this.geneList = genes;
     }));
@@ -49,8 +46,16 @@ export class GenePanelsComponent implements OnInit, OnDestroy {
         this.subscriptions.push(this.genomicsEnglandService.getPanels('https://panelapp.genomicsengland.co.uk/api/v1/panels/', null)
         .subscribe(e => {
           this.loading = false;
-          this.genomicsEnglandService.panels = e;
-          this.options = e;
+          if(!e.error){
+            this.genomicsEnglandService.panels = e.listPanels;
+            this.options = e.listPanels;
+            this.error = '';
+          }else{
+            this.error = e.error;
+            this.genomicsEnglandService.panels = [];
+            this.options = [];
+          }
+          this.setGenePanelValue(this.selectedGenePanel);
         }))
       }
     }else if(this.selectedPanelGroup === 'agha'){
@@ -61,6 +66,7 @@ export class GenePanelsComponent implements OnInit, OnDestroy {
                 let count = panel[e].length;
                 return  new Panel(e, count);
               });
+              this.setGenePanelValue(this.selectedGenePanel);
       })
     }
 
@@ -77,10 +83,16 @@ export class GenePanelsComponent implements OnInit, OnDestroy {
       this.searchBarService.panel = value;
       if(this.selectedPanelGroup === 'genomicEngland'){
         this.subscriptions.push(this.genomicsEnglandService.getPanel(value).subscribe((data) => {
-          this.geneList = data.genes.map(e => e.gene_data.gene_symbol).join();
-          if(this.geneList !== undefined){
-            this.searchBarService.setGeneList(this.geneList);
+          if(!data.error){
+            this.geneList = data.genesData.genes.map(e => e.gene_data.gene_symbol).join();
+            if(this.geneList !== undefined){
+              this.searchBarService.setGeneList(this.geneList);
+            }else{
+              this.searchBarService.setGeneList('');
+            }
+            this.error = '';
           }else{
+            this.error = data.error
             this.searchBarService.setGeneList('');
           }
         }))
