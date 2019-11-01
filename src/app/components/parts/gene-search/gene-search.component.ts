@@ -7,7 +7,7 @@ import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import {MatChipInputEvent} from '@angular/material';
 import { GenericAutocompleteResult } from '../../../model/autocomplete-result';
 import { Term } from '../../../model/term';
-import {COHORT_PERMISSION_VSAL_PHENO_MAPPING} from '../../../model/cohort-value-mapping'
+import {COHORT_PERMISSION_VSAL_PHENO_MAPPING, COHORT_VALUE_MAPPING_VSAL} from '../../../model/cohort-value-mapping'
 import { Auth } from '../../../services/auth-service';
 import { ClinapiService } from '../../../services/clinapi.service';
 import { VariantSearchService } from '../../../services/variant-search-service';
@@ -27,6 +27,8 @@ export class GeneSearchComponent implements AfterViewInit, OnInit, OnDestroy {
     private subscription: Subscription[] = [];
     queries: Term[] = [];
     permitted: boolean = false;
+    selectedCohort: string;
+    COHORT_VALUE_MAPPING_VSAL = COHORT_VALUE_MAPPING_VSAL;
 
 
     constructor(public router: Router,
@@ -71,6 +73,14 @@ export class GeneSearchComponent implements AfterViewInit, OnInit, OnDestroy {
           this.searchBarService.panel = p['panel'];
         }
       }));
+
+      this.subscription.push(this.searchBarService.selectedCohort.subscribe(cohort => {
+        this.selectedCohort = cohort;
+        if(COHORT_VALUE_MAPPING_VSAL[cohort] === 'demo' && this.searchBarService.panelGroup === 'agha'){
+          this.searchBarService.panelGroup = '';
+          this.searchBarService.panel = '';
+        }
+      }))
 
           this.auth.getUserPermissions().subscribe(permissions => {
             let allCohorts = Object.keys(COHORT_PERMISSION_VSAL_PHENO_MAPPING);
