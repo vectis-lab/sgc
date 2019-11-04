@@ -23,7 +23,7 @@
   <mat-label>Select Panel</mat-label>
   <mat-select [(ngModel)]="searchBarService.panelGroup" (selectionChange)="onChange($event)">
       <mat-option value=''>None</mat-option>
-      <mat-option *ngIf="permitted && COHORT_VALUE_MAPPING_VSAL[selectedCohort] !== 'demo'" value='agha'>AGHA</mat-option>
+      <mat-option *ngIf="permitted && COHORT_PERMISSION_VSAL_PHENO_MAPPING[selectedCohort] !== ''" value='agha'>AGHA</mat-option>
       <mat-option value='genomicEngland'>Genomic England</mat-option>
   </mat-select>
 </mat-form-field>
