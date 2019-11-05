@@ -126,6 +126,7 @@ import { FamilyTabNewComponent } from './components/parts/family-tab-new/family-
 import { RelationshipInformationComponent } from './components/parts/relationship-information/relationship-information.component';
 import { FamilialFiltersComponent } from './components/parts/familial-filters/familial-filters.component';
 import { ChildranzInformationComponent } from './components/parts/childranz-information/childranz-information.component';
+import { HiddenInformationComponent } from './components/parts/hidden-information/hidden-information.component';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -241,6 +242,7 @@ export class RavenErrorHandler implements ErrorHandler {
         RelationshipInformationComponent,
         FamilialFiltersComponent,
         ChildranzInformationComponent,
+        HiddenInformationComponent,
     ],
     entryComponents: [
         SignUpComponent,

@@ -7,7 +7,8 @@ export const COHORT_VALUE_MAPPING_VSAL = {
     Leukodystrophies: 'leukodystrophies',
     ICCon: 'demo',
     Childranz: 'demo',
-    Demo: 'demo'
+    Demo: 'demo',
+    HIDDEN: 'demo'
 }
 
 export const COHORT_VALUE_MAPPING_SSVS = {
@@ -19,7 +20,8 @@ export const COHORT_VALUE_MAPPING_SSVS = {
     Leukodystrophies: 'leukodystrophies',
     ICCon: 'demo',
     Childranz: 'demo',
-    Demo: 'demo'
+    Demo: 'demo',
+    HIDDEN: 'demo'
 }
 
 export const COHORT_VALUE_MAPPING_MAPD = {
@@ -31,7 +33,8 @@ export const COHORT_VALUE_MAPPING_MAPD = {
     Leukodystrophies: 'leukodystrophies',
     ICCon: 'demo',
     Childranz: 'demo',
-    Demo: 'demo'
+    Demo: 'demo',
+    HIDDEN: 'demo'
 }
 
 export const COHORT_PERMISSION_SUMMARY_MAPPING = {
@@ -43,6 +46,7 @@ export const COHORT_PERMISSION_SUMMARY_MAPPING = {
     Leukodystrophies: 'leukodystrophies/summary',
     ICCon: 'iccon/summary',
     Childranz: 'childranz/summary',
+    HIDDEN: 'hidden/summary',
     Demo: ''
 }
 
@@ -55,6 +59,7 @@ export const COHORT_PERMISSION_VSAL_PHENO_MAPPING = {
     Leukodystrophies: 'leukodystrophies/pheno',
     ICCon: 'iccon/pheno',
     Childranz: 'childranz/pheno',
+    HIDDEN: 'hidden/pheno',
     Demo: ''
 }
 
@@ -67,6 +72,7 @@ export const COHORT_PHENO_GET_MAPPING = {
     Leukodystrophies: 'getLeukodystrophies',
     ICCon: 'getIccon',
     Childranz: 'getChildranz',
+    HIDDEN: 'getHidden',
     Demo: 'getDemo'
 }
 
@@ -97,7 +103,8 @@ export const COHORT_SAMPLES_INFO = {
         phen: '7'
     },
     Childranz: null,
-    ICCon: null
+    ICCon: null,
+    HIDDEN: null
 }
 
 export const COHORT_FAMILY_WITH_PHENO = {
@@ -110,4 +117,5 @@ export const COHORT_FAMILY_WITH_PHENO = {
     Leukodystrophies: false,
     ICCon: false,
     Childranz: false,
+    HIDDEN: false
 }
