@@ -3,7 +3,8 @@
         <div class="loading-message" *ngIf="loadingVariants">
             <mat-spinner color="primary"></mat-spinner>
           </div>
-          <div class="message message-error" *ngIf="!loadingVariants && variants.length <= 0 && !denied">No Variants found for the query</div>
+          <div class="message message-error" *ngIf="!loadingVariants && mappingSamples.length <= 0 && !denied">No Samples found for the query</div>
+          <div class="message message-error" *ngIf="!loadingVariants && variants.length <= 0 && mappingSamples.length > 0 && !denied">No Variants found for the query</div>
           <div *ngIf="denied && !loadingVariants" class="message message-error">You do not have permission to view this data.</div>
           
           <div class="search-result-content" *ngIf="searchService.commenced">
@@ -16,7 +17,7 @@
             <app-variants-table [variants]="variants"></app-variants-table>
           </div>
     </mat-tab>
-    <mat-tab label="Family" [disabled]="loadingVariants">
+    <mat-tab label="Family" [disabled]="loadingVariants || mappingSamples.length <= 0">
             <div class="loading-message" *ngIf="loadingVariants">
                 <mat-spinner color="primary"></mat-spinner>
             </div>
@@ -31,7 +32,8 @@
             <div class="loading-message" *ngIf="loadingVariants">
                 <mat-spinner color="primary"></mat-spinner>
               </div>
-              <div class="message message-error" *ngIf="!loadingVariants && variants.length <= 0 && !denied">No Variants found for the query</div>
+              <div class="message message-error" *ngIf="!loadingVariants && mappingSamples.length <= 0 && !denied">No Samples found for the query</div>
+              <div class="message message-error" *ngIf="!loadingVariants && variants.length <= 0 && mappingSamples.length > 0 && !denied">No Variants found for the query</div>
               <div *ngIf="denied && !loadingVariants" class="message message-error">You do not have permission to view this data.</div>
               
               <div class="search-result-content" *ngIf="searchService.commenced">
@@ -44,7 +46,7 @@
                 <app-variants-table [variants]="variants"></app-variants-table>
               </div>
         </mat-tab>
-        <mat-tab label="Family" [disabled]="loadingVariants">
+        <mat-tab label="Family" [disabled]="loadingVariants || mappingSamples.length <= 0">
                 <div class="loading-message" *ngIf="loadingVariants">
                     <mat-spinner color="primary"></mat-spinner>
                 </div>
@@ -58,7 +60,8 @@
     <div class="loading-message" *ngIf="loadingVariants">
         <mat-spinner color="primary"></mat-spinner>
       </div>
-      <div class="message message-error" *ngIf="!loadingVariants && variants.length <= 0 && !denied">No Variants found for the query</div>
+      <div class="message message-error" *ngIf="!loadingVariants && mappingSamples.length <= 0 && !denied">No Samples found for the query</div>
+      <div class="message message-error" *ngIf="!loadingVariants && variants.length <= 0 && mappingSamples.length > 0 && !denied">No Variants found for the query</div>
       <div *ngIf="denied && !loadingVariants" class="message message-error">You do not have permission to view this data.</div>
       
       <div class="search-result-content" *ngIf="searchService.commenced">
