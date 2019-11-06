@@ -52,18 +52,7 @@ export class SearchOptionComponent implements OnInit {
         this.option.setValue(selected);
         this.searchBarService.setCohort(selected);
         this.searchBarService.options[0].setValue(selected);
-        if(this.router.url.includes('/search')){
-            if(this.query){
-                const obj = {query: this.query, cohort: this.option.getValue(), timestamp: Date.now()};
-                this.router.navigate(['/search/results', obj]);
-            }
-        }else if(this.router.url.includes('/clinical')){
-            if(this.query || this.panel){
-                const obj = {query: this.query || '', cohort: this.option.getValue(), panel: this.panel || '', timestamp: Date.now()};
-                this.clinicalFilteringService.clearFilters();
-                this.router.navigate(['/clinical/results', obj]);
-            }
-        }else if(this.router.url.includes('/explore')){
+        if(this.router.url.includes('/explore')){
             this.router.navigate([`/explore/${this.option.getValue()}`]);
         }
     }
