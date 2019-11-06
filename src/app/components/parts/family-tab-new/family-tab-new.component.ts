@@ -130,8 +130,12 @@ export class FamilyTabNewComponent implements AfterViewInit {
       });
         break;
       case 'Compound heterozygous':
+        let variantsPair = [];
         this.variants = this.unfilteredVariants.filter(v => {
           if(v.vhetc === 1 && ((v.vhetc1 === 1 && v.vhetc2 === -1)|| (v.vhetc2 === 1 && v.vhetc1 === -1))){
+            if(variantsPair.includes(v)){
+              return true;
+            }
             let geneDetails = null;
             let parentOne = v.vhetc1;
             let parentTwo = v.vhetc2;
@@ -148,14 +152,18 @@ export class FamilyTabNewComponent implements AfterViewInit {
             let variantWithinRegion = this.unfilteredVariants.filter(variant => geneDetails && variant.c === geneDetails.chromosome && variant.s >= geneDetails.start && variant.s <= geneDetails.end);
 
             //check if there are other het variant for other parent within same region
-            let otherHet = variantWithinRegion.find(variant => {
+            let otherHet = variantWithinRegion.filter(variant => {
               if(parentOne)
                 return variant.vhetc === 1 && variant.vhetc2 === 1 && variant.vhetc1 === -1
               else if(parentTwo)
                 return variant.vhetc === 1 && variant.vhetc2 === -1 && variant.vhetc1 === 1
             });
 
+
             if(otherHet){
+              otherHet.forEach(v => {
+                variantsPair.push(v);
+              })
               return true;
             }else{
               return false;
