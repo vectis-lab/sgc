@@ -1,4 +1,4 @@
-<app-autocomplete-option [options]='options' (panel)="setGenePanelValue($event)" [selectedGenePanel]='selectedGenePanel'></app-autocomplete-option>
+<app-autocomplete-option [options]='options' (panel)="setGenePanelValue($event)" [selectedGenePanel]='selectedGenePanel' [error]="error"></app-autocomplete-option>
 <span *ngIf="selectedGenePanel" class="label-panel">Selected panel: {{selectedGenePanel}}</span>
 <br/>
 <br/>

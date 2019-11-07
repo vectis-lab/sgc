@@ -25,6 +25,7 @@ export class SearchOptionComponent implements OnInit {
     cohort: string;
     query: string;
     panel: string;
+    panelGroup: string;
 
     constructor(private elf: ElementRef, private searchBarService: SearchBarService, private route: ActivatedRoute, private router: Router, public clinicalFilteringService: ClinicalFilteringService) {
         
@@ -44,6 +45,11 @@ export class SearchOptionComponent implements OnInit {
                 this.panel = p['panel'];
             }else{
                 this.panel = "";
+            }
+            if(p['panelGroup']){
+                this.panelGroup = p['panelGroup'];
+            }else{
+                this.panelGroup = "";
             }
         }));
     }
