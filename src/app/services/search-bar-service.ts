@@ -11,9 +11,10 @@ import { ElasticGeneSearch } from './autocomplete/elastic-gene-search-service';
 import { PositionService } from './autocomplete/position-service';
 import { GenomicsEnglandService } from './genomics-england.service';
 import { of, Observable, combineLatest } from "rxjs";
-import * as GenePanels from '../shared/genePanels';
 import { RegionAutocomplete } from '../model/region-autocomplete';
 import { GeneAutocomplete } from '../model/gene-autocomplete';
+import { genePanelsFull } from '../shared/genePanelList';
+import { forEach } from '../../../node_modules/@angular/router/src/utils/collection';
 
 export const QUERY_LIST_ERROR = "You query is incorrect. Please check your query and try again"
 
@@ -21,6 +22,7 @@ export const QUERY_LIST_ERROR = "You query is incorrect. Please check your query
 export class SearchBarService {
     query = '';
     panel='';
+    panelGroup = '';
     autocompleteServices: AutocompleteService<any>[] = [];
     options: SearchOption[];
     autocompleteError = '';
@@ -79,7 +81,17 @@ export class SearchBarService {
             if(this.checkErrorRegion(query)){
                 return handleAutocompleteError('Start position cannot be greater than end');
             }
-            const bestMatch = v[0];
+            let bestMatch = v[0];
+            if(bestMatch instanceof GeneAutocomplete){
+                //Workaround to handle Elasticsearch not returning the correct match(Example TNNI3 will return TNNI3K instead)
+                if(bestMatch.result.symbol.toUpperCase() !== query.toUpperCase()){
+                    v.forEach(e => {
+                        if(e.result.symbol.toUpperCase() === query.toUpperCase()){
+                            bestMatch = e;
+                        }
+                    })
+                }
+            }
             if (bestMatch.match(query)) {
                 return bestMatch;
             } else {
@@ -96,8 +108,19 @@ export class SearchBarService {
             if(v[0]){
                 if (this.checkErrorRegion(query)) {
                     return false;
-                } else if(bestMatch instanceof GeneAutocomplete && bestMatch.result.symbol.toUpperCase() === query.toUpperCase()){
-                    return true;
+                }else if(bestMatch instanceof GeneAutocomplete){
+                    //Workaround to handle Elasticsearch not returning the correct match(Example TNNI3 will return TNNI3K instead)
+                    if(bestMatch.result.symbol.toUpperCase() === query.toUpperCase()){
+                        return true;
+                    }else{
+                        let flag = false; 
+                        v.forEach(e => {
+                            if(e.result.symbol.toUpperCase() === query.toUpperCase()){
+                                flag = true
+                            }
+                        })
+                        return flag;
+                    } 
                 }else if(bestMatch instanceof RegionAutocomplete && bestMatch.match(query)){
                     return true;
                 }else {
@@ -113,6 +136,7 @@ export class SearchBarService {
     searchWithMultipleParams(params: Params): Promise<VariantAutocompleteResult<any>[]> {
         const query = params['query'];
         const panel = params['panel'];
+        const panelGroup = params['panelGroup']
         const cohort = params['cohort'];
 
         if (!query && !panel) {
@@ -129,37 +153,36 @@ export class SearchBarService {
         }
 
         this.searchedEvent.next();
-
-        const handleAutocompleteError = (e: string): Promise<any> => {
-            this.autocompleteError = e;
-            return Promise.reject(e);
-        };
-
         let arrayOfQueries = [];
 
         if(query.length){
             arrayOfQueries = query.split(',');
         }
 
-        //GENOMIC ENGLAND PANEL NOT READY FOR NOW
-        /*let regions;
-
-        if(panel.length){
+        if(query.length){
+            arrayOfQueries = query.split(',');
+        }
+        let regions;
+        let regionAutocomplete = [];
+        if(panel.length && panelGroup ==='genomicEngland'){
             return this.genomicsEnglandService.getPanel(panel).toPromise().then((data) => {
-                regions = data.genes.map(e => e.gene_data.ensembl_genes.GRch37['82'].location);
+                regions = data.genesData.genes.filter(e => e.gene_data.ensembl_genes.GRch37).map(e =>  e.gene_data.ensembl_genes.GRch37['82'].location);
+                const genes = data.genesData.genes.map(e => e.gene_data.gene_symbol);
 
-                const regionAutocomplete = regions.map(regionString =>{
+                const regionAutocomplete = regions.map((regionString, i) =>{
                     const results = new RegExp(/^([\dxy]+|mt+)[:\-\.,\\/](\d+)[:\-\.,\\/](\d+)$/, "i").exec(regionString);
                     const chromosome = results[1];
                     const start = Number(results[2]);
                     const end = Number(results[3]);
-                    const r = new Region(chromosome, start, end);
+                    const gene = genes[i];
+                    const r = new Region(chromosome, start, end, [gene]);
+
                     const regions = new RegionAutocomplete(r, r.name(), '', null);
                     return regions;
                 })
 
                 const queries = arrayOfQueries.map(q => this.searchAutocompleteServices(q).take(1).toPromise())
-            
+
                 return <any>Promise.all(queries).then(v => {
                     let bestMatches = v.map(q => q[0]);
                     bestMatches = bestMatches.concat(regionAutocomplete);
@@ -170,33 +193,24 @@ export class SearchBarService {
             const queries = arrayOfQueries.map(q => this.searchAutocompleteServices(q).take(1).toPromise())
 
             return <any>Promise.all(queries).then(v => {
-                const bestMatches = v.map(q => q[0]);
+                let bestMatches = v.map(q => q[0]);
+                v.forEach((matches,i) => {
+                    //Workaround to handle Elasticsearch not returning the correct match(Example TNNI3 will return TNNI3K instead)
+                    let bestMatch = matches[0];
+                    if(bestMatch instanceof GeneAutocomplete){
+                        if(bestMatch.result.symbol.toUpperCase() !== arrayOfQueries[i].toUpperCase()){
+                            matches.forEach(e => {
+                                if(e.result.symbol.toUpperCase() === arrayOfQueries[i].toUpperCase()){
+                                    bestMatches[i] = e;
+                                }
+                            })
+                        }
+                    }
+                })
+                bestMatches = bestMatches.concat(regionAutocomplete);
                 return bestMatches;
             });
-        }*/
-
-        //REMOVE THIS CODE WHEN PANEL READY
-        if(query.length){
-            arrayOfQueries = query.split(',');
         }
-
-        let genes;
-        if(GenePanels[panel]){
-            genes = GenePanels[panel].join();
-        }
-
-        if(panel.length){
-            const genePanelsQueries = genes.split(',');
-            arrayOfQueries = arrayOfQueries.concat(genePanelsQueries);
-        }
-
-        const queries = arrayOfQueries.map(q => this.searchAutocompleteServices(q).take(1).toPromise())
-
-        return <any>Promise.all(queries).then(v => {
-            const bestMatches = v.map(q => q[0]);
-            return bestMatches;
-        });
-        //TILL HERE
     }
 
     setGeneList(value){

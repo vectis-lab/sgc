@@ -1,7 +1,7 @@
 import {Component, OnInit, Input, Output, EventEmitter, OnChanges} from '@angular/core';
 import {FormControl,FormGroup,FormBuilder} from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import {Observable} from 'rxjs';
+import {Observable, of} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 import { Subscription } from 'rxjs/Subscription';
 import { Panel } from '../../../model/panel';
@@ -15,6 +15,7 @@ export class AutocompleteOptionComponent implements OnInit, OnChanges {
   myControl = new FormControl();
   @Input() options: Panel[];
   @Input() selectedGenePanel: string = '';
+  @Input() error: string;
   @Output() panel = new EventEmitter<string>();
 
   filteredOptions: Observable<Panel[]>;
@@ -71,5 +72,13 @@ export class AutocompleteOptionComponent implements OnInit, OnChanges {
     if(this.options.map(o => o.name).includes(panel)){
       this.panel.emit(panel);
     }
+  }
+
+  clear(){
+    this.form.get('panelForm').setValue('');
+    this.filteredOptions = this.myControl.valueChanges.pipe(
+      startWith(''),
+      map(value => { return this._filter(value)})
+    );
   }
 }

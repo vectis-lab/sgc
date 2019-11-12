@@ -1,11 +1,18 @@
-<div *ngIf="!options.length">
+<div *ngIf="!error && !options.length">
   <span>Loading ...</span>
   <mat-progress-bar mode="buffer"></mat-progress-bar>
 </div>
 
+<mat-error *ngIf="error">
+  {{error}}
+</mat-error>
+
 <form *ngIf="options.length">
   <mat-form-field [formGroup]="form">
     <input type="text" [placeholder]="'Panel'" aria-label="Panel" matInput [formControl]="myControl" [formControlName]="'panelForm'" [matAutocomplete]="auto">
+    <button mat-button mat-icon-button matSuffix (click)="clear()" *ngIf="form.get('panelForm')">
+      <mat-icon>close</mat-icon>
+    </button>
     <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)='selectPanel($event.option.value)'>
       <mat-option *ngFor="let option of filteredOptions | async" [value]="option.name">
         {{option.name}} ({{option.genesCount}})

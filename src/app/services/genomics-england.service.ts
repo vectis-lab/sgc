@@ -4,8 +4,8 @@ import { constants } from '../app.constants';
 import { environment } from '../../environments/environment';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { of, Observable, forkJoin } from "rxjs";
-import {switchMap} from 'rxjs/operators'
-import {Panel} from '../model/panel'
+import {switchMap, catchError} from 'rxjs/operators'
+import {Panel, PanelsList, GenesList} from '../model/panel'
 
 @Injectable()
 export class GenomicsEnglandService {
@@ -13,30 +13,33 @@ export class GenomicsEnglandService {
     constructor(private http: HttpClient) {
     }
 
-    getPanels(url,fullData:any[]):Observable<any[]>
+    getPanels(url,fullData:PanelsList):Observable<PanelsList>
     {
-      fullData=fullData || []
+      fullData = fullData || new PanelsList([], '');
       return this.http.get(url).pipe(
         switchMap((data:any)=>{
-          fullData=fullData.concat(data.results.map(panel => new Panel(panel.name, panel.stats.number_of_genes)));
+          fullData.listPanels = fullData.listPanels.concat(data.results.map(panel => new Panel(panel.name, panel.stats.number_of_genes)));
           return !data.next? of(fullData):
                  this.getPanels(data.next,fullData)
+        }),
+        catchError((e) => {
+            return of(new PanelsList([], 'Genomic England is currently not available. Please try again later.'))
         })
       )
     }
 
-    getPanel(panelName): Observable<any>{
+    getPanel(panelName): Observable<GenesList>{
         const headers = new HttpHeaders()
         .append('Content-Type', 'application/json')
         .append('Accept', '*/*');
 
         return this.http.get(`https://panelapp.genomicsengland.co.uk/api/v1/panels/${panelName}/`, {headers: headers})
             .map((data) => {
-                return data;
+                return new GenesList(data, null);
             })
             .catch((e) => {
                 Raven.captureMessage("GENOMICS ENGLAND: " + JSON.stringify(e));
-                return of([]);
+                return of(new GenesList([], 'Genomic England is currently not available. Please try again later.'));
             });
     }
 
