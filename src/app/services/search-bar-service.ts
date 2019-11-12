@@ -51,7 +51,7 @@ export class SearchBarService {
         this.autocompleteError = '';
         this.query = '';
         this.options = [
-            new SearchOption('Cohort', 'dataset', ['Demo', 'Mitochondria', 'Neuromuscular', 'Acutecare', 'Epileptic Encephalopathies', 'Brain Malformations', 'Leukodystrophies', 'ICCon', 'Childranz', 'HIDDEN'], 'Demo'),
+            new SearchOption('Cohort', 'dataset', ['Demo', 'Mitochondria', 'Neuromuscular', 'Acutecare', 'Epileptic Encephalopathies', 'Brain Malformations', 'Leukodystrophies', 'ICCon', 'Childranz', 'HIDDEN', 'Genetic Immunology'], 'Demo'),
         ];
     }
 

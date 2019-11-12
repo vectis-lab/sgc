@@ -8,7 +8,8 @@ export const COHORT_VALUE_MAPPING_VSAL = {
     ICCon: 'demo',
     Childranz: 'demo',
     Demo: 'demo',
-    HIDDEN: 'demo'
+    HIDDEN: 'demo',
+    ['Genetic Immunology']: 'demo'
 }
 
 export const COHORT_VALUE_MAPPING_SSVS = {
@@ -21,7 +22,8 @@ export const COHORT_VALUE_MAPPING_SSVS = {
     ICCon: 'demo',
     Childranz: 'demo',
     Demo: 'demo',
-    HIDDEN: 'demo'
+    HIDDEN: 'demo',
+    ['Genetic Immunology']: 'demo'
 }
 
 export const COHORT_VALUE_MAPPING_MAPD = {
@@ -34,7 +36,8 @@ export const COHORT_VALUE_MAPPING_MAPD = {
     ICCon: 'demo',
     Childranz: 'demo',
     Demo: 'demo',
-    HIDDEN: 'demo'
+    HIDDEN: 'demo',
+    ['Genetic Immunology']: 'demo'
 }
 
 export const COHORT_PERMISSION_SUMMARY_MAPPING = {
@@ -47,6 +50,7 @@ export const COHORT_PERMISSION_SUMMARY_MAPPING = {
     ICCon: 'iccon/summary',
     Childranz: 'childranz/summary',
     HIDDEN: 'hidden/summary',
+    ['Genetic Immunology']: 'gi/summary',
     Demo: ''
 }
 
@@ -60,6 +64,7 @@ export const COHORT_PERMISSION_VSAL_PHENO_MAPPING = {
     ICCon: 'iccon/pheno',
     Childranz: 'childranz/pheno',
     HIDDEN: 'hidden/pheno',
+    ['Genetic Immunology']: 'gi/pheno',
     Demo: ''
 }
 
@@ -73,7 +78,8 @@ export const COHORT_PHENO_GET_MAPPING = {
     ICCon: 'getIccon',
     Childranz: 'getChildranz',
     HIDDEN: 'getHidden',
-    Demo: 'getDemo'
+    Demo: 'getDemo',
+    ['Genetic Immunology']: 'getGeneticImmunology'
 }
 
 export const COHORT_SAMPLES_INFO = {
@@ -104,7 +110,8 @@ export const COHORT_SAMPLES_INFO = {
     },
     Childranz: null,
     ICCon: null,
-    HIDDEN: null
+    HIDDEN: null,
+    ['Genetic Immunology']: null
 }
 
 export const COHORT_FAMILY_WITH_PHENO = {
@@ -117,5 +124,6 @@ export const COHORT_FAMILY_WITH_PHENO = {
     Leukodystrophies: false,
     ICCon: false,
     Childranz: false,
-    HIDDEN: false
+    HIDDEN: false,
+    ['Genetic Immunology']: false
 }

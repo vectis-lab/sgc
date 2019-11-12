@@ -3,6 +3,7 @@ import { Subject } from 'rxjs/Subject';
 import { FAKE_CLINICAL_DATA } from "../mocks/clindata";
 import { FAKE_DEMO_DATA, TEST_CHILDRANZ_DATA } from "../mocks/demodata";
 import { TEST_HIDDEN_DATA } from "../mocks/hiddendata";
+import { TEST_GI_DATA } from "../mocks/gidata";
 import { VariantSearchService } from './variant-search-service';
 import { Subscription } from 'rxjs/Subscription';
 import { of, throwError, Observable } from "rxjs";
@@ -232,6 +233,25 @@ export class ClinapiService implements OnDestroy {
         else if(demo){
             console.log("DEMO")
             return of<any>(TEST_HIDDEN_DATA);
+        }//if not authorize and not opt to see demo
+        else {
+            return throwError({ status: 401 });
+        }
+    }
+
+    getGeneticImmunology(demo = false, authorize = false): Observable<any> {
+        const httpOptions = {
+            headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
+        };
+        if(authorize){
+            return of<any>(TEST_GI_DATA);
+            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=gi`, httpOptions).map(res => {
+                return JSON.parse(res.pheno)
+            });
+        }//if not authorize but want to see demo
+        else if(demo){
+            console.log("DEMO")
+            return of<any>(TEST_GI_DATA);
         }//if not authorize and not opt to see demo
         else {
             return throwError({ status: 401 });
