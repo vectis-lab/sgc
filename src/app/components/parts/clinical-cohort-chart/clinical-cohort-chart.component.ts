@@ -88,7 +88,7 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
             .slicesCap(10)
             .dimension(this.data.dim)
             .group(this.data.group)
-            .title(() => this.data.name);
+            .title((d) => d.key + ': ' + d.value);
         if(this.ClinicalFilterService.filters[this.data.name] !== undefined){
             this.ClinicalFilterService.filters[this.data.name].forEach(filter => {
                 this.chart.filter(filter);
