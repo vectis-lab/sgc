@@ -4,6 +4,7 @@ import { FAKE_CLINICAL_DATA } from "../mocks/clindata";
 import { FAKE_DEMO_DATA, TEST_CHILDRANZ_DATA } from "../mocks/demodata";
 import { TEST_HIDDEN_DATA } from "../mocks/hiddendata";
 import { TEST_GI_DATA } from "../mocks/gidata";
+import { TEST_CARDIAC } from "../mocks/cardiacdata";
 import { VariantSearchService } from './variant-search-service';
 import { Subscription } from 'rxjs/Subscription';
 import { of, throwError, Observable } from "rxjs";
@@ -252,6 +253,25 @@ export class ClinapiService implements OnDestroy {
         else if(demo){
             console.log("DEMO")
             return of<any>(TEST_GI_DATA);
+        }//if not authorize and not opt to see demo
+        else {
+            return throwError({ status: 401 });
+        }
+    }
+
+    getCardiac(demo = false, authorize = false): Observable<any> {
+        const httpOptions = {
+            headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
+        };
+        if(authorize){
+            return of<any>(TEST_CARDIAC);
+            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=cardiac`, httpOptions).map(res => {
+                return JSON.parse(res.pheno)
+            });
+        }//if not authorize but want to see demo
+        else if(demo){
+            console.log("DEMO")
+            return of<any>(TEST_CARDIAC);
         }//if not authorize and not opt to see demo
         else {
             return throwError({ status: 401 });

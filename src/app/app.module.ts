@@ -128,6 +128,7 @@ import { FamilialFiltersComponent } from './components/parts/familial-filters/fa
 import { ChildranzInformationComponent } from './components/parts/childranz-information/childranz-information.component';
 import { HiddenInformationComponent } from './components/parts/hidden-information/hidden-information.component';
 import { GeneticImmunologyInformationComponent } from './components/parts/genetic-immunology-information/genetic-immunology-information.component';
+import { CardiacInformationComponent } from './components/parts/cardiac-information/cardiac-information.component';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -245,6 +246,7 @@ export class RavenErrorHandler implements ErrorHandler {
         ChildranzInformationComponent,
         HiddenInformationComponent,
         GeneticImmunologyInformationComponent,
+        CardiacInformationComponent,
     ],
     entryComponents: [
         SignUpComponent,

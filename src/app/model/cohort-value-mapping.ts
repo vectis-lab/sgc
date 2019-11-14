@@ -1,4 +1,5 @@
 export const COHORT_VALUE_MAPPING_VSAL = {
+    Demo: 'demo',
     Mitochondria: 'mito',
     Acutecare: 'acutecare',
     Neuromuscular: 'demo',
@@ -7,12 +8,13 @@ export const COHORT_VALUE_MAPPING_VSAL = {
     Leukodystrophies: 'leukodystrophies',
     ICCon: 'demo',
     Childranz: 'demo',
-    Demo: 'demo',
     HIDDEN: 'demo',
-    ['Genetic Immunology']: 'demo'
+    ['Genetic Immunology']: 'demo',
+    Cardiac: 'demo'
 }
 
 export const COHORT_VALUE_MAPPING_SSVS = {
+    Demo: 'demo',
     Mitochondria: 'mito',
     Acutecare: 'acutecare',
     Neuromuscular: 'demo',
@@ -21,12 +23,13 @@ export const COHORT_VALUE_MAPPING_SSVS = {
     Leukodystrophies: 'leukodystrophies',
     ICCon: 'demo',
     Childranz: 'demo',
-    Demo: 'demo',
     HIDDEN: 'demo',
-    ['Genetic Immunology']: 'demo'
+    ['Genetic Immunology']: 'demo',
+    Cardiac: 'demo'
 }
 
 export const COHORT_VALUE_MAPPING_MAPD = {
+    Demo: 'demo',
     Mitochondria: 'mito',
     Acutecare: 'acutecare',
     Neuromuscular: 'demo',
@@ -35,12 +38,13 @@ export const COHORT_VALUE_MAPPING_MAPD = {
     Leukodystrophies: 'leukodystrophies',
     ICCon: 'demo',
     Childranz: 'demo',
-    Demo: 'demo',
     HIDDEN: 'demo',
-    ['Genetic Immunology']: 'demo'
+    ['Genetic Immunology']: 'demo',
+    Cardiac: 'demo'
 }
 
 export const COHORT_PERMISSION_SUMMARY_MAPPING = {
+    Demo: '',
     Mitochondria: 'mito/summary',
     Acutecare: 'acutecare/summary',
     Neuromuscular: 'neuromuscular/summary',
@@ -51,10 +55,11 @@ export const COHORT_PERMISSION_SUMMARY_MAPPING = {
     Childranz: 'childranz/summary',
     HIDDEN: 'hidden/summary',
     ['Genetic Immunology']: 'gi/summary',
-    Demo: ''
+    Cardiac: 'cardiac/summary',
 }
 
 export const COHORT_PERMISSION_VSAL_PHENO_MAPPING = {
+    Demo: '',
     Mitochondria: 'mito/pheno',
     Acutecare: 'acutecare/pheno',
     Neuromuscular: 'neuromuscular/pheno',
@@ -65,10 +70,11 @@ export const COHORT_PERMISSION_VSAL_PHENO_MAPPING = {
     Childranz: 'childranz/pheno',
     HIDDEN: 'hidden/pheno',
     ['Genetic Immunology']: 'gi/pheno',
-    Demo: ''
+    Cardiac: 'cardiac/pheno',
 }
 
 export const COHORT_PHENO_GET_MAPPING = {
+    Demo: 'getDemo',
     Mitochondria: 'getMitochondria',
     Acutecare: 'getAcutecare',
     Neuromuscular: 'getNeuromuscular',
@@ -78,8 +84,8 @@ export const COHORT_PHENO_GET_MAPPING = {
     ICCon: 'getIccon',
     Childranz: 'getChildranz',
     HIDDEN: 'getHidden',
-    Demo: 'getDemo',
-    ['Genetic Immunology']: 'getGeneticImmunology'
+    ['Genetic Immunology']: 'getGeneticImmunology',
+    Cardiac: 'getCardiac',
 }
 
 export const COHORT_SAMPLES_INFO = {
@@ -111,7 +117,8 @@ export const COHORT_SAMPLES_INFO = {
     Childranz: null,
     ICCon: null,
     HIDDEN: null,
-    ['Genetic Immunology']: null
+    ['Genetic Immunology']: null,
+    Cardiac: null
 }
 
 export const COHORT_FAMILY_WITH_PHENO = {
@@ -125,5 +132,6 @@ export const COHORT_FAMILY_WITH_PHENO = {
     ICCon: false,
     Childranz: false,
     HIDDEN: false,
-    ['Genetic Immunology']: false
+    ['Genetic Immunology']: false,
+    Cardiac: false
 }
