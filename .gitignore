@@ -12,6 +12,7 @@ connect.lock
 coverage/*
 npm-debug.log
 **/*.log
+src/app/data
 
 
 .vscode
