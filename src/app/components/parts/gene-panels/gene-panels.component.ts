@@ -25,6 +25,7 @@ export class GenePanelsComponent implements OnInit, OnDestroy {
   panel: any;
   error: string = '';
   selectedCohort: string = '';
+  permissions;
   private subscriptions: Subscription[] = [];
 
   constructor(public searchBarService: SearchBarService,
@@ -42,7 +43,6 @@ export class GenePanelsComponent implements OnInit, OnDestroy {
     this.subscriptions.push(this.searchBarService.selectedCohort.subscribe(cohort => {
       this.selectedCohort = cohort;
     }))
-
 
     if(this.selectedPanelGroup === 'genomicEngland'){
       if(this.genomicsEnglandService.panels){
@@ -63,8 +63,10 @@ export class GenePanelsComponent implements OnInit, OnDestroy {
           this.setGenePanelValue(this.selectedGenePanel);
         }))
       }
-    }else if(this.selectedPanelGroup === 'agha' && COHORT_VALUE_MAPPING_VSAL[this.selectedCohort] !== 'demo'){
-          this.cs.getAGHAPanel(COHORT_VALUE_MAPPING_VSAL[this.selectedCohort]).subscribe(panel =>{
+    }else if(this.selectedPanelGroup === 'agha' && this.selectedCohort !== 'Demo'){
+          this.subscriptions.push(this.auth.getUserPermissions().subscribe(permissions => {
+            this.permissions = permissions;
+            this.cs.getAGHAPanel(this.permissions[0].split('/')[0]).subscribe(panel =>{
               this.panel = panel;
               this.loading = false;
               this.options = Object.keys(panel).map(e => {
@@ -72,7 +74,8 @@ export class GenePanelsComponent implements OnInit, OnDestroy {
                 return  new Panel(e, count);
               });
               this.setGenePanelValue(this.selectedGenePanel);
-      })
+            })
+          }))
     }
 
   }
