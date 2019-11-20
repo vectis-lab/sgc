@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { MapdService } from '../../../services/mapd.service';
 import { CrossfilterService } from '../../../services/crossfilter.service';
+import { SearchBarService } from '../../../services/search-bar-service';
 import { Variant } from '../../../model/variant';
 import { Subscription } from 'rxjs/Subscription';
 import { Router } from '@angular/router';
@@ -20,11 +21,13 @@ export class VariantsTablePaginatedComponent implements OnInit, OnDestroy {
     limit = 100;
     offset = 0;
     @Input() cohort: string;
+    selectedCohort: string;
 
     constructor(private mapd: MapdService,
                 private cf: CrossfilterService,
                 private cd: ChangeDetectorRef,
-                private router: Router) {
+                private router: Router,
+                private searchBarService: SearchBarService) {
         // let cols = this.cf.x.getColumns();
         // for (let k of Object.keys(cols)) {
         //     let c = {name: cols[k].column, prop: cols[k].column};
@@ -37,6 +40,10 @@ export class VariantsTablePaginatedComponent implements OnInit, OnDestroy {
         this.subscriptions.push(this.cf.updates.debounceTime(500).subscribe(() => {
             this.offset = 0;
             this.getServerResult();
+        }));
+
+        this.subscriptions.push(this.searchBarService.selectedCohort.subscribe((cohort) => {
+            this.selectedCohort = cohort;
         }));
     }
 
@@ -73,7 +80,7 @@ export class VariantsTablePaginatedComponent implements OnInit, OnDestroy {
     }
 
     variantUrl(v: string) {
-        return this.router.createUrlTree(['/search/variant', {query: v.replace(/:/g, '-')}]).toString();
+        return this.router.createUrlTree(['/clinical/variant', {query: v.replace(/:/g, '-'), cohort: this.selectedCohort}]).toString();
     }
 
     onChange(event: any): void {
