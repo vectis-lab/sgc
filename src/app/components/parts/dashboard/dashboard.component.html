@@ -63,10 +63,6 @@
                 {{ error }}
             </div>
         <div *ngIf="!error">
-            <div class="message message-warning">
-                <mat-icon>help_outline</mat-icon>
-                <div>Please treat beta release data with caution</div>
-            </div>
             <div class="results">
                 <div class="loading-message" *ngIf="loading && !error">
                     <mat-spinner color="primary"></mat-spinner>
