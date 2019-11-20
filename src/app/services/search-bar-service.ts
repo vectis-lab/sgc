@@ -34,7 +34,7 @@ export class SearchBarService {
     private geneListSource = new BehaviorSubject<string>('');
     geneList = this.geneListSource.asObservable();
 
-    private selectedCohortSource = new BehaviorSubject<string>('Circa');
+    private selectedCohortSource = new BehaviorSubject<string>('MGRB');
     selectedCohort = this.selectedCohortSource.asObservable();
 
     constructor(private geneService: ElasticGeneSearch,
@@ -51,7 +51,7 @@ export class SearchBarService {
         this.autocompleteError = '';
         this.query = '';
         this.options = [
-            new SearchOption('Cohort', 'dataset', ['Circa', 'Demo'], 'Circa'),
+            new SearchOption('Cohort', 'dataset', ['MGRB', 'Demo'], 'MGRB'),
         ];
     }
 

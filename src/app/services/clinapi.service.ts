@@ -72,7 +72,7 @@ export class ClinapiService implements OnDestroy {
         }
     }
 
-    getCirca(demo = false, authorize = false): Observable<any> {
+    getMgrb(demo = false, authorize = false): Observable<any> {
         const httpOptions = {
             headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
         };

@@ -1,31 +1,31 @@
 export const COHORT_VALUE_MAPPING_VSAL = {
     Demo: 'demo',
-    Circa: 'circa'
+    MGRB: 'circa'
 }
 
 export const COHORT_VALUE_MAPPING_SSVS = {
     Demo: 'demo',
-    Circa: 'circa'
+    MGRB: 'mgrb'
 }
 
 export const COHORT_VALUE_MAPPING_MAPD = {
     Demo: 'demo',
-    Circa: 'circa'
+    MGRB: 'mgrb'
 }
 
 export const COHORT_PERMISSION_SUMMARY_MAPPING = {
     Demo: '',
-    Circa: 'circa/summary'
+    MGRB: ''
 }
 
 export const COHORT_PERMISSION_VSAL_PHENO_MAPPING = {
     Demo: '',
-    Circa: 'circa/pheno'
+    MGRB: 'circa/pheno'
 }
 
 export const COHORT_PHENO_GET_MAPPING = {
     Demo: 'getDemo',
-    Circa: 'getCirca'
+    MGRB: 'getMgrb'
 }
 
 export const COHORT_SAMPLES_INFO = {
@@ -33,13 +33,13 @@ export const COHORT_SAMPLES_INFO = {
         gen: '51',
         phen: '51'
     },
-    Circa: {
-        gen: '120',
-        phen: '120'
+    MGRB: {
+        gen: '2845',
+        phen: '2845'
     }
 }
 
 export const COHORT_FAMILY_WITH_PHENO = {
     Demo: true,
-    Circa: true
+    MGRB: true
 }

@@ -19,14 +19,7 @@
 
 .logoAbbreviation{
     display: block;
-    font-size: 5em;
-    font-weight: 700;
-    color: #07607a;
-    letter-spacing: 1.28em;
-}
-
-.logoName{
-    display: block;
-    font-size: 1.5em;
-    color: #07607a;
+    font-size: 3em;
+    font-weight: 500;
+    color: #003263;
 }
