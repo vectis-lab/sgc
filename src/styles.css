@@ -1,7 +1,7 @@
 @import '../node_modules/font-awesome/css/font-awesome.css';
 
 :root{
-    --theme: #003263;
+    --theme: #4c00c7;
 }
 
 html {
@@ -11,7 +11,7 @@ html {
 body {
     height: 100%;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    color: #003263;
+    color: #4c00c7;
     margin: 0;
     line-height: normal;
     font-size: 14px;
@@ -111,7 +111,7 @@ header nav a {
 
 .message-info {
     background-color: transparent;
-    color: #003263;
+    color: #4c00c7;
 }
 
 .message {

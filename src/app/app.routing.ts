@@ -10,6 +10,10 @@ import { ErrorComponent } from './components/pages/error/error.component';
 import { ExploreComponent } from './components/pages/explore/explore.component';
 import { ClinicalComponent } from './components/pages/clinical/clinical.component';
 import { ProfileComponent } from './components/pages/profile/profile.component';
+import { GcmpComponent } from './components/pages/programmes/gcmp/gcmp.component';
+import { NswgpComponent } from './components/pages/programmes/nswgp/nswgp.component';
+import { MgrbComponent } from './components/pages/programmes/mgrb/mgrb.component';
+import { MgrbTermsComponent } from './components/pages/mgrb-terms/mgrb-terms.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
@@ -24,6 +28,10 @@ const appRoutes: Routes = [
     { path: 'search', component: SearchComponent },
     { path: 'explore/:cohort', component: ExploreComponent },
     { path: 'beacon', component: BeaconComponent },
+    { path: 'terms/mgrb', component: MgrbTermsComponent },
+    { path: 'initiatives/mgrb', component: MgrbComponent },
+    { path: 'initiatives/nswgp', component: NswgpComponent },
+    { path: 'initiatives/gcmp', component: GcmpComponent },
     { path: 'error', component: ErrorComponent },
     { path: '', redirectTo: '/', pathMatch: 'full'},
     { path: '**', redirectTo: '/', pathMatch: 'full'},

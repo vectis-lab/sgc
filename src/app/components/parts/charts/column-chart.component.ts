@@ -78,7 +78,7 @@ export class ColumnChartComponent implements AfterViewInit {
             borderWidth: 1,
             groupPadding: 0,
             shadow: false,
-            color: '#003263'
+            color: '#4c00c7'
         });
 
         this.chart.setSize(this.width, this.height);
