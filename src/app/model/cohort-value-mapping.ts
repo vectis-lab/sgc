@@ -1,6 +1,6 @@
 export const COHORT_VALUE_MAPPING_VSAL = {
     Demo: 'demo',
-    MGRB: 'circa'
+    MGRB: 'mgrb'
 }
 
 export const COHORT_VALUE_MAPPING_SSVS = {

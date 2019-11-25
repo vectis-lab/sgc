@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CircaInformationComponent } from './circa-information.component';
+import { MgrbInformationComponent } from './mgrb-information.component';
 
-describe('CircaInformationComponent', () => {
-  let component: CircaInformationComponent;
-  let fixture: ComponentFixture<CircaInformationComponent>;
+describe('MgrbInformationComponent', () => {
+  let component: MgrbInformationComponent;
+  let fixture: ComponentFixture<MgrbInformationComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CircaInformationComponent ]
+      declarations: [ MgrbInformationComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CircaInformationComponent);
+    fixture = TestBed.createComponent(MgrbInformationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

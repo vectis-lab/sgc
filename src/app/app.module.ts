@@ -118,13 +118,13 @@ import { DemoInformationComponent } from './components/parts/demo-information/de
 import { FamilyTabNewComponent } from './components/parts/family-tab-new/family-tab-new.component';
 import { RelationshipInformationComponent } from './components/parts/relationship-information/relationship-information.component';
 import { FamilialFiltersComponent } from './components/parts/familial-filters/familial-filters.component';
-import { CircaInformationComponent } from './components/parts/circa-information/circa-information.component';
 import { MgrbTermsComponent } from './components/pages/mgrb-terms/mgrb-terms.component';
 import { GcmpComponent } from './components/pages/programmes/gcmp/gcmp.component';
 import { MgrbComponent } from './components/pages/programmes/mgrb/mgrb.component';
 import { NswgpComponent } from './components/pages/programmes/nswgp/nswgp.component';
 import { GraphsWidgetComponent } from './components/parts/graphs-widget/graphs-widget.component';
 import { PcaPlotComponent } from './components/parts/pca-plot/pca-plot.component';
+import { MgrbInformationComponent } from './components/parts/mgrb-information/mgrb-information.component';
 
 const CRITICAL_ERROR_WAIT_DURATION = 1000;
 
@@ -232,13 +232,13 @@ export class RavenErrorHandler implements ErrorHandler {
         FamilyTabNewComponent,
         RelationshipInformationComponent,
         FamilialFiltersComponent,
-        CircaInformationComponent,
         MgrbTermsComponent,
         GcmpComponent,
         MgrbComponent,
         NswgpComponent,
         GraphsWidgetComponent,
-        PcaPlotComponent
+        PcaPlotComponent,
+        MgrbInformationComponent
     ],
     entryComponents: [
         SignUpComponent,

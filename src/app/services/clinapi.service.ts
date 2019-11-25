@@ -9,6 +9,7 @@ import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import 'rxjs/add/operator/delay';
+import { TEST_MGRB } from "../mocks/mgrbdata";
 
 @Injectable()
 export class ClinapiService implements OnDestroy {
@@ -77,7 +78,8 @@ export class ClinapiService implements OnDestroy {
             headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
         };
         if(authorize){
-            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=circa`, httpOptions).map(res => {
+            return of<any>(TEST_MGRB)
+            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=mgrb`, httpOptions).map(res => {
                 return JSON.parse(res.pheno)
             });
         }//if not authorize but want to see demo
