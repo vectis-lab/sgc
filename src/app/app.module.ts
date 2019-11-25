@@ -27,7 +27,6 @@ import { AppComponent } from './app.component';
 import { ProgramCardComponent } from './components/parts/program-card/program-card.component';
 import { CohortCardComponent } from './components/parts/cohort-card/cohort-card.component';
 import { AboutComponent } from './components/pages/about/about.component';
-import { InitiativesComponent } from './components/pages/initiatives/initiatives.component';
 import { ColumnChartComponent } from './components/parts/charts/column-chart.component';
 import { PieChartComponent } from './components/parts/charts/pie-chart.component';
 import { CohortListComponent } from './components/parts/cohort-list/cohort-list.component';
@@ -87,7 +86,6 @@ import { AuthGuardComponent } from './components/parts/auth-guard/auth-guard.com
 import { HelperService } from './services/helper.service';
 import { ClinicalFilteringService } from './services/clinical-filtering.service';
 import { SavedSearchesComponent } from './components/parts/saved-searches/saved-searches.component';
-import { CohortsComponent } from './components/parts/cohorts/cohorts.component';
 import { ClinicalCohortChartComponent } from './components/parts/clinical-cohort-chart/clinical-cohort-chart.component';
 import { SearchBarService } from './services/search-bar-service';
 import { VariantsSummaryTableComponent } from './components/parts/variants-summary-table/variants-summary-table.component';
@@ -172,7 +170,6 @@ export class RavenErrorHandler implements ErrorHandler {
         ProgramCardComponent,
         CohortCardComponent,
         AboutComponent,
-        InitiativesComponent,
         PieChartComponent,
         CohortListComponent,
         SearchOptionComponent,
@@ -203,7 +200,6 @@ export class RavenErrorHandler implements ErrorHandler {
         SignUpComponent,
         AuthGuardComponent,
         SavedSearchesComponent,
-        CohortsComponent,
         ClinicalCohortChartComponent,
         VariantsSummaryTableComponent,
         GenomeBrowserSummaryComponent,

@@ -14,7 +14,7 @@ const COHORTS = new Map<string, Cohort>([
             people: ['robynwoods', 'johnmcneil'],
             genomes: '2000',
             sequenced: '1700',
-            logos: ['assets/logos/aspree.png', 'assets/logos/monash.png'],
+            logos: ['assets/sgc/aspree.png', 'assets/sgc/monash.png'],
             heights: [{'name': '30-40', 'x': 35, 'y': 0.0}, {'name': '40-50', 'x': 45, 'y': 0.0}, {
                 'name': '50-60',
                 'x': 55,
@@ -100,7 +100,7 @@ const COHORTS = new Map<string, Cohort>([
             people: ['margobarr', 'robertwells'],
             genomes: '2000',
             sequenced: '0',
-            logos: ['assets/logos/sax_45.png'],
+            logos: ['assets/sgc/sax_45.png'],
             heights: [{'name': '30-40', 'x': 35, 'y': 0.0}, {'name': '40-50', 'x': 45, 'y': 0.0}, {
                 'name': '50-60',
                 'x': 55,
@@ -198,7 +198,7 @@ const COHORTS = new Map<string, Cohort>([
             people: ['murraycairns'],
             genomes: '500',
             sequenced: '',
-            logos: ['assets/logos/una.png'],
+            logos: ['assets/sgc/una.png'],
             heights: [],
             weights: [],
             ages: [],
@@ -216,7 +216,7 @@ const COHORTS = new Map<string, Cohort>([
             people: [],
             genomes: '',
             sequenced: '',
-            logos: ['assets/logos/usyd.png'],
+            logos: ['assets/sgc/usyd.png'],
             heights: [],
             weights: [],
             ages: [],
@@ -234,7 +234,7 @@ const COHORTS = new Map<string, Cohort>([
             people: ['grahammann'],
             genomes: '500',
             sequenced: '',
-            logos: ['assets/logos/westmead.png'],
+            logos: ['assets/sgc/westmead.png'],
             heights: [],
             weights: [],
             ages: [],
@@ -252,7 +252,7 @@ const COHORTS = new Map<string, Cohort>([
             people: ['carolynsue'],
             genomes: '500',
             sequenced: '',
-            logos: ['assets/logos/kolling.png'],
+            logos: ['assets/sgc/kolling.png'],
             heights: [],
             weights: [],
             ages: [],
@@ -270,7 +270,7 @@ const COHORTS = new Map<string, Cohort>([
             people: ['sallydunwoodie'],
             genomes: '500',
             sequenced: '',
-            logos: ['assets/logos/victorchang.png'],
+            logos: ['assets/sgc/victorchang.png'],
             heights: [],
             weights: [],
             ages: [],
@@ -288,7 +288,7 @@ const COHORTS = new Map<string, Cohort>([
             people: ['tonros'],
             genomes: '',
             sequenced: '',
-            logos: ['assets/logos/garvan-logo-sml.png'],
+            logos: ['assets/sgc/garvan-logo-sml.png'],
             heights: [],
             weights: [],
             ages: [],
@@ -306,7 +306,7 @@ const COHORTS = new Map<string, Cohort>([
             people: ['tonros'],
             genomes: '',
             sequenced: '',
-            logos: ['assets/logos/garvan-logo-sml.png'],
+            logos: ['assets/sgc/garvan-logo-sml.png'],
             heights: [],
             weights: [],
             ages: [],
@@ -324,7 +324,7 @@ const COHORTS = new Map<string, Cohort>([
             people: ['tonros'],
             genomes: '',
             sequenced: '',
-            logos: ['assets/logos/garvan-logo-sml.png'],
+            logos: ['assets/sgc/garvan-logo-sml.png'],
             heights: [],
             weights: [],
             ages: [],
@@ -342,7 +342,7 @@ const COHORTS = new Map<string, Cohort>([
             people: [''],
             genomes: '',
             sequenced: '',
-            logos: ['assets/logos/schn.png'],
+            logos: ['assets/sgc/schn.png'],
             heights: [],
             weights: [],
             ages: [],
@@ -360,7 +360,7 @@ const COHORTS = new Map<string, Cohort>([
             people: [''],
             genomes: '',
             sequenced: '',
-            logos: ['assets/logos/usyd.png', 'assets/logos/cilr.png'],
+            logos: ['assets/sgc/usyd.png', 'assets/sgc/cilr.png'],
             heights: [],
             weights: [],
             ages: [],
@@ -378,7 +378,7 @@ const COHORTS = new Map<string, Cohort>([
             people: ['johnsimes', 'davidthomas', 'dominiquehess'],
             genomes: '1000',
             sequenced: '0',
-            logos: ['assets/logos/nhmrc.png', 'assets/logos/usyd.png'],
+            logos: ['assets/sgc/nhmrc.png', 'assets/sgc/usyd.png'],
             heights: [],
             weights: [],
             ages: [],
@@ -396,7 +396,7 @@ const COHORTS = new Map<string, Cohort>([
             people: ['davidthomas', 'johnsimes', 'dominiquehess'],
             genomes: '1000',
             sequenced: '0',
-            logos: ['assets/logos/lifehouse.png', 'assets/logos/garvan-logo-sml.png', 'assets/logos/svhs.png'],
+            logos: ['assets/sgc/lifehouse.png', 'assets/sgc/garvan-logo-sml.png', 'assets/sgc/svhs.png'],
             heights: [],
             weights: [],
             ages: [],
@@ -414,7 +414,7 @@ const COHORTS = new Map<string, Cohort>([
             people: [''],
             genomes: '',
             sequenced: '',
-            logos: ['assets/logos/pow.png', 'assets/logos/neura.png', 'assets/logos/black_dog.png', 'assets/logos/unsw.png'],
+            logos: ['assets/sgc/pow.png', 'assets/sgc/neura.png', 'assets/sgc/black_dog.png', 'assets/sgc/unsw.png'],
             heights: [],
             weights: [],
             ages: [],
@@ -423,359 +423,11 @@ const COHORTS = new Map<string, Cohort>([
     ],
 ]);
 
-const NEW_COHORTS = new Array<any>(
-    {
-        title: 'Mitochondria',
-        content: [
-            {
-                header: "Methodology", 
-                text: "A parallel evaluation of genomic testing methodologies in mitochondrial diseases."
-            },
-            {
-                header: "Cohort", 
-                text: "Paediatric and Adult"
-            },
-            {
-                header: "Sequencing strategy", 
-                text: "Half whole genome sequencing (WGS), half whole exome sequencing (WES) with mtDNA."
-            },
-            {
-                header: "Recruitment", 
-                text: "210"
-            },
-            {
-                header: "Standard of Care",
-                text: "A range of biochemical, enzyme and histology assays, often requiring biopsy. MRI/MRS and small / single gene tests may be used."
-            },
-            {
-                header: "Evaluation", 
-                text: "Diagnostic utility and cost effectiveness of WGS vs WES+mtDNA sequencing; participant surveys."
-            },
-            {
-                header: "Research linkages", 
-                text: "Undiagnosed patients will reflex to research programs at Murdoch Children’s."
-            },
-            {
-                header: "Collaborations", 
-                text: "This Flagship is a collaboration with the Australian Mitochondrial Disease Foundation, who fund 50% of the sequencing. An animation to support the consent process has been developed by Dr Cathy Quinlan, and is available to recruited patients (see: www.australiangenomics.org.au/mito)"
-            },
-        ],
-        authors: ['John Christodoulou', 'David Thorburn', 'Joy Lee', 'Nick Smith', 'David Coman', 'Maina Kava', 'Michael Fahey', 'Carolyn Ellaway', 'Janice Fletcher', 'Phillipa Lamont', 'Mike Ryan', 'Maie Walsh', 'Alexandra Filipovska'],
-        imgSource: 'assets/mito-logo.png'
-    },
-    {
-        title: 'Neuromuscular',
-        content: [
-            {
-                header: "Methodology", 
-                text: "The goal of this project is to 1) to trial the next layers of diagnostic genomics above standard care, 2) to test whether optimise referral and data collection processes enriches diagnostic yield, 3) to perform health economic evaluation of neuromuscular disorders."
-            },
-            {
-                header: "Cohort", 
-                text: "Paediatric and Adult"
-            },
-            {
-                header: "Sequencing strategy", 
-                text: "WGS (Genome.One), RNAseq (Pathwest)"
-            },
-            {
-                header: "Recruitment", 
-                text: "300"
-            },
-            {
-                header: "Standard of Care",
-                text: "The PathWest NATA-accredited capture panels have been SOC since prior to Australian Genomics, except in South Australia, which is now using, through SAPath, a targeted panel of ≈1200 commonly requested genes or Medical Exome."
-            },
-            {
-                header: "Evaluation", 
-                text: "Is there improved diagnostic utility through the next layers of genomic testing, optimal clinical data collection and appropriate referring pathways? Data obtained through participant surveys on NMD costs."
-            },
-            {
-                header: "Research linkages", 
-                text: "The Neuromuscular Disorders Flagship links to well established research collaboratives, including the Australasian Neuromuscular Network, and links with Daniel MacArthur’s Group at the Broad Institute, USA."
-            },
-            {
-                header: "Collaborations", 
-                text: "The EU FP7 NeurOmics network."
-            },
-        ],
-        authors: ['Nigel Laing', 'Phillipa Lamont', 'Kristi Jones', 'Denise Howting', 'Mark Davis', 'Phillipa Lamont', 'Chris Barnett', 'Anita Cairns', 'David Mowat', 'Suzanna Thompson', 'Roula Ghaoui', 'Sandra Cooper', 'Kristen Nowak', 'Gina Ravenscroft'],
-        imgSource: 'assets/cooming-soon.png'
-    },
-    {
-        title: 'Neurodevelopmental Disabilities',
-        content: [
-            {
-                header: "Methodology", 
-                text: "There are three sub-projects to the Neurodevelopmental Disabilities Flagship: Epileptic Encephalopathies (EE), Brain Malformations and Leukodystrophies (BML) & Intellectual Disabilities (ID)."
-            },
-            {
-                header: "Cohort", 
-                text: "Paediatric"
-            },
-            {
-                header: "Sequencing strategy", 
-                text: "WES; some ID trios receiving WGS."
-            },
-            {
-                header: "Recruitment", 
-                text: "EE 105; BML 170; ID 50 trios."
-            },
-            {
-                header: "Standard of Care",
-                text: "varies state to state, but may include brain imaging (often requires anaesthesia), chromosomal microarray, range of biochemical tests, and potentially invasive procedures like biopsies."
-            },
-            {
-                header: "Evaluation", 
-                text: "Relative diagnostic utility and cost effectiveness of genomic sequencing over standard care and participant / health economic surveys."
-            },
-            {
-                header: "Research linkages", 
-                text: "There are well-established research programs associated with these studies – with Jozef Gecz (SA), Ingrid Scheffer (VIC), Rick Leventer & Paul Lockhart (VIC) & Cas Simons (VIC)."
-            },
-            {
-                header: "Collaborations", 
-                text: "Dr Cathy Quinlan’s consent animation has been adapted for the ID Flagship."
-            },
-        ],
-        authors: ['Jozef Gecz', 'Ingrid Scheffer', 'Katherine Howell', 'Deepak Gill', 'Lakshmi Nagarajan', 'Stephen Malone', 'Clair Pridmore', 'Tyson Ware', 'Rick Leventer', 'Paul Lockhart', 'Kate Riney', 'Chris Barnett', 'Nick Smith', 'Jonathan Silberstein', 'Rani Sachdev', 'Shakeed Mohammed', 'Cas Simons', 'Tony Rascioli', 'Mike Field', 'David Armore', 'Gareth Baynam', 'Julie McGaughran'],
-        imgSource: 'assets/cooming-soon.png'
-    },
-    {
-        title: 'Kidgen Renal Genetics',
-        content: [
-            {
-                header: "Methodology", 
-                text: "A parallel evaluation of genomic testing methodologies in renal disease of suspected genetic origin."
-            },
-            {
-                header: "Cohort", 
-                text: "Paediatric and Adult."
-            },
-            {
-                header: "Sequencing strategy", 
-                text: "WES (VIC), large capture panels (NSW) or overseas testing (UK)."
-            },
-            {
-                header: "Recruitment", 
-                text: "360 with clinical audit of 100+ retrospective cases"
-            },
-            {
-                header: "Standard of Care",
-                text: "traditionally, diagnosis was clinical, based on pedigree, radiological and pathology results."
-            },
-            {
-                header: "Evaluation", 
-                text: "Diagnostic utility & cost effectiveness; participant surveys; evaluation of the multidisciplinary clinic approach; diagnostic impacts on avoidance of therapy/intervention, medical management and reproductive choice."
-            },
-            {
-                header: "Research linkages", 
-                text: "Undiagnosed patients or those with VUS will be offered recruitment into established pioneering program of work with iPSC at Murdoch Children’s."
-            },
-            {
-                header: "Collaborations", 
-                text: "This Flagship is a project of KidGen(www.kidgen.org.au), an Australian-based collaborative consortium focussed on providing a definitive diagnosis to patients with inherited forms of kidney disease. Dr Cathy Quinlan’s KidGen animation has been adapted to support other Australian Genomics Flagships. This Flagship is a collaboration with Melbourne Genomics."
-            },
-        ],
-        imgSource: 'assets/cooming-soon.png'
-    },
-    {
-        title: 'Genetic Immunology',
-        content: [
-            {
-                header: "Methodology", 
-                text: "The Genetic Immunology flagship will concentrate on immune deficiency, autoimmune and autoinflammatory diseases."
-            },
-            {
-                header: "Cohort", 
-                text: "Paediatric and Adult, 5 clinical subgroups (SCID, combined immune deficiency, HLH, autoinflammatory disease, autoimmunity)."
-            },
-            {
-                header: "Sequencing strategy", 
-                text: "WES & WGS."
-            },
-            {
-                header: "Recruitment", 
-                text: "50 – 100 index cases"
-            },
-            {
-                header: "Standard of Care",
-                text: "for most of the selected cohorts, genetic testing is not currently available."
-            },
-            {
-                header: "Evaluation", 
-                text: "Resolution of cases by WES/WGS that remain undiagnosed after routine investigations; health economic analysis based on time to diagnosis, cost of delayed diagnosis and additional investigations, & delay to implementation of therapy."
-            },
-            {
-                header: "Research linkages", 
-                text: "Centre for Personalised Immunology."
-            },
-            {
-                header: "Collaborations", 
-                text: "Linking to established collaborative immunology projects at the Garvan & Melbourne Genomics."
-            },
-        ],
-        imgSource: 'assets/cooming-soon.png'
-    },
-    {
-        title: 'Childranz',
-        content: [
-            {
-                header: "Methodology", 
-                text: "Establishing evidence that genomics improves the value of healthcare by increasing the diagnostic yield, impacting the change of management and outcomes, and reducing costs in children with interstitial and diffuse lung diseases."
-            },
-            {
-                header: "Cohort", 
-                text: "Paediatric"
-            },
-            {
-                header: "Sequencing strategy", 
-                text: "WES"
-            },
-            {
-                header: "Recruitment", 
-                text: "210"
-            },
-            {
-                header: "Standard of Care",
-                text: "There is currently no national standardised approach to genomic testing; this will be addressed by this flagship which will enable the development of NGS as a standard of care."
-            },
-            {
-                header: "Evaluation", 
-                text: "Standardise management and standards of practice in Australia, establish a chILD registry and provide an opportunity to participate in an international clinical trial."
-            },
-            {
-                header: "Research linkages", 
-                text: "Centre for Personalised Immunology."
-            },
-            {
-                header: "Collaborations", 
-                text: "Linking to established collaborative immunology projects at the Garvan & Melbourne Genomics."
-            },
-        ],
-        imgSource: 'assets/cooming-soon.png'
-    },
-    {
-        title: 'Cardiovascular Disorders',
-        content: [
-            {
-                header: "Methodology", 
-                text: "Undertaking genomic testing in patients with inherited cardiomyopathies, primary arrhythmia disorders or congenital heart disease."
-            },
-            {
-                header: "Cohort", 
-                text: "Paediatric and Adult"
-            },
-            {
-                header: "Sequencing strategy", 
-                text: "WES, WGS & Panels"
-            },
-            {
-                header: "Recruitment", 
-                text: "400"
-            },
-            {
-                header: "Standard of Care",
-                text: "Specialised multidisciplinary evaluation and deep phenotyping; access to genomic investigation is variable, and often restricted to the research domain."
-            },
-            {
-                header: "Evaluation", 
-                text: "Determine the current state of play of cardiac genetic testing in Australia, and establish the optimisation and translation of genomic approaches in families with genetic heart disease."
-            },
-            {
-                header: "Research linkages", 
-                text: "Functional genomics networks at VCCRI, IMB & the Australian Functional Genomics network."
-            },
-            {
-                header: "Collaborations", 
-                text: "engages with a broad established collaborative network Australian Genetic Heart Disease Registry & Australian Cardiac Genetic Testing Network."
-            },
-        ],
-        imgSource: 'assets/cooming-soon.png'
-    },
-    {
-        title: 'Acute Care Genomic Testing',
-        content: [
-            {
-                header: "Methodology", 
-                text: "Provide ultra-rapid (<5 day) genomic testing to acutely unwell infants and children with suspected genetic conditions, with the aim of providing diagnostic certainty and guiding acute care management."
-            },
-            {
-                header: "Cohort", 
-                text: "Paediatric"
-            },
-            {
-                header: "Sequencing strategy", 
-                text: "Ultra rapid trio WES & WGS"
-            },
-            {
-                header: "Recruitment", 
-                text: "250"
-            },
-            {
-                header: "Standard of Care",
-                text: "Acute care patients with suspected genetic disorders are referred for tiered genetic testing, & sequencing has an average return of results in 3-6 months."
-            },
-            {
-                header: "Evaluation", 
-                text: "In this cohort, rapid/ultra-rapid genomic sequencing is postulated to substantially altering the diagnostic pathway and impacting on acute management, reducing morbidity, mortality & length of ICU stay (~$4500/day)."
-            },
-            {
-                header: "Collaborations", 
-                text: "Stephen Kingsmore at the Rady Children’s, & similar international rapid genomic sequencing initiatives"
-            },
-        ],
-        imgSource: 'assets/cooming-soon.png'
-    },
-    {
-        title: 'Hidden Renal Genetics',
-        content: [
-            {
-                header: "Methodology", 
-                text: "The HIDDEN Flagship seeks to identify whether clinical genomic sequencing has a diagnostic and/or management role amongst patients with End Stage Kidney Disease (ESKD) of unknown cause."
-            },
-            {
-                header: "Cohort", 
-                text: "Paediatric and Adult"
-            },
-            {
-                header: "Sequencing strategy", 
-                text: "WGS"
-            },
-            {
-                header: "Recruitment", 
-                text: "200"
-            },
-            {
-                header: "Standard of Care",
-                text: "For patients without any clear clinical or other indication as to their primary renal diagnosis, the SOC is that an “Uncertain Diagnosis” is coded and listed. There is no current subspecialty, genetic or genomic referral pathway for such patients."
-            },
-            {
-                header: "Evaluation", 
-                text: "SOC vs. WGS for young patients (<50yrs) with end stage kidney disease (ESKD) of unknown cause: diagnostic yield, cost effectiveness and patient outcomes."
-            },
-            {
-                header: "Research linkages", 
-                text: "Undiagnosed patients or those with VUS will be offered recruitment into established genomic and functional research programs of KidGen."
-            },
-            {
-                header: "Collaborations", 
-                text: "This Flagship is a project of the KidGen Collaborative (www.kidgen.org.au)."
-            },
-        ],
-        imgSource: 'assets/cooming-soon.png'
-    }
-)
-
 @Injectable()
 export class CohortService {
 
     getCohorts(): Promise<Map<string, Cohort>> {
         return Promise.resolve(COHORTS);
-    };
-
-    getNewCohorts(): Array<any> {
-        return NEW_COHORTS;
     };
 
     getCohort(id: string): Promise<Cohort> {
