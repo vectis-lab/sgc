@@ -24,7 +24,7 @@
                 </div>
             </span>
         </a>
-        <a *ngIf="auth.authenticated()" [ngClass]="{'is-active': termsLinkActive}" (click)="toggleUser($event)" class="avatar-link">
+        <span *ngIf="auth.authenticated()" [ngClass]="{'is-active': termsLinkActive}" (click)="toggleUser($event)" class="avatar-link">
             <span class="terms-link">
                 <div class="avatar-frame">
                     <img *ngIf="userPicture" [src]="userPicture" />
@@ -35,6 +35,6 @@
                 <!--<div class="dropdown-item" [routerLink]="['/profile']">Profile</div>-->
                 <div class="dropdown-item" (click)="auth.logout()">Log out</div>
             </div>
-        </a>
+        </span>
     </nav>
 </div>

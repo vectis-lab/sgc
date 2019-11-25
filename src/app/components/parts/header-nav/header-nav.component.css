@@ -11,8 +11,7 @@
 
 .terms {
     width: 103px;
-    margin-top: 17px;
-    
+    margin-top: 17px; 
 }
 
 .dropdown {
@@ -59,7 +58,7 @@ nav {
 }
 
 nav a {
-    padding: 0 1.5rem 17px 1.5rem;
+    padding: 0 0.7rem 17px 0.7rem;
     position: relative;
     color: white;
     text-decoration: none;
@@ -93,6 +92,7 @@ nav a {
 
 .avatar-link {
     position: relative;
+    margin: 0 1.5rem 0 1.2rem;
     top: 7px;
 }
 
