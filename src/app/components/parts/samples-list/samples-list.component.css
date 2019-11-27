@@ -6,6 +6,8 @@
 
 .content{
     min-width: 340px;
+    max-height: 240px;
+    overflow-y: auto;
 }
 
 .chart{
@@ -57,6 +59,14 @@ h4 {
 
 .toolbar .row .option.right {
     text-align: end;
+}
+
+::ng-deep .mat-row { 
+    min-height: 20px !important;
+}
+
+.highlight-selected{
+    background-color:#7abde6
 }
 
 @media (min-width: 0px) and (max-width: 320px) {
