@@ -20,6 +20,7 @@ import 'rxjs/add/operator/delay';
 import 'rxjs/add/observable/throw';
 
 import { ErrorHandler, NgModule } from '@angular/core';
+import {MatTableModule} from '@angular/material/table';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { routing } from './app.routing';
@@ -164,7 +165,8 @@ export class RavenErrorHandler implements ErrorHandler {
         NgxPaginationModule,
         NgxDatatableModule,
         MaterialModule,
-        MatDialogModule
+        MatDialogModule,
+        MatTableModule
     ],
     declarations: [
         AppComponent,
