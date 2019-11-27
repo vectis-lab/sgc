@@ -7,9 +7,12 @@
         </div>
     </div>
     <div class="content">
-      <select *ngIf="!showSampleCSV" [multiple]="multiple" [size]="100" class="samples-list" [(ngModel)]="selectedSamples" (ngModelChange)="onSelect($event)">
-        <option *ngFor="let sampleID of sampleIDs" [value]="sampleID">{{sampleID}}</option>
-      </select>
+      <mat-table [dataSource]="sampleIDs" *ngIf="!showSampleCSV">
+          <ng-container matColumnDef="sample">
+              <mat-cell *matCellDef="let sampleID" class="table-row"> {{sampleID}} </mat-cell>
+          </ng-container>
+          <mat-row *matRowDef="let row; columns: ['sample'];" [ngClass]="{'highlight-selected': checkSelectedSample(row)}" (click)="onSelect(row, $event)"></mat-row>
+      </mat-table>
       <app-samples-text *ngIf="showSampleCSV" [samples]="selectedSamples" [multiple]="multiple" (filterSamples)="filterCSV($event)"></app-samples-text>
     </div>
 </div>
