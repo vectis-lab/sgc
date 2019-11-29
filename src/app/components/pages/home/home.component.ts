@@ -6,7 +6,6 @@ import { Router } from '@angular/router';
 import { ScrollService } from '../../../services/scroll-service';
 import { SearchBarService } from '../../../services/search-bar-service';
 import { Auth } from '../../../services/auth-service';
-import {TEST_MGRB} from '../../../data/mgrbdata'
 
 @Component({
     selector: 'app-home',
@@ -41,6 +40,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         }));
 
         this.searchBarService.query="";
+
     }
 
     search() {
