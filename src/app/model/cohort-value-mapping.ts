@@ -10,7 +10,8 @@ export const COHORT_VALUE_MAPPING_VSAL = {
     Childranz: 'demo',
     HIDDEN: 'demo',
     ['Genetic Immunology']: 'demo',
-    Cardiac: 'demo'
+    Cardiac: 'demo',
+    KidGen: 'demo',
 }
 
 export const COHORT_VALUE_MAPPING_SSVS = {
@@ -25,7 +26,8 @@ export const COHORT_VALUE_MAPPING_SSVS = {
     Childranz: 'demo',
     HIDDEN: 'demo',
     ['Genetic Immunology']: 'demo',
-    Cardiac: 'demo'
+    Cardiac: 'demo',
+    KidGen: 'demo'
 }
 
 export const COHORT_VALUE_MAPPING_MAPD = {
@@ -40,7 +42,8 @@ export const COHORT_VALUE_MAPPING_MAPD = {
     Childranz: 'demo',
     HIDDEN: 'demo',
     ['Genetic Immunology']: 'demo',
-    Cardiac: 'demo'
+    Cardiac: 'demo',
+    KidGen: 'demo'
 }
 
 export const COHORT_PERMISSION_SUMMARY_MAPPING = {
@@ -56,6 +59,7 @@ export const COHORT_PERMISSION_SUMMARY_MAPPING = {
     HIDDEN: 'hidden/summary',
     ['Genetic Immunology']: 'gi/summary',
     Cardiac: 'cardiac/summary',
+    KidGen: 'kidgen/summary'
 }
 
 export const COHORT_PERMISSION_VSAL_PHENO_MAPPING = {
@@ -71,6 +75,7 @@ export const COHORT_PERMISSION_VSAL_PHENO_MAPPING = {
     HIDDEN: 'hidden/pheno',
     ['Genetic Immunology']: 'gi/pheno',
     Cardiac: 'cardiac/pheno',
+    KidGen: 'kidgen/pheno'
 }
 
 export const COHORT_PHENO_GET_MAPPING = {
@@ -86,6 +91,7 @@ export const COHORT_PHENO_GET_MAPPING = {
     HIDDEN: 'getHidden',
     ['Genetic Immunology']: 'getGeneticImmunology',
     Cardiac: 'getCardiac',
+    KidGen: 'getKidgen'
 }
 
 export const COHORT_SAMPLES_INFO = {
@@ -118,7 +124,8 @@ export const COHORT_SAMPLES_INFO = {
     ICCon: null,
     HIDDEN: null,
     ['Genetic Immunology']: null,
-    Cardiac: null
+    Cardiac: null,
+    KidGen: null
 }
 
 export const COHORT_FAMILY_WITH_PHENO = {
@@ -133,5 +140,6 @@ export const COHORT_FAMILY_WITH_PHENO = {
     Childranz: false,
     HIDDEN: false,
     ['Genetic Immunology']: false,
-    Cardiac: false
+    Cardiac: false,
+    KidGen: false
 }

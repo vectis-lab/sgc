@@ -75,6 +75,7 @@
         <app-hidden-information *ngIf="selectedCohort === 'HIDDEN'" [pheno]="pheno" [samples]="ids"></app-hidden-information>
         <app-genetic-immunology-information *ngIf="selectedCohort === 'Genetic Immunology'" [pheno]="pheno" [samples]="ids"></app-genetic-immunology-information>
         <app-cardiac-information *ngIf="selectedCohort === 'Cardiac'" [pheno]="pheno" [samples]="ids"></app-cardiac-information>
+        <app-kidgen-information *ngIf="selectedCohort === 'KidGen'" [pheno]="pheno" [samples]="ids"></app-kidgen-information>
       
         <div *ngIf="variants.length > 10000&&geneFilter.length === 0" class="message message-error">
             This region contains too many variants to visualize with our genome browser, please choose a smaller region like:

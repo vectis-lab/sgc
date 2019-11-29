@@ -9,6 +9,7 @@ import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import 'rxjs/add/operator/delay';
+import { TEST_KIDGEN } from "../data/kidgendata";
 
 @Injectable()
 export class ClinapiService implements OnDestroy {
@@ -260,6 +261,25 @@ export class ClinapiService implements OnDestroy {
         };
         if(authorize){
             return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=cardiac`, httpOptions).map(res => {
+                return JSON.parse(res.pheno)
+            });
+        }//if not authorize but want to see demo
+        else if(demo){
+            console.log("DEMO")
+            return of<any>(FAKE_DEMO_DATA);
+        }//if not authorize and not opt to see demo
+        else {
+            return throwError({ status: 401 });
+        }
+    }
+
+    getKidgen(demo = false, authorize = false): Observable<any> {
+        const httpOptions = {
+            headers: new HttpHeaders({'Authorization': `Bearer ${localStorage.getItem('idToken')}`})
+        };
+        if(authorize){
+            return of<any>(TEST_KIDGEN);
+            return this.http.get<any>(`${environment.vsalUrl2}?pheno=true&dataset=kidgen`, httpOptions).map(res => {
                 return JSON.parse(res.pheno)
             });
         }//if not authorize but want to see demo
