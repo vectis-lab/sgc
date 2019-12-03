@@ -3,7 +3,7 @@
       <div class="row">
           <div *ngIf="filter.length ===0" class="option"></div>
           <i *ngIf="filter.length > 0" (click)="resetFilter()" class="option material-icons left">refresh</i>
-          <h4>{{capitalizeCamelCase(data.name)}}</h4>
+          <h4>{{data.label}}</h4>
           <div *ngIf="!hover" class="option"></div>
           <i *ngIf="hover" (click)="hideChart()" class="option material-icons right">clear</i>
       </div>

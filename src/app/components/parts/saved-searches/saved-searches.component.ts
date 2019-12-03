@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 import { ClinicalFilteringService } from '../../../services/clinical-filtering.service';
-import { HelperService } from '../../../services/helper.service';
 import { SearchBarService } from '../../../services/search-bar-service';
 import * as dc from 'dc';
 import {ErrorStateMatcher} from '@angular/material/core';
@@ -33,8 +32,7 @@ export class SavedSearchesComponent implements OnInit, OnDestroy {
   selectedSaveSearch: string;
   denied: boolean;
 
-  constructor(private clinicalFilteringService: ClinicalFilteringService,
-    private helper: HelperService, private auth: Auth, private searchBarService: SearchBarService, private router: Router) { }
+  constructor(private clinicalFilteringService: ClinicalFilteringService, private auth: Auth, private searchBarService: SearchBarService, private router: Router) { }
 
   saveNameFormControl = new FormControl('', [
     Validators.required,
@@ -68,10 +66,6 @@ export class SavedSearchesComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.subscriptions.forEach((s => s.unsubscribe()));
   }
-
-  capitalizeCamelCase(terms: string){
-    return this.helper.capitalizeCamelCase(terms);
-}
 
   deleteFilter(name: string){
       return this.clinicalFilteringService.deleteFilter(name);
