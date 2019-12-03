@@ -31,7 +31,7 @@
                     <mat-slide-toggle (change)="checkedAll($event)" [(ngModel)]="allIsChecked"></mat-slide-toggle>
                 </div>
                 <div class="filter-option" *ngFor="let c of charts" (click)="$event.stopPropagation(); $event.stopImmediatePropagation()">
-                    <span class="filter-label">{{c.name}}</span>
+                    <span class="filter-label">{{c.label}}</span>
                     <mat-slide-toggle [(ngModel)]="c.enabled"></mat-slide-toggle>
                 </div>
             </mat-menu>
