@@ -14,10 +14,10 @@ export class IcconInformationComponent {
     @Input() pheno: any[] = [];
     permission: string = 'iccon/pheno'
     clinicalFields: ClinicalFields[] = [
-        new ClinicalFields('Sex', 'sex', 'pie'),
-        new ClinicalFields('YOB', 'yearOfBirth', 'row'),
-        new ClinicalFields('Index case?', 'indexCase', 'row'),
-        new ClinicalFields('Case', 'case', 'row', true, true, (dimension, filters) => {
+        new ClinicalFields('Sex', 'sex', 'Sex', 'pie'),
+        new ClinicalFields('YOB', 'yearOfBirth', 'Year of Birth', 'row'),
+        new ClinicalFields('Index case?', 'indexCase', 'Index case?', 'row'),
+        new ClinicalFields('Case', 'case', 'Case', 'row', true, true, (dimension, filters) => {
             dimension.filter(null);   
             if (filters.length === 0)
                 dimension.filter(null);

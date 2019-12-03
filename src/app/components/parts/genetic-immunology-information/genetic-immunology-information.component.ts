@@ -13,8 +13,8 @@ export class GeneticImmunologyInformationComponent {
     @Input() pheno: any[] = [];
     permission: string = 'gi/pheno'
     clinicalFields: ClinicalFields[] = [
-        new ClinicalFields('sex', 'sex', 'pie'),
-        new ClinicalFields('diagnosis', 'diagnosis', 'row'),
+        new ClinicalFields('sex', 'sex', 'Sex', 'pie'),
+        new ClinicalFields('diagnosis', 'diagnosis', 'Diagnosis', 'row'),
 
     ];
     phenoService: string = 'getGeneticImmunology'

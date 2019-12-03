@@ -27,14 +27,14 @@ export class KidgenInformationComponent {
   }
 
     clinicalFields: ClinicalFields[] = [
-        new ClinicalFields('sex', 'sex', 'pie'),
-        new ClinicalFields('A. Renal Impairment Please include test values, even is results are normal', 'renalImpairmanet', 'row'),
-        new ClinicalFields('i. Urea (mmol per L)', 'ureaMmolPerL', 'row'),
-        new ClinicalFields('ii. Creatinine (umol per L)', 'creatinineUmolPerL', 'row'),
-        new ClinicalFields('iii. eGFR (mL per min per 1.73m_)', 'eGFRMlPerMin', 'row'),
-        new ClinicalFields('iv. CKD stage', 'CKDStage', 'pie'),
-        new ClinicalFields('v. Current RRT', 'currentRRT', 'pie'),
-        new ClinicalFields('B. Hypertension Enter results if available', 'hypertension', 'pie')
+        new ClinicalFields('sex', 'sex', 'Sex', 'pie'),
+        new ClinicalFields('A. Renal Impairment Please include test values, even is results are normal', 'renalImpairmanet', 'Renal Impairment', 'row'),
+        new ClinicalFields('i. Urea (mmol per L)', 'ureaMmolPerL', 'Urea (mmol/L)','row'),
+        new ClinicalFields('ii. Creatinine (umol per L)', 'creatinineUmolPerL', 'Creatinine (umol/L)', 'row'),
+        new ClinicalFields('iii. eGFR (mL per min per 1.73m_)', 'eGFRMlPerMin', 'eGFR (mL/min/1.73m)', 'row'),
+        new ClinicalFields('iv. CKD stage', 'CKDStage', 'CKD stage', 'pie'),
+        new ClinicalFields('v. Current RRT', 'currentRRT', 'Current RRT', 'pie'),
+        new ClinicalFields('B. Hypertension Enter results if available', 'hypertension', 'Hypertension', 'pie')
     ];
     phenoService: string = 'getKidgen'
 

@@ -27,14 +27,14 @@ export class CardiacInformationComponent{
   }
   
     clinicalFields: ClinicalFields[] = [
-        new ClinicalFields('sex', 'sex', 'pie'),
-        new ClinicalFields('Participant Ethnicity', 'ethnicity', 'row'),
-        new ClinicalFields('Maternal Ethnicity', 'maternalEthnicity', 'row'),
-        new ClinicalFields('Paternal Ethnicity', 'paternalEthnicity', 'row'),
-        new ClinicalFields('Is participant adopted?', 'isParticipantAdopted', 'pie'),
-        new ClinicalFields('Number of affected first degree relatives', 'noOfAffectedFirstDegreeRelatives', 'row'),
-        new ClinicalFields('Number of affected second degree relatives', 'noOfAffectedSecondDegreeRelatives', 'row'),
-        new ClinicalFields('Diagnosis:', 'diagnosis', 'row'),
+        new ClinicalFields('sex', 'sex', 'Sex', 'pie'),
+        new ClinicalFields('Participant Ethnicity', 'ethnicity', 'Participant Ethnicity', 'row'),
+        new ClinicalFields('Maternal Ethnicity', 'maternalEthnicity', 'Maternal Ethnicity', 'row'),
+        new ClinicalFields('Paternal Ethnicity', 'paternalEthnicity', 'Paternal Ethnicity', 'row'),
+        new ClinicalFields('Is participant adopted?', 'isParticipantAdopted', 'Is participant adopted?', 'pie'),
+        new ClinicalFields('Number of affected first degree relatives', 'noOfAffectedFirstDegreeRelatives', 'Number of affected first degree relatives', 'row'),
+        new ClinicalFields('Number of affected second degree relatives', 'noOfAffectedSecondDegreeRelatives', 'Number of affected second degree relatives', 'row'),
+        new ClinicalFields('Diagnosis:', 'diagnosis', 'Diagnosis', 'row'),
     ];
     phenoService: string = 'getCardiac'
 

@@ -13,17 +13,17 @@ export class NeuromuscularInformationComponent {
     @Input() pheno: any[] = [];
     permission: string = 'neuromuscular/pheno'
     clinicalFields: ClinicalFields[] = [
-        new ClinicalFields('Age of onset', 'ageOfOnset', 'row'),
-        new ClinicalFields('Evolution of symptoms', 'evolutionOfSymptoms', 'row'),
-        new ClinicalFields('Muscle weakness', 'muscleWeakness', 'row', false),
-        new ClinicalFields('Facial', 'facial', 'pie', false),
-        new ClinicalFields('Ptosis', 'ptosis', 'pie', false),
-        new ClinicalFields('Proximal UL', 'proximalUl', 'pie', false),
-        new ClinicalFields('Prox. LL weakness', 'proxLlWeakness', 'row', false),
-        new ClinicalFields('Distal LL weakness', 'distalLlWeakness', 'row', false),
-        new ClinicalFields('Left bicep', 'leftBicep', 'row', false),
-        new ClinicalFields('Right bicep', 'rightBicep', 'row', false),
-        new ClinicalFields('Scoliosis', 'scoliosis', 'row', false),
+        new ClinicalFields('Age of onset', 'ageOfOnset', 'Age of Onset', 'row'),
+        new ClinicalFields('Evolution of symptoms', 'evolutionOfSymptoms', 'Evolution of Symptoms', 'row'),
+        new ClinicalFields('Muscle weakness', 'muscleWeakness', 'Muscle Weakeness', 'row', false),
+        new ClinicalFields('Facial', 'facial', 'Facial', 'pie', false),
+        new ClinicalFields('Ptosis', 'ptosis', 'Ptosis', 'pie', false),
+        new ClinicalFields('Proximal UL', 'proximalUl', 'Proximal UL', 'pie', false),
+        new ClinicalFields('Prox. LL weakness', 'proxLlWeakness', 'Prox. LL weakness', 'row', false),
+        new ClinicalFields('Distal LL weakness', 'distalLlWeakness', 'Distal LL weakness', 'row', false),
+        new ClinicalFields('Left bicep', 'leftBicep', 'Left Bicep', 'row', false),
+        new ClinicalFields('Right bicep', 'rightBicep', 'Right Bicep', 'row', false),
+        new ClinicalFields('Scoliosis', 'scoliosis', 'Scoliosis', 'row', false),
     ];
     phenoService: string = 'getNeuromuscular'
 
