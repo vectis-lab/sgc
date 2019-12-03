@@ -13,14 +13,14 @@ export class CircaInformationComponent{
     //pheno file
     @Input() pheno: any[] = [];
     clinicalFields: ClinicalFields[] = [
-        new ClinicalFields('familyData', 'familyData', 'pie'),
-        new ClinicalFields('sex', 'sex', 'pie'),
-        new ClinicalFields('Referrer Name', 'referrerName', 'row'),
-        new ClinicalFields('Funding', 'funding', 'pie'),
-        new ClinicalFields('name', 'patientName', 'row'),
-        new ClinicalFields('birthyear', 'birthyear', 'row'),
-        new ClinicalFields('Test Outcome', 'testOutcome', 'row'),
-        new ClinicalFields('affected', 'affected', 'pie'),
+        new ClinicalFields('familyData', 'familyData', 'Family Data', 'pie'),
+        new ClinicalFields('sex', 'sex', 'Sex', 'pie'),
+        new ClinicalFields('Referrer Name', 'referrerName', 'Referrer Name', 'row'),
+        new ClinicalFields('Funding', 'funding', 'Funding', 'pie'),
+        new ClinicalFields('name', 'patientName', 'Patient Name', 'row'),
+        new ClinicalFields('birthyear', 'birthyear', 'Birthyear', 'row'),
+        new ClinicalFields('Test Outcome', 'testOutcome', 'Test Outcome', 'row'),
+        new ClinicalFields('affected', 'affected', 'Affected', 'pie'),
     ];
     phenoService: string = 'getCirca'
 
