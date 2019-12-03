@@ -2,7 +2,6 @@ import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, I
 import * as dc from 'dc';
 import { Chart } from '../../../model/clinical-cohort-chart';
 import { ClinapiService } from '../../../services/clinapi.service';
-import { HelperService } from '../../../services/helper.service';
 import { ClinicalFilteringService } from '../../../services/clinical-filtering.service';
 import { SampleSearch } from '../../../services/sample-search.service';
 import { SearchBarService } from '../../../services/search-bar-service';
@@ -28,7 +27,6 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
 
     constructor(private cd: ChangeDetectorRef, 
                 private cs: ClinapiService, 
-                private hs: HelperService, 
                 private ClinicalFilterService: ClinicalFilteringService, 
                 private searchBarService: SearchBarService, 
                 private sampleSearch: SampleSearch) {
@@ -152,10 +150,6 @@ export class ClinicalCohortChartComponent implements AfterViewInit, OnDestroy {
 
     hideChart(){
         this.hiddenChart.emit(this.data.name);
-    }
-
-    capitalizeCamelCase(data){
-        return this.hs.capitalizeCamelCase(data);
     }
 
     filterSamples(samples: string[]){

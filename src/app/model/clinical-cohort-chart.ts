@@ -1,6 +1,7 @@
 export class Chart {
 
     constructor(public name: string,
+                public label: string,
                 public type: string,
                 public dim: any,
                 public width: number,

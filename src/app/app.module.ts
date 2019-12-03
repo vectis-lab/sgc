@@ -84,7 +84,6 @@ import { SnackbarHelpComponent } from './components/parts/snackbar-help/snackbar
 import { LoadingComponent } from './components/pages/loading/loading.component';
 import { SignUpComponent } from './components/parts/sign-up/sign-up.component';
 import { AuthGuardComponent } from './components/parts/auth-guard/auth-guard.component';
-import { HelperService } from './services/helper.service';
 import { ClinicalFilteringService } from './services/clinical-filtering.service';
 import { SavedSearchesComponent } from './components/parts/saved-searches/saved-searches.component';
 import { ClinicalCohortChartComponent } from './components/parts/clinical-cohort-chart/clinical-cohort-chart.component';
@@ -260,7 +259,6 @@ export class RavenErrorHandler implements ErrorHandler {
         TableFamilyService,
         TableSummaryService,
         LocalStorageService,
-        HelperService,
         ClinicalFilteringService,
         SearchBarService,
         { provide: ErrorHandler, useClass: RavenErrorHandler },

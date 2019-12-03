@@ -2,6 +2,7 @@ export class ClinicalFields {
 
     constructor(public fieldName: string,
                 public name: string,
+                public label: string,
                 public chartType: string,
                 public visible: boolean = true,
                 public multivalue: boolean = false,
