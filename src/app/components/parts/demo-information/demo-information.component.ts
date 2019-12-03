@@ -13,13 +13,13 @@ export class DemoInformationComponent{
     //pheno file
     @Input() pheno: any[] = [];
     clinicalFields: ClinicalFields[] = [
-        new ClinicalFields('familyData', 'familyData', 'pie'),
-        new ClinicalFields('gender', 'sex', 'pie'),
-        new ClinicalFields('Population', 'population', 'row'),
-        new ClinicalFields('Relationship', 'relationship', 'row'),
-        new ClinicalFields('Low Coverage Center', 'lowCoverageCenter', 'row'),
-        new ClinicalFields('Low Coverage Platform', 'lowCoveragePlatform', 'pie', false),
-        new ClinicalFields('Low Coverage Aligned Non Duplicated Coverage', 'lowCoverageAlignedNonDuplicatedCoverage', 'bar', true, false, null, 340, 200, 0, 17),
+        new ClinicalFields('familyData', 'familyData', 'Family Data', 'pie'),
+        new ClinicalFields('gender', 'sex', 'Sex', 'pie'),
+        new ClinicalFields('Population', 'population', 'Population', 'row'),
+        new ClinicalFields('Relationship', 'relationship', 'Relationship', 'row'),
+        new ClinicalFields('Low Coverage Center', 'lowCoverageCenter', 'Low Coverage Center', 'row'),
+        new ClinicalFields('Low Coverage Platform', 'lowCoveragePlatform', 'Low Coverage Platform', 'pie', false),
+        new ClinicalFields('Low Coverage Aligned Non Duplicated Coverage', 'lowCoverageAlignedNonDuplicatedCoverage', 'Low Coverage Aligned non Duplicated Coverage', 'bar', true, false, null, 340, 200, 0, 17),
     ];
     phenoService: string = 'getDemo'
 
