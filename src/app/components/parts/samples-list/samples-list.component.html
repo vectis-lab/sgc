@@ -2,7 +2,8 @@
     <div class="toolbar">
         <div class="row">
             <i *ngIf="multiple" (click)="resetFilter()" class="option material-icons left">refresh</i>
-            <h4>Sample Id</h4>
+            <h4 *ngIf="selectedCohort !== 'MGRB'">Sample IDs</h4>
+            <h4 *ngIf="selectedCohort === 'MGRB'">Synthetic IDs</h4>
             <span class="option right"></span>
         </div>
     </div>

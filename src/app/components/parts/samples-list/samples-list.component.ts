@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy, OnDestroy, ViewEncapsulation } from '@angular/core';
+import { SearchBarService } from '../../../services/search-bar-service'
 
 @Component({
   selector: 'app-samples-list',
@@ -15,10 +16,14 @@ export class SamplesListComponent implements OnInit, OnDestroy {
   @Input() multiple: boolean = true;
   size = this.sampleIDs.length;
   lastClickedIndex = null;
+  selectedCohort;
   
-  constructor() { }
+  constructor(private searchBarService: SearchBarService) { }
 
   ngOnInit() {
+    this.searchBarService.selectedCohort.subscribe(cohort => {
+      this.selectedCohort = cohort;
+    });
   }
 
   resetFilter() {

@@ -9,7 +9,7 @@ import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import 'rxjs/add/operator/delay';
-import { TEST_MGRB } from "../mocks/mgrbdata";
+import { TEST_MGRB } from "../data/mgrbdata";
 
 @Injectable()
 export class ClinapiService implements OnDestroy {

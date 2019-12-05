@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     top: 10em;
     position: relative;
+    background-color: #fafafa;
 }
 
 .band {
@@ -13,15 +14,16 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 2em;
-    height: 150px;
+    margin-bottom: 0.5em;
+    height: 170px;
 }
 
 .logoAbbreviation{
     display: block;
-    font-size: 3em;
-    font-weight: 500;
-    color: #4c00c7;
+    font-size: 1.7em;
+    font-weight: 600;
+    color: #2567ba;
+    padding: 10px 10px 10px 10px;
 }
 
 .logo-img{

@@ -13,20 +13,20 @@ export class MgrbInformationComponent{
     //pheno file
     @Input() pheno: any[] = [];
     clinicalFields: ClinicalFields[] = [
-        new ClinicalFields('sex', 'sex', 'pie'),
-        new ClinicalFields('cohort', 'cohort', 'pie', false),
-        new ClinicalFields('inMGRBphase2', 'inMGRBPhase2', 'pie', false),
-        new ClinicalFields('YearOfBirth', 'yearOfBirth', 'bar', true, false, null, 340, 200, 1910, 1950),
-        new ClinicalFields('YearOfCollection', 'yearOfCollection', 'bar', true, false, null, 340, 200, 2009, 2016),
-        new ClinicalFields('HtMtrs', 'heightInMetre', 'bar', true, false, null, 340, 200, 1.3, 3),
-        new ClinicalFields('WtKgs', 'weight', 'bar', true, false, null, 340, 200, 30, 120),
-        new ClinicalFields('AbdoCircCms', 'abdomenCircumference', 'bar', false, false, null, 340, 200, 50, 150),
-        new ClinicalFields('GlcmmolL', 'glucoseMmolPerL', 'bar', true, false, null, 340, 200, 1, 10),
-        new ClinicalFields('AMD', 'AMD', 'pie', false),
-        new ClinicalFields('treatedForHighBP', 'treatedForHighBP', 'pie', false),
-        new ClinicalFields('treatedForHighChol', 'treatedForHighChol', 'pie', false),
-        new ClinicalFields('Cancer.AnyCancer', 'cancer', 'pie'),
-        new ClinicalFields('Cancer.AgeWithoutCancerYears', 'ageWithoutCancer', 'bar', true, false, null, 340, 200, 65, 100),
+        new ClinicalFields('sex', 'sex', 'Sex', 'pie'),
+        new ClinicalFields('cohort', 'cohort', 'Cohort', 'pie', false),
+        new ClinicalFields('inMGRBphase2', 'inMGRBPhase2', 'In MGRB Phase 2', 'pie', false),
+        new ClinicalFields('AgeAtCollectionYears', 'ageAtCollection', 'Age at Collection', 'bar', true, false, null, 340, 200, 60, 100),
+        new ClinicalFields('YearOfCollection', 'yearOfCollection', 'Year of Collection', 'bar', true, false, null, 340, 200, 2009, 2016),
+        new ClinicalFields('HtMtrs', 'heightInMetre', 'Height in CMs', 'bar', true, false, null, 340, 200, 130, 200),
+        new ClinicalFields('WtKgs', 'weight', 'Weight', 'bar', true, false, null, 340, 200, 30, 120),
+        new ClinicalFields('AbdoCircCms', 'abdomenCircumference', 'Abdomen Circumference', 'bar', false, false, null, 340, 200, 50, 150),
+        new ClinicalFields('GlcmmolL', 'glucoseMmolPerL', 'Glucose Mmol/l', 'bar', true, false, null, 340, 200, 1, 10),
+        new ClinicalFields('AMD', 'AMD', 'Age-related Macular Degeneration', 'pie', false),
+        new ClinicalFields('treatedForHighBP', 'treatedForHighBP', 'Treated for High Blood Pressure', 'pie', false),
+        new ClinicalFields('treatedForHighChol', 'treatedForHighChol', 'Treated for High Cholesterol', 'pie', false),
+        new ClinicalFields('Cancer.AnyCancer', 'cancer', 'Cancer', 'pie'),
+        new ClinicalFields('Cancer.AgeWithoutCancerYears', 'ageWithoutCancer', 'Age without Cancer','bar', true, false, null, 340, 200, 65, 100),
     ];
     phenoService: string = 'getMgrb'
 

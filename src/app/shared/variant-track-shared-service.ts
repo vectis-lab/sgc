@@ -1,4 +1,4 @@
-export const PIN_COLOR = '#4c00c7';
+export const PIN_COLOR = 'steelblue';
 export const PIN_SELECTED_COLOR = '#05afe3';
 export const OVERLAY_COLOR = '#D54A0F';
 
