@@ -21,7 +21,7 @@ export class MgrbInformationComponent{
         new ClinicalFields('HtMtrs', 'heightInMetre', 'Height, cm', 'bar', true, false, null, 340, 200, 130, 200),
         new ClinicalFields('WtKgs', 'weight', 'Weight, kg', 'bar', true, false, null, 340, 200, 30, 120),
         new ClinicalFields('AbdoCircCms', 'abdomenCircumference', 'Abdomen Circumference', 'bar', false, false, null, 340, 200, 50, 150),
-        new ClinicalFields('GlcmmolL', 'glucoseMmolPerL', 'Glucose Mmol/l', 'bar', true, false, null, 340, 200, 1, 10),
+        new ClinicalFields('GlcmmolL', 'glucoseMmolPerL', 'Glucose, mmol/L', 'bar', true, false, null, 340, 200, 1, 10),
         new ClinicalFields('AMD', 'AMD', 'Age-related Macular Degeneration', 'pie', false),
         new ClinicalFields('treatedForHighBP', 'treatedForHighBP', 'Treated for High Blood Pressure', 'pie', false),
         new ClinicalFields('treatedForHighChol', 'treatedForHighChol', 'Treated for High Cholesterol', 'pie', false),
